@@ -36,7 +36,7 @@ function skilld_event(skillid, handlers, event, ent, dispatch) {
 		// Проваливай! - Упади в бездну
 		// к нему (бублик вокруг босса) -> от него (круг перед боссом) -> к нему (бублик перед боссом)
 		if (purple && !boss_thirty) {
-			handlers["text"]({ "type": "text", "sub_type": "message", "message": "In > Out > In", "message_RU": "К нему > От него > К нему" });
+			handlers["text"]({ "type": "text", "sub_type": "message", "message": "In > Out > In", "message_RU": "К нему > От него > К нему", "message_ES": "Entrar > Salir > Entrar" });
 			// бублик перед боссом
 			SpawnCircle(true, 912, 0, 150, 8, 280, 5000, 3000, handlers, event, ent, dispatch); // 3
 			SpawnCircle(true, 912, 0, 150, 4, 570, 5000, 3000, handlers, event, ent, dispatch); // 3
@@ -46,8 +46,8 @@ function skilld_event(skillid, handlers, event, ent, dispatch) {
 		// Проваливай! - Упади в бездну
 		// к нему (бублик вокруг босса) -> от него (круг перед боссом) -> [волны] -> к нему (бублик перед боссом)
 		} else if (purple && boss_thirty) { 
-			handlers["text"]({ "type": "text", "sub_type": "message", "message": "In > Out", "message_RU": "К нему > От него > (К нему)" });
-			handlers["text"]({ "type": "text", "sub_type": "message", "delay": 5000, "message": "In", "message_RU": "К нему" });
+			handlers["text"]({ "type": "text", "sub_type": "message", "message": "In > Out", "message_RU": "К нему > От него > (К нему)", "message_ES": "Entrar > Salir" });
+			handlers["text"]({ "type": "text", "sub_type": "message", "delay": 5000, "message": "In", "message_RU": "К нему", "message_ES": "Entrar" });
 			// бублик перед боссом
 			SpawnCircle(true, 912, 0, 150, 8, 280, 5000, 5000, handlers, event, ent, dispatch); // 3
 			SpawnCircle(true, 912, 0, 150, 4, 570, 5000, 5000, handlers, event, ent, dispatch); // 3
@@ -59,7 +59,7 @@ function skilld_event(skillid, handlers, event, ent, dispatch) {
 		// Ближе! - Ощути силу взрыва
 		// от него (круг перед боссом) -> к нему (бублик вокруг босса) -> от него (большой круг перед боссом)
 		if (green && !boss_thirty) {
-			handlers["text"]({ "type": "text", "sub_type": "message", "message": "Out > In > Out", "message_RU": "От него > К нему > От него" });
+			handlers["text"]({ "type": "text", "sub_type": "message", "message": "Out > In > Out", "message_RU": "От него > К нему > От него", "message_ES": "Salir > Entrar > Salir" });
 			// большой круг перед боссом
 			SpawnCircle(true, 912, 0, 200, 8, 450, 5000, 3000, handlers, event, ent, dispatch); // 3
 			dispatch.setTimeout(() => green = false,  2000);
@@ -67,7 +67,7 @@ function skilld_event(skillid, handlers, event, ent, dispatch) {
 		// Проваливай - Ощути силу взрыва
 		// к нему (бублик вокруг босса) -> от него (круг перед боссом) -> от него (большой круг перед боссом)
 		} else if (purple && !boss_thirty) {
-			handlers["text"]({ "type": "text", "sub_type": "message", "message": "In > Out > Out", "message_RU": "К нему > От него > От него" });
+			handlers["text"]({ "type": "text", "sub_type": "message", "message": "In > Out > Out", "message_RU": "К нему > От него > От него", "message_ES": "Entrar > Salir > Salir" });
 			// большой круг перед боссом
 			SpawnCircle(true, 912, 0, 200, 8, 450, 5000, 3000, handlers, event, ent, dispatch); // 3
 			dispatch.setTimeout(() => purple = false,  2000);
@@ -76,8 +76,8 @@ function skilld_event(skillid, handlers, event, ent, dispatch) {
 		// Ближе! - Ощути силу взрыва
 		// от него (круг перед боссом) -> к нему (бублик вокруг босса) -> [волны] -> от него (большой круг перед боссом)
 		} else if (green && boss_thirty) {
-			handlers["text"]({ "type": "text", "sub_type": "message", "message": "Out > In", "message_RU": "От него > К нему > (От него)" });
-			handlers["text"]({ "type": "text", "sub_type": "message", "delay": 5000, "message": "Out", "message_RU": "От него" });
+			handlers["text"]({ "type": "text", "sub_type": "message", "message": "Out > In", "message_RU": "От него > К нему > (От него)", "message_ES": "Salir > Entrar" });
+			handlers["text"]({ "type": "text", "sub_type": "message", "delay": 5000, "message": "Out", "message_RU": "От него", "message_ES": "Salir" });
 			// большой круг перед боссом
 			SpawnCircle(true, 912, 0, 200, 8, 450, 5000, 5000, handlers, event, ent, dispatch); // 3
 			dispatch.setTimeout(() => purple = false,  2000);
@@ -86,8 +86,8 @@ function skilld_event(skillid, handlers, event, ent, dispatch) {
 		// Проваливай! - Ощути силу взрыва
 		// к нему (бублик вокруг босса) -> от него (круг перед боссом) -> [волны] -> от него (большой круг перед боссом)
 		} else if (purple && boss_thirty) {
-			handlers["text"]({ "type": "text", "sub_type": "message", "message": "In > Out", "message_RU": "К нему > От него > (От него)" });
-			handlers["text"]({ "type": "text", "sub_type": "message", "delay": 5000, "message": "Out", "message_RU": "От него" });
+			handlers["text"]({ "type": "text", "sub_type": "message", "message": "In > Out", "message_RU": "К нему > От него > (От него)", "message_ES": "Entrar > Salir" });
+			handlers["text"]({ "type": "text", "sub_type": "message", "delay": 5000, "message": "Out", "message_RU": "От него", "message_ES": "Salir" });
 			// большой круг перед боссом
 			SpawnCircle(true, 912, 0, 200, 8, 450, 5000, 5000, handlers, event, ent, dispatch); // 3
 			dispatch.setTimeout(() => purple = false,  2000);
@@ -96,9 +96,9 @@ function skilld_event(skillid, handlers, event, ent, dispatch) {
 	// Прыжок
 	if (skillid == 127) {
 		if (boss_thirty) {
-			handlers["text"]({ "type": "text", "sub_type": "message", "message": "Jump | Get Out", "message_RU": "Прыжок | От него" });
+			handlers["text"]({ "type": "text", "sub_type": "message", "message": "Jump | Get Out", "message_RU": "Прыжок | От него", "message_ES": "Saltar | Salir" });
 		} else {
-			handlers["text"]({ "type": "text", "sub_type": "message", "message": "Jump | Get In", "message_RU": "Прыжок | К нему" });
+			handlers["text"]({ "type": "text", "sub_type": "message", "message": "Jump | Get In", "message_RU": "Прыжок | К нему", "message_ES": "Saltar | Entrar" });
 			SpawnCircle(true, 553, 0, 0, 15, 200, 250, 1000, handlers, event, ent, dispatch);
 			SpawnCircle(true, 553, 0, 0, 10, 300, 1000, 4000, handlers, event, ent, dispatch);
 		}
@@ -115,8 +115,8 @@ function boss_thirty_event() {
 
 let debuff_tracker_started = false;
 let debuffs_targe = {
-	30209101: { message: "Lightning", message_RU: "Молния (эвейд)" },
-	30209102: { message: "Witch",     message_RU: "Ведьма (эвейд)" }
+	30209101: { message: "Lightning", message_RU: "Молния (эвейд)", message_ES: "Relámpago" },
+	30209102: { message: "Witch", message_RU: "Ведьма (эвейд)", message_ES: "Bruja" }
 };
 
 let debuff_call_event = null;
@@ -141,7 +141,8 @@ function start_dungeon_event(handlers, event, ent, dispatch) {
 						handlers["text"]({
 							"sub_type": "alert",
 							"message": debuffs_targe[event.id].message,
-							"message_RU": debuffs_targe[event.id].message_RU
+							"message_RU": debuffs_targe[event.id].message_RU,
+							"message_ES": debuffs_targe[event.id].message_ES						
 						});
 						debuff_call_event = null;
 					}, 1500);
@@ -173,21 +174,21 @@ module.exports = {
 
 	// 1 BOSS
 	"s-3020-1900-104-0": [
-		{ "type": "text", "sub_type": "message", "message": "Suction (Dodge)", "message_RU": "Высасывание (Выйти)" },
+		{ "type": "text", "sub_type": "message", "message": "Suction (Dodge)", "message_RU": "Высасывание (Выйти)", "message_ES": "Succión (Iframe)" },
 		{ "type": "func", "func": SpawnCircle.bind(null, true, 553, 0, 0, 15, 450, 200, 6000) }
 	],
 
 	// 2 BOSS
-	"s-3020-1200-103-0": [{ "type": "text", "sub_type": "message", "message": "Suction (Dodge)", "message_RU": "Высасывание" }],
+	"s-3020-1200-103-0": [{ "type": "text", "sub_type": "message", "message": "Suction (Dodge)", "message_RU": "Высасывание", "message_ES": "Succión (Iframe)" }],
 
 	// 3 BOSS
 	"s-3020-2200-108-0": [
-		{ "type": "text", "sub_type": "message", "message": "Front Stun", "message_RU": "Стан" },
+		{ "type": "text", "sub_type": "message", "message": "Front Stun", "message_RU": "Стан", "message_ES": "Stun frontal" },
 		{ "type": "func", "func": SpawnCircle.bind(null, true, 553, 0, 170, 20, 120, 200, 2000) }
 	],
 	"h-3020-2200-99": [{ "type": "func", "func": boss_start_event }],
 	"h-3020-2200-30": [
-		{ "type": "text", "sub_type": "message", "message": "30%", "message_RU": "30%" },
+		{ "type": "text", "sub_type": "message", "message": "30%", "message_RU": "30%", "message_ES": "30%" },
 		{ "type": "func", "func": boss_thirty_event }
 	],
 	"h-3020-2200-29": [{ "type": "func", "func": boss_thirty_event }],
@@ -237,25 +238,25 @@ module.exports = {
 	//"s-3020-6103-202-0": [{ "type": "text", "sub_type": "message", "message": 'Left swipe', "message_TW": "6103-202" }, { "type": "func", "func": SpawnMarker.bind(null, false, 0, 0, 100, 2000, true, null) }],  
 	//"s-3020-6103-201-0": [{ "type": "text", "sub_type": "message", "message": 'Left swipe', "message_TW": "6103-201" }, { "type": "func", "func": SpawnMarker.bind(null, false, 0, 0, 100, 2000, true, null) }],   
 	"s-3020-2200-127-0": [{ "type": "func", "func": skilld_event.bind(null,  127) }],
-	"s-3020-2200-128-0": [{ "type": "text", "sub_type": "message", "message": "Uppercut (Knockup)", "message_RU": "Черкаш (подлет)" }],
+	"s-3020-2200-128-0": [{ "type": "text", "sub_type": "message", "message": "Uppercut (Knockup)", "message_RU": "Черкаш (подлет)", "message_ES": "Corte superior (Knock up)" }],
 	"s-3020-2200-129-0": [
-		{ "type": "text", "sub_type": "message", "message": "Hammer Toss ~ Skull", "message_RU": "Полоса в цель" },
+		{ "type": "text", "sub_type": "message", "message": "Hammer Toss ~ Skull", "message_RU": "Полоса в цель", "message_ES": "Lanzar el martillo ~ Calavera" },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 90, 100, 0, 500, 200, 2000) },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 270, 100, 0, 500, 200, 2000) }
 	],
 	//"s-3020-2200-131-0": [{ "type": "text", "sub_type": "message", "message": "Jump", "message_RU": "Прыжок" }],
 	"s-3020-2200-133-1": [
-		{ "type": "text", "sub_type": "message", "message": "Donuts", "message_RU": "Бублики" },
+		{ "type": "text", "sub_type": "message", "message": "Donuts", "message_RU": "Бублики", "message_ES": "Donas" },
 		{ "type": "func", "func": SpawnCircle.bind(null, true, 445, 0, 0, 10, 300, 200, 5000) },
 		{ "type": "func", "func": SpawnCircle.bind(null, true, 445, 0, 0, 6, 600, 200, 5000) },
 		{ "type": "func", "func": SpawnCircle.bind(null, true, 445, 0, 0, 4, 900, 200, 5000) }
 	],
-	"s-3020-2200-135-0": [{ "type": "text", "sub_type": "message", "message": "Puddles Inc (Jump)", "message_RU": "Волны х5" }],
+	"s-3020-2200-135-0": [{ "type": "text", "sub_type": "message", "message": "Puddles Inc (Jump)", "message_RU": "Волны х5", "message_ES": "Olas x5 (Saltar)" }],
 
-	"s-3020-2200-137-0": [{ "type": "text", "sub_type": "message", "message": "Outward Pluse", "message_RU": "Волна от" }],
-	"s-3020-2200-139-0": [{ "type": "text", "sub_type": "message", "message": "Inward Succ", "message_RU": "Волна к" }],
+	"s-3020-2200-137-0": [{ "type": "text", "sub_type": "message", "message": "Outward Pluse", "message_RU": "Волна от", "message_ES": "iframe" }],
+	"s-3020-2200-139-0": [{ "type": "text", "sub_type": "message", "message": "Inward Succ", "message_RU": "Волна к", "message_ES": "iframe" }],
 
-	"s-3020-2200-202-0": [{ "type": "text", "sub_type": "message", "message": "Defence 3 seconds", "message_RU": "Защита 3 сек." }],
-	"s-3020-2200-203-0": [{ "type": "text", "sub_type": "message", "message": "Defence 10 seconds", "message_RU": "Защита 10 сек." }],
-	"s-3020-2200-204-0": [{ "type": "text", "sub_type": "message", "message": "30% (transformation)", "message_RU": "30% (видоизменение)" }]
+	"s-3020-2200-202-0": [{ "type": "text", "sub_type": "message", "message": "Defence 3 seconds", "message_RU": "Защита 3 сек.", "message_ES": "Defensa 3 segundos" }],
+	"s-3020-2200-203-0": [{ "type": "text", "sub_type": "message", "message": "Defence 10 seconds", "message_RU": "Защита 10 сек.", "message_ES": "Defensa 10 segundos" }],
+	"s-3020-2200-204-0": [{ "type": "text", "sub_type": "message", "message": "30% (transformation)", "message_RU": "30% (видоизменение)", "message_ES": "30% (transformación)" }]
 };

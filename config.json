@@ -1,0 +1,111 @@
+{
+    "version": "1.11",
+    "data": {
+        "enabled": true,
+        "lNotice": false,
+        "gNotice": false,
+        "stream": false,
+        "spawnObject": true,
+        "speaks": true,
+        "rate": [
+            2
+        ],
+        "cc": [
+            "</font><font color=\"#ffff00\">"
+        ],
+        "language": "es",
+        "dungeons": [
+            {
+                "id": 9781,
+                "verbose": true,
+                "spawnObject": true
+            },
+            {
+                "id": 9739,
+                "verbose": true,
+                "spawnObject": true
+            },
+            {
+                "id": 9735,
+                "verbose": true,
+                "spawnObject": true
+            },
+            {
+                "id": 9982,
+                "verbose": true,
+                "spawnObject": true
+            },
+            {
+                "id": 9920,
+                "verbose": true,
+                "spawnObject": true
+            },
+            {
+                "id": 3201,
+                "verbose": true,
+                "spawnObject": true
+            },
+            {
+                "id": 3023,
+                "verbose": true,
+                "spawnObject": true
+            },
+            {
+                "id": 9044,
+                "verbose": true,
+                "spawnObject": true
+            },
+            {
+                "id": 3026,
+                "verbose": true,
+                "spawnObject": true
+            },
+            {
+                "id": 3027,
+                "verbose": true,
+                "spawnObject": true
+            },
+            {
+                "id": 3126,
+                "verbose": true,
+                "spawnObject": true
+            },
+            {
+                "id": 3102,
+                "verbose": true,
+                "spawnObject": true
+            },
+            {
+                "id": 3202,
+                "verbose": true,
+                "spawnObject": true
+            },
+            {
+                "id": 3034,
+                "verbose": true,
+                "spawnObject": true
+            },
+            {
+                "id": 3103,
+                "verbose": true,
+                "spawnObject": true
+            },
+            {
+                "id": 3203,
+                "verbose": true,
+                "spawnObject": true
+            },
+            {
+                "id": 3020,
+                "verbose": true,
+                "spawnObject": true
+            },
+            {
+                "id": 9053,
+                "verbose": true,
+                "spawnObject": true
+            }
+        ],
+        "chat-name": "Guide"
+    }
+}

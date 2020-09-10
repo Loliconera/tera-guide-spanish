@@ -1,83 +1,75 @@
-# tera-guide
-A generic guide module for TERA with English and Russian translations (detects automatically). Display hints on screen and drawing zones of bosses attacks and mechanics (also supports of Text-to-speech notifications).
+# tera-guía
+Un módulo de guía genérico para TERA con traducciones al español, ingles y al ruso. Muestra pistas en la pantalla y dibuja zonas de ataques y mecánicas de jefes (también admite notificaciones de texto a voz).
 
-Основной модуль подсказок по данжам TERA с поддержкой русского и английского языков. Вывод подсказок в чат или на экран, а также отрисовка зон атак боссов и механик (присутствует возможность голосовых уведомлений).
+&#x1F534; **Se lanzaron actualizaciones críticas a partir del 3 de septiembre de 2020. ¡Actualice!** 
 
-&#x1F534; **A critical updates have been released from September 3rd, 2020. Please update!  
-&#x1F534; От 3 сентября 2020 года были выпущены критические обновления. Пожалуйста, обновитесь!**
-
-## Dependencies / Зависимости
+## Dependencies
 https://github.com/tera-toolbox-mods/library
 
-Extract to "mods" directory in your Tera-Proxy. DO NOT INSTALLED IT AS "library-master" MAKE SURE IT'S NAMED "library".
+Extraiga al directorio "mods" en su Tera-Proxy. NO LO INSTALE COMO "library-master" ASEGÚRESE DE QUE SE NOMBRE "library".
 
-Распаковать в директорию "mods" в вашей Tera-Proxy. НЕ РАСПАКОВЫВАТЬ КАК "library-master", ДИРЕКТОРИЯ ДОЛЖНА НАЗЫВАТЬСЯ "library".
+## Comandos 
+Toolbox(/8) | Descripción del comando
+--- | --- 
+**guide** | Módulo on/off 
+**guide&nbsp;gui** | Mostrar módulo GUI
+**guide&nbsp;voice**<br>(defecto: encendido) | Avisos de texto a voz (TTS) on/off, la velocidad del habla se establece mediante un comando **guide `1`~`10`** 
+**guide&nbsp;lNotice**<br>(defecto: apagado) | Envíe avisos al canal de chat "Notice" en lugar de mensajes en pantalla on/off 
+**guide&nbsp;gNotice**<br>(defecto: apagado) | Enviar avisos al canal de chat del grupo on/off Enviar avisos al canal de chat del grupo 
+**guide&nbsp;`1`~`10`**<br>(defecto: 1) | Establecer la velocidad de voz TTS
+**guide&nbsp;spawnObject**<br>(defecto: encendido) | Generar objetos marcadores on/off
+**guide&nbsp;stream**<br>(defecto: apagado) | Modo Streamer on/off (ocultar todos los avisos y objetos, se reproducirá TTS)
+**guide&nbsp;dungeons** | Lista de todas las mazmorras compatibles y sus identificadores
+**guide&nbsp;verbose&nbsp;`id`**<br>(defecto: encendido para todos) | Enviar avisos para la mazmorra especificada por `id` on/off 
+**guide&nbsp;spawnObject&nbsp;`id`**<br>(defecto: encendido para todos) | Generar objetos de marcador para la mazmorra especificada por `id` on/off 
+**guide&nbsp;help** | Lista de comandos compatibles
 
-## Commands / Команды
-Toolbox(/8) | Command description | Описание команды
---- | --- | ---
-**guide** | Module on/off | Вкл./выкл. модуля
-**guide&nbsp;gui** | Show module GUI| Показать графический интерфейс
-**guide&nbsp;voice**<br>(default: on) | Text-to-speech (TTS) notices on/off, speech rate is set by command **guide `1`~`10`** | Вкл./выкл. голосовых уведомлений (TTS), скорость чтения задается командой **guide `1`~`10`**
-**guide&nbsp;lNotice**<br>(default: off) | Send notices to chat channel "Notice" instead of on-screen messages on/off | Вкл./выкл. отправки уведомлений в канал чата "Важно" вместо показа экранных сообщений
-**guide&nbsp;gNotice**<br>(default: off) | Send notices to party chat channel on/off (will be visible for all party members) | Вкл./выкл. отправки уведомлений в чат группы (уведомления будут видеть все члены группы)
-**guide&nbsp;`1`~`10`**<br>(default: 2) | Set TTS speech rate | Регулировка скорости чтения голосовых сообщений
-**guide&nbsp;spawnObject**<br>(default: on) | Spawn marker objects on/off | Вкл./выкл. спавна маркировочных объектов
-**guide&nbsp;stream**<br>(default: off) | Streamer mode on/off (hide all notices and objects, TTS will played) | Вкл./выкл. режима стримера (скрывает все уведомления и маркеры, TTS будет проигрываться)
-**guide&nbsp;dungeons** | List of all supported dungeons and its ids | Список всех поддерживаемых данжей и их id
-**guide&nbsp;verbose&nbsp;`id`**<br>(default: on for all) | Send notices for specified by `id` dungeon on/off | Вкл./выкл. всех уведомлений для данжа, где `id` - идентификатор данжа
-**guide&nbsp;spawnObject&nbsp;`id`**<br>(default: on for all) | Spawn marker objects for specified by `id` dungeon on/off | Вкл./выкл. спавна объектов для данжа, где `id` - идентификатор данжа
-**guide&nbsp;help** | List of supported commands | Вывод поддерживаемых команд
+## Dungeons Compatibles
+id | Nombre de la mazmorra
+--- | ---
+9781 | Velik's Sanctuary
+9739 | Red Refuge 
+9735 | RK-9 Kennel
+3034 | Rampaging RK-9 Kennel
+9920 | Antaroth's Abyss (Hard)
+9982 | Grotto of Lost Souls (Hard)
+9053 | Kezzel's Gorge
+9044 | Bahaar's Sanctum
+3201 | Gossamer Vault (Hard)
+3023 | Akalath Quarantine
+3020 | Sea of Honor
+3026 | Corrupted Skynest
+3126 | Corrupted Skynest (Hard)
+3102 | Draakon Arena
+3202 | Draakon Arena (Hard)
+3027 | Forbidden Arena [Hagufna]
+3103 | Forbidden Arena [Undying Warlord]
+3203 | Forbidden Arena [Nightmare Undying Warlord]
 
-## Supported dungeons / Поддерживаемые данжи
-id | Dungeon name | Название данжа
---- | --- | ---
-9781 | Velik's Sanctuary | Святилище Велики
-9739 | Red Refuge | Лагерь повстанцев
-9735 | RK-9 Kennel | Ангар RK-9
-3034 | Rampaging RK-9 Kennel | Ангар RK-9 (сложно)
-9920 | Antaroth's Abyss (Hard) | Омут Бездушного Антароса
-9982 | Grotto of Lost Souls (Hard) | Заброшенная мастерская Леандра
-9044 | Bahaar's Sanctum | Святилище Бахаара
-3201 | Gossamer Vault (Hard) | Гнездо сверкающей Паркин
-3023 | Akalath Quarantine | Секретное подземелье крепости Берарк
-3020 | Sea of Honor | Золотая чешуя
-3026 | Corrupted Skynest | Логово Келсаика
-3126 | Corrupted Skynest (Hard) | Логово Бессмертного Келсаика
-3102 | Draakon Arena | Командный центр
-3202 | Draakon Arena (Hard) | Командный центр (сложно)
-3027 | Forbidden Arena [Hagufna] | [Бессмертный воин] Арена безумия
-3103 | Forbidden Arena [Undying Warlord] | [Этерния] Арена безумия
-3203 | Forbidden Arena [Nightmare Undying Warlord] | [Бессмертный] Арена безумия
+## Configuración de avisos
 
-## Notices settings / Настройка уведомлений
+* En la pantalla (en la parte inferior) y avisos de chat, si el parámetro **lNotice** está *activado*. Avisos visibles solo para usted.    
+  ![](https://i.imgur.com/JuFD8wn.png)
 
-* On screen (on bottom side) and chat notices, if **lNotice** parameter is *on*. Notices visible for you only.   
-  Уведомления на экране (в нижней части), а также в чате, если параметр **lNotice** - *включен*. Видны только вам.   
-  ![](https://i.imgur.com/BPlK58M.png)
+* Cuando el parámetro **gNotice** está *activado*, también se enviarán avisos a todos los miembros del grupo.
 
-* When **gNotice** parameter is *on*, notices will also be sent to all party members.   
-  Если параметр **gNotice** был *включен*, уведомления также будут отправляться всем членам группы.
-
-* The message on top side of the screen, if **lNotice** parameter is *off* (by default). Notices visible for you only.   
-  Сообщение в верхней части экрана, если параметр **lNotice** - *выключен* (по-умолчанию). Видны только вам.   
-  ![](https://i.imgur.com/r2bb8Wc.png)   
-  You can set the color for this type of notices using the commands (also change color in the Toolbox chat).   
-  Возможен выбор цвета для этого вида уведомлений при помощи команд (также изменяют цвет в чате Toolbox).   
-  ![](https://i.imgur.com/TfHFgjD.png)
+* El mensaje en la parte superior de la pantalla, si el parámetro **lNotice** está *desactivado* (por defecto). Avisos visibles solo para usted.     
+  ![](https://i.imgur.com/zuDYm1q.png)   
+  Puede establecer el color para este tipo de avisos usando los comandos (también cambie el color en el chat de Toolbox)..   
+  ![](https://i.imgur.com/SFCzNEp.png)
 
 
-* When streamer mode is *on* (**stream** parameter), notices ONLY sent to Toolbox(/8) chat channel.   
-  Если включен режим стримера (парам. **stream**), уведомления будут отправляться ТОЛЬКО в канал чата Toolbox(/8).
+* Cuando el modo Streamer está *activado* (parámetro **stream**), los avisos SOLO se envían al canal de chat de Toolbox(/8).   
 
-## Development and Debugging / Разработка и отладка
-Подробнее на https://github.com/hsdn/tera-guide/wiki
+## Desarrollo y depuración
+Lee mas en https://github.com/hsdn/tera-guide/wiki
 
-## Credits
-- **[Kasea](https://github.com/tera-toolbox-mods)** - Original developer of Tera-Guide module
-- **[michengs](https://github.com/michengs)** - Author of base code for most guides and module core
-- **[ZC](https://github.com/tera-mod)** - Provided coordinates for rendering attack areas and mechanics
-- **[Kuroine](https://github.com/Kuroine)** - Author of base code for the DA guide
-- **[Multarix](https://github.com/Multarix)** - Author of the RR guide and also making changes to the English translation
-- **[Owyn](https://github.com/Owyn)** - Developer of great guides for RK-9, AA and GV, whose code was used
-- **[ITunk](https://github.com/GrafNikola)** - Author of initial Russian translation
+## Créditos
+- **[Kasea](https://github.com/tera-toolbox-mods)** - Desarrollador original del módulo Tera-Guide
+- **[michengs](https://github.com/michengs)** - Autor del código base para la mayoría de las guías y el núcleo del módulo
+- **[ZC](https://github.com/tera-mod)** - Coordenadas proporcionadas para representar las áreas de ataque y la mecánica
+- **[Kuroine](https://github.com/Kuroine)** - Autor del código base de la guía DA
+- **[Multarix](https://github.com/Multarix)** - Autor de la guía RR y también realizando cambios en la traducción al inglés
+- **[Owyn](https://github.com/Owyn)** - Desarrollador de grandes guías para RK-9, AA y GV, cuyo código se utilizó
+- **[ITunk](https://github.com/GrafNikola)** - Autor de la traducción inicial al ruso
+- **[HSDN ](https://github.com/HSDN)** - Autor de la traducción al ruso y desarrollador original del módulo tera-guide
