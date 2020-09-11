@@ -1346,6 +1346,11 @@ function NetworkMod(dispatch) {
 
 	// Spawn Func handler
 	function spawn_func_handler(event, ent, speed = 1.0) {
+		// Ignore if streamer mode is enabled
+		if (dispatch.settings.stream) return;
+		// Ignore if spawnObject is disabled
+		if (!dispatch.settings.spawnObject) return;
+		if (!guide.settings.spawnObject) return;		
 		// Make sure func and args is defined
 		if (!event["func"]) return debug_message(true, "Spawn Func handler needs a func");
 		if (!event["args"]) return debug_message(true, "Spawn Func handler needs a args");
