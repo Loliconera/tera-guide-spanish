@@ -21,14 +21,14 @@ function skilld_event(skillid, handlers, event, ent, dispatch) {
 				"sub_type": "message",
 				"message": "Haymaker",
 				"message_RU": "Мощный удар",
-				"message_ES": "Haymaker"				
+				"message_ES": "Puñetazo"				
 			});
 		} else { // 116 -> 146
 			handlers["text"]({
 				"sub_type": "message",
 				"message": "Haymaker | Back Kick",
 				"message_RU": "Мощный удар | Откид назад",
-				"message_ES": "Haymaker | Patada hacia atrás"				
+				"message_ES": "Puñetazo | Patada hacia atrás"				
 			});
 		}
 	}
@@ -66,11 +66,11 @@ module.exports = {
 	"s-3103-1000-121-0": [{ "type": "text", "sub_type": "message", "message": "Flip Kick (Stun)", "message_RU": "Удар в воздухе (стан)", "message_ES": "Patada Aérea (Stun)" }],
 	"s-3103-1000-107-0": [{ "type": "text", "sub_type": "message", "message": "Bait", "message_RU": "Байт", "message_ES": "Objetivo" }, { "type": "func", "func": skilld_event.bind(null, 107) }],
 	"s-3103-1000-110-0": [{ "type": "text", "sub_type": "message", "message": "Spin", "message_RU": "Крутилка", "message_ES": "Girar" }, { "type": "func", "func": SpawnCircle.bind(null, true, 553, 0, 0, 12, 420, 0, 3000) }],
-	"s-3103-1000-114-0": [{ "type": "text", "sub_type": "message", "message": "Leap (Knockdown)", "message_RU": "Прыжок (опрокид)", "message_ES": "Salto (Derribo)" }, { "type": "func", "func": SpawnCircle.bind(null, true, 553, 0, 0, 12, 240, 0, 2000) }],
+	"s-3103-1000-114-0": [{ "type": "text", "sub_type": "message", "message": "Leap (Knockdown)", "message_RU": "Прыжок (опрокид)", "message_ES": "Saltar (Derribo)" }, { "type": "func", "func": SpawnCircle.bind(null, true, 553, 0, 0, 12, 240, 0, 2000) }],
 	//"s-3103-1000-154-0": [{ "type": "text", "sub_type": "message", "message": "Jumping Kick", "message_RU": "Удар в прыжке" }], // 154 310 116
-	"s-3103-1000-310-0": [{ "type": "text", "sub_type": "message", "message": "Back Flip | Haymaker", "message_RU": "Сальто назад | Мощный удар", "message_ES": "Salto hacia atrás | Haymaker" }, { "type": "func", "func": skilld_event.bind(null, 310) }], // 310 116
+	"s-3103-1000-310-0": [{ "type": "text", "sub_type": "message", "message": "Back Flip | Haymaker", "message_RU": "Сальто назад | Мощный удар", "message_ES": "Salto hacia atrás | Puñetazo" }, { "type": "func", "func": skilld_event.bind(null, 310) }], // 310 116
 	"s-3103-1000-116-0": [{ "type": "func", "func": skilld_event.bind(null, 116) }], // Haymaker
-	"s-3103-1000-115-0": [{ "type": "text", "sub_type": "message", "message": "Haymaker (Tank)", "message_RU": "Мощный удар (танк)", "message_ES": "Haymaker (Tank)" }],
+	"s-3103-1000-115-0": [{ "type": "text", "sub_type": "message", "message": "Haymaker (Tank)", "message_RU": "Мощный удар (танк)", "message_ES": "Puñetazo (Tank)" }],
 	"s-3103-1000-131-0": [{ "type": "text", "sub_type": "message", "message": "Rhythmic Blows", "message_RU": "Ураганная серия", "message_ES": "Golpes Rítmicos" }], // 131 132 133
 	 // 116 146
 	"s-3103-1000-146-0": [
@@ -92,7 +92,7 @@ module.exports = {
 
 	// Donuts
 	"qb-3103-1000-31031008": [{ "type": "text", "sub_type": "message", "message": "Donuts: Out > In > Dodge", "message_RU": "Бублики: От него > К нему > Эвейд", "message_ES": "Donas: Salir > Entrar > Iframe" }], // 31031008 303/304 117 155
-	"qb-3103-1000-31031009": [{ "type": "text", "sub_type": "message", "message": "Donuts: In > Out > Dodge", "message_RU": "Бублики: К нему > От него > Эвейд", "message_ES": "Donass: Entrar > Salir > Iframe" }], // 31031009 303/304 118 155
+	"qb-3103-1000-31031009": [{ "type": "text", "sub_type": "message", "message": "Donuts: In > Out > Dodge", "message_RU": "Бублики: К нему > От него > Эвейд", "message_ES": "Donas: Entrar > Salir > Iframe" }], // 31031009 303/304 118 155
 	"s-3103-1000-303-0": [
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 8, 630, 0, 7000) },
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 445, 0, 0, 12, 250, 0, 5000) },
@@ -124,9 +124,9 @@ module.exports = {
 	"s-3103-1000-143-1": [{ "type": "func", "func": SpawnCircle.bind(null, true, 553, 0, 0, 14, 240, 0, 2000) }],
 
 	// AoE 313 314
-	"s-3103-1000-313-0": [{ "type": "text", "sub_type": "message", "message": "AOE", "message_RU": "AOE" }],
+	"s-3103-1000-313-0": [{ "type": "text", "sub_type": "message", "message": "AOE", "message_RU": "AOE", "message_ES": "AOE" }],
 	"s-3103-1000-314-0": [
-		{ "type": "text", "sub_type": "message", "message": "Get Out", "message_RU": "Выйти" },
+		{ "type": "text", "sub_type": "message", "message": "Get Out", "message_RU": "Выйти", "message_ES": "Salir" },
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 20, 460, 0, 4000) }
 	],
 
