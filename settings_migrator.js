@@ -6,7 +6,7 @@ const DefaultSettings = {
 	"gNotice": false,
 	"stream": false,
 	"spawnObject": true,
-	"speaks": true,
+	"speaks": false,
 	"rate": [
 		2
 	],
