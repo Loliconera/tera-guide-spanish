@@ -11,6 +11,7 @@ let boss_seventy = false;
 let msg_a = 3;
 let msg_b = 3;
 let mech_reverse = false;
+let mech_notice = false;
 
 const mech_messages = {
 	0: { message: "Out",  message_RU: "От него",  message_ES: "Salir" },
@@ -49,10 +50,16 @@ function skilld_event(skillid, handlers, event, ent, dispatch) {
 			case 3034311: // STANDARD (1)
 				mech_reverse = false;
 				print_mech(true, true, handlers);
+				if (mech_notice) {
+					print_mech(false, false, handlers);
+				}				
 				break;
 			case 3034312: // REVERSE (0)
 				mech_reverse = true;
 				print_mech(true, true, handlers);
+				if (mech_notice) {
+					print_mech(false, false, handlers);
+				}				
 				break;
 		}
 	}
@@ -68,6 +75,8 @@ function skilld_event(skillid, handlers, event, ent, dispatch) {
 		dispatch.setTimeout(() => {
 			print_mech(true, false, handlers);
 		}, 7000);
+		mech_notice = true;
+		dispatch.setTimeout(() => mech_notice = false, 3000);		
 	}
 
 	// S-attacks

@@ -8,7 +8,7 @@
         "spawnObject": true,
         "speaks": true,
         "rate": [
-            1
+            2
         ],
         "cc": [
             "</font><font color=\"#ffff00\">"
