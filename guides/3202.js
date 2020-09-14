@@ -31,7 +31,7 @@ module.exports = {
 		{ "type": "text", "sub_type": "message", "delay": 3000, "message": "Gather!", "message_RU": "Собраться!", "message_ES": "¡Reunir!" }
 	],
 	"s-3202-1000-112-0": [
-		{ "type": "text", "sub_type": "message", "message": "Front | Back Kick", "message_RU": "Разворот | Откид назад", "message_RU": "Patada frontal | Hacia atrás" },
+		{ "type": "text", "sub_type": "message", "message": "Front | Back Kick", "message_RU": "Разворот | Откид назад", "message_ES": "Patada frontal | Hacia atrás" },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 90, 120, 160, 300, 0, 3000) },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 270, 120, -160, 300, 0, 3000) }
 	],

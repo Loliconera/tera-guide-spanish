@@ -204,7 +204,7 @@ module.exports = {
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 10, 500, 0, 6000) },
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 8, 750, 0, 6000) }
 	],
-	"s-3023-2000-202-0": [{ "type": "text", "sub_type": "message", "message": "Backstab", "message_RU": "Назад + Вперед", "message_ES": "Ataque Atrás + Adelante" },
+	"s-3023-2000-202-0": [{ "type": "text", "sub_type": "message", "message": "Backstab", "message_RU": "Назад + Вперед", "message_ES": "Ataque hacia atrás + Adelante" },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 90, 80, 180, 500, 0, 3000) },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 270, 80, 180, 500, 0, 3000) }
 	],
