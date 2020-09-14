@@ -26,7 +26,7 @@ Toolbox(/8) | Descripción del comando
 
 ## Dungeons Compatibles
 id | Nombre de la mazmorra | Idioma
---- | ---
+--- | --- | ---
 9781 | Velik's Sanctuary | 
 9739 | Red Refuge | Español 
 9735 | RK-9 Kennel | Español 
