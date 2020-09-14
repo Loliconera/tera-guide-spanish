@@ -63,7 +63,7 @@ module.exports = {
 	//"s-3203-1000-108-0": [{ "type": "text", "class_position": "tank", "sub_type": "message", "message": "Floor Punch", "message_RU": "Удар о землю" }],
 	//"s-3203-1000-127-0": [{ "type": "text", "class_position": "tank", "sub_type": "message", "message": "Many Kicks", "message_RU": "Несколько ударов" }],
 
-	"s-3203-1000-121-0": [{ "type": "text", "sub_type": "message", "message": "Flip Kick (Stun)", "message_RU": "Удар в воздухе (стан)", "message_ES": "Patada Aérea (Stun)"  }],
+	"s-3203-1000-121-0": [{ "type": "text", "sub_type": "message", "message": "Flip Kick (Stun)", "message_RU": "Удар в воздухе (стан)", "message_ES": "Patada Aérea (Stun)" }],
 	"s-3203-1000-107-0": [{ "type": "text", "sub_type": "message", "message": "Bait", "message_RU": "Байт", "message_ES": "Objetivo" }, { "type": "func", "func": skilld_event.bind(null, 107) }],
 	"s-3203-1000-110-0": [{ "type": "text", "sub_type": "message", "message": "Spin", "message_RU": "Крутилка", "message_ES": "Girar" }, { "type": "spawn_func", "func": "circle", "args": [true, 553, 0, 0, 12, 420, 0, 3000] }],
 	"s-3203-1000-114-0": [{ "type": "text", "sub_type": "message", "message": "Leap (Knockdown)", "message_RU": "Прыжок (опрокид)", "message_ES": "Saltar (Derribo)" }, { "type": "spawn_func", "func": "circle", "args": [true, 553, 0, 0, 12, 240, 0, 2000] }],
@@ -79,7 +79,7 @@ module.exports = {
 	],
 
 	// Shield
-	"qb-3203-1000-32031006": [{ "type": "text", "sub_type": "message", "message": "Shield!", "message_RU": "Щит!", "message_ES": "¡Escudo!"  }],
+	"qb-3203-1000-32031006": [{ "type": "text", "sub_type": "message", "message": "Shield!", "message_RU": "Щит!", "message_ES": "¡Escudo!" }],
 
 	// Target "Ha" attacks 308 32031007 125
 	"qb-3203-1000-32031007": [{ "type": "text", "sub_type": "message", "message": "Target", "message_RU": "Таргет", "message_ES": "Objetivo" }, { "type": "func", "func": skilld_event.bind(null, 32031007) }],
@@ -136,5 +136,5 @@ module.exports = {
 	// Debuff
 	"ae-0-0-32031011": [{ "type": "text", "sub_type": "alert", "message": "Debuff Stack", "message_RU": "Дебафф (стаки)", "message_ES": "Debuff Stack" }],
 	"am-3203-1000-32031011": [{ "type": "text", "sub_type": "alert", "message": "Debuff Stack", "message_RU": "Дебафф (стаки)", "message_ES": "Debuff Stack" }],
-	"am-3203-1000-32031012": [{ "type": "text", "sub_type": "alert", "message": "Debuff Stack", "message_RU": "Дебафф (стаки)" , "message_ES": "Debuff Stack"}], 
+	"am-3203-1000-32031012": [{ "type": "text", "sub_type": "alert", "message": "Debuff Stack", "message_RU": "Дебафф (стаки)", "message_ES": "Debuff Stack" }], 
 };
