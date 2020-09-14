@@ -20,14 +20,14 @@ function skilld_event(skillid, handlers, event, ent, dispatch) {
 				"sub_type": "message",
 				"message": "Haymaker",
 				"message_RU": "Мощный удар",
-				"message_ES": "Puñetazo"				
+				"message_ES": "Puñetazo"
 			});
 		} else { // 116 -> 146
 			handlers["text"]({
 				"sub_type": "message",
 				"message": "Haymaker | Back Kick",
 				"message_RU": "Мощный удар | Откид назад",
-				"message_ES": "Puñetazo | Patada hacia atrás"				
+				"message_ES": "Puñetazo | Patada hacia atrás"
 			});
 		}
 	}
@@ -58,7 +58,7 @@ module.exports = {
 	"s-3103-1000-111-0": [{ "type": "text", "class_position": "tank", "sub_type": "message", "message": "Knockdown", "message_RU": "Опрокид", "message_ES": "Derribo" }],
 	"s-3103-1000-120-0": [{ "type": "text", "class_position": "tank", "sub_type": "message", "message": "Knockdown", "message_RU": "Опрокид", "message_ES": "Derribo" }],
 	//"s-3103-1000-102-0": [{ "type": "text", "class_position": "tank", "sub_type": "message", "message": "Combo", "message_RU": "Комба" }], // 102 153/154 115/116
-	"s-3103-1000-153-0": [{ "type": "text", "class_position": "tank", "sub_type": "message", "message": "Two Kicks", "message_RU": "Два удара", "message_ES": "Dos patadas" }], // 153 108
+	"s-3103-1000-153-0": [{ "type": "text", "class_position": "tank", "sub_type": "message", "message": "Two Kicks", "message_RU": "Два удара", "message_ES": "Dos Patadas" }], // 153 108
 	//"s-3103-1000-108-0": [{ "type": "text", "class_position": "tank", "sub_type": "message", "message": "Floor Punch", "message_RU": "Удар о землю" }],
 	//"s-3103-1000-127-0": [{ "type": "text", "class_position": "tank", "sub_type": "message", "message": "Many Kicks", "message_RU": "Несколько ударов" }],
 
@@ -86,8 +86,8 @@ module.exports = {
 		{ "type": "text", "sub_type": "message", "message": "Target", "message_RU": "Таргет", "message_ES": "Objetivo" },
 		{ "type": "func", "func": skilld_event.bind(null, 31031007) }
 	],
-	"s-3103-1000-124-0": [{ "type": "text", "sub_type": "message", "message": "Kick", "message_RU": "Удар", "message_ES": "Patear" }], // 305 124
-	"s-3103-1000-125-0": [{ "type": "text", "sub_type": "message", "message": "Kick", "message_RU": "Удар", "message_ES": "Patear" }],
+	"s-3103-1000-124-0": [{ "type": "text", "sub_type": "message", "message": "Kick", "message_RU": "Удар", "message_ES": "Patada" }], // 305 124
+	"s-3103-1000-125-0": [{ "type": "text", "sub_type": "message", "message": "Kick", "message_RU": "Удар", "message_ES": "Patada" }],
 
 	// Donuts
 	"qb-3103-1000-31031008": [{ "type": "text", "sub_type": "message", "message": "Donuts: Out > In > Dodge", "message_RU": "Бублики: От него > К нему > Эвейд", "message_ES": "Donas: Salir > Entrar > Iframe" }], // 31031008 303/304 117 155
