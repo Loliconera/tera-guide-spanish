@@ -49,13 +49,16 @@ id | Nombre de la mazmorra | Idioma
 ## Configuración de Avisos
 
 * En la pantalla (en la parte inferior) y avisos de chat, si el parámetro **lNotice** está *activado*. Avisos visibles solo para usted.
+
   ![](https://i.imgur.com/PGRm9Hx.png)
 
 * Cuando el parámetro **gNotice** está *activado*, también se enviarán avisos a todos los miembros del grupo.
 
 * El mensaje en la parte superior de la pantalla, si el parámetro **lNotice** está *desactivado* (por defecto). Avisos visibles solo para usted.
+
   ![](https://i.imgur.com/eVmuWjG.png)
   Puede establecer el color para este tipo de avisos usando los comandos (también cambie el color en el chat de Toolbox).
+
   ![](https://i.imgur.com/ABCRTsV.png)
 
 
@@ -63,6 +66,7 @@ id | Nombre de la mazmorra | Idioma
 
 ## Módulo GUI
 * En el canal de chat de Toolbox(/8) escriba el siguiente parámetro **guide GUI** para mostrar una interfaz gráfica del modulo, puede tambien cambiar la configuración básica de manera mas sencilla.
+
   ![](https://i.imgur.com/kfysB9t.png)
 
 ## Desarrollo y Depuración
