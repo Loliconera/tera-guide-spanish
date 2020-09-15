@@ -2,8 +2,6 @@
 //
 // made by michengs / HSDN
 
-const {SpawnMarker, SpawnCircle} = module.parent.exports.lib;
-
 let player, entity, library, effect;
 
 let thirdboss_fifty = false;
@@ -77,17 +75,17 @@ module.exports = {
 	// 1 BOSS
 	"s-781-1000-2401": [
 		{ "type": "text", "sub_type": "message", "message": "Right", "message_RU": "Откид вправо" },
-		{ "type": "func", "func": SpawnMarker.bind(null, false, 300, 100, 0, 2000, true, null) },
-		{ "type": "func", "func": SpawnMarker.bind(null, false, 230, 100, 0, 2000, true, null) }
+		{ "type": "spawn_func", "func": "marker", "args": [false, 300, 100, 0, 2000, true, null] },
+		{ "type": "spawn_func", "func": "marker", "args": [false, 230, 100, 0, 2000, true, null] }
 	],
 	"s-781-1000-2402": [
 		{ "type": "text", "sub_type": "message", "message": "Left", "message_RU": "Откид влево" },
-		{ "type": "func", "func": SpawnMarker.bind(null, false, 60, 100, 0, 2000, true, null) },
-		{ "type": "func", "func": SpawnMarker.bind(null, false, 130, 100, 0, 2000, true, null) }
+		{ "type": "spawn_func", "func": "marker", "args": [false, 60, 100, 0, 2000, true, null] },
+		{ "type": "spawn_func", "func": "marker", "args": [false, 130, 100, 0, 2000, true, null] }
 	],
 	"s-781-1000-2304-0": [
 		{ "type": "text", "sub_type": "message", "message": "Flying", "message_RU": "Взлет" },
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 10, 300, 0, 6000) }
+		{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 10, 300, 0, 6000] }
 	],
 	"s-781-1000-2303-0": [{ "type": "text", "sub_type": "message", "message": "Spin", "message_RU": "Крутилка" }],
 	"s-781-1000-2113-0": [{ "type": "text", "sub_type": "message", "message": "Front + AoEs", "message_RU": "Передняя | AOE" }],
@@ -95,17 +93,17 @@ module.exports = {
 	"s-781-1000-2309-0": [{ "type": "text", "sub_type": "message", "message": "IN", "message_RU": "Внутрь" }],
 	"s-781-1000-1401": [
 		{ "type": "text", "sub_type": "message", "message": "Right", "message_RU": "Откид вправо" },
-		{ "type": "func", "func": SpawnMarker.bind(null, false, 300, 100, 0, 2000, true, null) },
-		{ "type": "func", "func": SpawnMarker.bind(null, false, 230, 100, 0, 2000, true, null) }
+		{ "type": "spawn_func", "func": "marker", "args": [false, 300, 100, 0, 2000, true, null] },
+		{ "type": "spawn_func", "func": "marker", "args": [false, 230, 100, 0, 2000, true, null] }
 	],
 	"s-781-1000-1402": [
 		{ "type": "text", "sub_type": "message", "message": "Left", "message_RU": "Откид влево" },
-		{ "type": "func", "func": SpawnMarker.bind(null, false, 60, 100, 0, 2000, true, null) },
-		{ "type": "func", "func": SpawnMarker.bind(null, false, 130, 100, 0, 2000, true, null) }
+		{ "type": "spawn_func", "func": "marker", "args": [false, 60, 100, 0, 2000, true, null] },
+		{ "type": "spawn_func", "func": "marker", "args": [false, 130, 100, 0, 2000, true, null] }
 	],
 	"s-781-1000-1304-0": [
 		{ "type": "text", "sub_type": "message", "message": "Flying", "message_RU": "Взлет" },
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 10, 300, 0, 6000) }
+		{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 10, 300, 0, 6000] }
 	],
 	"s-781-1000-1303-0": [{ "type": "text", "sub_type": "message", "message": "Spin", "message_RU": "Крутилка" }],
 	"s-781-1000-1113-0": [{ "type": "text", "sub_type": "message", "message": "Front + AoEs", "message_RU": "Передняя | AOE" }],
@@ -131,13 +129,13 @@ module.exports = {
 	],
 	"s-781-2000-1130-0": [
 		{ "type": "text", "sub_type": "message", "message": "Left", "message_RU": "Откид влево" },
-		{ "type": "func", "func": SpawnMarker.bind(null, false, 60, 100, 0, 2000, true, null) },
-		{ "type": "func", "func": SpawnMarker.bind(null, false, 130, 100, 0, 2000, true, null) }
+		{ "type": "spawn_func", "func": "marker", "args": [false, 60, 100, 0, 2000, true, null] },
+		{ "type": "spawn_func", "func": "marker", "args": [false, 130, 100, 0, 2000, true, null] }
 	],
 	"s-781-2000-1131-0": [
 		{ "type": "text", "sub_type": "message", "message": "Right", "message_RU": "Откид вправо" },
-		{ "type": "func", "func": SpawnMarker.bind(null, false, 300, 100, 0, 2000, true, null) },
-		{ "type": "func", "func": SpawnMarker.bind(null, false, 230, 100, 0, 2000, true, null) }
+		{ "type": "spawn_func", "func": "marker", "args": [false, 300, 100, 0, 2000, true, null] },
+		{ "type": "spawn_func", "func": "marker", "args": [false, 230, 100, 0, 2000, true, null] }
 	],
 	//"s-781-2000-2503-0": [{ "type": "text", "sub_type": "message", "message": "坦快跑远", "message_RU": "坦快跑远" }], // дурион выбрал цель
 	"s-781-2000-2106-0": [{ "type": "text", "sub_type": "message", "message": "Back", "message_RU": "Задний" }],
@@ -151,12 +149,12 @@ module.exports = {
 		{ "type": "text", "sub_type": "message", "delay": 3000, "message": "1" }
 	],
 	"s-781-2000-2130-0": [{ "type": "text", "sub_type": "message", "message": "Left", "message_RU": "Откид влево" },
-		{ "type": "func", "func": SpawnMarker.bind(null, false, 60, 100, 0, 2000, true, null) },
-		{ "type": "func", "func": SpawnMarker.bind(null, false, 130, 100, 0, 2000, true, null) }
+		{ "type": "spawn_func", "func": "marker", "args": [false, 60, 100, 0, 2000, true, null] },
+		{ "type": "spawn_func", "func": "marker", "args": [false, 130, 100, 0, 2000, true, null] }
 	],
 	"s-781-2000-2131-0": [{ "type": "text", "sub_type": "message", "message": "Right", "message_RU": "Откид вправо" },
-		{ "type": "func", "func": SpawnMarker.bind(null, false, 300, 100, 0, 2000, true, null) },
-		{ "type": "func", "func": SpawnMarker.bind(null, false, 230, 100, 0, 2000, true, null) }
+		{ "type": "spawn_func", "func": "marker", "args": [false, 300, 100, 0, 2000, true, null] },
+		{ "type": "spawn_func", "func": "marker", "args": [false, 230, 100, 0, 2000, true, null] }
 	],
 	//"s-781-2000-4000-0": [{ "type": "text", "sub_type": "alert", "message": "鉴定！！！！", "message_RU": "Дискотека！" }],
 	//"dm-0-0-9781022": [{ "type": "text", "sub_type": "alert", "message": "鉴定", "message_RU": "鉴定" }],
@@ -187,11 +185,11 @@ module.exports = {
 	"s-781-3000-2113-0": [{ "type": "text", "sub_type": "message", "message": "Bait", "message_RU": "Байт" }],
 	"s-781-3000-1152-0": [{ "type": "text", "sub_type": "message", "message": "Stun + Back", "message_RU": "Стан + Откид назад" }],
 	"s-781-3000-2152-0": [{ "type": "text", "sub_type": "message", "message": "Stun + Back", "message_RU": "Стан + Откид назад" }],
-	"s-781-3000-2138-0": [{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 10, 250, 0, 6000) }],
-	"s-781-3000-1138-0": [{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 10, 250, 0, 6000) }],
+	"s-781-3000-2138-0": [{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 10, 250, 0, 6000] }],
+	"s-781-3000-1138-0": [{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 10, 250, 0, 6000] }],
 	"s-781-3000-1144-0": [{ "type": "text", "sub_type": "message", "message": "OUT", "message_RU": "Наружу" }],
 	"s-781-3000-1145-0": [{ "type": "text", "sub_type": "message", "message": "IN", "message_RU": "Внутрь" }],
-	"s-781-3000-1240-0": [{ "type": "text", "sub_type": "message", "message": "Donuts", "message_RU": "Бублики" }, { "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 10, 350, 0, 6000) }],
+	"s-781-3000-1240-0": [{ "type": "text", "sub_type": "message", "message": "Donuts", "message_RU": "Бублики" }, { "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 10, 350, 0, 6000] }],
 	"s-781-3000-1401-0": [{ "type": "text", "sub_type": "message", "message": "Plague/Regress", "message_RU": "Регресс!!" }],
 	"s-781-3000-1402-0": [{ "type": "text", "sub_type": "message", "message": "Sleep", "message_RU": "Слип!!" }]
 };

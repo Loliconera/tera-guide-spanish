@@ -2,8 +2,6 @@
 //
 // made by michengs
 
-const { SpawnMarker, SpawnVector, SpawnCircle } = module.parent.exports.lib;
-
 let player, entity, library, effect;
 
 let notice = true;
@@ -226,19 +224,19 @@ module.exports = {
 		{ "type": "text", "class_position":"tank", "sub_type": "message", "message": "Left > Right", "message_RU": "Слева > Справа" },
 		{ "type": "text", "class_position":"dps", "sub_type": "message", "message": "Right > Left", "message_RU": "Справа > Слева" },
 		{ "type": "text", "class_position":"heal", "sub_type": "message", "message": "Right > Left", "message_RU": "Справа > Слева" },
-		{ "type": "func", "func": SpawnMarker.bind(null, false, 150, 300, 100, 2715, true, null) },  // 1
-		{ "type": "func", "func": SpawnMarker.bind(null, false, 225, 300, 2800, 4175, true, null) }, // 6
-		{ "type": "func", "func": SpawnMarker.bind(null, false, 30, 300, 100, 1000, true, null) },   // 1
-		{ "type": "func", "func": SpawnMarker.bind(null, false, 330, 300, 1100, 5000, true, null) }  // 7
+		{ "type": "spawn_func", "func": "marker", "args": [false, 150, 300, 100, 2715, true, null] },  // 1
+		{ "type": "spawn_func", "func": "marker", "args": [false, 225, 300, 2800, 4175, true, null] }, // 6
+		{ "type": "spawn_func", "func": "marker", "args": [false, 30, 300, 100, 1000, true, null] },   // 1
+		{ "type": "spawn_func", "func": "marker", "args": [false, 330, 300, 1100, 5000, true, null] }  // 7
 	],
 	"s-3201-1000-145-0": [
 		{ "type": "text", "class_position":"tank", "sub_type": "message", "message": "Left > Right", "message_RU": "Слева > Справа" },
 		{ "type": "text", "class_position":"dps", "sub_type": "message", "message": "Right > Left", "message_RU": "Справа > Слева" },
 		{ "type": "text", "class_position":"heal", "sub_type": "message", "message": "Right > Left", "message_RU": "Справа > Слева" },
-		{ "type": "func", "func": SpawnMarker.bind(null, false, 30, 300, 100, 1000, true, null) },   // 1
-		{ "type": "func", "func": SpawnMarker.bind(null, false, 330, 300, 1100, 5000, true, null) }, // 7
-		{ "type": "func", "func": SpawnMarker.bind(null, false, 150, 300, 100, 2000, true, null) },  // 1
-		{ "type": "func", "func": SpawnMarker.bind(null, false, 225, 300, 2500, 5000, true, null) }  // 6
+		{ "type": "spawn_func", "func": "marker", "args": [false, 30, 300, 100, 1000, true, null] },   // 1
+		{ "type": "spawn_func", "func": "marker", "args": [false, 330, 300, 1100, 5000, true, null] }, // 7
+		{ "type": "spawn_func", "func": "marker", "args": [false, 150, 300, 100, 2000, true, null] },  // 1
+		{ "type": "spawn_func", "func": "marker", "args": [false, 225, 300, 2500, 5000, true, null] }  // 6
 	],
 	"s-3201-1000-148-0": [{ "type": "text", "sub_type": "message", "message": "Right Hand (Flying)", "message_RU": "Правая рука (подлет)" }],
 	"s-3201-1000-149-0": [{ "type": "text", "sub_type": "message", "message": "Left Hand (Flying)", "message_RU": "Левая рука (подлет)" }],
@@ -254,11 +252,11 @@ module.exports = {
 	],
 	"s-3201-1000-313-0": [
 		{ "type": "text", "sub_type": "message", "message": "Circles (Slow)", "message_RU": "Кольцо" },
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 75, 10, 300, 0, 6000) }
+		{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 75, 10, 300, 0, 6000] }
 	],
 	"s-3201-1000-314-0": [
 		{ "type": "text", "sub_type": "message", "message": "Circles (Fast)", "message_RU": "Кольцо (фаст)" },
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 75, 10, 300, 0, 6000) }
+		{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 75, 10, 300, 0, 6000] }
 	],
 
 
@@ -309,11 +307,11 @@ module.exports = {
 
 	"s-3201-2000-231-0": [
 		{ "type": "text", "sub_type": "message", "message": "Out Safe", "message_RU": "От него" },
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 10, 300, 0, 3000) }
+		{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 10, 300, 0, 3000] }
 	],
 	"s-3201-2000-232-0": [{ "type": "text", "sub_type": "message", "message": "In Safe", "message_RU": "К нему" },
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 10, 300, 0, 3000) },
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 3, 1000, 0, 3000) }
+		{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 10, 300, 0, 3000] },
+		{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 3, 1000, 0, 3000] }
 	],
 
 	//"s-3201-2000-233-0": [{ "type": "text", "sub_type": "message", "message": "5", "message_RU": "5 бомб" }],
@@ -322,12 +320,12 @@ module.exports = {
 	//"s-3201-2000-235-0": [{ "type": "text", "sub_type": "message", "message": "Debuffs", "message_RU": "注视2人吃鉴定" }]
 	"s-3201-2000-236-0": [{ "type": "text", "sub_type": "message", "message": "Counter", "message_RU": "Конус вперед (байт)" }],
 
-	/*"s-3201-320115-203": [{ "type": "func", "func": SpawnMarker.bind(null, false, 0, 0, 100, 3000, true, null) },
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 445, 0, 0, 15, 125, 0, 3000) }
+	/*"s-3201-320115-203": [{ "type": "spawn_func", "func": "marker", "args": [false, 0, 0, 100, 3000, true, null] },
+		{ "type": "spawn_func", "func": "circle", "args": [false, 445, 0, 0, 15, 125, 0, 3000] }
 	], 	// 	1王水晶位 */
 	//320124-------------302 301
-	/*"s-3201-320120-204": [{ "type": "func", "func": SpawnMarker.bind(null, false, 0, 0, 10, 1100, false, ["Бомба замедленного действия", "Бомба замедленного действия"]) },  //炸弹慢
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 445, 0, 0, 15, 150, 0, 1100) }],
-	"s-3201-320120-205": [{ "type": "func", "func": SpawnMarker.bind(null, false, 0, 0, 10, 1100, false, ["Бомба", "Бомба"]) },  //炸弹
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 445, 0, 0, 15, 150, 0, 1100) }]*/
+	/*"s-3201-320120-204": [{ "type": "spawn_func", "func": "marker", "args": [false, 0, 0, 10, 1100, false, ["Бомба замедленного действия", "Бомба замедленного действия"]] },  //炸弹慢
+		{ "type": "spawn_func", "func": "circle", "args": [false, 445, 0, 0, 15, 150, 0, 1100] }],
+	"s-3201-320120-205": [{ "type": "spawn_func", "func": "marker", "args": [false, 0, 0, 10, 1100, false, ["Бомба", "Бомба"]] },  //炸弹
+		{ "type": "spawn_func", "func": "circle", "args": [false, 445, 0, 0, 15, 150, 0, 1100] }]*/
 };
