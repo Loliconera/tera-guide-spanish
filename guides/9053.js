@@ -8,7 +8,7 @@ module.exports = {
 	load(dispatch){
 		({ player, entity, library, effect } = dispatch.require.library);
 	},
-
+	// Kezzel (1st boss)
 	"s-453-999-103-0": [{ "type": "text", "sub_type": "message", "message": "Smash (Left)", "message_RU": "Удар (лево)", "message_ES": "Golpear (Izquierda)" }],
 	"s-453-999-104-0": [{ "type": "text", "sub_type": "message", "message": "Smash (Right)", "message_RU": "Удар (право)", "message_ES": "Golpear (Derecha)" }],
 	"s-453-999-105-0": [
@@ -22,7 +22,8 @@ module.exports = {
 	"s-453-999-107-0": [{ "type": "text", "sub_type": "message", "message": "Whip", "message_RU": "Кнут", "message_ES": "Látigo" }],
 	"s-453-999-116-0": [{ "type": "text", "sub_type": "message", "message": "Shield", "message_RU": "Щит", "message_ES": "Escudo" }],
 	"s-453-999-119-0": [
-		{ "type": "text", "sub_type": "message", "message": "Kaia/ Thrall of Protection", "message_RU": "Кайа", "message_ES": "Kaia/ Thrall of Protection" },
+		{ "type": "text", "sub_type": "message", "message": "Kaia's Shield", "message_RU": "Kaia's Shield", "message_ES": "Kaia's Shield", "class_position": "priest" },
+		{ "type": "text", "sub_type": "message", "message": "Thrall of Protection", "message_RU": "Thrall of Protection", "message_ES": "Thrall of Protection", "class_position": "mystic" },
 		{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 75, 10, 450, 0, 5700] } // Unsure on size and position, the in-game telegraphs for this boss are buggy
 	],
 	"s-453-999-120-0": [
