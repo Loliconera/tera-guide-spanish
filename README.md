@@ -1,4 +1,4 @@
-# tera-guía
+# Tera-Guía
 Un módulo de guía genérico para TERA con traducciones al español, ingles y al ruso. Muestra pistas en la pantalla y dibuja zonas de ataques y mecánicas de jefes (también admite notificaciones de texto a voz).
 
 &#x1F534; **Se lanzaron actualizaciones críticas a partir del 3 de septiembre de 2020. ¡Actualice!** 
@@ -24,7 +24,7 @@ Toolbox(/8) | Descripción del comando
 **guide&nbsp;spawnObject&nbsp;`id`**<br>(defecto: encendido para todos) | Generar objetos de marcador para la mazmorra especificada por `id`
 **guide&nbsp;help** | Lista de comandos compatibles
 
-## Dungeons Compatibles
+## Mazmorras Compatibles
 id | Nombre de la mazmorra | Idioma
 --- | --- | ---
 9781 | Velik's Sanctuary | 
@@ -49,17 +49,21 @@ id | Nombre de la mazmorra | Idioma
 ## Configuración de avisos
 
 * En la pantalla (en la parte inferior) y avisos de chat, si el parámetro **lNotice** está *activado*. Avisos visibles solo para usted.    
-  ![](https://i.imgur.com/JuFD8wn.png)
+  ![](https://i.imgur.com/PGRm9Hx.png)
 
 * Cuando el parámetro **gNotice** está *activado*, también se enviarán avisos a todos los miembros del grupo.
 
 * El mensaje en la parte superior de la pantalla, si el parámetro **lNotice** está *desactivado* (por defecto). Avisos visibles solo para usted.     
-  ![](https://i.imgur.com/zuDYm1q.png)   
+  ![](https://i.imgur.com/eVmuWjG.png)   
   Puede establecer el color para este tipo de avisos usando los comandos (también cambie el color en el chat de Toolbox)..   
-  ![](https://i.imgur.com/SFCzNEp.png)
+  ![](https://i.imgur.com/ABCRTsV.png)
 
 
 * Cuando el modo Streamer está *activado* (parámetro **stream**), los avisos SOLO se envían al canal de chat de Toolbox(/8).   
+
+## Módulo GUI
+* En el chat Toolbox escriba el parámetro **guide GUI** para mostrar una interfaz gráfica del modulo.
+  ![](https://i.imgur.com/kfysB9t.png)
 
 ## Desarrollo y depuración
 Lee mas en https://github.com/hsdn/tera-guide/wiki
