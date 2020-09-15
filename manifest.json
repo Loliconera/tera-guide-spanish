@@ -1,7 +1,7 @@
 {
     "files": {
         "LICENSE": "7f2ae2125b491e75c546a5d538f82ad4431d5d6b1bbd4aea724864a21daeca63",
-        "README.md": "ccfd0d490d8e16bfce9c71e3019859d0281c03eefc4a932a307c367a9a19035f",
+        "README.md": "267e0d10b65678be106b15d59bef529a81dc33799ec10328d2773a069307e381",
         "config.json": "ac14f35e4c2bf17eb2a3f945ae2b1fc923c54571bf6014174092daf673fa0755",
         "dbg.json": "629638b8d5c9f3e359bfad1795298babfe23a44a3ff6bd0afc0275d8bf4e4be8",
         "dispatch.js": "f54263ada8c42258febdcdaa05545019d9040aa0710706a1101a0ad5422a6586",
@@ -23,7 +23,7 @@
         "guides/9720.js": "1fed67a091663a21d83f110ae0317f212ebcd07f8e2ce6e952fd6030dbcab7b5",
         "guides/9735.js": "d9cad2318e1c089b73f6479d3d73d71f6236f757f737d0f868b6758362c6f5a4",
         "guides/9739.js": "c2f2b7429ffb21c42a5860827c7b60906a04ed411826b75bbca3cc4554c80c83",
-        "guides/9781.js": "bb5f39656e2b4f0f24421587354b4afba81685deb8c72a18b07b3ca3c6647ef0",
+        "guides/9781.js": "9934bd5511330fe4d6cb79f266c8eeac2d2a3d46a4cf21c2aa0c99c9c1071272",
         "guides/9782.js": "eed3db5383cbd53cf38b6b219c16c046611dd987633833a55231a5d4e5385124",
         "guides/9920.js": "025b543892964e5091d13ae9fe3e6922bbb9ee88a3ffe89c4f28cc28e184a3a3",
         "guides/9970.js": "2edc1a48b04d0f75dbb464a5888fe0ca55ac68158b19829f299c49b8c585f6d2",

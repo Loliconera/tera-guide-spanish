@@ -27,7 +27,7 @@ Toolbox(/8) | Descripción del comando
 ## Mazmorras Compatibles
 id | Nombre de la mazmorra | Idioma
 --- | --- | ---
-9781 | Velik's Sanctuary | 
+9781 | Velik's Sanctuary | Español
 9739 | Red Refuge | Español 
 9735 | RK-9 Kennel | Español 
 3034 | Rampaging RK-9 Kennel | Español 
