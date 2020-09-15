@@ -62,7 +62,7 @@ id | Nombre de la mazmorra | Idioma
 * Cuando el modo Streamer está *activado* (parámetro **stream**), los avisos SOLO se envían al canal de chat de Toolbox(/8).   
 
 ## Módulo GUI
-* En el chat Toolbox escriba el parámetro **guide GUI** para mostrar una interfaz gráfica del modulo.
+* En el canal de chat de Toolbox(/8) escriba el siguiente parámetro **guide GUI** para mostrar una interfaz gráfica del modulo, permitiéndole cambiar la configuración básica.
   ![](https://i.imgur.com/kfysB9t.png)
 
 ## Desarrollo y depuración
