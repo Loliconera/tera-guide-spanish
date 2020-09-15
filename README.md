@@ -13,15 +13,15 @@ Toolbox(/8) | Descripción del comando
 --- | --- 
 **guide** | Módulo on/off 
 **guide&nbsp;gui** | Mostrar módulo GUI
-**guide&nbsp;voice**<br>(defecto: encendido) | Avisos de texto a voz (TTS) on/off, la velocidad del habla se establece mediante un comando **guide `1`~`10`** 
-**guide&nbsp;lNotice**<br>(defecto: apagado) | Envíe avisos al canal de chat "Notice" en lugar de mensajes en pantalla on/off 
-**guide&nbsp;gNotice**<br>(defecto: apagado) | Enviar avisos al canal de chat del grupo on/off Enviar avisos al canal de chat del grupo 
-**guide&nbsp;`1`~`10`**<br>(defecto: 1) | Establecer la velocidad de voz TTS
-**guide&nbsp;spawnObject**<br>(defecto: encendido) | Generar objetos marcadores on/off
-**guide&nbsp;stream**<br>(defecto: apagado) | Modo Streamer on/off (ocultar todos los avisos y objetos, se reproducirá TTS)
+**guide&nbsp;voice**<br>(defecto: encendido) | Avisos de texto a voz (TTS), la velocidad del habla se establece mediante un comando **guide `1`~`10`** 
+**guide&nbsp;lNotice**<br>(defecto: apagado) | Envíe avisos al canal de chat "Notice" en lugar de mensajes en pantalla 
+**guide&nbsp;gNotice**<br>(defecto: apagado) | Enviar avisos al canal de chat del grupo
+**guide&nbsp;`1`~`10`**<br>(defecto: 2) | Establecer la velocidad de voz TTS
+**guide&nbsp;spawnObject**<br>(defecto: encendido) | Generar objetos marcadores
+**guide&nbsp;stream**<br>(defecto: apagado) | Modo Streamer (ocultar todos los avisos y objetos, se reproducirá TTS)
 **guide&nbsp;dungeons** | Lista de todas las mazmorras compatibles y sus identificadores
-**guide&nbsp;verbose&nbsp;`id`**<br>(defecto: encendido para todos) | Enviar avisos para la mazmorra especificada por `id` on/off 
-**guide&nbsp;spawnObject&nbsp;`id`**<br>(defecto: encendido para todos) | Generar objetos de marcador para la mazmorra especificada por `id` on/off 
+**guide&nbsp;verbose&nbsp;`id`**<br>(defecto: encendido para todos) | Enviar avisos para la mazmorra especificada por `id`
+**guide&nbsp;spawnObject&nbsp;`id`**<br>(defecto: encendido para todos) | Generar objetos de marcador para la mazmorra especificada por `id`
 **guide&nbsp;help** | Lista de comandos compatibles
 
 ## Dungeons Compatibles
@@ -31,7 +31,7 @@ id | Nombre de la mazmorra | Idioma
 9739 | Red Refuge | Español 
 9735 | RK-9 Kennel | Español 
 3034 | Rampaging RK-9 Kennel | Español 
-9920 | Antaroth's Abyss (Hard)
+9920 | Antaroth's Abyss (Hard) | Español
 9982 | Grotto of Lost Souls (Hard) | Español 
 9053 | Kezzel's Gorge | Español 
 9044 | Bahaar's Sanctum | Español 

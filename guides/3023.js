@@ -116,12 +116,12 @@ module.exports = {
 	// 1 BOSS
 	"h-3023-1000-99": [{ "type": "func", "func": firstboss_start_event }],
 	"h-3023-1000-80": [{ "type": "text", "sub_type": "message", "message": "80%", "message_RU": "80%", "message_ES": "80%" }],
-	"s-3023-1000-104-0": [{ "type": "text", "sub_type": "message", "message": "Random Jump", "message_RU": "Прыжок + Стан", "message_ES": "Salto aleatorio" }],
+	"s-3023-1000-104-0": [{ "type": "text", "sub_type": "message", "message": "Random Jump", "message_RU": "Прыжок + Стан", "message_ES": "Saltar (Stun)" }],
 	"s-3023-1000-105-0": [{ "type": "text", "sub_type": "message", "message": "Back", "message_RU": "Поворот назад", "message_ES": "Ataque hacia atrás" }],
 	"s-3023-1000-110-0": [{ "type": "text", "sub_type": "message", "message": "Stun", "message_RU": "Передний стан", "message_ES": "Stun" },
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 175, 10, 260, 0, 6000) }
 	],
-	"s-3023-1000-111-0": [{ "type": "text", "sub_type": "message", "message": "Left Slash", "message_RU": "Левая полоса", "message_ES": "Izquierda Slash" },
+	"s-3023-1000-111-0": [{ "type": "text", "sub_type": "message", "message": "Left Slash", "message_RU": "Левая полоса", "message_ES": "Carril Izquierdo" },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 270, 200, 180, 500, 0, 2000) },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 270, 200, 0, 300, 0, 2000) },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 0, 0, 180, 500, 0, 2000) },
@@ -129,7 +129,7 @@ module.exports = {
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 0, 300, 270, 200, 0, 2000) },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 180, 500, 270, 200, 0, 2000) }
 	],
-	"s-3023-1000-112-0": [{ "type": "text", "sub_type": "message", "message": "Right Slash", "message_RU": "Правая полоса", "message_ES": "Derecha Slash" },
+	"s-3023-1000-112-0": [{ "type": "text", "sub_type": "message", "message": "Right Slash", "message_RU": "Правая полоса", "message_ES": "Carril Derecho" },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 90, 200, 180, 500, 0, 2000) },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 90, 200, 0, 300, 0, 2000) },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 0, 0, 180, 500, 0, 2000) },
@@ -137,7 +137,7 @@ module.exports = {
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 0, 300, 90, 200, 0, 2000) },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 180, 500, 90, 200, 0, 2000) }
 	],
-	"s-3023-1000-113-0": [{ "type": "text", "sub_type": "message", "message": "Left Slash", "message_RU": "Левая полоса", "message_ES": "Izquierda Slash" },
+	"s-3023-1000-113-0": [{ "type": "text", "sub_type": "message", "message": "Left Slash", "message_RU": "Левая полоса", "message_ES": "Carril Izquierdo" },
 		{ "type": "func", "func": skilld_event.bind(null, 1113) },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 270, 200, 180, 500, 0, 2000) },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 270, 200, 0, 300, 0, 2000) },
@@ -146,7 +146,7 @@ module.exports = {
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 0, 300, 270, 200, 0, 2000) },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 180, 500, 270, 200, 0, 2000) }
 	],
-	"s-3023-1000-114-0": [{ "type": "text", "sub_type": "message", "message": "Right Slash", "message_RU": "Правая полоса", "message_ES": "Derecha Slash" },
+	"s-3023-1000-114-0": [{ "type": "text", "sub_type": "message", "message": "Right Slash", "message_RU": "Правая полоса", "message_ES": "Carril Derecho" },
 		{ "type": "func", "func": skilld_event.bind(null, 1114) },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 90, 200, 180, 500, 0, 2000) },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 90, 200, 0, 300, 0, 2000) },
