@@ -201,7 +201,7 @@ function NetworkMod(dispatch) {
 			stream: "Modo Streamer",
 			rate: "Velocidad de voz",
 			color: "Cambiar el color",
-			dungeons: "Ajustes de Dungeon",
+			dungeons: "Ajustes de Mazmorras",
 			verbose: "Mensajes",
 			objects: "Objetos",
 			test: "Prueba",

@@ -106,7 +106,7 @@ module.exports = {
 
 	// Stun 142 148 129
 	"s-3103-1000-142-0": [{ "type": "text", "sub_type": "message", "message": "Stun | Back Wave", "message_RU": "Стан | Волна назад", "message_ES": "Stun | Ola hacia atrás" }],
-	"s-3103-1000-148-0": [{ "type": "spawn_func", "func": "circle", "args": [true, 912, 0, 0, 12, 300, 0, 3000] }],
+	"s-3103-1000-148-0": [{ "type": "spawn_func", "func": "circle", "args": [true, 912, 0, -10, 12, 300, 0, 3000] }],
 	"s-3103-1000-129-0": [
 		{ "type": "text", "sub_type": "message", "message": "Back Wave", "message_RU": "Волна назад (откид)", "message_ES": "Ola hacia atrás" },
 		{ "type": "spawn_func", "func": "vector", "args": [912, 90, 210, 390, 300, 0, 2000] },
@@ -132,5 +132,5 @@ module.exports = {
 	// Debuff
 	"ae-0-0-31031011": [{ "type": "text", "sub_type": "alert", "message": "Debuff Stack", "message_RU": "Дебафф (стаки)", "message_ES": "Debuff Stack" }],
 	"am-3103-1000-31031011": [{ "type": "text", "sub_type": "alert", "message": "Debuff Stack", "message_RU": "Дебафф (стаки)", "message_ES": "Debuff Stack" }],
-	"am-3103-1000-31031012": [{ "type": "text", "sub_type": "alert", "message": "Debuff Stack", "message_RU": "Дебафф (стаки)", "message_ES": "Debuff Stack" }], 
+	"am-3103-1000-31031012": [{ "type": "text", "sub_type": "alert", "message": "Debuff Stack", "message_RU": "Дебафф (стаки)", "message_ES": "Debuff Stack" }]
 };

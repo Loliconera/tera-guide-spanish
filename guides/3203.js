@@ -103,7 +103,7 @@ module.exports = {
 
 	// Stun 142 148 129
 	"s-3203-1000-142-0": [{ "type": "text", "sub_type": "message", "message": "Stun | Back Wave", "message_RU": "Стан | Волна назад", "message_ES": "Stun | Ola hacia atrás" }],
-	"s-3203-1000-148-0": [{ "type": "spawn_func", "func": "circle", "args": [true, 912, 0, 0, 12, 300, 0, 3000] }],
+	"s-3203-1000-148-0": [{ "type": "spawn_func", "func": "circle", "args": [true, 912, 0, -10, 12, 300, 0, 3000] }],
 	"s-3203-1000-129-0": [
 		{ "type": "text", "sub_type": "message", "message": "Back Wave", "message_RU": "Волна назад (откид)", "message_ES": "Ola hacia atrás" },
 		{ "type": "spawn_func", "func": "vector", "args": [912, 90, 210, 390, 300, 0, 2000] },
@@ -126,15 +126,16 @@ module.exports = {
 		{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 20, 460, 0, 4000] }
 	],
 
-	// Explosion 320310?? ??? ???
-	//"s-3203-1000-???-0": [{ "type": "text", "sub_type": "message", "message": "Explosion (Stun)", "message_RU": "Взрыв (стан)" },
-	//	{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 14, 360, 0, 3000] },
-	//	{ "type": "text", "sub_type": "alert", "delay": 65000, "message": "Explosion soon...", "message_RU": "Скоро взрыв..." }
-	//],
-	//"s-3203-1000-???-0": [{ "type": "text", "sub_type": "message", "message": "Dodge!", "message_RU": "Эвейд!" }],
+	// Explosion 32031003 152 / 135
+	"s-3203-1000-152-0": [{ "type": "text", "sub_type": "message", "message": "Explosion!", "message_RU": "Взрыв!", "message_ES": "¡Explosión!" }],
+
+	"s-3203-1000-135-0": [{ "type": "text", "sub_type": "message", "message": "Explosion!", "message_RU": "Взрыв!", "message_ES": "¡Explosión!" }],
+
+
+
 
 	// Debuff
 	"ae-0-0-32031011": [{ "type": "text", "sub_type": "alert", "message": "Debuff Stack", "message_RU": "Дебафф (стаки)", "message_ES": "Debuff Stack" }],
 	"am-3203-1000-32031011": [{ "type": "text", "sub_type": "alert", "message": "Debuff Stack", "message_RU": "Дебафф (стаки)", "message_ES": "Debuff Stack" }],
-	"am-3203-1000-32031012": [{ "type": "text", "sub_type": "alert", "message": "Debuff Stack", "message_RU": "Дебафф (стаки)", "message_ES": "Debuff Stack" }], 
+	"am-3203-1000-32031012": [{ "type": "text", "sub_type": "alert", "message": "Debuff Stack", "message_RU": "Дебафф (стаки)", "message_ES": "Debuff Stack" }]
 };
