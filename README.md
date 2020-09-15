@@ -57,7 +57,8 @@ id | Nombre de la mazmorra | Idioma
 * El mensaje en la parte superior de la pantalla, si el parámetro **lNotice** está *desactivado* (por defecto). Avisos visibles solo para usted.
 
   ![](https://i.imgur.com/eVmuWjG.png)
-  Puede establecer el color para este tipo de avisos usando los comandos (también cambie el color en el chat de Toolbox).
+  
+* Puede establecer el color para este tipo de avisos usando los comandos (también cambie el color en el chat de Toolbox).
 
   ![](https://i.imgur.com/ABCRTsV.png)
 
