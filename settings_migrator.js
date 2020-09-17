@@ -42,10 +42,6 @@ module.exports = function MigrateSettings(from_ver, to_ver, settings) {
 			default:
 				const oldsettings = settings;
 				settings = Object.assign(DefaultSettings, {});
-				for (let option in settings) {
-					if (option == "lNotice" && oldsettings["notice"]) settings[option] = oldsettings["notice"];
-					if (option == "gNotice" && oldsettings["systemNotice"]) settings[option] = oldsettings["systemNotice"];
-				}
 				for (let option in oldsettings) {
 					if (settings[option]) {
 						settings[option] = oldsettings[option];
