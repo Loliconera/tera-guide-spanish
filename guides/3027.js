@@ -8,11 +8,11 @@ let player, entity, library, effect;
 
 let timer1;
 let timer2;
-let timer3;
+
 let shield_notices = true;
 let print_shield = true;
 let print_hp = true;
-let print_mech = true;
+
 let is_hp_74_39 = false;
 
 function skilld_event(skillid, handlers, event, ent, dispatch) {
@@ -23,20 +23,22 @@ function skilld_event(skillid, handlers, event, ent, dispatch) {
 			shield_notices = false;
 			dispatch.setTimeout(() => shield_notices = true, 5000);
 			timer1 = dispatch.setTimeout(()=> {
-				handlers['text']({
-					"sub_type": "message",
-					"message": is_hp_74_39 ? "!" : "Shield in 5 seconds!",
-					"message_RU": is_hp_74_39 ? "!" : "Через 5 сек. щит!",
-					"message_ES": is_hp_74_39 ? "!" : "¡Escudo en 5 segundos!"
-				});
+				if (!is_hp_74_39) {
+					handlers['text']({
+						"sub_type": "message",
+						"message": "Shield in 5 seconds!",
+						"message_RU": "Через 5 сек. щит!"
+					});
+				}
 			}, 85000);
 			timer2 = dispatch.setTimeout(()=> {
-				handlers['text']({
-					"sub_type": "message",
-					"message": is_hp_74_39 ? "!" : "Shield in 15 seconds!",
-					"message_RU": is_hp_74_39 ? "!" : "Через 15 сек. щит!",
-					"message_ES": is_hp_74_39 ? "!" : "¡Escudo en 15 segundos!"
-				});
+				if (!is_hp_74_39) {
+					handlers['text']({
+						"sub_type": "message",
+						"message": "Shield in 15 seconds!",
+						"message_RU": "Через 15 сек. щит!"
+					});
+				}
 			}, 75000);
 		}
 	}
@@ -60,21 +62,6 @@ function skilld_event(skillid, handlers, event, ent, dispatch) {
 				"message_RU": "Готовность ломать щит",
 				"message_ES": "Listo para romper el ESCUDO"
 			});
-		}
-	}
-	if ([350, 357].includes(skillid)) { // до стяжки
-		if (print_mech) {
-			dispatch.clearTimeout(timer3);
-			print_mech = false;
-			dispatch.setTimeout(() => print_mech = true, 15000);
-			timer3 = dispatch.setTimeout(()=> {
-				handlers['text']({
-					"sub_type": "alert",
-					"message": "Mechanics soon...",
-					"message_RU": "Скоро стяжка...",
-					"message_ES": "Mecánica pronto..."	
-				});
-			}, 58000);
 		}
 	}
 }
@@ -154,13 +141,13 @@ module.exports = {
 		{ "type": "spawn_func", "func": "marker", "args": [false, 0, 100, 3800, 1000, false, ["CENTER", "IN"]] },
 		{ "type": "spawn_func", "func": "marker", "args": [false, 90, 100, 3800, 1000, false, ["CENTER", "IN"]] },
 		{ "type": "spawn_func", "func": "marker", "args": [false, 270, 100, 3800, 1000, false, ["CENTER", "IN"]] },
-		{ "type": "func", "func": skilld_event.bind(null, 350) }
+		{ "type": "text", "sub_type": "alert", "delay": 58000, "message": "Mechanics soon...", "message_RU": "Скоро стяжка...", "message_ES": "Mecánica pronto..." }
 	],
 	// стяжка -> волна (357 -> 110)
 	"s-3027-1000-357-0": [
 		{ "type": "text", "sub_type": "message", "message": "Purple: Get Out", "message_RU": "Стяжка | От него", "message_ES": "Morado: Olas (Salir)" },
 		{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 20, 500, 2000, 5000] },
-		{ "type": "func", "func": skilld_event.bind(null, 357) }
+		{ "type": "text", "sub_type": "alert", "delay": 58000, "message": "Mechanics soon...", "message_RU": "Скоро стяжка...", "message_ES": "Mecánica pronto..." }
 	],
 
 	//"s-3027-1000-114-0": [{ "type": "text", "sub_type": "message", "message": "Eviscerate (slow)", "message_RU": "Потрошение (медленно)" }],
