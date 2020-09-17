@@ -2,7 +2,7 @@
 //
 // made by michengs / HSDN / ZC
 
-const { MARKER_ITEM, SpawnMarker, SpawnVector, SpawnCircle, SpawnSemicircle } = module.parent.exports.lib;
+const { MARKER_ITEM, Spawn } = module.parent.exports.lib;
 
 let player, entity, library, effect;
 
@@ -39,16 +39,17 @@ const debuff_messages = {
 
 function spawn_marker(out, handlers, dispatch) {
 	if (!boss_ent) return;
+	const boss_spawn = new Spawn(handlers, null, boss_ent, dispatch);	
 	let distance = 220;
 	let caption  = "IN"; // ENTRAR
 	if (out) {
 		distance = 620;
 		caption  = "OUT"; // SALIR
 	}
-	SpawnMarker(false,  45 + boss_offset, distance, 0, 4000, true, [caption, "SAFE"], handlers, null, boss_ent, dispatch); // SEGURO
-	SpawnMarker(false, 135 + boss_offset, distance, 0, 4000, true, [caption, "SAFE"], handlers, null, boss_ent, dispatch); // SEGURO
-	SpawnMarker(false, 225 + boss_offset, distance, 0, 4000, true, [caption, "SAFE"], handlers, null, boss_ent, dispatch); // SEGURO
-	SpawnMarker(false, 315 + boss_offset, distance, 0, 4000, true, [caption, "SAFE"], handlers, null, boss_ent, dispatch); // SEGURO
+	boss_spawn.marker(false,  45 + boss_offset, distance, 0, 4000, true, [caption, "SAFE"]);
+	boss_spawn.marker(false, 135 + boss_offset, distance, 0, 4000, true, [caption, "SAFE"]);
+	boss_spawn.marker(false, 225 + boss_offset, distance, 0, 4000, true, [caption, "SAFE"]);
+	boss_spawn.marker(false, 315 + boss_offset, distance, 0, 4000, true, [caption, "SAFE"]);
 }
 
 function debuff_added(id, handlers, dispatch) {
@@ -142,6 +143,7 @@ function debuff_removed(dispatch) {
 }
 
 function skilld_event(skillid, handlers, event, ent, dispatch) {
+	const spawn = new Spawn(handlers, event, ent, dispatch);	
 	const abnormality_change = (added, event) => {
 		// Fire/Ice debuff
 		if (player.isMe(event.target.toString()) && [30260001, 30260002, 31260001, 31260002].includes(event.id)) {
@@ -182,18 +184,18 @@ function skilld_event(skillid, handlers, event, ent, dispatch) {
 	// In-Out identification
 	if ([212, 213, 214, 215].includes(skillid)) {
 		boss_ent = ent;
-		SpawnCircle(false, 445, 0, 0, 8, 440, 200, 8000, handlers, event, ent, dispatch);
-		SpawnCircle(false, 445, 0, 0, 4, 840, 200, 8000, handlers, event, ent, dispatch);
+		spawn.circle(false, 445, 0, 0, 8, 440, 200, 8000);
+		spawn.circle(false, 445, 0, 0, 4, 840, 200, 8000);
 	}
 	if ([212, 214].includes(skillid)) { // Fire claw (141, 142)
 		boss_offset = 10;
-		SpawnVector(553, 0, 0, 190, 840, 200, 8000, handlers, event, ent, dispatch);
-		SpawnVector(553, 0, 0,  10, 840, 200, 8000, handlers, event, ent, dispatch);
+		spawn.vector(553, 0, 0, 190, 840, 200, 8000);
+		spawn.vector(553, 0, 0,  10, 840, 200, 8000);
 	}
 	if ([213, 215].includes(skillid)) { // Ice claw (143, 144)
 		boss_offset = -10;
-		SpawnVector(553, 0, 0, 170, 840, 200, 8000, handlers, event, ent, dispatch);
-		SpawnVector(553, 0, 0, 350, 840, 200, 8000, handlers, event, ent, dispatch);
+		spawn.vector(553, 0, 0, 170, 840, 200, 8000);
+		spawn.vector(553, 0, 0, 350, 840, 200, 8000);
 	}
 	if ([213, 214].includes(skillid)) { // Ice inside
 		dispatch.setTimeout(() => {
@@ -257,19 +259,19 @@ let skills = {
 	"110-0": [{ "type": "text", "sub_type": "message", "message": "Fire DOT", "message_RU": "Огонь (лужа)", "message_ES": "Ataque de Fuego" }],
 	"108-0": [
 		{ "type": "text", "sub_type": "message", "message": "Turn Right (Repel)", "message_RU": "Поворот вправо (откид)", "message_ES": "Girar a la derecha (Repeler)" },
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 912, 0, 0, 8, 440, 0, 2000) }
+		{ "type": "spawn_func", "func": "circle", "args": [false, 912, 0, 0, 8, 440, 0, 2000] }
 	],
 	"158-0": [
 		{ "type": "text", "sub_type": "message", "message": "Turn Right (Repel)", "message_RU": "Поворот вправо (откид)", "message_ES": "Girar a la derecha (Repeler)" },
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 912, 0, 0, 8, 440, 0, 2000) }
+		{ "type": "spawn_func", "func": "circle", "args": [false, 912, 0, 0, 8, 440, 0, 2000] }
 	],
 	"109-0": [
 		{ "type": "text", "sub_type": "message", "message": "Turn Left (Repel)", "message_RU": "Поворот влево (откид)", "message_ES": "Girar a la izquierda (repeler)" },
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 912, 0, 0, 8, 440, 0, 2000) }
+		{ "type": "spawn_func", "func": "circle", "args": [false, 912, 0, 0, 8, 440, 0, 2000] }
 	],
 	"159-0": [
 		{ "type": "text", "sub_type": "message", "message": "Turn Left (Repel)", "message_RU": "Поворот влево (откид)", "message_ES": "Girar a la izquierda (repeler)" },
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 912, 0, 0, 8, 440, 0, 2000) }
+		{ "type": "spawn_func", "func": "circle", "args": [false, 912, 0, 0, 8, 440, 0, 2000] }
 	],
 	"120-0": [{ "type": "text", "sub_type": "message", "message": "Together", "message_RU": "Яростный рев", "message_ES": "Rugido furioso" }],
 	"145-0": [{ "type": "text", "sub_type": "message", "message": "Stun", "message_RU": "Стан", "message_ES": "Stun", }],
@@ -277,16 +279,16 @@ let skills = {
 	"103-0": [
 		{ "type": "text", "sub_type": "message", "message": "Tail (Flying)", "message_RU": "Хвост (полет)", "message_ES": "Coletazo (Volar)" },
 		{ "type": "text", "sub_type": "message", "message": "Arise!", "message_RU": "Удочка!", "message_ES": "Arise!", "delay": 1500, "class_position": "priest" },
-		{ "type": "func", "func": SpawnSemicircle.bind(null, 140, 260, 912, 0, 0, 10, 500, 0, 2000) },
-		{ "type": "func", "func": SpawnVector.bind(null, 912, 0, 0, 135, 500, 0, 2000) },
-		{ "type": "func", "func": SpawnVector.bind(null, 912, 0, 0, 260, 500, 0, 2000) }
+		{ "type": "spawn_func", "func": "semicircle", "args": [140, 260, 912, 0, 0, 10, 500, 0, 2000] },
+		{ "type": "spawn_func", "func": "vector", "args": [912, 0, 0, 135, 500, 0, 2000] },
+		{ "type": "spawn_func", "func": "vector", "args": [912, 0, 0, 260, 500, 0, 2000] }
 	],
 	"153-0": [
 		{ "type": "text", "sub_type": "message", "message": "Tail (Flying)", "message_RU": "Хвост (полет!!)", "message_ES": "Coletazo (Volar)" },
 		{ "type": "text", "sub_type": "message", "message": "Arise!", "message_RU": "Удочка!", "message_ES": "Arise!", "delay": 1500, "class_position": "priest" },
-		{ "type": "func", "func": SpawnSemicircle.bind(null, 140, 260, 912, 0, 0, 10, 500, 0, 2000) },
-		{ "type": "func", "func": SpawnVector.bind(null, 912, 0, 0, 135, 500, 0, 2000) },
-		{ "type": "func", "func": SpawnVector.bind(null, 912, 0, 0, 260, 500, 0, 2000) }
+		{ "type": "spawn_func", "func": "semicircle", "args": [140, 260, 912, 0, 0, 10, 500, 0, 2000] },
+		{ "type": "spawn_func", "func": "vector", "args": [912, 0, 0, 135, 500, 0, 2000] },
+		{ "type": "spawn_func", "func": "vector", "args": [912, 0, 0, 260, 500, 0, 2000] }
 	],
 	"118-0": [{ "type": "text", "sub_type": "message", "message": "Jump", "message_RU": "Прыжок", "message_ES": "Saltar" }],
 	"118-1": [{ "type": "text", "sub_type": "message", "message": "Dodge", "message_RU": "Эвейд!", "message_ES": "Iframe" }],
@@ -294,24 +296,24 @@ let skills = {
 	// AOE лед (большой)
 	"104-0": [
 		{ "type": "text", "sub_type": "message", "message": "Ice Storm DOTs", "message_RU": "Ледяные лужи", "message_ES": "Tormenta de HIELO (Amplio)" },
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 8, 500, 0, 5000) }
+		{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 8, 500, 0, 5000] }
 	],
 	// AOE огонь (большой)
 	"105-0": [
 		{ "type": "text", "sub_type": "message", "message": "Fire Bombs", "message_RU": "Огненные бомбы", "message_ES": "Meteoros de Fuego" },
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 135, 500, 10, 270, 0, 3000) },
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 315, 500, 10, 270, 0, 3250) },
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 45, 500, 10, 270, 0, 3500) },
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 235, 500, 10, 270, 0, 3750) },
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 90, 500, 10, 270, 0, 4000) },
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 270, 500, 10, 270, 0, 4250) },
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 500, 10, 270, 0, 4500) },
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 180, 500, 10, 270, 0, 4750) }
+		{ "type": "spawn_func", "func": "circle", "args": [false, 553, 135, 500, 10, 270, 0, 3000] },
+		{ "type": "spawn_func", "func": "circle", "args": [false, 553, 315, 500, 10, 270, 0, 3250] },
+		{ "type": "spawn_func", "func": "circle", "args": [false, 553, 45, 500, 10, 270, 0, 3500] },
+		{ "type": "spawn_func", "func": "circle", "args": [false, 553, 235, 500, 10, 270, 0, 3750] },
+		{ "type": "spawn_func", "func": "circle", "args": [false, 553, 90, 500, 10, 270, 0, 4000] },
+		{ "type": "spawn_func", "func": "circle", "args": [false, 553, 270, 500, 10, 270, 0, 4250] },
+		{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 500, 10, 270, 0, 4500] },
+		{ "type": "spawn_func", "func": "circle", "args": [false, 553, 180, 500, 10, 270, 0, 4750] }
 	],
 	// AOE лед (малый)
 	"154-0": [
 		{ "type": "text", "sub_type": "message", "message": "Ice Storm", "message_RU": "Ледяной шторм", "message_ES": "Tormenta de HIELO" },
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 8, 500, 0, 6000) }
+		{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 8, 500, 0, 6000] }
 	],
 	// AOE огонь (малый)
 	"155-0": [{ "type": "text", "sub_type": "message", "message": "Fire (Knockdown)", "message_RU": "Огненный столб (опрокид)", "message_ES": "Fuego (Derribo)" },
@@ -319,7 +321,7 @@ let skills = {
 	],
 
 	"206-0": [{ "type": "text", "sub_type": "message", "message": "Jump Back", "message_RU": "Прыжок назад", "message_ES": "Saltar atrás" }],
-	"206-2": [{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 15, 350, 0, 3000) }],
+	"206-2": [{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 15, 350, 0, 3000] }],
 	"137-0": [{ "type": "text", "sub_type": "message", "message": "Knockdown", "message_RU": "Опрокидывание", "message_ES": "¡¡[Rugido]!!" }],
 	"138-0": [{ "type": "text", "sub_type": "message", "message": "AOE", "message_RU": "AOE", "message_ES": "AOE" }],
 	"139-0": [
