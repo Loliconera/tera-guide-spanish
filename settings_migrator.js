@@ -14,8 +14,7 @@ const DefaultSettings = {
 		"</font><font color=\"#ffff00\">"
 	],
 	"language": "es",
-	"dungeons": [],
-	"chat-name": "Guide"
+	"dungeons": []
 };
 
 module.exports = function MigrateSettings(from_ver, to_ver, settings) {
