@@ -27,7 +27,8 @@ function skilld_event(skillid, handlers, event, ent, dispatch) {
 					handlers['text']({
 						"sub_type": "message",
 						"message": "Shield in 5 seconds!",
-						"message_RU": "Через 5 сек. щит!"
+						"message_RU": "Через 5 сек. щит!",
+						"message_ES": "¡Escudo en 5 segundos!"						
 					});
 				}
 			}, 85000);
@@ -36,7 +37,8 @@ function skilld_event(skillid, handlers, event, ent, dispatch) {
 					handlers['text']({
 						"sub_type": "message",
 						"message": "Shield in 15 seconds!",
-						"message_RU": "Через 15 сек. щит!"
+						"message_RU": "Через 15 сек. щит!",
+						"message_ES": "¡Escudo en 15 segundos!"						
 					});
 				}
 			}, 75000);
