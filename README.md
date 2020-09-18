@@ -1,12 +1,12 @@
 # Tera-Guía
-Un módulo de guía genérico para TERA con traducciones al español, ingles y al ruso. Muestra pistas en la pantalla y dibuja zonas de ataques y mecánicas de jefes (también admite notificaciones de texto a voz).
+Un módulo de guía genérico para TERA con traducciones al español. Muestra notificaciones en la pantalla y dibuja zonas de ataques y mecánicas de jefes (también admite notificaciones de texto a voz).
 
 &#x1F534; **Se lanzaron actualizaciones críticas a partir del 3 de septiembre de 2020. ¡Por favor actualice!**
 
 ## Dependencies
 https://github.com/tera-toolbox-mods/library
 
-Extraiga al directorio "mods" en su Tera-Proxy. NO LO INSTALE COMO "library-master" ASEGÚRESE DE QUE SE NOMBRE "library".
+Extraiga al directorio **mods** en su Tera-Proxy. NO LO INSTALE COMO ~~library-master~~ ASEGÚRESE DE QUE SE NOMBRE **library**.
 
 ## Comandos
 Toolbox(/8) | Descripción del comando
