@@ -8,8 +8,8 @@
         "settingsMigrator": "settings_migrator.js",
         "settingsVersion": "1.11"
     },
-    "author": "HSDN / ZC / ITunk / michengs / Kasea",
-    "description": "Un módulo de guía genérico para TERA. Muestra pistas en la pantalla y dibuja zonas de ataques y mecánicas de jefes.",
+    "author": "HSDN (bifurcada por Loliconera)",
+    "description": "Un módulo de guía para TERA traducido al Español. Muestra notificaciones en la pantalla, zonas de ataques y mecánicas de jefes.",
     "servers": ["https://raw.githubusercontent.com/Loliconera/tera-guide-spanish/master/"],
     "supportUrl": "https://github.com/Loliconera/tera-guide-spanish/issues",
     "dependencies": {
