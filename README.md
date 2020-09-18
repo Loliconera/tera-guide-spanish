@@ -1,12 +1,12 @@
 # Tera-Guía
-Un módulo de guía genérico para TERA con traducciones al español. Muestra notificaciones en la pantalla y dibuja zonas de ataques y mecánicas de jefes (también admite notificaciones de texto a voz).
+Un módulo de guía genérico para TERA traducido al español. Muestra notificaciones en la pantalla y dibuja zonas de ataques y mecánicas de jefes (también admite notificaciones de texto a voz).
 
 &#x1F534; **Se lanzaron actualizaciones críticas a partir del 3 de septiembre de 2020. ¡Por favor actualice!**
 
 ## Dependencies
 https://github.com/tera-toolbox-mods/library
 
-Extraiga al directorio **mods** en su Tera-Proxy. NO LO INSTALE COMO ~~library-master~~ ASEGÚRESE DE QUE SE NOMBRE **library**.
+Extraiga al directorio **mods** en su **Tera-Proxy**. No lo instale como ~~library-master~~ asegúrese de que se nombre **library**.
 
 ## Comandos
 Toolbox(/8) | Descripción del comando
@@ -15,10 +15,10 @@ Toolbox(/8) | Descripción del comando
 **guide&nbsp;gui** | Mostrar módulo GUI
 **guide&nbsp;voice**<br>(defecto: encendido) | Avisos de texto a voz (TTS), la velocidad del habla se establece mediante un comando **guide `1`~`10`**
 **guide&nbsp;lNotice**<br>(defecto: apagado) | Envíe avisos al canal de chat "Notice" en lugar de mensajes en pantalla
-**guide&nbsp;gNotice**<br>(defecto: apagado) | Envíe avisos al canal de chat del grupo
+**guide&nbsp;gNotice**<br>(defecto: apagado) | Enviar avisos al canal de chat del grupo (será visible para todos los miembros del grupo)
 **guide&nbsp;`1`~`10`**<br>(defecto: 2) | Establecer la velocidad de voz TTS
 **guide&nbsp;spawnObject**<br>(defecto: encendido) | Generarador de objetos marcadores
-**guide&nbsp;stream**<br>(defecto: apagado) | Modo Streamer (ocultar todos los avisos y objetos, se reproducirá TTS)
+**guide&nbsp;stream**<br>(defecto: apagado) | Modo Streamer (ocultar todos los avisos y objetos, se reproducirá voz TTS)
 **guide&nbsp;dungeons** | Lista de todas las mazmorras compatibles y sus identificadores
 **guide&nbsp;verbose&nbsp;`id`**<br>(defecto: encendido para todos) | Enviar avisos para la mazmorra especificada por `id`
 **guide&nbsp;spawnObject&nbsp;`id`**<br>(defecto: encendido para todos) | Generarador de objetos marcadores para la mazmorra especificada por `id`
@@ -48,14 +48,14 @@ id | Nombre de la mazmorra | Idioma
 
 ## Configuración de Avisos
 
-* En la pantalla (en la parte inferior) y avisos de chat, si el parámetro **lNotice** está *activado*. Avisos visibles solo para usted.   
+* En la pantalla (en la parte inferior) y avisos de chat, si el parámetro **lNotice** está *activado*. Avisos seran visibles solo para usted.   
   ![](https://i.imgur.com/PGRm9Hx.png)   
 
 * Cuando el parámetro **gNotice** está *activado*, también se enviarán avisos a todos los miembros del grupo.   
 
-* El mensaje en la parte superior de la pantalla, si el parámetro **lNotice** está *desactivado* (por defecto). Avisos visibles solo para usted.   
+* El mensaje en la parte superior de la pantalla, si el parámetro **lNotice** está *desactivado* (por defecto). Avisos seran visibles solo para usted.   
   ![](https://i.imgur.com/eVmuWjG.png)   
-  Puede establecer el color para este tipo de avisos usando los comandos (también cambie el color en el chat de Toolbox).   
+  Puede configurar el color para este tipo de avisos usando los comandos (también cambia de color en el chat de Toolbox).   
   ![](https://i.imgur.com/ABCRTsV.png)   
 
 

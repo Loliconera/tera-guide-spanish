@@ -1,7 +1,7 @@
 {
     "files": {
         "LICENSE": "7f2ae2125b491e75c546a5d538f82ad4431d5d6b1bbd4aea724864a21daeca63",
-        "README.md": "32842d201b34ed63b30ab3b9cf5e39351802fa279df45185559d81e20830fae2",
+        "README.md": "d2993d17b11182372f382a237b8ab444c281cfafa38b291778029841e5c37bb5",
         "config.json": "ac14f35e4c2bf17eb2a3f945ae2b1fc923c54571bf6014174092daf673fa0755",
         "dbg.json": "629638b8d5c9f3e359bfad1795298babfe23a44a3ff6bd0afc0275d8bf4e4be8",
         "dispatch.js": "f54263ada8c42258febdcdaa05545019d9040aa0710706a1101a0ad5422a6586",
@@ -31,7 +31,7 @@
         "guides/9982.js": "463b43f36fa2d849fe89744762a6781b3492ec03603149cf190713af363e5feb",
         "index.js": "9fc80669742ff293d2cb5ca51ae999a0d21656118957474211599d2edab28b46",
         "lib.js": "f9c6007cfdcb0aaecc0e534348de258e5c52ea9340761aae5615785af19bf36c",
-        "module.json": "88428440e8d32cb37b2bca3e0e248952af71010f61df743fa912568f78b1d0ad",
+        "module.json": "869b6236a6172d18be8942fa7589d0de776b62a3a91c125430a8a733a6a18759",
         "settings_migrator.js": "4412fe84dab8b5fd77e5ff7ae3b8b343ac6d2f1d4561101a560a1b86be15cd63",
         "voice/index.js": "371c6cca9f3094d3e88b42634981d0ad030017886dbae3eaa700aad1ce049d7b"
     },
