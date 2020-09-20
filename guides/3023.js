@@ -160,8 +160,10 @@ module.exports = {
 	{ "type": "spawn_func", "func": "semicircle", "args": [90, 270, 553, 0, 0, 12, 220, 100, 2000] },
 	{ "type": "spawn_func", "func": "semicircle", "args": [90, 270, 553, 0, 0, 10, 300, 100, 2000] }
 	],
-	"s-3023-1000-116-0": [{ "type": "text", "sub_type": "message", "message": "Kaia/Thrall of Protection", "message_RU": "Взрыв (Кайя)!!!", "message_ES": "Kaia/Thrall of Protection" },
-	{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 8, 500, 0, 6000] }
+	"s-3023-1000-116-0": [
+		{ "type": "text", "sub_type": "message", "message": "Kaia's Shield", "message_RU": "Кайа", "class_position": "priest" },
+		{ "type": "text", "sub_type": "message", "message": "Thrall of Protection", "message_RU": "Кайа", "class_position": "mystic" },
+		{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 8, 500, 0, 6000] }
 	],
 	"am-3023-1000-30231001": [{ "type": "func", "func": skilld_event.bind(null, 1001) }],
 	"am-3023-1000-30231000": [{ "type": "func", "func": skilld_event.bind(null, 1000) }],
@@ -199,10 +201,12 @@ module.exports = {
 	{ "type": "spawn_func", "func": "vector", "args": [553, 270, 80, 350, 1000, 0, 4000] }
 	],
 	"s-3023-2000-182-0": [{ "type": "text", "sub_type": "message", "message": "Knockdown", "message_RU": "Опрокид", "message_ES": "Knockdown" }],
-	"s-3023-2000-185-0": [{ "type": "text", "sub_type": "message", "message": "Kaia/Thrall of Protection", "message_RU": "Взрыв (Кайя)!!!", "message_ES": "Kaia/Thrall of Protection" },
-	{ "sub_type": "message", "delay": 110000, "message": "Big jump soon", "message_RU": "Скоро прыжок!", "message_ES": "Gran salto pronto" },
-	{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 10, 500, 0, 6000] },
-	{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 8, 750, 0, 6000] }
+	"s-3023-2000-185-0": [
+		{ "type": "text", "sub_type": "message", "message": "Kaia's Shield", "message_RU": "Кайа", "class_position": "priest" },
+		{ "type": "text", "sub_type": "message", "message": "Thrall of Protection", "message_RU": "Кайа", "class_position": "mystic" },
+		{ "type": "text", "sub_type": "message", "delay": 110000, "message": "Big jump soon", "message_RU": "Скоро прыжок!", "message_ES": "Gran salto pronto" },
+		{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 10, 500, 0, 6000] },
+		{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 8, 750, 0, 6000] }
 	],
 	"s-3023-2000-202-0": [{ "type": "text", "sub_type": "message", "message": "Backstab", "message_RU": "Назад + Вперед", "message_ES": "Ataque hacia atrás + Adelante" },
 	{ "type": "spawn_func", "func": "vector", "args": [553, 90, 80, 180, 500, 0, 3000] },

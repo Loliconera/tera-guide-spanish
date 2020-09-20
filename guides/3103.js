@@ -95,12 +95,12 @@ module.exports = {
 	"s-3103-1000-303-0": [
 		{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 8, 630, 0, 7000] },
 		{ "type": "spawn_func", "func": "circle", "args": [false, 445, 0, 0, 12, 250, 0, 5000] },
-		{ "type": "spawn_func", "func": "circle", "args": [false, 445, 0, 0, 8, 480, 0, 5000] }
+		{ "type": "spawn_func", "func": "circle", "args": [false, 445, 0, 0, 8, 490, 0, 5000] }
 	],
 	"s-3103-1000-304-0": [
 		{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 8, 630, 0, 7000] },
 		{ "type": "spawn_func", "func": "circle", "args": [false, 445, 0, 0, 12, 250, 0, 5000] },
-		{ "type": "spawn_func", "func": "circle", "args": [false, 445, 0, 0, 8, 480, 0, 5000] }
+		{ "type": "spawn_func", "func": "circle", "args": [false, 445, 0, 0, 8, 490, 0, 5000] }
 	],
 	"s-3103-1000-155-0": [{ "type": "text", "sub_type": "message", "delay": 400, "message": "Dodge", "message_RU": "Эвейд", "message_ES": "Iframe" }],
 

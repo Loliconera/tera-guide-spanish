@@ -22,8 +22,8 @@ module.exports = {
 	"s-453-999-107-0": [{ "type": "text", "sub_type": "message", "message": "Whip", "message_RU": "Кнут", "message_ES": "Látigo" }],
 	"s-453-999-116-0": [{ "type": "text", "sub_type": "message", "message": "Shield", "message_RU": "Щит", "message_ES": "Escudo" }],
 	"s-453-999-119-0": [
-		{ "type": "text", "sub_type": "message", "message": "Kaia's Shield", "message_RU": "Kaia's Shield", "message_ES": "Kaia's Shield", "class_position": "priest" },
-		{ "type": "text", "sub_type": "message", "message": "Thrall of Protection", "message_RU": "Thrall of Protection", "message_ES": "Thrall of Protection", "class_position": "mystic" },
+		{ "type": "text", "sub_type": "message", "message": "Kaia's Shield", "message_RU": "Кайа", "class_position": "priest" },
+		{ "type": "text", "sub_type": "message", "message": "Thrall of Protection", "message_RU": "Кайа", "class_position": "mystic" },
 		{ "type": "spawn_func", "func": "circle", "args": [true, 553, 0, 0, 10, 500, 0, 6000] }
 	],
 	"s-453-999-120-0": [
