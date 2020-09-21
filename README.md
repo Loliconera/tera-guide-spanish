@@ -1,12 +1,14 @@
 # Tera-Guía
-Un módulo de guía genérico para TERA traducido al español. Muestra notificaciones en la pantalla y dibuja zonas de ataques y mecánicas de jefes (también admite notificaciones de texto a voz).
+Un módulo de guía para TERA traducido al español. Muestra notificaciones en la pantalla y dibuja zonas de ataques y mecánicas de jefes (también admite notificaciones de texto a voz).
 
 &#x1F534; **Se lanzaron actualizaciones críticas a partir del 3 de septiembre de 2020. ¡Por favor actualice!**
 
-## Dependencies
-https://github.com/tera-toolbox-mods/library
+Versión original del módulo HSDN (English and Russian translation): https://github.com/hsdn/tera-guide
 
-Extraiga al directorio **mods** en su **Tera-Proxy**. No lo instale como ~~library-master~~ asegúrese de que se nombre **library**.
+## Dependencies
+* **Library** - https://github.com/tera-toolbox-mods/library   
+  Extraiga a su directorio **mods**. No lo instale como ~~library-master~~, asegúrese de que se llame **library**.   
+
 
 ## Comandos
 Toolbox(/8) | Descripción del comando
@@ -55,14 +57,16 @@ id | Nombre de la mazmorra | Idioma
 
 * El mensaje en la parte superior de la pantalla, si el parámetro **lNotice** está *desactivado* (por defecto). Avisos seran visibles solo para usted.   
   ![](https://i.imgur.com/eVmuWjG.png)   
-  Puede configurar el color para este tipo de avisos usando los comandos (también cambia de color en el chat de Toolbox).   
+  Puede configurar el color para este tipo de avisos usando los comandos o tambien puede usar la interfaz GUI (también cambia de color en el chat de Toolbox).   
   ![](https://i.imgur.com/ABCRTsV.png)   
 
+* Cuando el Modo Streamer está *activado* (parámetro **stream**), todos los avisos de texto SÓLO se envían al canal de chat de Toolbox(/8), pero se reproducirán los avisos de texto a voz TTS.
 
-* Cuando el modo Streamer está *activado* (parámetro **stream**), los avisos SOLO se envían al canal de chat de Toolbox(/8).   
+* Para desactivar o activar los avisos de texto a voz TTS, use el comando **guide voice**.
 
 ## Módulo GUI
-* En el canal de chat de Toolbox(/8) escriba el siguiente parámetro **guide GUI** para mostrar una interfaz gráfica del modulo, puede tambien cambiar la configuración básica de manera mas sencilla.   
+
+* En el canal de chat de Toolbox(/8) escriba el siguiente parámetro **guide GUI** para mostrar una interfaz gráfica de usuario del modulo, puede tambien cambiar la configuración básica de manera mas sencilla.   
   ![](https://i.imgur.com/kfysB9t.png)   
 
 ## Desarrollo y Depuración
