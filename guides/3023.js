@@ -2,8 +2,6 @@
 //
 // made by michengs
 
-
-
 let player, entity, library, effect;
 
 let debuff = 0;
