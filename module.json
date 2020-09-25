@@ -6,7 +6,7 @@
         "guiName": "TERA-Guía",
         "settingsFile": "config.json",
         "settingsMigrator": "settings_migrator.js",
-        "settingsVersion": "1.11"
+        "settingsVersion": 1.11
     },
     "author": "HSDN (bifurcada por Loliconera)",
     "description": "Muestra notificaciones en la pantalla y dibuja zonas de ataques y mecánicas de jefes.",
@@ -15,5 +15,5 @@
     "dependencies": {
         "library": "https://raw.githubusercontent.com/tera-toolbox-mods/library/master/module.json"
     },
-    "version": "98.02"
+    "version": "9/26/2020"
 }
