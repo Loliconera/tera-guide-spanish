@@ -1,5 +1,5 @@
 {
-    "version": 1.11,
+    "version": 1.12,
     "data": {
         "enabled": true,
         "lNotice": false,
@@ -14,97 +14,121 @@
             "</font><font color=\"#ffff00\">"
         ],
         "language": "es",
-        "dungeons": [
-            {
-                "id": 9781,
+        "dungeons": {
+            "3020": {
+                "verbose": true,
+                "spawnObject": true,
+                "name": "Sea of Honor"
+            },
+            "3023": {
+                "verbose": true,
+                "spawnObject": true,
+                "name": "Akalath Quarantine"
+            },
+            "3026": {
+                "verbose": true,
+                "spawnObject": true,
+                "name": "Corrupted Skynest"
+            },
+            "3027": {
+                "verbose": true,
+                "spawnObject": true,
+                "name": "Forbidden Arena [Hagufna]"
+            },
+            "3034": {
+                "verbose": true,
+                "spawnObject": true,
+                "name": "Rampaging RK-9 Kennel"
+            },
+            "3101": {
                 "verbose": true,
                 "spawnObject": true
             },
-            {
-                "id": 9739,
+            "3102": {
+                "verbose": true,
+                "spawnObject": true,
+                "name": "Draakon Arena"
+            },
+            "3103": {
+                "verbose": true,
+                "spawnObject": true,
+                "name": "Forbidden Arena [Undying Warlord]"
+            },
+            "3126": {
+                "verbose": true,
+                "spawnObject": true,
+                "name": "Corrupted Skynest (Difícil) Entrance"
+            },
+            "3201": {
+                "verbose": true,
+                "spawnObject": true,
+                "name": "Gossamer Vault (Difícil)"
+            },
+            "3202": {
+                "verbose": true,
+                "spawnObject": true,
+                "name": "Draakon Arena (Difícil)"
+            },
+            "3203": {
+                "verbose": true,
+                "spawnObject": true,
+                "name": "Forbidden Arena [Nightmare Undying Warlord]"
+            },
+            "9044": {
+                "verbose": true,
+                "spawnObject": true,
+                "name": "Bahaar's Sanctum"
+            },
+            "9053": {
+                "verbose": true,
+                "spawnObject": true,
+                "name": "Kezzel's Gorge (5-Person)"
+            },
+            "9067": {
                 "verbose": true,
                 "spawnObject": true
             },
-            {
-                "id": 9735,
+            "9720": {
                 "verbose": true,
                 "spawnObject": true
             },
-            {
-                "id": 9982,
+            "9735": {
+                "verbose": true,
+                "spawnObject": true,
+                "name": "RK-9 Kennel"
+            },
+            "9739": {
+                "verbose": true,
+                "spawnObject": true,
+                "name": "Red Refuge"
+            },
+            "9781": {
+                "verbose": true,
+                "spawnObject": true,
+                "name": "Velik's Sanctuary"
+            },
+            "9782": {
                 "verbose": true,
                 "spawnObject": true
             },
-            {
-                "id": 9920,
+            "9920": {
+                "verbose": true,
+                "spawnObject": true,
+                "name": "Antaroth's Abyss (Difícil)"
+            },
+            "9970": {
                 "verbose": true,
                 "spawnObject": true
             },
-            {
-                "id": 3201,
+            "9981": {
                 "verbose": true,
                 "spawnObject": true
             },
-            {
-                "id": 3023,
+            "9982": {
                 "verbose": true,
-                "spawnObject": true
-            },
-            {
-                "id": 9044,
-                "verbose": true,
-                "spawnObject": true
-            },
-            {
-                "id": 3026,
-                "verbose": true,
-                "spawnObject": true
-            },
-            {
-                "id": 3027,
-                "verbose": true,
-                "spawnObject": true
-            },
-            {
-                "id": 3126,
-                "verbose": true,
-                "spawnObject": true
-            },
-            {
-                "id": 3102,
-                "verbose": true,
-                "spawnObject": true
-            },
-            {
-                "id": 3202,
-                "verbose": true,
-                "spawnObject": true
-            },
-            {
-                "id": 3034,
-                "verbose": true,
-                "spawnObject": true
-            },
-            {
-                "id": 3103,
-                "verbose": true,
-                "spawnObject": true
-            },
-            {
-                "id": 3203,
-                "verbose": true,
-                "spawnObject": true
-            },
-            {
-                "id": 3020,
-                "verbose": true,
-                "spawnObject": true
-            },
-            {
-                "id": 9053,
-                "verbose": true,
-                "spawnObject": true
+                "spawnObject": true,
+                "name": "Grotto of Lost Souls (Difícil)"
             }
-        ]
+        }
     }
 }
