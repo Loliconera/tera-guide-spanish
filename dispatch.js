@@ -2,8 +2,6 @@ class DispatchWrapper {
 	constructor(dispatch) {
 		this._dispatch = dispatch;
 		this._hooks = [];
-		this._timers = {};
-		this._random_timer_id = 0xFFFFFFFA;
 	}
 
 	hook(...args) {
@@ -27,16 +25,11 @@ class DispatchWrapper {
 	}
 
 	setTimeout(...args) {
-		return this._timers[--this._random_timer_id] = this._dispatch.setTimeout(...args);
+		return this._dispatch.setTimeout(...args);
 	}
 
 	clearTimeout(...args) {
 		return this._dispatch.clearTimeout(...args);
-	}
-
-	_clear_all_timers() {
-		for(const key in this._timers) this.clearTimeout(this._timers[key]);
-		this._timers = {};
 	}
 
 	toServer(...args) { return this.send(...args); }

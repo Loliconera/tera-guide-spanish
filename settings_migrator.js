@@ -14,7 +14,7 @@ const DefaultSettings = {
 		"</font><font color=\"#ffff00\">"
 	],
 	"language": "es",
-	"dungeons": []
+	"dungeons": {}
 };
 
 module.exports = function MigrateSettings(from_ver, to_ver, settings) {
@@ -39,8 +39,26 @@ module.exports = function MigrateSettings(from_ver, to_ver, settings) {
 		const oldsettings = settings;
 		settings = Object.assign(DefaultSettings, {});
 		switch (to_ver) {
+			case 1.12:
+				for (const option in oldsettings) {
+					if (option == "dungeons") {
+						settings[option] = {};
+						let id;
+						for (const element of oldsettings[option]) {
+							id = element.id;
+							delete element.id;
+							settings[option][id] = element;
+							console.log(element);
+						}
+						continue;
+					}
+					if (settings[option]) {
+						settings[option] = oldsettings[option];
+					}
+				}
+				break;
 			default:
-				for (let option in oldsettings) {
+				for (const option in oldsettings) {
 					if (settings[option]) {
 						settings[option] = oldsettings[option];
 					}

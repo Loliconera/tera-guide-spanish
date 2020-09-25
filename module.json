@@ -6,7 +6,7 @@
         "guiName": "TERA-Guía",
         "settingsFile": "config.json",
         "settingsMigrator": "settings_migrator.js",
-        "settingsVersion": 1.11
+        "settingsVersion": 1.12
     },
     "author": "HSDN (bifurcada por Loliconera)",
     "description": "Muestra notificaciones en la pantalla y dibuja zonas de ataques y mecánicas de jefes.",

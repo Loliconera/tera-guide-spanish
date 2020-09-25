@@ -1,7 +1,7 @@
 # Tera-Guía
 Un módulo de guía para TERA traducido al español. Muestra notificaciones en la pantalla y dibuja zonas de ataques y mecánicas de jefes (también admite notificaciones de texto a voz).
 
-&#x1F534; **Se lanzaron actualizaciones críticas a partir del 3 de septiembre de 2020. ¡Por favor actualice!**
+&#x1F534; **Se han publicado actualizaciones críticas. ¡Por favor actualice!**
 
 Versión original del módulo HSDN (English and Russian translation): https://github.com/hsdn/tera-guide
 
