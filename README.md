@@ -66,7 +66,7 @@ id | Nombre de la mazmorra | Idioma
 
 ## Módulo GUI
 
-* En el canal de chat de Toolbox(/8) escriba el siguiente parámetro **guide GUI** para mostrar una interfaz gráfica de usuario del modulo, puede tambien cambiar la configuración básica de manera mas sencilla.   
+* En el canal de chat de Toolbox(/8) escriba el siguiente parámetro **guide gui** para mostrar una interfaz gráfica de usuario del modulo, puede tambien cambiar las configuraciones básicas.   
   ![](https://i.imgur.com/kfysB9t.png)   
 
 ## Desarrollo y Depuración
