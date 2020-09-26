@@ -48,7 +48,6 @@ module.exports = function MigrateSettings(from_ver, to_ver, settings) {
 							id = element.id;
 							delete element.id;
 							settings[option][id] = element;
-							console.log(element);
 						}
 						continue;
 					}
