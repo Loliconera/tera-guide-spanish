@@ -137,7 +137,7 @@ module.exports = function TeraGuide(mod) {
 			enteresdg: "Enter ES Dungeon",
 			fordungeon: "for dungeon",
 		},
-		// Español
+		// Español		
 		es: {
 			unknowncommand: "Comando desconocido, escriba \"guide help\"",
 			helpheader: "Escriba \"guide help\" para obtener más información",
@@ -514,10 +514,10 @@ module.exports = function TeraGuide(mod) {
 	}
 
 	function guiHandler(page, title) {
-		let tmp_data = [];
+		let tmpData = [];
 		switch (page) {
 			default:
-				tmp_data.push(
+				tmpData.push(
 					{ text: `<font color="${gcy}" size="+20">${lang.settings}:</font>` }, { text: "&#09;&#09;&#09;" },
 					{ text: `<font color="${mod.settings.spawnObject ? gcg : gcr}" size="+18">[${lang.spawnObject}]</font>`, command: "guide spawnObject;guide gui" }, { text: "&nbsp;&nbsp;" },
 					{ text: `<font color="${mod.settings.speaks ? gcg : gcr}" size="+18">[${lang.speaks}]</font>`, command: "guide voice;guide gui" },
@@ -539,27 +539,27 @@ module.exports = function TeraGuide(mod) {
 					{ text: `<font size="+18">[${lang.test}]</font>`, command: "guide guivoicetest" },
 					{ text: `<br>` }
 				);
-				tmp_data.push(
+				tmpData.push(
 					{ text: `<font color="${gcy}" size="+20">${lang.color}:</font>` }, { text: "&#09;&#09;" }
 				);
 				for (const color of ["cr", "co", "cy", "cg", "cv", "cb", "clb", "cdb", "cp", "clp", "cw", "cgr", "cbl"]) {
 					let cc = eval(color);
-					tmp_data.push({ text: `<font color="${mod.settings.cc[0] === cc ? gcg : gcr}" size="+18">[${color.substr(1).toUpperCase()}]</font>`, command: "guide " + color + ";guide gui" }, { text: "&nbsp;&nbsp;" });
+					tmpData.push({ text: `<font color="${mod.settings.cc[0] === cc ? gcg : gcr}" size="+18">[${color.substr(1).toUpperCase()}]</font>`, command: "guide " + color + ";guide gui" }, { text: "&nbsp;&nbsp;" });
 				}
-				tmp_data.push(
+				tmpData.push(
 					{ text: `<br><br>` },
 					{ text: `<font color="${gcy}" size="+20">${lang.dungeons}:</font><br>` }
 				);
 				for (const [id, dungeon] of Object.entries(mod.settings.dungeons)) {
 					if (!dungeon.name) continue;
-					tmp_data.push({ text: `<font color="${dungeon.spawnObject ? gcg : gcr}" size="+18">[${lang.objects}]</font>`, command: "guide spawnObject " + id + ";guide gui" }, { text: "&nbsp;&nbsp;" });
-					tmp_data.push({ text: `<font color="${dungeon.verbose ? gcg : gcr}" size="+18">[${lang.verbose}]</font>`, command: "guide verbose " + id + ";guide gui" }, { text: "&nbsp;&#8212;&nbsp;" });
-					tmp_data.push({ text: `<font color="${gcgr}" size="+20">${dungeon.name}</font>` });
-					tmp_data.push({ text: "<br>" });
+					tmpData.push({ text: `<font color="${dungeon.spawnObject ? gcg : gcr}" size="+18">[${lang.objects}]</font>`, command: "guide spawnObject " + id + ";guide gui" }, { text: "&nbsp;&nbsp;" });
+					tmpData.push({ text: `<font color="${dungeon.verbose ? gcg : gcr}" size="+18">[${lang.verbose}]</font>`, command: "guide verbose " + id + ";guide gui" }, { text: "&nbsp;&#8212;&nbsp;" });
+					tmpData.push({ text: `<font color="${gcgr}" size="+20">${dungeon.name}</font>` });
+					tmpData.push({ text: "<br>" });
 				}
-				gui.parse(tmp_data, `<font>${title}</font> | <font color="${gcr}" size="+16">${lang.red}</font><font color="${gcgr}" size="+16"> = ${lang.disabled}, <font color="${gcg}" size="+16">${lang.green}</font><font color="${gcgr}" size="+16"> = ${lang.enabled}</font>`)
+				gui.parse(tmpData, `<font>${title}</font> | <font color="${gcr}" size="+16">${lang.red}</font><font color="${gcgr}" size="+16"> = ${lang.disabled}, <font color="${gcg}" size="+16">${lang.green}</font><font color="${gcgr}" size="+16"> = ${lang.enabled}</font>`)
 		}
-		tmp_data = [];
+		tmpData = [];
 	}
 
 
@@ -597,20 +597,18 @@ module.exports = function TeraGuide(mod) {
 	mod.hook("S_ACTION_STAGE", 9, { order: 15 }, e => {
 		// Return if any of the below is false
 		if (!mod.settings.enabled || !guide.loaded || !guide.verbose || !e.skill.npc) return;
-		let skillid = e.skill.id % 1000;
+		let skillid = e.skill.id % 1000; // 100-200
 		let eskillid = e.skill.id > 3000 ? e.skill.id : e.skill.id % 1000;
 		const ent = entity["mobs"][e.gameId.toString()];
 		// Due to a bug for some bizare reason(probably proxy fucking itself) we do this ugly hack
 		e.loc.w = e.w;
 		// We've confirmed it's a mob, so it's plausible we want to act on this
-		if (!ent) return;
-		if (guide.sp) {
-			return handleEvent(Object.assign({}, ent, e), e.skill.id, "Skill", "s", debug.all || debug.skill || (ent.templateId % 1 === 0 ? debug.boss : false), e.speed, e.stage);
-		} else if (guide.es) {
-			return handleEvent(Object.assign({}, ent, e), eskillid, "Skill", "s", debug.all || debug.skill || (ent.templateId % 1 === 0 ? debug.boss : false), e.speed, e.stage);
-		} else {
-			return handleEvent(Object.assign({}, ent, e), skillid, "Skill", "s", debug.all || debug.skill || (ent.templateId % 1 === 0 ? debug.boss : false), e.speed, e.stage);
-		}
+		if (guide.sp)
+			skillid = e.skill.id; // 1000-3000
+		else if (guide.es)
+			skillid = eskillid; // 100-200-3000
+		if (ent)
+			handleEvent(Object.assign({}, ent, e), skillid, "Skill", "s", debug.all || debug.skill || (ent.templateId % 1 === 0 ? debug.boss : false), e.speed, e.stage);
 	});
 
 	// Boss abnormality triggered
@@ -766,7 +764,7 @@ module.exports = function TeraGuide(mod) {
 			type: type,
 			chat: 0,
 			channel: 27,
-			message: (spcc + message)
+			message: spcc + message
 		});
 	}
 
@@ -862,11 +860,11 @@ module.exports = function TeraGuide(mod) {
 		}
 		// Create timer for specified delay
 		const delay = parseInt(event["delay"]);
-		if (delay > 0) {
+		if (delay > 0)
 			mod.setTimeout(callback, delay / speed, sub_type, sending_event);
-		} else {
+		else
 			callback(sub_type, sending_event);
-		}
+		// Create despawn event
 		const despawn_event = {
 			gameId: item_unique_id,
 			unk: 0, // used in S_DESPAWN_BUILD_OBJECT
@@ -994,6 +992,8 @@ module.exports = function TeraGuide(mod) {
 					return mod.error(`Invalid sub_type for text handler: ${event['sub_type']}`);
 			}
 		}
+		// Set delay for timers
+		const delay = parseInt(event["delay"]);
 		// Fetch the message
 		const message = event[`message_${uclanguage}`] || event[`message_${language}`] || event["message"];
 		// Make sure sub_type is defined
@@ -1006,18 +1006,19 @@ module.exports = function TeraGuide(mod) {
 			if (!guide.verbose) return;
 			// Play the voice of text message
 			if (voice && mod.settings.speaks) {
-				voice.speak(message, mod.settings.rate);
+				if (delay - 600 > 0)
+					mod.setTimeout(voice.speak, delay - 600 / speed, message, mod.settings.rate);
+				else
+					voice.speak(message, mod.settings.rate);
 			}
 			// Ignoring sending a text message if "speech" sub_type specified
 			if (event["sub_type"] == "speech") return;
 		}
 		// Create timer for specified delay
-		const delay = parseInt(event["delay"]);
-		if (delay > 0) {
+		if (delay > 0)
 			mod.setTimeout(callback, delay / speed, event["sub_type"], message);
-		} else {
+		else
 			callback(event["sub_type"], message);
-		}
 	}
 
 	// Func handler
@@ -1040,11 +1041,10 @@ module.exports = function TeraGuide(mod) {
 		if (!event["func"]) return mod.error("Func handler needs a func");
 		// Create timer for specified delay
 		const delay = parseInt(event["delay"]);
-		if (delay > 0) {
+		if (delay > 0)
 			mod.setTimeout(callback, delay / speed, event);
-		} else {
+		else
 			callback(event);
-		}
 	}
 
 	// Spawn Func handler
@@ -1086,13 +1086,15 @@ module.exports = function TeraGuide(mod) {
 		guide.object = {};
 		guide.mobshp = {};
 		guide.loaded = false;
+		guide.sp = false;
+		guide.es = false;
 		// Clear out the timers
 		mod.clearAllTimeouts();
 		mod.clearAllIntervals();
 		// Clear out previous hooks, that our previous guide module hooked
 		dispatch._remove_all_hooks();
 		// Send debug message
-		sendDebug(debug.all || debug_enabled, `Entered zone: ${zone}`);
+		sendDebug(debug.all, `Entered zone: ${zone}`);
 		// Check guide and attach settings from config
 		if (zone == "test") { // load test guide data
 			guide.id = zone;
@@ -1102,19 +1104,16 @@ module.exports = function TeraGuide(mod) {
 			guide.id = parseInt(zone);
 			Object.assign(guide, mod.settings.dungeons[zone]);
 		} else {
-			sendDebug(debug_enabled, `Zone "${zone}" is not found`);
-			return; // returns if zone not found
+			if (debug_enabled) command.message(`Zone "${zone}" is not found`);
+			return;
 		}
 		// Set dungeon zone type for loaded guide
 		if (SP_ZONE_IDS.includes(guide.id)) {
-			guide.sp = true; // skill 1000-3000
+			guide.sp = true;
 			guide.es = false;
 		} else if (ES_ZONE_IDS.includes(guide.id)) {
-			guide.sp = false; // skill 100-200-3000
+			guide.sp = false;
 			guide.es = true;
-		} else {
-			guide.sp = false; // skill 100-200 
-			guide.es = false;
 		}
 		// Remove potential cached guide from require cache, so that we don"t need to relog to refresh guide
 		try {
@@ -1223,7 +1222,7 @@ module.exports = function TeraGuide(mod) {
 				});
 			}
 		}
-	};
+	}
 
 	// Makes sure the event passes the class position check
 	function classPositionCheck(class_position) {
@@ -1303,9 +1302,10 @@ module.exports = function TeraGuide(mod) {
 		const unique_id = `${prefix_identifier}-${ent["huntingZoneId"]}-${ent["templateId"]}`;
 		const key = `${unique_id}-${id}`;
 		const stage_string = (stage === false ? '' : `-${stage}`);
-		const entry = (stage !== false) ? guide.object[key + stage_string] : guide.object[key];
+		const entry = (stage !== false ? guide.object[key + stage_string] : guide.object[key]);
 		sendDebug(debug_enabled, `${called_from_identifier}: ${id} | Started by: ${unique_id} | key: ${key + stage_string}`);
-		if (entry) startEvents(entry, ent, speed);
+		if (entry)
+			startEvents(entry, ent, speed);
 	}
 
 	// When the mod gets unloaded, clear all the timers & remove the chat command
