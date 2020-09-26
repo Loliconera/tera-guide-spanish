@@ -14,11 +14,10 @@ try {
 	voice = null;
 }
 
-module.exports = function TeraGuide(dispatch) {
-	const fake_dispatch = new DispatchWrapper(dispatch);
-	const { player, entity, library, effect } = dispatch.require.library;
-	const { Spawn } = lib;
-	const command = dispatch.command;
+module.exports = function TeraGuide(mod) {
+	const dispatch = new DispatchWrapper(mod);
+	const command = mod.command;
+	const { player, entity, library, effect } = mod.require.library;
 
 	// Available strings for different languages
 	const translation = {
@@ -198,6 +197,12 @@ module.exports = function TeraGuide(dispatch) {
 		},		
 	};
 
+	// A boolean for the debugging settings
+	let debug = dbg["debug"];
+
+	// Guide files directory name
+	const GUIDES_DIR = "./guides";
+
 	// Tank class ids(brawler + lancer)
 	const TANK_CLASS_IDS = [1, 10];
 	// Dps class ids(not counting warrior)
@@ -206,6 +211,7 @@ module.exports = function TeraGuide(dispatch) {
 	const HEALER_CLASS_IDS = [6, 7];
 	// Warrior Defence stance abnormality ids
 	const WARRIOR_TANK_IDS = [100200, 100201];
+
 	// Zones with skillid range 1000-3000
 	const SP_ZONE_IDS = [
 		3026, // Corrupted Skynest
@@ -229,10 +235,7 @@ module.exports = function TeraGuide(dispatch) {
 		9000, // ???
 		9759  // Forsaken Island (Hard)
 	];
-	// Guide files directory name
-	const GUIDES_DIR = "./guides";
-	// Supported languages by client
-	const languages = { 0: "en", 1: "kr", 3: "jp", 4: "de", 5: "fr", 7: "tw", 8: "ru" };
+
 	// Messages colors
 	const cr = '</font><font color="#ff0000">';  // red
 	const co = '</font><font color="#ff7700">';  // orange
@@ -261,16 +264,15 @@ module.exports = function TeraGuide(dispatch) {
 	const spn = 49; // left side notice
 
 	// An object of types and their corresponding function handlers
-	const function_event_handlers = {
-		"lib": lib,
-		"spawn": spawn_handler,
-		"despawn": despawn_handler,
-		"text": text_handler,
-		"func": func_handler,
-		"spawn_func": spawn_func_handler
+	const eventHandlers = {
+		"spawn": spawnHandler,
+		"despawn": despawnHandler,
+		"text": textHandler,
+		"func": funcHandler,
+		"spawn_func": spawnFuncHandler
 	};
 	// Default dungeon guide settings
-	const default_guide_settings = {
+	const defaultSettings = {
 		verbose: true,
 		spawnObject: true
 	};
@@ -280,14 +282,15 @@ module.exports = function TeraGuide(dispatch) {
 		name: undefined,
 		loaded: false,
 		object: null,
+		event: null,
+		ent: null,
 		es: false,
 		sp: false,
 		mobshp: {}
 	};
 	// Add default settings to guide object
-	Object.assign(guide, default_guide_settings);
-	// A boolean for the debugging settings
-	let debug = dbg["debug"];
+	Object.assign(guide, defaultSettings);
+
 	// Detected language
 	let language = null;
 	let uclanguage = null;
@@ -303,7 +306,7 @@ module.exports = function TeraGuide(dispatch) {
 		// Toggle debug settings
 		debug(arg1) {
 			if (!arg1) {
-				arg1 = "debug";
+				arg1 = "all";
 			} else if (arg1 === "status") {
 				for (let [key, value] of Object.entries(debug)) {
 					command.message(`debug(${key}): ${value ? "enabled" : "disabled"}.`);
@@ -320,125 +323,125 @@ module.exports = function TeraGuide(dispatch) {
 			// If arg1 is "load", load guide from arg2 specified
 			if (arg1 === "load") {
 				if (!arg2) return command.message(`Invalid values for sub command "event" ${arg1}`);
-				return change_zone(parseInt(arg2));
+				return loadZoneHandler(arg2, true);
 			}
 			// If arg1 is "reload", reload current loaded guide
 			if (arg1 === "reload") {
 				if (!guide.loaded) return command.message("Guide not loaded");
-				return change_zone(guide.id);
+				return loadZoneHandler(guide.id, true);
 			}
 			// If we didn't get a second argument or the argument value isn't an event type, we return
-			if (arg1 === "trigger" ? (!guide.object[arg2]) : (!arg1 || !function_event_handlers[arg1] || !arg2)) return command.message(`Invalid values for sub command "event" ${arg1} | ${arg2}`);
+			if (arg1 === "trigger" ? (!guide.object[arg2]) : (!arg1 || !eventHandlers[arg1] || !arg2)) return command.message(`Invalid values for sub command "event" ${arg1} | ${arg2}`);
 			// if arg2 is "trigger". It means we want to trigger a event
 			if (arg1 === "trigger") {
-				start_events(guide.object[arg2], player);
+				startEvents(guide.object[arg2], player);
 			} else {
 				try {
 					// Call a function handler with the event we got from arg2 with yourself as the entity
-					function_event_handlers[arg1](JSON.parse(arg2), player);
+					eventHandlers[arg1](JSON.parse(arg2), player);
 				} catch (e) {
-					debug_message(true, e);
+					mod.error(e);
 				}
 			}
 		},
 		spawnObject(arg1) {
 			if (arg1) {
-				if (dispatch.settings.dungeons[arg1]) {
-					dispatch.settings.dungeons[arg1].spawnObject = !dispatch.settings.dungeons[arg1].spawnObject;
-					text_handler({
+				if (mod.settings.dungeons[arg1]) {
+					mod.settings.dungeons[arg1].spawnObject = !mod.settings.dungeons[arg1].spawnObject;
+					textHandler({
 						"sub_type": "PRMSG",
-						"message": `${lang.spawnObject} ${lang.fordungeon} "${dispatch.settings.dungeons[arg1].name}": ${dispatch.settings.dungeons[arg1].spawnObject ? lang.enabled : lang.disabled}`
+						"message": `${lang.spawnObject} ${lang.fordungeon} "${mod.settings.dungeons[arg1].name}": ${mod.settings.dungeons[arg1].spawnObject ? lang.enabled : lang.disabled}`
 					});
 					// Reload settings for entered guide
-					Object.assign(guide, dispatch.settings.dungeons[arg1]);
+					Object.assign(guide, mod.settings.dungeons[arg1]);
 				} else {
-					text_handler({
+					textHandler({
 						"sub_type": "PRMSG",
 						"message": lang.dgnotfound
 					});
 				}
 			} else {
-				dispatch.settings.spawnObject = !dispatch.settings.spawnObject;
-				text_handler({
+				mod.settings.spawnObject = !mod.settings.spawnObject;
+				textHandler({
 					"sub_type": "PRMSG",
-					"message": `${lang.spawnObject} ${dispatch.settings.spawnObject ? lang.enabled : lang.disabled}`
+					"message": `${lang.spawnObject} ${mod.settings.spawnObject ? lang.enabled : lang.disabled}`
 				});
 			}
 		},
 		verbose(arg1) {
 			if (arg1) {
-				if (dispatch.settings.dungeons[arg1]) {
-					dispatch.settings.dungeons[arg1].verbose = !dispatch.settings.dungeons[arg1].verbose;
-					text_handler({
+				if (mod.settings.dungeons[arg1]) {
+					mod.settings.dungeons[arg1].verbose = !mod.settings.dungeons[arg1].verbose;
+					textHandler({
 						"sub_type": "PRMSG",
-						"message": `${lang.verbose} ${lang.fordungeon} "${dispatch.settings.dungeons[arg1].name}": ${dispatch.settings.dungeons[arg1].verbose ? lang.enabled : lang.disabled}`
+						"message": `${lang.verbose} ${lang.fordungeon} "${mod.settings.dungeons[arg1].name}": ${mod.settings.dungeons[arg1].verbose ? lang.enabled : lang.disabled}`
 					});
 					// Reload settings for entered guide
-					Object.assign(guide, dispatch.settings.dungeons[arg1]);
+					Object.assign(guide, mod.settings.dungeons[arg1]);
 				} else {
-					text_handler({
+					textHandler({
 						"sub_type": "PRMSG",
 						"message": lang.dgnotfound
 					});
 				}
 			} else {
-				text_handler({
+				textHandler({
 					"sub_type": "PRMSG",
 					"message": lang.dgnotspecified
 				});
 			}
 		},
 		voice() {
-			dispatch.settings.speaks = !dispatch.settings.speaks;
-			text_handler({
+			mod.settings.speaks = !mod.settings.speaks;
+			textHandler({
 				"sub_type": "PRMSG",
-				"message": `${lang.speaks}: ${dispatch.settings.speaks ? lang.enabled : lang.disabled}`
+				"message": `${lang.speaks}: ${mod.settings.speaks ? lang.enabled : lang.disabled}`
 			});
 		},
 		stream() {
-			dispatch.settings.stream = !dispatch.settings.stream;
-			text_handler({
+			mod.settings.stream = !mod.settings.stream;
+			textHandler({
 				"sub_type": "PRMSG",
-				"message": `${lang.stream}: ${dispatch.settings.stream ? lang.enabled : lang.disabled}`
+				"message": `${lang.stream}: ${mod.settings.stream ? lang.enabled : lang.disabled}`
 			});
 		},
 		lNotice() {
-			dispatch.settings.lNotice = !dispatch.settings.lNotice;
-			text_handler({
+			mod.settings.lNotice = !mod.settings.lNotice;
+			textHandler({
 				"sub_type": "PRMSG",
-				"message": `${lang.lNotice}: ${dispatch.settings.lNotice ? lang.enabled : lang.disabled}`
+				"message": `${lang.lNotice}: ${mod.settings.lNotice ? lang.enabled : lang.disabled}`
 			});
 		},
 		gNotice() {
-			dispatch.settings.gNotice = !dispatch.settings.gNotice;
-			text_handler({
+			mod.settings.gNotice = !mod.settings.gNotice;
+			textHandler({
 				"sub_type": "PRMSG",
-				"message": `${lang.gNotice}: ${dispatch.settings.gNotice ? lang.enabled : lang.disabled}`
+				"message": `${lang.gNotice}: ${mod.settings.gNotice ? lang.enabled : lang.disabled}`
 			});
 		},
 		dungeons() {
-			for (const [id, dungeon] of Object.entries(dispatch.settings.dungeons)) {
+			for (const [id, dungeon] of Object.entries(mod.settings.dungeons)) {
 				if (!dungeon.name) continue;
-				text_handler({
+				textHandler({
 					"sub_type": "PRMSG",
 					"message": `${id} - ${dungeon.name}`
 				});
 			}
 		},
 		gui() {
-			gui_handler("index", "TERA-Guide");
+			guiHandler("index", "TERA-Guide");
 		},
 		help() {
 			for (const helpstring of lang.helpbody) {
-				text_handler({
+				textHandler({
 					"sub_type": helpstring[1],
 					"message": helpstring[0]
 				});
 			}
 		},
 		guivoicetest() {
-			voice.speak(lang.voicetest, dispatch.settings.rate);
-			text_handler({
+			voice.speak(lang.voicetest, mod.settings.rate);
+			textHandler({
 				"sub_type": "PRMSG",
 				"message": lang.voicetest
 			});
@@ -446,31 +449,31 @@ module.exports = function TeraGuide(dispatch) {
 		$default(arg1) {
 			// Enable/Disable the module
 			if (arg1 === undefined) {
-				dispatch.settings.enabled = !dispatch.settings.enabled;
-				text_handler({
+				mod.settings.enabled = !mod.settings.enabled;
+				textHandler({
 					"sub_type": "PRMSG",
-					"message": `${lang.module}: ${dispatch.settings.enabled ? lang.enabled : lang.disabled}`,
+					"message": `${lang.module}: ${mod.settings.enabled ? lang.enabled : lang.disabled}`,
 				});
 			// Set messages text color
 			} else if (["cr", "co", "cy", "cg", "cv", "cb", "clb", "cdb", "cp", "clp", "cw", "cgr", "cbl"].includes(arg1)) {
-				dispatch.settings.cc.splice(0, 1, eval(arg1));
-				text_handler({
+				mod.settings.cc.splice(0, 1, eval(arg1));
+				textHandler({
 					"sub_type": "PRMSG",
 					"message": lang.colorchanged
 				});
-				if (!dispatch.settings.lNotice && !dispatch.settings.stream) {
-					sendDungeonEvent(lang.colorchanged, dispatch.settings.cc, spg);
+				if (!mod.settings.lNotice && !mod.settings.stream) {
+					sendDungeonEvent(lang.colorchanged, mod.settings.cc, spg);
 				}
 			// Set voice rate
 			} else if (parseInt(arg1) >= 1 && parseInt(arg1) <= 10) {
-				text_handler({
+				textHandler({
 					"sub_type": "PRMSG",
 					"message": `${lang.ratechanged} ${arg1}`
 				});
-				dispatch.settings.rate.splice(0, 1, parseInt(arg1));
+				mod.settings.rate.splice(0, 1, parseInt(arg1));
 			// Unknown command
 			} else {
-				text_handler({
+				textHandler({
 					"sub_type": "PRMSG",
 					"message": lang.unknowncommand
 				});
@@ -481,12 +484,12 @@ module.exports = function TeraGuide(dispatch) {
 
 	/** GUI FUNCTIONS **/
 
-	dispatch.hook("C_CONFIRM_UPDATE_NOTIFICATION", "raw", { order: 100010 }, () => false);
-	dispatch.hook("C_ADMIN", 1, { order: 100010, filter: { fake: null, silenced: false, modified: null } }, (event) => {
+	mod.hook("C_CONFIRM_UPDATE_NOTIFICATION", "raw", { order: 100010 }, () => false);
+	mod.hook("C_ADMIN", 1, { order: 100010, filter: { fake: null, silenced: false, modified: null } }, (event) => {
 		const commands = event.command.split(";");
 		for (const cmd of commands) {
 			try {
-				dispatch.command.exec(cmd);
+				mod.command.exec(cmd);
 			} catch (e) {
 				continue;
 			}
@@ -506,33 +509,33 @@ module.exports = function TeraGuide(dispatch) {
 				else if (!data.command) body += `${data.text}`;
 				else continue;
 			}
-			dispatch.toClient("S_ANNOUNCE_UPDATE_NOTIFICATION", 1, { id: 0, title, body });
+			mod.toClient("S_ANNOUNCE_UPDATE_NOTIFICATION", 1, { id: 0, title, body });
 		}
 	}
 
-	function gui_handler(page, title) {
+	function guiHandler(page, title) {
 		let tmp_data = [];
 		switch (page) {
 			default:
 				tmp_data.push(
 					{ text: `<font color="${gcy}" size="+20">${lang.settings}:</font>` }, { text: "&#09;&#09;&#09;" },
-					{ text: `<font color="${dispatch.settings.spawnObject ? gcg : gcr}" size="+18">[${lang.spawnObject}]</font>`, command: "guide spawnObject;guide gui" }, { text: "&nbsp;&nbsp;" },
-					{ text: `<font color="${dispatch.settings.speaks ? gcg : gcr}" size="+18">[${lang.speaks}]</font>`, command: "guide voice;guide gui" },
+					{ text: `<font color="${mod.settings.spawnObject ? gcg : gcr}" size="+18">[${lang.spawnObject}]</font>`, command: "guide spawnObject;guide gui" }, { text: "&nbsp;&nbsp;" },
+					{ text: `<font color="${mod.settings.speaks ? gcg : gcr}" size="+18">[${lang.speaks}]</font>`, command: "guide voice;guide gui" },
 					{ text: "<br>&#09;&#09;&#09;&#09;&#09;" },
-					{ text: `<font color="${dispatch.settings.lNotice ? gcg : gcr}" size="+18">[${lang.lNotice}]</font>`, command: "guide lNotice;guide gui" }, { text: "&nbsp;&nbsp;" },
-					{ text: `<font color="${dispatch.settings.stream ? gcg : gcr}" size="+18">[${lang.stream}]</font>`, command: "guide stream;guide gui" }, { text: "&nbsp;&nbsp;" },
+					{ text: `<font color="${mod.settings.lNotice ? gcg : gcr}" size="+18">[${lang.lNotice}]</font>`, command: "guide lNotice;guide gui" }, { text: "&nbsp;&nbsp;" },
+					{ text: `<font color="${mod.settings.stream ? gcg : gcr}" size="+18">[${lang.stream}]</font>`, command: "guide stream;guide gui" }, { text: "&nbsp;&nbsp;" },
 					{ text: `<br><br>` },
 					{ text: `<font color="${gcy}" size="+20">${lang.rate}:</font>` }, { text: "&#09;&#09;" },
-					{ text: `<font color="${dispatch.settings.rate[0] == 1 ? gcg : gcr}" size="+18">[1]</font>`, command: "guide 1;guide gui" }, { text: "&nbsp;&nbsp;" },
-					{ text: `<font color="${dispatch.settings.rate[0] == 2 ? gcg : gcr}" size="+18">[2]</font>`, command: "guide 2;guide gui" }, { text: "&nbsp;&nbsp;" },
-					{ text: `<font color="${dispatch.settings.rate[0] == 3 ? gcg : gcr}" size="+18">[3]</font>`, command: "guide 3;guide gui" }, { text: "&nbsp;&nbsp;" },
-					{ text: `<font color="${dispatch.settings.rate[0] == 4 ? gcg : gcr}" size="+18">[4]</font>`, command: "guide 4;guide gui" }, { text: "&nbsp;&nbsp;" },
-					{ text: `<font color="${dispatch.settings.rate[0] == 5 ? gcg : gcr}" size="+18">[5]</font>`, command: "guide 5;guide gui" }, { text: "&nbsp;&nbsp;" },
-					{ text: `<font color="${dispatch.settings.rate[0] == 6 ? gcg : gcr}" size="+18">[6]</font>`, command: "guide 6;guide gui" }, { text: "&nbsp;&nbsp;" },
-					{ text: `<font color="${dispatch.settings.rate[0] == 7 ? gcg : gcr}" size="+18">[7]</font>`, command: "guide 7;guide gui" }, { text: "&nbsp;&nbsp;" },
-					{ text: `<font color="${dispatch.settings.rate[0] == 8 ? gcg : gcr}" size="+18">[8]</font>`, command: "guide 8;guide gui" }, { text: "&nbsp;&nbsp;" },
-					{ text: `<font color="${dispatch.settings.rate[0] == 9 ? gcg : gcr}" size="+18">[9]</font>`, command: "guide 9;guide gui" }, { text: "&nbsp;&nbsp;" },
-					{ text: `<font color="${dispatch.settings.rate[0] == 10 ? gcg : gcr}" size="+18">[10]</font>`, command: "guide 10;guide gui" }, { text: "&nbsp;&nbsp;&nbsp;&nbsp;" },
+					{ text: `<font color="${mod.settings.rate[0] == 1 ? gcg : gcr}" size="+18">[1]</font>`, command: "guide 1;guide gui" }, { text: "&nbsp;&nbsp;" },
+					{ text: `<font color="${mod.settings.rate[0] == 2 ? gcg : gcr}" size="+18">[2]</font>`, command: "guide 2;guide gui" }, { text: "&nbsp;&nbsp;" },
+					{ text: `<font color="${mod.settings.rate[0] == 3 ? gcg : gcr}" size="+18">[3]</font>`, command: "guide 3;guide gui" }, { text: "&nbsp;&nbsp;" },
+					{ text: `<font color="${mod.settings.rate[0] == 4 ? gcg : gcr}" size="+18">[4]</font>`, command: "guide 4;guide gui" }, { text: "&nbsp;&nbsp;" },
+					{ text: `<font color="${mod.settings.rate[0] == 5 ? gcg : gcr}" size="+18">[5]</font>`, command: "guide 5;guide gui" }, { text: "&nbsp;&nbsp;" },
+					{ text: `<font color="${mod.settings.rate[0] == 6 ? gcg : gcr}" size="+18">[6]</font>`, command: "guide 6;guide gui" }, { text: "&nbsp;&nbsp;" },
+					{ text: `<font color="${mod.settings.rate[0] == 7 ? gcg : gcr}" size="+18">[7]</font>`, command: "guide 7;guide gui" }, { text: "&nbsp;&nbsp;" },
+					{ text: `<font color="${mod.settings.rate[0] == 8 ? gcg : gcr}" size="+18">[8]</font>`, command: "guide 8;guide gui" }, { text: "&nbsp;&nbsp;" },
+					{ text: `<font color="${mod.settings.rate[0] == 9 ? gcg : gcr}" size="+18">[9]</font>`, command: "guide 9;guide gui" }, { text: "&nbsp;&nbsp;" },
+					{ text: `<font color="${mod.settings.rate[0] == 10 ? gcg : gcr}" size="+18">[10]</font>`, command: "guide 10;guide gui" }, { text: "&nbsp;&nbsp;&nbsp;&nbsp;" },
 					{ text: `<font size="+18">[${lang.test}]</font>`, command: "guide guivoicetest" },
 					{ text: `<br>` }
 				);
@@ -541,13 +544,13 @@ module.exports = function TeraGuide(dispatch) {
 				);
 				for (const color of ["cr", "co", "cy", "cg", "cv", "cb", "clb", "cdb", "cp", "clp", "cw", "cgr", "cbl"]) {
 					let cc = eval(color);
-					tmp_data.push({ text: `<font color="${dispatch.settings.cc[0] === cc ? gcg : gcr}" size="+18">[${color.substr(1).toUpperCase()}]</font>`, command: "guide " + color + ";guide gui" }, { text: "&nbsp;&nbsp;" });
+					tmp_data.push({ text: `<font color="${mod.settings.cc[0] === cc ? gcg : gcr}" size="+18">[${color.substr(1).toUpperCase()}]</font>`, command: "guide " + color + ";guide gui" }, { text: "&nbsp;&nbsp;" });
 				}
 				tmp_data.push(
 					{ text: `<br><br>` },
 					{ text: `<font color="${gcy}" size="+20">${lang.dungeons}:</font><br>` }
 				);
-				for (const [id, dungeon] of Object.entries(dispatch.settings.dungeons)) {
+				for (const [id, dungeon] of Object.entries(mod.settings.dungeons)) {
 					if (!dungeon.name) continue;
 					tmp_data.push({ text: `<font color="${dungeon.spawnObject ? gcg : gcr}" size="+18">[${lang.objects}]</font>`, command: "guide spawnObject " + id + ";guide gui" }, { text: "&nbsp;&nbsp;" });
 					tmp_data.push({ text: `<font color="${dungeon.verbose ? gcg : gcr}" size="+18">[${lang.verbose}]</font>`, command: "guide verbose " + id + ";guide gui" }, { text: "&nbsp;&#8212;&nbsp;" });
@@ -563,54 +566,57 @@ module.exports = function TeraGuide(dispatch) {
 	/** EVENTS AND HOOKS **/
 
 	// Set client language and load guides configuration
-	dispatch.game.on("enter_game", () => {
+	mod.game.on("enter_game", () => {
+		// Supported languages by client
+		const languages = { 0: "en", 1: "kr", 3: "jp", 4: "de", 5: "fr", 7: "tw", 8: "ru" };
 		// Set client language
-		if (!dispatch.settings.language || dispatch.settings.language == "auto") {
-			language = languages[dispatch.game.language] || languages[0];
+		if (!mod.settings.language || mod.settings.language == "auto") {
+			language = languages[mod.game.language] || languages[0];
 		} else {
-			language = dispatch.settings.language.toLowerCase();
+			language = mod.settings.language.toLowerCase();
 		}
 		uclanguage = language.toUpperCase();
 		// Set language strings
 		lang = translation[language] || translation["en"];
 		// Create dungeon configuration
-		create_guide_configuration();
+		initConfiguration();
 	});
 
 	// Clear out the timers when leave the game
-	dispatch.game.on("leave_game", () => {
-		dispatch.clearAllTimeouts();
-		dispatch.clearAllIntervals();
+	mod.game.on("leave_game", () => {
+		mod.clearAllTimeouts();
+		mod.clearAllIntervals();
 	});
 
 	// Load guide when entry new zone
-	dispatch.game.me.on("change_zone", (zone, quick) => {
-		change_zone(zone, false);
+	mod.game.me.on("change_zone", (zone, quick) => {
+		loadZoneHandler(zone, false);
 	});
 
 	// Boss skill action
-	dispatch.hook("S_ACTION_STAGE", 9, { order: 15 }, e => {
+	mod.hook("S_ACTION_STAGE", 9, { order: 15 }, e => {
 		// Return if any of the below is false
-		if (!dispatch.settings.enabled || !guide.loaded || !guide.verbose || !e.skill.npc) return;
+		if (!mod.settings.enabled || !guide.loaded || !guide.verbose || !e.skill.npc) return;
 		let skillid = e.skill.id % 1000;
 		let eskillid = e.skill.id > 3000 ? e.skill.id : e.skill.id % 1000;
 		const ent = entity["mobs"][e.gameId.toString()];
 		// Due to a bug for some bizare reason(probably proxy fucking itself) we do this ugly hack
 		e.loc.w = e.w;
 		// We've confirmed it's a mob, so it's plausible we want to act on this
+		if (!ent) return;
 		if (guide.sp) {
-			if (ent) return handle_event(Object.assign({}, ent, e), e.skill.id, "Skill", "s", debug.debug || debug.skill || (ent.templateId % 1 === 0 ? debug.boss : false), e.speed, e.stage);
+			return handleEvent(Object.assign({}, ent, e), e.skill.id, "Skill", "s", debug.all || debug.skill || (ent.templateId % 1 === 0 ? debug.boss : false), e.speed, e.stage);
 		} else if (guide.es) {
-			if (ent) return handle_event(Object.assign({}, ent, e), eskillid, "Skill", "s", debug.debug || debug.skill || (ent.templateId % 1 === 0 ? debug.boss : false), e.speed, e.stage);
+			return handleEvent(Object.assign({}, ent, e), eskillid, "Skill", "s", debug.all || debug.skill || (ent.templateId % 1 === 0 ? debug.boss : false), e.speed, e.stage);
 		} else {
-			if (ent) return handle_event(Object.assign({}, ent, e), skillid, "Skill", "s", debug.debug || debug.skill || (ent.templateId % 1 === 0 ? debug.boss : false), e.speed, e.stage);
+			return handleEvent(Object.assign({}, ent, e), skillid, "Skill", "s", debug.all || debug.skill || (ent.templateId % 1 === 0 ? debug.boss : false), e.speed, e.stage);
 		}
 	});
 
 	// Boss abnormality triggered
 	function abnormality_triggered(e) {
 		// Return if any of the below is false
-		if (!dispatch.settings.enabled || !guide.loaded || !guide.verbose) return;
+		if (!mod.settings.enabled || !guide.loaded || !guide.verbose) return;
 		// avoid errors ResidentSleeper (neede for abnormality refresh)
 		if (!e.source) e.source = 0n;
 		// If the boss/mob get"s a abnormality applied to it
@@ -619,24 +625,24 @@ module.exports = function TeraGuide(dispatch) {
 		const source_ent = entity["mobs"][e.source.toString()];
 		// If the mob/boss applies an abnormality to me, it"s plausible we want to act on this
 		if (source_ent && player.isMe(e.target))
-			handle_event(source_ent, e.id, "Abnormality", "am", debug.debug || debug.abnormal);
+			handleEvent(source_ent, e.id, "Abnormality", "am", debug.all || debug.abnormal);
 		// If "nothing"/server applies an abnormality to me, it"s plausible we want to act on this. (spam rip)
 		if (player.isMe(e.target) && 0 == (e.source || 0))
-			handle_event({
+			handleEvent({
 				huntingZoneId: 0,
 				templateId: 0
-			}, e.id, "Abnormality", "ae", debug.debug || debug.abnormal);
+			}, e.id, "Abnormality", "ae", debug.all || debug.abnormal);
 		// If it"s a mob/boss getting an abnormality applied to itself, it"s plausible we want to act on it
 		if (target_ent)
-			handle_event(target_ent, e.id, "Abnormality", "ab", debug.debug || debug.abnormal);
+			handleEvent(target_ent, e.id, "Abnormality", "ab", debug.all || debug.abnormal);
 	}
-	dispatch.hook("S_ABNORMALITY_BEGIN", 4, { order: 15 }, abnormality_triggered);
-	dispatch.hook("S_ABNORMALITY_REFRESH", 2, { order: 15 }, abnormality_triggered);
+	mod.hook("S_ABNORMALITY_BEGIN", 4, { order: 15 }, abnormality_triggered);
+	mod.hook("S_ABNORMALITY_REFRESH", 2, { order: 15 }, abnormality_triggered);
 
 	// Boss health bar triggered
-	dispatch.hook("S_BOSS_GAGE_INFO", 3, e => {
+	mod.hook("S_BOSS_GAGE_INFO", 3, e => {
 		// Return if any of the below is false
-		if (!dispatch.settings.enabled || !guide.loaded || !guide.verbose) return;
+		if (!mod.settings.enabled || !guide.loaded || !guide.verbose) return;
 		const ent = entity["mobs"][e.id.toString()];
 		const hp = Math.floor(Number(e.curHp) / Number(e.maxHp) * 100);
 		const key = `${ent.huntingZoneId}-${ent.templateId}`;
@@ -644,48 +650,163 @@ module.exports = function TeraGuide(dispatch) {
 		if (ent && guide.mobshp[key] == hp) return;
 		guide.mobshp[key] = hp;
 		// We"ve confirmed it"s a mob, so it"s plausible we want to act on this
-		handle_event(ent, hp, "Health", "h", debug.debug || debug.hp);
+		handleEvent(ent, hp, "Health", "h", debug.all || debug.hp);
 	});
 
 	// Dungeon event message
-	dispatch.hook("S_DUNGEON_EVENT_MESSAGE", 2, e => {
+	mod.hook("S_DUNGEON_EVENT_MESSAGE", 2, e => {
 		// Return if any of the below is false
-		if (!dispatch.settings.enabled || !guide.loaded || !guide.verbose) return;
+		if (!mod.settings.enabled || !guide.loaded || !guide.verbose) return;
 		const result = /@dungeon:(\d+)/g.exec(e.message);
 		if (result) {
-			handle_event({
+			handleEvent({
 				huntingZoneId: 0,
 				templateId: 0
-			}, parseInt(result[1]), "Dungeon Message", "dm", debug.debug || debug.dm);
+			}, parseInt(result[1]), "Dungeon Message", "dm", debug.all || debug.dm);
 		}
 	});
 
 	// Quest balloon
-	dispatch.hook("S_QUEST_BALLOON", 1, e => {
+	mod.hook("S_QUEST_BALLOON", 1, e => {
 		// Return if any of the below is false
-		if (!dispatch.settings.enabled || !guide.loaded || !guide.verbose) return;
+		if (!mod.settings.enabled || !guide.loaded || !guide.verbose) return;
 		const source_ent = entity["mobs"][e.source.toString()];
 		const result = /@monsterBehavior:(\d+)/g.exec(e.message);
 		if (result && source_ent)
-			handle_event(source_ent, parseInt(result[1]), "Quest Balloon", "qb", debug.debug || debug.qb);
+			handleEvent(source_ent, parseInt(result[1]), "Quest Balloon", "qb", debug.all || debug.qb);
 	});
+
+
+	/** SEND MESSAGE FUNCTIONS **/
+
+	// Basic message
+	function sendMessage(message) {
+		// If streamer mode is enabled send message to the proxy-channel
+		if (mod.settings.stream) {
+			command.message(mod.settings.cc + message);
+			return;
+		}
+		if (mod.settings.lNotice) {
+			// Send message as a Team leader notification
+			mod.toClient("S_CHAT", 3, {
+				channel: 21, // 21 = team leader, 25 = raid leader, 1 = party, 2 = guild
+				message
+			});
+		} else {
+			// Send message as a green colored Dungeon Event
+			sendDungeonEvent(message, mod.settings.cc, spg);
+		}
+		// Send message to party if gNotice is enabled
+		if (mod.settings.gNotice) {
+			mod.toClient("S_CHAT", 3, {
+				channel: 1,
+				message
+			});
+		}
+	}
+
+	// Notification message
+	function sendNotification(message) {
+		// If streamer mode is enabled send message to the proxy-channel
+		if (mod.settings.stream) {
+			command.message(clb + "[Notice] " + mod.settings.cc + message);
+			return;
+		}
+		// Send message as a Raid leader notification
+		mod.toClient("S_CHAT", 3, {
+			channel: 25,
+			authorName: "guide",
+			message
+		});
+		// Send message to party if gNotice is enabled
+		if (mod.settings.gNotice) {
+			mod.toClient("S_CHAT", 3, {
+				channel: 1,
+				message
+			});
+		}
+	}
+
+	// Alert message
+	function sendAlert(message, cc, spc) {
+		// If streamer mode is enabled send message to the proxy-channel
+		if (mod.settings.stream) {
+			command.message(cc + "[Alert] " + mod.settings.cc + message);
+			return;
+		}
+		if (mod.settings.lNotice) {
+			// Send message as a Raid leader notification
+			mod.toClient("S_CHAT", 3, {
+				channel: 25,
+				authorName: "guide",
+				message
+			});
+		} else {
+			// Send message as a color-specified Dungeon Event
+			sendDungeonEvent(message, mod.settings.cc, spc);
+		}
+		// Send message to party if gNotice or gAlert is enabled
+		if (mod.settings.gNotice/* || mod.settings.gAlert*/) {
+			mod.toClient("S_CHAT", 3, {
+				channel: 1,
+				message
+			});
+		}
+	}
+
+	// Dungeon Event message
+	function sendDungeonEvent(message, spcc, type) {
+		// If streamer mode is enabled send message to the proxy-channel
+		if (mod.settings.stream) {
+			command.message(spcc + message);
+			return;
+		}
+		// Send a color-specified Dungeon Event message
+		mod.toClient("S_DUNGEON_EVENT_MESSAGE", 2, {
+			type: type,
+			chat: 0,
+			channel: 27,
+			message: (spcc + message)
+		});
+	}
+
+	// Write generic debug message used when creating guides
+	function sendDebug(enabled, ...args) {
+		if (enabled) {
+			console.log(`[${Date.now() % 100000}][Guide]`, ...args);
+			if (debug.chat) command.message(args.toString());
+		}
+	}
 
 
 	/** FUNCTION/EVENT HANDLERS FOR TYPES **/
 
 	// Spawn handler
-	function spawn_handler(event, ent, speed = 1.0) {
+	function spawnHandler(event, ent, speed = 1.0) {
+		// Callback function
+		const callback = (sub_type, sending_event) => {
+			switch (sub_type) {
+				case "collection":
+					return mod.toClient("S_SPAWN_COLLECTION", 4, sending_event);
+				case "item":
+					return mod.toClient("S_SPAWN_DROPITEM", 8, sending_event);
+				case "build_object":
+					return mod.toClient("S_SPAWN_BUILD_OBJECT", 2, sending_event);
+			}
+		}
 		// Ignore if streamer mode is enabled
-		if (dispatch.settings.stream) return;
+		if (mod.settings.stream) return;
 		// Ignore if spawnObject is disabled
-		if (!dispatch.settings.spawnObject) return;
+		if (!mod.settings.spawnObject) return;
 		if (!guide.spawnObject) return;
+		// Check ent argument is defined
+		if (!ent) return mod.error("Spawn handler has invalid entity or not specified");
 		// Make sure id is defined
-		if (!event["id"]) return debug_message(true, "Spawn handler needs a id");
+		if (!event["id"]) return mod.error("Spawn handler needs a id");
 		// Make sure sub_delay is defined
-		if (!event["sub_delay"]) return debug_message(true, "Spawn handler needs a sub_delay");
+		if (!event["sub_delay"]) return mod.error("Spawn handler needs a sub_delay");
 		// Make sure distance is defined
-		//if(!event["distance"]) return debug_message(true, "Spawn handler needs a distance");
+		//if(!event["distance"]) return mod.error("Spawn handler needs a distance");
 		// Set sub_type to be collection as default for backward compatibility
 		const sub_type = event["sub_type"] || "collection";
 		// The unique spawned id this item will be using.
@@ -700,11 +821,6 @@ module.exports = function TeraGuide(dispatch) {
 			gameId: item_unique_id,
 			loc: loc,
 			w: loc.w
-		};
-		const despawn_event = {
-			gameId: item_unique_id,
-			unk: 0, // used in S_DESPAWN_BUILD_OBJECT
-			collected: false // used in S_DESPAWN_COLLECTION
 		};
 		// Create the sending event
 		switch (sub_type) {
@@ -742,40 +858,40 @@ module.exports = function TeraGuide(dispatch) {
 				break;
 			// If we haven't implemented the sub_type the event asks for
 			default:
-				return debug_message(true, "Invalid sub_type for spawn handler:", event['sub_type']);
+				return mod.error(`Invalid sub_type for spawn handler: ${event['sub_type']}`);
 		}
-		// Spawn a object by specified type
-		switch (sub_type) {
-			case "collection":
-				dispatch.toClient("S_SPAWN_COLLECTION", 4, sending_event);
-				break;
-			case "item":
-				dispatch.toClient("S_SPAWN_DROPITEM", 8, sending_event);
-				break;
-			case "build_object":
-				dispatch.toClient("S_SPAWN_BUILD_OBJECT", 2, sending_event);
-				break;
+		// Create timer for specified delay
+		const delay = parseInt(event["delay"]);
+		if (delay > 0) {
+			mod.setTimeout(callback, delay / speed, sub_type, sending_event);
+		} else {
+			callback(sub_type, sending_event);
 		}
-		// Set timeout for despawn a spawned object
-		dispatch.setTimeout(() => {
+		const despawn_event = {
+			gameId: item_unique_id,
+			unk: 0, // used in S_DESPAWN_BUILD_OBJECT
+			collected: false // used in S_DESPAWN_COLLECTION
+		};
+		// Create timer for despawn a spawned object
+		mod.setTimeout(() => {
 			switch (sub_type) {
 				case "collection":
-					dispatch.toClient("S_DESPAWN_COLLECTION", 2, despawn_event);
+					mod.toClient("S_DESPAWN_COLLECTION", 2, despawn_event);
 					break;
 				case "item":
-					dispatch.toClient("S_DESPAWN_DROPITEM", 4, despawn_event);
+					mod.toClient("S_DESPAWN_DROPITEM", 4, despawn_event);
 					break;
 				case "build_object":
-					dispatch.toClient("S_DESPAWN_BUILD_OBJECT", 2, despawn_event);
+					mod.toClient("S_DESPAWN_BUILD_OBJECT", 2, despawn_event);
 					break;
 			}
-		}, event["sub_delay"] / speed);
+		}, parseInt(event["sub_delay"]) / speed);
 	}
 
 	// Despawn handler for objects, spawned by "force_gameId"
-	function despawn_handler(event) {
+	function despawnHandler(event) {
 		// Make sure id is defined
-		if (!event['id']) return debug_message(true, "Spawn handler needs a id");
+		if (!event['id']) return mod.error("Spawn handler needs a id");
 		// Set sub_type to be collection as default for backward compatibility
 		const sub_type = event["sub_type"] || "collection";
 		const despawn_event = {
@@ -785,265 +901,274 @@ module.exports = function TeraGuide(dispatch) {
 		};
 		switch (sub_type) {
 			case "collection":
-				return dispatch.toClient("S_DESPAWN_COLLECTION", 2, despawn_event);
+				return mod.toClient("S_DESPAWN_COLLECTION", 2, despawn_event);
 			case "item":
-				return dispatch.toClient("S_DESPAWN_DROPITEM", 4, despawn_event);
+				return mod.toClient("S_DESPAWN_DROPITEM", 4, despawn_event);
 			case "build_object":
-				return dispatch.toClient("S_DESPAWN_BUILD_OBJECT", 2, despawn_event);
+				return mod.toClient("S_DESPAWN_BUILD_OBJECT", 2, despawn_event);
 			default:
-				return debug_message(true, "Invalid sub_type for despawn handler:", event["sub_type"]);
+				return mod.error(`Invalid sub_type for despawn handler: ${event["sub_type"]}`);
 		}
 	}
 
 	// Text handler
-	function text_handler(event, ent, speed = 1.0) {
+	function textHandler(event, ent, speed = 1.0) {
+		// Callback function
+		const callback = (sub_type, message) => {
+			switch (sub_type) {
+				// Basic message
+				case "message":
+					sendMessage(message);
+					break;
+				// Alert message red
+				case "alert":
+					sendAlert(message, cr, spr);
+					break;
+				// Alert message blue
+				case "warning":
+					sendAlert(message, clb, spb);
+					break;
+				// Notification message
+				case "notification":
+					sendNotification(message);
+					break;
+				// Pink dungeon event message
+				case "msgcp":
+					sendDungeonEvent(message, cp, spg);
+					break;
+				// Green dungeon event message
+				case "msgcg":
+					sendDungeonEvent(message, cg, spg);
+					break;
+				// Debug or test message to the proxy-channel and log console
+				case "MSG":
+					command.message(cr + message);
+					console.log(cr + message);
+					break;
+				// Color-specified proxy-channel messages
+				case "COMSG":
+					command.message(co + message);
+					break;
+				case "CYMSG":
+					command.message(cy + message);
+					break;
+				case "CGMSG":
+					command.message(cg + message);
+					break;
+				case "CDBMSG":
+					command.message(cdb + message);
+					break;
+				case "CBMSG":
+					command.message(cb + message);
+					break;
+				case "CVMSG":
+					command.message(cv + message);
+					break;
+				case "CPMSG":
+					command.message(cp + message);
+					break;
+				case "CLPMSG":
+					command.message(clp + message);
+					break;
+				case "CLBMSG":
+					command.message(clb + message);
+					break;
+				case "CBLMSG":
+					command.message(cbl + message);
+					break;
+				case "CGRMSG":
+					command.message(cgr + message);
+					break;
+				case "CWMSG":
+					command.message(cw + message);
+					break;
+				case "CRMSG":
+					command.message(cr + message);
+					break;
+				// Default color proxy-channel message
+				case "PRMSG":
+					command.message(mod.settings.cc + message);
+					break;
+				// Invalid sub_type value
+				default:
+					return mod.error(`Invalid sub_type for text handler: ${event['sub_type']}`);
+			}
+		}
 		// Fetch the message
 		const message = event[`message_${uclanguage}`] || event[`message_${language}`] || event["message"];
 		// Make sure sub_type is defined
-		if (!event["sub_type"]) return debug_message(true, "Text handler needs a sub_type");
+		if (!event["sub_type"]) return mod.error("Text handler needs a sub_type");
 		// Make sure message is defined
-		if (!message) return debug_message(true, "Text handler needs a message");
+		if (!message) return mod.error("Text handler needs a message");
 		// Play the voice for specified types
 		if (["message", "alert", "warning", "notification", "msgcp", "msgcg", "speech"].includes(event["sub_type"])) {
 			// Ignoring if verbose mode is disabled
 			if (!guide.verbose) return;
 			// Play the voice of text message
-			if (voice && dispatch.settings.speaks) {
-				voice.speak(message, dispatch.settings.rate);
+			if (voice && mod.settings.speaks) {
+				voice.speak(message, mod.settings.rate);
 			}
 			// Ignoring sending a text message if "speech" sub_type specified
 			if (event["sub_type"] == "speech") return;
 		}
-		// Send a text message
-		switch (event["sub_type"]) {
-			// Basic message
-			case "message":
-				sendMessage(message);
-				break;
-			// Alert message red
-			case "alert":
-				sendAlert(message, cr, spr);
-				break;
-			// Alert message blue
-			case "warning":
-				sendAlert(message, clb, spb);
-				break;
-			// Notification message
-			case "notification":
-				sendNotification(message);
-				break;
-			// Pink dungeon event message
-			case "msgcp":
-				sendDungeonEvent(message, cp, spg);
-				break;
-			// Green dungeon event message
-			case "msgcg":
-				sendDungeonEvent(message, cg, spg);
-				break;
-			// Debug or test message to the proxy-channel and log console
-			case "MSG":
-				command.message(cr + message);
-				console.log(cr + message);
-				break;
-			// Color-specified proxy-channel messages
-			case "COMSG":
-				command.message(co + message);
-				break;
-			case "CYMSG":
-				command.message(cy + message);
-				break;
-			case "CGMSG":
-				command.message(cg + message);
-				break;
-			case "CDBMSG":
-				command.message(cdb + message);
-				break;
-			case "CBMSG":
-				command.message(cb + message);
-				break;
-			case "CVMSG":
-				command.message(cv + message);
-				break;
-			case "CPMSG":
-				command.message(cp + message);
-				break;
-			case "CLPMSG":
-				command.message(clp + message);
-				break;
-			case "CLBMSG":
-				command.message(clb + message);
-				break;
-			case "CBLMSG":
-				command.message(cbl + message);
-				break;
-			case "CGRMSG":
-				command.message(cgr + message);
-				break;
-			case "CWMSG":
-				command.message(cw + message);
-				break;
-			case "CRMSG":
-				command.message(cr + message);
-				break;
-			// Default color proxy-channel message
-			case "PRMSG":
-				command.message(dispatch.settings.cc + message);
-				break;
-			// Invalid sub_type value
-			default:
-				return debug_message(true, "Invalid sub_type for text handler:", event['sub_type']);
+		// Create timer for specified delay
+		const delay = parseInt(event["delay"]);
+		if (delay > 0) {
+			mod.setTimeout(callback, delay / speed, event["sub_type"], message);
+		} else {
+			callback(event["sub_type"], message);
 		}
 	}
 
 	// Func handler
-	function func_handler(event, ent, speed = 1.0) {
-		// Make sure func is defined
-		if (!event["func"]) return debug_message(true, "Func handler needs a func");
-		try {
+	function funcHandler(event, ent, speed = 1.0) {
+		// Callback function
+		const callback = (event) => {
 			try {
-				event["func"](...event["args"], function_event_handlers, event, ent, fake_dispatch);
-			// Old style call
+				// Try to call the function
+				try {
+					event["func"](...event["args"], eventHandlers, event, ent, dispatch);
+				// Old style call
+				} catch (e) {
+					event["func"].call(null, eventHandlers, event, ent, dispatch);
+				}
 			} catch (e) {
-				event["func"].call(null, function_event_handlers, event, ent, fake_dispatch);
+				mod.error(e);
 			}
-		} catch (e) {
-			debug_message(true, e);
+		}
+		// Make sure func is defined
+		if (!event["func"]) return mod.error("Func handler needs a func");
+		// Create timer for specified delay
+		const delay = parseInt(event["delay"]);
+		if (delay > 0) {
+			mod.setTimeout(callback, delay / speed, event);
+		} else {
+			callback(event);
 		}
 	}
 
 	// Spawn Func handler
-	function spawn_func_handler(event, ent, speed = 1.0) {
+	function spawnFuncHandler(event, ent, speed = 1.0) {
 		// Ignore if streamer mode is enabled
-		if (dispatch.settings.stream) return;
+		if (mod.settings.stream) return;
 		// Ignore if spawnObject is disabled
-		if (!dispatch.settings.spawnObject) return;
+		if (!mod.settings.spawnObject) return;
 		if (!guide.spawnObject) return;
+		// Check ent argument is defined
+		if (!ent) return mod.error("Spawn Func handler has invalid entity or not specified");
 		// Make sure func and args is defined
-		if (!event["func"]) return debug_message(true, "Spawn Func handler needs a func");
-		if (!event["args"]) return debug_message(true, "Spawn Func handler needs a args");
+		if (!event["func"]) return mod.error("Spawn Func handler needs a func");
+		if (!event["args"]) return mod.error("Spawn Func handler needs a args");
 		// Create a Spawn class
-		const spawn = new Spawn(function_event_handlers, event, ent, fake_dispatch);
+		const { Spawn } = lib;
+		const spawn = new Spawn(eventHandlers, event, ent, dispatch);
 		try {
-			spawn[event["func"]](...event["args"]);
+			// Create timer for specified delay
+			const delay = parseInt(event["delay"]);
+			if (delay > 0) {
+				mod.setTimeout(() => {
+					spawn[event["func"]](...event["args"]);
+				}, delay / speed);
+			} else {
+				spawn[event["func"]](...event["args"]);
+			}
 		} catch (e) {
-			debug_message(true, e);
+			mod.error(e);
 		}
-	}
-
-
-	/** SEND MESSAGE FUNCTIONS **/
-
-	// Basic message
-	function sendMessage(message) {
-		// If streamer mode is enabled send message to the proxy-channel
-		if (dispatch.settings.stream) {
-			command.message(dispatch.settings.cc + message);
-			return;
-		}
-		if (dispatch.settings.lNotice) {
-			// Send message as a Team leader notification
-			dispatch.toClient("S_CHAT", 3, {
-				channel: 21, // 21 = team leader, 25 = raid leader, 1 = party, 2 = guild
-				message
-			});
-		} else {
-			// Send message as a green colored Dungeon Event
-			sendDungeonEvent(message, dispatch.settings.cc, spg);
-		}
-		// Send message to party if gNotice is enabled
-		if (dispatch.settings.gNotice) {
-			dispatch.toClient("S_CHAT", 3, {
-				channel: 1,
-				message
-			});
-		}
-	}
-
-	// Notification message
-	function sendNotification(message) {
-		// If streamer mode is enabled send message to the proxy-channel
-		if (dispatch.settings.stream) {
-			command.message(clb + "[Notice] " + dispatch.settings.cc + message);
-			return;
-		}
-		// Send message as a Raid leader notification
-		dispatch.toClient("S_CHAT", 3, {
-			channel: 25,
-			authorName: "guide",
-			message
-		});
-		// Send message to party if gNotice is enabled
-		if (dispatch.settings.gNotice) {
-			dispatch.toClient("S_CHAT", 3, {
-				channel: 1,
-				message
-			});
-		}
-	}
-
-	// Alert message
-	function sendAlert(message, cc, spc) {
-		// If streamer mode is enabled send message to the proxy-channel
-		if (dispatch.settings.stream) {
-			command.message(cc + "[Alert] " + dispatch.settings.cc + message);
-			return;
-		}
-		if (dispatch.settings.lNotice) {
-			// Send message as a Raid leader notification
-			dispatch.toClient("S_CHAT", 3, {
-				channel: 25,
-				authorName: "guide",
-				message
-			});
-		} else {
-			// Send message as a color-specified Dungeon Event
-			sendDungeonEvent(message, dispatch.settings.cc, spc);
-		}
-		// Send message to party if gNotice or gAlert is enabled
-		if (dispatch.settings.gNotice/* || dispatch.settings.gAlert*/) {
-			dispatch.toClient("S_CHAT", 3, {
-				channel: 1,
-				message
-			});
-		}
-	}
-
-	// Dungeon Event message
-	function sendDungeonEvent(message, spcc, type) {
-		// If streamer mode is enabled send message to the proxy-channel
-		if (dispatch.settings.stream) {
-			command.message(spcc + message);
-			return;
-		}
-		// Send a color-specified Dungeon Event message
-		dispatch.toClient("S_DUNGEON_EVENT_MESSAGE", 2, {
-			type: type,
-			chat: 0,
-			channel: 27,
-			message: (spcc + message)
-		});
 	}
 
 
 	/** HELPER FUNCTIONS **/
 
-	// Write generic debug message used when creating guides
-	function debug_message(d, ...args) {
-		if (d) {
-			console.log(`[${Date.now() % 100000}][Guide]`, ...args);
-			if (debug.chat) command.message(args.toString());
+	// Load guide script
+	function loadZoneHandler(zone, debug_enabled) {
+		// Clear old data and set guide as not loaded
+		guide.object = {};
+		guide.mobshp = {};
+		guide.loaded = false;
+		// Clear out the timers
+		mod.clearAllTimeouts();
+		mod.clearAllIntervals();
+		// Clear out previous hooks, that our previous guide module hooked
+		dispatch._remove_all_hooks();
+		// Send debug message
+		sendDebug(debug.all || debug_enabled, `Entered zone: ${zone}`);
+		// Check guide and attach settings from config
+		if (zone == "test") { // load test guide data
+			guide.id = zone;
+			guide.name = "Test Guide";
+			Object.assign(guide, defaultSettings);
+		} else if (mod.settings.dungeons[zone]) {
+			guide.id = parseInt(zone);
+			Object.assign(guide, mod.settings.dungeons[zone]);
+		} else {
+			sendDebug(debug_enabled, `Zone "${zone}" is not found`);
+			return; // returns if zone not found
 		}
+		// Set dungeon zone type for loaded guide
+		if (SP_ZONE_IDS.includes(guide.id)) {
+			guide.sp = true; // skill 1000-3000
+			guide.es = false;
+		} else if (ES_ZONE_IDS.includes(guide.id)) {
+			guide.sp = false; // skill 100-200-3000
+			guide.es = true;
+		} else {
+			guide.sp = false; // skill 100-200 
+			guide.es = false;
+		}
+		// Remove potential cached guide from require cache, so that we don"t need to relog to refresh guide
+		try {
+			delete require.cache[require.resolve(`${GUIDES_DIR}/${guide.id}`)];
+		} catch (e) {}
+		// Load guide script
+		try {
+			// Old style guides loading
+			guide.object = require(`${GUIDES_DIR}/${guide.id}`);
+			guide.object.load(dispatch);
+		} catch (e) {
+			try {
+				guide.object = require(`${GUIDES_DIR}/${guide.id}`)(dispatch, guide);
+			} catch (e) {
+				return mod.error(e);
+			}
+		}
+		// Send welcome message
+		if (guide.sp) {
+			textHandler({
+				"sub_type": "PRMSG",
+				"message": `${lang.enteresdg}: ${cr}${guide.name} ${cw}[${guide.id}]`
+			});
+		} else if (guide.es) {
+			textHandler({
+				"sub_type": "PRMSG",
+				"message": `${lang.enterspdg}: ${cr}${guide.name} ${cw}[${guide.id}]`
+			});
+		} else {
+			textHandler({
+				"sub_type": "PRMSG",
+				"message": `${lang.enterdg}: ${cr}${guide.name} ${cw}[${guide.id}]`
+			});
+		}
+		textHandler({
+			"sub_type": "CGMSG",
+			"message": `${lang.helpheader}\n` +
+				`${lang.stream}: ${mod.settings.stream ? lang.enabled : lang.disabled}\n` +
+				`${lang.gNotice}: ${mod.settings.gNotice ? lang.enabled : lang.disabled}\n` +
+				`${lang.speaks}: ${mod.settings.speaks ? lang.enabled : lang.disabled}`
+		});
+		// Set guide as loaded
+		guide.loaded = true;
 	}
 
 	// Create the configuration for all available guides
-	const create_guide_configuration = async () => {
+	async function initConfiguration() {
 		// Load the ids of the available guides
 		const guideFiles = await readdir(path.resolve(__dirname, GUIDES_DIR));
 		for (const file of guideFiles) {
 			if (!file.endsWith(".js")) continue;
 			const zoneId = file.split(".")[0];
-			if (!dispatch.settings.dungeons[zoneId])
-				dispatch.settings.dungeons[zoneId] = Object.assign({ name: undefined }, default_guide_settings);
+			if (!mod.settings.dungeons[zoneId])
+				mod.settings.dungeons[zoneId] = Object.assign({ name: undefined }, defaultSettings);
 			// We can however apply these names
 			if(zoneId === "3020") {
 				let s = {
@@ -1055,14 +1180,14 @@ module.exports = function TeraGuide(dispatch) {
 					tw: "金麟號",
 					ru: "Золотая чешуя"
 				};
-				dispatch.settings.dungeons[zoneId].name = s[language] || s["en"];
+				mod.settings.dungeons[zoneId].name = s[language] || s["en"];
 			}
 		}
 		// Grab a list of dungeon names, and apply them to settings
 		let allDungeons;
 		const dungeons = new Map();
 		try {
-			const resOne = await dispatch.queryData("/EventMatching/EventGroup/Event@type=?", ["Dungeon"], true, true, ["id"]);
+			const resOne = await mod.queryData("/EventMatching/EventGroup/Event@type=?", ["Dungeon"], true, true, ["id"]);
 			allDungeons = resOne.map(e => {
 				const zoneId = e.children.find(x => x.name == "TargetList").children.find(x => x.name == "Target").attributes.id;
 				let dungeon = dungeons.get(zoneId);
@@ -1072,27 +1197,27 @@ module.exports = function TeraGuide(dispatch) {
 				}
 				return dungeon;
 			});
-			const resTwo = await dispatch.queryData("/StrSheet_Dungeon/String@id=?", [[... dungeons.keys()]], true);
+			const resTwo = await mod.queryData("/StrSheet_Dungeon/String@id=?", [[... dungeons.keys()]], true);
 			for (const res of resTwo){
 				const id = res.attributes.id.toString();
 				const name = res.attributes.string.toString();
-				if (!dispatch.settings.dungeons[id]) continue;
-				dispatch.settings.dungeons[id].name = name;
+				if (!mod.settings.dungeons[id]) continue;
+				mod.settings.dungeons[id].name = name;
 			}
 		} catch (e) {
-			debug_message(true, "Some features of clientInterface not supported:", e);
+			mod.warn(e);
 			// Try to read dungeon list from "guides" directory, as dungeon name uses first line of guide js file
 			const guideFiles = await readdir(path.resolve(__dirname, GUIDES_DIR));
 			for (const file of guideFiles) {
 				if (!file.endsWith(".js")) continue;
 				const zoneId = file.split(".")[0];
-				if (!dispatch.settings.dungeons[zoneId]) continue;
+				if (!mod.settings.dungeons[zoneId]) continue;
 				let lineReader = readline.createInterface({
 					input: fs.createReadStream(path.join(__dirname, GUIDES_DIR, file))
 				});
 				lineReader.on("line", function (line) {
 					const name = line.replace(/^[\/\s]+/g, "") || zoneId;
-					dispatch.settings.dungeons[zoneId].name = name;
+					mod.settings.dungeons[zoneId].name = name;
 					lineReader.close();
 					lineReader.removeAllListeners();
 				});
@@ -1100,94 +1225,15 @@ module.exports = function TeraGuide(dispatch) {
 		}
 	};
 
-	// Load guide script
-	function change_zone(zone) {
-		// Clear old data and set guide as not loaded
-		guide.object = {};
-		guide.mobshp = {};
-		guide.loaded = false;
-		// Clear out the timers
-		dispatch.clearAllTimeouts();
-		dispatch.clearAllIntervals();
-		// Clear out previous hooks, that our previous guide module hooked
-		fake_dispatch._remove_all_hooks();
-		// Send debug message
-		debug_message(debug.debug, "Entered zone:", zone);
-		// Check guide and attach settings from config
-		if (dispatch.settings.dungeons[zone]) {
-			guide.id = zone;
-			Object.assign(guide, dispatch.settings.dungeons[zone]);
-		} else if (zone == "test") { // load test guide data
-			guide.id = zone;
-			guide.name = "Test Guide";
-			Object.assign(guide, default_guide_settings);
-		} else return; // returns if zone not found
-		// Set dungeon zone type for loaded guide
-		if (SP_ZONE_IDS.includes(zone)) {
-			guide.sp = true; // skill 1000-3000
-			guide.es = false;
-		} else if (ES_ZONE_IDS.includes(zone)) {
-			guide.sp = false; // skill 100-200-3000
-			guide.es = true;
-		} else {
-			guide.sp = false; // skill 100-200 
-			guide.es = false;
-		}
-		// Remove potential cached guide from require cache, so that we don"t need to relog to refresh guide
-		try {
-			delete require.cache[require.resolve(`${GUIDES_DIR}/${zone}`)];
-		} catch (e) {}
-		// Load guide script
-		try {
-			guide.object = require(`${GUIDES_DIR}/${zone}`)(function_event_handlers, fake_dispatch, guide);
-		} catch (e) {
-			// Old style guides loading
-			guide.object = require(`${GUIDES_DIR}/${zone}`);
-			// Try calling the "load" function
-			try {
-				guide.object.load(fake_dispatch);
-			} catch (e) {
-				debug_message(debug.debug, e);
-				return;
-			}
-		}
-		// Send welcome message
-		if (guide.sp) {
-			text_handler({
-				"sub_type": "PRMSG",
-				"message": `${lang.enteresdg}: ${cr}${guide.name} ${cw}[${zone}]`
-			});
-		} else if (guide.es) {
-			text_handler({
-				"sub_type": "PRMSG",
-				"message": `${lang.enterspdg}: ${cr}${guide.name} ${cw}[${zone}]`
-			});
-		} else {
-			text_handler({
-				"sub_type": "PRMSG",
-				"message": `${lang.enterdg}: ${cr}${guide.name} ${cw}[${zone}]`
-			});
-		}
-		text_handler({
-			"sub_type": "CGMSG",
-			"message": `${lang.helpheader}\n` +
-				`${lang.stream}: ${dispatch.settings.stream ? lang.enabled : lang.disabled}\n` +
-				`${lang.gNotice}: ${dispatch.settings.gNotice ? lang.enabled : lang.disabled}\n` +
-				`${lang.speaks}: ${dispatch.settings.speaks ? lang.enabled : lang.disabled}`
-		});
-		// Set guide as loaded
-		guide.loaded = true;
-	}
-
 	// Makes sure the event passes the class position check
-	function class_position_check(class_position) {
+	function classPositionCheck(class_position) {
 		// if it's not defined we assume that it's for everyone
 		if (!class_position) return true;
 		// If it's an array
 		if (Array.isArray(class_position)) {
 			// If one of the class_positions pass, we can accept it
 			for (let ent of class_position) {
-				if (class_position_check(ent)) return true;
+				if (classPositionCheck(ent)) return true;
 			}
 			// All class_positions failed, so we return false
 			return false;
@@ -1233,52 +1279,39 @@ module.exports = function TeraGuide(dispatch) {
 				if (player.job === 1) return true; // For Lancer specific actions (eg Blue Shield)
 				break;
 			default:
-				debug_message(true, "Failed to find class_position value:", class_position);
+				mod.warn(`Failed to find class position: ${position}`);
 		}
 		return false;
 	}
 
 	// This is where all the magic happens
-	function start_events(events = [], ent, speed = 1.0) {
+	function startEvents(events = [], ent, speed = 1.0) {
 		// Loop over the events
 		for (let event of events) {
-			const func = function_event_handlers[event["type"]];
+			const func = eventHandlers[event["type"]];
 			// The function couldn"t be found, so it"s an invalid type
-			if (!func) debug_message(true, "An event has invalid type:", event["type"]);
+			if (!func)
+				mod.error(`An event has invalid type: ${event["type"]}`);
 			// If the function is found and it passes the class position check, we start the event
-			else if (class_position_check(event["class_position"])) {
-				let delay = false;
-				// Check if a delay is required
-				if (event["delay"]) {
-					delay = parseInt(event["delay"]);
-					if (isNaN(delay)) delay = false;
-				}
-				if (delay)
-					dispatch.setTimeout(func, delay / speed, event, ent);
-				else
-					func(event, ent);
-			}
+			else if (classPositionCheck(event["class_position"]))
+				func(event, ent);
 		}
 	}
 
 	// Handle events such as boss skill and abnormalities triggered
-	function handle_event(ent, id, called_from_identifier, prefix_identifier, d, speed = 1.0, stage = false) {
+	function handleEvent(ent, id, called_from_identifier, prefix_identifier, debug_enabled, speed = 1.0, stage = false) {
 		const unique_id = `${prefix_identifier}-${ent["huntingZoneId"]}-${ent["templateId"]}`;
 		const key = `${unique_id}-${id}`;
 		const stage_string = (stage === false ? '' : `-${stage}`);
-		debug_message(d, `${called_from_identifier}: ${id} | Started by: ${unique_id} | key: ${key + stage_string}`);
-		if (stage !== false) {
-			const entry = guide.object[key + stage_string];
-			if (entry) start_events(entry, ent, speed);
-		}
-		const entry = guide.object[key];
-		if (entry) start_events(entry, ent, speed);
+		const entry = (stage !== false) ? guide.object[key + stage_string] : guide.object[key];
+		sendDebug(debug_enabled, `${called_from_identifier}: ${id} | Started by: ${unique_id} | key: ${key + stage_string}`);
+		if (entry) startEvents(entry, ent, speed);
 	}
 
 	// When the mod gets unloaded, clear all the timers & remove the chat command
 	this.destructor = async () => {
-		dispatch.clearAllTimeouts();
-		dispatch.clearAllIntervals();
+		mod.clearAllTimeouts();
+		mod.clearAllIntervals();
 		command.remove("guide");
 		guide = {};
 	};
