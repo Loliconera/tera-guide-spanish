@@ -57,17 +57,17 @@
             "3126": {
                 "verbose": true,
                 "spawnObject": true,
-                "name": "Corrupted Skynest (Difícil) Entrance"
+                "name": "Corrupted Skynest (Hard) Entrance"
             },
             "3201": {
                 "verbose": true,
                 "spawnObject": true,
-                "name": "Gossamer Vault (Difícil)"
+                "name": "Gossamer Vault (Hard)"
             },
             "3202": {
                 "verbose": true,
                 "spawnObject": true,
-                "name": "Draakon Arena (Difícil)"
+                "name": "Draakon Arena (Hard)"
             },
             "3203": {
                 "verbose": true,
@@ -114,7 +114,7 @@
             "9920": {
                 "verbose": true,
                 "spawnObject": true,
-                "name": "Antaroth's Abyss (Difícil)"
+                "name": "Antaroth's Abyss (Hard)"
             },
             "9970": {
                 "verbose": true,
@@ -127,7 +127,7 @@
             "9982": {
                 "verbose": true,
                 "spawnObject": true,
-                "name": "Grotto of Lost Souls (Difícil)"
+                "name": "Grotto of Lost Souls (Hard)"
             }
         }
     }
