@@ -137,7 +137,7 @@ module.exports = function TeraGuide(mod) {
 			enteresdg: "Enter ES Dungeon",
 			fordungeon: "for dungeon",
 		},
-		// Español		
+		// Español
 		es: {
 			unknowncommand: "Comando desconocido, escriba \"guide help\"",
 			helpheader: "Escriba \"guide help\" para obtener más información",
@@ -194,7 +194,7 @@ module.exports = function TeraGuide(mod) {
 			enterspdg: "¡Bienvenido! a la Mazmorra SP",
 			enteresdg: "¡Bienvenido! a la Mazmorra ES",
 			fordungeon: "para Mazmorra",
-		},		
+		},
 	};
 
 	// A boolean for the debugging settings
