@@ -14,7 +14,7 @@ try {
 	voice = null;
 }
 
-module.exports = function TeraGuide(mod) {
+function TeraGuide(mod) {
 	const dispatch = new DispatchWrapper(mod);
 	const command = mod.command;
 	const { player, entity, library, effect } = mod.require.library;
@@ -281,11 +281,10 @@ module.exports = function TeraGuide(mod) {
 	let guide = {
 		id: undefined,
 		name: undefined,
-		loaded: false,
-		object: null,
-		event: null,
 		es: false,
 		sp: false,
+		loaded: false,
+		object: null,
 		mobshp: {}
 	};
 	// Add default settings to guide object
@@ -489,7 +488,7 @@ module.exports = function TeraGuide(mod) {
 		const commands = event.command.split(";");
 		for (const cmd of commands) {
 			try {
-				mod.command.exec(cmd);
+				command.exec(cmd);
 			} catch (e) {
 				continue;
 			}
@@ -1025,13 +1024,7 @@ module.exports = function TeraGuide(mod) {
 		// Callback function
 		const callback = (event) => {
 			try {
-				// Try to call the function
-				try {
-					event["func"](...event["args"], eventHandlers, event, ent, dispatch);
-				// Old style call
-				} catch (e) {
-					event["func"].call(null, eventHandlers, event, ent, dispatch);
-				}
+				return event["func"].call(null, eventHandlers, event, ent, dispatch);
 			} catch (e) {
 				mod.error(e);
 			}
@@ -1125,15 +1118,10 @@ module.exports = function TeraGuide(mod) {
 		} catch (e) {}
 		// Load guide script
 		try {
-			// Old style guides loading
 			guide.object = require(`${GUIDES_DIR}/${guide.id}`);
 			guide.object.load(dispatch);
 		} catch (e) {
-			try {
-				guide.object = require(`${GUIDES_DIR}/${guide.id}`)(dispatch, guide);
-			} catch (e) {
-				return mod.error(e);
-			}
+			return mod.error(e);
 		}
 		// Send welcome message
 		if (guide.sp) {
@@ -1320,4 +1308,4 @@ module.exports = function TeraGuide(mod) {
 	};
 }
 
-Object.assign(module.exports, { lib });
+module.exports = { NetworkMod: TeraGuide, lib };

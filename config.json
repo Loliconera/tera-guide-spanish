@@ -1,0 +1,110 @@
+{
+    "version": 1.12,
+    "data": {
+        "enabled": true,
+        "lNotice": false,
+        "gNotice": false,
+        "stream": false,
+        "spawnObject": true,
+        "speaks": false,
+        "rate": [
+            2
+        ],
+        "cc": [
+            "</font><font color=\"#ffff00\">"
+        ],
+        "language": "es",
+        "dungeons": {
+            "3020": {
+                "name": "Sea of Honor",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "3023": {
+                "name": "Akalath Quarantine",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "3026": {
+                "name": "Corrupted Skynest",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "3027": {
+                "name": "Forbidden Arena [Hagufna]",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "3034": {
+                "name": "Rampaging RK-9 Kennel",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "3102": {
+                "name": "Draakon Arena",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "3103": {
+                "name": "Forbidden Arena [Undying Warlord]",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "3126": {
+                "name": "Corrupted Skynest (Hard) Entrance",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "3201": {
+                "name": "Gossamer Vault (Hard)",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "3202": {
+                "name": "Draakon Arena (Hard)",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "3203": {
+                "name": "Forbidden Arena [Nightmare Undying Warlord]",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "9044": {
+                "name": "Bahaar's Sanctum",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "9053": {
+                "name": "Kezzel's Gorge (5-Person)",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "9735": {
+                "name": "RK-9 Kennel",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "9739": {
+                "name": "Red Refuge",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "9781": {
+                "name": "Velik's Sanctuary",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "9920": {
+                "name": "Antaroth's Abyss (Hard)",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "9982": {
+                "name": "Grotto of Lost Souls (Hard)",
+                "verbose": true,
+                "spawnObject": true
+            }
+        }
+    }
+}
