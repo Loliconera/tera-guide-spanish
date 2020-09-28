@@ -17,7 +17,7 @@ Toolbox(/8) | Descripción del comando
 **guide&nbsp;gui** | Mostrar módulo GUI
 **guide&nbsp;voice**<br>(defecto: encendido) | Mensajes de texto a voz (TTS), la velocidad de la voz se establece mediante un comando **guide `1`~`10`**
 **guide&nbsp;lNotice**<br>(defecto: apagado) | Envíe mensajes al canal de chat "Take Notice" en lugar de mensajes en pantalla
-**guide&nbsp;gNotice**<br>(defecto: apagado) | Enviar mensajes al canal de chat "Party Chat" (será visible para todos los miembros de la party)
+**guide&nbsp;gNotice**<br>(defecto: apagado) | Enviar mensajes al canal "Party Chat" (será visible para todos los miembros de la party)
 **guide&nbsp;`1`~`10`**<br>(defecto: 2) | Establecer la velocidad de voz TTS
 **guide&nbsp;spawnObject**<br>(defecto: encendido) | Generarador de objetos marcadores
 **guide&nbsp;stream**<br>(defecto: apagado) | Modo Streamer (oculta todos los mensajes y objetos, se reproducirá la voz TTS)
