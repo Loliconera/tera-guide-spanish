@@ -1,5 +1,5 @@
 # Tera-Guía
-Un módulo de guía para TERA traducido al español. Muestra notificaciones en la pantalla y dibuja zonas de ataques y mecánicas de jefes (también admite notificaciones de texto a voz).
+Un módulo de guía para TERA traducido al español. Muestra mensajes en la pantalla y dibuja zonas de ataques y mecánicas de jefes (también admite mensajes de texto a voz).
 
 &#x1F534; **Se han publicado actualizaciones críticas. ¡Por favor actualice!**
 
@@ -15,14 +15,14 @@ Toolbox(/8) | Descripción del comando
 --- | ---
 **guide** | Módulo on/off
 **guide&nbsp;gui** | Mostrar módulo GUI
-**guide&nbsp;voice**<br>(defecto: encendido) | Avisos de texto a voz (TTS), la velocidad del habla se establece mediante un comando **guide `1`~`10`**
-**guide&nbsp;lNotice**<br>(defecto: apagado) | Envíe avisos al canal de chat "Notice" en lugar de mensajes en pantalla
-**guide&nbsp;gNotice**<br>(defecto: apagado) | Enviar avisos al canal de chat del grupo (será visible para todos los miembros del grupo)
+**guide&nbsp;voice**<br>(defecto: encendido) | Mensajes de texto a voz (TTS), la velocidad de la voz se establece mediante un comando **guide `1`~`10`**
+**guide&nbsp;lNotice**<br>(defecto: apagado) | Envíe mensajes al canal de chat "Take Notice" en lugar de mensajes en pantalla
+**guide&nbsp;gNotice**<br>(defecto: apagado) | Enviar mensajes al canal de chat "Party Chat" (será visible para todos los miembros de la party)
 **guide&nbsp;`1`~`10`**<br>(defecto: 2) | Establecer la velocidad de voz TTS
 **guide&nbsp;spawnObject**<br>(defecto: encendido) | Generarador de objetos marcadores
-**guide&nbsp;stream**<br>(defecto: apagado) | Modo Streamer (ocultar todos los avisos y objetos, se reproducirá voz TTS)
+**guide&nbsp;stream**<br>(defecto: apagado) | Modo Streamer (oculta todos los mensajes y objetos, se reproducirá la voz TTS)
 **guide&nbsp;dungeons** | Lista de todas las mazmorras compatibles y sus identificadores
-**guide&nbsp;verbose&nbsp;`id`**<br>(defecto: encendido para todos) | Enviar avisos para la mazmorra especificada por `id`
+**guide&nbsp;verbose&nbsp;`id`**<br>(defecto: encendido para todos) | Enviar mensajes para la mazmorra especificada por `id`
 **guide&nbsp;spawnObject&nbsp;`id`**<br>(defecto: encendido para todos) | Generarador de objetos marcadores para la mazmorra especificada por `id`
 **guide&nbsp;help** | Lista de comandos compatibles
 
@@ -48,25 +48,25 @@ id | Nombre de la mazmorra | Idioma
 3103 | Forbidden Arena [Undying Warlord] | Español
 3203 | Forbidden Arena [Nightmare Undying Warlord] | Español
 
-## Configuración de Avisos
+## Configuración de Mensajes
 
-* En la pantalla (en la parte inferior) y avisos de chat, si el parámetro **lNotice** está *activado*. Avisos seran visibles solo para usted.   
+* En la pantalla (en la parte inferior) y mensajes de chat, si el parámetro **lNotice** está *activado*, todos los mensajes se enviaran al canal **Take Notice** (los mensajes seran visibles solo para usted).   
   ![](https://i.imgur.com/PGRm9Hx.png)   
 
-* Cuando el parámetro **gNotice** está *activado*, también se enviarán avisos a todos los miembros del grupo.   
+* Cuando el parámetro **gNotice** está *activado*, todos los mensajes se enviarán al canal **Party Chat** (todos los mensajes serán visibles para todos los miembros de la party).   
 
-* El mensaje en la parte superior de la pantalla, si el parámetro **lNotice** está *desactivado* (por defecto). Avisos seran visibles solo para usted.   
+* En la pantalla (en la parte superior), si el parámetro **lNotice** está *desactivado*, todos los mensajes se mostraran en la parte superior de la pantalla (los mensajes seran visibles solo para usted).   
   ![](https://i.imgur.com/eVmuWjG.png)   
-  Puede configurar el color para este tipo de avisos usando los comandos o tambien puede usar la interfaz GUI (también cambia de color en el chat de Toolbox).   
+  Puede cambiar el color de los mensajes usando los comandos, tendra que escribir el parametro **guide help** para mostrar una lista completa de todos los colores soportados o tambien puede usar la interfaz GUI.   
   ![](https://i.imgur.com/ABCRTsV.png)   
 
-* Cuando el Modo Streamer está *activado* (parámetro **stream**), todos los avisos de texto SÓLO se envían al canal de chat de Toolbox(/8), pero se reproducirán los avisos de texto a voz TTS.
+* Cuando el Modo Streamer está *activado* (parámetro **stream**), todos los mensajes de texto se envían solamente al canal **chat Toolbox**, pero se reproducirán los mensajes de texto a voz TTS.
 
-* Para desactivar o activar los avisos de texto a voz TTS, use el comando **guide voice**.
+* Para desactivar o activar los mensajes de texto a voz TTS, use el comando **guide voice**.
 
 ## Módulo GUI
 
-* En el canal de chat de Toolbox(/8) escriba el siguiente parámetro **guide gui** para mostrar una interfaz gráfica de usuario del modulo, puede tambien cambiar las configuraciones básicas.   
+* En el canal de chat de Toolbox(/8) escriba el siguiente comando **guide gui** para mostrar una interfaz gráfica de usuario del modulo, puede tambien cambiar las configuraciones básicas.   
   ![](https://i.imgur.com/kfysB9t.png)   
 
 ## Desarrollo y Depuración
