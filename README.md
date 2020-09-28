@@ -58,7 +58,7 @@ id | Nombre de la mazmorra | Idioma
 * En la pantalla (en la parte superior), si el parámetro **lNotice** está *desactivado*, todos los mensajes se mostraran en la parte superior de la pantalla (los mensajes seran visibles solo para usted).   
   ![](https://i.imgur.com/eVmuWjG.png)   
   Puede cambiar el color de los mensajes usando los comandos, tendra que escribir el parametro **guide help** para mostrar una lista completa de todos los colores soportados o tambien puede usar la interfaz GUI.   
-  ![](https://i.imgur.com/ABCRTsV.png)   
+  ![](https://i.imgur.com/uXc3vdH.png)   
 
 * Cuando el Modo Streamer está *activado* (parámetro **stream**), todos los mensajes de texto se envían solamente al canal **chat Toolbox**, pero se reproducirán los mensajes de texto a voz TTS.
 
