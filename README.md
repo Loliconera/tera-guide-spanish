@@ -6,8 +6,11 @@ Un módulo de guía para TERA traducido al español. Muestra mensajes en la pant
 Versión original del módulo HSDN (English and Russian translation): https://github.com/hsdn/tera-guide
 
 ## Dependencies
-* **Library** - https://github.com/tera-toolbox-mods/library   
-  Extraiga a su directorio **mods**. No lo instale como ~~library-master~~, asegúrese de que se llame **library**.   
+* El modulo TERA-Guía requiere de 1 modulo adicional llamado **library**, este modulo se descarga automaticamente al momento de instalar el modulo TERA-Guía mediante el Toolbox.
+
+  De no ser asi usted tendra que descargarlo manualmente mediante este enlance:
+  **Library** - https://github.com/tera-toolbox-mods/library   
+  Tendra que extraerlo a su directorio **mods**. No lo instale como ~~library-master~~, asegúrese de que se llame **library**.   
 
 
 ## Comandos
@@ -60,14 +63,14 @@ id | Nombre de la mazmorra | Idioma
   Puede cambiar el color de los mensajes usando los comandos, para cambiarlo tendra que escribir el parámetro **guide help** para mostrar una lista completa de todos los colores soportados o tambien puede usar la interfaz GUI.   
   ![](https://i.imgur.com/uXc3vdH.png)   
 
-* Cuando el Modo Streamer está *activado* (parámetro **stream**), todos los mensajes de texto se envían solamente al canal de chat **Toolbox(/8)**, pero se reproducirán los mensajes de texto a voz TTS.
+* Cuando el Modo Streamer está *activado* (parámetro **stream**), todos los mensajes de texto se enviarán solamente al canal de chat **Toolbox(/8)**, pero se reproducirán los mensajes de texto a voz TTS.
   ![](https://i.imgur.com/ng4DyI9.png)   
 
 * Para desactivar o activar los mensajes de texto a voz TTS, use el comando **guide voice**.
 
 ## Módulo GUI
 
-* En el canal de chat de Toolbox(/8) escriba el siguiente comando **guide gui** para mostrar una interfaz gráfica de usuario del modulo, puede tambien cambiar las configuraciones básicas.   
+* En el canal de chat de **Toolbox(/8)** escriba el siguiente comando **guide gui** para mostrar una interfaz gráfica de usuario del modulo, puede tambien cambiar las configuraciones básicas.   
   ![](https://i.imgur.com/kABGJic.png)   
 
 ## Desarrollo y Depuración
