@@ -1,14 +1,14 @@
 # Tera-Guía
-Un módulo de guía para TERA traducido al español. Muestra mensajes en la pantalla y dibuja zonas de ataques y mecánicas de jefes (también admite mensajes de texto a voz).
+Un módulo de guía para TERA traducido al español. Muestra mensajes en la pantalla y dibuja zonas de ataques y mecánicas de jefes (también admite mensajes de texto a voz).   
 
 &#x1F534; **Se han publicado actualizaciones críticas. ¡Por favor actualice!**
 
-Versión original del módulo HSDN (English and Russian translation): https://github.com/hsdn/tera-guide
+Versión original del módulo HSDN (English and Russian translation): https://github.com/hsdn/tera-guide   
 
 ## Dependencies
-* El modulo TERA-Guía requiere de 1 modulo adicional llamado **library**, este modulo se descarga automaticamente al momento de instalar el modulo TERA-Guía mediante el Toolbox.
-
-* De no ser asi usted tendra que descargarlo manualmente mediante este enlance:
+* El modulo TERA-Guía requiere de 1 modulo adicional llamado **library**, este modulo se descarga automaticamente al momento de instalar el modulo TERA-Guía mediante el Toolbox.   
+  
+  De no ser asi usted tendra que descargarlo manualmente mediante este enlance   
   **Library** - https://github.com/tera-toolbox-mods/library   
   Tendra que extraerlo a su directorio **mods**. No lo instale como ~~library-master~~, asegúrese de que se llame **library**.   
 
