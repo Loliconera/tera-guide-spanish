@@ -8,7 +8,7 @@ Versión original del módulo HSDN (English and Russian translation): https://gi
 ## Dependencies
 * El modulo TERA-Guía requiere de 1 modulo adicional llamado **library**, este modulo se descarga automaticamente al momento de instalar el modulo TERA-Guía mediante el Toolbox.
 
-  De no ser asi usted tendra que descargarlo manualmente mediante este enlance:
+* De no ser asi usted tendra que descargarlo manualmente mediante este enlance:
   **Library** - https://github.com/tera-toolbox-mods/library   
   Tendra que extraerlo a su directorio **mods**. No lo instale como ~~library-master~~, asegúrese de que se llame **library**.   
 
