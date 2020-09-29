@@ -9,7 +9,7 @@
         "settingsVersion": 1.13
     },
     "author": "HSDN (bifurcada por Loliconera)",
-    "description": "The dungeon guide module with TTS notifications. Display hints on screen and drawing zones of bosses attacks and mechanics.",
+    "description": "Un módulo de guía para mazmorras con notificaciones TTS. Muestra mensajes en la pantalla y dibuja zonas de ataques y mecánicas de jefes..",
     "servers": ["https://raw.githubusercontent.com/Loliconera/tera-guide-spanish/master/"],
     "supportUrl": "https://github.com/Loliconera/tera-guide-spanish/issues",
     "dependencies": {
