@@ -16,15 +16,15 @@ Toolbox(/8) | Descripción del comando
 --- | ---
 **guide** | Módulo on/off
 **guide&nbsp;gui** | Mostrar módulo GUI
-**guide&nbsp;voice**<br>(defecto: encendido) | Mensajes de texto a voz (TTS), la velocidad de la voz se establece mediante un comando **guide `1`~`10`**
-**guide&nbsp;lNotice**<br>(defecto: apagado) | Envíe mensajes al canal de chat "Take Notice" en lugar de mensajes en pantalla
-**guide&nbsp;gNotice**<br>(defecto: apagado) | Enviar mensajes al canal "Party Chat" (será visible para todos los miembros de la party)
-**guide&nbsp;`1`~`10`**<br>(defecto: 2) | Establecer la velocidad de voz TTS
-**guide&nbsp;spawnObject**<br>(defecto: encendido) | Generarador de objetos marcadores
-**guide&nbsp;stream**<br>(defecto: apagado) | Modo Streamer (oculta todos los mensajes y objetos, se reproducirá la voz TTS)
+**guide&nbsp;voice**<br>(defecto: activado) | Mensajes de texto a voz (TTS), la velocidad de la voz se establece mediante un comando **guide `1`~`10`**
+**guide&nbsp;lNotice**<br>(defecto: desactivado) | Envíe mensajes al canal de chat **Take Notice** en lugar de mensajes en pantalla
+**guide&nbsp;gNotice**<br>(defecto: desactivado) | Envíe mensajes al canal **Party Chat** (será visible para todos los miembros de la party)
+**guide&nbsp;`1`~`10`**<br>(defecto: 2) | Ajusta la velocidad  de voz TTS
+**guide&nbsp;spawnObject**<br>(defecto: activado) | Generación de objetos
+**guide&nbsp;stream**<br>(defecto: desactivado) | Modo Streamer (oculta todos los mensajes y objetos, se reproducirá la voz TTS)
 **guide&nbsp;dungeons** | Lista de todas las mazmorras compatibles y sus identificadores
-**guide&nbsp;verbose&nbsp;`id`**<br>(defecto: encendido para todos) | Enviar mensajes para la mazmorra especificada por `id`
-**guide&nbsp;spawnObject&nbsp;`id`**<br>(defecto: encendido para todos) | Generarador de objetos marcadores para la mazmorra especificada por `id`
+**guide&nbsp;verbose&nbsp;`id`**<br>(defecto: activado para todos) | Enviar mensajes para la mazmorra especificada por `id`
+**guide&nbsp;spawnObject&nbsp;`id`**<br>(defecto: activado para todos) | Generación de objetos para la mazmorra especificada por `id`
 **guide&nbsp;help** | Lista de comandos compatibles
 
 ## Mazmorras Compatibles
@@ -69,7 +69,7 @@ id | Nombre de la mazmorra | Idioma
 ## Módulo GUI
 
 * En el canal de chat de **Toolbox(/8)** escriba el siguiente comando **guide gui** para mostrar una interfaz gráfica de usuario del modulo, puede tambien cambiar las configuraciones básicas.   
-  ![](https://i.imgur.com/kABGJic.png)   
+  ![](https://i.imgur.com/qUt3GMS.jpg)   
 
 ## Desarrollo y Depuración
 Lee mas en https://github.com/hsdn/tera-guide/wiki
