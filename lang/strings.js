@@ -170,8 +170,6 @@ module.exports.general = {
 		dgnotfound: "Mazmorra no encontrada.",
 		dgnotspecified: "ID de Mazmorra no especificada.",
 		enterdg: "¡Bienvenido! a la Mazmorra",
-		enterspdg: "¡Bienvenido! a la Mazmorra SP",
-		enteresdg: "¡Bienvenido! a la Mazmorra ES",
 		fordungeon: "para Mazmorra",
 	},	
 
