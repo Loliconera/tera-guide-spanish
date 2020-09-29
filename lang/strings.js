@@ -153,7 +153,7 @@ module.exports.general = {
 		spawnObject: "Generación de objetos",
 		speaks: "Mensajes por voz",
 		lNotice: "Mensajes por chat",
-		gNotice: "Enviar mensajes a los miembros de la party",
+		gNotice: "Enviar mensajes a los miembros del grupo",
 		stream: "Modo Streamer",
 		rate: "Velocidad de voz",
 		color: "Cambiar el color",
