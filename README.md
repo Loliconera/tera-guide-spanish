@@ -3,8 +3,8 @@ Un módulo de guía para TERA traducido al español. Muestra mensajes en la pant
 
 &#x1F534; **Se han publicado actualizaciones críticas. ¡Por favor actualice!**
 
-* Versión en inglés del módulo (English translation): https://github.com/hsdn/tera-guide
-* Versão em português do módulo (Portuguese translation): https://github.com/emilia-s2/Guia-DG-Portugues
+* English version of the module (Traducción en inglés): https://github.com/hsdn/tera-guide
+* Versão em português do módulo (Traducción al portugués): https://github.com/emilia-s2/Guia-DG-Portugues
 
 ## Dependencies
 * El modulo TERA-Guía requiere de 1 modulo adicional llamado **library**, este modulo se descarga automaticamente al momento de instalar el modulo TERA-Guía mediante el Toolbox.   
@@ -79,7 +79,7 @@ Lee mas en https://github.com/hsdn/tera-guide/wiki
 
 ## Créditos
 - **[Kasea](https://github.com/tera-toolbox-mods)** - Desarrollador original del módulo Tera-Guide
-- **[HSDN ](https://github.com/HSDN)** - Autor original del módulo tera-guide HSDN
+- **[HSDN ](https://github.com/HSDN)** - Autor original del módulo en inglés tera-guide HSDN
 - **[michengs](https://github.com/michengs)** - Autor del código base para la mayoría de las guías y el núcleo del módulo
 - **[ZC](https://github.com/tera-mod)** - Coordenadas proporcionadas para representar las áreas de ataque y la mecánica
 - **[Kuroine](https://github.com/Kuroine)** - Autor del código base de la guía DA
