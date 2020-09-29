@@ -6,13 +6,10 @@ Un módulo de guía para TERA traducido al español. Muestra mensajes en la pant
 * English version of the module (Traducción en inglés): https://github.com/hsdn/tera-guide
 * Versão em português do módulo (Traducción al portugués): https://github.com/emilia-s2/Guia-DG-Portugues
 
-## Dependencies
-* El modulo TERA-Guía requiere de 1 modulo adicional llamado **library**, este modulo se descarga automaticamente al momento de instalar el modulo TERA-Guía mediante el Toolbox.   
-  
-  De no ser asi usted tendra que descargarlo manualmente mediante este enlance:   
-  **Library** - https://github.com/tera-toolbox-mods/library   
-  Tendra que extraerlo a su directorio **mods**. No lo instale como ~~library-master~~, asegúrese de que se llame **library**.   
+## Dependencias
+* **tera-guide-core** - https://github.com/hsdn/tera-guide-core
 
+Al usar TeraToolbox, todas las dependencias se instalarán automáticamente.   
 
 ## Comandos
 Toolbox(/8) | Descripción del comando
