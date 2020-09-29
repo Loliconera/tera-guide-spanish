@@ -3,7 +3,7 @@ Un módulo de guía para TERA traducido al español. Muestra mensajes en la pant
 
 &#x1F534; **Se han publicado actualizaciones críticas. ¡Por favor actualice!**
 
-* Versión original en ingles (English translation): https://github.com/hsdn/tera-guide
+* Versión en inglés del módulo (English translation): https://github.com/hsdn/tera-guide
 * Versão em português do módulo (Portuguese translation): https://github.com/emilia-s2/Guia-DG-Portugues
 
 ## Dependencies
@@ -86,4 +86,4 @@ Lee mas en https://github.com/hsdn/tera-guide/wiki
 - **[Multarix](https://github.com/Multarix)** - Autor de la guía RR y también realizando cambios en la traducción al inglés
 - **[Owyn](https://github.com/Owyn)** - Desarrollador de grandes guías para RK-9, AA y GV, cuyo código se utilizó
 - **[ITunk](https://github.com/GrafNikola)** - Autor de la traducción inicial al ruso
-- **[Emilia](https://github.com/emilia-s2)** - Author of Portuguese translation
+- **[Emilia](https://github.com/emilia-s2)** - Autor de la traducción al portugués
