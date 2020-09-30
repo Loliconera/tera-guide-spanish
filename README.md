@@ -18,7 +18,7 @@ Toolbox(/8) | Descripción del comando
 **guide&nbsp;gui** | Mostrar módulo GUI
 **guide&nbsp;voice**<br>(defecto: activado) | Mensajes de texto a voz (TTS), la velocidad de la voz se establece mediante un comando **guide `1`~`10`**
 **guide&nbsp;lNotice**<br>(defecto: desactivado) | Envíe mensajes al canal de chat **Take Notice** en lugar de mensajes en pantalla
-**guide&nbsp;gNotice**<br>(defecto: desactivado) | Envíe mensajes al canal **Party Chat** (será visible para todos los miembros de la party)
+**guide&nbsp;gNotice**<br>(defecto: desactivado) | Envíe mensajes al canal de chat del grupo **Party Chat**
 **guide&nbsp;`1`~`10`**<br>(defecto: 2) | Ajusta la velocidad  de voz TTS
 **guide&nbsp;spawnObject**<br>(defecto: activado) | Generación de objetos
 **guide&nbsp;stream**<br>(defecto: desactivado) | Modo Streamer (oculta todos los mensajes y objetos, se reproducirá la voz TTS)
@@ -51,12 +51,12 @@ id | Nombre de la mazmorra | Idioma
 
 ## Configuración de Mensajes
 
-* En la pantalla (en la parte inferior) y mensajes de chat, si el parámetro **lNotice** está *activado*, todos los mensajes se enviaran al canal **Take Notice** (los mensajes seran visibles solo para usted).   
+* En la pantalla (en la parte inferior) y mensajes de chat, si el parámetro **lNotice** está *activado*, todos los mensajes se enviaran al canal **Take Notice**.   
   ![](https://i.imgur.com/PGRm9Hx.png)   
 
-* Cuando el parámetro **gNotice** está *activado*, todos los mensajes se enviarán al canal **Party Chat** (todos los mensajes serán visibles para todos los miembros de la party).   
+* Cuando el parámetro **gNotice** está *activado*, todos los mensajes se enviarán al canal de chat del grupo **Party Chat**.   
 
-* En la pantalla (en la parte superior), si el parámetro **lNotice** está *desactivado*, todos los mensajes se mostraran en la parte superior de la pantalla (los mensajes seran visibles solo para usted).   
+* En la pantalla (en la parte superior), si el parámetro **lNotice** está *desactivado*, todos los mensajes se mostraran en la parte superior de la pantalla.   
   ![](https://i.imgur.com/eVmuWjG.png)   
   Puede cambiar el color de los mensajes usando los comandos, para cambiarlo tendra que escribir el parámetro **guide help** para mostrar una lista completa de todos los colores soportados o tambien puede usar la interfaz GUI.   
   ![](https://i.imgur.com/uXc3vdH.png)   
