@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function NetworkMod(mod) {
+module.exports.NetworkMod = function (mod) {
 	try {
 		mod.require["tera-guide-core"].load(mod);
 	} catch (e) {
