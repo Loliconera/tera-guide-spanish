@@ -62,14 +62,17 @@ id | Nombre de la mazmorra | Idioma
   ![](https://i.imgur.com/uXc3vdH.png)   
 
 * Cuando el Modo Streamer está *activado* (parámetro **stream**), todos los mensajes de texto se enviarán solamente al canal de chat **Toolbox(/8)**, pero se reproducirán los mensajes de texto a voz TTS.
-  ![](https://i.imgur.com/ng4DyI9.png)   
+  ![](https://i.imgur.com/NLIt4yq.png)   
+
+* Cuando ingresa a una mazmorra el modulo Tera-Guía le notificará con un mensaje de bienvenida, tambien le notificará que modulos estan activados o desactivados  .
+  ![](https://i.imgur.com/D1mz39y.png)   
 
 * Para desactivar o activar los mensajes de texto a voz TTS, use el comando **guide voice**.
 
 ## Módulo GUI
 
 * En el canal de chat de **Toolbox(/8)** escriba el siguiente comando **guide gui** para mostrar una interfaz gráfica de usuario del modulo, puede tambien cambiar las configuraciones básicas.   
-  ![](https://i.imgur.com/qUt3GMS.jpg)   
+  ![](https://i.imgur.com/vZKjJei.png)   
 
 ## Desarrollo y Depuración
 Lee mas en https://github.com/hsdn/tera-guide/wiki
