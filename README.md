@@ -63,14 +63,14 @@ id | Nombre de la mazmorra | Idioma
   ![](https://i.imgur.com/NLIt4yq.png)   
 
 * Cuando ingresa a una mazmorra el modulo le notificará con un mensaje de bienvenida, tambien le notificará que modulos estan activados o desactivados.   
-  ![](https://i.imgur.com/xE5Z7Zj.png)   
+  ![](https://i.imgur.com/POAPIzo.png)   
 
 * Para desactivar o activar los mensajes de texto a voz TTS, use el comando **guide voice**.
 
 ## Módulo GUI
 
 * En el canal de chat **Toolbox(/8)** escriba el siguiente comando **guide gui** para mostrar una interfaz gráfica de usuario del modulo, puede tambien cambiar las configuraciones básicas.   
-  ![](https://i.imgur.com/cGwjtU0.png)   
+  ![](https://i.imgur.com/tUwIy8l.png)   
 
 ## Desarrollo y Depuración
 Lee mas en https://github.com/hsdn/tera-guide/wiki
