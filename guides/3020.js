@@ -4,7 +4,6 @@
 
 module.exports = (dispatch, handlers, guide, lang) => {
 	const { player } = dispatch.require.library;
-	const { Spawn } = module.parent.exports.lib;
 
 	let green = false;
 	let purple = false;
