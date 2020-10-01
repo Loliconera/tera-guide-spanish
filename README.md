@@ -15,14 +15,14 @@ Toolbox(/8) | Descripción del comando
 **guide** | Módulo on/off
 **guide&nbsp;gui** | Mostrar módulo GUI
 **guide&nbsp;voice**<br>(defecto: activado) | Mensajes de texto a voz (TTS), la velocidad de la voz se establece mediante un comando **guide `1`~`10`**
-**guide&nbsp;lNotice**<br>(defecto: desactivado) | Envíe mensajes al canal de chat **Take Notice** en lugar de mensajes en pantalla
-**guide&nbsp;gNotice**<br>(defecto: desactivado) | Envíe mensajes al canal de chat del grupo **Party Chat**
+**guide&nbsp;lNotice**<br>(defecto: desactivado) | Enviar mensajes al canal de chat **Take Notice** en lugar de mensajes en pantalla
+**guide&nbsp;gNotice**<br>(defecto: desactivado) | Envíe mensajes al canal **Party Chat**
 **guide&nbsp;`1`~`10`**<br>(defecto: 2) | Ajusta la velocidad  de voz TTS
-**guide&nbsp;spawnObject**<br>(defecto: activado) | Generación de objetos
-**guide&nbsp;stream**<br>(defecto: desactivado) | Modo Streamer (oculta todos los mensajes y objetos, se reproducirá la voz TTS)
+**guide&nbsp;spawnObject**<br>(defecto: activado) | Generación de objetos marcadores
+**guide&nbsp;stream**<br>(defecto: desactivado) | Modo Streamer (ocultar todos los mensajes y objetos, se reproducirá la voz TTS)
 **guide&nbsp;dungeons** | Lista de todas las mazmorras compatibles y sus identificadores
 **guide&nbsp;verbose&nbsp;`id`**<br>(defecto: activado para todos) | Enviar mensajes para la mazmorra especificada por `id`
-**guide&nbsp;spawnObject&nbsp;`id`**<br>(defecto: activado para todos) | Generación de objetos para la mazmorra especificada por `id`
+**guide&nbsp;spawnObject&nbsp;`id`**<br>(defecto: activado para todos) | Generación de objetos marcadores para la mazmorra especificada por `id`
 **guide&nbsp;help** | Lista de comandos compatibles
 
 ## Mazmorras Compatibles

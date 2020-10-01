@@ -2,8 +2,13 @@
 
 module.exports.NetworkMod = function (mod) {
 	try {
-		mod.require["tera-guide-core"].load(mod);
+		mod.require["tera-guide-core"].load(mod, {
+			colors: { gui: {}, general: {} }, // configuración de color
+			command: ["guide"], // comando del módulo
+			chat_name: "Guía", // establecer el nombre del autor del chat para los avisos
+		});
 	} catch (e) {
-		throw "¡Advertencia!\nMódulo dependiente \"tera-guide-core\" necesario para TERA-Guide no está instalado!\nPor favor descargue e instale: https://github.com/hsdn/tera-guide-core";
+		mod.error("¡Advertencia!\nMódulo dependiente \"tera-guide-core\" necesario para TERA-Guía no está instalado!\nPor favor descargue e instale: https://github.com/hsdn/tera-guide-core\n");
+		throw e;
 	}
 };
