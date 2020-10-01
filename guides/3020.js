@@ -266,7 +266,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [true, 445, 0, 0, 6, 600, 200, 5000] },
 			{ type: "spawn", func: "circle", args: [true, 445, 0, 0, 4, 900, 200, 5000] }
 		],
-		"s-3020-2200-135-0": [{ type: "text", sub_type: "message", message: "Puddles Inc (Jump)", message_ES: "Olas x5 (Saltar)" }],
+		"s-3020-2200-135-0": [{ type: "text", sub_type: "message", message: "Puddles Inc (Jump)", message_ES: "Olas x5 (Salta las olas)" }],
 
 		"s-3020-2200-137-0": [{ type: "text", sub_type: "message", message: "Outward Pluse", message_ES: "iframe" }],
 		"s-3020-2200-139-0": [{ type: "text", sub_type: "message", message: "Inward Succ", message_ES: "iframe" }],
