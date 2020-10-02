@@ -344,6 +344,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 		"206-0": [{ type: "text", sub_type: "message", message: "Jump Back", message_ES: "Saltar hacia atrás" }],
 		"206-2": [{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 15, 350, 0, 3000] }],
+        "164-0": [{ type: "text", sub_type: "message", message: "R.I.P (100%)", message_ES: "R.I.P (100%)" }],
+		"165-0": [{ type: "text", sub_type: "message", message: "R.I.P (0%)", message_ES: "R.I.P (0%)" }],
 		"137-0": [{ type: "text", sub_type: "message", message: "Knockdown", message_ES: "¡¡[Rugido]!!" }],
 		"138-0": [{ type: "text", sub_type: "message", message: "AOE", message_ES: "AOE" }],
 		"139-0": [
