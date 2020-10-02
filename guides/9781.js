@@ -74,12 +74,12 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "stop_timers" },
 			{ type: "despawn_all" }
 		],
-		"s-781-1000-2401": [
+		"s-781-1000-2401-0": [
 			{ type: "text", sub_type: "message", message: "Right", message_ES: "Derecha" },
 			{ type: "spawn", func: "marker", args: [false, 300, 100, 0, 2000, true, null] },
 			{ type: "spawn", func: "marker", args: [false, 230, 100, 0, 2000, true, null] }
 		],
-		"s-781-1000-2402": [
+		"s-781-1000-2402-0": [
 			{ type: "text", sub_type: "message", message: "Left", message_ES: "Izquierda" },
 			{ type: "spawn", func: "marker", args: [false, 60, 100, 0, 2000, true, null] },
 			{ type: "spawn", func: "marker", args: [false, 130, 100, 0, 2000, true, null] }
@@ -92,12 +92,12 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-781-1000-2113-0": [{ type: "text", sub_type: "message", message: "Front + AoEs", message_ES: "Ataque frontal | AOE" }],
 		"s-781-1000-2308-0": [{ type: "text", sub_type: "message", message: "OUT", message_ES: "SALIR" }],
 		"s-781-1000-2309-0": [{ type: "text", sub_type: "message", message: "IN", message_ES: "ENTRAR" }],
-		"s-781-1000-1401": [
+		"s-781-1000-1401-0": [
 			{ type: "text", sub_type: "message", message: "Right", message_ES: "Derecha" },
 			{ type: "spawn", func: "marker", args: [false, 300, 100, 0, 2000, true, null] },
 			{ type: "spawn", func: "marker", args: [false, 230, 100, 0, 2000, true, null] }
 		],
-		"s-781-1000-1402": [
+		"s-781-1000-1402-0": [
 			{ type: "text", sub_type: "message", message: "Left", message_ES: "Izquierda" },
 			{ type: "spawn", func: "marker", args: [false, 60, 100, 0, 2000, true, null] },
 			{ type: "spawn", func: "marker", args: [false, 130, 100, 0, 2000, true, null] }
