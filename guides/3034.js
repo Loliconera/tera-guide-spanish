@@ -1,4 +1,4 @@
-// RK-9 Kennel (Hard)
+// RK-9 Kennel (Rampaging)
 //
 // hecho por michengs / HSDN
 
