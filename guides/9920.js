@@ -1,4 +1,4 @@
-// Antaroth's Abyss (Hard)
+// Antaroth's Abyss (Difícil)
 //
 // hecho por Yuyuko / HSDN
 
