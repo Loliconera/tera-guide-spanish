@@ -1,4 +1,4 @@
-// Gossamer Vault (Difícil) ñ
+// Gossamer Vault (Difícil)
 //
 // hecho por michengs
 
@@ -128,11 +128,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3201-1000-151-0": [{ type: "text", sub_type: "message", message: "Stun Attack", message_ES: "¡Stun!" }],
 		"s-3201-1000-305-0": [{ type: "text", sub_type: "message", message: "Pizza", message_ES: "Pizza" }],
 		"s-3201-1000-311-0": [
-			{ type: "text", sub_type: "message", message_ES: "Мёд!" },
+			{ type: "text", sub_type: "message", message_ES: "Miel!" },
 			{ type: "text", sub_type: "message", delay: 4000, message: "pull", message_ES: "Pull!" }
 		],
 		"s-3201-1000-312-0": [
-			{ type: "text", sub_type: "message", message_ES: "Мёд (Rapido)!" },
+			{ type: "text", sub_type: "message", message_ES: "Miel (Rapido)!" },
 			{ type: "text", sub_type: "message", delay: 2000, message: "pull", message_ES: "Pull!" }
 		],
 		"s-3201-1000-313-0": [
