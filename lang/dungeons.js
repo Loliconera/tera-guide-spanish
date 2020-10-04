@@ -16,16 +16,16 @@ module.exports = {
 			es: "Rampaging RK-9 Kennel"
 		},
 		"9920": {
-			es: "Antaroth's Abyss (Difícil)"
+			es: "Antaroth's Abyss (Dificil)"
 		},
 		 "9982": {
-			es: "Grotto of Lost Souls (Difícil)"
+			es: "Grotto of Lost Souls (Dificil)"
 		},
 		"9044": {
 			es: "Bahaar's Sanctum"
 		},
 		"3201": {
-			es: "Gossamer Vault (Difícil)"
+			es: "Gossamer Vault (Dificil)"
 		},
 		"3023": {
 			es: "Akalath Quarantine"
@@ -37,13 +37,13 @@ module.exports = {
 			es: "Corrupted Skynest"
 		},
 		"3126": {
-			es: "Corrupted Skynest (Difícil)"
+			es: "Corrupted Skynest (Dificil)"
 		},
 		"3102": {
 			es: "Draakon Arena"
 		},
 		"3202": {
-			es: "Draakon Arena (Difícil)"
+			es: "Draakon Arena (Dificil)"
 		},
 		 "3027": {
 			es: "Forbidden Arena [Hagufna]"

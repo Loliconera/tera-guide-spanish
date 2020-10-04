@@ -12,7 +12,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		// Ress bait / range check
 		"s-3102-1000-107-0": [{ type: "text", sub_type: "message", message: "Spectral Throw (Bait)", message_ES: "Lanzamiento Espectral > (al objetivo)" }],
 
-		// Basic attacks
+		// Ataques basicos
 		"s-3102-1000-103-0": [{ type: "text", sub_type: "message", message: "2 Hits | Bleed", message_ES: "2 Golpes | Sangrar" }],
 		"s-3102-1000-113-0": [{ type: "text", sub_type: "message", message: "4 Hits Combo", message_ES: "Combo de 4 golpes" }],
 		"s-3102-1000-105-0": [{ type: "text", sub_type: "message", message: "Uppercut | Stun", message_ES: "Ataque de Corte | Stun" }],

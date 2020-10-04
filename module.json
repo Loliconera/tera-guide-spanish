@@ -1,15 +1,15 @@
 {
     "disableAutoUpdate": false,
-    "name": "TERA-Guía",
+    "name": "TERA-Guia",
     "options": {
-        "niceName": "Guía",
-        "guiName": "TERA-Guía",
+        "niceName": "Guia",
+        "guiName": "TERA-Guia",
         "settingsFile": "config.json",
         "settingsMigrator": "settings_migrator.js",
         "settingsVersion": 1.13
     },
     "author": "HSDN / Loliconera",
-    "description": "Un módulo de guía para mazmorras con notificaciones TTS. Muestra mensajes en la pantalla y dibuja zonas de ataques y mecánicas de jefes.",
+    "description": "Un modulo de guia para mazmorras con notificaciones TTS. Muestra mensajes en la pantalla y dibuja zonas de ataques y mecanicas de jefes.",
     "servers": ["https://raw.githubusercontent.com/Loliconera/tera-guide-spanish/master/"],
     "supportUrl": "https://github.com/Loliconera/tera-guide-spanish/issues",
     "dependencies": {
