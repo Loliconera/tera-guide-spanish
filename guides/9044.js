@@ -20,7 +20,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			handlers.text({
 				sub_type: "message",
 				message: "Laser",
-				message_ES: "Láser"
+				message_ES: "Laser"
 			});
 
 			dispatch.setTimeout(() => notice = true,  4000);
@@ -99,7 +99,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			handlers.text({
 				sub_type: "message",
 				message: "Laser (loading)",
-				message_ES: "Láser (cargando)"
+				message_ES: "Laser (cargando)"
 			});
 		}
 
@@ -111,13 +111,13 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			handlers.text({
 				sub_type: "message",
 				message: "Laser (loading)",
-				message_ES: "Láser (cargando)"
+				message_ES: "Laser (cargando)"
 			});
 			handlers.text({
 				sub_type: "message",
 				delay: 30000,
 				message: "Laser (loading)",
-				message_ES: "Láser (cargando)"
+				message_ES: "Laser (cargando)"
 			});
 		}
 
@@ -136,9 +136,9 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", message: "Front (Dodge)", message_ES: "Martillazo frontal (Iframe)" },
 			{ type: "spawn", func: "circle", args: [false, 445, 356, 400, 8, 350, 100, 3000] }
 		],
-		"s-444-1000-2108-0": [{ type: "text", sub_type: "message", message: "Back Throw | Front", message_ES: "Martillazo atrás (Stun)" }],
+		"s-444-1000-2108-0": [{ type: "text", sub_type: "message", message: "Back Throw | Front", message_ES: "Martillo hacia atras (Stun)" }],
 		"s-444-1000-2111-0": [
-			{ type: "text", sub_type: "message", message: "Back", message_ES: "Martillazo hacia atrás" },
+			{ type: "text", sub_type: "message", message: "Back", message_ES: "Martillazo hacia atras" },
 			{ type: "spawn", func: "circle", args: [false, 445, 180, 500, 8, 480, 100, 2000] }
 		],
 		"s-444-1000-2113-0": [{ type: "text", sub_type: "message", message: "Throw (Bait)", message_ES: "Lanzar Martillo > (al jugador)" }],
@@ -167,7 +167,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		//
 		"s-444-1000-2137-0": [
-			{ type: "text", sub_type: "message", message: "Hammer Back", message_ES: "Martillazo hacia atrás" },
+			{ type: "text", sub_type: "message", message: "Hammer Back", message_ES: "Martillazo hacia atras" },
 			{ type: "spawn", func: "circle", args: [false, 445, 180, 500, 8, 480, 100, 2000] }
 		],
 		"s-444-1000-2138-0": [{ type: "text", sub_type: "message", delay: 234, message: "Knockup (Bait)", message_ES: "Batear (al Jugador)" }],
@@ -188,9 +188,9 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", message: "Front (Dodge)", message_ES: "Martillazo frontal (Iframe)" },
 			{ type: "spawn", func: "circle", args: [false, 445, 356, 400, 8, 350, 100, 3000] }
 		],
-		"s-444-1000-1108-0": [{ type: "text", sub_type: "message", message: "Back Throw | Front", message_ES: "Martillazo atrás (Stun)" }],
+		"s-444-1000-1108-0": [{ type: "text", sub_type: "message", message: "Back Throw | Front", message_ES: "Martillo hacia atras (Stun)" }],
 		"s-444-1000-1111-0": [
-			{ type: "text", sub_type: "message", message: "Back", message_ES: "Martillazo hacia atrás" },
+			{ type: "text", sub_type: "message", message: "Back", message_ES: "Martillazo hacia atras" },
 			{ type: "spawn", func: "circle", args: [false, 445, 180, 500, 8, 480, 100, 2000] }
 		],
 		"s-444-1000-1113-0": [{ type: "text", sub_type: "message", message: "Throw (Bait)", message_ES: "Lanzar Martillo > (al jugador)" }],
@@ -220,7 +220,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [553, 270, 200, 180, 500, 0, 2000] }
 		],
 		"s-444-1000-1137-0": [
-			{ type: "text", sub_type: "message", message: "Hammer Back", message_ES: "Martillazo hacia atrás" },
+			{ type: "text", sub_type: "message", message: "Hammer Back", message_ES: "Martillazo hacia atras" },
 			{ type: "spawn", func: "circle", args: [false, 445, 180, 500, 8, 480, 100, 2000] }
 		],
 		"s-444-1000-1138-0": [{ type: "text", sub_type: "message", delay: 1300, message: "Knockup (Bait)", message_ES: "Batear (al Jugador)" }],
@@ -262,9 +262,9 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 445, 356, 400, 8, 350, 100, 3000] }
 		],
 		"s-444-2000-1107-0": [{ type: "text", sub_type: "message", message: "4 Hit (3)", message_ES: "4 Hit (3)" }],
-		"s-444-2000-1108-0": [{ type: "text", sub_type: "message", message: "Back Throw | Front", message_ES: "Martillazo atrás (Stun)" }],
+		"s-444-2000-1108-0": [{ type: "text", sub_type: "message", message: "Back Throw | Front", message_ES: "Martillo hacia atras (Stun)" }],
 		"s-444-2000-1111-0": [
-			{ type: "text", sub_type: "message", message: "Back", message_ES: "Martillazo hacia atrás" },
+			{ type: "text", sub_type: "message", message: "Back", message_ES: "Martillazo hacia atras" },
 			{ type: "spawn", func: "circle", args: [false, 445, 180, 500, 8, 480, 100, 2000] }
 		],
 		"s-444-2000-1112-0": [
@@ -306,11 +306,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "func", func: skilld_event, args: [1121] }
 		],
 		"s-444-2000-1122-0": [
-			{ type: "text", sub_type: "message", message: "Waves (Left) 3nd fast", message_ES: "Olas (Izquierda) 3er rápido" },
+			{ type: "text", sub_type: "message", message: "Waves (Left) 3nd fast", message_ES: "Olas (Izquierda) 3er rapido" },
 			{ type: "func", func: skilld_event, args: [1122] }
 		],
 		"s-444-2000-1123-0": [
-			{ type: "text", sub_type: "message", message: "Waves (Left) 2nd fast", message_ES: "Olas (Izquierda) 2do rápido" },
+			{ type: "text", sub_type: "message", message: "Waves (Left) 2nd fast", message_ES: "Olas (Izquierda) 2do rapido" },
 			{ type: "func", func: skilld_event, args: [1123] }
 		],
 		//
@@ -342,7 +342,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 445, 356, 220, 12, 210, 100, 4000] }
 		],
 		"s-444-2000-1137-0": [
-			{ type: "text", sub_type: "message", message: "Hammer back", message_ES: "Martillazo hacia atrás" },
+			{ type: "text", sub_type: "message", message: "Hammer back", message_ES: "Martillazo hacia atras" },
 			{ type: "spawn", func: "circle", args: [false, 445, 180, 500, 8, 480, 100, 2000] }
 		],
 		"s-444-2000-1138-0": [{ type: "text", sub_type: "message", delay: 1300, message: "Knockup (Bait)", message_ES: "Batear (al Jugador)" }],
@@ -352,15 +352,15 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "func", func: skilld_event, args: [1140] }
 		],
 		"s-444-2000-1141-0": [
-			{ type: "text", sub_type: "message", message: "Waves (Right) 3nd fast", message_ES: "Olas (Derecha) 3er rápido" },
+			{ type: "text", sub_type: "message", message: "Waves (Right) 3nd fast", message_ES: "Olas (Derecha) 3er rapido" },
 			{ type: "func", func: skilld_event, args: [1141] }
 		],
 		"s-444-2000-1142-0": [
-			{ type: "text", sub_type: "message", message: "Waves (Right) 2nd fast", message_ES: "Olas (Derecha) 2do rápido" },
+			{ type: "text", sub_type: "message", message: "Waves (Right) 2nd fast", message_ES: "Olas (Derecha) 2do rapido" },
 			{ type: "func", func: skilld_event, args: [1142] }
 		],
 		"s-444-2000-1307-0": [{ type: "text", sub_type: "message", message: "!", message_ES: "¡Golpe de Meteoritos!" },
-			{ type: "text", sub_type: "message", delay: 20000, message: "Last aerolite", message_ES: "Último Meteorito" }
+			{ type: "text", sub_type: "message", delay: 20000, message: "Last aerolite", message_ES: "Ultimo Meteorito" }
 		],
 		"ab-444-2000-90442303": [{ type: "text", sub_type: "message", message: "Plague/Regress", message_ES: "Plague/Regress" }],
 		"s-444-2000-1308-0": [{ type: "text", sub_type: "message", message: "Stun (1)", message_ES: "Stun (1)" }],
@@ -388,9 +388,9 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 445, 356, 400, 8, 350, 100, 3000] }
 		],
 		"s-444-2000-2107-0": [{ type: "text", sub_type: "message", message: "4 Hit (3)", message_ES: "4 Hit (3)" }],
-		"s-444-2000-2108-0": [{ type: "text", sub_type: "message", message: "Back Throw | Front", message_ES: "Martillazo atrás (Stun)" }],
+		"s-444-2000-2108-0": [{ type: "text", sub_type: "message", message: "Back Throw | Front", message_ES: "Martillo hacia atras (Stun)" }],
 		"s-444-2000-2111-0": [
-			{ type: "text", sub_type: "message", message: "Back", message_ES: "Martillazo hacia atrás" },
+			{ type: "text", sub_type: "message", message: "Back", message_ES: "Martillazo hacia atras" },
 			{ type: "spawn", func: "circle", args: [false, 445, 180, 500, 8, 480, 100, 2000] }
 		],
 		"s-444-2000-2112-0": [
@@ -434,11 +434,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "func", func: skilld_event, args: [2121] }
 		],
 		"s-444-2000-2122-0": [
-			{ type: "text", sub_type: "message", message: "Waves (Left) 3nd fast", message_ES: "Olas (Izquierda) 3er rápido" },
+			{ type: "text", sub_type: "message", message: "Waves (Left) 3nd fast", message_ES: "Olas (Izquierda) 3er rapido" },
 			{ type: "func", func: skilld_event, args: [2122] }
 		],
 		"s-444-2000-2123-0": [
-			{ type: "text", sub_type: "message", message: "Waves (Left) 2nd fast", message_ES: "Olas (Izquierda) 2do rápido" },
+			{ type: "text", sub_type: "message", message: "Waves (Left) 2nd fast", message_ES: "Olas (Izquierda) 2do rapido" },
 			{ type: "func", func: skilld_event, args: [2123] }
 		],
 		//
@@ -472,7 +472,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 445, 356, 220, 12, 210, 100, 4000] }
 		],
 		"s-444-2000-2137-0": [
-			{ type: "text", sub_type: "message", message: "Hammer back", message_ES: "Martillazo hacia atrás" },
+			{ type: "text", sub_type: "message", message: "Hammer back", message_ES: "Martillazo hacia atras" },
 			{ type: "spawn", func: "circle", args: [false, 445, 180, 500, 8, 480, 100, 2000] }
 		],
 		"s-444-2000-2138-0": [{ type: "text", sub_type: "message", delay: 234, message: "Knockup (Bait)", message_ES: "Batear (al Jugador)" }],
@@ -482,11 +482,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "func", func: skilld_event, args: [2140] }
 		],
 		"s-444-2000-2141-0": [
-			{ type: "text", sub_type: "message", message: "Waves (Right) 3nd fast", message_ES: "Olas (Derecha) 3er rápido" },
+			{ type: "text", sub_type: "message", message: "Waves (Right) 3nd fast", message_ES: "Olas (Derecha) 3er rapido" },
 			{ type: "func", func: skilld_event, args: [2141] }
 		],
 		"s-444-2000-2142-0": [
-			{ type: "text", sub_type: "message", message: "Waves (Right) 2nd fast", message_ES: "Olas (Derecha) 2do rápido" },
+			{ type: "text", sub_type: "message", message: "Waves (Right) 2nd fast", message_ES: "Olas (Derecha) 2do rapido" },
 			{ type: "func", func: skilld_event, args: [2142] }
 		],
 

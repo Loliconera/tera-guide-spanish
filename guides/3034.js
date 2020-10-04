@@ -95,7 +95,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 		if (next) {
 			message += "Next: ";
-			message_ES += "Próximo: ";
+			message_ES += "Proximo: ";
 			sub_type = "notification";
 		}
 
@@ -109,7 +109,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 		if (code) {
 			message += ", Code: " + (mech_reverse ? "0" : "1");
-			message_ES += ", Código: "  + (mech_reverse ? "0" : "1");
+			message_ES += ", Codigo: "  + (mech_reverse ? "0" : "1");
 		}
 
 		handlers.text({
@@ -202,8 +202,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"qb-3034-1000-3034102": [{ type: "text", sub_type: "message", message: "AOE! Jump", message_ES: "¡AOE! Saltar!!!" }],
 		"s-3034-1000-104-0": [{ type: "text", sub_type: "message", message: "Front Clip", message_ES: "Ataque frontal" }],
 		"s-3034-1000-108-0": [{ type: "text", sub_type: "message", message: "Get Out", message_ES: "Salir" }], // giro
-		"s-3034-1000-111-0": [{ type: "text", sub_type: "message", message: "Back + Front", message_ES: "Ataque hacia atrás + adelante" }],
-		"s-3034-1000-112-0": [{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque hacia atrás" }],
+		"s-3034-1000-111-0": [{ type: "text", sub_type: "message", message: "Back + Front", message_ES: "Ataque hacia atras + adelante" }],
+		"s-3034-1000-112-0": [{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque hacia atras" }],
 		"s-3034-1003-205-0": [{ type: "text", sub_type: "message", message: "Wind (Kaia)", message_ES: "¡Viento (Kaia)!" }],
 		"s-3034-1000-304-0": [{ type: "text", sub_type: "message", message: "Out", message_ES: "Salir" }],
 		"s-3034-1000-305-0": [{ type: "text", sub_type: "message", message: "In", message_ES: "Entrar" }],
@@ -223,11 +223,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "marker", args: [false, 67, 120, 100, 12000, true, null] }
 		],
 		"s-3034-1000-312-0": [
-			{ type: "text", sub_type: "message", message: "Safe | right back", message_ES: "Derecha Atrás | Seguro" },
+			{ type: "text", sub_type: "message", message: "Safe | right back", message_ES: "Derecha Atras | Seguro" },
 			{ type: "spawn", func: "marker", args: [false, 112, 120, 100, 12000, true, null] }
 		],
 		"s-3034-1000-313-0": [
-			{ type: "text", sub_type: "message", message: "Safe | back left", message_ES: "Atrás Izquierda | Seguro" },
+			{ type: "text", sub_type: "message", message: "Safe | back left", message_ES: "Atras Izquierda | Seguro" },
 			{ type: "spawn", func: "marker", args: [false, 202, 120, 100, 12000, true, null] }
 		],
 		"s-3034-1000-314-0": [
@@ -239,11 +239,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "marker", args: [false, 22, 120, 100, 12000, true, null] }
 		],
 		"s-3034-1000-316-0": [
-			{ type: "text", sub_type: "message", message: "Safe | back right", message_ES: "Atrás Derecha | Seguro" },
+			{ type: "text", sub_type: "message", message: "Safe | back right", message_ES: "Atras Derecha | Seguro" },
 			{ type: "spawn", func: "marker", args: [false, 157, 120, 100, 12000, true, null] }
 		],
 		"s-3034-1000-317-0": [
-			{ type: "text", sub_type: "message", message: "Safe | left back", message_ES: "Izquierda Atrás | Seguro" },
+			{ type: "text", sub_type: "message", message: "Safe | left back", message_ES: "Izquierda Atras | Seguro" },
 			{ type: "spawn", func: "marker", args: [false, 247, 120, 100, 12000, true, null] }
 		],
 		"s-3034-1000-318-0": [
@@ -255,11 +255,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "marker", args: [false, 22, 120, 100, 12000, true, null] }
 		],
 		"s-3034-1000-320-0": [
-			{ type: "text", sub_type: "message", message: "Safe | back right", message_ES: "Atrás Derecha | Seguro" },
+			{ type: "text", sub_type: "message", message: "Safe | back right", message_ES: "Atras Derecha | Seguro" },
 			{ type: "spawn", func: "marker", args: [false, 157, 120, 100, 12000, true, null] }
 		],
 		"s-3034-1000-321-0": [
-			{ type: "text", sub_type: "message", message: "Safe | back left", message_ES: "Atrás Izquierda | Seguro" },
+			{ type: "text", sub_type: "message", message: "Safe | back left", message_ES: "Atras Izquierda | Seguro" },
 			{ type: "spawn", func: "marker", args: [false, 202, 120, 100, 12000, true, null] }
 		],
 		"s-3034-1000-322-0": [
@@ -271,11 +271,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "marker", args: [false, 67, 120, 100, 12000, true, null] }
 		],
 		"s-3034-1000-324-0": [
-			{ type: "text", sub_type: "message", message: "Safe | right back", message_ES: "Derecha Atrás | Seguro" },
+			{ type: "text", sub_type: "message", message: "Safe | right back", message_ES: "Derecha Atras | Seguro" },
 			{ type: "spawn", func: "marker", args: [false, 112, 120, 100, 12000, true, null] }
 		],
 		"s-3034-1000-325-0": [
-			{ type: "text", sub_type: "message", message: "Safe | left back", message_ES: "Izquierda Atrás | Seguro" },
+			{ type: "text", sub_type: "message", message: "Safe | left back", message_ES: "Izquierda Atras | Seguro" },
 			{ type: "spawn", func: "marker", args: [false, 247, 120, 100, 12000, true, null] }
 		],
 		"s-3034-1000-326-0": [
@@ -305,7 +305,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 278, 0, 5000] }
 		],
 		"s-3034-2000-108-0": [
-			{ type: "text", sub_type: "message", message: "Back Swipe", message_ES: "Ataque hacia atrás" },
+			{ type: "text", sub_type: "message", message: "Back Swipe", message_ES: "Ataque hacia atras" },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 240, 380, 0, 2000] },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 120, 380, 0, 2000] }
 		],
@@ -398,10 +398,10 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3034-3000-223-2": [{ type: "func", func: thirdboss_sattack_event, args: [2232] }],
 		//
 		"s-3034-3000-125-0": [{ type: "text", sub_type: "message", message: "Front", message_ES: "Ataque frontal" }],
-		"s-3034-3000-126-0": [{ type: "text", sub_type: "message", message: "Front | Back", message_ES: "Ataque frontal | Ataque hacia atrás" }],
-		"s-3034-3000-127-0": [{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque hacia atrás" }],
+		"s-3034-3000-126-0": [{ type: "text", sub_type: "message", message: "Front | Back", message_ES: "Ataque frontal | Ataque hacia atras" }],
+		"s-3034-3000-127-0": [{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque hacia atras" }],
 		"s-3034-3000-128-0": [
-			{ type: "text", sub_type: "message", message: "Combo | Back Wave", message_ES: "Combo | Ataque hacia atrás" },
+			{ type: "text", sub_type: "message", message: "Combo | Back Wave", message_ES: "Combo | Ataque hacia atras" },
 			{ type: "spawn", func: "vector", args: [553, 180, 40, 120, 1200, 2000, 3000] },
 			{ type: "spawn", func: "vector", args: [553, 180, 40, 240, 1200, 2000, 3000] }
 		],

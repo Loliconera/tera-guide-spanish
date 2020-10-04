@@ -139,7 +139,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 	let debuff_tracker_started = false;
 	let debuffs_targe = {
-		30209101: { message: "Lightning", message_ES: "Relámpago" },
+		30209101: { message: "Lightning", message_ES: "Relampago" },
 		30209102: { message: "Witch",     message_ES: "Bruja" }
 	};
 
@@ -184,12 +184,12 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 		// 1 BOSS
 		"s-3020-1900-104-0": [
-			{ type: "text", sub_type: "message", message: "Suction (Dodge)", message_ES: "Succión (Iframe)" },
+			{ type: "text", sub_type: "message", message: "Suction (Dodge)", message_ES: "Succion (Iframe)" },
 			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 15, 450, 200, 6000] }
 		],
 
 		// 2 BOSS
-		"s-3020-1200-103-0": [{ type: "text", sub_type: "message", message: "Suction (Dodge)", message_ES: "Succión (Iframe)" }],
+		"s-3020-1200-103-0": [{ type: "text", sub_type: "message", message: "Suction (Dodge)", message_ES: "Succion (Iframe)" }],
 
 		// 3 BOSS
 		"nd-3020-2200": [
@@ -272,6 +272,6 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 		"s-3020-2200-202-0": [{ type: "text", sub_type: "message", message: "Defence 3 seconds", message_ES: "Defensa 3 segundos" }],
 		"s-3020-2200-203-0": [{ type: "text", sub_type: "message", message: "Defence 10 seconds", message_ES: "Defensa 10 segundos" }],
-		"s-3020-2200-204-0": [{ type: "text", sub_type: "message", message: "30% (transformation)", message_ES: "30% (transformación)" }]
+		"s-3020-2200-204-0": [{ type: "text", sub_type: "message", message: "30% (transformation)", message_ES: "30% (transformacion)" }]
 	};
 };

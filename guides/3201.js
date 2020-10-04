@@ -1,4 +1,4 @@
-// Gossamer Vault (Difícil)
+// Gossamer Vault (Difícil) ñ
 //
 // hecho por michengs
 
@@ -51,7 +51,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			dispatch.setTimeout(() => {
 				handlers.text({
 					sub_type: "alert",
-					message_ES: "Debuff próximamente...",
+					message_ES: "Debuff proximamente...",
 					message: "Debuff coming soon..."
 				});
 			}, 55000);
@@ -61,7 +61,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			dispatch.setTimeout(() => {
 				handlers.text({
 					sub_type: "alert",
-					message_ES: "Debuff próximamente...",
+					message_ES: "Debuff proximamente...",
 					message: "Debuff coming soon..."
 				});	
 			}, 55000);
@@ -77,10 +77,10 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		//"s-3201-1000-103-0": [{ type: "text", class_position:"tank", sub_type: "message", message: "Dodge", message_ES: "Эвейд!" }],
 		"s-3201-1000-104-0": [{ type: "text", class_position:"tank", sub_type: "message", message: "Stun attack", message_ES: "¡Stun!" }],
 		"s-3201-1000-107-0": [
-			{ type: "text", sub_type: "message", message: "back", message_ES: "|Ataque hacia atrás|" },
+			{ type: "text", sub_type: "message", message: "back", message_ES: "|Ataque hacia atras|" },
 			{ type: "text", sub_type: "message", delay: 2250, message: "pull", message_ES: "Pull!!!" }
 		],
-		"s-3201-1000-111-0": [{ type: "text", sub_type: "message", message: "Back Wave", message_ES: "Ola hacia atrás" }],
+		"s-3201-1000-111-0": [{ type: "text", sub_type: "message", message: "Back Wave", message_ES: "Ola hacia atras" }],
 		//"s-3201-1000-112-0": [{ type: "text", sub_type: "message", message: "Left + Right", message_ES: "Лево + Право" }],
 		"s-3201-1000-113-0": [
 			{ type: "text", sub_type: "message", message: "Jump (Slow)", message_ES: "Saltar (Lento)" },
@@ -90,21 +90,21 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", message: "Jump P (Slow)", message_ES: "Saltar P (Lento)" },
 			{ type: "text", sub_type: "message", delay: 1500, message: "Pull", message_ES: "Pull!" },
 		],
-		"s-3201-1000-119-0": [{ type: "text", sub_type: "message", delay: 1000, message: "Back + Front", message_ES: "Ataque atrás + Adelante" }],
+		"s-3201-1000-119-0": [{ type: "text", sub_type: "message", delay: 1000, message: "Back + Front", message_ES: "Ataque atras + Adelante" }],
 		//"s-3201-1000-121-0": [{ type: "text", class_position:"tank", sub_type: "message", message: "Right", message_ES: "Право" }],
 		//"s-3201-1000-122-0": [{ type: "text", class_position:"tank", sub_type: "message", message: "Left", message_ES: "Лево" }],
-		"s-3201-1000-124-0": [{ type: "text", class_position:"tank", sub_type: "message", message: "Stun attack", message_ES: "Stun (Rápido)" }],
-		"s-3201-1000-127-0": [{ type: "text", class_position:"dps", sub_type: "message", message: "Back", message_ES: "Ataque hacia atrás (Rápido)" },
-			{ type: "text", class_position:"heal", sub_type: "message", message: "Back", message_ES: "Ataque hacia atrás (Rápido)" }
+		"s-3201-1000-124-0": [{ type: "text", class_position:"tank", sub_type: "message", message: "Stun attack", message_ES: "Stun (Rapido)" }],
+		"s-3201-1000-127-0": [{ type: "text", class_position:"dps", sub_type: "message", message: "Back", message_ES: "Ataque hacia atras (Rapido)" },
+			{ type: "text", class_position:"heal", sub_type: "message", message: "Back", message_ES: "Ataque hacia atras (Rapido)" }
 		],
 		//"s-3201-1000-128-0": [{ type: "text", class_position:"tank", sub_type: "message", message: "Triple Attack", message_ES: "Комба" }],
-		"s-3201-1000-131-0": [{ type: "text", class_position:"dps", sub_type: "message", message: "Back Wave", message_ES: "Ola hacia atrás (Rápido)" },
-			{ type: "text", class_position:"heal", sub_type: "message", message: "Back Wave", message_ES: "Ola hacia atrás (Rápido)" }
+		"s-3201-1000-131-0": [{ type: "text", class_position:"dps", sub_type: "message", message: "Back Wave", message_ES: "Ola hacia atras (Rapido)" },
+			{ type: "text", class_position:"heal", sub_type: "message", message: "Back Wave", message_ES: "Ola hacia atras (Rapido)" }
 		],
-		//"s-3201-1000-132-0": [{ type: "text", sub_type: "message", message: "Left + Right", message_ES: "Лево + Право (Rápido)" }],
-		"s-3201-1000-133-0": [{ type: "text", sub_type: "message", delay: 500, message: "Jump (Fast)", message_ES: "Saltar (Lento) (Rápido)" }],
-		"s-3201-1000-138-0": [{ type: "text", sub_type: "message", delay: 500, message: "Jump P (Fast)", message_ES: "Saltar P (Lento) (Rápido)" }],
-		"s-3201-1000-139-0": [{ type: "text", sub_type: "message", message: "Back + Front (Fast)", message_ES: "Ataque atrás + Adelante (Rápido)" }],
+		//"s-3201-1000-132-0": [{ type: "text", sub_type: "message", message: "Left + Right", message_ES: "Лево + Право (Rapido)" }],
+		"s-3201-1000-133-0": [{ type: "text", sub_type: "message", delay: 500, message: "Jump (Fast)", message_ES: "Saltar (Lento) (Rapido)" }],
+		"s-3201-1000-138-0": [{ type: "text", sub_type: "message", delay: 500, message: "Jump P (Fast)", message_ES: "Saltar P (Lento) (Rapido)" }],
+		"s-3201-1000-139-0": [{ type: "text", sub_type: "message", message: "Back + Front (Fast)", message_ES: "Ataque atras + Adelante (Rapido)" }],
 		"s-3201-1000-143-0": [
 			{ type: "text", class_position:"tank", sub_type: "message", message: "Left > Right", message_ES: "Izquierda > Derecha" },
 			{ type: "text", class_position:"dps", sub_type: "message", message: "Right > Left", message_ES: "Derecha > Izquierda" },
@@ -132,15 +132,15 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", delay: 4000, message: "pull", message_ES: "Pull!" }
 		],
 		"s-3201-1000-312-0": [
-			{ type: "text", sub_type: "message", message_ES: "Мёд (Rápido)!" },
+			{ type: "text", sub_type: "message", message_ES: "Мёд (Rapido)!" },
 			{ type: "text", sub_type: "message", delay: 2000, message: "pull", message_ES: "Pull!" }
 		],
 		"s-3201-1000-313-0": [
-			{ type: "text", sub_type: "message", message: "Circles (Slow)", message_ES: "Círculos (Lento)" },
+			{ type: "text", sub_type: "message", message: "Circles (Slow)", message_ES: "Circulos (Lento)" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 75, 10, 300, 0, 6000] }
 		],
 		"s-3201-1000-314-0": [
-			{ type: "text", sub_type: "message", message: "Circles (Fast)", message_ES: "Círculos (Rápido)" },
+			{ type: "text", sub_type: "message", message: "Circles (Fast)", message_ES: "Circulos (Rapido)" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 75, 10, 300, 0, 6000] }
 		],
 
@@ -152,7 +152,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"h-3201-2000-99": [{ type: "func", func: secondboss_start_event }],
 		"h-3201-2000-81": [{ type: "text", sub_type: "message", message: "80%", message_ES: "80%" }],
 		"h-3201-2000-76": [{ type: "text", sub_type: "message", message: "75%", message_ES: "75%" }],
-		"s-3201-2000-108-0": [{ type: "text", sub_type: "message", message: "Back Attack!", message_ES: "¡Ataque hacia atrás!" }],
+		"s-3201-2000-108-0": [{ type: "text", sub_type: "message", message: "Back Attack!", message_ES: "¡Ataque hacia atras!" }],
 		"s-3201-2000-150-0": [{ type: "text", sub_type: "message", message: "Phantom", message_ES: "Fantasma" }],
 		"s-3201-2000-203-0": [{ type: "func", func: secondboss_debuff_event, args: [203] }],
 		"s-3201-2000-204-0": [{ type: "func", func: secondboss_debuff_event, args: [204] }],

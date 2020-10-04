@@ -16,7 +16,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			handlers.text({
 				sub_type: "message",
 				message: "Back Attack",
-				message_ES: "Ataque hacia atrás"
+				message_ES: "Ataque hacia atras"
 			});
 		}
 
@@ -85,7 +85,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		// Not enraged
 		"s-920-1000-1117-0": [{ type: "text", sub_type: "message", message: "Stay In > Get Out", message_ES: "Entrar > Salir" }],
 		"s-920-1000-1116-0": [{ type: "text", sub_type: "message", message: "Get Out > Stay In", message_ES: "Salir > Entrar" }],
-		"s-920-1000-1109-0": [{ type: "text", sub_type: "message", message: "Back Attack", message_ES: "Ataque hacia atrás" }],
+		"s-920-1000-1109-0": [{ type: "text", sub_type: "message", message: "Back Attack", message_ES: "Ataque hacia atras" }],
 		"s-920-1000-1130-0": [{ type: "text", sub_type: "message", message: "Full > Outer > Inner", message_ES: "Completo > Externo > Interno" }],
 		"s-920-2000-1108-0": [{ type: "text", sub_type: "message", message: "Target Swing", message_ES: "Objetivo" }],
 		"s-920-2000-1113-0": [{ type: "text", sub_type: "message", message: "Left Slash", message_ES: "Carril Izquierdo" }],
@@ -93,7 +93,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-920-2000-1106-0": [{ type: "text", sub_type: "message", message: "Spin Attack", message_ES: "Ataque Giratorio" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 320, 0, 3500] }
 		],
-		"s-920-2000-1105-0": [{ type: "text", sub_type: "message", message: "Back Attack", message_ES: "Ataque hacia atrás" }],
+		"s-920-2000-1105-0": [{ type: "text", sub_type: "message", message: "Back Attack", message_ES: "Ataque hacia atras" }],
 		"s-920-2000-1104-0": [{ type: "text", sub_type: "message", message: "Random Jump", message_ES: "Saltar (Stun)" }],
 		"s-920-2000-1110-0": [{ type: "text", sub_type: "message", message: "Stun Attack", message_ES: "Stun" }],
 		"s-920-2000-1111-0": [{ type: "text", sub_type: "message", message: "Left Slash", message_ES: "Carril Izquierdo" }],
@@ -102,7 +102,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		// Enraged
 		"s-920-1000-2117-0": [{ type: "text", sub_type: "message", message: "Stay In > Get Out", message_ES: "Entrar > Salir" }],
 		"s-920-1000-2116-0": [{ type: "text", sub_type: "message", message: "Get Out > Stay In", message_ES: "Salir > Entrar" }],
-		"s-920-1000-2109-0": [{ type: "text", sub_type: "message", message: "Back Attack", message_ES: "Ataque hacia atrás" }],
+		"s-920-1000-2109-0": [{ type: "text", sub_type: "message", message: "Back Attack", message_ES: "Ataque hacia atras" }],
 		"s-920-1000-2130-0": [{ type: "text", sub_type: "message", message: "Full > Inner > Outer", message_ES: "Completo > Interno > Externo" }],
 
 		// Special attacks
@@ -124,7 +124,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-920-2000-2106-0": [{ type: "text", sub_type: "message", message: "Spin Attack", message_ES: "Ataque Giratorio" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 320, 0, 3500] }
 		],
-		"s-920-2000-2105-0": [{ type: "text", sub_type: "message", message: "Back Attack", message_ES: "Ataque hacia atrás" }],
+		"s-920-2000-2105-0": [{ type: "text", sub_type: "message", message: "Back Attack", message_ES: "Ataque hacia atras" }],
 		"s-920-2000-2104-0": [{ type: "text", sub_type: "message", message: "Random Jump", message_ES: "Saltar (Stun)" }],
 		"s-920-2000-2110-0": [{ type: "text", sub_type: "message", message: "Stun Attack", message_ES: "Stun" }],
 		"s-920-2000-2111-0": [{ type: "text", sub_type: "message", message: "Left Slash", message_ES: "Carril Izquierdo" }],
@@ -133,7 +133,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		// Special attacks
 		"s-920-2000-3119-0": [{ type: "text", sub_type: "message", message: "Red: Out safe", message_ES: "Rojo: Salir" }],
 		"s-920-2000-3220-0": [{ type: "text", sub_type: "message", message: "Blue: In safe", message_ES: "Azul: Entrar" }],
-		"s-920-2000-3116-0": [{ type: "text", sub_type: "message", message: "Circles", message_ES: "Círculos" }],
+		"s-920-2000-3116-0": [{ type: "text", sub_type: "message", message: "Circles", message_ES: "Circulos" }],
 
 
 		// 3 BOSS
@@ -144,33 +144,33 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 
 		// Not enraged
-		"s-920-3000-1315-0": [{ type: "text", sub_type: "message", message: "Pushback", message_ES: "Empujar hacia atrás" }],
+		"s-920-3000-1315-0": [{ type: "text", sub_type: "message", message: "Pushback", message_ES: "Empujar hacia atras" }],
 		"s-920-3000-1107-0": [{ type: "text", sub_type: "message", message: "Random Jump", message_ES: "Saltar (Stun)" }],
-		"s-920-3000-1204-0": [{ type: "text", sub_type: "message", message: "Energy Beam", message_ES: "Haz de energía" }],
+		"s-920-3000-1204-0": [{ type: "text", sub_type: "message", message: "Energy Beam", message_ES: "Haz de energia" }],
 		// heart thrust+anticlockwise spin+right swipe+AOEs from out to in
 		"s-920-3000-1109-0": SPAWNING_FIRST_CIRCLE_FLOWERS,
 		// heart thrust+clockwise spin+left swipe+AOEs from in to out
 		"s-920-3000-1111-0": SPAWNING_SECOND_CIRCLE_FLOWERS,
 		//
-		"s-920-3000-1113-0": [{ type: "text", sub_type: "message", message: "Front | Back Slam", message_ES: "Ataque Frontal | Ataque hacia atrás" }],
+		"s-920-3000-1113-0": [{ type: "text", sub_type: "message", message: "Front | Back Slam", message_ES: "Ataque Frontal | Ataque hacia atras" }],
 		"s-920-3000-1115-0": [{ type: "text", sub_type: "message", message: "Spinning Attack", message_ES: "Ataque Giratorio" }],
 		"s-920-3000-1104-0": [{ type: "func", func: thirdboss_backattack_event }],
-		//"s-920-3000-1202-0": [{ type: "text", sub_type: "message", message: "spin or front, back slam", message_ES: "Ataque Giratorio | Ataque hacia atrás" }],
-		"s-920-3000-1120-0": [{ type: "text", sub_type: "message", message: "Energy Beam", message_ES: "Haz de energía" }],
+		//"s-920-3000-1202-0": [{ type: "text", sub_type: "message", message: "spin or front, back slam", message_ES: "Ataque Giratorio | Ataque hacia atras" }],
+		"s-920-3000-1120-0": [{ type: "text", sub_type: "message", message: "Energy Beam", message_ES: "Haz de energia" }],
 
 		// Enraged
-		"s-920-3000-2204-0": [{ type: "text", sub_type: "message", message: "Energy Beam", message_ES: "Haz de energía" }],
+		"s-920-3000-2204-0": [{ type: "text", sub_type: "message", message: "Energy Beam", message_ES: "Haz de energia" }],
 		// heart thrust+anticlockwise spin+right swipe+AOEs from out to in
 		"s-920-3000-2109-0": SPAWNING_FIRST_CIRCLE_FLOWERS,
 		// heart thrust+clockwise spin+left swipe+AOEs from in to out
 		"s-920-3000-2111-0": SPAWNING_SECOND_CIRCLE_FLOWERS,
 		//
-		"s-920-3000-2113-0": [{ type: "text", sub_type: "message", message: "Front | Back Slam", message_ES: "Ataque Frontal | Ataque hacia atrás" }],
+		"s-920-3000-2113-0": [{ type: "text", sub_type: "message", message: "Front | Back Slam", message_ES: "Ataque Frontal | Ataque hacia atras" }],
 		"s-920-3000-2104-0": [{ type: "func", func: thirdboss_backattack_event }],
 		"s-920-3000-2115-0": [{ type: "text", sub_type: "message", message: "Spinning Attack", message_ES: "Ataque Giratorio" }],
 		"s-920-3000-2107-0": [{ type: "text", sub_type: "message", message: "Random Jump", message_ES: "Saltar (Stun)" }],
-		//"s-920-3000-2202-0": [{ type: "text", sub_type: "message", message: "spin or front, back slam", message_ES: "Ataque Giratorio | Ataque hacia atrás" }],
-		"s-920-3000-2120-0": [{ type: "text", sub_type: "message", message: "Energy Beam", message_ES: "Haz de energía" }],
+		//"s-920-3000-2202-0": [{ type: "text", sub_type: "message", message: "spin or front, back slam", message_ES: "Ataque Giratorio | Ataque hacia atras" }],
+		"s-920-3000-2120-0": [{ type: "text", sub_type: "message", message: "Energy Beam", message_ES: "Haz de energia" }],
 
 		// Special attacks
 		"s-920-3000-1400-0": [{ type: "text", sub_type: "message", message: "Clones: Beam", message_ES: "Clones: Olas" }],

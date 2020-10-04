@@ -1,4 +1,4 @@
-// Forbidden Arena [Nightmare Undying Warlord]
+// Forbidden Arena [Nightmare Undying Warlord] 
 //
 // made by HSDN
 
@@ -19,14 +19,14 @@ function skilld_event(skillid, handlers, event, ent, dispatch) {
 				"sub_type": "message",
 				"message": "Haymaker",
 				"message_RU": "Мощный удар",
-				"message_ES": "Puñetazo"				
+				"message_ES": "Punetazo"				
 			});
 		} else { // 116 -> 146
 			handlers["text"]({
 				"sub_type": "message",
 				"message": "Haymaker | Back Kick",
 				"message_RU": "Мощный удар | Откид назад",
-				"message_ES": "Puñetazo | Patada hacia atrás"				
+				"message_ES": "Punetazo | Patada hacia atras"				
 			});
 		}
 	}
@@ -63,17 +63,17 @@ module.exports = {
 	//"s-3203-1000-108-0": [{ "type": "text", "class_position": "tank", "sub_type": "message", "message": "Floor Punch", "message_RU": "Удар о землю" }],
 	//"s-3203-1000-127-0": [{ "type": "text", "class_position": "tank", "sub_type": "message", "message": "Many Kicks", "message_RU": "Несколько ударов" }],
 
-	"s-3203-1000-121-0": [{ "type": "text", "sub_type": "message", "message": "Flip Kick (Stun)", "message_RU": "Удар в воздухе (стан)", "message_ES": "Patada Aérea (Stun)" }],
+	"s-3203-1000-121-0": [{ "type": "text", "sub_type": "message", "message": "Flip Kick (Stun)", "message_RU": "Удар в воздухе (стан)", "message_ES": "Patada Aerea (Stun)" }],
 	"s-3203-1000-107-0": [{ "type": "text", "sub_type": "message", "message": "Bait", "message_RU": "Байт", "message_ES": "Objetivo" }, { "type": "func", "func": skilld_event.bind(null, 107) }],
 	"s-3203-1000-110-0": [{ "type": "text", "sub_type": "message", "message": "Spin", "message_RU": "Крутилка", "message_ES": "Girar" }, { "type": "spawn_func", "func": "circle", "args": [true, 553, 0, 0, 12, 420, 0, 3000] }],
 	"s-3203-1000-114-0": [{ "type": "text", "sub_type": "message", "message": "Leap (Knockdown)", "message_RU": "Прыжок (опрокид)", "message_ES": "Saltar (Derribo)" }, { "type": "spawn_func", "func": "circle", "args": [true, 553, 0, 0, 12, 240, 0, 2000] }],
 	//"s-3203-1000-154-0": [{ "type": "text", "sub_type": "message", "message": "Jumping Kick", "message_RU": "Удар в прыжке" }], // 154 310 116
-	"s-3203-1000-310-0": [{ "type": "text", "sub_type": "message", "message": "Back Flip | Haymaker", "message_RU": "Сальто назад | Мощный удар", "message_ES": "Salto hacia atrás | Puñetazo" }, { "type": "func", "func": skilld_event.bind(null, 310) }], // 310 116
+	"s-3203-1000-310-0": [{ "type": "text", "sub_type": "message", "message": "Back Flip | Haymaker", "message_RU": "Сальто назад | Мощный удар", "message_ES": "Salto hacia atras | Punetazo" }, { "type": "func", "func": skilld_event.bind(null, 310) }], // 310 116
 	"s-3203-1000-116-0": [{ "type": "func", "func": skilld_event.bind(null, 116) }], // Haymaker
-	"s-3203-1000-115-0": [{ "type": "text", "sub_type": "message", "message": "Haymaker (Tank)", "message_RU": "Мощный удар (танк)", "message_ES": "Puñetazo (al Tank)" }],
-	"s-3203-1000-131-0": [{ "type": "text", "sub_type": "message", "message": "Rhythmic Blows", "message_RU": "Ураганная серия", "message_ES": "Golpes Rítmicos" }], // 131 132 133
+	"s-3203-1000-115-0": [{ "type": "text", "sub_type": "message", "message": "Haymaker (Tank)", "message_RU": "Мощный удар (танк)", "message_ES": "Punetazo (al Tank)" }],
+	"s-3203-1000-131-0": [{ "type": "text", "sub_type": "message", "message": "Rhythmic Blows", "message_RU": "Ураганная серия", "message_ES": "Golpes Ritmicos" }], // 131 132 133
 	"s-3203-1000-146-0": [
-		{ "type": "text", "sub_type": "message", "message": "Back Kick", "message_RU": "Откид назад", "message_ES": "Patada hacia atrás" }, // 116 146
+		{ "type": "text", "sub_type": "message", "message": "Back Kick", "message_RU": "Откид назад", "message_ES": "Patada hacia atras" }, // 116 146
 		{ "type": "spawn_func", "func": "vector", "args": [553, 90, 120, 170, 600, 0, 3000] },
 		{ "type": "spawn_func", "func": "vector", "args": [553, 270, 120, -170, 600, 0, 3000] }
 	],
@@ -102,10 +102,10 @@ module.exports = {
 	"s-3203-1000-155-0": [{ "type": "text", "sub_type": "message", "delay": 400, "message": "Dodge", "message_RU": "Эвейд", "message_ES": "Iframe" }],
 
 	// Stun 142 148 129
-	"s-3203-1000-142-0": [{ "type": "text", "sub_type": "message", "message": "Stun | Back Wave", "message_RU": "Стан | Волна назад", "message_ES": "Stun | Ola hacia atrás" }],
+	"s-3203-1000-142-0": [{ "type": "text", "sub_type": "message", "message": "Stun | Back Wave", "message_RU": "Стан | Волна назад", "message_ES": "Stun | Ola hacia atras" }],
 	"s-3203-1000-148-0": [{ "type": "spawn_func", "func": "circle", "args": [true, 912, 0, -10, 12, 300, 0, 3000] }],
 	"s-3203-1000-129-0": [
-		{ "type": "text", "sub_type": "message", "message": "Back Wave", "message_RU": "Волна назад (откид)", "message_ES": "Ola hacia atrás" },
+		{ "type": "text", "sub_type": "message", "message": "Back Wave", "message_RU": "Волна назад (откид)", "message_ES": "Ola hacia atras" },
 		{ "type": "spawn_func", "func": "vector", "args": [912, 90, 210, 390, 300, 0, 2000] },
 		{ "type": "spawn_func", "func": "vector", "args": [912, 90, 140, 380, 350, 0, 2000] },
 		{ "type": "spawn_func", "func": "vector", "args": [912, 90, 70, 370, 400, 0, 2000] },
@@ -128,14 +128,14 @@ module.exports = {
 
 	// Explosion 32031003 152 / 135 / 128
 	"s-3203-1000-152-0": [
-		{ "type": "text", "sub_type": "message", "message": "Explosion (Stun)", "message_RU": "Взрыв (стан)", "message_ES": "Explosión (Stun)" },
+		{ "type": "text", "sub_type": "message", "message": "Explosion (Stun)", "message_RU": "Взрыв (стан)", "message_ES": "Explosion (Stun)" },
 		{ "type": "spawn_func", "func": "circle", "args": [true, 912, 0, 0, 8, 460, 0, 2500] },
-		{ "type": "text", "sub_type": "alert", "delay": 59000, "message": "Explosion soon...", "message_RU": "Скоро взрыв...", "message_ES": "Explosión pronto..." }
+		{ "type": "text", "sub_type": "alert", "delay": 59000, "message": "Explosion soon...", "message_RU": "Скоро взрыв...", "message_ES": "Explosion pronto..." }
 	],
 	"s-3203-1000-135-0": [
-		{ "type": "text", "sub_type": "message", "message": "Explosion (Stun)", "message_RU": "Взрыв (стан)", "message_ES": "Explosión (Stun)" },
+		{ "type": "text", "sub_type": "message", "message": "Explosion (Stun)", "message_RU": "Взрыв (стан)", "message_ES": "Explosion (Stun)" },
 		{ "type": "spawn_func", "func": "circle", "args": [true, 912, 0, 0, 8, 460, 0, 2500] },
-		{ "type": "text", "sub_type": "alert", "delay": 59000, "message": "Explosion soon...", "message_RU": "Скоро взрыв...", "message_ES": "Explosión pronto..." }
+		{ "type": "text", "sub_type": "alert", "delay": 59000, "message": "Explosion soon...", "message_RU": "Скоро взрыв...", "message_ES": "Explosion pronto..." }
 	],
 
 	// Debuff

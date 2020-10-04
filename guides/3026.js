@@ -342,18 +342,18 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", delay: 1200, message: "Dodge", message_ES: "Iframe" }
 		],
 
-		"206-0": [{ type: "text", sub_type: "message", message: "Jump Back", message_ES: "Saltar hacia atrás" }],
+		"206-0": [{ type: "text", sub_type: "message", message: "Jump Back", message_ES: "Saltar hacia atras" }],
 		"206-2": [{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 15, 350, 0, 3000] }],
         "164-0": [{ type: "text", sub_type: "message", message: "R.I.P (100%)", message_ES: "R.I.P (100%)" }],
 		"165-0": [{ type: "text", sub_type: "message", message: "R.I.P (0%)", message_ES: "R.I.P (0%)" }],
 		"137-0": [{ type: "text", sub_type: "message", message: "Knockdown", message_ES: "¡¡[Rugido]!!" }],
 		"138-0": [{ type: "text", sub_type: "message", message: "AOE", message_ES: "AOE" }],
 		"139-0": [
-			{ type: "text", sub_type: "message", message: "60 degrees (Fire to all)", message_ES: "[Temp] 60° | Cambiar al (Hielo)" },
+			{ type: "text", sub_type: "message", message: "60 degrees (Fire to all)", message_ES: "Temp 60 | Cambiar al (Hielo)" },
 			{ type: "text", sub_type: "message", delay: 4000, message: "Lower the temp", message_ES: "Bajar la temperatura" }
 		],
 		"140-0": [
-			{ type: "text", sub_type: "message", message: "40 degrees (Ice to all)", message_ES: "[Temp] 40° | Cambiar al (Fuego)" },
+			{ type: "text", sub_type: "message", message: "40 degrees (Ice to all)", message_ES: "Temp 40 | Cambiar al (Fuego)" },
 			{ type: "text", sub_type: "message", delay: 4000, message: "Raise the temp", message_ES: "Subir la temperatura" }
 		],
 

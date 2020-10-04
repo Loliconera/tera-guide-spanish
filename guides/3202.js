@@ -29,7 +29,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", delay: 3000, message: "Gather!", message_ES: "¡Reunir!" }
 		],
 		"s-3202-1000-112-0": [
-			{ type: "text", sub_type: "message", message: "Front | Back Kick", message_ES: "Patada frontal | Patada hacia atrás" },
+			{ type: "text", sub_type: "message", message: "Front | Back Kick", message_ES: "Patada frontal | Patada hacia atras" },
 			{ type: "spawn", func: "vector", args: [553, 90, 120, 160, 300, 0, 3000] },
 			{ type: "spawn", func: "vector", args: [553, 270, 120, -160, 300, 0, 3000] }
 		],
@@ -50,7 +50,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 		// Pizza + Donuts (outward waves)
 		"s-3202-1000-121-0": [
-			{ type: "text", sub_type: "message", message: "Pizza (Right foot) | Outward Waves: Stay Out > Get In", message_ES: "Pizza (Pie Derecho) | Olas hacia afuera: Quédate afuera > Entrar" },
+			{ type: "text", sub_type: "message", message: "Pizza (Right foot) | Outward Waves: Stay Out > Get In", message_ES: "Pizza (Pie Derecho) | Olas hacia afuera: Quedate afuera > Entrar" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 550, 0, 3000] },
 			{ type: "spawn", func: "semicircle", args: [-60, 70, 912, 0, 0, 8, 450, 0, 4000] },
 			{ type: "spawn", func: "semicircle", args: [120, 250, 912, 0, 0, 8, 450, 0, 4000] },
@@ -67,14 +67,14 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "semicircle", args: [85, 295, 912, 0, 0, 6, 550, 0, 1500] }
 		],
 		"s-3202-1000-127-0": [
-			{ type: "text", sub_type: "message", message: "Outward Waves: Stay Out > Get In", message_ES: "Olas hacia afuera: Quédate afuera > Entrar" },
+			{ type: "text", sub_type: "message", message: "Outward Waves: Stay Out > Get In", message_ES: "Olas hacia afuera: Quedate afuera > Entrar" },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 14, 160, 0, 3000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 8, 390, 0, 3000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 6, 620, 0, 3000] }
 		],
 		// Pizza + Donuts (inward waves)
 		"s-3202-1000-124-0": [
-			{ type: "text", sub_type: "message", message: "Pizza (Left foot) | Inward Waves: Stay In > Get Out", message_ES: "Pizza (Pie Izquierdo) | Olas hacia adentro: Quédate adentro > Salir" },
+			{ type: "text", sub_type: "message", message: "Pizza (Left foot) | Inward Waves: Stay In > Get Out", message_ES: "Pizza (Pie Izquierdo) | Olas hacia adentro: Quedate adentro > Salir" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 550, 0, 3000] },
 			{ type: "spawn", func: "semicircle", args: [-60, 70, 912, 0, 0, 8, 450, 0, 4000] },
 			{ type: "spawn", func: "semicircle", args: [120, 250, 912, 0, 0, 8, 450, 0, 4000] },
@@ -91,7 +91,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "semicircle", args: [85, 295, 912, 0, 0, 6, 550, 0, 1500] }
 		],
 		"s-3202-1000-128-0": [
-			{ type: "text", sub_type: "message", message: "Inward Waves: Stay In > Get Out", message_ES: "Olas hacia adentro: Quédate adentro > Salir" },
+			{ type: "text", sub_type: "message", message: "Inward Waves: Stay In > Get Out", message_ES: "Olas hacia adentro: Quedate adentro > Salir" },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 14, 160, 0, 3000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 8, 390, 0, 3000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 6, 620, 0, 3000] }

@@ -94,11 +94,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-982-1000-106-0": [{ type: "text", class_position: "tank", sub_type: "message", message: "Heavy", message_ES: "Fuerte Mordida" }],
 		"s-982-1000-107-0": [
-			{ type: "text", class_position: "dps", sub_type: "message", message: "Pushback", message_ES: "Ataque hacia atrás" },
-			{ type: "text", class_position: "heal", sub_type: "message", message: "Pushback (Kaia)", message_ES: "Ataque hacia atrás (Kaia)" }
+			{ type: "text", class_position: "dps", sub_type: "message", message: "Pushback", message_ES: "Ataque hacia atras" },
+			{ type: "text", class_position: "heal", sub_type: "message", message: "Pushback (Kaia)", message_ES: "Ataque hacia atras (Kaia)" }
 		],
 		"s-982-1000-108-0": [{ type: "text", sub_type: "message", message: "Bait (Flying)", message_ES: "Ataque al (Jugador)" }, ],
-		"s-982-1000-109-0": [{ type: "text", sub_type: "message", message: "Rocks (Small)", message_ES: "Rocas (Pequeñas)" }],
+		"s-982-1000-109-0": [{ type: "text", sub_type: "message", message: "Rocks (Small)", message_ES: "Rocas (Pequenas)" }],
 		"s-982-1000-110-0": [{ type: "text", sub_type: "message", message: "Rocks (Large)", message_ES: "Rocas (Grandes)" }],
 		"s-982-1000-301-0": [{ type: "text", sub_type: "message", message: "Flower Stuns", message_ES: "Flor Stun" }],
 		"s-982-1000-307-0": [{ type: "text", sub_type: "message", message: "Cage", message_ES: "Jaula" }],
@@ -119,7 +119,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 15, 260, 0, 3000] }
 		],
 		"s-982-2000-116-0": [
-			{ type: "text", sub_type: "message", message: "Front then Back", message_ES: "Ataque adelante | Ataque atrás" },
+			{ type: "text", sub_type: "message", message: "Front then Back", message_ES: "Ataque adelante | Ataque atras" },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 270, 500, 0, 5000] },
 			{ type: "spawn", func: "vector", args: [553, 180, 0, 90, 500, 0, 5000] }
 		],
@@ -200,11 +200,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "func", func: skilld_event, args: [155] }
 		],
 		"s-982-3000-161-0": [
-			{ type: "text", sub_type: "message", message: "Back then Front", message_ES: "Ataque atrás | Ataque adelante" },
+			{ type: "text", sub_type: "message", message: "Back then Front", message_ES: "Ataque atras | Ataque adelante" },
 			{ type: "func", func: skilld_event, args: [161] }
 		],
 		"s-982-3000-162-0": [
-			{ type: "text", sub_type: "message", message: "Back then Front", message_ES: "Ataque atrás | Ataque adelante" },
+			{ type: "text", sub_type: "message", message: "Back then Front", message_ES: "Ataque atras | Ataque adelante" },
 			{ type: "func", func: skilld_event, args: [162] }
 		],
 		"s-982-3000-213-0": [
@@ -252,7 +252,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "func", func: skilld_event, args: [399] }
 		],
 		"s-982-3000-360-0": [
-			{ type: "text", sub_type: "message", message: "Explosion!", message_ES: "¡Explosión!" },
+			{ type: "text", sub_type: "message", message: "Explosion!", message_ES: "¡Explosion!" },
 			{ type: "func", func: skilld_event, args: [360] }
 		]
 	};
