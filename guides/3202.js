@@ -45,7 +45,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3202-1000-304-0": [{ type: "text", sub_type: "message", message: "Shield!", message_ES: "¡Escudo!" }],
 		"ab-3202-1000-32021006": [
 		    { type: "text", sub_type: "message", message: "Plague of Exhaustion", message_ES: "Plague", "class_position": "priest" },
-			{ type: "text", sub_type: "message", message: "Regression", message_ES: "Regress", "class_position": "mystic" }
+			{ type: "text", sub_type: "message", message: "Regression", message_ES: "Regression", "class_position": "mystic" }
 		],
 
 		// Pizza + Donuts (outward waves)
