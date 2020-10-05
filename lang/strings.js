@@ -49,7 +49,7 @@ module.exports.general = {
 		verbose: "Mensajes",
 		objects: "Objetos",
 		test: "Prueba de voz",
-		module: "Modulo TERA-Guia",
+		module: "Módulo TERA-Guía",
 		enabled: "Activado",
 		disabled: "Desactivado",
 		voicetest: "[Prueba de velocidad de voz]",

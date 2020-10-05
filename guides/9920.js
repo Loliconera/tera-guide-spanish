@@ -88,16 +88,16 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-920-1000-1109-0": [{ type: "text", sub_type: "message", message: "Back Attack", message_ES: "Ataque hacia atras" }],
 		"s-920-1000-1130-0": [{ type: "text", sub_type: "message", message: "Full > Outer > Inner", message_ES: "Completo > Externo > Interno" }],
 		"s-920-2000-1108-0": [{ type: "text", sub_type: "message", message: "Target Swing", message_ES: "Objetivo" }],
-		"s-920-2000-1113-0": [{ type: "text", sub_type: "message", message: "Left Slash", message_ES: "Carril Izquierdo" }],
-		"s-920-2000-1114-0": [{ type: "text", sub_type: "message", message: "Right Slash", message_ES: "Carril Derecho" }],
+		"s-920-2000-1113-0": [{ type: "text", sub_type: "message", message: "Left Slash", message_ES: "Izquierda Slash" }],
+		"s-920-2000-1114-0": [{ type: "text", sub_type: "message", message: "Right Slash", message_ES: "Derecha Slash" }],
 		"s-920-2000-1106-0": [{ type: "text", sub_type: "message", message: "Spin Attack", message_ES: "Ataque Giratorio" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 320, 0, 3500] }
 		],
 		"s-920-2000-1105-0": [{ type: "text", sub_type: "message", message: "Back Attack", message_ES: "Ataque hacia atras" }],
 		"s-920-2000-1104-0": [{ type: "text", sub_type: "message", message: "Random Jump", message_ES: "Saltar (Stun)" }],
 		"s-920-2000-1110-0": [{ type: "text", sub_type: "message", message: "Stun Attack", message_ES: "Stun" }],
-		"s-920-2000-1111-0": [{ type: "text", sub_type: "message", message: "Left Slash", message_ES: "Carril Izquierdo" }],
-		"s-920-2000-1112-0": [{ type: "text", sub_type: "message", message: "Right Slash", message_ES: "Carril Derecho" }],
+		"s-920-2000-1111-0": [{ type: "text", sub_type: "message", message: "Left Slash", message_ES: "Izquierda Slash" }],
+		"s-920-2000-1112-0": [{ type: "text", sub_type: "message", message: "Right Slash", message_ES: "Derecha Slash" }],
 
 		// Enraged
 		"s-920-1000-2117-0": [{ type: "text", sub_type: "message", message: "Stay In > Get Out", message_ES: "Entrar > Salir" }],
@@ -119,16 +119,16 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"h-920-2000-20": [{ type: "text", sub_type: "message", message: "20%", message_ES: "20%" }],
 
 		"s-920-2000-2108-0": [{ type: "text", sub_type: "message", message: "Target Swing", message_ES: "Objetivo" }],
-		"s-920-2000-2113-0": [{ type: "text", sub_type: "message", message: "Left Slash", message_ES: "Carril Izquierdo" }],
-		"s-920-2000-2114-0": [{ type: "text", sub_type: "message", message: "Right Slash", message_ES: "Carril Derecho" }],
+		"s-920-2000-2113-0": [{ type: "text", sub_type: "message", message: "Left Slash", message_ES: "Izquierda Slash" }],
+		"s-920-2000-2114-0": [{ type: "text", sub_type: "message", message: "Right Slash", message_ES: "Derecha Slash" }],
 		"s-920-2000-2106-0": [{ type: "text", sub_type: "message", message: "Spin Attack", message_ES: "Ataque Giratorio" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 320, 0, 3500] }
 		],
 		"s-920-2000-2105-0": [{ type: "text", sub_type: "message", message: "Back Attack", message_ES: "Ataque hacia atras" }],
 		"s-920-2000-2104-0": [{ type: "text", sub_type: "message", message: "Random Jump", message_ES: "Saltar (Stun)" }],
 		"s-920-2000-2110-0": [{ type: "text", sub_type: "message", message: "Stun Attack", message_ES: "Stun" }],
-		"s-920-2000-2111-0": [{ type: "text", sub_type: "message", message: "Left Slash", message_ES: "Carril Izquierdo" }],
-		"s-920-2000-2112-0": [{ type: "text", sub_type: "message", message: "Right Slash", message_ES: "Carril Derecho" }],
+		"s-920-2000-2111-0": [{ type: "text", sub_type: "message", message: "Left Slash", message_ES: "Izquierda Slash" }],
+		"s-920-2000-2112-0": [{ type: "text", sub_type: "message", message: "Right Slash", message_ES: "Derecha Slash" }],
 
 		// Special attacks
 		"s-920-2000-3119-0": [{ type: "text", sub_type: "message", message: "Red: Out safe", message_ES: "Rojo: Salir" }],
