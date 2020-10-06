@@ -9,31 +9,31 @@ module.exports = (dispatch, handlers, guide, lang) => {
 	const { MARKER_ITEM } = module.parent.exports.spawn;
 
 	let debuff = null;
-	let timer1;
-	let timer2;
-	let timer3;
-	let timer4;
-	let timer5;
-	let boss_ent;
+	let timer1 = null;
+	let timer2 = null;
+	let timer3 = null;
+	let timer4 = null;
+	let timer5 = null;
+	let boss_ent = null;
 	let boss_offset = 0;
 	let qbacting = null;
 	let blue = false;
-	let red  = false;
+	let red = false;
 	let debuff_tracker_started = false;
 
 	const mech_messages = {
-		0: { message: "IN",  message_ES: "ENTRAR" },
+		0: { message: "IN", message_ES: "ENTRAR" },
 		1: { message: "OUT", message_ES: "SALIR" }
 	};
 
 	const qbacting_messages = {
 		0: { message: "different", message_ES: "diferente" },
-		1: { message: "same",      message_ES: "igual" }
+		1: { message: "same", message_ES: "igual" }
 	};
 
 	const debuff_messages = {
 		0: { message: "Ready to get Fire debuff", message_ES: "Listo para cambiar al debuff de Fuego" },
-		1: { message: "Ready to get Ice debuff",  message_ES: "Listo para cambiar al debuff de Hielo" }
+		1: { message: "Ready to get Ice debuff", message_ES: "Listo para cambiar al debuff de Hielo" }
 	};
 
 	// NULL % 2 = 0
@@ -45,15 +45,15 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		if (!boss_ent) return;
 
 		let distance = 220;
-		let caption  = "IN";
+		let caption = "IN";
 
 		if (out) {
 			distance = 620;
-			caption  = "OUT";
+			caption = "OUT";
 		}
 
 		handlers.event([
-			{ type: "spawn", func: "marker", args: [false,  45 + boss_offset, distance, 0, 4000, true, [caption, "SAFE"]] },
+			{ type: "spawn", func: "marker", args: [false, 45 + boss_offset, distance, 0, 4000, true, [caption, "SAFE"]] },
 			{ type: "spawn", func: "marker", args: [false, 135 + boss_offset, distance, 0, 4000, true, [caption, "SAFE"]] },
 			{ type: "spawn", func: "marker", args: [false, 225 + boss_offset, distance, 0, 4000, true, [caption, "SAFE"]] },
 			{ type: "spawn", func: "marker", args: [false, 315 + boss_offset, distance, 0, 4000, true, [caption, "SAFE"]] }
@@ -201,7 +201,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			boss_offset = 10;
 			handlers.event([
 				{ type: "spawn", func: "vector", args: [553, 0, 0, 190, 840, 200, 8000] },
-				{ type: "spawn", func: "vector", args: [553, 0, 0,  10, 840, 200, 8000] }
+				{ type: "spawn", func: "vector", args: [553, 0, 0, 10, 840, 200, 8000] }
 			]);
 		}
 
@@ -380,8 +380,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 	for (let [key, value] of Object.entries(skills)) {
 		if (key.length === 5) {
-			object["s-3026-1000-1" + key] = value;
-			object["s-3026-1000-2" + key] = value;
+			object[`s-3026-1000-1${key}`] = value;
+			object[`s-3026-1000-2${key}`] = value;
 		} else {
 			object[key] = value;
 		}

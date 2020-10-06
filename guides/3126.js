@@ -9,12 +9,12 @@ module.exports = (dispatch, handlers, guide, lang) => {
 	const { MARKER_ITEM } = module.parent.exports.spawn;
 
 	let debuff = null;
-	let timer1;
-	let timer2;
-	let timer3;
-	let timer4;
-	let timer5;
-	let boss_ent;
+	let timer1 = null;
+	let timer2 = null;
+	let timer3 = null;
+	let timer4 = null;
+	let timer5 = null;
+	let boss_ent = null;
 	let boss_offset = 0;
 	let qbacting = null;
 	let blue = false;
@@ -392,7 +392,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"am-3126-1000-31260067": [{ type: "text", sub_type: "message", message: "[Debuff] Layer 2", message_ES: "[Debuff] 2 apilar" }],
 		"am-3126-1000-31260068": [
 			{ type: "text", sub_type: "message", message: "[Debuff] Layer 3", message_ES: "[Debuff] 3 apilar" },
-			{ type: "text", sub_type: "message", delay: 145000, message: '[Debuff] 2.5 minutes passed', message_ES: "[Debuff] Han pasado 2.5 minutos (pilas eliminadas)" }
+			{ type: "text", sub_type: "message", delay: 145000, message: "[Debuff] 2.5 minutes passed", message_ES: "[Debuff] Han pasado 2.5 minutos (pilas eliminadas)" }
 		]
 	};
 
@@ -400,8 +400,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 	for (let [key, value] of Object.entries(skills)) {
 		if (key.length === 5) {
-			object["s-3126-1000-1" + key] = value;
-			object["s-3126-1000-2" + key] = value;
+			object[`s-3126-1000-1${key}`] = value;
+			object[`s-3126-1000-2${key}`] = value;
 		} else {
 			object[key] = value;
 		}

@@ -9,7 +9,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 	let notice = true;
 	let printend = false;
 
-	function skilld_event(skillid,  ent) {
+	function skilld_event(skillid, ent) {
 		if (skillid == 90442304) {
 			handlers.text({ sub_type: "notification", message: "Stun", message_ES: "Stun" });
 			handlers.text({ sub_type: "message", message: "Stun", message_ES: "Stun" });

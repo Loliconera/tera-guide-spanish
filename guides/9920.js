@@ -6,7 +6,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 	guide.type = SP;
 
 	let counter = 0;
-	let timer;
+	let timer = null;
 
 	function thirdboss_backattack_event() {
 		dispatch.clearTimeout(timer);
@@ -44,7 +44,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 				}, ent);
 			}
 
-			dispatch.setTimeout(()=> clockwise = null, 12000);
+			// eslint-disable-next-line no-param-reassign
+			dispatch.setTimeout(() => clockwise = null, 12000);
 		}, 1000);
 	}
 

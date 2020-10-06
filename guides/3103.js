@@ -3,7 +3,7 @@
 // hecho por HSDN
 
 module.exports = (dispatch, handlers, guide, lang) => {
-	let timer1;
+	let timer1 = null;
 	let print_target = true;
 	let in_bait = false;
 
