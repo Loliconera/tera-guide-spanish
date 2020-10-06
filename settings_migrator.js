@@ -6,14 +6,14 @@ const DefaultSettings = {
 	"gNotice": false,
 	"stream": false,
 	"spawnObject": true,
-	"speaks": true,
+	"speaks": false,
 	"rate": [
 		2
 	],
 	"cc": [
 		"</font><font color=\"#ffff00\">"
 	],
-	"language": "auto",
+	"language": "es",
 	"dungeons": {},
 	"debug": {
 		"chat": true,

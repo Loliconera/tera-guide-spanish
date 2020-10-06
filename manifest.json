@@ -24,7 +24,7 @@
         "lang/dungeons.js": "825070aa2b96766204227fd4a22b35182781cb9107c3881f22b07254df156e10",
         "lang/strings.js": "3736a5154f96db5b0b9a98841be09e69c021679aee61b9c02f645d0a2a414db5",
         "module.json": "8017a3254b6a3aa8b7bd90538a6e537ad9cee25158c11e109d49814c450feb6d",
-        "settings_migrator.js": "872c64fdd32897971984c8ecd9f1ee8d436346a74750bfd0ab4ff2f39a3d7bfe"
+        "settings_migrator.js": "1a3ea0b1c66b5b4fc98894cbfd4a7a26fe123e0db2655ec87da4c93448e058d5"
     },
     "defs": {
         "S_ABNORMALITY_BEGIN": 4,
