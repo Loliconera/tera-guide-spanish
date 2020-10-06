@@ -6,14 +6,14 @@ const DefaultSettings = {
 	"gNotice": false,
 	"stream": false,
 	"spawnObject": true,
-	"speaks": false,
+	"speaks": true,
 	"rate": [
 		2
 	],
 	"cc": [
 		"</font><font color=\"#ffff00\">"
 	],
-	"language": "es",
+	"language": "auto",
 	"dungeons": {},
 	"debug": {
 		"chat": true,
@@ -61,9 +61,11 @@ module.exports = function MigrateSettings(from_ver, to_ver, settings) {
 							settings[option][id] = element;
 						}
 						continue;
+					} else {
+						settings[option] = oldsettings[option];
 					}
 				}
-				break;
+				return settings;
 
 			case 1.13:
 				remove(["dbg.json", "lib.js", "dispatch.js", "voice/index.js", "voice"]);
