@@ -1,7 +1,7 @@
 {
     "files": {
         "LICENSE": "3a6951431f77f106f39ebc87cc32cb6aee7371cc168ec1862d2ce8775875c8f1",
-        "README.md": "d6dde1eac6ec1b1aed11ba9b219b7a0a43f40d3b46d913fdb03643a928ad1631",
+        "README.md": "5b995b91307cdddd5718e5bd7bdd1f12ec66b00c416894cf4f56edb1b1ca8f03",
         "guides/3020.js": "746f9a971bae3a08b8e01460220233a3581685fdfbc6eebd47fa4c804022d991",
         "guides/3023.js": "7b22d623a7063adda490d1cdb9c831d2d29b68147f958cc35e237e4386df81c6",
         "guides/3026.js": "aad21f3a684bc126760607327a1c7982d4f2fef69177d1c09047cab3af7d12a9",
@@ -13,6 +13,8 @@
         "guides/3201.js": "374e81afa8ad21a5f9721ac9fce353306b35a805494a3dff7c678d710969b411",
         "guides/3202.js": "7e4bc8efada97c954136f19b35274893fa3e1a4a86c962a672d569107aa0213d",
         "guides/3203.js": "a0458fb69b9532c3dabba24e4a898228f7685c53af3d54190006679c6e3e7240",
+        "guides/7011.js": "bb5912b515f2a36556e07b600bc47c282160dedb0107740288c6d5d087aec8de",
+        "guides/7015.js": "6c4f86866e4bf18a7d5b76fd7444466653c136324bd55c660dca79060ca934ec",
         "guides/9044.js": "06fedc90838d57805b99d91242776cada1a33dbfbc10d5a7b26e6872561b20d8",
         "guides/9053.js": "419371fbe659bf6510d1b3a94169ad3410903fb98428ff7dea7329183ba1ab5c",
         "guides/9735.js": "06f3869cf2b77c56bb3956e285f2d6bb86697f0604361266a6f39816ba49590f",
@@ -21,9 +23,9 @@
         "guides/9920.js": "a97a3fad63dded7ace5a5a3e56683cd4dd53b3a1620e9c409b17feb70ea98573",
         "guides/9982.js": "9beb5f183f5b8d50986e1bfe253963344199bb412127d2586aa1380209a7961c",
         "index.js": "0081a02a13928a86b88a47ae6db7cd50599f226f2b664ab1994b59d5abc12d97",
-        "lang/dungeons.js": "825070aa2b96766204227fd4a22b35182781cb9107c3881f22b07254df156e10",
+        "lang/dungeons.js": "a8a7bba965a9b5b6497a90f923c31e7a5c44fd8f6d6e13ff14ccf04087b0c53f",
         "lang/strings.js": "3736a5154f96db5b0b9a98841be09e69c021679aee61b9c02f645d0a2a414db5",
-        "module.json": "8017a3254b6a3aa8b7bd90538a6e537ad9cee25158c11e109d49814c450feb6d",
+        "module.json": "376e0077a088a8043a577acbc5eee638900f3f476d2cfb3a295b2024f715db15",
         "settings_migrator.js": "1a3ea0b1c66b5b4fc98894cbfd4a7a26fe123e0db2655ec87da4c93448e058d5"
     },
     "defs": {

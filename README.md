@@ -36,6 +36,8 @@ id | Nombre de la mazmorra | Idioma
 9982 | Grotto of Lost Souls (Hard) | Español
 9053 | Kezzel's Gorge | Español
 9044 | Bahaar's Sanctum | Español
+7011 | Shadow of the Gutrends | Español
+7015 | Escape from Balder's Refuge | Español
 3201 | Gossamer Vault (Hard) | Español
 3023 | Akalath Quarantine | Español
 3020 | Sea of Honor | Español
@@ -84,4 +86,5 @@ Lee mas en https://github.com/hsdn/tera-guide/wiki
 - **[Multarix](https://github.com/Multarix)** - Autor de la guía RR y también realizando cambios en la traducción al inglés
 - **[Owyn](https://github.com/Owyn)** - Desarrollador de grandes guías para RK-9, AA y GV, cuyo código se utilizó
 - **[ITunk](https://github.com/GrafNikola)** - Autor de la traducción inicial al ruso
-- **[Emilia](https://github.com/emilia-s2)** - Autor de la traducción al portugués
+- **[Loliconera](https://github.com/Loliconera)** - Autor de traducción al español latino
+- **[Emilia](https://github.com/emilia-s2)** - Autora de traducción al portugués y guías de guardian
