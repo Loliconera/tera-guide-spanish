@@ -1,8 +1,10 @@
 # Tera-Guía
 Un módulo de guía para TERA traducido al español. Muestra mensajes en la pantalla y dibuja zonas de ataques y mecánicas de jefes (también admite mensajes de texto a voz).   
 
-* English version of the module (Traducción en inglés): https://github.com/hsdn/tera-guide
-* Versão em português do módulo (Traducción al portugués): https://github.com/emilia-s2/Guia-DG-Portugues
+#### Otras traducciones
+
+* Español: https://github.com/Loliconera/tera-guide-spanish
+* Portugués: https://github.com/emilia-s2/Guia-DG-Portugues
 
 ## Dependencias
 * **tera-guide-core** - https://github.com/hsdn/tera-guide-core
