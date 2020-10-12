@@ -3,7 +3,7 @@ Un módulo de guía para TERA traducido al español. Muestra mensajes en la pant
 
 #### Otras traducciones
 
-* Español: https://github.com/Loliconera/tera-guide-spanish
+* Inglés (Original): https://github.com/hsdn/tera-guide
 * Portugués: https://github.com/emilia-s2/Guia-DG-Portugues
 
 ## Dependencias
