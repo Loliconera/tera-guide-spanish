@@ -38,8 +38,8 @@ id | Nombre de la mazmorra | Idioma
 9982 | Grotto of Lost Souls (Hard) | Español
 9053 | Kezzel's Gorge | Español
 9044 | Bahaar's Sanctum | Español
-7011 | Shadow of the Gutrends | Español
-7015 | Escape from Balder's Refuge | Español
+7011 | Shadow of the Gutrends (Guardian) | Español
+7015 | Escape from Balder's Refuge (Guardian) | Español
 3201 | Gossamer Vault (Hard) | Español
 3023 | Akalath Quarantine | Español
 3020 | Sea of Honor | Español
@@ -76,8 +76,9 @@ id | Nombre de la mazmorra | Idioma
 * En el canal de chat **Toolbox(/8)** escriba el siguiente comando **guide gui** para mostrar una interfaz gráfica de usuario del modulo, puede tambien cambiar las configuraciones básicas.   
   ![](https://i.imgur.com/tUwIy8l.png)   
 
-## Desarrollo y Depuración
-Lee mas en https://github.com/hsdn/tera-guide/wiki
+## Más información
+* Desarrolladores Wiki https://github.com/hsdn/tera-guide/wiki
+* Para preguntas y sugerencias, comuníquese a través de Discord: **JKQ#5649**
 
 ## Créditos
 - **[Kasea](https://github.com/tera-toolbox-mods)** - Desarrollador original del módulo Tera-Guide
@@ -87,6 +88,6 @@ Lee mas en https://github.com/hsdn/tera-guide/wiki
 - **[Kuroine](https://github.com/Kuroine)** - Autor del código base de la guía DA
 - **[Multarix](https://github.com/Multarix)** - Autor de la guía RR y también realizando cambios en la traducción al inglés
 - **[Owyn](https://github.com/Owyn)** - Desarrollador de grandes guías para RK-9, AA y GV, cuyo código se utilizó
-- **[ITunk](https://github.com/GrafNikola)** - Autor de la traducción inicial al ruso
 - **[Loliconera](https://github.com/Loliconera)** - Autor de traducción al español latino
 - **[Emilia](https://github.com/emilia-s2)** - Autora de traducción al portugués y guías de guardian
+- **[ITunk](https://github.com/GrafNikola)** - Autor de la traducción inicial al ruso

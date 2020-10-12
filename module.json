@@ -6,7 +6,7 @@
         "guiName": "TERA-Guia",
         "settingsFile": "config.json",
         "settingsMigrator": "settings_migrator.js",
-        "settingsVersion": 1.14
+        "settingsVersion": 1.15
     },
     "author": "HSDN / Loliconera",
     "description": "Un modulo de guia para mazmorras con notificaciones TTS. Muestra mensajes en la pantalla y dibuja zonas de ataques y mecanicas de jefes.",
@@ -16,5 +16,5 @@
         "library": "https://raw.githubusercontent.com/tera-toolbox-mods/library/master/module.json",
         "tera-guide-core": "https://raw.githubusercontent.com/hsdn/tera-guide-core/master/module.json"
     },
-    "version": "10/9/2020"
+    "version": "10/12/2020"
 }
