@@ -72,7 +72,7 @@ id | Nombre de la mazmorra | Idioma
 
 * Para desactivar o activar los mensajes de texto a voz TTS, use el comando **guide voice**.   
 
-* Puede cambiar el género de la a voz TTS, usando el comando **guide male~female**.   
+* Para cambiar el género de la a voz TTS, use el comando **guide male~female**.   
 
 ## Módulo GUI
 
