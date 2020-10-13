@@ -19,7 +19,7 @@ Toolbox(/8) | Descripción del comando
 **guide&nbsp;voice**<br>(defecto: activado) | Mensajes de texto a voz TTS
 **guide&nbsp;lNotice**<br>(defecto: desactivado) | Enviar mensajes en el canal **Chat Notice** en lugar de mensajes en pantalla
 **guide&nbsp;gNotice**<br>(defecto: desactivado) | Enviar mensajes en el canal **Chat Party**
-**guide male~female**<br>(defecto: femenino) | Cambiar el genero de voz TTS (si esta disponible)
+**guide male~female**<br>(defecto: femenino) | Cambiar el género de voz TTS (si esta disponible)
 **guide&nbsp;`1`~`10`**<br>(defecto: 2) | Ajustar la velocidad  de voz TTS
 **guide&nbsp;spawnObject**<br>(defecto: activado) | Generación de objetos marcadores
 **guide&nbsp;stream**<br>(defecto: desactivado) | Modo Streamer (ocultar todos los mensajes y objetos, se reproducirá la voz TTS)
@@ -68,9 +68,11 @@ id | Nombre de la mazmorra | Idioma
   ![](https://i.imgur.com/NLIt4yq.png)   
 
 * Cuando ingresa a una mazmorra el modulo le notificará con un mensaje de bienvenida, tambien le notificará que modulos estan activados o desactivados.   
-  ![](https://i.imgur.com/POAPIzo.png)   
+  ![](https://i.imgur.com/AHkk1bU.png)   
 
-* Para desactivar o activar los mensajes de texto a voz TTS, use el comando **guide voice**.
+* Para desactivar o activar los mensajes de texto a voz TTS, use el comando **guide voice**.   
+
+* Puede cambiar el género de la a voz TTS, usando el comando **guide male~female**.   
 
 ## Módulo GUI
 
