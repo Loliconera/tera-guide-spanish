@@ -7,7 +7,7 @@ const DefaultSettings = {
 	"gNotice": false,
 	"spawnObject": true,
 	"speech": {
-		"enabled": true,
+		"enabled": false,
 		"rate": 2,
 		"volume": 100,
 		"gender": "female"
