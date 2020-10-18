@@ -3,8 +3,8 @@ Un módulo de guía para TERA traducido al español. Muestra mensajes en la pant
 
 #### Otras traducciones
 
-* Inglés (Original): https://github.com/hsdn/tera-guide
-* Portugués: https://github.com/emilia-s2/Guia-DG-Portugues
+* [**Inglés (English)** by HSDN](https://github.com/hsdn/tera-guide)
+* [**Portugués (Português)** by Emilia](https://github.com/emilia-s2/Guia-DG-Portugues)
 
 ## Dependencias
 * **tera-guide-core** - https://github.com/hsdn/tera-guide-core
@@ -84,7 +84,7 @@ id | Nombre de la mazmorra | Idioma
 * Para preguntas y sugerencias, comuníquese a través de Discord: **JKQ#5649**
 
 ## Créditos
-- **[Kasea](https://github.com/tera-toolbox-mods)** - Desarrollador original del módulo Tera-Guide
+- **[Kasea](https://github.com/Kaseaa)** - Desarrollador original del módulo Tera-Guide
 - **[HSDN ](https://github.com/HSDN)** - Autor original del módulo en inglés tera-guide HSDN
 - **[michengs](https://github.com/michengs)** - Autor del código base para la mayoría de las guías y el núcleo del módulo
 - **[ZC](https://github.com/tera-mod)** - Coordenadas proporcionadas para representar las áreas de ataque y la mecánica

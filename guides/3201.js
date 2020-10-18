@@ -3,66 +3,43 @@
 // hecho por michengs
 
 module.exports = (dispatch, handlers, guide, lang) => {
-	let notice = true;
 	let boss = null;
 
 	function secondboss_start_event() {
-		notice = true;
 		boss = null;
 	}
 
 	function secondboss_debuff_event(skillid) {
-		if (skillid === 32010224) { // false debuff (next true)
-			boss = 1;
+		switch (skillid) {
+			case 32010224: // false debuff (next true)
+				boss = 1;
 
-			dispatch.setTimeout(() => {
-				if (boss === 1) {
-					handlers.text({
-						sub_type: "message",
-						message_ES: "Cambiar debuff",
-						message: "Debuff reload"
-					});
-					boss = null;
-				}
-			}, 80000);
-		}
+				dispatch.setTimeout(() => {
+					if (boss === 1) {
+						handlers.text({
+							sub_type: "message",
+							message_ES: "Cambiar debuff",
+							message: "Debuff reload"
+						});
+						boss = null;
+					}
+				}, 80000);
+				break;
 
-		if (skillid === 32010220) { // true debuff (next false)
-			boss = 0;
+				case 32010220: // true debuff (next false)
+				boss = 0;
 
-			dispatch.setTimeout(() => {
-				if (boss === 0){
-					handlers.text({
-						sub_type: "message",
-						message_ES: "Cambiar debuff",
-						message: "Debuff reload"
-					});
-					boss = null;
-				}
-			}, 80000);
-		}
-
-		if ([203, 204].includes(skillid)) {
-			notice = false;
-			dispatch.setTimeout(() => notice = true, 4000);
-
-			dispatch.setTimeout(() => {
-				handlers.text({
-					sub_type: "alert",
-					message_ES: "Debuff proximamente...",
-					message: "Debuff coming soon..."
-				});
-			}, 55000);
-		}
-
-		if (notice && skillid === 234) {
-			dispatch.setTimeout(() => {
-				handlers.text({
-					sub_type: "alert",
-					message_ES: "Debuff proximamente...",
-					message: "Debuff coming soon..."
-				});	
-			}, 55000);
+				dispatch.setTimeout(() => {
+					if (boss === 0) {
+						handlers.text({
+							sub_type: "message",
+							message_ES: "Cambiar debuff",
+							message: "Debuff reload"
+						});
+						boss = null;
+					}
+				}, 80000);
+				break;
 		}
 	}
 
@@ -182,14 +159,12 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"h-3201-2000-76": [{ type: "text", sub_type: "message", message: "75%", message_ES: "75%" }],
 		"s-3201-2000-108-0": [{ type: "text", sub_type: "message", message: "Back Attack!", message_ES: "¡Ataque hacia atras!" }],
 		"s-3201-2000-150-0": [{ type: "text", sub_type: "message", message: "Phantom", message_ES: "Fantasma" }],
-		"s-3201-2000-203-0": [{ type: "func", func: secondboss_debuff_event, args: [203] }],
-		"s-3201-2000-204-0": [{ type: "func", func: secondboss_debuff_event, args: [204] }],
 		"am-3201-320126-32010224": [
-			{ type: "text", sub_type: "alert", message: "Next True", message_ES: "Siguiente Verdadero" },
+			{ type: "text", sub_type: "alert", delay: 52000, message: "True Debuff in 5 seconds", message_ES: "Debuff Verdadero en 5 segundos" },
 			{ type: "func", func: secondboss_debuff_event, args: [32010224] }
 		],
 		"am-3201-2000-32010220": [
-			{ type: "text", sub_type: "alert", message: "Next False", message_ES: "Siguiente Falso" },
+			{ type: "text", sub_type: "alert", delay: 52000, message: "False Debuff in 5 seconds", message_ES: "Debuff Falso en 5 segundos" },
 			{ type: "func", func: secondboss_debuff_event, args: [32010220] }
 		],
 		"s-3201-2000-228-0": [ 
@@ -206,7 +181,6 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 300, 0, 3000] },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 3, 1000, 0, 3000] }
 		],
-		"s-3201-2000-234-0": [{ type: "func", func: secondboss_debuff_event, args: [234] }],
 		"s-3201-2000-236-0": [{ type: "text", sub_type: "message", message: "Counter", message_ES: "Ataque hacia adelante (Byte)" }],
 	};
 };
