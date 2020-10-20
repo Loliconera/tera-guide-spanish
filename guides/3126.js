@@ -12,8 +12,6 @@ module.exports = (dispatch, handlers, guide, lang) => {
 	let timer1 = null;
 	let timer2 = null;
 	let timer3 = null;
-	let timer4 = null;
-	let timer5 = null;
 	let boss_ent = null;
 	let boss_offset = 0;
 	let qbacting = null;
@@ -68,16 +66,6 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 		timer1 = dispatch.setTimeout(() => {
 			if (debuff != null) {
-				handlers.text({
-					sub_type: "message",
-					message: "Debuff 20 seconds",
-					message_ES: "Debuff 20 segundos"
-				});
-			}
-		}, 50000);
-
-		timer2 = dispatch.setTimeout(() => {
-			if (debuff != null) {
 				dispatch.setTimeout(() => {
 					handlers.text({
 						sub_type: "alert",
@@ -87,23 +75,13 @@ module.exports = (dispatch, handlers, guide, lang) => {
 				}, 2000);
 				handlers.text({
 					sub_type: "message",
-					message: "Debuff 50 seconds",
-					message_ES: "Debuff 50 segundos"
-				});
-			}
-		}, 70000);
-
-		timer3 = dispatch.setTimeout(() => {
-			if (debuff != null) {
-				handlers.text({
-					sub_type: "message",
 					message: "Warning! Debuff 15 seconds",
 					message_ES: "¡Advertencia! Debuff 15 segundos"
 				});
 			}
-		}, 55000);
+		}, 40000);
 
-		timer4 = dispatch.setTimeout(() => {
+		timer2 = dispatch.setTimeout(() => {
 			if (debuff != null) {
 				handlers.text({
 					sub_type: "message",
@@ -111,9 +89,9 @@ module.exports = (dispatch, handlers, guide, lang) => {
 					message_ES: "¡Advertencia! Debuff 10 segundos"
 				});
 			}
-		}, 60000);
+		}, 45000);
 
-		timer5 = dispatch.setTimeout(() => {
+		timer3 = dispatch.setTimeout(() => {
 			if (debuff != null) {
 				handlers.text({
 					sub_type: "message",
@@ -121,7 +99,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 					message_ES: "¡Advertencia! Debuff 5 segundos"
 				});
 			}
-		}, 65000);
+		}, 50000);
 
 		if (blue) {
 			handlers.text({
@@ -147,8 +125,6 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		dispatch.clearTimeout(timer1);
 		dispatch.clearTimeout(timer2);
 		dispatch.clearTimeout(timer3);
-		dispatch.clearTimeout(timer4);
-		dispatch.clearTimeout(timer5);
 	}
 
 	function skilld_event(skillid, ent) {
