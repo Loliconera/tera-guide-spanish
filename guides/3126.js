@@ -79,7 +79,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 					message_ES: "¡Advertencia! Debuff 15 segundos"
 				});
 			}
-		}, 40000);
+		}, dispatch._mod.majorPatchVersion >= 99 ? 40000 : 55000);
 
 		timer2 = dispatch.setTimeout(() => {
 			if (debuff != null) {
@@ -89,7 +89,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 					message_ES: "¡Advertencia! Debuff 10 segundos"
 				});
 			}
-		}, 45000);
+		}, dispatch._mod.majorPatchVersion >= 99 ? 45000 : 60000);
 
 		timer3 = dispatch.setTimeout(() => {
 			if (debuff != null) {
@@ -99,7 +99,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 					message_ES: "¡Advertencia! Debuff 5 segundos"
 				});
 			}
-		}, 50000);
+		}, dispatch._mod.majorPatchVersion >= 99 ? 50000 : 65000);
 
 		if (blue) {
 			handlers.text({
@@ -199,7 +199,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 					handlers.text({
 						sub_type: "message",
 						message: (`Ice inside (${qbacting_messages[qbacting].message}) | ${mech_messages[debuff % 2 + 2].message} | ${mech_messages[(qbacting + debuff + 1) % 2].message}`),
-						message_ES: (`Hielo Interior (${qbacting_messages[qbacting].message_ES}) | ${mech_messages[debuff % 2 + 2].message_ES} | ${mech_messages[(qbacting + debuff + 1) % 2].message_ES}`),
+						message_ES: (`Hielo Interior (${qbacting_messages[qbacting].message_ES}) | ${mech_messages[debuff % 2 + 2].message_ES} | ${mech_messages[(qbacting + debuff + 1) % 2].message_ES}`)
 					});
 
 					spawn_marker((qbacting + debuff + 1) % 2);
@@ -364,13 +364,14 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"am-3126-1000-31260067": [{ type: "text", sub_type: "message", message: "[Debuff] Layer 2", message_ES: "[Debuff] 2 apilar" }],
 		"am-3126-1000-31260068": [
 			{ type: "text", sub_type: "message", message: "[Debuff] Layer 3", message_ES: "[Debuff] 3 apilar" },
-			{ type: "text", sub_type: "message", delay: 120000, message: "[Debuff] 2 minutes passed", message_ES: "[Debuff] Han pasado 2 minutos (pilas eliminadas)" }
+			{ type: "text", sub_type: "message", delay: 120000, message: "[Debuff] 2 minutes passed", message_ES: "[Debuff] Han pasado 2 minutos", check_func: () => dispatch._mod.majorPatchVersion >= 99 },
+			{ type: "text", sub_type: "message", delay: 145000, message: "[Debuff] 2.5 minutes passed", message_ES: "[Debuff] Han pasado 2.5 minutos", check_func: () => dispatch._mod.majorPatchVersion < 99 }
 		]
 	};
 
-	let object = {};
+	const object = {};
 
-	for (let [key, value] of Object.entries(skills)) {
+	for (const [key, value] of Object.entries(skills)) {
 		if (key.length === 5) {
 			object[`s-3126-1000-1${key}`] = value;
 			object[`s-3126-1000-2${key}`] = value;
