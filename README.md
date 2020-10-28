@@ -5,6 +5,7 @@ Un módulo de guía para TERA traducido al español. Muestra mensajes en la pant
 
 * [**Inglés (English)** by HSDN](https://github.com/hsdn/tera-guide)
 * [**Portugués (Português)** by Emilia](https://github.com/emilia-s2/Guia-DG-Portugues)
+* [**Taiwanés (臺灣話)** by michengs](https://github.com/michengs/Dungeon-guide)
 
 ## Dependencias
 * **tera-guide-core** - https://github.com/hsdn/tera-guide-core

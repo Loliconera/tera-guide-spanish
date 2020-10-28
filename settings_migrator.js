@@ -35,7 +35,6 @@ const DefaultSettings = {
 };
 
 module.exports = function MigrateSettings(from_ver, to_ver, settings) {
-
 	if (from_ver === undefined) return Object.assign(Object.assign({}, DefaultSettings), settings);
 	else if (from_ver === null) return DefaultSettings;
 	else {
@@ -55,17 +54,16 @@ module.exports = function MigrateSettings(from_ver, to_ver, settings) {
 		switch (to_ver) {
 			case 1.12:
 				for (const option in oldsettings) {
-					if (option == "dungeons") {
+					if (option === "dungeons" && Array.isArray(oldsettings[option])) {
 						settings[option] = {};
 						for (const element of oldsettings[option]) {
-							let id = element.id;
+							const id = element.id;
 							delete element.id;
 							settings[option][id] = element;
 						}
 						continue;
-					} else {
+					} else
 						settings[option] = oldsettings[option];
-					}
 				}
 				return settings;
 
@@ -79,13 +77,12 @@ module.exports = function MigrateSettings(from_ver, to_ver, settings) {
 
 			case 1.15:
 				for (const option in oldsettings) {
-					if (option == "speaks") {
+					if (option === "speaks")
 						settings["speech"]["enabled"] = oldsettings["speaks"];
-					} else if (option == "rate") {
+					else if (option === "rate")
 						settings["speech"]["rate"] = parseInt(oldsettings["rate"]);
-					} else {
+					else
 						settings[option] = oldsettings[option];
-					}
 				}
 				return settings;
 		}
@@ -101,8 +98,8 @@ module.exports = function MigrateSettings(from_ver, to_ver, settings) {
 	function remove(files) {
 		const fs = require("fs"), path = require("path");
 		try {
-			for (let file of files) {
-				let filePath = path.join(__dirname, file);
+			for (const file of files) {
+				const filePath = path.join(__dirname, file);
 				if (fs.existsSync(filePath)) {
 					if (fs.lstatSync(filePath).isDirectory())
 						fs.rmdirSync(filePath);
