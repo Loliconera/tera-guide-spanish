@@ -44,24 +44,24 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-739-2000-303-0": [{ type: "text", sub_type: "message", message: "Whip", message_ES: "Latigo" }],
 
 		// 3 BOSS
-		"nd-739-3000": [
+		"nd-739-3001": [
 			{ type: "stop_timers" },
 			{ type: "despawn_all" }
 		],		
 		"h-739-3001-30": [{ type: "text", sub_type: "message", message: "Reveal soon...", message_ES: "Revelacion pronto..." }],
-		"s-739-3000-201-0": [{ type: "text", sub_type: "message", delay: 3600, message: "Dodge!", message_ES: "¡Iframe!" }],
-		"s-739-3000-107-0": [{ type: "text", sub_type: "message", message: "Many Hits", message_ES: "Muchos Golpes" }],
-		"s-739-3000-115-0": [
+		"s-739-3001-201-0": [{ type: "text", sub_type: "message", delay: 3600, message: "Dodge!", message_ES: "¡Iframe!" }],
+		"s-739-3001-107-0": [{ type: "text", sub_type: "message", message: "Many Hits", message_ES: "Muchos Golpes" }],
+		"s-739-3001-115-0": [
 			{ type: "text", sub_type: "message", delay: 1750, message: "Dodge!", message_ES: "¡Iframe!" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 630, 0, 4000] }
 		],
-		"s-739-3000-118-0": [{ type: "text", sub_type: "message", message: "Scratching", message_ES: "Garras" }],
+		"s-739-3001-118-0": [{ type: "text", sub_type: "message", message: "Scratching", message_ES: "Garras" }],
 		// Revealed Argog
-		"s-739-3000-167-0": [{ type: "text", sub_type: "message", message: "Many Hits", message_ES: "Muchos Golpes" }],
-		"s-739-3000-175-0": [
+		"s-739-3001-167-0": [{ type: "text", sub_type: "message", message: "Many Hits", message_ES: "Muchos Golpes" }],
+		"s-739-3001-175-0": [
 			{ type: "text", sub_type: "message", delay: 1750, message: "Dodge!", message_ES: "¡Iframe!" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 630, 0, 4000] }
 		],
-		"s-739-3000-178-0": [{ type: "text", sub_type: "message", message: "Scratching (bleed)", message_ES: "Garras (sangrar)" }]
+		"s-739-3001-178-0": [{ type: "text", sub_type: "message", message: "Scratching (bleed)", message_ES: "Garras (sangrar)" }]
 	};
 };
