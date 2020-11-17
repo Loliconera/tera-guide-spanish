@@ -1,4 +1,4 @@
-﻿// Sky Cruiser (Difícil)
+﻿// Sky Cruiser Endeavor (Difícil)
 //
 // hecho por michengs
 
@@ -16,22 +16,22 @@ module.exports = (dispatch, handlers, guide, lang) => {
 	let print_mech = true;
 
 	const mech_messages = {
-		0: { message: "Three Split Strikes", message_ES: "Tres golpes divididos" },
-		1: { message: "Four Split Strikes", message_ES: "Cuatro golpes divididos" },
-		2: { message: "Two Split Strikes", message_ES: "Dos golpes divididos" }
+		0: { message: "Three Split Strikes", message_ES: "Tres Ataques Divididos" },
+		1: { message: "Four Split Strikes", message_ES: "Cuatro Ataques Divididos" },
+		2: { message: "Two Split Strikes", message_ES: "Dos Ataques Divididos" }
 	};
 
 	function boss_backattack_event() {
 		dispatch.clearTimeout(timer2);
 		counter++;
-		if (counter >= 2) {
+		if (counter >= 2 && triple_attack) {
 			handlers.text({
 				sub_type: "message",
 				message: "Back Attack",
 				message_ES: "Ataque hacia atras"
 			});
 		}
-		timer2 = dispatch.setTimeout(() => counter = 0, enraged ? 2000 : 2040);
+		timer2 = dispatch.setTimeout(() => counter = 0, enraged ? 2050 : 2140);
 	}
 
 	function start_dungeon_event() {
@@ -62,7 +62,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 				handlers.text({
 					sub_type: "message",
 					message: "End of Enrage",
-					message_ES: "Fin de enfurecer"
+					message_ES: "Fin de Enfurecer"
 				});
 			}
 		}
@@ -74,7 +74,6 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			status_tracker_started = true;
 		}
 
-		step_two = 0;
 		print_mech = true;
 	}
 
@@ -86,7 +85,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 					message_ES: triple_attack ? mech_messages[step_two].message_ES : mech_messages[2].message_ES
 				});
 				print_mech = false;
-				dispatch.setTimeout(() => print_mech = true, 10000);
+				dispatch.setTimeout(() => print_mech = true, triple_attack ? 8000 : 4000);
 			}
 
 			handlers.event([
@@ -144,13 +143,14 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "stop_timers" },
 			{ type: "despawn_all" }
 		],
-		"h-3036-1000-79": [{ type: "text", sub_type: "message", message: "79%" }, { type: "func", func: () => step_two = 1 }],
+		"h-3036-1000-100": [{ type: "func", func: () => step_two = 0 }],
 		"h-3036-1000-94": [{ type: "text", sub_type: "message", message: "94%" }],
+		"h-3036-1000-79": [{ type: "text", sub_type: "message", message: "79%" }, { type: "func", func: () => step_two = 1 }],
 		//
 		"s-3036-1000-1103-0": [{ type: "func", func: boss_backattack_event }],
 		"s-3036-1000-1106-0": [{ type: "func", func: boss_backattack_event }],
 		"s-3036-1000-1112-0": [{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque hacia atras" }],
-		"s-3036-1000-1117-0": [{ type: "text", sub_type: "message", message: "Front", message_ES: "Ataque hacia adelante" }],
+		"s-3036-1000-1117-0": [{ type: "text", sub_type: "message", message: "Front", message_ES: "Ataque frontal" }],
 		"s-3036-1000-1118-0": [{ type: "text", sub_type: "message", message: "Front Cut | Dodge", message_ES: "Corte frontal | Iframe" }],
 		"s-3036-1000-1302-0": [
 			{ type: "text", sub_type: "message", message: "AOE" },
@@ -162,59 +162,23 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3036-1000-1701-0": [{ type: "func", func: skilld_event, args: [1701] }], //right
 		"s-3036-1000-1702-0": [{ type: "func", func: skilld_event, args: [1702] }], //left
 		"s-3036-1000-1805-0": [
-			{ type: "text", sub_type: "message", message: "Between -> In -> All -> Out", message_ES: "Adentro -> Entrar -> Todos -> Salir" },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 20, 50, 0, 1620] }, // in
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 18, 150, 10, 1620] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 16, 250, 0, 1620] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 12, 450, 0, 1620] }, // S out
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 10, 550, 0, 1620] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 8, 650, 0, 1620] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 16, 250, 1620, 900] }, // out
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 14, 350, 1620, 900] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 12, 450, 1620, 900] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 10, 550, 1620, 900] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 8, 650, 1620, 1900] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 20, 50, 2520, 1830] }, // all
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 18, 150, 2520, 1830] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 16, 250, 2520, 1830] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 14, 350, 2520, 1830] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 12, 450, 2520, 1830] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 10, 550, 2520, 1830] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 8, 650, 2520, 1830] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 20, 50, 4350, 2000] }, // in
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 18, 150, 4350, 2000] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 16, 250, 4350, 2000] }
+			{ type: "text", sub_type: "message", message: "Beween", message_ES: "Adentro" },
+			{ type: "text", sub_type: "message", delay: 2150, message: "IN", message_ES: "ENTRAR" },
+			{ type: "text", sub_type: "message", delay: 3050, message: "All | OUT", message_ES: "TODOS | SALIR" },
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 250, 0, 6000] },
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 450, 0, 6000] }
 		],
 		"s-3036-1000-1806-0": [
-			{ type: "text", sub_type: "message", message: "In -> Between -> All -> In", message_ES: "Entrar -> Adentro -> Todos -> Entrar" },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 16, 250, 0, 1620] }, // out
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 14, 350, 0, 1620] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 12, 450, 0, 1620] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 10, 550, 0, 1620] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 8, 650, 0, 1620] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 20, 50, 1620, 900] }, // in
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 18, 150, 1620, 900] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 16, 250, 1620, 900] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 12, 450, 1620, 900] }, // S out
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 10, 550, 1620, 900] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 8, 650, 1620, 900] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 20, 50, 2520, 1830] }, // all
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 18, 150, 2520, 1830] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 16, 250, 2520, 1830] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 14, 350, 2520, 1830] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 12, 450, 2520, 1830] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 10, 550, 2520, 1830] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 8, 650, 2520, 1830] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 16, 250, 4350, 2000] }, // out
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 14, 350, 4350, 2000] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 12, 450, 4350, 2000] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 10, 550, 4350, 2000] },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 8, 650, 4350, 2000] }
+			{ type: "text", sub_type: "message", message: "IN", message_ES: "ENTRAR" },
+			{ type: "text", sub_type: "message", delay: 2150, message: "Beween", message_ES: "Adentro" },
+			{ type: "text", sub_type: "message", delay: 3050, message: "All | IN", message_ES: "TODOS | ENTRAR" },
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 250, 0, 6000] },
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 450, 0, 6000] }
 		],
 		"s-3036-1000-2103-0": [{ type: "func", func: boss_backattack_event }],
 		"s-3036-1000-2106-0": [{ type: "func", func: boss_backattack_event }],
 		"s-3036-1000-2112-0": [{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque hacia atras" }],
-		"s-3036-1000-2117-0": [{ type: "text", sub_type: "message", message: "Front", message_ES: "Ataque hacia adelante" }],
+		"s-3036-1000-2117-0": [{ type: "text", sub_type: "message", message: "Front", message_ES: "Ataque frontal" }],
 		"s-3036-1000-2118-0": [{ type: "text", sub_type: "message", message: "Front Cut | Dodge", message_ES: "Corte frontal | Iframe" }]
 	};
 };
