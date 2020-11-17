@@ -35,7 +35,6 @@ id | Nombre de la mazmorra | Idioma
 9781 | Velik's Sanctuary | Español
 9739 | Red Refuge | Español
 9735 | RK-9 Kennel | Español
-3034 | Rampaging RK-9 Kennel | Español
 9920 | Antaroth's Abyss (Hard) | Español
 9982 | Grotto of Lost Souls (Hard) | Español
 9053 | Kezzel's Gorge | Español
@@ -52,6 +51,7 @@ id | Nombre de la mazmorra | Idioma
 3027 | Forbidden Arena [Hagufna] | Español
 3103 | Forbidden Arena [Undying Warlord] | Español
 3203 | Forbidden Arena [Nightmare Undying Warlord] | Español
+3036 | Sky Cruiser (Hard) | Español
 
 ## Configuración de Mensajes
 
