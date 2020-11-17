@@ -64,7 +64,7 @@ module.exports = {
 			"es": "Escape from Balder's Refuge (Guardian)",
 		},
 		3036: {
-			"es": "Sky Cruiser Endeavor (Dificil)",
+			"es": "Sky Cruiser (Dificil)",
 		},		
 
 };

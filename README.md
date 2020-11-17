@@ -51,7 +51,7 @@ id | Nombre de la mazmorra | Idioma
 3027 | Forbidden Arena [Hagufna] | Español
 3103 | Forbidden Arena [Undying Warlord] | Español
 3203 | Forbidden Arena [Nightmare Undying Warlord] | Español
-3036 | Sky Cruiser Endeavor (Difícil) | Español
+3036 | Sky Cruiser (Difícil) | Español
 
 ## Configuración de Mensajes
 
