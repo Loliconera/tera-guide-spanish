@@ -162,7 +162,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3036-1000-1701-0": [{ type: "func", func: skilld_event, args: [1701] }], //right
 		"s-3036-1000-1702-0": [{ type: "func", func: skilld_event, args: [1702] }], //left
 		"s-3036-1000-1805-0": [
-			{ type: "text", sub_type: "message", message: "Between -> In -> All -> Out", message_ES: "Between -> In -> All -> Out" },
+			{ type: "text", sub_type: "message", message: "Between -> In -> All -> Out", message_ES: "Adentro -> Entrar -> Todos -> Salir" },
 			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 20, 50, 0, 1620] }, // in
 			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 18, 150, 10, 1620] },
 			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 16, 250, 0, 1620] },
@@ -186,7 +186,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 16, 250, 4350, 2000] }
 		],
 		"s-3036-1000-1806-0": [
-			{ type: "text", sub_type: "message", message: "In -> Between -> All -> In", message_ES: "In -> Between -> All -> In" },
+			{ type: "text", sub_type: "message", message: "In -> Between -> All -> In", message_ES: "Entrar -> Adentro -> Todos -> Entrar" },
 			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 16, 250, 0, 1620] }, // out
 			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 14, 350, 0, 1620] },
 			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 12, 450, 0, 1620] },
