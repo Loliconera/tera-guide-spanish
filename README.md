@@ -17,7 +17,7 @@ Toolbox(/8) | Descripción del comando
 --- | ---
 **guide** | Módulo on/off
 **guide&nbsp;gui** | Mostrar módulo GUI
-**guide&nbsp;voice**<br>(defecto: activado) | Mensajes de texto a voz TTS
+**guide&nbsp;voice**<br>(defecto: desactivado) | Mensajes de texto a voz TTS
 **guide&nbsp;lNotice**<br>(defecto: desactivado) | Enviar mensajes en el canal **Chat Notice** en lugar de mensajes en pantalla
 **guide&nbsp;gNotice**<br>(defecto: desactivado) | Enviar mensajes en el canal **Chat Party**
 **guide male~female**<br>(defecto: femenino) | Cambiar el género de voz TTS (si esta disponible)
