@@ -52,6 +52,7 @@ id | Nombre de la mazmorra | Idioma
 3103 | Forbidden Arena [Undying Warlord] | Español
 3203 | Forbidden Arena [Nightmare Undying Warlord] | Español
 3036 | Sky Cruiser (Difícil) | Español
+9056 | Timescape (Difícil) | Español
 
 ## Configuración de Mensajes
 
