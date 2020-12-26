@@ -108,7 +108,12 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 		// Special attacks
 		"s-920-1000-1300-0": [{ type: "text", sub_type: "message", delay: 600, message: "Dodge!", message_ES: "¡Iframe!" }],
-
+		"s-920-1000-1220-0": [{ type: "text", sub_type: "message", message: "AOE", message_ES: "АОЕ" },
+			{ type: "text", sub_type: "message", delay: 2900, message: "Dodge!", message_ES: "¡Iframe!" }
+		],
+		"s-920-1000-2220-0": [{ type: "text", sub_type: "message", message: "AOE", message_ES: "АОЕ" },
+			{ type: "text", sub_type: "message", delay: 2900, message: "Dodge!", message_ES: "¡Iframe!" }
+		],
 
 		// 2 BOSS
 
