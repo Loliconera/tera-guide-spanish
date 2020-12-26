@@ -14,13 +14,13 @@ module.exports = (dispatch, handlers, guide, lang) => {
 				if (!thirdboss_fifty) {
 					handlers.text({
 						sub_type: "notification",
-						message: "Debuffs > Círculos > Bombas",
+						message: "Debuffs > Circles > Bombs",
 						message_ES: "Debuffs > Círculos > Bombas"
 					});
 				} else {
 					handlers.text({
 						sub_type: "notification",
-						message: "Debuffs > Bombas > Círculos",
+						message: "Debuffs > Bombs > Circles",
 						message_ES: "Debuffs > Bombas > Círculos"
 					});
 				}
@@ -30,13 +30,13 @@ module.exports = (dispatch, handlers, guide, lang) => {
 				if (!thirdboss_fifty) {
 					handlers.text({
 						sub_type: "notification",
-						message: "Círculos > Bombas > Debuffs",
+						message: "Circles > Bombs > Debuffs",
 						message_ES: "Círculos > Bombas > Debuffs"
 					});
 				} else {
 					handlers.text({
 						sub_type: "notification",
-						message: "Círculos > Debuffs > Bombas",
+						message: "Circles > Debuffs > Bombs",
 						message_ES: "Círculos > Debuffs > Bombas"
 					});
 				}
@@ -46,13 +46,13 @@ module.exports = (dispatch, handlers, guide, lang) => {
 				if (!thirdboss_fifty) {
 					handlers.text({
 						sub_type: "notification",
-						message: "Bombas > Debuffs > Círculos",
+						message: "Bombs > Debuffs > Circles",
 						message_ES: "Bombas > Debuffs > Círculos"
 					});
 				} else {
 					handlers.text({
 						sub_type: "notification",
-						message: "Bombas > Círculos > Debuffs",
+						message: "Bombs > Circles > Debuffs",
 						message_ES: "Bombas > Círculos > Debuffs"
 					});
 				}
