@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // Cadenas disponibles para idiomas adicionales
 // Si no se encuentra ningún idioma, se mostrará el idioma predeterminado (inglés)
@@ -33,7 +33,7 @@ module.exports.general = {
 			["guide clb, el color del mensaje es AZUL CLARO", "CLBMSG"],
 			["guide cbl, el color del mensaje es NEGRO", "CBLMSG"],
 			["guide cgr, el color del mensaje es GRIS", "CGRMSG"],
-			["guide cw, el color del mensaje es BLANCO", "CWMSG"],
+			["guide cw, el color del mensaje es BLANCO", "CWMSG"]
 		],
 		red: "Rojo",
 		green: "Verde",
@@ -60,7 +60,7 @@ module.exports.general = {
 		dgnotfound: "Mazmorra no encontrada.",
 		dgnotspecified: "ID de mazmorra no especificada.",
 		enterdg: "¡Bienvenido! a la Mazmorra",
-		fordungeon: "para mazmorra",
-	},	
+		fordungeon: "para mazmorra"
+	}
 
 };

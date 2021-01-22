@@ -32,27 +32,19 @@ Toolbox(/8) | Descripción del comando
 ## Mazmorras Compatibles
 id | Nombre de la mazmorra | Idioma
 --- | --- | ---
-9781 | Velik's Sanctuary | Español
-9739 | Red Refuge | Español
-9735 | RK-9 Kennel | Español
-9920 | Antaroth's Abyss (Difícil) | Español
-9982 | Grotto of Lost Souls (Difícil) | Español
-9053 | Kezzel's Gorge | Español
 9044 | Bahaar's Sanctum | Español
 7011 | Shadow of the Gutrends (Guardian) | Español
 7015 | Escape from Balder's Refuge (Guardian) | Español
-3201 | Gossamer Vault (Difícil) | Español
 3023 | Akalath Quarantine | Español
 3020 | Sea of Honor | Español
 3026 | Corrupted Skynest | Español
 3126 | Corrupted Skynest (Difícil) | Español
+3101 | Gossamer Vault | Español
 3102 | Draakon Arena | Español
-3202 | Draakon Arena (Difícil) | Español
-3027 | Forbidden Arena [Hagufna] | Español
 3103 | Forbidden Arena [Undying Warlord] | Español
-3203 | Forbidden Arena [Nightmare Undying Warlord] | Español
-3036 | Sky Cruiser (Difícil) | Español
-9056 | Timescape (Difícil) | Español
+9970 | Ruinous Manor (Difícil) | Español
+3104 | Catalepticon | Español
+3204 | Catalepticon (Difícil) | Español
 
 ## Configuración de Mensajes
 

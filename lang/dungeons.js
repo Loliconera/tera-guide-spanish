@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // Nombres de mazmorras
 module.exports = {
@@ -58,16 +58,13 @@ module.exports = {
 			"es": "Kezzel's Gorge (5-Person)"
 		},
 		7011: {
-			"es": "Shadow of the Gutrends (Guardian)",
+			"es": "Shadow of the Gutrends (Guardian)"
 		},
 		7015: {
-			"es": "Escape from Balder's Refuge (Guardian)",
+			"es": "Escape from Balder's Refuge (Guardian)"
 		},
 		3036: {
-			"es": "Sky Cruiser (Dificil)",
-		},	
-		9056: {
-			"es": "Timescape (Dificil)",
+			"es": "Sky Cruiser (Dificil)"
 		},			
 
 };
