@@ -42,6 +42,7 @@ id | Nombre de la mazmorra | Idioma
 3101 | Gossamer Vault | Español
 3102 | Draakon Arena | Español
 3103 | Forbidden Arena [Undying Warlord] | Español
+9770 | Ruinous Manor | Español
 9970 | Ruinous Manor (Difícil) | Español
 3104 | Catalepticon | Español
 3204 | Catalepticon (Difícil) | Español

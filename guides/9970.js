@@ -1,59 +1,50 @@
 // Ruinous Manor (Difícil)
 //
-// WIP
+// hecha por Emilia-s2 / HSDN
 
 module.exports = (dispatch, handlers, guide, lang) => {
 	guide.type = SP;
 
 	return {
-
 		// 3 BOSS
-		
 		"nd-970-3000": [
 			{ type: "stop_timers" },
 			{ type: "despawn_all" }
 		],
-
-
-		"s-970-3000-1102-0": [{ "type": "text", "sub_type": "message", "message_ES": "Mano Izquierda", "message": "Left Hand" }],
-		"s-970-3000-2102-0": [{ "type": "text", "sub_type": "message", "message_ES": "Mano Izquierda", "message": "Left Hand" }],
-
-		// Right Hand
-		"s-970-3000-1101-0": [{ "type": "text", "sub_type": "message", "message_ES": "Mano Derecha", "message": "Right Hand" }],
-		"s-970-3000-2101-0": [{ "type": "text", "sub_type": "message", "message_ES": "Mano Derecha", "message": "Right Hand" }],
-
-		// Tail Slam
-		"s-970-3000-1103-0": [{ "type": "text", "sub_type": "message", "message_ES": "Golpe de cola", "message": "Tail Slam" }],
-		"s-970-3000-2103-0": [{ "type": "text", "sub_type": "message", "message_ES": "Golpe de cola", "message": "Tail Slam" }],
-
-		// FATE Avoid Circles
-		"s-970-3000-1301-0": [{ "type": "text", "sub_type": "message", "message_ES": "Evita los Círculos", "message": "FATE Avoid Circles" }],
-
-		// Tail AOE (jump in front)
-		"s-970-3000-2110-0": [{ "type": "text", "sub_type": "message", "message_ES": "Coletaso AOE (saltar al frente)", "message": "Tail AOE (jump in front)" }],
-		"s-970-3000-1110-0": [{ "type": "text", "sub_type": "message", "message_ES": "Coletaso AOE (saltar al frente)", "message": "Tail AOE (jump in front)" }],
-
-		// Get Ready! (for in out mechanic)
-		"s-970-3000-1304-0": [{ "type": "text", "sub_type": "message", "message_ES": "¡Prepárate! (PARA LA MECANICA)", "message": "Get Ready! (for in out mechanic)" }],
-		"s-970-3000-1303-0": [{ "type": "text", "sub_type": "message", "message_ES": "¡Prepárate! (PARA LA MECANICA)", "message": "Get Ready! (for in out mechanic)" }],
-
-		// GO OUT then come in
-		"s-970-3000-2113-0": [{ "type": "text", "sub_type": "message", "message_ES": "Salir > Entrar", "message": "Out > In" }, { "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 15, 300, 0, 5000] }],
-		"s-970-3000-1113-0": [{ "type": "text", "sub_type": "message", "message_ES": "Salir > Entrar", "message": "Out > In" }, { "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 15, 300, 0, 5000] }],
-
-		// STAY IN then go out
-		"s-970-3000-2116-0": [{ "type": "text", "sub_type": "message", "message_ES": "Entrar > Salir", "message": " In > Out" }, { "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 15, 300, 0, 5000] }],
-		"s-970-3000-1116-0": [{ "type": "text", "sub_type": "message", "message_ES": "Entrar > Salir", "message": " In > Out" }, { "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 15, 300, 0, 5000] }],
-
-		// GET RED SKULL
-		"s-970-3000-1318-0": [{ "type": "text", "sub_type": "message", "message_ES": "¡Consigue una Calavera Roja!", "message": "Get red skull!" }],
-		"s-970-3000-1317-0": [{ "type": "text", "sub_type": "message", "message_ES": "¡Consigue una Calavera Roja!", "message": "Get red skull!" }],
-		"s-970-3000-1319-0": [{ "type": "text", "sub_type": "message", "message_ES": "¡Consigue una Calavera Roja!", "message": "Get red skull!" }],
-
-		// DODGE the PATTERNS
-		"s-970-3000-1322-0": [{ "type": "text", "sub_type": "message", "message_ES": "¡ESQUIVA LOS PATRONES!", "message": "DODGE the PATTERNS!" }],
-
-		// GATHER FOR CLEANSE
-		"s-970-3000-1311-0": [{ "type": "text", "sub_type": "message", "message_ES": "¡REUNETE PARA CLEANSE!", "message": "GATHER FOR CLEANSE!" }]
+		"s-970-3000-1102-0": [{ "type": "text", "sub_type": "message", "message": "Left Hand", "message_ES": "Mano Izquierda" }],
+		"s-970-3000-2102-0": [{ "type": "text", "sub_type": "message", "message": "Left Hand", "message_ES": "Mano Izquierda" }],
+		"s-970-3000-1101-0": [{ "type": "text", "sub_type": "message", "message": "Right Hand", "message_ES": "Mano Derecha" }],
+		"s-970-3000-2101-0": [{ "type": "text", "sub_type": "message", "message": "Right Hand", "message_ES": "Mano Derecha" }],
+		"s-970-3000-1103-0": [{ "type": "text", "sub_type": "message", "message": "Tail Slam", "message_ES": "Coletazo" }],
+		"s-970-3000-2103-0": [{ "type": "text", "sub_type": "message", "message": "Tail Slam", "message_ES": "Coletazo" }],
+		"s-970-3000-1301-0": [{ "type": "text", "sub_type": "message", "message": "FATE Avoid Circles", "message_ES": "Círculos" }],
+		"s-970-3000-1302-0": [{ "type": "text", "sub_type": "message", "message": "FATE Avoid Circles", "message_ES": "Círculos" }],
+		"s-970-3000-2110-0": [{ "type": "text", "sub_type": "message", "message": "Tail AOE (jump in front)", "message_ES": "Coletazo АОЕ (salto frontal)" }],
+		"s-970-3000-1110-0": [{ "type": "text", "sub_type": "message", "message": "Tail AOE (jump in front)", "message_ES": "Coletazo АОЕ (salto frontal)" }],
+		"s-970-3000-1304-0": [{ "type": "text", "sub_type": "message", "message": "Get Ready! (for in out mechanic)", "message_ES": "¡PREPÁRATE PARA LA MECÁNICA!" }],
+		"s-970-3000-1303-0": [{ "type": "text", "sub_type": "message", "message": "Get Ready! (for in out mechanic)", "message_ES": "¡PREPÁRATE PARA LA MECÁNICA!" }],
+		"s-970-3000-2113-0": [
+			{ "type": "text", "sub_type": "message", "message": "Out > In", "message_ES": "SALIR > ENTRAR" },
+			{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 15, 300, 0, 5000] }
+		],
+		"s-970-3000-1113-0": [
+			{ "type": "text", "sub_type": "message", "message": "Out > In", "message_ES": "SALIR > ENTRAR" },
+			{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 15, 300, 0, 5000] }
+		],
+		"s-970-3000-2116-0": [
+			{ "type": "text", "sub_type": "message", "message": "In > Out", "message_ES": "ENTRAR > SALIR" },
+			{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 15, 300, 0, 5000] }
+		],
+		"s-970-3000-1116-0": [
+			{ "type": "text", "sub_type": "message", "message": "In > Out", "message_ES": "ENTRAR > SALIR" },
+			{ "type": "spawn_func", "func": "circle", "args": [false, 553, 0, 0, 15, 300, 0, 5000] }
+		],
+		"s-970-3000-1318-0": [{ "type": "text", "sub_type": "message", "message": "Get red skull!", "message_ES": "¡Conseguir el CRÁNEO ROJO!" }],
+		"s-970-3000-1317-0": [{ "type": "text", "sub_type": "message", "message": "Get red skull!", "message_ES": "¡Conseguir el CRÁNEO ROJO!" }],
+		"s-970-3000-1319-0": [{ "type": "text", "sub_type": "message", "message": "Get red skull!", "message_ES": "¡Conseguir el CRÁNEO ROJO!" }],
+		"s-970-3000-1322-0": [{ "type": "text", "sub_type": "message", "message": "DODGE the PATTERNS!", "message_ES": "¡Iframe!" }],
+		"s-970-3000-1311-0": [{ "type": "text", "sub_type": "message", "message": "GATHER FOR CLEANSE!", "message_ES": "¡Cleanse!" }],
+		"s-970-3000-1120-0": [{ type: "text", sub_type: "message", message: "Shooting skulls", message_ES: "Disparar cráneos" }],
+		"s-970-3000-2120-0": [{ type: "text", sub_type: "message", message: "Shooting skulls", message_ES: "Disparar cráneos" }]
 	};
 };
