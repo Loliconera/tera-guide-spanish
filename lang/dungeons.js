@@ -16,16 +16,16 @@ module.exports = {
 			"es": "Rampaging RK-9 Kennel"
 		},
 		9920: {
-			"es": "Antaroth's Abyss (Dificil)"
+			"es": "Antaroth's Abyss (Difícil)"
 		},
 		 9982: {
-			"es": "Grotto of Lost Souls (Dificil)"
+			"es": "Grotto of Lost Souls (Difícil)"
 		},
 		9044: {
 			"es": "Bahaar's Sanctum"
 		},
 		3201: {
-			"es": "Gossamer Vault (Dificil)"
+			"es": "Gossamer Vault (Difícil)"
 		},
 		3023: {
 			"es": "Akalath Quarantine"
@@ -37,13 +37,13 @@ module.exports = {
 			"es": "Corrupted Skynest"
 		},
 		3126: {
-			"es": "Corrupted Skynest (Dificil)"
+			"es": "Corrupted Skynest (Difícil)"
 		},
 		3102: {
 			"es": "Draakon Arena"
 		},
 		3202: {
-			"es": "Draakon Arena (Dificil)"
+			"es": "Draakon Arena (Difícil)"
 		},
 		3027: {
 			"es": "Forbidden Arena [Hagufna]"
@@ -64,7 +64,25 @@ module.exports = {
 			"es": "Escape from Balder's Refuge (Guardian)"
 		},
 		3036: {
-			"es": "Sky Cruiser (Dificil)"
-		},			
+			"es": "Sky Cruiser (Difícil)"
+		},
+		9770: {		
+			"es": "Ruinous Manor"
+		},
+		9970: {
+			"es": "Ruinous Manor (Difícil)"
+		},
+		3101: {
+			"es": "Gossamer Vault"
+		},
+		3104: {
+			"es": "Catalepticon"
+		},
+		3204: {
+			"es": "Catalepticon (Difícil)"
+		},
+		3037: {
+			"es": "Bahaar's (Practica)"
+		}
 
 };
