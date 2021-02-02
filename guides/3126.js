@@ -199,7 +199,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 					handlers.text({
 						sub_type: "message",
 						message: (`Ice inside (${qbacting_messages[qbacting].message}) | ${mech_messages[debuff % 2 + 2].message} | ${mech_messages[(qbacting + debuff + 1) % 2].message}`),
-						message_ES: (`Hielo Interior (${qbacting_messages[qbacting].message_ES}) | ${mech_messages[debuff % 2 + 2].message_ES} | ${mech_messages[(qbacting + debuff + 1) % 2].message_ES}`)
+						message_ES: (`Hielo Interno (${qbacting_messages[qbacting].message_ES}) | ${mech_messages[debuff % 2 + 2].message_ES} | ${mech_messages[(qbacting + debuff + 1) % 2].message_ES}`)
 					});
 
 					spawn_marker((qbacting + debuff + 1) % 2);
@@ -207,7 +207,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 					handlers.text({
 						sub_type: "message",
 						message: (`Ice inside (${qbacting_messages[qbacting].message})`),
-						message_ES: (`Hielo Interior (${qbacting_messages[qbacting].message_ES})`)
+						message_ES: (`Hielo Interno (${qbacting_messages[qbacting].message_ES})`)
 					});
 				}
 			}, 500);
@@ -229,7 +229,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 					handlers.text({
 						sub_type: "message",
 						message: (`Fire inside (${qbacting_messages[qbacting].message}) | ${mech_messages[debuff % 2 + 2].message} | ${mech_messages[(qbacting + debuff) % 2].message}`),
-						message_ES: (`Fuego Interior (${qbacting_messages[qbacting].message_ES}) | ${mech_messages[debuff % 2 + 2].message_ES} | ${mech_messages[(qbacting + debuff) % 2].message_ES}`)
+						message_ES: (`Fuego Interno (${qbacting_messages[qbacting].message_ES}) | ${mech_messages[debuff % 2 + 2].message_ES} | ${mech_messages[(qbacting + debuff) % 2].message_ES}`)
 					});
 
 					spawn_marker((qbacting + debuff) % 2);
@@ -237,7 +237,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 					handlers.text({
 						sub_type: "message",
 						message: (`Fire inside (${qbacting_messages[qbacting].message})`),
-						message_ES: (`Fuego Interior (${qbacting_messages[qbacting].message_ES})`)
+						message_ES: (`Fuego Interno (${qbacting_messages[qbacting].message_ES})`)
 					});
 				}
 			}, 500);
@@ -285,14 +285,14 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"145-0": [{ type: "text", sub_type: "message", message: "Stun", message_ES: "Stun" }],
 		"157-0": [{ type: "text", sub_type: "message", message: "Change", message_ES: "Cambio" }],
 		"103-0": [
-			{ type: "text", sub_type: "message", message: "Tail (Flying)", message_ES: "Coletazo (Volar)" },
+			{ type: "text", sub_type: "message", message: "Tail (Flying)", message_ES: "Coletazo hacia atrás (Iframe)" },
 			{ type: "text", sub_type: "message", message: "Arise!", message_ES: "¡Arise!", delay: 1500, class_position: "priest" },
 			{ type: "spawn", func: "semicircle", args: [140, 260, 912, 0, 0, 10, 500, 0, 2000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 0, 135, 500, 0, 2000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 0, 260, 500, 0, 2000] }
 		],
 		"153-0": [
-			{ type: "text", sub_type: "message", message: "Tail (Flying)", message_ES: "Coletazo (Volar)" },
+			{ type: "text", sub_type: "message", message: "Tail (Flying)", message_ES: "Coletazo hacia atrás (Iframe)" },
 			{ type: "text", sub_type: "message", message: "Arise!", message_ES: "¡Arise!", delay: 1500, class_position: "priest" },
 			{ type: "spawn", func: "semicircle", args: [140, 260, 912, 0, 0, 10, 500, 0, 2000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 0, 135, 500, 0, 2000] },
@@ -325,7 +325,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", delay: 1200, message: "Dodge", message_ES: "Iframe" }
 		],
 
-		"206-0": [{ type: "text", sub_type: "message", message: "Jump Back", message_ES: "Saltar hacia atras" }],
+		"206-0": [{ type: "text", sub_type: "message", message: "Jump Back", message_ES: "Salto hacia atrás" }],
 		"206-2": [{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 15, 350, 0, 3000] }],
 		"164-0": [{ type: "text", sub_type: "message", message: "Die (100%)", message_ES: "R.I.P (100%)" }],
 		"165-0": [{ type: "text", sub_type: "message", message: "Die (0%)", message_ES: "R.I.P (0%)" }],
