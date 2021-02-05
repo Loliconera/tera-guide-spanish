@@ -13,7 +13,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3101-1000-104-0": [{ type: "text", class_position: "tank", sub_type: "message", message: "Stun Frontal", message_ES: "Stun (Tank)" }],
 		"s-3101-1000-112-0": [{ type: "text", sub_type: "message", message: "Left + Right", message_ES: "Izquierda + Derecha" }],
 		"s-3101-1000-139-0": [
-			{ type: "text", sub_type: "message", message: "Back + Front (Fast)", message_ES: "Atrás + Adelante (Rápido)" },
+			{ type: "text", sub_type: "message", message: "Back + Front (Fast)", message_ES: "Ataque hacia Atrás + Adelante (Rápido)" },
 			{ type: "spawn", func: "vector", args: [553, 2, 0, 70, 800, 0, 2500] },
 			{ type: "spawn", func: "vector", args: [553, 2, 0, 110, 800, 0, 2500] },
 			{ type: "spawn", func: "vector", args: [553, 2, 0, 250, 800, 0, 2500] },
@@ -26,7 +26,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [553, 270, 139, -173, 800, 0, 2000] }
 		],
 		"s-3101-1000-131-0": [
-			{ type: "text", sub_type: "message", message: "Back Wave (Fast)", message_ES: "Ola hacia atrás (Rápido)" },
+			{ type: "text", sub_type: "message", message: "Back Wave (Fast)", message_ES: "Ataque hacia atrás (Rápido)" },
 			{ type: "spawn", func: "vector", args: [553, 0, 100, 112, 800, 0, 2000] },
 			{ type: "spawn", func: "vector", args: [553, 0, 100, -112, 800, 0, 2000] }
 		],
@@ -36,7 +36,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", delay: 1400, message: "Dodge!", message_ES: "¡Iframe!" }
 		],
 		"s-3101-1000-138-0": [
-			{ type: "text", sub_type: "message", message: "Jump P (Fast)", message_ES: "Saltar P (Rápido)" },
+			{ type: "text", sub_type: "message", message: "Jump P (Fast)", message_ES: "Saltar (Rápido)" },
 			{ type: "text", sub_type: "message", delay: 1400, message: "Dodge!", message_ES: "¡Iframe!" }
 		],
 		"s-3101-1000-148-0": [
@@ -64,7 +64,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"h-3101-2000-81": [{ type: "text", sub_type: "message", message: "80%", message_ES: "80%" }],
 		"h-3101-2000-76": [{ type: "text", sub_type: "message", message: "75%", message_ES: "70%" }],
-		"s-3101-2000-108-0": [{ type: "text", sub_type: "message", message: "Back Attack!", message_ES: "¡Ataque hacia atrás!" }],
+		"s-3101-2000-108-0": [{ type: "text", sub_type: "message", message: "Back Attack!", message_ES: "Ataque hacia adelante + Ataque hacia atrás" }],
 		"s-3101-2000-150-0": [{ type: "text", sub_type: "message", message: "Phantom", message_ES: "Fantasma" }],
 		"s-3101-2000-228-0": [{ type: "text", sub_type: "message", message: "Team Up", message_ES: "¡¡REUNETE!!" }],
 		"s-3101-2000-230-0": [

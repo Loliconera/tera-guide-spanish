@@ -19,8 +19,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-970-3000-2103-0": [{ "type": "text", "sub_type": "message", "message": "Tail Slam", "message_ES": "Coletazo hacia atrás" }],
 		"s-970-3000-1301-0": [{ "type": "text", "sub_type": "message", "message": "FATE Avoid Circles", "message_ES": "Círculos (Evadir)" }],
 		"s-970-3000-1302-0": [{ "type": "text", "sub_type": "message", "message": "FATE Avoid Circles", "message_ES": "Círculos (Evadir)" }],
-		"s-970-3000-2110-0": [{ "type": "text", "sub_type": "message", "message": "Tail AOE (jump in front)", "message_ES": "Coletazo АОЕ" }],
-		"s-970-3000-1110-0": [{ "type": "text", "sub_type": "message", "message": "Tail AOE (jump in front)", "message_ES": "Coletazo АОЕ" }],
+		"s-970-3000-2110-0": [{ "type": "text", "sub_type": "message", "message": "Tail AOE (jump in front)", "message_ES": "Coletazo АОЕ (saltar al frente)" }],
+		"s-970-3000-1110-0": [{ "type": "text", "sub_type": "message", "message": "Tail AOE (jump in front)", "message_ES": "Coletazo АОЕ (saltar al frente)" }],
 		"s-970-3000-1304-0": [{ "type": "text", "sub_type": "message", "message": "Get Ready! (for in out mechanic)", "message_ES": "¡PREPÁRATE PARA LA MECÁNICA!" }],
 		"s-970-3000-1303-0": [{ "type": "text", "sub_type": "message", "message": "Get Ready! (for in out mechanic)", "message_ES": "¡PREPÁRATE PARA LA MECÁNICA!" }],
 		"s-970-3000-2113-0": [
