@@ -64,7 +64,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"h-3101-2000-81": [{ type: "text", sub_type: "message", message: "80%", message_ES: "80%" }],
 		"h-3101-2000-76": [{ type: "text", sub_type: "message", message: "75%", message_ES: "70%" }],
-		"s-3101-2000-108-0": [{ type: "text", sub_type: "message", message: "Back Attack!", message_ES: "Ataque hacia adelante + Ataque hacia atrás" }],
+		"s-3101-2000-108-0": [{ type: "text", sub_type: "message", message: "Back Attack!", message_ES: "Ataque Frontal | Atrás" }],
 		"s-3101-2000-150-0": [{ type: "text", sub_type: "message", message: "Phantom", message_ES: "Fantasma" }],
 		"s-3101-2000-228-0": [{ type: "text", sub_type: "message", message: "Team Up", message_ES: "¡¡REUNETE!!" }],
 		"s-3101-2000-230-0": [
