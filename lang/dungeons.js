@@ -82,7 +82,7 @@ module.exports = {
 			"es": "Catalepticon (Difícil)"
 		},
 		3037: {
-			"es": "Bahaar's (Practica)"
+			"es": "Bahaar's Sanctum (Practica)"
 		}
 
 };

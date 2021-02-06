@@ -33,6 +33,7 @@ Toolbox(/8) | Descripción del comando
 id | Nombre de la mazmorra | Idioma
 --- | --- | ---
 9044 | Bahaar's Sanctum | Español
+3037 | Bahaar's Sanctum (Practica) | Español
 7011 | Shadow of the Gutrends (Guardian) | Español
 7015 | Escape from Balder's Refuge (Guardian) | Español
 3023 | Akalath Quarantine | Español
