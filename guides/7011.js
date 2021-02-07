@@ -8,7 +8,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "stop_timers" },
 			{ type: "despawn_all" }
 		],
-		"s-622-1000-206-0": [{ type: "text", sub_type: "message", message: "Jump Back", message_ES: "Salto hacia atras" }],
+		"s-622-1000-206-0": [{ type: "text", sub_type: "message", message: "Jump Back", message_ES: "Salto hacia atrás" }],
 		"s-622-1000-108-1": [{ type: "text", sub_type: "message", message: "Jump Forward", message_ES: "Salto hacia adelante" }],
 		"s-622-1000-120-0": [
 			{ type: "text", sub_type: "message", message: "Right Hand", message_ES: "Mano derecha", class_position: "tank"},

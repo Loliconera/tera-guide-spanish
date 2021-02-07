@@ -42,8 +42,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-970-3000-1318-0": [{ "type": "text", "sub_type": "message", "message": "Get red skull!", "message_ES": "¡Conseguir el CRÁNEO ROJO!" }],
 		"s-970-3000-1317-0": [{ "type": "text", "sub_type": "message", "message": "Get red skull!", "message_ES": "¡Conseguir el CRÁNEO ROJO!" }],
 		"s-970-3000-1319-0": [{ "type": "text", "sub_type": "message", "message": "Get red skull!", "message_ES": "¡Conseguir el CRÁNEO ROJO!" }],
-		"s-970-3000-1322-0": [{ "type": "text", "sub_type": "message", "message": "DODGE the PATTERNS!", "message_ES": "¡Iframe!" }],
-		"s-970-3000-1311-0": [{ "type": "text", "sub_type": "message", "message": "GATHER FOR CLEANSE!", "message_ES": "¡Cleanse!" }],
+		"s-970-3000-1322-0": [{ "type": "text", "sub_type": "message", "message": "DODGE the PATTERNS!", "message_ES": "¡Iframe! los PATRONES!" }],
+		"s-970-3000-1311-0": [{ "type": "text", "sub_type": "message", "message": "GATHER FOR CLEANSE!", "message_ES": "¡REUNIRSE PARA EL CLEANSE!" }],
 		"s-970-3000-1120-0": [{ type: "text", sub_type: "message", message: "Shooting skulls", message_ES: "Laser Cráneos" }],
 		"s-970-3000-2120-0": [{ type: "text", sub_type: "message", message: "Shooting skulls", message_ES: "Laser Cráneos" }]
 	};

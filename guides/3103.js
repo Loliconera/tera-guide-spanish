@@ -18,13 +18,13 @@ module.exports = (dispatch, handlers, guide, lang) => {
 				handlers.text({
 					sub_type: "message",
 					message: "Haymaker",
-					message_ES: "Punetazo"
+					message_ES: "Puñetazo"
 				});
 			} else { // 116 -> 146
 				handlers.text({
 					sub_type: "message",
 					message: "Haymaker | Back Kick",
-					message_ES: "Punetazo | Patada hacia atras"
+					message_ES: "Puñetazo | Patada hacia atrás"
 				});
 			}
 		}
@@ -77,15 +77,15 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		//"s-3103-1000-154-0": [{ type: "text", sub_type: "message", message: "Jumping Kick", message_ES: "Patada в прыжке" }], // 154 310 116
 		// 310 116
 		"s-3103-1000-310-0": [
-			{ type: "text", sub_type: "message", message: "Back Flip | Haymaker", message_ES: "Salto hacia atras | Punetazo" },
+			{ type: "text", sub_type: "message", message: "Back Flip | Haymaker", message_ES: "Salto hacia atrás | Puñetazo" },
 			{ type: "func", func: back_kick_event, args: [310] }
 		],
 		"s-3103-1000-116-0": [{ type: "func", func: back_kick_event, args: [116] }], // Haymaker
-		"s-3103-1000-115-0": [{ type: "text", sub_type: "message", message: "Haymaker (Tank)", message_ES: "Punetazo (Tank)" }],
+		"s-3103-1000-115-0": [{ type: "text", sub_type: "message", message: "Haymaker (Tank)", message_ES: "Puñetazo (Tank)" }],
 		"s-3103-1000-131-0": [{ type: "text", sub_type: "message", message: "Rhythmic Blows", message_ES: "Golpes Ritmicos" }], // 131 132 133
 		 // 116 146
 		"s-3103-1000-146-0": [
-			{ type: "text", sub_type: "message", message: "Back Kick", message_ES: "Patada hacia atras" },
+			{ type: "text", sub_type: "message", message: "Back Kick", message_ES: "Patada hacia atrás" },
 			{ type: "spawn", func: "vector", args: [553, 90, 120, 170, 600, 0, 3000] },
 			{ type: "spawn", func: "vector", args: [553, 270, 120, -170, 600, 0, 3000] }
 		],
@@ -117,10 +117,10 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3103-1000-155-0": [{ type: "text", sub_type: "message", delay: 400, message: "Dodge", message_ES: "Iframe" }],
 
 		// Stun 142 148 129
-		"s-3103-1000-142-0": [{ type: "text", sub_type: "message", message: "Stun | Back Wave", message_ES: "Stun | Ola hacia atras" }],
+		"s-3103-1000-142-0": [{ type: "text", sub_type: "message", message: "Stun | Back Wave", message_ES: "Stun | Ola hacia atrás" }],
 		"s-3103-1000-148-0": [{ type: "spawn", func: "circle", args: [true, 912, 0, -10, 12, 300, 0, 3000] }],
 		"s-3103-1000-129-0": [
-			{ type: "text", sub_type: "message", message: "Back Wave", message_ES: "Ola hacia atras" },
+			{ type: "text", sub_type: "message", message: "Back Wave", message_ES: "Ola hacia atrás" },
 			{ type: "spawn", func: "vector", args: [912, 90, 210, 390, 300, 0, 2000] },
 			{ type: "spawn", func: "vector", args: [912, 90, 140, 380, 350, 0, 2000] },
 			{ type: "spawn", func: "vector", args: [912, 90, 70, 370, 400, 0, 2000] },

@@ -13,7 +13,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3101-1000-104-0": [{ type: "text", class_position: "tank", sub_type: "message", message: "Stun Frontal", message_ES: "Stun (Tank)" }],
 		"s-3101-1000-112-0": [{ type: "text", sub_type: "message", message: "Left + Right", message_ES: "Izquierda + Derecha" }],
 		"s-3101-1000-139-0": [
-			{ type: "text", sub_type: "message", message: "Back + Front (Fast)", message_ES: "Ataque hacia Atrás + Adelante (Rápido)" },
+			{ type: "text", sub_type: "message", message: "Back + Front (Fast)", message_ES: "Ataque Atrás + Adelante (Rápido)" },
 			{ type: "spawn", func: "vector", args: [553, 2, 0, 70, 800, 0, 2500] },
 			{ type: "spawn", func: "vector", args: [553, 2, 0, 110, 800, 0, 2500] },
 			{ type: "spawn", func: "vector", args: [553, 2, 0, 250, 800, 0, 2500] },

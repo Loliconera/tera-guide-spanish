@@ -75,7 +75,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"am-3023-1000-30231001": [{ type: "func", func: firstboss_debuff_event, args: [30231001] }], // Blue
 		//
 		"s-3023-1000-104-0": [{ type: "text", sub_type: "message", message: "Random Jump", message_ES: "Saltar + Stun" }],
-		"s-3023-1000-105-0": [{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque hacia atras" }],
+		"s-3023-1000-105-0": [{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque hacia atrás" }],
 		"s-3023-1000-110-0": [
 			{ type: "text", sub_type: "message", message: "Stun", message_ES: "Stun" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 175, 10, 260, 0, 6000] }
@@ -117,7 +117,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [553, 184, 502, 90, 200, 0, 2000] }
 		],
 		"s-3023-1000-115-0": [
-			{ type: "text", sub_type: "message", message: "Back Attack", message_ES: "Ataque hacia atras (CUIDADO)" },
+			{ type: "text", sub_type: "message", message: "Back Attack", message_ES: "Ataque hacia atrás (CUIDADO)" },
 			{ type: "spawn", func: "semicircle", args: [90, 280, 553, 0, 0, 15, 160, 0, 2000] },
 			{ type: "spawn", func: "semicircle", args: [90, 275, 553, 0, 0, 10, 250, 0, 2000] },
 			{ type: "spawn", func: "semicircle", args: [90, 270, 553, 0, 0, 10, 340, 0, 2000] },
@@ -135,11 +135,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [553, 270, 80, 350, 1000, 0, 4000] }
 		],
 		"s-3023-1000-3115-0": [
-			{ type: "text", sub_type: "message", message: "Spin", message_ES: "Girar" },
+			{ type: "text", sub_type: "message", message: "Spin", message_ES: "Ataque Giratorio" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 320, 0, 3500] }
 		],
 		"s-3023-1000-3116-0": [
-			{ type: "text", sub_type: "message", message: "Circles + Spin", message_ES: "Circulos + Girar" },
+			{ type: "text", sub_type: "message", message: "Circles + Spin", message_ES: "Circulos (Evadir) + Ataque Giratorio" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 320, 0, 5000] }
 		],
 		"s-3023-1000-3119-0": [
@@ -159,27 +159,27 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "despawn_all" }
 		],
 		"s-3023-2000-164-0": [{ type: "text", sub_type: "message", message: "Counter Attack (bleed)", message_ES: "Contraataque (Sangrar)" }],
-		"s-3023-2000-166-0": [{ type: "text", sub_type: "message", message: "Turn-back", message_ES: "Ataque hacia atras" }],
+		"s-3023-2000-166-0": [{ type: "text", sub_type: "message", message: "Turn-back", message_ES: "Ataque hacia atrás" }],
 		"s-3023-2000-175-0": [
 			{ type: "text", sub_type: "message", message: "Incoming Stun", message_ES: "Rugido (Stun)" },
 			{ type: "text", sub_type: "message", delay: 1500, message: "Dodge", message_ES: "Iframe" }
 		],
 		"s-3023-2000-178-0": [{ type: "text", sub_type: "message", message: "Scratching (bleed)", message_ES: "Ataque Giratorio (Sangrar)" }],
 		"s-3023-2000-181-0": [
-			{ type: "text", sub_type: "message", message: "Rock Throw", message_ES: "Ataque de rocas" },
+			{ type: "text", sub_type: "message", message: "Rock Throw", message_ES: "Ataque de Rocas" },
 			{ type: "spawn", func: "vector", args: [553, 90, 80, 10, 1000, 0, 4000] },
 			{ type: "spawn", func: "vector", args: [553, 270, 80, 350, 1000, 0, 4000] }
 		],
 		"s-3023-2000-182-0": [{ type: "text", sub_type: "message", message: "Knockdown", message_ES: "Knockdown" }],
 		"s-3023-2000-185-0": [
-			{ type: "text", sub_type: "message", message: "Big jump (Kaia's Shield)", message_ES: "Gran salto (Kaia's Shield)", class_position: "priest" },
-			{ type: "text", sub_type: "message", message: "Big jump (Thrall of Protection)", message_ES: "Gran salto (Thrall of Protection)", class_position: "mystic" },
-			{ type: "text", sub_type: "alert", delay: 110000, message: "Big jump soon...", message_ES: "Gran salto pronto...", class_position: "heal" },
+			{ type: "text", sub_type: "message", message: "Big jump (Kaia's Shield)", message_ES: "Gran Salto (Kaia's Shield)", class_position: "priest" },
+			{ type: "text", sub_type: "message", message: "Big jump (Thrall of Protection)", message_ES: "Gran Salto (Thrall of Protection)", class_position: "mystic" },
+			{ type: "text", sub_type: "alert", delay: 110000, message: "Big jump soon...", message_ES: "Gran Salto pronto...", class_position: "heal" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 500, 0, 6000] },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 750, 0, 6000] }
 		],
 		"s-3023-2000-202-0": [
-			{ type: "text", sub_type: "message", message: "Backstab", message_ES: "Ataque hacia atras + Adelante" },
+			{ type: "text", sub_type: "message", message: "Backstab", message_ES: "Ataque hacia atrás + Adelante" },
 			{ type: "spawn", func: "vector", args: [553, 90, 80, 180, 500, 0, 3000] },
 			{ type: "spawn", func: "vector", args: [553, 270, 80, 180, 500, 0, 3000] }
 		],

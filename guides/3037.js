@@ -136,9 +136,9 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", message: "Front (Dodge)", message_ES: "Martillazo frontal (Iframe)" },
 			{ type: "spawn", func: "circle", args: [false, 445, 356, 400, 8, 350, 100, 3000] }
 		],
-		"s-3037-1000-2108-0": [{ type: "text", sub_type: "message", message: "Back Throw | Front", message_ES: "Martillo hacia atras (Stun)" }],
+		"s-3037-1000-2108-0": [{ type: "text", sub_type: "message", message: "Back Throw | Front", message_ES: "Martillo hacia atrás (Stun)" }],
 		"s-3037-1000-2111-0": [
-			{ type: "text", sub_type: "message", message: "Back", message_ES: "Martillazo hacia atras" },
+			{ type: "text", sub_type: "message", message: "Back", message_ES: "Martillazo hacia atrás" },
 			{ type: "spawn", func: "circle", args: [false, 445, 180, 500, 8, 480, 100, 2000] }
 		],
 		"s-3037-1000-2113-0": [{ type: "text", sub_type: "message", message: "Throw (Bait)", message_ES: "Lanzar Martillo > (al jugador)" }],
@@ -167,7 +167,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		//
 		"s-3037-1000-2137-0": [
-			{ type: "text", sub_type: "message", message: "Hammer Back", message_ES: "Martillazo hacia atras" },
+			{ type: "text", sub_type: "message", message: "Hammer Back", message_ES: "Martillazo hacia atrás" },
 			{ type: "spawn", func: "circle", args: [false, 445, 180, 500, 8, 480, 100, 2000] }
 		],
 		"s-3037-1000-2138-0": [{ type: "text", sub_type: "message", delay: 234, message: "Knockup (Bait)", message_ES: "Batear (al Jugador)" }],
@@ -188,9 +188,9 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", message: "Front (Dodge)", message_ES: "Martillazo frontal (Iframe)" },
 			{ type: "spawn", func: "circle", args: [false, 445, 356, 400, 8, 350, 100, 3000] }
 		],
-		"s-3037-1000-1108-0": [{ type: "text", sub_type: "message", message: "Back Throw | Front", message_ES: "Martillo hacia atras (Stun)" }],
+		"s-3037-1000-1108-0": [{ type: "text", sub_type: "message", message: "Back Throw | Front", message_ES: "Martillo hacia atrás (Stun)" }],
 		"s-3037-1000-1111-0": [
-			{ type: "text", sub_type: "message", message: "Back", message_ES: "Martillazo hacia atras" },
+			{ type: "text", sub_type: "message", message: "Back", message_ES: "Martillazo hacia atrás" },
 			{ type: "spawn", func: "circle", args: [false, 445, 180, 500, 8, 480, 100, 2000] }
 		],
 		"s-3037-1000-1113-0": [{ type: "text", sub_type: "message", message: "Throw (Bait)", message_ES: "Lanzar Martillo > (al jugador)" }],
@@ -220,7 +220,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [553, 270, 200, 180, 500, 0, 2000] }
 		],
 		"s-3037-1000-1137-0": [
-			{ type: "text", sub_type: "message", message: "Hammer Back", message_ES: "Martillazo hacia atras" },
+			{ type: "text", sub_type: "message", message: "Hammer Back", message_ES: "Martillazo hacia atrás" },
 			{ type: "spawn", func: "circle", args: [false, 445, 180, 500, 8, 480, 100, 2000] }
 		],
 		"s-3037-1000-1138-0": [{ type: "text", sub_type: "message", delay: 1300, message: "Knockup (Bait)", message_ES: "Batear (al Jugador)" }],
@@ -262,9 +262,9 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 445, 356, 400, 8, 350, 100, 3000] }
 		],
 		"s-3037-2000-1107-0": [{ type: "text", sub_type: "message", message: "4 Hit (3)", message_ES: "4 Hit (3)" }],
-		"s-3037-2000-1108-0": [{ type: "text", sub_type: "message", message: "Back Throw | Front", message_ES: "Martillo hacia atras (Stun)" }],
+		"s-3037-2000-1108-0": [{ type: "text", sub_type: "message", message: "Back Throw | Front", message_ES: "Martillo hacia atrás (Stun)" }],
 		"s-3037-2000-1111-0": [
-			{ type: "text", sub_type: "message", message: "Back", message_ES: "Martillazo hacia atras" },
+			{ type: "text", sub_type: "message", message: "Back", message_ES: "Martillazo hacia atrás" },
 			{ type: "spawn", func: "circle", args: [false, 445, 180, 500, 8, 480, 100, 2000] }
 		],
 		"s-3037-2000-1112-0": [
@@ -342,7 +342,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 445, 356, 220, 12, 210, 100, 4000] }
 		],
 		"s-3037-2000-1137-0": [
-			{ type: "text", sub_type: "message", message: "Hammer back", message_ES: "Martillazo hacia atras" },
+			{ type: "text", sub_type: "message", message: "Hammer back", message_ES: "Martillazo hacia atrás" },
 			{ type: "spawn", func: "circle", args: [false, 445, 180, 500, 8, 480, 100, 2000] }
 		],
 		"s-3037-2000-1138-0": [{ type: "text", sub_type: "message", delay: 1300, message: "Knockup (Bait)", message_ES: "Batear (al Jugador)" }],
@@ -388,9 +388,9 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 445, 356, 400, 8, 350, 100, 3000] }
 		],
 		"s-3037-2000-2107-0": [{ type: "text", sub_type: "message", message: "4 Hit (3)", message_ES: "4 Hit (3)" }],
-		"s-3037-2000-2108-0": [{ type: "text", sub_type: "message", message: "Back Throw | Front", message_ES: "Martillo hacia atras (Stun)" }],
+		"s-3037-2000-2108-0": [{ type: "text", sub_type: "message", message: "Back Throw | Front", message_ES: "Martillo hacia atrás (Stun)" }],
 		"s-3037-2000-2111-0": [
-			{ type: "text", sub_type: "message", message: "Back", message_ES: "Martillazo hacia atras" },
+			{ type: "text", sub_type: "message", message: "Back", message_ES: "Martillazo hacia atrás" },
 			{ type: "spawn", func: "circle", args: [false, 445, 180, 500, 8, 480, 100, 2000] }
 		],
 		"s-3037-2000-2112-0": [
@@ -472,7 +472,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 445, 356, 220, 12, 210, 100, 4000] }
 		],
 		"s-3037-2000-2137-0": [
-			{ type: "text", sub_type: "message", message: "Hammer back", message_ES: "Martillazo hacia atras" },
+			{ type: "text", sub_type: "message", message: "Hammer back", message_ES: "Martillazo hacia atrás" },
 			{ type: "spawn", func: "circle", args: [false, 445, 180, 500, 8, 480, 100, 2000] }
 		],
 		"s-3037-2000-2138-0": [{ type: "text", sub_type: "message", delay: 234, message: "Knockup (Bait)", message_ES: "Batear (al Jugador)" }],

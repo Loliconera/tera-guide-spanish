@@ -29,7 +29,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [true, 553, 180, -50, 10, 380, 0, 2000] }
 		],
 		"s-3104-1000-107-0": [
-			{ type: "text", sub_type: "message", message: "Line Forward + Side Lines", message_ES: "Línea en medio + Líneas Laterales + Pizza" },
+			{ type: "text", sub_type: "message", message: "Line Forward + Side Lines", message_ES: "Línea en medio + Líneas Laterales | Pizza" },
 			{ type: "spawn", func: "vector", args: [553, 90, 50, 0, 1000, 0, 2000] },
 			{ type: "spawn", func: "vector", args: [553, 270, 50, 0, 1000, 0, 2000] },
 			{ type: "spawn", func: "vector", args: [553, 90, 50, 180, 1000, 0, 2000] },
@@ -38,7 +38,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "marker", args: [false, 0, 150, 0, 3000, true, null], check_func: () => combo_count == 2, delay: 1000 }
 		],
 		"s-3104-1000-110-0": [
-			{ type: "text", sub_type: "message", message: "Target + Wave", message_ES: "Ataque -> al objetivo (Stun) + Ataque hacia atrás" },
+			{ type: "text", sub_type: "message", message: "Target + Wave", message_ES: "Ataque Frontal | Atrás (Stun)" },
 			{ type: "spawn", func: "circle", args: [true, 553, 180, -500, 10, 350, 0, 1500] },
 			{ type: "spawn", func: "vector", args: [553, 180, -50, 120, 500, 0, 2000], delay: 1500 },
 			{ type: "spawn", func: "vector", args: [553, 180, -50, 240, 500, 0, 2000], delay: 1500 },
