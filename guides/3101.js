@@ -49,11 +49,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-3101-1000-151-0": [{ type: "text", sub_type: "message", message: "Stun Attack!", message_ES: "Stun!" }],
 		"s-3101-1000-313-0": [
-			{ type: "text", sub_type: "message", message: "Circles (Slow)", message_ES: "Círculos | Salir + Entrar" },
+			{ type: "text", sub_type: "message", message: "Circles (Slow)", message_ES: "Interno + Externo (Lento)" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 75, 10, 300, 0, 6000] }
 		],
 		"s-3101-1000-314-0": [
-			{ type: "text", sub_type: "message", message: "Circles (Fast)", message_ES: "Círculos | Salir + Entrar (Rápido)" },
+			{ type: "text", sub_type: "message", message: "Circles (Fast)", message_ES: "Interno + Externo (Rápido)" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 75, 10, 300, 0, 6000] }
 		],
 
