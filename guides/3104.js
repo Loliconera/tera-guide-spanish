@@ -49,7 +49,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 70, 500, 0, 2000] },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 290, 500, 0, 2000] }
 		],
-		"s-3104-1000-114-0": [{ type: "text", sub_type: "message", message: "Inner + Outer AOEs", message_ES: "AOE Interno + Externo" }],
+		"s-3104-1000-114-0": [{ type: "text", sub_type: "message", message: "Inner + Outer AOEs", message_ES: "Interno + Externo AOEs" }],
 		"s-3104-1000-116-0": [
 			{ type: "text", sub_type: "message", message: "Line Forward", message_ES: "Línea en medio" },
 			{ type: "spawn", func: "vector", args: [553, 90, 50, 0, 1000, 0, 2000] },
