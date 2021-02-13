@@ -9,12 +9,12 @@
         "settingsVersion": 1.15
     },
     "author": "HSDN / Loliconera",
-    "description": "Un modulo de guia para mazmorras con notificaciones TTS. Muestra mensajes en la pantalla y dibuja zonas de ataques y mecanicas de jefes.",
+    "description": "Un modulo de guia para mazmorras con notificaciones TTS. Muestra mensajes en la pantalla y dibuja zonas de ataques y mecanicas de jefes. Traducido al Español por Loliconera.",
     "servers": ["https://raw.githubusercontent.com/Loliconera/tera-guide-spanish/master/"],
     "supportUrl": "https://github.com/Loliconera/tera-guide-spanish/issues",
     "dependencies": {
         "library": "https://raw.githubusercontent.com/tera-toolbox-mods/library/master/module.json",
         "tera-guide-core": "https://raw.githubusercontent.com/hsdn/tera-guide-core/master/module.json"
     },
-    "version": "02/06/2021"
+    "version": "02/13/2021"
 }

@@ -286,7 +286,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-444-2000-1117-0": [{ type: "text", sub_type: "message", message: "Jump (Bait)", message_ES: "Saltar > (al Jugador)" }],
 		"s-444-2000-1118-0": [{ type: "text", sub_type: "message", message: "Jump (Tank)", message_ES: "Saltar > (al Tank)" }],
 		"s-444-2000-1119-0": [
-			{ type: "text", sub_type: "message", message: "Left Swipe", message_ES: "Deslizar Izquierda" },
+			{ type: "text", sub_type: "message", message: "Left Swipe", message_ES: "Deslizar a la Izquierda" },
 			{ type: "spawn", func: "semicircle", args: [0, 180, 912, 0, 0, 20, 160, 0, 2000] },
 			{ type: "spawn", func: "semicircle", args: [0, 180, 912, 0, 0, 12, 220, 0, 2000] },
 			{ type: "spawn", func: "semicircle", args: [0, 180, 912, 0, 0, 10, 300, 0, 2000] },
@@ -294,7 +294,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "marker", args: [false, 270, 300, 100, 2000, true, null] }
 		],
 		"s-444-2000-1120-0": [
-			{ type: "text", sub_type: "message", message: "Right Swipe", message_ES: "Deslizar Derecha" },
+			{ type: "text", sub_type: "message", message: "Right Swipe", message_ES: "Deslizar a la Derecha" },
 			{ type: "spawn", func: "semicircle", args: [180, 360, 912, 0, 0, 20, 160, 0, 2000] },
 			{ type: "spawn", func: "semicircle", args: [180, 360, 912, 0, 0, 12, 220, 0, 2000] },
 			{ type: "spawn", func: "semicircle", args: [180, 360, 912, 0, 0, 10, 300, 0, 2000] },
