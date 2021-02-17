@@ -15,7 +15,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"ns-3104-1000": [{ type: "func", func: () => combo_count = 0 }],
 		"nd-3104-1000": [
 			{ type: "stop_timers" },
-			{ type: "despawn_all" }
+			{ type: "despawn_all" },
+			{ type: "marker_remove_all" }
 		],
 
 		"qb-3104-1000-32042000": [
@@ -83,7 +84,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3104-1000-158-0": [{ type: "text", sub_type: "message", message: "Gather!", message_ES: "¡Reunirse!", delay: 5000 }],
 		"s-3104-1000-159-0": [
 			{ type: "text", sub_type: "message", message: "AOE", message_ES: "АОЕ" },
-			{ type: "marker_remove_all" }
+			{ type: "marker_remove_all", delay: 3000 }
 		]
 	};
 };

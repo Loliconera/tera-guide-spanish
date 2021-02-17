@@ -344,14 +344,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"165-0": [{ type: "text", sub_type: "message", message: "R.I.P (0%)", message_ES: "R.I.P (0%)" }],
 		"137-0": [{ type: "text", sub_type: "message", message: "Knockdown", message_ES: "¡¡[Rugido]!!" }],
 		"138-0": [{ type: "text", sub_type: "message", message: "AOE", message_ES: "AOE" }],
-		"139-0": [
-			{ type: "text", sub_type: "message", message: "60 degrees (Fire to all)", message_ES: "Temp 60 | Cambiar al (Hielo)" },
-			{ type: "text", sub_type: "message", delay: 4000, message: "Lower the temp", message_ES: "Bajar la temperatura" }
-		],
-		"140-0": [
-			{ type: "text", sub_type: "message", message: "40 degrees (Ice to all)", message_ES: "Temp 40 | Cambiar al (Fuego)" },
-			{ type: "text", sub_type: "message", delay: 4000, message: "Raise the temp", message_ES: "Subir la temperatura" }
-		],
+		"139-0": [{ type: "text", sub_type: "message", message: "Fire to all", message_ES: "Todos cambiar al Fuego" }],
+		"140-0": [{ type: "text", sub_type: "message", message: "Ice to all", message_ES: "Todos cambiar al Hielo" }],
 
 		"die": [{ type: "func", func: debuff_removed }],
 		"nd-3026-1000": [

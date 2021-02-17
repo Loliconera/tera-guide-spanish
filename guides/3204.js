@@ -15,7 +15,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"ns-3204-1000": [{ type: "func", func: () => combo_count = 0 }],
 		"nd-3204-1000": [
 			{ type: "stop_timers" },
-			{ type: "despawn_all" }
+			{ type: "despawn_all" },
+			{ type: "marker_remove_all" }
 		],
 
 		"qb-3204-1000-32041000": [
@@ -33,8 +34,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 
 		"h-3204-1000-90": [{ type: "text", sub_type: "message", message: "90%", message_ES: "90%" }],
-		"h-3204-1000-70": [{ type: "text", sub_type: "message", message: "70%", message_ES: "70%" }],
-		"h-3204-1000-35": [{ type: "text", sub_type: "message", message: "35%", message_ES: "35%" }],
+		"h-3204-1000-75": [{ type: "text", sub_type: "message", message: "75%", message_RU: "75%" }],
+		"h-3204-1000-40": [{ type: "text", sub_type: "message", message: "40%", message_RU: "40%" }],
 
 		"s-3204-1000-104-0": [
 			{ type: "text", sub_type: "message", message: "Stun (AOE)", message_ES: "Stun (АОЕ)" },
@@ -95,7 +96,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3204-1000-158-0": [{ type: "text", sub_type: "message", message: "Gather!", message_ES: "¡Reunirse!", delay: 5000 }],
 		"s-3204-1000-159-0": [
 			{ type: "text", sub_type: "message", message: "AOE", message_ES: "АОЕ" },
-			{ type: "marker_remove_all" }
+			{ type: "marker_remove_all", delay: 3000 }
 		]
 	};
 };
