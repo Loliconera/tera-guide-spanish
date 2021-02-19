@@ -17,6 +17,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-970-3000-2101-0": [{ "type": "text", "sub_type": "message", "message": "Right Hand", "message_ES": "Mano Derecha" }],
 		"s-970-3000-1103-0": [{ "type": "text", "sub_type": "message", "message": "Tail Slam", "message_ES": "Coletazo hacia atrás" }],
 		"s-970-3000-2103-0": [{ "type": "text", "sub_type": "message", "message": "Tail Slam", "message_ES": "Coletazo hacia atrás" }],
+		"s-970-3000-1106-0": [{ "type": "text", "sub_type": "message", "message": "Front Swipe", "message_ES": "Empuje frontal" }],
+		"s-970-3000-2106-0": [{ "type": "text", "sub_type": "message", "message": "Front Swipe", "message_ES": "Empuje frontal" }],
 		"s-970-3000-1301-0": [{ "type": "text", "sub_type": "message", "message": "FATE Avoid Circles", "message_ES": "Círculos (Evadir)" }],
 		"s-970-3000-1302-0": [{ "type": "text", "sub_type": "message", "message": "FATE Avoid Circles", "message_ES": "Círculos (Evadir)" }],
 		"s-970-3000-2110-0": [{ "type": "text", "sub_type": "message", "message": "Tail AOE (jump in front)", "message_ES": "Coletazo АОЕ (saltar al frente)" }],
