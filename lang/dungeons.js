@@ -83,6 +83,9 @@ module.exports = {
 		},
 		3037: {
 			"es": "Bahaar's Sanctum (Training)"
+		},
+		3040: {
+			"es": "Lumikan's Trial"
 		}
 
 };

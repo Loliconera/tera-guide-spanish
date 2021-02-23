@@ -47,6 +47,7 @@ id | Nombre de la mazmorra | Idioma
 9970 | Ruinous Manor (Difícil) | Español
 3104 | Catalepticon | Español
 3204 | Catalepticon (Difícil) | Español
+3040 | Lumikan's Trial | Español
 
 ## Configuración de Mensajes
 
