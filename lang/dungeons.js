@@ -86,6 +86,12 @@ module.exports = {
 		},
 		3040: {
 			"es": "Lumikan's Trial"
+		},
+		3106: {
+			"es": "Killing Grounds"
+		},
+		3206: {
+			"es": "Crimson Killing Grounds"
 		}
 
 };
