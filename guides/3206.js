@@ -1,6 +1,6 @@
 // Crimson Killing Grounds
 //
-// made by HSDN / Kuroine
+// hecho por HSDN / Kuroine
 
 module.exports = (dispatch, handlers, guide, lang) => {
 
@@ -19,39 +19,46 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "func", func: () => combo_start = true },
 			{ type: "func", func: () => combo_start = false, delay: 4000 }
 		],
-		"s-3206-1000-105-0": [{ type: "text", sub_type: "message", message: "Knockback Spin", message_ES: "Ataque Giratorio (Empujar)", check_func: () => combo_start === true }],
+		// "s-3206-1000-105-0": [{ type: "text", sub_type: "message", message: "Knockback Spin", message_ES: "Ataque Giratorio (Empujar)", check_func: () => combo_start === true }],
 		"s-3206-1000-106-0": [{ type: "text", sub_type: "message", message: "Knockback Spin", message_ES: "Ataque Giratorio (Empujar)" }],
-		"s-3206-1000-109-0": [{ type: "text", sub_type: "message", message: "Jump (Knockdown)", message_ES: "Saltar (Derribo)" }],
-		"s-3206-1000-201-0": [{ type: "text", sub_type: "message", message: "Front Attack", message_ES: "Ataque Frontal" }],
-		"s-3206-1000-202-0": [{ type: "text", sub_type: "message", message: "Front Attack", message_ES: "Ataque Frontal" }],
-		"s-3206-1000-203-0": [{ type: "text", sub_type: "message", message: "Front Attack", message_ES: "Ataque Frontal" }],
+		"s-3206-1000-108-0": [{ type: "text", sub_type: "message", message: "Knockback Spin", message_ES: "Ataque Giratorio (Empujar)" }],		
+		"s-3206-1000-109-0": [{ type: "text", sub_type: "message", message: "Jump (Knockdown)", message_ES: "Salto (Derribo)" }],
+		"s-3206-1000-201-0": [{ type: "text", sub_type: "message", message: "Front", message_ES: "Ataque Frontal" }],
+		"s-3206-1000-202-0": [{ type: "text", sub_type: "message", message: "Front", message_ES: "Ataque Frontal" }],
+		"s-3206-1000-203-0": [{ type: "text", sub_type: "message", message: "Front + Wave", message_ES: "Ataque Frontal + Dona" }],
 		"s-3206-1000-205-0": [{ type: "text", sub_type: "message", message: "Spin", message_ES: "Ataque Giratorio" }],
 		"s-3206-1000-206-0": [{ type: "text", sub_type: "message", message: "Spin", message_ES: "Ataque Giratorio" }],
 		"s-3206-1000-207-0": [{ type: "text", sub_type: "message", message: "Spin", message_ES: "Ataque Giratorio" }],
-		"s-3206-1000-209-0": [{ type: "text", sub_type: "message", message: "Stomp (Knockdown)", message_ES: "Derribo" }],
-		"s-3206-1000-210-0": [{ type: "text", sub_type: "message", message: "Stomp (Knockdown)", message_ES: "Derribo" }],
+		"s-3206-1000-209-0": [
+			{ type: "text", sub_type: "message", message: "Stomp (Knockdown)", message_ES: "Derribo" },
+			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 10, 400, 0, 2500] }
+		],
+		"s-3206-1000-210-0": [
+			{ type: "text", sub_type: "message", message: "Stomp (Knockdown)", message_ES: "Derribo" },
+			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 10, 400, 0, 2500] }
+		],
 		"s-3206-1000-211-0": [{ type: "text", sub_type: "message", message: "Push", message_ES: "Empujar" }],
 		"s-3206-1000-216-0": [{ type: "text", sub_type: "message", message: "Somersault", message_ES: "Salto mortal" }],
-
-		"s-3206-1000-508-0": [ // 516
-			{ type: "text", sub_type: "message", message: "Waves Outward", message_ES: "Olas hacia afuera" },
+		"s-3206-1000-508-0": [
+			{ type: "text", sub_type: "message", message: "Waves Outward", message_ES: "Donas hacia afuera" },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 18, 157, 1500, 5000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 12, 307, 1500, 5000] }
 		],
-		"s-3206-1000-509-0": [ // 517
-			{ type: "text", sub_type: "message", message: "Waves Inward", message_ES: "Olas hacia adentro" },
+		"s-3206-1000-509-0": [
+			{ type: "text", sub_type: "message", message: "Waves Inward", message_ES: "Donas hacia adentro" },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 18, 157, 1500, 5000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 12, 307, 1500, 5000] }
 		],
-
-		"s-3206-1000-506-0": [{ type: "text", sub_type: "message", message: "Bait (Stun)", message_ES: "Ataque -> al jugador (Stun)" }],
+		"s-3206-1000-506-0": [{ type: "text", sub_type: "message", message: "Bait (Stun)", message_ES: "Bait (Stun)" }],
 		"s-3206-1000-507-0": [{ type: "text", sub_type: "message", message: "Leash + Jump (Knockdown)", message_ES: "Tirar + Salto (Derribo)" }],
+		// "s-3206-1000-516-0": "s-3206-1000-508-0",
+		// "s-3206-1000-517-0": "s-3206-1000-509-0",
 
+		"s-3206-1000-518-0": [{ type: "text", sub_type: "message", message: "Unleash", message_ES: "Unleash" }],		
 		"s-3206-1000-519-0": [{ type: "text", sub_type: "message", message: "Unleash", message_ES: "Unleash" }],
-		"s-3206-1000-310-0": [{ type: "text", sub_type: "message", message: "Front Attack", message_ES: "Ataque Frontal" }],
-		"s-3206-1000-311-0": [{ type: "text", sub_type: "message", message: "Front Attack", message_ES: "Ataque Frontal" }],
+		"s-3206-1000-307-0": [{ type: "text", sub_type: "message", message: "Spin", message_ES: "Ataque Giratorio" }],
+		"s-3206-1000-309-0": [{ type: "text", sub_type: "message", message: "Front Attack", message_ES: "Ataque Frontal" }],
 		"s-3206-1000-321-0": [{ type: "text", sub_type: "message", message: "AoE", message_ES: "АоЕ" }],
-		"s-3206-1000-324-0": [{ type: "text", sub_type: "message", message: "AoE", message_ES: "АоЕ" }],
-		"s-3206-1000-307-0": [{ type: "text", sub_type: "message", message: "Spin", message_ES: "Ataque Giratorio" }]
+		"s-3206-1000-324-0": [{ type: "text", sub_type: "message", message: "AoE", message_ES: "АоЕ" }]
 	};
 };
