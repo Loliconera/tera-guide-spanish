@@ -48,6 +48,8 @@ id | Nombre de la mazmorra | Idioma
 3104 | Catalepticon | Español
 3204 | Catalepticon (Difícil) | Español
 3040 | Lumikan's Trial | Español
+3106 | Killing Grounds | Español
+3206 | Crimson Killing Grounds | Español
 
 ## Configuración de Mensajes
 
