@@ -22,7 +22,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		// "s-3106-1000-105-0": [{ type: "text", sub_type: "message", message: "Knockback Spin", message_ES: "Ataque Giratorio (Empujar)", check_func: () => combo_start === true }],
 		"s-3106-1000-106-0": [{ type: "text", sub_type: "message", message: "Knockback Spin", message_ES: "Ataque Giratorio (Empujar)" }],
 		"s-3106-1000-108-0": [{ type: "text", sub_type: "message", message: "Knockback Spin", message_ES: "Ataque Giratorio (Empujar)" }],		
-		"s-3106-1000-109-0": [{ type: "text", sub_type: "message", message: "Jump (Knockdown)", message_ES: "Salto (Derribo)" }],
+		"s-3106-1000-109-0": [{ type: "text", sub_type: "message", message: "Jump (Knockdown)", message_ES: "Salto (Derribar)" }],
 		"s-3106-1000-201-0": [{ type: "text", sub_type: "message", message: "Front", message_ES: "Ataque Frontal" }],
 		"s-3106-1000-202-0": [{ type: "text", sub_type: "message", message: "Front", message_ES: "Ataque Frontal" }],
 		"s-3106-1000-203-0": [{ type: "text", sub_type: "message", message: "Front + Wave", message_ES: "Ataque Frontal + Dona" }],
@@ -30,15 +30,15 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3106-1000-206-0": [{ type: "text", sub_type: "message", message: "Spin", message_ES: "Ataque Giratorio" }],
 		"s-3106-1000-207-0": [{ type: "text", sub_type: "message", message: "Spin", message_ES: "Ataque Giratorio" }],
 		"s-3106-1000-209-0": [
-			{ type: "text", sub_type: "message", message: "Stomp (Knockdown)", message_ES: "Derribo" },
+			{ type: "text", sub_type: "message", message: "Stomp (Knockdown)", message_ES: "Derribar" },
 			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 10, 400, 0, 2500] }
 		],
 		"s-3106-1000-210-0": [
-			{ type: "text", sub_type: "message", message: "Stomp (Knockdown)", message_ES: "Derribo" },
+			{ type: "text", sub_type: "message", message: "Stomp (Knockdown)", message_ES: "Derribar" },
 			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 10, 400, 0, 2500] }
 		],
 		"s-3106-1000-211-0": [{ type: "text", sub_type: "message", message: "Push", message_ES: "Empujar" }],
-		"s-3106-1000-216-0": [{ type: "text", sub_type: "message", message: "Somersault", message_ES: "Salto mortal" }],
+		"s-3106-1000-216-0": [{ type: "text", sub_type: "message", message: "Somersault", message_ES: "Salto Mortal" }],
 		"s-3106-1000-508-0": [
 			{ type: "text", sub_type: "message", message: "Waves Outward", message_ES: "Donas hacia afuera" },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 18, 157, 1500, 5000] },
@@ -50,7 +50,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 12, 307, 1500, 5000] }
 		],
 		"s-3106-1000-506-0": [{ type: "text", sub_type: "message", message: "Bait (Stun)", message_ES: "Bait (Stun)" }],
-		"s-3106-1000-507-0": [{ type: "text", sub_type: "message", message: "Leash + Jump (Knockdown)", message_ES: "Tirar + Salto (Derribo)" }],
+		"s-3106-1000-507-0": [{ type: "text", sub_type: "message", message: "Leash + Jump (Knockdown)", message_ES: "Tirar + Salto (Derribar)" }],
 		// "s-3106-1000-516-0": "s-3106-1000-508-0",
 		// "s-3106-1000-517-0": "s-3106-1000-509-0",
 

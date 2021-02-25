@@ -1,4 +1,4 @@
-// Guía de prueba
+// Guía de Prueba
 //
 // PRUEBAS DE FUNCIONALIDAD DE GUÍA COMPLEJA
 
@@ -21,7 +21,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		HIGHLIGHT_ITEM_RED
 	} = module.parent.exports.spawn;
 
-	// Test definition guide type
+	// Test definition guide type 
 	guide.type = SP; // SP, ES, false
 
 
@@ -30,14 +30,14 @@ module.exports = (dispatch, handlers, guide, lang) => {
 	// Func test event
 	function func_event(arg, ent, event) {
 		if (typeof arg === "string")
-			handlers.text({ sub_type: "message", message: `Call with arg: ${arg}`, message_RU: `Вызов с аргументом: ${arg}` });
+			handlers.text({ sub_type: "message", message: `Call with arg: ${arg}`, message_ES: `Llamar con argumento: ${arg}` });
 		else
-			handlers.text({ sub_type: "message", message: "Call without args", message_RU: "Вызов без аргументов" });
+			handlers.text({ sub_type: "message", message: "Call without args", message_ES: "Llamar sin argumentos" });
 	}
 
 	// Text test event
 	function text_event(ent, event) {
-		handlers.text({ sub_type: "message", message: "Text handler", message_RU: "Обработчик text" });
+		handlers.text({ sub_type: "message", message: "Text handler", message_ES: "Controlador de mensajes" });
 	}
 
 	// Spawn test event
@@ -58,7 +58,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 	function test_event() {
 		// Event handler
 		handlers.event([
-			{ type: "text", sub_type: "message", message: "Event handler", message_RU: "Обработчик event" },
+			{ type: "text", sub_type: "message", message: "Event handler", message_ES: "Controlador de eventos" },
 			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, null, 250, 0, 2000] },
 			{ type: "marker", color: "blue", delay: 0, sub_delay: 5000 }
 		]);
@@ -70,8 +70,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 		/** GAME EVENTS **/
 
-		"die": [{ type: "text", sub_type: "message", message: "Death", message_RU: "Смерть" }],
-		"resurrect": [{ type: "text", sub_type: "message", message: "Resurrect", message_RU: "Воскрешение" }],
+		"die": [{ type: "text", sub_type: "message", message: "Death", message_ES: "Muerte" }],
+		"resurrect": [{ type: "text", sub_type: "message", message: "Resurrect", message_ES: "Resurrección" }],
 
 
 		/** TEST FUNC EVENTS **/
@@ -92,7 +92,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		// Call list of events directly
 		"event_list": [
 			{ type: "event", args: [
-				{ type: "text", sub_type: "message", message: "Text", message_RU: "Сообщение" },
+				{ type: "text", sub_type: "message", message: "Text", message_ES: "Mensaje" },
 				{ type: "spawn", func: "circle", args: [true, 553, 0, 0, null, 250, 0, 2000] }
 			]
 			}
@@ -114,10 +114,10 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 		// Native
 		"text": [
-			{ type: "text", sub_type: "message", message: "Standard text", message_RU: "Стандартное сообщение" },
-			{ type: "text", sub_type: "alert", message: "Alert text", message_RU: "Важное сообщение", delay: 2000 },
-			{ type: "text", sub_type: "warning", message: "Warning text", message_RU: "Предупреждающее сообщение", delay: 4000 },
-			{ type: "text", sub_type: "notification", message: "Notification text", message_RU: "Уведомление", delay: 6000 }
+			{ type: "text", sub_type: "message", message: "Standard text", message_ES: "Mensaje estándar" },
+			{ type: "text", sub_type: "alert", message: "Alert text", message_ES: "Mensaje de alerta", delay: 2000 },
+			{ type: "text", sub_type: "warning", message: "Warning text", message_ES: "Mensaje de advertencia", delay: 4000 },
+			{ type: "text", sub_type: "notification", message: "Notification text", message_ES: "Notificación", delay: 6000 }
 		],
 
 		// Func
@@ -210,7 +210,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 		// Native
 		"timers": [
-			{ type: "text", sub_type: "notification", message: "Type despawn_all for despawn", message_RU: "Введите despawn_all для деспауна" },
+			{ type: "text", sub_type: "notification", message: "Type despawn_all for despawn", message_ES: "Escriba despawn_all para desaparecer" },
 
 			// Spawn a cicrle with 5 sec duration
 			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, null, 250, 0, 5000] },
@@ -260,8 +260,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 		// Filter event by test variable
 		"cond_test": [
-			{ type: "text", sub_type: "message", message: "True", message_RU: "Истина", check_func: () => condition === true },
-			{ type: "text", sub_type: "message", message: "False", message_RU: "Ложь", check_func: () => condition === false }
+			{ type: "text", sub_type: "message", message: "True", message_ES: "Verdadero", check_func: () => condition === true },
+			{ type: "text", sub_type: "message", message: "False", message_ES: "Falso", check_func: () => condition === false }
 		]
 
 	};
