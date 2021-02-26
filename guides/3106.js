@@ -20,30 +20,31 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3106-1000-202-0": [{ type: "text", sub_type: "message", message: "Front AoE", message_ES: "Ataque Frontal AoE" }],
 		"s-3106-1000-203-0": [{ type: "text", sub_type: "message", message: "Front AoE + Wave", message_ES: "Ataque Frontal AoE + Ola" }],
 		"s-3106-1000-205-0": [{ type: "text", sub_type: "message", message: "Spin", message_ES: "Ataque Giratorio" }],
-		"s-3106-1000-206-0": [{ type: "text", sub_type: "message", message: "Spin", message_ES: "Ataque Giratorio" }],
-		"s-3106-1000-207-0": [{ type: "text", sub_type: "message", message: "Spin", message_ES: "Ataque Giratorio" }],
+		"s-3106-1000-206-0": [{ type: "text", sub_type: "message", message: "Spin (Bleed)", message_ES: "Girar (Sangrar)" }],
+		"s-3106-1000-207-0": [{ type: "text", sub_type: "message", message: "Spin (Bleed)", message_ES: "Girar (Sangrar)" }],
 		"s-3106-1000-209-0": [
-			{ type: "text", sub_type: "message", message: "Stomp (Knockdown)", message_ES: "Derribar" },
+			{ type: "text", sub_type: "message", message: "Give Stun (Knockdown)", message_ES: "Stun al Boss (Derribar)" },
 			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 10, 400, 0, 2500] }
 		],
 		"s-3106-1000-210-0": [
-			{ type: "text", sub_type: "message", message: "Stomp (Knockdown)", message_ES: "Derribar" },
+			{ type: "text", sub_type: "message", message: "Give Stun (Knockdown)", message_ES: "Stun al Boss (Derribar)" },
 			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 10, 400, 0, 2500] }
 		],
 		"s-3106-1000-211-0": [{ type: "text", sub_type: "message", message: "Push", message_ES: "Empujar" }],
 		"s-3106-1000-216-0": [{ type: "text", sub_type: "message", message: "Somersault", message_ES: "Salto Mortal" }],
 		"s-3106-1000-508-0": [
-			{ type: "text", sub_type: "message", message: "Outward Waves (Out > In)", message_ES: "Donas hacia afuera (Salir > Entrar)" },
+			{ type: "text", sub_type: "message", message: "Outward Waves (Out > In)", message_ES: "Donas afuera: (Salir > Entrar)" },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 18, 180, 1500, 5000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 12, 350, 1500, 5000] }
 		],
 		"s-3106-1000-509-0": [
-			{ type: "text", sub_type: "message", message: "Inward Waves (In > Out)", message_ES: "Donas hacia adentro (Entrar > Salir)" },
+			{ type: "text", sub_type: "message", message: "Inward Waves (In > Out)", message_ES: "Donas adentro: (Entrar > Salir)" },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 18, 180, 1500, 5000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 12, 350, 1500, 5000] }
 		],
-		"s-3106-1000-507-0": [{ type: "text", sub_type: "message", message: "Leash + Jump (Knockdown)", message_ES: "Tirar + Salto (Derribar)" }],
+		"s-3106-1000-507-0": [{ type: "text", sub_type: "message", message: "Leash + Jump (Knockdown)", message_ES: "Pull + Salto (Derribar)" }],
 
+		"s-3106-1000-502-0": [{ type: "text", sub_type: "message", message: "Unleash", message_ES: "Unleash" }],
 		"s-3106-1000-518-0": [{ type: "text", sub_type: "message", message: "Unleash", message_ES: "Unleash" }],		
 		"s-3106-1000-519-0": [{ type: "text", sub_type: "message", message: "Unleash", message_ES: "Unleash" }],
 		"s-3106-1000-307-0": [{ type: "text", sub_type: "message", message: "Spin", message_ES: "Ataque Giratorio" }],
