@@ -20,8 +20,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3206-1000-202-0": [{ type: "text", sub_type: "message", message: "Front AoE", message_ES: "Ataque Frontal AoE" }],
 		"s-3206-1000-203-0": [{ type: "text", sub_type: "message", message: "Front AoE + Wave", message_ES: "Ataque Frontal AoE + Ola" }],
 		"s-3206-1000-205-0": [{ type: "text", sub_type: "message", message: "Spin", message_ES: "Ataque Giratorio" }],
-		"s-3206-1000-206-0": [{ type: "text", sub_type: "message", message: "Spin (Bleed)", message_ES: "Girar (Sangrar)" }],
-		"s-3206-1000-207-0": [{ type: "text", sub_type: "message", message: "Spin (Bleed)", message_ES: "Girar (Sangrar)" }],
+		"s-3206-1000-206-0": [{ type: "text", sub_type: "message", message: "Spin (Bleed)", message_ES: "Ataque Giratorio (Sangrar)" }],
+		"s-3206-1000-207-0": [{ type: "text", sub_type: "message", message: "Spin (Bleed)", message_ES: "Ataque Giratorio (Sangrar)" }],
 		"s-3206-1000-209-0": [
 			{ type: "text", sub_type: "message", message: "Give Stun (Knockdown)", message_ES: "Stun al Boss (Derribar)" },
 			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 10, 400, 0, 2500] }
