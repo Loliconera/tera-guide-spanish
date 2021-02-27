@@ -10,8 +10,14 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "despawn_all" }
 		],
 
-		"qb-3106-1000-32061001": [{ type: "text", sub_type: "message", message: "Debuff (Close)", message_ES: "Debuff (Cercano)" }],
-		"qb-3106-1000-32061002": [{ type: "text", sub_type: "message", message: "Debuff (Furthest)", message_ES: "Debuff (Más lejos)" }],
+		"qb-3106-1000-32061001": [
+			{ type: "text", sub_type: "message", message: "Debuff (Close)", message_ES: "Debuff (Cercano)" },
+			{ type: "text", sub_type: "alert", message: "Soon to give stun...", message_ES: "Pronto para dar stun...", delay: 2000 }
+		],
+		"qb-3106-1000-32061002": [
+			{ type: "text", sub_type: "message", message: "Debuff (Furthest)", message_ES: "Debuff (Más lejano)" },
+			{ type: "text", sub_type: "alert", message: "Soon to give stun...", message_ES: "Pronto para dar stun...", delay: 2000 }
+		],
 
 		"s-3106-1000-106-0": [{ type: "text", sub_type: "message", message: "Knockback Spin", message_ES: "Girar (Empujar)" }],
 		"s-3106-1000-108-0": [{ type: "text", sub_type: "message", message: "Knockback Spin", message_ES: "Girar (Empujar)" }],		
@@ -23,12 +29,12 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3106-1000-206-0": [{ type: "text", sub_type: "message", message: "Spin (Bleed)", message_ES: "Ataque Giratorio (Sangrar)" }],
 		"s-3106-1000-207-0": [{ type: "text", sub_type: "message", message: "Spin (Bleed)", message_ES: "Ataque Giratorio (Sangrar)" }],
 		"s-3106-1000-209-0": [
-			{ type: "text", sub_type: "message", message: "Give Stun (Knockdown)", message_ES: "Stun al Boss (Derribar)" },
-			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 10, 400, 0, 2500] }
+			{ type: "text", sub_type: "message", message: "Give Stun! (Knockdown)", message_ES: "¡Dar Stun! (Derribar)" },
+			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 10, 400, 0, 1500] }
 		],
 		"s-3106-1000-210-0": [
-			{ type: "text", sub_type: "message", message: "Give Stun (Knockdown)", message_ES: "Stun al Boss (Derribar)" },
-			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 10, 400, 0, 2500] }
+			{ type: "text", sub_type: "message", message: "Give Stun! (Knockdown)", message_ES: "¡Dar Stun! (Derribar)" },
+			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 10, 400, 0, 1500] }
 		],
 		"s-3106-1000-211-0": [{ type: "text", sub_type: "message", message: "Push", message_ES: "Empujar" }],
 		"s-3106-1000-216-0": [{ type: "text", sub_type: "message", message: "Somersault", message_ES: "Salto Mortal" }],
@@ -42,12 +48,12 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 18, 180, 1500, 5000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 12, 350, 1500, 5000] }
 		],
-		"s-3106-1000-507-0": [{ type: "text", sub_type: "message", message: "Leash + Jump (Knockdown)", message_ES: "Pull + Salto (Derribar)" }],
+		"s-3106-1000-507-0": [{ type: "text", sub_type: "message", message: "Leash | Jump (Knockdown)", message_ES: "Pull | Salto (Derribar)" }],
 
 		"s-3106-1000-502-0": [{ type: "text", sub_type: "message", message: "Unleash", message_ES: "Unleash" }],
 		"s-3106-1000-518-0": [{ type: "text", sub_type: "message", message: "Unleash", message_ES: "Unleash" }],		
 		"s-3106-1000-519-0": [{ type: "text", sub_type: "message", message: "Unleash", message_ES: "Unleash" }],
-		"s-3106-1000-307-0": [{ type: "text", sub_type: "message", message: "Spin", message_ES: "Ataque Giratorio" }],
+		"s-3106-1000-306-0": [{ type: "text", sub_type: "message", message: "Spin", message_ES: "Ataque Giratorio" }],
 		"s-3106-1000-309-0": [{ type: "text", sub_type: "message", message: "Front", message_ES: "Ataque Frontal" }],
 		"s-3106-1000-321-0": [{ type: "text", sub_type: "message", message: "AoE", message_ES: "АоЕ" }],
 		"s-3106-1000-324-0": [{ type: "text", sub_type: "message", message: "AoE", message_ES: "АоЕ" }]
