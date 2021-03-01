@@ -16,21 +16,21 @@ Al usar TeraToolbox, todas las dependencias se instalarán automáticamente.
 Toolbox(/8) | Descripción del comando
 --- | ---
 **guide** | Módulo on/off
-**guide&nbsp;gui** | Mostrar módulo GUI
-**guide&nbsp;voice**<br>(defecto: desactivado) | Mensajes de texto a voz TTS
-**guide&nbsp;lNotice**<br>(defecto: desactivado) | Enviar mensajes en el canal **Chat Notice** en lugar de mensajes en pantalla
-**guide&nbsp;gNotice**<br>(defecto: desactivado) | Enviar mensajes en el canal **Chat Party**
-**guide male~female**<br>(defecto: femenino) | Cambiar el género de voz TTS (si esta disponible)
-**guide&nbsp;`1`~`10`**<br>(defecto: 2) | Ajustar la velocidad  de voz TTS
-**guide&nbsp;spawnObject**<br>(defecto: activado) | Generación de objetos marcadores
-**guide&nbsp;stream**<br>(defecto: desactivado) | Modo Streamer (ocultar todos los mensajes y objetos, se reproducirá la voz TTS)
-**guide&nbsp;dungeons** | Lista de todas las mazmorras compatibles y sus identificadores
-**guide&nbsp;verbose&nbsp;`id`**<br>(defecto: activado para todos) | Enviar mensajes para la mazmorra especificada por `id`
-**guide&nbsp;spawnObject&nbsp;`id`**<br>(defecto: activado para todos) | Generación de objetos marcadores para la mazmorra especificada por `id`
-**guide&nbsp;help** | Lista de comandos compatibles
+**guide&nbsp;gui** | Mostrar módulo GUI.
+**guide&nbsp;voice**<br>(defecto: desactivado) | Mensajes de texto a voz (TTS).
+**guide&nbsp;lNotice**<br>(defecto: desactivado) | Enviar mensajes en el canal **Notice** en lugar de mensajes en pantalla.
+**guide&nbsp;gNotice**<br>(defecto: desactivado) | Enviar mensajes en el canal **Chat Party**.
+**guide male~female**<br>(defecto: femenino) | Configure el género de voz de voz TTS (si está disponible).
+**guide&nbsp;`1`~`10`**<br>(defecto: 2) | Configure la velocidad de voz TTS.
+**guide&nbsp;spawnObject**<br>(defecto: activado) | Generación de objetos marcadores.
+**guide&nbsp;stream**<br>(defecto: desactivado) | Modo Streamer (ocultar todos los mensajes y objetos, se reproducirá la voz TTS).
+**guide&nbsp;dungeons** | Lista de todas las dungeons compatibles y sus identificadores.
+**guide&nbsp;verbose&nbsp;`id`**<br>(defecto: activado para todos) | Enviar mensajes para la dungeon especificada por `id`.
+**guide&nbsp;spawnObject&nbsp;`id`**<br>(defecto: activado para todos) | Generación de objetos marcadores para la dungeon especificada por `id`.
+**guide&nbsp;help** | Lista de comandos compatibles.
 
-## Mazmorras Compatibles
-id | Nombre de la mazmorra | Idioma
+## Dungeons Compatibles
+id | Nombre de la dungeon | Idioma
 --- | --- | ---
 9044 | Bahaar's Sanctum | Español
 3037 | Bahaar's Sanctum (Training) | Español
