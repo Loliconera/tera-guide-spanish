@@ -42,7 +42,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [true, 553, 180, -50, 10, 380, 0, 2000] }
 		],
 		"s-3204-1000-107-0": [
-			{ type: "text", sub_type: "message", message: "Line Forward + Side Lines", message_ES: "Línea en medio + Líneas Laterales | Pizza frontal" },
+			{ type: "text", sub_type: "message", message: "Line Forward + Side Lines", message_ES: "Línea en medio + Líneas Laterales" },
 			{ type: "spawn", func: "vector", args: [553, 90, 50, 0, 1000, 0, 2000] },
 			{ type: "spawn", func: "vector", args: [553, 270, 50, 0, 1000, 0, 2000] },
 			{ type: "spawn", func: "vector", args: [553, 90, 50, 180, 1000, 0, 2000] },
@@ -51,7 +51,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "marker", args: [false, 0, 150, 0, 3000, true, null], check_func: () => combo_count == 2, delay: 1000 }
 		],
 		"s-3204-1000-110-0": [
-			{ type: "text", sub_type: "message", message: "Target + Wave", message_ES: "Ataque Atrás | frontal (Stun)" },
+			{ type: "text", sub_type: "message", message: "Target + Wave", message_ES: "Atrás | frontal (Stun)" },
 			{ type: "spawn", func: "circle", args: [true, 553, 180, -500, 10, 350, 0, 1500] },
 			{ type: "spawn", func: "vector", args: [553, 180, -50, 120, 500, 0, 2000], delay: 1500 },
 			{ type: "spawn", func: "vector", args: [553, 180, -50, 240, 500, 0, 2000], delay: 1500 },
@@ -73,7 +73,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3204-1000-119-0": [{ type: "text", sub_type: "message", message: "Two Strikes", message_ES: "Dos Ataques" }],
 		"s-3204-1000-120-0": [
 			{ type: "text", sub_type: "message", message: "Two Strikes + Stun (AOE)", message_ES: "Dos Ataques + Stun (АОЕ)" },
-			{ type: "text", sub_type: "message", message: "Stun (AOE)", message_ES: "Iframe", delay: 1500 },
+			{ type: "text", sub_type: "message", message: "Stun (AOE)", message_ES: "Iframe", delay: 2050 },
 			{ type: "spawn", func: "circle", args: [true, 553, 180, -100, 10, 700, 0, 2500], delay: 1500 }
 		],
 		"s-3204-1000-123-0": [{ type: "text", sub_type: "message", message: "Spin", message_ES: "Ataque Giratorio" }],
@@ -92,8 +92,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "marker", args: [false, 340, 150, 0, 2000, true, null], delay: 1500 }
 		],
 		"s-3204-1000-156-0": [{ type: "text", sub_type: "message", message: "Get Skulls", message_ES: "Cráneos" }],
-		"s-3204-1000-157-0": [{ type: "text", sub_type: "message", message: "Gather!", message_ES: "¡Reunirse! (Rápido)", delay: 2000 }],
-		"s-3204-1000-158-0": [{ type: "text", sub_type: "message", message: "Gather!", message_ES: "¡Reunirse! (Lento)", delay: 5000 }],
+		"s-3204-1000-157-0": [{ type: "text", sub_type: "message", message: "Gather!", message_ES: "¡Reunirse!", delay: 2000 }],
+		"s-3204-1000-158-0": [{ type: "text", sub_type: "message", message: "Gather!", message_ES: "¡Reunirse!", delay: 5000 }],
 		"s-3204-1000-159-0": [
 			{ type: "text", sub_type: "message", message: "AOE", message_ES: "АОЕ" },
 			{ type: "marker_remove_all", delay: 3000 }

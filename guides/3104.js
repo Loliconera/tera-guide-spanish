@@ -39,7 +39,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "marker", args: [false, 0, 150, 0, 3000, true, null], check_func: () => combo_count == 2, delay: 1000 }
 		],
 		"s-3104-1000-110-0": [
-			{ type: "text", sub_type: "message", message: "Target + Wave", message_ES: "Ataque Atrás | Frontal (Stun)" },
+			{ type: "text", sub_type: "message", message: "Target + Wave", message_ES: "Atrás | Frontal (Stun)" },
 			{ type: "spawn", func: "circle", args: [true, 553, 180, -500, 10, 350, 0, 1500] },
 			{ type: "spawn", func: "vector", args: [553, 180, -50, 120, 500, 0, 2000], delay: 1500 },
 			{ type: "spawn", func: "vector", args: [553, 180, -50, 240, 500, 0, 2000], delay: 1500 },
@@ -61,7 +61,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3104-1000-119-0": [{ type: "text", sub_type: "message", message: "Two Strikes", message_ES: "Dos Ataques" }],
 		"s-3104-1000-120-0": [
 			{ type: "text", sub_type: "message", message: "Two Strikes + Stun (AOE)", message_ES: "Dos Ataques + Stun (АОЕ)" },
-			{ type: "text", sub_type: "message", message: "Stun (AOE)", message_ES: "Stun (АОЕ)", delay: 1500 },
+			{ type: "text", sub_type: "message", message: "Stun (AOE)", message_ES: "Iframe", delay: 2250 },
 			{ type: "spawn", func: "circle", args: [true, 553, 180, -100, 10, 700, 0, 2500], delay: 1500 }
 		],
 		"s-3104-1000-123-0": [{ type: "text", sub_type: "message", message: "Spin", message_ES: "Ataque Giratorio" }],
