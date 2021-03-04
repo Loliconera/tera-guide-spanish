@@ -40,7 +40,7 @@ module.exports.general = {
 		settings: "Configuraciones",
 		spawnObject: "Generacion de Marcadores",
 		speaks: "Mensajes por Voz (TTS)",
-		lNotice: "Mensajes de Chat Notice en lugar de mensajes en pantalla",
+		lNotice: "Chat Notice en lugar de mensajes en pantalla",
 		gNotice: "Mensajes de Chat Party",
 		stream: "Modo Streamer (ocultar mensajes y objetos)",
 		voice: "Genero de voz",
