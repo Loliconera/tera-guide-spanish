@@ -29,11 +29,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3206-1000-206-0": [{ type: "text", sub_type: "message", message: "Spin (Bleed)", message_ES: "Ataque Giratorio (Sangrar)" }],
 		"s-3206-1000-207-0": [{ type: "text", sub_type: "message", message: "Spin (Bleed)", message_ES: "Ataque Giratorio (Sangrar)" }],
 		"s-3206-1000-209-0": [
-			{ type: "text", sub_type: "notification", message: "Give Stun! (Knockdown)", message_ES: "¡Usar Stun! (Derribar)" },
+			{ type: "text", sub_type: "message", message: "Give Stun! (Knockdown)", message_ES: "¡Usar Stun! (Derribar)" },
 			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 10, 400, 0, 1500] }
 		],
 		"s-3206-1000-210-0": [
-			{ type: "text", sub_type: "notification", message: "Give Stun! (Knockdown)", message_ES: "¡Usar Stun! (Derribar)" },
+			{ type: "text", sub_type: "message", message: "Give Stun! (Knockdown)", message_ES: "¡Usar Stun! (Derribar)" },
 			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 10, 400, 0, 1500] }
 		],
 		"s-3206-1000-211-0": [{ type: "text", sub_type: "message", message: "Push", message_ES: "Empujar" }],
