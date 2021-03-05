@@ -8,7 +8,7 @@
         "guides/3037.js": "e62dd7cd7302a8bf1dea6d6ede0736b87ed449485b1dd6e6c26f5ebe9a8f8ab0",
         "guides/3040.js": "426ec08104bd2bbd2744bd25d17e17ebc056eb9a29661b0ae527024373cb0358",
         "guides/3101.js": "97214d401285f43c4292a0bd11d758be90e8b6497804448aaaaeea8f101d9683",
-        "guides/3102.js": "a5c223d755c6cbbe5573b9a53e12fdc5542b8166d9ccb6eb7414ae9ed9cd7bcd",
+        "guides/3102.js": "28c6cc05fc477bf92bdf12711115587f6ba519334caae2f91c6435028843dbf8",
         "guides/3103.js": "02832e01a38207fa3ad4754a570baa6e6b99d6591d2043b65cd7967330b106c3",
         "guides/3104.js": "6cc20b95dc92a7bec565be5c984692d790bb9f011834c91b4a6334953cab7df5",
         "guides/3106.js": "7878ddafea51b6777364648e7ca531ad4bc830b7ec0b69a7a4beb2c4ba2f99d4",
@@ -24,7 +24,7 @@
         "index.js": "0081a02a13928a86b88a47ae6db7cd50599f226f2b664ab1994b59d5abc12d97",
         "lang/dungeons.js": "c2201281b66317e2c3eb4f06a90fae01b332b6d3b62852a3e594fdac295b0dd5",
         "lang/strings.js": "670dbdacc0f18a09acf89c6cd281f8710eefb570efba2517743a05993d6324ef",
-        "module.json": "b27a54d301188b6511385ab8342d2cade0c2abbbf5bed87f6de81a6f99d03289",
+        "module.json": "04221cdbe10812f6a4d27f480ca958a53411cde85ecc9dce5781a7d1fa762ee1",
         "settings_migrator.js": "0866315926bbfde47c943cd6c0ac0fbe9c0f2e8d6f3d25987f3e1b2f6486da79"
     },
     "defs": {

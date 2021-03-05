@@ -10,20 +10,24 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 
 		// Ress bait / range check
-		"s-3102-1000-107-0": [{ type: "text", sub_type: "message", message: "Spectral Throw (Bait)", message_ES: "Lanzamiento Espectral > (al objetivo)" }],
+		"s-3102-1000-107-0": [{ type: "text", sub_type: "message", message: "Spectral Throw (Bait)", message_ES: "Lanzamiento Espectral > (al objetivo)" },
+			{ type: "text", sub_type: "message", delay: 1400, message: "Dodge!", message_ES: "¡Iframe!" }
+		],
 
 		// Ataques basicos
-		"s-3102-1000-103-0": [{ type: "text", sub_type: "message", message: "2 Hits | Bleed", message_ES: "2 Golpes | Sangrar" }],
-		"s-3102-1000-113-0": [{ type: "text", sub_type: "message", message: "4 Hits Combo", message_ES: "Combo de 4 golpes" }],
+		"s-3102-1000-103-0": [{ type: "text", sub_type: "message", message: "2 Hits | Bleed", message_ES: "2 Ataques | Sangrar" }],
+		"s-3102-1000-113-0": [{ type: "text", sub_type: "message", message: "4 Hits Combo", message_ES: "Combo de 4 Ataques" }],
 		"s-3102-1000-105-0": [{ type: "text", sub_type: "message", message: "Uppercut | Stun", message_ES: "Ataque de Corte | Stun" }],
 		"s-3102-1000-106-0": [{ type: "text", sub_type: "message", message: "Stun", message_ES: "Stun" }],
 		// 120 > 114
 		"s-3102-1000-120-0": [{ type: "text", sub_type: "message", message: "Many Pokes | Stun (AOE)", message_ES: "Muchos Cortes | Stun (AOE)" }],
 		"s-3102-1000-114-0": [
-			{ type: "text", sub_type: "message", message: "Stun (AOE)", message_ES: "Stun (AOE)" },
+			{ type: "text", sub_type: "message", message: "Dodge!", message_ES: "¡Iframe!" },
 			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 16, 420, 100, 3000] }
 		],
-		"s-3102-1000-111-0": [{ type: "text", sub_type: "message", message: "Leap (Stun)", message_ES: "Salto > (al jugador)" }],
+		"s-3102-1000-111-0": [{ type: "text", sub_type: "message", message: "Leap (Stun)", message_ES: "Salto > (al jugador)" },
+			{ type: "text", sub_type: "message", delay: 1800, message: "Dodge!", message_ES: "¡Iframe!" }
+		],
 		"s-3102-1000-115-0": [
 			{ type: "text", sub_type: "message", message: "AOE Bombs (Gather)", message_ES: "AOE bombas (reunir)" },
 			{ type: "text", sub_type: "message", delay: 3000, message: "Gather!", message_ES: "¡Reunirse!" }
@@ -50,7 +54,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 		// Right Foot
 		"s-3102-1000-121-0": [
-			{ type: "text", sub_type: "message", message: "Pizza", message_ES: "Pie Derecho" },
+			{ type: "text", sub_type: "message", message: "Pizza", message_ES: "Pizza" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 550, 0, 3000] },
 			{ type: "spawn", func: "semicircle", args: [-60, 70, 912, 0, 50, 8, 450, 0, 4000] },
 			{ type: "spawn", func: "semicircle", args: [120, 250, 912, 0, 50, 8, 450, 0, 4000] },
@@ -68,7 +72,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		// Left Foot
 		"s-3102-1000-124-0": [
-			{ type: "text", sub_type: "message", message: "Pizza", message_ES: "Pie Izquierdo" },
+			{ type: "text", sub_type: "message", message: "Pizza", message_ES: "Pizza" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 550, 0, 3000] },
 			{ type: "spawn", func: "semicircle", args: [-60, 70, 912, 0, 50, 8, 450, 0, 4000] },
 			{ type: "spawn", func: "semicircle", args: [120, 250, 912, 0, 50, 8, 450, 0, 4000] },
