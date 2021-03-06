@@ -16,24 +16,24 @@ module.exports = (dispatch, handlers, guide, lang) => {
 	let boss_offset = 0;
 	let qbacting = null;
 	let blue = false;
-	let red  = false;
+	let red = false;
 	let debuff_tracker_started = false;
 
 	const mech_messages = {
-		0: { message: "IN",    message_ES: "ENTRAR" },
-		1: { message: "OUT",   message_ES: "SALIR" },
-		2: { message: "Left",  message_ES: "Izquierda" },
+		0: { message: "IN", message_ES: "ENTRAR" },
+		1: { message: "OUT", message_ES: "SALIR" },
+		2: { message: "Left", message_ES: "Izquierda" },
 		3: { message: "Right", message_ES: "Derecha" }
 	};
 
 	const qbacting_messages = {
 		0: { message: "different", message_ES: "diferente" },
-		1: { message: "same",      message_ES: "igual" }
+		1: { message: "same", message_ES: "igual" }
 	};
 
 	const debuff_messages = {
 		0: { message: "Ready to get Fire debuff", message_ES: "Listo para cambiar al debuff de Fuego" },
-		1: { message: "Ready to get Ice debuff",  message_ES: "Listo para cambiar al debuff de Hielo" }
+		1: { message: "Ready to get Ice debuff", message_ES: "Listo para cambiar al debuff de Hielo" }
 	};
 
 	// NULL % 2 = 0
@@ -45,15 +45,15 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		if (!boss_ent) return;
 
 		let distance = 220;
-		let caption  = "IN";
+		let caption = "IN";
 
 		if (out) {
 			distance = 620;
-			caption  = "OUT";
+			caption = "OUT";
 		}
 
 		handlers.event([
-			{ type: "spawn", func: "marker", args: [false,  45 + boss_offset, distance, 0, 4000, true, [caption, "SAFE"]] },
+			{ type: "spawn", func: "marker", args: [false, 45 + boss_offset, distance, 0, 4000, true, [caption, "SAFE"]] },
 			{ type: "spawn", func: "marker", args: [false, 135 + boss_offset, distance, 0, 4000, true, [caption, "SAFE"]] },
 			{ type: "spawn", func: "marker", args: [false, 225 + boss_offset, distance, 0, 4000, true, [caption, "SAFE"]] },
 			{ type: "spawn", func: "marker", args: [false, 315 + boss_offset, distance, 0, 4000, true, [caption, "SAFE"]] }
@@ -213,11 +213,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			}, 500);
 
 			blue = true;
-			red  = false;
+			red = false;
 
 			dispatch.setTimeout(() => {
 				blue = false;
-				red  = true;
+				red = true;
 			}, 6600);
 
 			dispatch.setTimeout(() => red = false, 9400);
@@ -243,16 +243,15 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			}, 500);
 
 			blue = false;
-			red  = true;
+			red = true;
 
 			dispatch.setTimeout(() => {
 				blue = true;
-				red  = false;
+				red = false;
 			}, 6600);
 
 			dispatch.setTimeout(() => blue = false, 9400);
 		}
-
 
 		if (!debuff_tracker_started) {
 			dispatch.hook("S_ABNORMALITY_BEGIN", 4, abnormality_change.bind(null, true));
@@ -327,8 +326,6 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 		"206-0": [{ type: "text", sub_type: "message", message: "Jump Back", message_ES: "Salto hacia atrás" }],
 		"206-2": [{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 15, 350, 0, 3000] }],
-		"164-0": [{ type: "text", sub_type: "message", message: "Die (100%)", message_ES: "R.I.P (100%)" }],
-		"165-0": [{ type: "text", sub_type: "message", message: "Die (0%)", message_ES: "R.I.P (0%)" }],
 		"137-0": [{ type: "text", sub_type: "message", message: "Knockdown", message_ES: "¡¡[Rugido]!!" }],
 		"138-0": [{ type: "text", sub_type: "message", message: "AOE", message_ES: "AOE" }],
 		"139-0": [

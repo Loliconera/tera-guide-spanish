@@ -12,7 +12,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 	function boss_mech_event(skillid) {
 		// (зеленый) "Ближе!"
 		if (skillid == 121) {
-			green  = true;
+			green = true;
 			handlers.event([
 				// круг перед боссом
 				{ type: "spawn", func: "circle", args: [true, 553, 0, 170, 8, 290, 3000, 2000] }, // 1
@@ -27,8 +27,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			purple = true;
 			handlers.event([
 				// бублик вокруг босса
-				{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 8, 280, 3000, 2000] },  // 1
-				{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 4, 570, 3000, 2000] },  // 1
+				{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 8, 280, 3000, 2000] }, // 1
+				{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 4, 570, 3000, 2000] }, // 1
 				// круг перед боссом
 				{ type: "spawn", func: "circle", args: [true, 553, 0, 170, 8, 290, 4000, 3000] } // 2
 			]);
@@ -43,10 +43,10 @@ module.exports = (dispatch, handlers, guide, lang) => {
 					{ type: "text", sub_type: "message", message: "In > Out > In", message_ES: "Entrar > Salir > Entrar" },
 					// бублик перед боссом
 					{ type: "spawn", func: "circle", args: [true, 912, 0, 150, 8, 280, 5000, 3000] }, // 3
-					{ type: "spawn", func: "circle", args: [true, 912, 0, 150, 4, 570, 5000, 3000] }  // 3
+					{ type: "spawn", func: "circle", args: [true, 912, 0, 150, 4, 570, 5000, 3000] } // 3
 				]);
 
-				dispatch.setTimeout(() => purple = false,  2000);
+				dispatch.setTimeout(() => purple = false, 2000);
 
 			// < 30%
 			// Проваливай! - Упади в бездну
@@ -57,10 +57,10 @@ module.exports = (dispatch, handlers, guide, lang) => {
 					{ type: "text", sub_type: "message", delay: 5000, message: "In", message_ES: "Entrar" },
 					// бублик перед боссом
 					{ type: "spawn", func: "circle", args: [true, 912, 0, 150, 8, 280, 5000, 5000] }, // 3
-					{ type: "spawn", func: "circle", args: [true, 912, 0, 150, 4, 570, 5000, 5000] }  // 3
+					{ type: "spawn", func: "circle", args: [true, 912, 0, 150, 4, 570, 5000, 5000] } // 3
 				]);
 
-				dispatch.setTimeout(() => purple = false,  2000);
+				dispatch.setTimeout(() => purple = false, 2000);
 			}
 		}
 
@@ -86,7 +86,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 					{ type: "spawn", func: "circle", args: [true, 912, 0, 200, 8, 450, 5000, 3000] } // 3
 				]);
 
-				dispatch.setTimeout(() => purple = false,  2000);
+				dispatch.setTimeout(() => purple = false, 2000);
 			
 			// < 30%
 			// Ближе! - Ощути силу взрыва
@@ -99,7 +99,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 					{ type: "spawn", func: "circle", args: [true, 912, 0, 200, 8, 450, 5000, 5000] } // 3
 				]);
 
-				dispatch.setTimeout(() => purple = false,  2000);
+				dispatch.setTimeout(() => purple = false, 2000);
 			
 			// < 30%
 			// Проваливай! - Ощути силу взрыва
@@ -112,7 +112,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 					{ type: "spawn", func: "circle", args: [true, 912, 0, 200, 8, 450, 5000, 5000] } // 3
 				]);
 
-				dispatch.setTimeout(() => purple = false,  2000);
+				dispatch.setTimeout(() => purple = false, 2000);
 			}
 		}
 
@@ -138,9 +138,9 @@ module.exports = (dispatch, handlers, guide, lang) => {
 	}
 
 	let debuff_tracker_started = false;
-	let debuffs_targe = {
+	const debuffs_targe = {
 		30209101: { message: "Lightning", message_ES: "Relampago" },
-		30209102: { message: "Witch",     message_ES: "Bruja" }
+		30209102: { message: "Witch", message_ES: "Bruja" }
 	};
 
 	let debuff_call_event = null;

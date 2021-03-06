@@ -19,7 +19,7 @@ module.exports.general = {
 			["guide spawnObject, generacion de objetos marcadores", "PRMSG"],
 			["guide stream, modo streamer (ocultar mensajes y objetos)", "PRMSG"],
 			["guide dungeons, lista de todas las dungeons compatibles", "PRMSG"],
-			["verbose id, enviar mensajes para dungeons especificas", "PRMSG"],
+			["guide verbose id, enviar mensajes para dungeons especificas", "PRMSG"],
 			["guide spawnObject id, generacion de objetos marcadores para dungeons especificas", "PRMSG"],
 			["guide cr, el color del mensaje es ROJO", "CRMSG"],
 			["guide co, el color del mensaje es NARANJA", "COMSG"],
@@ -59,10 +59,7 @@ module.exports.general = {
 		colorchanged: "El color de la notificacion del mensaje ha cambiado",
 		dgnotfound: "Dungeon no encontrada.",
 		dgnotspecified: "ID de dungeon no especificada.",
-		enterdg: "¡Bienvenido! a la Dungeon",
-		enterspdg: "¡Bienvenido! a la Dungeon",
-		enteresdg: "¡Bienvenido! a la Dungeon",		
+		enterdg: "¡Bienvenido! a la Dungeon",	
 		fordungeon: "para dungeon"
 	}
-
 };

@@ -1,20 +1,20 @@
 {
     "disableAutoUpdate": false,
-    "name": "TERA-Guia",
+    "name": "TERA-Guía",
     "options": {
-        "niceName": "Guia",
-        "guiName": "TERA-Guia",
+        "niceName": "Guía",
+        "guiName": "TERA-Guía",
         "settingsFile": "config.json",
         "settingsMigrator": "settings_migrator.js",
-        "settingsVersion": 1.15
+        "settingsVersion": 1.16
     },
     "author": "HSDN / Loliconera",
-    "description": "Un modulo de guia para dungeons. Muestra mensajes en la pantalla y dibuja zonas de ataques y mecanicas de jefes. Traducido al Español por Loliconera.",
+    "description": "Modulo Guía para dungeons. Traducido al Español por Loliconera.",
     "servers": ["https://raw.githubusercontent.com/Loliconera/tera-guide-spanish/master/"],
     "supportUrl": "https://github.com/Loliconera/tera-guide-spanish/issues",
     "dependencies": {
         "library": "https://raw.githubusercontent.com/tera-toolbox-mods/library/master/module.json",
         "tera-guide-core": "https://raw.githubusercontent.com/hsdn/tera-guide-core/master/module.json"
     },
-    "version": "03/05/2021"
+    "version": "3/06/2021"
 }

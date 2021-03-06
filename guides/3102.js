@@ -14,7 +14,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", delay: 1400, message: "Dodge!", message_ES: "¡Iframe!" }
 		],
 
-		// Ataques basicos
+		// Basic attacks
 		"s-3102-1000-103-0": [{ type: "text", sub_type: "message", message: "2 Hits | Bleed", message_ES: "2 Ataques | Sangrar" }],
 		"s-3102-1000-113-0": [{ type: "text", sub_type: "message", message: "4 Hits Combo", message_ES: "Combo de 4 Ataques" }],
 		"s-3102-1000-105-0": [{ type: "text", sub_type: "message", message: "Uppercut | Stun", message_ES: "Ataque de Corte | Stun" }],

@@ -83,7 +83,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3103-1000-116-0": [{ type: "func", func: back_kick_event, args: [116] }], // Haymaker
 		"s-3103-1000-115-0": [{ type: "text", sub_type: "message", message: "Haymaker (Tank)", message_ES: "Puñetazo (Tank)" }],
 		"s-3103-1000-131-0": [{ type: "text", sub_type: "message", message: "Rhythmic Blows", message_ES: "Golpes Ritmicos" }], // 131 132 133
-		 // 116 146
+		// 116 146
 		"s-3103-1000-146-0": [
 			{ type: "text", sub_type: "message", message: "Back Kick", message_ES: "Patada hacia atrás" },
 			{ type: "spawn", func: "vector", args: [553, 90, 120, 170, 600, 0, 3000] },

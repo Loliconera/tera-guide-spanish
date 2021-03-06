@@ -233,7 +233,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			}, 500);
 
 			blue = true;
-			red  = false;
+			red = false;
 
 			dispatch.setTimeout(() => blue = false, 6500); //6700
 		}
@@ -258,11 +258,10 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			}, 500);
 
 			blue = false;
-			red  = true;
+			red = true;
 
 			dispatch.setTimeout(() => red = false, 6500);
 		}
-
 
 		if (!debuff_tracker_started) {
 			dispatch.hook("S_ABNORMALITY_BEGIN", 4, abnormality_change.bind(null, true));
@@ -340,8 +339,6 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 		"206-0": [{ type: "text", sub_type: "message", message: "Jump Back", message_ES: "Salto hacia atrás" }],
 		"206-2": [{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 15, 350, 0, 3000] }],
-        "164-0": [{ type: "text", sub_type: "message", message: "R.I.P (100%)", message_ES: "R.I.P (100%)" }],
-		"165-0": [{ type: "text", sub_type: "message", message: "R.I.P (0%)", message_ES: "R.I.P (0%)" }],
 		"137-0": [{ type: "text", sub_type: "message", message: "Knockdown", message_ES: "¡¡[Rugido]!!" }],
 		"138-0": [{ type: "text", sub_type: "message", message: "AOE", message_ES: "AOE" }],
 		"139-0": [{ type: "text", sub_type: "message", message: "Fire to all", message_ES: "Todos cambiar al Fuego" }],
@@ -363,7 +360,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"am-3026-1000-30260001": [{ type: "func", func: skilld_event, args: [30260001] }], // красный
 		"am-3026-1000-30260002": [{ type: "func", func: skilld_event, args: [30260002] }], // синий
 		"am-3026-1000-31260001": [{ type: "func", func: skilld_event, args: [31260001] }], // красный
-		"am-3026-1000-31260002": [{ type: "func", func: skilld_event, args: [31260002] }]  // синий
+		"am-3026-1000-31260002": [{ type: "func", func: skilld_event, args: [31260002] }] // синий
 	};
 
 	const object = {};
