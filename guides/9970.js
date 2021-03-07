@@ -1,6 +1,6 @@
 // Ruinous Manor (Difícil)
 //
-// hecho por Emilia-s2 / HSDN
+// hecha por Emilia-s2 / HSDN
 
 module.exports = (dispatch, handlers, guide, lang) => {
 	guide.type = SP;
@@ -43,11 +43,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", message: "In > Out", message_ES: "ENTRAR > SALIR" },
 			{ type: "spawn_func", func: "circle", args: [false, 553, 0, 0, 15, 300, 0, 5000] }
 		],
-		"s-970-3000-1318-0": [{ type: "text", sub_type: "message", message: "Get red skull!", message_ES: "¡Conseguir el cráneo!" }],
-		"s-970-3000-1317-0": [{ type: "text", sub_type: "message", message: "Get red skull!", message_ES: "¡Conseguir el cráneo!" }],
-		"s-970-3000-1319-0": [{ type: "text", sub_type: "message", message: "Get red skull!", message_ES: "¡Conseguir el cráneo!" }],
-		"s-970-3000-1322-0": [{ type: "text", sub_type: "message", message: "DODGE the PATTERNS!", message_ES: "¡Iframe!" }],
-		"s-970-3000-1311-0": [{ type: "text", sub_type: "message", message: "GATHER FOR CLEANSE!", message_ES: "¡Cleanse!" }],
+		"s-970-3000-1318-0": [{ type: "text", sub_type: "message", message: "Get red skull!", message_ES: "¡Obtener Cráneo Rojo!" }],
+		"s-970-3000-1317-0": [{ type: "text", sub_type: "message", message: "Get red skull!", message_ES: "¡Obtener Cráneo Rojo!" }],
+		"s-970-3000-1319-0": [{ type: "text", sub_type: "message", message: "Get red skull!", message_ES: "¡Obtener Cráneo Rojo!" }],
+		"s-970-3000-1322-0": [{ type: "text", sub_type: "message", message: "DODGE the PATTERNS!", message_ES: "¡IFRAMEA LOS PATRONES!" }],
+		"s-970-3000-1311-0": [{ type: "text", sub_type: "message", message: "GATHER FOR CLEANSE!", message_ES: "¡REUNIRSE PARA EL CLEANSE!" }],
 		"s-970-3000-1120-0": [{ type: "text", sub_type: "message", message: "Shooting skulls", message_ES: "Laser" }],
 		"s-970-3000-2120-0": [{ type: "text", sub_type: "message", message: "Shooting skulls", message_ES: "Laser" }],
 		"s-970-3000-1122-0": [{ type: "text", sub_type: "message", message: "Double shooting skulls", message_ES: "Laser Doble" }],
