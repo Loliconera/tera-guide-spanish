@@ -4,10 +4,24 @@
 
 module.exports = (dispatch, handlers, guide, lang) => {
 
+	let combo_start = false;
+
+	dispatch.hook("S_USER_EFFECT", 1, event => {
+		if (event.circle == 3 && event.operation == 1) {
+			handlers.marker({ id: event.target, color: "yellow", sub_delay: 1000000 });
+		} else if (event.circle == 3 && event.operation == 2) {
+			handlers.marker_remove_all({ delay: 1000 });
+		}
+	});
+
 	return {
 		"nd-3106-1000": [
 			{ type: "stop_timers" },
-			{ type: "despawn_all" }
+			{ type: "despawn_all" },
+			{ type: "marker_remove_all" }
+		],
+		"h-3106-1000-99": [
+			{ type: "spawn", func: "marker", args: [false, 3, -700, 100, 60000000, false, ["Giant", "Giant Direction"]] }
 		],
 
 		"qb-3106-1000-32061001": [
@@ -19,10 +33,18 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "alert", message: "Soon to give stun...", message_ES: "Usar Stun Pronto...", delay: 2000 }
 		],
 
-		"s-3106-1000-106-0": [{ type: "text", sub_type: "message", message: "Knockback Spin", message_ES: "Girar (Empujar)" }],
-		"s-3106-1000-108-0": [{ type: "text", sub_type: "message", message: "Knockback Spin", message_ES: "Girar (Empujar)" }],		
+		"s-3106-1000-102-0": [
+			{ type: "func", func: () => combo_start = true },
+			{ type: "func", func: () => combo_start = false, delay: 1400 }
+		],
+		"s-3106-1000-105-0": [{ type: "text", sub_type: "message", message: "Knockback Spin (Kaia)", message_ES: "Girar (Kaia)", check_func: () => combo_start === true }],
+		"s-3106-1000-106-0": [
+			{ type: "text", sub_type: "message", message: "Knockback", message_ES: "Empujar" },
+			{ type: "spawn", func: "circle", args: [true, 553, 0, 50, 10, 350, 0, 3000] }
+		],
+
 		"s-3106-1000-109-0": [
-			{ type: "text", sub_type: "message", message: "Jump (Knockdown)", message_ES: "Salto (Derribar)" },
+			{ type: "text", sub_type: "message", message: "Jump (Knockdown)", message_ES: "Saltar (Derribar)" },
 			{ type: "spawn", func: "circle", args: [true, 553, 0, 150, 10, 300, 0, 2500] }
 		],
 		"s-3106-1000-201-0": [{ type: "text", sub_type: "message", message: "Front", message_ES: "Ataque Frontal" }],
@@ -33,14 +55,15 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3106-1000-207-0": [{ type: "text", sub_type: "message", message: "Spin (Bleed)", message_ES: "Ataque Giratorio (Sangrar)" }],
 		"s-3106-1000-209-0": [
 			{ type: "text", sub_type: "message", message: "Give Stun! (Knockdown)", message_ES: "¡Usar Stun! (Derribar)" },
-			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 10, 400, 0, 1500] }
+			{ type: "spawn", func: "circle", args: [true, 553, 0, 50, 10, 400, 0, 1500] }
 		],
 		"s-3106-1000-210-0": [
 			{ type: "text", sub_type: "message", message: "Give Stun! (Knockdown)", message_ES: "¡Usar Stun! (Derribar)" },
-			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 10, 400, 0, 1500] }
+			{ type: "spawn", func: "circle", args: [true, 553, 0, 50, 10, 400, 0, 1500] }
 		],
 		"s-3106-1000-211-0": [{ type: "text", sub_type: "message", message: "Push", message_ES: "Empujar" }],
-		"s-3106-1000-216-0": [{ type: "text", sub_type: "message", message: "Somersault", message_ES: "Salto Mortal" }],
+		"s-3106-1000-212-0": [{ type: "text", sub_type: "message", message: "Somersault", message_ES: "Salto Mortal" }],
+		"s-3106-1000-215-0": [{ type: "text", sub_type: "message", message: "Somersault", message_ES: "Salto Mortal" }],
 		"s-3106-1000-508-0": [
 			{ type: "text", sub_type: "message", message: "Outward Waves (Out > In)", message_ES: "Donas afuera: (Salir > Entrar)" },
 			{ type: "spawn", func: "item", args: [206960, 0, 0, 0, 5000] },
@@ -56,7 +79,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3106-1000-507-0": [{ type: "text", sub_type: "message", message: "Leash | Jump (Knockdown)", message_ES: "Pull | Salto (Derribar)" }],
 
 		"s-3106-1000-502-0": [{ type: "text", sub_type: "message", message: "Unleash", message_ES: "Unleash" }],
-		"s-3106-1000-518-0": [{ type: "text", sub_type: "message", message: "Unleash", message_ES: "Unleash" }],		
+		"s-3106-1000-518-0": [{ type: "text", sub_type: "message", message: "Unleash", message_ES: "Unleash" }],
 		"s-3106-1000-519-0": [{ type: "text", sub_type: "message", message: "Unleash", message_ES: "Unleash" }],
 		"s-3106-1000-306-0": [{ type: "text", sub_type: "message", message: "Spin", message_ES: "Ataque Giratorio" }],
 		"s-3106-1000-309-0": [{ type: "text", sub_type: "message", message: "Front", message_ES: "Ataque Frontal" }],
