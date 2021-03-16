@@ -148,7 +148,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-444-1000-2115-0": [{ type: "text", sub_type: "message", delay: 234, message: "Knockup", message_ES: "Mano Derecha: Donas" }],
 		"s-444-1000-2116-0": [
-			{ type: "text", sub_type: "message", message: "Donuts", message_ES: " Donas: (Salir > Entrar)" },
+			{ type: "text", sub_type: "message", message: "Donuts", message_ES: "Donas: (Salir > Entrar)" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 290, 100, 6000] }
 		],
 		"s-444-1000-2117-0": [{ type: "text", sub_type: "message", message: "Jump (Bait)", message_ES: "Saltar > (al Jugador)" }],
@@ -200,7 +200,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-444-1000-1115-0": [{ type: "text", sub_type: "message", delay: 1300, message: "Knockup", message_ES: "Mano Derecha: Donas" }],
 		"s-444-1000-1116-0": [
-			{ type: "text", sub_type: "message", message: "Donuts", message_ES: " Donas: (Salir > Entrar)" },
+			{ type: "text", sub_type: "message", message: "Donuts", message_ES: "Donas: (Salir > Entrar)" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 290, 100, 6000] }
 		],
 		"s-444-1000-1117-0": [{ type: "text", sub_type: "message", message: "Jump (Bait)", message_ES: "Saltar > (al Jugador)" }],
@@ -280,7 +280,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-444-2000-1115-0": [{ type: "text", sub_type: "message", delay: 1300, message: "Knockup", message_ES: "Mano Derecha: Donas" }],
 		"s-444-2000-1116-0": [
-			{ type: "text", sub_type: "message", message: "Donuts", message_ES: " Donas: (Salir > Entrar)" },
+			{ type: "text", sub_type: "message", message: "Donuts", message_ES: "Donas: (Salir > Entrar)" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 290, 100, 6000] }
 		],
 		"s-444-2000-1117-0": [{ type: "text", sub_type: "message", message: "Jump (Bait)", message_ES: "Saltar > (al Jugador)" }],
@@ -408,7 +408,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-444-2000-2115-0": [{ type: "text", sub_type: "message", delay: 234, message: "Knockup", message_ES: "Mano Derecha: Donas" }],
 		"s-444-2000-2116-0": [
-			{ type: "text", sub_type: "message", message: "Donuts", message_ES: " Donas: (Salir > Entrar)" },
+			{ type: "text", sub_type: "message", message: "Donuts", message_ES: "Donas: (Salir > Entrar)" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 290, 100, 6000] }
 		],
 		"s-444-2000-2117-0": [{ type: "text", sub_type: "message", message: "Jump (Bait)", message_ES: "Saltar > (al Jugador)" }],
