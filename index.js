@@ -8,7 +8,7 @@ module.exports.NetworkMod = function (mod) {
 			chat_name: "Guía", // establecer el nombre del autor del chat para los avisos
 		});
 	} catch (e) {
-		mod.error("Warning!\nDepended module \"tera-guide-core\" needed for TERA-Guide is not installed!\nPlease download and install: https://github.com/hsdn/tera-guide-core\n");
+		mod.error("¡Advertencia!\n¡El módulo dependiente \"tera-guide-core\" necesario para el correcto funcionamiento del módulo TERA-Guía no está instalado!\nPor favor descargue e instale: https://github.com/hsdn/tera-guide-core\n");
 		throw e;
 	}
 };

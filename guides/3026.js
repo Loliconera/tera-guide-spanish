@@ -294,21 +294,21 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"145-0": [{ type: "text", sub_type: "message", message: "Stun", message_ES: "Stun" }],
 		"157-0": [{ type: "text", sub_type: "message", message: "Change", message_ES: "Cambio" }],
 		"103-0": [
-			{ type: "text", sub_type: "message", message: "Tail (Flying)", message_ES: "Coletazo hacia atrás (Iframe)" },
+			{ type: "text", sub_type: "message", message: "Tail (Flying)", message_ES: "Coletazo (Iframe)" },
 			{ type: "text", sub_type: "message", message: "Arise!", message_ES: "¡Arise!", delay: 1500, class_position: "priest" },
 			{ type: "spawn", func: "semicircle", args: [140, 260, 912, 0, 0, 10, 500, 0, 2000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 0, 135, 500, 0, 2000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 0, 260, 500, 0, 2000] }
 		],
 		"153-0": [
-			{ type: "text", sub_type: "message", message: "Tail (Flying)", message_ES: "Coletazo hacia atrás (Iframe)" },
+			{ type: "text", sub_type: "message", message: "Tail (Flying)", message_ES: "Coletazo (Iframe)" },
 			{ type: "text", sub_type: "message", message: "Arise!", message_ES: "¡Arise!", delay: 1500, class_position: "priest" },
 			{ type: "spawn", func: "semicircle", args: [140, 260, 912, 0, 0, 10, 500, 0, 2000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 0, 135, 500, 0, 2000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 0, 260, 500, 0, 2000] }
 		],
-		"118-0": [{ type: "text", sub_type: "message", message: "Jump", message_ES: "Saltar" }],
-		"118-1": [{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe" }],
+		"118-0": [{ type: "text", sub_type: "message", message: "Jump", message_ES: "Gran Salto" }],
+		"118-1": [{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 640 }],
 
 		// AOE лед (большой)
 		"104-0": [
