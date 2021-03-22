@@ -34,8 +34,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 
 		"h-3204-1000-90": [{ type: "text", sub_type: "message", message: "90%", message_ES: "90%" }],
-		"h-3204-1000-75": [{ type: "text", sub_type: "message", message: "75%", message_RU: "75%" }],
-		"h-3204-1000-40": [{ type: "text", sub_type: "message", message: "40%", message_RU: "40%" }],
+		"h-3204-1000-75": [{ type: "text", sub_type: "message", message: "75%", message_ES: "75%" }],
+		"h-3204-1000-40": [{ type: "text", sub_type: "message", message: "40%", message_ES: "40%" }],
 
 		"s-3204-1000-104-0": [
 			{ type: "text", sub_type: "message", message: "Stun (AOE)", message_ES: "Stun (АОЕ)" },
@@ -92,8 +92,13 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "marker", args: [false, 340, 150, 0, 2000, true, null], delay: 1500 }
 		],
 		"s-3204-1000-156-0": [{ type: "text", sub_type: "message", message: "Get Skulls", message_ES: "Cráneos" }],
-		"s-3204-1000-157-0": [{ type: "text", sub_type: "message", message: "Gather!", message_ES: "¡Reunirse!", delay: 2000 }],
-		"s-3204-1000-158-0": [{ type: "text", sub_type: "message", message: "Gather!", message_ES: "¡Reunirse!", delay: 5000 }],
+		"s-3204-1000-157-0": [
+			{ type: "text", sub_type: "message", message: "3 seconds", message_ES: "3 segundos" },
+			{ type: "text", sub_type: "message", message: "Gather!", message_ES: "¡Reunirse!", delay: 2000 }],
+		"s-3204-1000-158-0": [
+			{ type: "text", sub_type: "message", message: "6 seconds", message_ES: "6 segundos" },
+			{ type: "text", sub_type: "message", message: "Gather!", message_ES: "¡Reunirse!", delay: 5000 }
+		],
 		"s-3204-1000-159-0": [
 			{ type: "text", sub_type: "message", message: "AOE", message_ES: "АОЕ" },
 			{ type: "marker_remove_all", delay: 3000 }
