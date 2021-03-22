@@ -1,6 +1,6 @@
 // Crimson Killing Grounds
 //
-// hecho por HSDN / Kuroine
+// hecho por HSDN / Kuroine / Minghan
 
 module.exports = (dispatch, handlers, guide, lang) => {
 
@@ -64,21 +64,41 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3206-1000-211-0": [{ type: "text", sub_type: "message", message: "Push", message_ES: "Empujar" }],
 		"s-3206-1000-212-0": [{ type: "text", sub_type: "message", message: "Somersault", message_ES: "Salto Mortal" }],
 		"s-3206-1000-215-0": [{ type: "text", sub_type: "message", message: "Somersault", message_ES: "Salto Mortal" }],
+		"s-3206-1000-507-0": [{ type: "text", sub_type: "message", message: "Leash | Jump (Knockdown)", message_ES: "Pull | Salto (Derribar)" }],
 		"s-3206-1000-508-0": [
 			{ type: "text", sub_type: "message", message: "Outward Waves (Out > In)", message_ES: "Donas afuera: (Salir > Entrar)" },
 			{ type: "spawn", func: "item", args: [206960, 0, 0, 0, 5000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 18, 180, 1500, 5000] },
-			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 12, 350, 1500, 5000] }
+			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 12, 360, 1500, 5000] },
+			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 10, 550, 1500, 5000] },
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 860, 1500, 5000] }
 		],
 		"s-3206-1000-509-0": [
 			{ type: "text", sub_type: "message", message: "Inward Waves (In > Out)", message_ES: "Donas adentro: (Entrar > Salir)" },
 			{ type: "spawn", func: "item", args: [110684, 0, 0, 0, 5000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 18, 180, 1500, 5000] },
-			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 12, 350, 1500, 5000] }
+			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 12, 360, 1500, 5000] },
+			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 10, 550, 1500, 5000] },
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 860, 1500, 5000] }
 		],
-		"s-3206-1000-507-0": [{ type: "text", sub_type: "message", message: "Leash | Jump (Knockdown)", message_ES: "Pull | Salto (Derribar)" }],
-		"s-3206-1000-516-0": "s-3206-1000-508-0",
-		"s-3206-1000-517-0": "s-3206-1000-509-0",
+		"s-3206-1000-516-0": [
+			{ type: "text", sub_type: "message", message: "Outward Waves Fast (Out > In)", message_ES: "Donas afuera Rápido: (Salir > Entrar)" },
+			{ type: "spawn", func: "item", args: [206960, 0, 0, 0, 5000] },
+			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 18, 180, 1500, 5000] },
+			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 12, 360, 1500, 5000] },
+			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 10, 550, 1500, 5000] },
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 860, 1500, 5000] }
+		],
+		"s-3206-1000-517-0": [
+			{ type: "text", sub_type: "message", message: "Inward Waves Fast (In > Out)", message_ES: "Donas adentro Rápido: (Entrar > Salir)" },
+			{ type: "spawn", func: "item", args: [110684, 0, 0, 0, 5000] },
+			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 18, 180, 1500, 5000] },
+			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 12, 360, 1500, 5000] },
+			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 10, 550, 1500, 5000] },
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 860, 1500, 5000] }
+		],
+		//"s-3206-1000-513-0": [{ type: "text", sub_type: "message", message: "Plague/Regress", message_ES: "Чума/регресс" }],
+		//"s-3206-1000-514-0": [{ type: "text", sub_type: "message", message: "Plague/Regress", message_ES: "Чума/регресс" }],
 
 		"s-3206-1000-502-0": [{ type: "text", sub_type: "message", message: "Unleash", message_ES: "Unleash" }],
 		"s-3206-1000-518-0": [{ type: "text", sub_type: "message", message: "Unleash", message_ES: "Unleash" }],
