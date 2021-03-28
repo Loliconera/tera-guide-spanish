@@ -92,6 +92,8 @@ module.exports = {
 		},
 		3206: {
 			"es": "Crimson Killing Grounds"
+		},
+		9070: {
+			"es": "Manglemire"
 		}
-
 };

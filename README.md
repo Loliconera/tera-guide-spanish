@@ -50,6 +50,7 @@ id | Nombre de la dungeon | Idioma
 3040 | Lumikan's Trial | Español
 3106 | Killing Grounds | Español
 3206 | Crimson Killing Grounds | Español
+9070 | Manglemire | Español
 
 ## Configuración de Mensajes
 
