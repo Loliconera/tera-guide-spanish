@@ -3,6 +3,7 @@
 // hecho por michengs
 
 module.exports = (dispatch, handlers, guide, lang) => {
+	guide.type = SP;
 
 	let bossBuffs = [];
 	let count = -1;
@@ -11,9 +12,9 @@ module.exports = (dispatch, handlers, guide, lang) => {
 	let debuff_tracker_started = false;
 
 	const bossActions = {
-		213: { truth: "Truth - Break shield", lie: "Lie - Puddles (run away)" }, // "¡Mi escudo me salvará!"(Escudo)
-		212: { truth: "Truth - Stay outside", lie: "Lie - Stay inside" }, // "¡Los mataré a todos!"(AoE alrededor de jefe)
-		218: { truth: "Truth - Stay outside", lie: "Lie - Stay inside" } // "¡Uno de ustedes debe morir!"(AoE alrededor del jugador)
+		213: { truth: "Truth - Break shield", lie: "Lie - Puddles (run away)" }, // "My shield will save me!" (shield)
+		212: { truth: "Truth - Stay outside", lie: "Lie - Stay inside" }, // "I will kill you all!" (aoe around boss)
+		218: { truth: "Truth - Stay outside", lie: "Lie - Stay inside" } // "One of you must die!" (aoe around player)
 	};
 
 	const bossActions_ES = {
