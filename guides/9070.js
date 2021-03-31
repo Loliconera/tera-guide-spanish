@@ -1,27 +1,24 @@
 ﻿// Manglemire
 //
-// hecho por michengs
+// Hecho por michengs
 
 module.exports = (dispatch, handlers, guide, lang) => {
 	guide.type = SP;
 
-	const opcodeVer = 104; // majorPatchVersion
-
 	let bossBuffs = [];
 	let count = -1;
 	let shining = true;
-	let print = true;
 
 	const bossActions = {
-		213: { truth: "Truth - Break shield", lie: "Lie - Puddles (run away)" }, // "My shield will save me!" (shield)
-		212: { truth: "Truth - Out", lie: "Lie - In" }, // "I will kill you all!" (aoe around boss)
-		218: { truth: "Truth - Out", lie: "Lie - In" } // "One of you must die!" (aoe around player)
+		213: { truth: "Truth | Break shield", lie: "Lie | Puddles (run away)" }, // "My shield will save me!" (shield)
+		212: { truth: "Truth | Out", lie: "Lie | In" }, // "I will kill you all!" (aoe around boss)
+		218: { truth: "Truth | Out", lie: "Lie | In" } // "One of you must die!" (aoe around player)
 	};
 
 	const bossActions_ES = {
-		213: { truth: "Verdad - Romper el ESCUDO", lie: "Mentira - Charcos (evadir)" }, // ¡Mi escudo me salvará!"(Escudo)
-		212: { truth: "Verdad - Salir", lie: "Mentira - Entrar" }, // "¡Los mataré a todos!"(AoE alrededor de jefe)
-		218: { truth: "Verdad - Salir", lie: "Mentira - Entrar" } // "¡Uno de ustedes debe morir!"(AoE alrededor del jugador)
+		213: { truth: "Verdad | Romper el Escudo", lie: "Mentira | Charcos (correr lejos)" }, // "My shield will save me!" (shield)
+		212: { truth: "Verdad | Salir", lie: "Mentira | Entrar" }, // "I will kill you all!" (aoe around boss)
+		218: { truth: "Verdad | Salir", lie: "Mentira | Entrar" } // "One of you must die!" (aoe around player)
 	};
 
 	function start_boss_event() {
@@ -31,7 +28,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 	}
 
 	function boss_message_event(skillid) {
-		if ([213, 212, 218].includes(skillid) && print) {
+		if ([213, 212, 218].includes(skillid)) {
 			handlers.text({
 				sub_type: "message",
 				message: is_telling_truth() ? bossActions[skillid].truth : bossActions[skillid].lie,
@@ -85,31 +82,23 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		}
 	};
 
-	if (dispatch._mod.majorPatchVersion == opcodeVer) {
-		dispatch._mod.dispatch.addOpcode("S_DUNGEON_EVENT_GAGE", 60350);
-	} else {
-		dispatch._mod.error("¡Por favor, actualice manualmente el modulo Tera-guide!");
-	}
-	
-	try {
-		dispatch.hook("S_ABNORMALITY_BEGIN", 4, abnormality_change.bind(null, true));
-		dispatch.hook("S_ABNORMALITY_END", 1, abnormality_change.bind(null, false));
-		dispatch.hook("S_DUNGEON_EVENT_GAGE", 1, gage_change.bind(null, true));
-	} catch (_) {
-		print = false;
-	}
+	dispatch._mod.dispatch.addOpcode("S_DUNGEON_EVENT_GAGE", 60350);
+
+	dispatch.hook("S_ABNORMALITY_BEGIN", 4, abnormality_change.bind(null, true));
+	dispatch.hook("S_ABNORMALITY_END", 1, abnormality_change.bind(null, false));
+	dispatch.hook("S_DUNGEON_EVENT_GAGE", 1, gage_change.bind(null, true));
 
 	return {
 		"ns-470-1000": [{ type: "func", func: start_boss_event }],
 
 		"s-470-1000-1105-0": [{ type: "text", sub_type: "message", message: "Jump", message_ES: "Saltar" }],
-		"s-470-1000-1106-0": [{ type: "text", sub_type: "message", message: "Smash", message_ES: "Aplastar" }],
+		"s-470-1000-1106-0": [{ type: "text", sub_type: "message", message: "Smash", message_ES: "Golpear" }],
 		"s-470-1000-1120-0": [{ type: "text", sub_type: "message", message: "Pull", message_ES: "Pull" }],
 		"s-470-1000-1114-0": [{ type: "text", sub_type: "message", message: "Spray", message_ES: "Spray" }],
 		"s-470-1000-1201-0": [{ type: "text", sub_type: "message", message: "Stun", message_ES: "Stun" }],
 		"s-470-1000-1307-0": [{ type: "text", sub_type: "message", message: "Bomb", message_ES: "Bombas" }],
 		"s-470-1000-2105-0": [{ type: "text", sub_type: "message", message: "Jump", message_ES: "Saltar" }],
-		"s-470-1000-2106-0": [{ type: "text", sub_type: "message", message: "Smash", message_ES: "Aplastar" }],
+		"s-470-1000-2106-0": [{ type: "text", sub_type: "message", message: "Smash", message_ES: "Golpear" }],
 		"s-470-1000-2107-0": [{ type: "text", sub_type: "message", message: "Stun", message_ES: "Stun" }],
 		"s-470-1000-2114-0": [{ type: "text", sub_type: "message", message: "Line", message_ES: "Línea" }],
 		"s-470-1000-3106-0": [{ type: "text", sub_type: "message", message: "100" }],
