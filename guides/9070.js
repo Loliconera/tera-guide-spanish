@@ -5,6 +5,8 @@
 module.exports = (dispatch, handlers, guide, lang) => {
 	guide.type = SP;
 
+	const opcodeVer = 104; // majorPatchVersion
+
 	let bossBuffs = [];
 	let count = -1;
 	let shining = true;
@@ -83,6 +85,13 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		}
 	};
 
+	if (dispatch._mod.majorPatchVersion == opcodeVer) {
+		dispatch._mod.dispatch.addOpcode("S_DUNGEON_EVENT_GAGE", 60350);
+	} else {
+		dispatch._mod.error("Please manually update tera-guide module!");
+	}
+
+	
 	try {
 		dispatch.hook("S_ABNORMALITY_BEGIN", 4, abnormality_change.bind(null, true));
 		dispatch.hook("S_ABNORMALITY_END", 1, abnormality_change.bind(null, false));
