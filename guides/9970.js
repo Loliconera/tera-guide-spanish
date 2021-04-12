@@ -48,9 +48,9 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-970-3000-1319-0": [{ type: "text", sub_type: "message", message: "Get red skull!", message_ES: "¡Obtener Cráneo Rojo!" }],
 		"s-970-3000-1322-0": [{ type: "text", sub_type: "message", message: "DODGE the PATTERNS!", message_ES: "¡IFRAMEA LOS PATRONES!" }],
 		"s-970-3000-1311-0": [{ type: "text", sub_type: "message", message: "GATHER FOR CLEANSE!", message_ES: "¡REUNIRSE PARA EL CLEANSE!" }],
-		"s-970-3000-1120-0": [{ type: "text", sub_type: "message", message: "Shooting skulls", message_ES: "Laser" }],
-		"s-970-3000-2120-0": [{ type: "text", sub_type: "message", message: "Shooting skulls", message_ES: "Laser" }],
-		"s-970-3000-1122-0": [{ type: "text", sub_type: "message", message: "Double shooting skulls", message_ES: "Laser Doble" }],
-		"s-970-3000-2122-0": [{ type: "text", sub_type: "message", message: "Double shooting skulls", message_ES: "Laser Doble" }]
+		"s-970-3000-1120-0": [{ type: "text", sub_type: "message", message: "Shooting skulls", message_ES: "Laser Triple" }],
+		"s-970-3000-2120-0": [{ type: "text", sub_type: "message", message: "Shooting skulls", message_ES: "Laser Triple" }],
+		"s-970-3000-1121-0": [{ type: "text", sub_type: "message", message: "Double shooting skulls", message_ES: "Laser Doble" }],
+		"s-970-3000-2121-0": [{ type: "text", sub_type: "message", message: "Double shooting skulls", message_ES: "Laser Doble" }]
 	};
 };
