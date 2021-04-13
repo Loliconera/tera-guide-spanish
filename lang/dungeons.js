@@ -98,5 +98,5 @@ module.exports = {
 		},
 		3032: {
 			"es": "Akalath Quarantine Training"
-		},
+		}
 };
