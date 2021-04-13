@@ -95,5 +95,8 @@ module.exports = {
 		},
 		9070: {
 			"es": "Manglemire"
-		}
+		},
+		3032: {
+			"es": "Akalath Quarantine Training"
+		},
 };

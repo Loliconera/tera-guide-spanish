@@ -37,6 +37,7 @@ id | Nombre de la dungeon | Idioma
 7011 | Shadow of the Gutrends (Guardian) | Español
 7015 | Escape from Balder's Refuge (Guardian) | Español
 3023 | Akalath Quarantine | Español
+3032 | Akalath Quarantine (Training) | Español
 3020 | Sea of Honor | Español
 3026 | Corrupted Skynest | Español
 3126 | Corrupted Skynest (Difícil) | Español
