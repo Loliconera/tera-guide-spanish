@@ -77,19 +77,19 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", message: "Stun", message_ES: "Stun" },
 			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 12, 250, 0, 2500] }
 		],
-		"s-470-1000-1307-0": [{ type: "text", sub_type: "message", message: "With a Bomb - Go away. No Bomb - Enter the circle", message_ES: "Con una Bomba - Aléjate. Sin Bomba - Entra en el círculo" }],
+		"s-470-1000-1307-0": [{ type: "text", sub_type: "message", message: "With a Bomb - Go away. No Bomb - Enter the circle", message_ES: "Con una Bomba - Aléjate | Sin Bomba - Entrar en el círculo" }],
 		"s-470-1000-2105-0": [{ type: "text", sub_type: "message", message: "Jump", message_ES: "Saltar" }],
 		"s-470-1000-2106-0": [{ type: "text", sub_type: "message", message: "Smash", message_ES: "Golpear" }],
 		"s-470-1000-2107-0": [
 			{ type: "text", sub_type: "message", message: "Stun", message_ES: "Stun" },
 			{ type: "spawn", func: "circle", args: [true, 553, 0, 100, 12, 250, 0, 2500] }
 		],
-		"s-470-1000-2114-0": [{ type: "text", sub_type: "message", message: "Line", message_ES: "Linea" }],
+		"s-470-1000-2114-0": [{ type: "text", sub_type: "message", message: "Line", message_ES: "Línea" }],
 		"s-470-1000-3106-0": [{ type: "text", sub_type: "message", message: "100" }],
 
 		"s-470-1000-3213-0": [ // "My shield will save me!" (shield)
-			{ type: "text", sub_type: "message", message: "Break shield", message_ES: "Romper el ESCUDO", check_func: () => is_telling_truth() },
-			{ type: "text", sub_type: "message", message: "Puddles (run away)", message_ES: "Charcos (correr al borde)", check_func: () => !is_telling_truth() }
+			{ type: "text", sub_type: "message", message: "Break shield", message_ES: "ESCUDO", check_func: () => is_telling_truth() },
+			{ type: "text", sub_type: "message", message: "Puddles (run away)", message_ES: "Charcos (Correr lejos)", check_func: () => !is_telling_truth() }
 		],
 		"s-470-1000-3212-0": [ // "I will kill you all!" (aoe around boss)
 			{ type: "text", sub_type: "message", message: "Out", message_ES: "Salir", check_func: () => is_telling_truth() },
@@ -104,6 +104,6 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "alert", message: "Truth", message_ES: "Verdad", check_func: () => is_telling_truth() },
 			{ type: "text", sub_type: "alert", message: "Lie", message_ES: "Mentira", check_func: () => !is_telling_truth() }
 		],
-		"qb-470-1000-470011": [{ type: "text", sub_type: "message", message: "Stand on stars", message_ES: "Pararse en una estrella" }]
+		"qb-470-1000-470011": [{ type: "text", sub_type: "message", message: "Stand on stars", message_ES: "Pararse en una Estrella" }]
 	};
 };
