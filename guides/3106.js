@@ -81,8 +81,9 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 10, 550, 1500, 5000] },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 860, 1500, 5000] }
 		],
-		//"s-3106-1000-513-0": [{ type: "text", sub_type: "message", message: "Plague/Regress", message_RU: "Чума/регресс" }],
-		//"s-3106-1000-514-0": [{ type: "text", sub_type: "message", message: "Plague/Regress", message_RU: "Чума/регресс" }],
+		"s-3106-1000-512-0": [{ type: "text", sub_type: "message", message: "Turn | Spin", message_ES: "Turno | Ataque Giratorio" }],
+		//"s-3106-1000-513-0": [{ type: "text", sub_type: "message", message: "Plague/Regress", message_ES: "Чума/регресс" }],
+		//"s-3106-1000-514-0": [{ type: "text", sub_type: "message", message: "Plague/Regress", message_ES: "Чума/регресс" }],
 
 		"s-3106-1000-502-0": [{ type: "text", sub_type: "message", message: "Unleash", message_ES: "Unleash" }],
 		"s-3106-1000-518-0": [{ type: "text", sub_type: "message", message: "Unleash", message_ES: "Unleash" }],
