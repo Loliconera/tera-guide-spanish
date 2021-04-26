@@ -10,7 +10,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 	let printend = false;
 
 	function skilld_event(skillid, ent) {
-		if (skillid == 90442304) {
+		if (skillid == 30372304) {
 			handlers.text({ sub_type: "notification", message: "Stun", message_ES: "Stun" });
 			handlers.text({ sub_type: "message", message: "Stun", message_ES: "Stun" });
 		}
@@ -362,7 +362,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3037-2000-1307-0": [{ type: "text", sub_type: "message", message: "!", message_ES: "¡Golpe de Meteoritos!" },
 			{ type: "text", sub_type: "message", delay: 20000, message: "Last aerolite", message_ES: "Ultimo Meteorito" }
 		],
-		"ab-3037-2000-90442303": [{ type: "text", sub_type: "message", message: "Plague/Regress", message_ES: "Plague/Regress" }],
+		"ab-3037-2000-30372303": [{ type: "text", sub_type: "message", message: "Plague/Regress", message_ES: "Plague/Regress" }],
 		"s-3037-2000-1308-0": [{ type: "text", sub_type: "message", message: "Stun (1)", message_ES: "Stun (1)" }],
 		"s-3037-2000-1309-0": [{ type: "text", sub_type: "message", message: "Stun (2)", message_ES: "Stun (2)" }],
 		"s-3037-2000-1310-0": [{ type: "text", sub_type: "message", message: "Stun (3)", message_ES: "Stun (3)" }],
@@ -490,10 +490,10 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "func", func: skilld_event, args: [2142] }
 		],
 
-		"ab-3037-2000-90442000": [{ type: "func", func: skilld_event, args: [90442000] }],
-		"ab-3037-2000-90442001": [{ type: "func", func: skilld_event, args: [90442001] }],
-		"ab-3037-2000-90442304": [{ type: "func", func: skilld_event, args: [90442304] }],
-		"ab-3037-2000-90444001": [{ type: "func", func: skilld_event, args: [90444001] }],
+		"ab-3037-2000-30372000": [{ type: "func", func: skilld_event, args: [30372000] }],
+		"ab-3037-2000-30372001": [{ type: "func", func: skilld_event, args: [30372001] }],
+		"ab-3037-2000-30372304": [{ type: "func", func: skilld_event, args: [30372304] }],
+		"ab-3037-2000-903037001": [{ type: "func", func: skilld_event, args: [903037001] }],
 		"s-3037-2500-1201-0": [{ type: "func", func: print_th }],
 		"s-3037-2500-1305-0": [
 			{ type: "func", func: skilld_event, args: [305] },

@@ -6,17 +6,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 	let combo_count = 0;
 
-	dispatch.hook("S_ABNORMALITY_BEGIN", 4, event => {
-		if (event.id === 31040001)
-			handlers.marker({ id: event.target, color: "yellow", sub_delay: 1000000 });
-	});
-
 	return {
 		"ns-3040-1000": [{ type: "func", func: () => combo_count = 0 }],
 		"nd-3040-1000": [
 			{ type: "stop_timers" },
 			{ type: "despawn_all" },
-			{ type: "marker_remove_all" }
 		],
 
 		"qb-3040-1000-32042000": [
@@ -82,9 +76,6 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3040-1000-156-0": [{ type: "text", sub_type: "message", message: "Get Skulls", message_ES: "Cráneos" }],
 		"s-3040-1000-157-0": [{ type: "text", sub_type: "message", message: "Gather!", message_ES: "¡Reunirse!", delay: 2000 }],
 		"s-3040-1000-158-0": [{ type: "text", sub_type: "message", message: "Gather!", message_ES: "¡Reunirse!", delay: 5000 }],
-		"s-3040-1000-159-0": [
-			{ type: "text", sub_type: "message", message: "AOE", message_ES: "АОЕ" },
-			{ type: "marker_remove_all", delay: 3000 }
-		]
+		"s-3040-1000-159-0": [{ type: "text", sub_type: "message", message: "AOE", message_ES: "АОЕ" }]
 	};
 };
