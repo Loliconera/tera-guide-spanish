@@ -98,5 +98,8 @@ module.exports = {
 		},
 		3032: {
 			"es": "Akalath Quarantine (Training)"
+		},
+		3034: {
+			"es": "RK-9 Kennel (Difícil)"
 		}
 };

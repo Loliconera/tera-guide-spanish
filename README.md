@@ -52,6 +52,7 @@ id | Nombre de la dungeon | Idioma
 3106 | Killing Grounds | Español
 3206 | Crimson Killing Grounds | Español
 9070 | Manglemire | Español
+3034 | RK-9 Kennel (Difícil) | Español
 
 ## Configuración de Mensajes
 
