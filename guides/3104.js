@@ -21,12 +21,14 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 		"qb-3104-1000-32042000": [
 			{ type: "text", sub_type: "message", message: "Arrows", message_ES: "Flechas" },
+			{ type: "text", sub_type: "alert", message: "Dodge", message_ES: "Iframe", delay: 1450 },
 			{ type: "func", func: () => combo_count = 0 }
 		],
 		"h-3104-1000-35": [{ type: "text", sub_type: "message", message: "35%", message_ES: "35%" }],
 
 		"s-3104-1000-104-0": [
 			{ type: "text", sub_type: "message", message: "Stun (AOE)", message_ES: "Stun (АОЕ)" },
+			{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 800 },
 			{ type: "spawn", func: "circle", args: [true, 553, 180, -50, 10, 380, 0, 2000] }
 		],
 		"s-3104-1000-107-0": [
