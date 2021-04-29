@@ -1,4 +1,4 @@
-// RK-9 Kennel (Difícil)
+// Rampaging RK-9 Kennel
 //
 // hecho por michengs / HSDN
 
@@ -127,10 +127,10 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		let duration = boss_seventy ? 800 : 900;
 
 		if ([1160, 1190].includes(skillid)) {
-			handlers.text({ sub_type: "message", delay: delay, message: "Right Safe", message_ES: "Derecha (Seguro)" });
+			handlers.text({ sub_type: "message", delay: delay, message: "Right Safe", message_ES: "Derecha Seguro" });
 		}
 		if ([1170, 1180].includes(skillid)) {
-			handlers.text({ sub_type: "message", delay: delay, message: "Left Safe", message_ES: "Izquierda (Seguro)" });
+			handlers.text({ sub_type: "message", delay: delay, message: "Left Safe", message_ES: "Izquierda Seguro" });
 		}
 		if ([1160, 1170, 1180, 1190].includes(skillid) && boss_seventy) { // <70%
 			if (mech_reverse) {
@@ -227,67 +227,67 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", delay: 11000, message: "Jump", message_ES: "¡Saltar!" }
 		],
 		"s-3034-1000-311-0": [
-			{ type: "text", sub_type: "message", message: "Safe right front", message_ES: "Derecha Frontal (Seguro)" },
+			{ type: "text", sub_type: "message", message: "Safe right front", message_ES: "Derecha Frontal | Seguro" },
 			{ type: "spawn", func: "marker", args: [false, 67, 120, 100, 12000, true, null] }
 		],
 		"s-3034-1000-312-0": [
-			{ type: "text", sub_type: "message", message: "Safe right back", message_ES: "Derecha Atrás (Seguro)" },
+			{ type: "text", sub_type: "message", message: "Safe right back", message_ES: "Derecha Atrás | Seguro" },
 			{ type: "spawn", func: "marker", args: [false, 112, 120, 100, 12000, true, null] }
 		],
 		"s-3034-1000-313-0": [
-			{ type: "text", sub_type: "message", message: "Safe back left", message_ES: "Atrás Izquierda (Seguro)" },
+			{ type: "text", sub_type: "message", message: "Safe back left", message_ES: "Atrás Izquierda | Seguro" },
 			{ type: "spawn", func: "marker", args: [false, 202, 120, 100, 12000, true, null] }
 		],
 		"s-3034-1000-314-0": [
-			{ type: "text", sub_type: "message", message: "Safe front left", message_ES: "Frontal Izquierda (Seguro)" },
+			{ type: "text", sub_type: "message", message: "Safe front left", message_ES: "Frontal Izquierda | Seguro" },
 			{ type: "spawn", func: "marker", args: [false, 337, 120, 100, 12000, true, null] }
 		],
 		"s-3034-1000-315-0": [
-			{ type: "text", sub_type: "message", message: "Safe front right", message_ES: "Frontal Derecha (Seguro)" },
+			{ type: "text", sub_type: "message", message: "Safe front right", message_ES: "Frontal Derecha | Seguro" },
 			{ type: "spawn", func: "marker", args: [false, 22, 120, 100, 12000, true, null] }
 		],
 		"s-3034-1000-316-0": [
-			{ type: "text", sub_type: "message", message: "Safe back right", message_ES: "Atrás Derecha (Seguro)" },
+			{ type: "text", sub_type: "message", message: "Safe back right", message_ES: "Atrás Derecha | Seguro" },
 			{ type: "spawn", func: "marker", args: [false, 157, 120, 100, 12000, true, null] }
 		],
 		"s-3034-1000-317-0": [
-			{ type: "text", sub_type: "message", message: "Safe left back", message_ES: "Izquierda Atrás (Seguro)" },
+			{ type: "text", sub_type: "message", message: "Safe left back", message_ES: "Izquierda Atrás | Seguro" },
 			{ type: "spawn", func: "marker", args: [false, 247, 120, 100, 12000, true, null] }
 		],
 		"s-3034-1000-318-0": [
-			{ type: "text", sub_type: "message", message: "Safe left front", message_ES: "Izquierda Frontal (Seguro)" },
+			{ type: "text", sub_type: "message", message: "Safe left front", message_ES: "Izquierda Frontal | Seguro" },
 			{ type: "spawn", func: "marker", args: [false, 292, 120, 100, 12000, true, null] }
 		],
 		"s-3034-1000-319-0": [
-			{ type: "text", sub_type: "message", message: "Safe front right", message_ES: "Frontal Derecha (Seguro)" },
+			{ type: "text", sub_type: "message", message: "Safe front right", message_ES: "Frontal Derecha | Seguro" },
 			{ type: "spawn", func: "marker", args: [false, 22, 120, 100, 12000, true, null] }
 		],
 		"s-3034-1000-320-0": [
-			{ type: "text", sub_type: "message", message: "Safe back right", message_ES: "Atrás Derecha (Seguro)" },
+			{ type: "text", sub_type: "message", message: "Safe back right", message_ES: "Atrás Derecha | Seguro" },
 			{ type: "spawn", func: "marker", args: [false, 157, 120, 100, 12000, true, null] }
 		],
 		"s-3034-1000-321-0": [
-			{ type: "text", sub_type: "message", message: "Safe back left", message_ES: "Atrás Izquierda (Seguro)" },
+			{ type: "text", sub_type: "message", message: "Safe back left", message_ES: "Atrás Izquierda | Seguro" },
 			{ type: "spawn", func: "marker", args: [false, 202, 120, 100, 12000, true, null] }
 		],
 		"s-3034-1000-322-0": [
-			{ type: "text", sub_type: "message", message: "Safe left front", message_ES: "Izquierda Frontal (Seguro)" },
+			{ type: "text", sub_type: "message", message: "Safe left front", message_ES: "Izquierda Frontal | Seguro" },
 			{ type: "spawn", func: "marker", args: [false, 292, 120, 100, 12000, true, null] }
 		],
 		"s-3034-1000-323-0": [
-			{ type: "text", sub_type: "message", message: "Safe right front", message_ES: "Derecha Frontal (Seguro)" },
+			{ type: "text", sub_type: "message", message: "Safe right front", message_ES: "Derecha Frontal | Seguro" },
 			{ type: "spawn", func: "marker", args: [false, 67, 120, 100, 12000, true, null] }
 		],
 		"s-3034-1000-324-0": [
-			{ type: "text", sub_type: "message", message: "Safe right back", message_ES: "Derecha Atrás (Seguro)" },
+			{ type: "text", sub_type: "message", message: "Safe right back", message_ES: "Derecha Atrás | Seguro" },
 			{ type: "spawn", func: "marker", args: [false, 112, 120, 100, 12000, true, null] }
 		],
 		"s-3034-1000-325-0": [
-			{ type: "text", sub_type: "message", message: "Safe left back", message_ES: "Izquierda Atrás (Seguro)" },
+			{ type: "text", sub_type: "message", message: "Safe left back", message_ES: "Izquierda Atrás | Seguro" },
 			{ type: "spawn", func: "marker", args: [false, 247, 120, 100, 12000, true, null] }
 		],
 		"s-3034-1000-326-0": [
-			{ type: "text", sub_type: "message", message: "Safe front left", message_ES: "Frontal Izquierda (Seguro)" },
+			{ type: "text", sub_type: "message", message: "Safe front left", message_ES: "Frontal Izquierda | Seguro" },
 			{ type: "spawn", func: "marker", args: [false, 337, 120, 100, 12000, true, null] }
 		],
 
