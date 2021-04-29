@@ -1,6 +1,6 @@
 // Draakon Arena
 //
-// hecho por Kuroine / HSDN
+// Hecho por Kuroine / HSDN
 
 module.exports = (dispatch, handlers, guide, lang) => {
 	return {
@@ -10,7 +10,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 
 		// Ress bait / range check
-		"s-3102-1000-107-0": [{ type: "text", sub_type: "message", message: "Spectral Throw (Bait)", message_ES: "Lanzamiento Espectral > (al objetivo)" },
+		"s-3102-1000-107-0": [{ type: "text", sub_type: "message", message: "Spectral Throw (Bait)", message_ES: "Lanzamiento Espectral" },
 			{ type: "text", sub_type: "message", delay: 1400, message: "Dodge!", message_ES: "¡Iframe!" }
 		],
 
@@ -25,11 +25,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", message: "Dodge!", message_ES: "¡Iframe!" },
 			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 16, 420, 100, 3000] }
 		],
-		"s-3102-1000-111-0": [{ type: "text", sub_type: "message", message: "Leap (Stun)", message_ES: "Salto > (al jugador)" },
+		"s-3102-1000-111-0": [{ type: "text", sub_type: "message", message: "Leap (Stun)", message_ES: "Salto (Stun)" },
 			{ type: "text", sub_type: "message", delay: 1800, message: "Dodge!", message_ES: "¡Iframe!" }
 		],
 		"s-3102-1000-115-0": [
-			{ type: "text", sub_type: "message", message: "AOE Bombs (Gather)", message_ES: "AOE bombas (reunir)" },
+			{ type: "text", sub_type: "message", message: "AOE Bombs (Gather)", message_ES: "AOE Bombas (Reunir)" },
 			{ type: "text", sub_type: "message", delay: 3000, message: "Gather!", message_ES: "¡Reunirse!" }
 		],
 		"s-3102-1000-112-0": [
@@ -38,11 +38,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [553, 270, 120, -160, 300, 0, 3000] }
 		],
 		"s-3102-1000-110-0": [
-			{ type: "text", sub_type: "message", message: "Donuts + Wave", message_ES: "Donas + Ola" },
+			{ type: "text", sub_type: "message", message: "Donuts + Wave", message_ES: "Donas + Ola (Entrar)" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 650, 0, 4000] }
 		],
 		"s-3102-1000-109-0": [
-			{ type: "text", sub_type: "message", message: "Knockdown + Spin", message_ES: "Derribo + Girar" },
+			{ type: "text", sub_type: "message", message: "Knockdown + Spin", message_ES: "Derribo + Girar (Kaia)" },
 			{ type: "spawn", func: "circle", args: [true, 553, 0, 100, 10, 420, 0, 1000] },
 			{ type: "spawn", func: "circle", args: [true, 553, 0, 150, 10, 420, 1000, 2000] }
 		],

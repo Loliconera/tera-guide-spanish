@@ -25,7 +25,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			handlers.text({
 				sub_type: "message",
 				message: "Throwing Orb",
-				message_ES: "Lanzar Bombas"
+				message_ES: "Lanzamiento de Bombas"
 			});
 
 			dispatch.setTimeout(() => orb_notice = true, 13000);
