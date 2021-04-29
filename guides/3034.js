@@ -309,21 +309,21 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [true, 553, 0, 300, 12, 228, 0, 3000] }
 		],
 		"s-3034-2000-105-0": [
-			{ type: "text", sub_type: "message", message: "360", message_ES: "Giro (360)" },
+			{ type: "text", sub_type: "message", message: "360", message_ES: "Giro (Repeler)" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 278, 0, 5000] }
 		],
 		"s-3034-2000-108-0": [
-			{ type: "text", sub_type: "message", message: "Back Swipe", message_ES: "Deslizar hacia atrás" },
+			{ type: "text", sub_type: "message", message: "Back Swipe", message_ES: "Ataque atrás (Repeler)" },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 240, 380, 0, 2000] },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 120, 380, 0, 2000] }
 		],
 		"s-3034-2000-301-0": [{ type: "func", func: throwing_orb_event }],
 		"s-3034-2000-304-0": [
-			{ type: "text", sub_type: "message", message: "Get Out", message_ES: "Salir" },
+			{ type: "text", sub_type: "message", message: "Get Out", message_ES: "SALIR" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 400, 0, 4000] }
 		],
 		"s-3034-2000-305-0": [
-			{ type: "text", sub_type: "message", message: "In | Out", message_ES: "Entrar | Salir" },
+			{ type: "text", sub_type: "message", message: "In | Out", message_ES: "ENTRAR | SALIR" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 200, 0, 3000] }
 		],
 		// Safe: |||2|2||| > ||||1|||| > ||3|||3||
@@ -409,15 +409,15 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3034-3000-126-0": [{ type: "text", sub_type: "message", message: "Front | Back", message_ES: "Ataque Frontal | Ataque hacia atrás" }],
 		"s-3034-3000-127-0": [{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque hacia atrás" }],
 		"s-3034-3000-128-0": [
-			{ type: "text", sub_type: "message", message: "Combo | Back Wave", message_ES: "Combo | Ola hacia atrás" },
+			{ type: "text", sub_type: "message", message: "Combo | Back Wave", message_ES: "Combo | Ataque hacia atrás" },
 			{ type: "spawn", func: "vector", args: [553, 180, 40, 120, 1200, 2000, 3000] },
 			{ type: "spawn", func: "vector", args: [553, 180, 40, 240, 1200, 2000, 3000] }
 		],
 		"s-3034-3000-129-0": [{ type: "text", class_position: "tank", sub_type: "message", message: "Dodge", message_ES: "Iframe" }],
 		"s-3034-3000-305-0": [{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 10, 300, 0, 6000] }], // 3034301 3034302 3034303 -> 305
 		"s-3034-3000-321-0": [
-			{ type: "text", sub_type: "message", message: "Shield!", message_ES: "¡Escudo!" },
-			{ type: "text", sub_type: "message", delay: 105000, message: "Shield in 10 seconds!", message_ES: "¡Escudo en 10 segundos!" }
+			{ type: "text", sub_type: "message", message: "Shield!", message_ES: "¡ESCUDO!" },
+			{ type: "text", sub_type: "message", delay: 105000, message: "Shield in 10 seconds!", message_ES: "¡ESCUDO en 10 segundos!" }
 		],
 		"s-3034-3001-308-0": [
 			{ type: "text", sub_type: "message", message: "Bait!", message_ES: "Ataque! -> (al jugador)" },
@@ -429,7 +429,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		// Radar
 		"qb-3034-3000-3034312": [{ type: "text", sub_type: "message", message: "!!! Radar !!!", message_ES: "!!! Radar !!!" }],
 		"s-3034-3000-324-0": [
-			{ type: "text", sub_type: "message", message: "OUT", message_ES: "Salir (Stun)" },
+			{ type: "text", sub_type: "message", message: "OUT", message_ES: "SALIR (Stun)" },
 			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 10, 250, 0, 3000] },
 			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 12, 200, 0, 3000] },
 			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 14, 150, 0, 3000] },
@@ -437,7 +437,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 50, 50, 0, 3000] }
 		],
 		"s-3034-3000-325-0": [
-			{ type: "text", sub_type: "message", message: "IN", message_ES: "Entrar" },
+			{ type: "text", sub_type: "message", message: "IN", message_ES: "ENTRAR" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 300, 0, 3000] }
 		]
 	};
