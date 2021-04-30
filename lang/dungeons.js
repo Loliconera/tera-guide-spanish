@@ -104,5 +104,8 @@ module.exports = {
 		},
 		3042: {
 			"es": "Gardan's Trial",
+		},
+		3041: {
+			"es": "Damned Citadel",
 		}
 };
