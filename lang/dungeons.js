@@ -93,9 +93,6 @@ module.exports = {
 		3206: {
 			"es": "Crimson Killing Grounds"
 		},
-		9070: {
-			"es": "Manglemire"
-		},
 		3032: {
 			"es": "Akalath Quarantine (Training)"
 		},
@@ -107,5 +104,8 @@ module.exports = {
 		},
 		3041: {
 			"es": "Damned Citadel",
+		},
+		3030: {
+			"es": "Commander's Residence - BETA",
 		}
 };

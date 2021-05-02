@@ -51,10 +51,10 @@ id | Nombre de la dungeon | Idioma
 3040 | Lumikan's Trial | Español
 3106 | Killing Grounds | Español
 3206 | Crimson Killing Grounds | Español
-9070 | Manglemire | Español
 3042 | Gardan's Trial | Español
 3034 | Rampaging RK-9 Kennel | Español
 3041 | Damned Citadel | Español
+3030 | *Commander's Residence - BETA* | Español
 
 ## Configuración de Mensajes
 
