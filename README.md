@@ -54,7 +54,7 @@ id | Nombre de la dungeon | Idioma
 3042 | Gardan's Trial | Español
 3034 | Rampaging RK-9 Kennel | Español
 3041 | Damned Citadel | Español
-3030 | *Commander's Residence - BETA* | Español
+3030 | Commander's Residence | Español
 
 ## Configuración de Mensajes
 
