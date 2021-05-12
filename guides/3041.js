@@ -82,25 +82,17 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", message: "Right X-Swipe", message_ES: "Arrastre Derecho (X)" },
 			{ type: "spawn", func: "vector", args: [553, 305, 700, 130, 1200, 0, 3000] },
 			{ type: "spawn", func: "vector", args: [553, 325, 700, 130, 1200, 0, 3000] },
-			{ type: "spawn", func: "vector", args: [553, 30, 700, 230, 1200, 3000, 1700] },
-			{ type: "spawn", func: "vector", args: [553, 50, 700, 230, 1200, 3000, 1700] }
-		],
-		"s-3041-2000-145-0": [
-			{ type: "text", sub_type: "message", message: "Left X-Swipe", message_ES: "Arrastre Izquierdo (X)" },
-			{ type: "spawn", func: "vector", args: [553, 30, 700, 230, 1200, 0, 2000] },
-			{ type: "spawn", func: "vector", args: [553, 50, 700, 230, 1200, 0, 2000] }
+			{ type: "text", sub_type: "message", message: "Left X-Swipe", message_ES: "Arrastre Izquierdo (X)", delay: 3000 },
+			{ type: "spawn", func: "vector", args: [553, 30, 700, 230, 1200, 3000, 3000] },
+			{ type: "spawn", func: "vector", args: [553, 50, 700, 230, 1200, 3000, 3000] }
 		],
 		"s-3041-2000-146-0": [
 			{ type: "text", sub_type: "message", message: "Right Swipe", message_ES: "Arrastre Derecho" },
 			{ type: "spawn", func: "vector", args: [553, 355, 500, 180, 1000, 0, 3000] },
 			{ type: "spawn", func: "vector", args: [553, 25, 500, 180, 1000, 0, 3000] },
-			{ type: "spawn", func: "vector", args: [553, 335, 500, 180, 1000, 3000, 1700] },
-			{ type: "spawn", func: "vector", args: [553, 5, 500, 180, 1000, 3000, 1700] }
-		],
-		"s-3041-2000-147-0": [
-			{ type: "text", sub_type: "message", message: "Left Swipe", message_ES: "Arrastre Izquierdo" },
-			{ type: "spawn", func: "vector", args: [553, 335, 500, 180, 1000, 0, 2000] },
-			{ type: "spawn", func: "vector", args: [553, 5, 500, 180, 1000, 0, 2000] }
+			{ type: "text", sub_type: "message", message: "Left Swipe", message_ES: "Arrastre Izquierdo", delay: 3000 },
+			{ type: "spawn", func: "vector", args: [553, 335, 500, 180, 1000, 3000, 3000] },
+			{ type: "spawn", func: "vector", args: [553, 5, 500, 180, 1000, 3000, 3000] }
 		],
 		"s-3041-2000-148-0": [
 			{ type: "text", sub_type: "message", message: "Stun (AoE)", message_ES: "Stun (АоЕ)" },
