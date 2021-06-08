@@ -55,6 +55,7 @@ id | Nombre de la dungeon | Idioma
 3034 | Rampaging RK-9 Kennel | Español
 3041 | Damned Citadel | Español
 3030 | Commander's Residence | Español
+3043 | Harnovog's Trial | Español
 
 ## Configuración de Mensajes
 

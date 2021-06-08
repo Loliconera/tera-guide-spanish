@@ -107,5 +107,8 @@ module.exports = {
 		},
 		3030: {
 			"es": "Commander's Residence",
+		},
+		3043: {
+			"es": "Harnovog's Trial",
 		}
 };
