@@ -32,5 +32,9 @@
         "lang/strings.js": "910459cd5073d3911ed3aa9d64578d0f2ad4b64768b88cc18cfb344df5a17b9b",
         "module.json": "cc0ec319a7e85e67c3588af3dc840ae4e665198eeb992dc2c7358df212314e24",
         "settings_migrator.js": "0866315926bbfde47c943cd6c0ac0fbe9c0f2e8d6f3d25987f3e1b2f6486da79"
+    },
+    "defs": {
+        "S_ABNORMALITY_END": 1,
+        "S_USER_EFFECT": 1
     }
 }
