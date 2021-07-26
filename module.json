@@ -2,7 +2,7 @@
     "disableAutoUpdate": false,
     "name": "TERA-Guia",
     "options": {
-        "niceName": "Guia",
+        "niceName": "TERA-Guia",
         "guiName": "TERA-Guia",
         "settingsFile": "config.json",
         "settingsMigrator": "settings_migrator.js",

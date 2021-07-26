@@ -19,7 +19,7 @@ Toolbox(/8) | Descripción del comando
 **guide&nbsp;gui** | Mostrar módulo GUI.
 **guide&nbsp;voice**<br>(defecto: desactivado) | Mensajes de texto a voz (TTS).
 **guide&nbsp;lNotice**<br>(defecto: desactivado) | Enviar mensajes en el canal **Notice** en lugar de mensajes en pantalla.
-**guide&nbsp;gNotice**<br>(defecto: desactivado) | Enviar mensajes en el canal **Chat Party**.
+**guide&nbsp;gNotice**<br>(defecto: desactivado) | Enviar mensajes en el canal **Party**.
 **guide male~female**<br>(defecto: femenino) | Configure el género de voz de voz TTS (si está disponible).
 **guide&nbsp;`1`~`10`**<br>(defecto: 2) | Configure la velocidad de voz TTS.
 **guide&nbsp;spawnObject**<br>(defecto: activado) | Generación de objetos marcadores.
@@ -60,17 +60,18 @@ id | Nombre de la dungeon | Idioma
 ## Configuración de Mensajes
 
 * En la pantalla (en la parte inferior) y mensajes de chat, si el parámetro **lNotice** está *activado*, todos los mensajes se enviaran al canal **Notice**.   
-  ![](https://i.imgur.com/PGRm9Hx.png)   
+  ![](https://i.imgur.com/MnIrEZd.png)   
 
-* Cuando el parámetro **gNotice** está *activado*, todos los mensajes se enviarán al canal **Chat Party**.   
+* Cuando el parámetro **gNotice** está *activado*, todos los mensajes se enviarán al canal **Party**.   
+  ![](https://i.imgur.com/el8E3oN.png)   
 
 * En la pantalla (en la parte superior), si el parámetro **lNotice** está *desactivado*, todos los mensajes se mostraran en la parte superior de la pantalla.   
-  ![](https://i.imgur.com/eVmuWjG.png)   
+  ![](https://i.imgur.com/Fxjivzf.png)   
   Puede cambiar el color de los mensajes usando los comandos, para cambiarlo tendra que escribir el parámetro **guide help** para mostrar una lista completa de todos los colores soportados o tambien puede usar la interfaz GUI.   
   ![](https://i.imgur.com/uXc3vdH.png)   
 
 * Cuando el Modo Streamer está *activado* (parámetro **stream**), todos los mensajes de texto se enviarán solamente al canal de chat **Toolbox(/8)**, pero se reproducirán los mensajes de texto a voz TTS.   
-  ![](https://i.imgur.com/NLIt4yq.png)   
+  ![](https://i.imgur.com/M3woYlC.png)   
 
 * Cuando ingresa a una mazmorra el modulo le notificará con un mensaje de bienvenida, tambien le notificará que modulos estan activados o desactivados.   
   ![](https://i.imgur.com/iGBO15l.png)   
