@@ -59,14 +59,14 @@ id | Nombre de la dungeon | Idioma
 
 ## Configuración de Mensajes
 
-* En la pantalla (en la parte inferior) y mensajes de chat, si el parámetro **lNotice** está *activado*, todos los mensajes se enviaran al canal **Notice**.   
-  ![](https://i.imgur.com/MnIrEZd.png)   
+* En la pantalla (en la parte inferior) y mensajes de chat, si el parámetro **lNotice** está *activado*, todos los mensajes se enviaran al canal **Notice**. (**Mensajes de Chat Notice**)   
+  ![](https://i.imgur.com/ZFkQ08X.png)   
 
-* Cuando el parámetro **gNotice** está *activado*, todos los mensajes se enviarán al canal **Party**.   
+* Cuando el parámetro **gNotice** está *activado*, todos los mensajes se enviarán al canal **Party**. (**Mensaje de Chat Party**)   
   ![](https://i.imgur.com/el8E3oN.png)   
 
-* En la pantalla (en la parte superior), si el parámetro **lNotice** está *desactivado*, todos los mensajes se mostraran en la parte superior de la pantalla.   
-  ![](https://i.imgur.com/Fxjivzf.png)   
+* En la pantalla (en la parte superior), si el parámetro **lNotice** está *desactivado*, todos los mensajes se mostraran en la parte superior de la pantalla. (**Mensajes en Pantalla**)   
+  ![](https://i.imgur.com/lH9Xo9f.png)   
   Puede cambiar el color de los mensajes usando los comandos, para cambiarlo tendra que escribir el parámetro **guide help** para mostrar una lista completa de todos los colores soportados o tambien puede usar la interfaz GUI.   
   ![](https://i.imgur.com/uXc3vdH.png)   
 
