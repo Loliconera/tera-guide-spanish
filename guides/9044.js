@@ -362,7 +362,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-444-2000-1307-0": [{ type: "text", sub_type: "message", message: "!", message_ES: "¡Golpe de Meteoritos!" },
 			{ type: "text", sub_type: "message", delay: 20000, message: "Last aerolite", message_ES: "Ultimo Meteorito" }
 		],
-		"ab-444-2000-90442303": [{ type: "text", sub_type: "message", message: "Plague/Regress", message_ES: "Plague/Regress" }],
+		"ab-444-2000-90442303": [{ type: "text", sub_type: "message", message: "Plague/Regress", message_ES: "Plague/Regress", class_position: "heal" }],
 		"s-444-2000-1308-0": [{ type: "text", sub_type: "message", message: "Stun (1)", message_ES: "Stun (1)" }],
 		"s-444-2000-1309-0": [{ type: "text", sub_type: "message", message: "Stun (2)", message_ES: "Stun (2)" }],
 		"s-444-2000-1310-0": [{ type: "text", sub_type: "message", message: "Stun (3)", message_ES: "Stun (3)" }],

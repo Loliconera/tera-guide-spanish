@@ -362,17 +362,17 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3037-2000-1307-0": [{ type: "text", sub_type: "message", message: "!", message_ES: "¡Golpe de Meteoritos!" },
 			{ type: "text", sub_type: "message", delay: 20000, message: "Last aerolite", message_ES: "Ultimo Meteorito" }
 		],
-		"ab-3037-2000-30372303": [{ type: "text", sub_type: "message", message: "Plague/Regress", message_ES: "Plague/Regress" }],
+		"ab-3037-2000-30372303": [{ type: "text", sub_type: "message", message: "Plague/Regress", message_ES: "Plague/Regress", class_position: "heal" }],
 		"s-3037-2000-1308-0": [{ type: "text", sub_type: "message", message: "Stun (1)", message_ES: "Stun (1)" }],
 		"s-3037-2000-1309-0": [{ type: "text", sub_type: "message", message: "Stun (2)", message_ES: "Stun (2)" }],
 		"s-3037-2000-1310-0": [{ type: "text", sub_type: "message", message: "Stun (3)", message_ES: "Stun (3)" }],
 		"s-3037-2000-1311-0": [
-			{ type: "text", sub_type: "message", message: "Wrath", message_ES: "Ira" },
+			{ type: "text", sub_type: "message", message: "Wrath", message_ES: "IRA" },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 0, 500, 0, 6000] },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 180, 500, 0, 6000] }
 		],
 		"s-3037-2000-1312-0": [
-			{ type: "text", sub_type: "message", message: "Wrath!", message_ES: "¡Ira!" },
+			{ type: "text", sub_type: "message", message: "Wrath!", message_ES: "¡IRA!" },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 0, 500, 0, 6000] },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 180, 500, 0, 6000] }
 		],
