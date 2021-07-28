@@ -367,12 +367,12 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-444-2000-1309-0": [{ type: "text", sub_type: "message", message: "Stun (2)", message_ES: "Stun (2)" }],
 		"s-444-2000-1310-0": [{ type: "text", sub_type: "message", message: "Stun (3)", message_ES: "Stun (3)" }],
 		"s-444-2000-1311-0": [
-			{ type: "text", sub_type: "message", message: "Wrath", message_ES: "Ira" },
+			{ type: "text", sub_type: "message", message: "Wrath", message_ES: "IRA" },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 0, 500, 0, 6000] },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 180, 500, 0, 6000] }
 		],
 		"s-444-2000-1312-0": [
-			{ type: "text", sub_type: "message", message: "Wrath!", message_ES: "¡Ira!" },
+			{ type: "text", sub_type: "message", message: "Wrath!", message_ES: "¡IRA!" },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 0, 500, 0, 6000] },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 180, 500, 0, 6000] }
 		],
