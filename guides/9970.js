@@ -73,12 +73,12 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-970-3000-1317-0": [{ type: "text", sub_type: "message", message: "Get Red Skull!", message_ES: "¡Cráneo Rojo!" }],
 		"s-970-3000-1319-0": [{ type: "text", sub_type: "message", message: "Get Red Skull!", message_ES: "¡Cráneo Rojo!" }],
 		"s-970-3000-1322-0": [
-			{ type: "text", sub_type: "message", message: "Dodge!", message_ES: "¡Iframe!" },
+			{ type: "text", sub_type: "message", message: "Dodge!", message_ES: "¡Iframe las DONAS!" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 14, 230, 0, 5000] },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 12, 430, 0, 5000] },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 630, 0, 5000] }
 		],
-		"s-970-3000-1311-0": [{ type: "text", sub_type: "message", message: "Gather for Cleanse!", message_ES: "¡Reunirse para Cleanse!" }],
+		"s-970-3000-1311-0": [{ type: "text", sub_type: "message", message: "Gather for Cleanse!", message_ES: "¡Reunir + Cleanse!" }],
 		"s-970-3000-1120-0": [{ type: "text", sub_type: "message", message: "Shooting Skulls", message_ES: "Laser (Triple)" }],
 		"s-970-3000-2120-0": [{ type: "text", sub_type: "message", message: "Shooting Skulls", message_ES: "Laser (Triple)" }],
 		"s-970-3000-1121-0": [{ type: "text", sub_type: "message", message: "Double Shooting Skulls", message_ES: "Laser (Doble)" }],
