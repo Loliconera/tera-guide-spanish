@@ -298,8 +298,6 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [912, 0, 0, 260, 500, 0, 2000] }
 		],
 		"114-0": [{ type: "text", sub_type: "message", message: "Front Fire", message_ES: "Fuego frontal" }],
-		"118-0": [{ type: "text", sub_type: "message", message: "Jump", message_ES: "Gran Salto" }],
-		"118-1": [{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe" }],
 
 		// AOE лед (большой)
 		"104-0": [
@@ -342,6 +340,10 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "stop_timers" },
 			{ type: "despawn_all" }
 		],
+		"s-3126-1000-1118-0": [{ type: "text", sub_type: "message", message: "Jump", message_ES: "Saltar" }],
+		"s-3126-1000-2118-0": [{ type: "text", sub_type: "message", message: "Jump", message_ES: "Saltar" }],
+		"s-3126-1000-1118-1": [{ type: "text", sub_type: "message", message: "Dodge!", message_ES: "Iframe!", delay: 615 }],
+		"s-3126-1000-2118-1": [{ type: "text", sub_type: "message", message: "Dodge!", message_ES: "Iframe!", delay: 625 }],		
 		"s-3126-1000-1212-0": [{ type: "func", func: skilld_event, args: [212] }],
 		"s-3126-1000-1215-0": [{ type: "func", func: skilld_event, args: [215] }],
 		"s-3126-1000-1213-0": [{ type: "func", func: skilld_event, args: [213] }],

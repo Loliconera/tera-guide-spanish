@@ -12,7 +12,6 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "stop_timers" },
 			{ type: "despawn_all" }
 		],
-		"s-3030-1000-117-0": [{ type: "text", sub_type: "message", message: "Left Hand Attack", message_ES: "Mano Izquierda" }],
 		"s-3030-1000-114-0": [{ type: "text", sub_type: "message", message: "Push (Repel)", message_ES: "Empujar" }],
 		"s-3030-1000-303-0": [{ type: "text", sub_type: "message", message: "Meteors AOE", message_ES: "Meteoros (AOE)" }],
 		"s-3030-1000-120-0": [{ type: "text", sub_type: "message", message: "Push Front", message_ES: "Empuje Frontal" }],
@@ -25,8 +24,6 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3030-1000-112-0": [{ type: "text", sub_type: "message", message: "Jump", message_ES: "Saltar" }],
 		"s-3030-1000-105-0": [{ type: "text", sub_type: "message", message: "Front Fire", message_ES: "Fuego Frontal" }],
 		"am-3030-1000-99000580": [{ type: "text", sub_type: "message", message: "Hit Thorns", message_ES: "Espinas" }],
-		// "s-3030-1000-203-0": [{ type: "text", sub_type: "message", message: "AOE", message_ES: "АОЕ" }],
-		// "s-3030-1000-108-0": [{ type: "text", sub_type: "message", message: "AOE", message_ES: "АОЕ" }],
 
 		// LB-1
 		"nd-3030-2000": [
@@ -37,11 +34,6 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", message: "AOE circles | Stun", message_ES: "АОЕ Círculos | Stun", check_func: () => print_stun },
 			{ type: "func", func: () => print_stun = false },
 			{ type: "func", func: () => print_stun = true, delay: 4000 }
-		],
-		"s-3030-2000-302-0": [
-			{ type: "text", sub_type: "message", message: "Circle Stun Front Combo", message_ES: "Círculos Stun | Combo Frontal", check_func: () => print_stun },
-			{ type: "func", func: () => print_stun = false },
-			{ type: "func", func: () => print_stun = true, delay: 6000 }
 		],
 		"s-3030-2000-105-0": [
 			{ type: "text", sub_type: "message", message: "Laser Frontal (Stun)", message_ES: "Láser (Stun)", check_func: () => print_stun },

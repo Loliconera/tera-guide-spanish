@@ -40,16 +40,16 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 553, -7, 280, 20, 155, 0, 2000] }
 		],
 		"s-970-3000-1110-0": [
-			{ type: "text", sub_type: "message", message: "Tail AOE (jump in front)", message_ES: "Coletazo АОЕ (Frente Seguro)" },
+			{ type: "text", sub_type: "message", message: "Tail AOE (jump in front)", message_ES: "Cola AoE (saltar en frente)" },
 			{ type: "spawn", func: "semicircle", args: [26, 340, 553, 0, 0, 7, 630, 0, 3000] },
 			{ type: "spawn", func: "vector", args: [553, 4, 40, 338, 600, 0, 3000] },
-			{ type: "spawn", func: "vector", args: [553, -4, 40, -338, 600, 0, 3000] },
-		],	
+			{ type: "spawn", func: "vector", args: [553, -4, 40, -338, 600, 0, 3000] }
+		],
 		"s-970-3000-2110-0": [
-			{ type: "text", sub_type: "message", message: "Tail AOE (jump in front)", message_ES: "Coletazo АОЕ (Frente Seguro)" },
+			{ type: "text", sub_type: "message", message: "Tail AOE (jump in front)", message_ES: "Cola AoE (saltar en frente)" },
 			{ type: "spawn", func: "semicircle", args: [26, 340, 553, 0, 0, 7, 630, 0, 3000] },
 			{ type: "spawn", func: "vector", args: [553, 4, 40, 338, 600, 0, 3000] },
-			{ type: "spawn", func: "vector", args: [553, -4, 40, -338, 600, 0, 3000] },
+			{ type: "spawn", func: "vector", args: [553, -4, 40, -338, 600, 0, 3000] }
 		],
 		"s-970-3000-1304-0": [{ type: "text", sub_type: "message", message: "Get Ready! ", message_ES: "¡PREPÁRATE!" }],
 		"s-970-3000-1303-0": [{ type: "text", sub_type: "message", message: "Get Ready!", message_ES: "¡PREPÁRATE!" }],
