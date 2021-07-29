@@ -55,22 +55,22 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-970-3000-1303-0": [{ type: "text", sub_type: "message", message: "Get Ready!", message_ES: "¡PREPÁRATE!" }],
 		"s-970-3000-1113-0": [
 			{ type: "text", sub_type: "alert", message: "OUT", message_ES: "SALIR" },
-			{ type: "text", sub_type: "message", message: "IN", message_ES: "ENTRAR", delay: 1300 },
+			{ type: "text", sub_type: "message", message: "IN", message_ES: "ENTRAR", delay: 1800 },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 14, 300, 0, 5000] }
 		],		
 		"s-970-3000-2113-0": [
 			{ type: "text", sub_type: "alert", message: "OUT", message_ES: "SALIR" }, 
-			{ type: "text", sub_type: "message", message: "IN", message_ES: "ENTRAR", delay: 1300 },
+			{ type: "text", sub_type: "message", message: "IN", message_ES: "ENTRAR", delay: 1800 },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 14, 300, 0, 5000] }
 		],
 		"s-970-3000-1116-0": [
 			{ type: "text", sub_type: "alert", message: "IN", message_ES: "ENTRAR" },
-			{ type: "text", sub_type: "message", message: "OUT", message_ES: "SALIR", delay: 1300 },
+			{ type: "text", sub_type: "message", message: "OUT", message_ES: "SALIR", delay: 1800 },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 14, 300, 0, 5000] }
 		],		
 		"s-970-3000-2116-0": [
 			{ type: "text", sub_type: "alert", message: "IN", message_ES: "ENTRAR" }, 
-			{ type: "text", sub_type: "message", message: "OUT", message_ES: "SALIR", delay: 1300 },
+			{ type: "text", sub_type: "message", message: "OUT", message_ES: "SALIR", delay: 1800 },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 14, 300, 0, 5000] }
 		],
 		"s-970-3000-1318-0": [{ type: "text", sub_type: "message", message: "Get Red Skull!", message_ES: "¡Cráneo Rojo!" }],
@@ -78,7 +78,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-970-3000-1319-0": [{ type: "text", sub_type: "message", message: "Get Red Skull!", message_ES: "¡Cráneo Rojo!" }],
 		"s-970-3000-1322-0": [
 			{ type: "text", sub_type: "message", message: "Dodge!", message_ES: "¡Iframe!", delay: 2000 },
-			{ type: "text", sub_type: "message", message: "Plague/Regress", message_ES: "Plague/Regress", delay: 3500, class_position: "heal" },
+			{ type: "text", sub_type: "message", message: "Plague/Regress", message_ES: "Plague/Regress", delay: 3000, class_position: "heal" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 14, 230, 0, 5000] },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 12, 430, 0, 5000] },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 630, 0, 5000] }
