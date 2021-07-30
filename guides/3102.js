@@ -108,6 +108,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		// Right Foot
 		"s-3102-1000-1121-0": [
 			{ type: "text", sub_type: "message", message: "Pizza", message_ES: "Pizza" },
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 550, 0, 3000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 50, 60, 450, 0, 4000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 50, 120, 450, 0, 4000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 50, 240, 450, 0, 4000] },
@@ -116,6 +117,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-3102-1000-2121-0": [
 			{ type: "text", sub_type: "message", message: "Pizza", message_ES: "Pizza" },
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 550, 0, 3000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 50, 60, 450, 0, 4000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 50, 120, 450, 0, 4000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 50, 240, 450, 0, 4000] },
@@ -137,6 +139,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		// Left Foot
 		"s-3102-1000-1124-0": [
 			{ type: "text", sub_type: "message", message: "Pizza", message_ES: "Pizza" },
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 550, 0, 3000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 50, 60, 450, 0, 4000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 50, 120, 450, 0, 4000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 50, 240, 450, 0, 4000] },
@@ -145,6 +148,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-3102-1000-2124-0": [
 			{ type: "text", sub_type: "message", message: "Pizza", message_ES: "Pizza" },
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 550, 0, 3000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 50, 60, 450, 0, 4000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 50, 120, 450, 0, 4000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 50, 240, 450, 0, 4000] },
