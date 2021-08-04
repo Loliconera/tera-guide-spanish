@@ -70,7 +70,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3105-1000-115-0": [
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 18, 180, 1500, 5000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 12, 330, 1500, 5000] },
-			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 10, 550, 1500, 5000] },
+			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 10, 510, 1500, 5000] },
 			{ type: "text", sub_type: "message", delay: 4800, message: "Dodge", message_ES: "Iframe" }
 		],
 		"s-3105-1000-116-0": [
