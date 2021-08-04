@@ -96,11 +96,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 		"s-3105-1000-310-0": [{ type: "spawn", func: "marker", args: [false, 0, 0, 0, 8000, true, ["Lasers", "Wave"]] }],
 		"s-3105-1000-304-0": [ // red
-			{ type: "text", sub_type: "message", message: "Wave (dodge)", message_ES: "Olas (iframe)", delay: 100  },
+			{ type: "text", sub_type: "message", message: "Wave (dodge)", message_ES: "Olas (iframe)", delay: 100 },
 			{ type: "text", sub_type: "message", message: "Give Stun!", message_ES: "¡Usar Stun!", delay: 2000 }
 		],
 		"s-3105-1000-305-0": [ // blue
-			{ type: "text", sub_type: "message", message: "Wave (dodge)", message_ES: "Olas (iframe)", delay: 100  },
+			{ type: "text", sub_type: "message", message: "Wave (dodge)", message_ES: "Olas (iframe)", delay: 100 },
 			{ type: "text", sub_type: "message", message: "Give Stun!", message_ES: "¡Usar Stun!", delay: 2000 }
 		],
 		"s-3105-1000-121-0": [{ type: "text", sub_type: "message", message: "AoE", message_ES: "АоЕ" }], // red
