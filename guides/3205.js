@@ -16,9 +16,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 
 		"h-3205-1000-80": [{ type: "text", sub_type: "message", message: "80%", message_ES: "80%" }],
-		"h-3205-1000-50": [{ type: "text", sub_type: "message", message: "50%", message_ES: "50%" }],
-		"h-3205-1000-40": [{ type: "text", sub_type: "message", message: "40%", message_ES: "40%" }],
-		"h-3205-1000-35": [{ type: "text", sub_type: "message", message: "35%", message_ES: "35%" }],
+		"h-3205-1000-40": [{ type: "text", sub_type: "message", message: "45%", message_ES: "45%" }],
+		"h-3205-1000-35": [{ type: "text", sub_type: "message", message: "40%", message_ES: "40%" }],
 
 		"s-3205-1000-101-0": [{ type: "text", sub_type: "message", message: "Front Swing", message_ES: "Ataque Frontal" }],
 		"s-3205-1000-102-0": [
@@ -96,12 +95,12 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-3205-1000-304-0": [ // red
 			{ type: "text", sub_type: "message", message: "Dodge!", message_ES: "Iframe!", delay: 200 },
-			{ type: "text", sub_type: "message", message: "Plague of Exhaustion", message_ES: "Plague", class_position: "priest", delay: 1000 },
-			{ type: "text", sub_type: "message", message: "Regression", message_ES: "Regression", class_position: "mystic", delay: 1000 },
 			{ type: "text", sub_type: "message", message: "Give Stun!", message_ES: "¡Usar Stun!", delay: 2000 }
 		],
 		"s-3205-1000-305-0": [ // blue
 			{ type: "text", sub_type: "message", message: "Dodge!", message_ES: "Iframe!", delay: 200 },
+			{ type: "text", sub_type: "message", message: "Plague of Exhaustion", message_ES: "Plague", class_position: "priest", delay: 1000 },
+			{ type: "text", sub_type: "message", message: "Regression", message_ES: "Regression", class_position: "mystic", delay: 1000 },
 			{ type: "text", sub_type: "message", message: "Give Stun!", message_ES: "¡Usar Stun!", delay: 2000 }
 		],
 		"s-3205-1000-121-0": [{ type: "text", sub_type: "message", message: "AoE", message_ES: "АоЕ" }], // red
