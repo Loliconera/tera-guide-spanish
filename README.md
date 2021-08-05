@@ -20,7 +20,7 @@ Toolbox(/8) | Descripción del comando
 **guide&nbsp;lNotice**<br>(defecto: desactivado) | Enviar mensajes en el canal **Notice** en lugar de mensajes en pantalla.
 **guide&nbsp;gNotice**<br>(defecto: desactivado) | Enviar mensajes en el canal **Party**.
 **guide male~female**<br>(defecto: femenino) | Configure el género de voz de voz TTS (si está disponible).
-**guide&nbsp;`auto`/`en`/`es`**<br>(default: auto) | Establecer idioma de la guía
+**guide&nbsp;`auto`/`en`/`es`**<br>(default: es) | Establecer idioma de la guía
 **guide&nbsp;`1`~`10`**<br>(defecto: 2) | Configure la velocidad de voz TTS.
 **guide&nbsp;spawnObject**<br>(defecto: activado) | Generación de objetos marcadores.
 **guide&nbsp;stream**<br>(defecto: desactivado) | Modo Streamer (ocultar todos los mensajes y objetos, se reproducirá la voz TTS).
@@ -76,7 +76,7 @@ id | Nombre de la dungeon | Idioma
 ## Módulo GUI
 
 * En el canal de chat **Toolbox(/8)** escriba el siguiente comando **guide gui** para mostrar una interfaz gráfica de usuario del modulo, puede tambien cambiar las configuraciones básicas.   
-  ![](https://i.imgur.com/KNRFZI7.png)   
+  ![](https://i.imgur.com/dJWpFRO.png)   
 
 ## Más información
 * Desarrolladores Wiki https://github.com/hsdn/tera-guide/wiki
