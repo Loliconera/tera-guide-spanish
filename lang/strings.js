@@ -43,6 +43,7 @@ module.exports.general = {
 		lNotice: "Mensajes en Chat Notice",
 		gNotice: "Mensajes en Chat Party",
 		stream: "Modo Streamer",
+		language: "Selección de idioma",
 		voice: "Genero de voz",
 		rate: "Velocidad de voz",
 		color: "Cambiar el color",
