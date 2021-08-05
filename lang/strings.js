@@ -14,6 +14,7 @@ module.exports.general = {
 			["guide voice, mensajes de texto a voz (TTS)", "PRMSG"],
 			["guide lNotice, enviar mensajes en el canal Chat Notice en lugar de mensajes en pantalla", "PRMSG"],
 			["guide gNotice, enviar mensajes en el canal Chat Party", "PRMSG"],
+			["guide auto~en~es, selección del idioma de la Guia", "PRMSG"],
 			["guide male~female, cambiar el genero de voz TTS (si esta disponible)", "PRMSG"],			
 			["guide 1~10, ajustar la velocidad de voz TTS", "PRMSG"],
 			["guide spawnObject, generacion de objetos marcadores", "PRMSG"],
