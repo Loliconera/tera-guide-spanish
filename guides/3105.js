@@ -22,10 +22,10 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3105-1000-101-0": [{ type: "text", sub_type: "message", message: "Front Swing", message_ES: "Golpe Frontal" }],
 		"s-3105-1000-102-0": [
 			{ type: "text", sub_type: "message", message: "Disc Throw", message_ES: "Lanzar disco" },
-			{ type: "spawn", func: "vector", args: [553, 0, 0, 180, 200, 2000, 2000] },
+			{ type: "spawn", func: "vector", args: [553, 0, 0, 180, 190, 2000, 2000] },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 10, 350, 2000, 2000] },
 			{ type: "spawn", func: "vector", args: [553, 270, 170, 10, 350, 2000, 2000] },
-			{ type: "spawn", func: "vector", args: [553, 270, 170, 200, 200, 2000, 2000] }
+			{ type: "spawn", func: "vector", args: [553, 270, 170, 200, 190, 2000, 2000] }
 		],
 		"s-3105-1000-104-0": [
 			{ type: "text", sub_type: "message", message: "Stun (AOE)", message_ES: "Stun (АОЕ)" },
@@ -61,7 +61,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3105-1000-120-0": [{ type: "text", sub_type: "message", message: "Storm", message_ES: "Tormenta" }],
 		"s-3105-1000-107-0": [
 			{ type: "text", sub_type: "message", message: "Spin | Back Laser", message_ES: "Girar | Láser hacia atras" },
-			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 12, 280, 100, 5000] }
+			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 12, 290, 100, 5000] }
 		],
 		"s-3105-1000-117-0": [{ type: "text", sub_type: "message", message: "Kick", message_ES: "Patada" }],
 		"s-3105-1000-118-0": [{ type: "text", sub_type: "message", message: "Kick (Dodge)", message_ES: "Patada (Iframe)" }],
@@ -135,21 +135,21 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"qb-3105-1005-31051011": "qb-3105-1001-31051011",
 		"qb-3105-1006-31051011": "qb-3105-1001-31051011",
 
-		"s-3105-1001-101-0": [{ type: "spawn", func: "vector", args: [912, 0, 0, 0, 3000, 1000, 4000] }], // laser (basic)
+		"s-3105-1001-101-0": [{ type: "spawn", func: "vector", args: [912, 0, 0, 0, 1600, 1000, 4000] }], // laser (basic)
 		"s-3105-1002-101-0": "s-3105-1001-101-0",
 		"s-3105-1003-101-0": "s-3105-1001-101-0",
 		"s-3105-1004-101-0": "s-3105-1001-101-0",
 		"s-3105-1005-101-0": "s-3105-1001-101-0",
 		"s-3105-1006-101-0": "s-3105-1001-101-0",
 
-		"s-3105-1001-102-0": [{ type: "spawn", func: "vector", args: [912, 0, 0, 0, 3000, 1000, 4000] }], // laser (bait)
+		"s-3105-1001-102-0": [{ type: "spawn", func: "vector", args: [912, 0, 0, 0, 1600, 1000, 4000] }], // laser (bait)
 		"s-3105-1002-102-0": "s-3105-1001-102-0",
 		"s-3105-1003-102-0": "s-3105-1001-102-0",
 		"s-3105-1004-102-0": "s-3105-1001-102-0",
 		"s-3105-1005-102-0": "s-3105-1001-102-0",
 		"s-3105-1006-102-0": "s-3105-1001-102-0",
 
-		"s-3105-1001-103-0": [{ type: "spawn", func: "vector", args: [912, 0, 0, 0, 3000, 0, 5000] }], // laser (core)
+		"s-3105-1001-103-0": [{ type: "spawn", func: "vector", args: [912, 0, 0, 0, 800, 0, 5000] }], // laser (core)
 		"s-3105-1002-103-0": "s-3105-1001-103-0",
 		"s-3105-1003-103-0": "s-3105-1001-103-0",
 		"s-3105-1004-103-0": "s-3105-1001-103-0",
