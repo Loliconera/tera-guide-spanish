@@ -104,6 +104,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"qb-3205-1000-32051005": [{ type: "text", sub_type: "message", message: "Bait", message_ES: "Bait" }], // get stun
 		"qb-3205-1000-32051006": [{ type: "text", sub_type: "message", message: "Bait", message_ES: "Bait" }], // cast ress
 		"qb-3205-1000-32051007": [{ type: "text", sub_type: "message", message: "Puddles", message_ES: "Charcos" }], // <45%
+		"qb-3205-1000-32051008": [{ type: "text", sub_type: "message", message: "Puddles", message_ES: "Charcos" }],
 
 		// Core mech <40%
 		"qb-3205-1000-32051010": [
