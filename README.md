@@ -48,6 +48,8 @@ id | Nombre de la dungeon | Idioma
 3041 | Damned Citadel | Español
 3102 | Draakon Arena | Español
 3023 | Akalath Quarantine | Español
+3036 | Sky Cruiser (Hard) | Español
+3104 | Catalepticon | Español
 
 ## Configuración de Mensajes
 
