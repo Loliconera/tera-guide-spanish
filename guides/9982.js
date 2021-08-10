@@ -44,13 +44,13 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-982-1000-107-0": [
 			{ type: "text", class_position: "dps", sub_type: "message", message: "Pushback", message_ES: "Empujar" },
 			{ type: "text", class_position: "heal", sub_type: "message", message: "Pushback (Kaia)", message_ES: "Empujar (Kaia)" },
-			{ type: "spawn", func: "vector", args: [553, 90, 30, 140, 600, 0, 3000] },
-			{ type: "spawn", func: "vector", args: [553, 270, 30, -140, 600, 0, 3000] }
+			{ type: "spawn", func: "vector", args: [553, 90, 30, 140, 600, 1000, 2000] },
+			{ type: "spawn", func: "vector", args: [553, 270, 30, -140, 600, 1000, 2000] }
 		],
 		"s-982-1000-108-0": [
 			{ type: "text", sub_type: "message", message: "Bait Front (Flying)", message_ES: "Bait Frontal (Volar)" },
-			{ type: "spawn", func: "vector", args: [553, 90, 140, 5, 620, 0, 2000] },
-			{ type: "spawn", func: "vector", args: [553, 270, 140, 355, 620, 0, 2000] }
+			{ type: "spawn", func: "vector", args: [553, 90, 140, 5, 620, 500, 1500] },
+			{ type: "spawn", func: "vector", args: [553, 270, 140, 355, 620, 500, 1500] }
 		],
 		"s-982-1000-109-0": [{ type: "text", sub_type: "message", message: "Rocks (Small)", message_ES: "Rocas (Pequeñas)" }],
 		"s-982-1000-110-0": [{ type: "text", sub_type: "message", message: "Rocks (Large)", message_ES: "Rocas (Grandes)" }],
@@ -73,7 +73,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"ae-0-0-98200148": [{ type: "func", func: () => debuff = 1 }], // green
 		"ae-0-0-98200149": [{ type: "func", func: () => debuff = 2 }], // violet
-		"s-982-1000-201-0": [{ type: "text", sub_type: "alert", message: "Change Debuff", message_ES: "Cambiar Debuff", check_func: () => color !== debuff, delay: 2500 }],
+		"s-982-1000-201-0": [{ type: "text", sub_type: "alert", message: "Change Debuff", message_ES: "Cambiar Debuff", check_func: () => debuff !== 0 && color !== debuff, delay: 5000 }],
 		"s-982-1000-309-0": [
 			{ type: "text", sub_type: "message", message: "One Flower", message_ES: "Una Flor" },
 			{ type: "text", sub_type: "alert", message: "Dodge the flower!", message_ES: "¡Esquiva la flor!", check_func: () => color === debuff, delay: 1500 }
@@ -117,13 +117,13 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-982-2000-301-0": [
 			{ type: "text", sub_type: "message", message: "Get Out | Dodge", message_ES: "Salir | Iframe" },
-			{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 3500 },
+			{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 3700 },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, null, 260, 0, 3000] },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, null, 650, 0, 3000] }
 		],
 		"s-982-2000-302-0": [
 			{ type: "text", sub_type: "message", message: "Get In | Dodge", message_ES: "Entrar | Iframe" },
-			{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 3500 },
+			{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 3700 },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, null, 260, 0, 3000] },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, null, 650, 0, 3000] }
 		],
@@ -237,17 +237,17 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-982-3000-152-1": "s-982-3000-141-0",
 		"s-982-3000-152-2": "s-982-3000-141-0",
 		"s-982-3000-300-0": [
-			{ type: "text", sub_type: "message", message: "Dodge! (Awakening 1)", message_ES: "¡Iframe! (Awakening 1)" }, // <80%
+			{ type: "text", sub_type: "message", message: "Dodge! (Awakening 1)", message_ES: "¡Iframe! (Awakening 1)", delay: 400 }, // <80%
 			{ type: "func", func: () => awakening_one = true },
 			{ type: "func", func: () => stack_level = 0 }
 		],
 		"s-982-3000-399-0": [
-			{ type: "text", sub_type: "message", message: "Dodge! (Awakening 2)", message_ES: "¡Iframe! (Awakening 2)", delay: 1000 }, // <30%
+			{ type: "text", sub_type: "message", message: "Dodge! (Awakening 2)", message_ES: "¡Iframe! (Awakening 2)", delay: 1400 }, // <30%
 			{ type: "func", func: () => awakening_two = true },
 			{ type: "func", func: () => stack_level = 0 }
 		],
 		"s-982-3000-360-0": [
-			{ type: "text", sub_type: "message", message: "Explosion (Dodge)", message_ES: "Explosión (Iframe)" },
+			{ type: "text", sub_type: "message", message: "Dodge! (Explosion)", message_ES: "¡Iframe! (Explosión)" },
 			{ type: "func", func: () => stack_level = 0 }
 		],
 		"ab-982-3000-98200399": [{ type: "func", func: stacks_level_event }],
@@ -260,8 +260,6 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", message: "Break Sphere", message_ES: "Romper la Esfera", check_func: () => !awakening_two },
 			{ type: "text", sub_type: "message", message: "Break Three Spheres", message_ES: "Romper Tres Esferas", check_func: () => awakening_two }
 		],
-		"s-982-3011-353-0": [
-			{ type: "text", sub_type: "message", message: "Break Two Spheres", message_ES: "Romper Dos Esferas" }
-		]
+		"s-982-3012-353-0": [{ type: "text", sub_type: "message", message: "Break Two Spheres", message_ES: "Romper Dos Esferas" }]
 	};
 };
