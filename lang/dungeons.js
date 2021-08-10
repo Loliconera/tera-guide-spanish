@@ -57,5 +57,9 @@ module.exports = {
 	9920: {
 		"en": "Antaroth's Abyss (Hard)",
 		"es": "Antaroth's Abyss (Difícil)"
+	},
+	3036: {
+		"en": "Sky Cruiser (Hard)",
+		"es": "Sky Cruiser (Difícil)"
 	}
 };

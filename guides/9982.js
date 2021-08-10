@@ -83,7 +83,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "alert", message: "Dodge ONE flower!", message_ES: "¡Esquiva UNA flor!", check_func: () => color !== debuff, delay: 1500 }
 		],
 		"s-982-1000-312-0": [
-			{ type: "text", sub_type: "message", message: "Golden Golden", message_ES: "Flor Dorada" },
+			{ type: "text", sub_type: "message", message: "Golden Flower", message_ES: "Flor Dorada" },
 			{ type: "text", sub_type: "alert", message: "Break Flower!", message_ES: "¡Rompe la flor!", check_func: () => color !== debuff, delay: 1500 },
 			{ type: "text", sub_type: "alert", message: "Dodge Flower!", message_ES: "¡Esquiva la Flor!", check_func: () => color === debuff, delay: 4000 }
 		],
@@ -143,7 +143,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"h-982-3000-80": [{ type: "text", sub_type: "message", message: "80%", message_ES: "80%" }],
 		"h-982-3000-30": [{ type: "text", sub_type: "message", message: "30%", message_ES: "30%" }],
-		"s-982-3000-109-0": [{ type: "text", sub_type: "message", message: "Front Throw", message_ES: "Ataque Frontal" }],
+		"s-982-3000-109-0": [{ type: "text", sub_type: "message", message: "Front Throw (Target)", message_ES: "Ataque Frontal (Objetivo)" }],
+		"s-982-3000-134-0": [{ type: "text", sub_type: "message", message: "Front Throw (Target)", message_ES: "Ataque Frontal (Objetivo)" }],
 		"s-982-3000-118-0": [{ type: "text", sub_type: "message", message: "Front Triple", message_ES: "Ataque Frontal triple" }],
 		"s-982-3000-143-0": [
 			{ type: "text", sub_type: "message", message: "Left Rear", message_ES: "Pata Trasera Izquierda" },
@@ -237,7 +238,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-982-3000-152-1": "s-982-3000-141-0",
 		"s-982-3000-152-2": "s-982-3000-141-0",
 		"s-982-3000-300-0": [
-			{ type: "text", sub_type: "message", message: "Dodge! (Awakening 1)", message_ES: "¡Iframe! (Awakening 1)", delay: 400 }, // <80%
+			{ type: "text", sub_type: "message", message: "Dodge! (Awakening 1)", message_ES: "¡Iframe! (Awakening 1)", delay: 800 }, // <80%
 			{ type: "func", func: () => awakening_one = true },
 			{ type: "func", func: () => stack_level = 0 }
 		],
