@@ -83,9 +83,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "alert", message: "Dodge ONE flower!", message_ES: "¡Esquiva UNA flor!", check_func: () => color !== debuff, delay: 1500 }
 		],
 		"s-982-1000-312-0": [
-			{ type: "text", sub_type: "message", message: "Golden Flower", message_ES: "Flor Dorada" },
-			{ type: "text", sub_type: "alert", message: "Break Flower!", message_ES: "¡Rompe la flor!", check_func: () => color !== debuff, delay: 1500 },
-			{ type: "text", sub_type: "alert", message: "Dodge Flower!", message_ES: "¡Esquiva la Flor!", check_func: () => color === debuff, delay: 4000 }
+			{ type: "text", sub_type: "message", message: "Golden Flower (Break)", message_ES: "Flor Dorada (Romper)" },
+			{ type: "text", sub_type: "alert", message: "Dodge Flower!", message_ES: "¡Esquiva la Flor!", check_func: () => color === debuff, delay: 1500 }
 		],
 		"s-982-1000-308-0": [
 			{ type: "func", func: () => color = 0 },
@@ -103,7 +102,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-982-2000-112-0": [{ type: "text", sub_type: "message", message: "Kick Forward", message_ES: "Patada Delantera" }],
 		"s-982-2000-113-0": [
 			{ type: "text", sub_type: "message", message: "Stun (AoE)", message_ES: "Stun (АоЕ)" },
-			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, null, 320, 0, 3000] }
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, null, 310, 0, 3000] }
 		],
 		"s-982-2000-114-0": [
 			{ type: "text", sub_type: "message", message: "Get In", message_ES: "Entrar" },
