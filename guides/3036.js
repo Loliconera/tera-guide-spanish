@@ -20,9 +20,9 @@ module.exports = (dispatch, handlers, guide, lang) => {
 	let mech_counter = 0;
 
 	const mech_messages = {
-		2: { message: "Two Split Strikes", message_ES: "Dos Strikes Divididas" },
-		3: { message: "Three Split Strikes", message_ES: "Tres Strikes Divididas" },
-		4: { message: "Four Split Strikes", message_ES: "Cuatro Strikes Divididas" }
+		2: { message: "Two Split Strikes", message_ES: "Dos Ataques Divididas" },
+		3: { message: "Three Split Strikes", message_ES: "Tres Ataques Divididas" },
+		4: { message: "Four Split Strikes", message_ES: "Cuatro Ataques Divididas" }
 	};
 
 	function boss_backcombo_event() {
@@ -132,12 +132,12 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "despawn_all" }
 		],
 		"rb-3036-1000": [
-			{ type: "text", sub_type: "message", message: "Enrage On", message_ES: "Enfurecer On" },
+			{ type: "text", sub_type: "message", message: "Enrage On", message_ES: "Enfurecer" },
 			{ type: "func", func: () => enrage = 1 },
 			{ type: "func", func: () => enrage_time = new Date() }
 		],
 		"re-3036-1000": [
-			{ type: "text", sub_type: "message", message: "Enrage Off", message_ES: "Enfurecer Off" },
+			{ type: "text", sub_type: "message", message: "Enrage Off", message_ES: "Fin de Enfurecer" },
 			{ type: "func", func: () => enrage = 0 }
 		],
 		"h-3036-1000-100": [{ type: "func", func: () => is_hp_79 = false }],
@@ -188,9 +188,9 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3036-1000-1402-0": [{ type: "func", func: boss_mech_event, args: [1402] }],
 		"s-3036-1000-1701-0": [{ type: "func", func: boss_mech_event, args: [1701] }], // right
 		"s-3036-1000-1702-0": [{ type: "func", func: boss_mech_event, args: [1702] }], // left
-		"s-3036-1000-1801-0": [{ type: "text", sub_type: "message", message: "Incoming Stun", message_ES: "Stun (Iframe)" }],
+		"s-3036-1000-1801-0": [{ type: "text", sub_type: "message", message: "Incoming Stun", message_ES: "Stun Entrante (Iframe)" }],
 		"s-3036-1000-1805-0": [
-			{ type: "text", sub_type: "message", message: "Beween", message_ES: "Entre" },
+			{ type: "text", sub_type: "message", message: "Beween", message_ES: "Dentro" },
 			{ type: "text", sub_type: "message", delay: 2150, message: "IN", message_ES: "ENTRAR" },
 			{ type: "text", sub_type: "message", delay: 3050, message: "All | OUT", message_ES: "TODOS | SALIR" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 250, 0, 6000] },
@@ -198,7 +198,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-3036-1000-1806-0": [
 			{ type: "text", sub_type: "message", message: "IN", message_ES: "ENTRAR" },
-			{ type: "text", sub_type: "message", delay: 2150, message: "Beween", message_ES: "Entre" },
+			{ type: "text", sub_type: "message", delay: 2150, message: "Beween", message_ES: "Dentro" },
 			{ type: "text", sub_type: "message", delay: 3050, message: "All | IN", message_ES: "TODOS | ENTRAR" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 250, 0, 6000] },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 430, 0, 6000] }
