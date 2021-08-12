@@ -57,10 +57,10 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-982-1000-111-0": [{ type: "text", sub_type: "message", message: "Stun (Dodge)", message_ES: "Stun (Iframe)", delay: 1500 }],
 		"s-982-1000-113-0": [{ type: "text", sub_type: "message", message: "Thorns (Bleed)", message_ES: "Espinas (Sangrar)" }],
 		"s-982-1000-116-0": [
-			{ type: "text", sub_type: "message", message: "AoE", message_ES: "АоЕ" },
+			{ type: "text", sub_type: "message", message: "AoE", message_ES: "AoE" },
 			{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 2000 }
 		],
-		"s-982-1000-301-0": [{ type: "text", sub_type: "message", message: "Flower Stuns (Dodge)", message_ES: "Flor Stun (Iframe)" }],
+		"s-982-1000-301-0": [{ type: "text", sub_type: "message", message: "Cannibal Flower (Dodge)", message_ES: "Flor Caníbal (Iframe)" }],
 		"s-982-1000-307-0": [{ type: "text", sub_type: "message", message: "Cage (Don't move)", message_ES: "Jaula (No te muevas)" }],
 		// Flowers mech
 		"ab-982-1003-98200161": [
@@ -101,7 +101,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-982-2000-109-0": [{ type: "text", sub_type: "message", message: "Wave Forward", message_ES: "Ola Delantera" }],
 		"s-982-2000-112-0": [{ type: "text", sub_type: "message", message: "Kick Forward", message_ES: "Patada Delantera" }],
 		"s-982-2000-113-0": [
-			{ type: "text", sub_type: "message", message: "Stun (AoE)", message_ES: "Stun (АоЕ)" },
+			{ type: "text", sub_type: "message", message: "Stun (AoE)", message_ES: "Stun (AoE)" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, null, 310, 0, 3000] }
 		],
 		"s-982-2000-114-0": [
