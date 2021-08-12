@@ -83,8 +83,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "alert", message: "Dodge ONE flower!", message_ES: "¡Esquiva UNA flor!", check_func: () => color !== debuff, delay: 1500 }
 		],
 		"s-982-1000-312-0": [
-			{ type: "text", sub_type: "message", message: "Golden Flower (Break)", message_ES: "Flor Dorada (Romper)" },
-			{ type: "text", sub_type: "alert", message: "Dodge Flower!", message_ES: "¡Esquiva la Flor!", check_func: () => color === debuff, delay: 1500 }
+			{ type: "text", sub_type: "message", message: "Break Golden Flower", message_ES: "Romper la Flor Dorada" },
+			{ type: "text", sub_type: "alert", message: "Dodge the Flower!", message_ES: "¡Esquiva la Flor!", check_func: () => color === debuff, delay: 1500 }
 		],
 		"s-982-1000-308-0": [
 			{ type: "func", func: () => color = 0 },

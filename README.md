@@ -50,6 +50,7 @@ id | Nombre de la dungeon | Idioma
 3023 | Akalath Quarantine | Español
 3036 | Sky Cruiser (Hard) | Español
 3104 | Catalepticon | Español
+9780 | Velik's Hold (5-Person) | Español
 
 ## Configuración de Mensajes
 
