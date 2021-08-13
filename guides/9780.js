@@ -30,14 +30,14 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "stop_timers" },
 			{ type: "despawn_all" }
 		],
-		"s-780-2000-105-0": [{ type: "text", sub_type: "message", message: "Heavy Front Attack (Stun)", message_ES: "Ataque Frontal Fuerte (Stun)" }],
+		"s-780-2000-105-0": [{ type: "text", sub_type: "message", message: "Heavy Front Attack", message_ES: "Ataque Frontal Fuerte" }],
 		"s-780-2000-106-0": [{ type: "text", sub_type: "message", message: "Flame Ray (Target)", message_ES: "Rayo de Fuego (Objetivo)" }],
 		"s-780-2000-106-2": [{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 200 }],
 		"s-780-2000-108-0": [{ type: "text", sub_type: "message", message: "Front Attack (Stun)", message_ES: "Ataque Frontal (Stun)" }],
 		"s-780-2000-301-0": [{ type: "text", sub_type: "message", message: "Target", message_ES: "Objetivo" }],
 		"s-780-2000-303-0": [{ type: "text", sub_type: "message", message: "Circles", message_ES: "Círculos" }],
 		"s-780-2000-304-0": [{ type: "text", sub_type: "message", message: "Jump", message_ES: "Salto" }],
-		"s-780-2000-304-1": [{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 1000 }],
+		"s-780-2000-304-1": [{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe" }],
 		"s-780-2001-326-0": [{ type: "spawn", func: "marker", args: [false, 180, 250, 0, 6000, true, null] }], // stone marker
 
 		// 3 boss
