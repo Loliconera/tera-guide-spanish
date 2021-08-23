@@ -11,7 +11,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 	let awakening_two = false;
 	let stack_level = 0;
 
-	function stacks_level_event() { // 118, 143, 145, 146, 144, 147, 148, 154, 155, 161, 162, 213, 215  -> 98200399
+	function stacks_level_event() {
 		if (!awakening_one) return;
 
 		stack_level++;
@@ -48,19 +48,27 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [553, 270, 30, -140, 600, 1000, 2000] }
 		],
 		"s-982-1000-108-0": [
-			{ type: "text", sub_type: "message", message: "Bait Front (Flying)", message_ES: "Bait Frontal (Volar)" },
-			{ type: "spawn", func: "vector", args: [553, 90, 140, 5, 620, 500, 1500] },
-			{ type: "spawn", func: "vector", args: [553, 270, 140, 355, 620, 500, 1500] }
+			{ type: "text", sub_type: "message", message: "Bait Front (Flying)", message_ES: "Frontal Bait (Volar)" }
+		],
+		"s-982-1000-108-1": [
+			{ type: "spawn", func: "vector", args: [553, 90, 140, 5, 620, 0, 1500] },
+			{ type: "spawn", func: "vector", args: [553, 270, 140, 355, 620, 0, 1500] }
 		],
 		"s-982-1000-109-0": [{ type: "text", sub_type: "message", message: "Rocks (Small)", message_ES: "Rocas (Pequeñas)" }],
 		"s-982-1000-110-0": [{ type: "text", sub_type: "message", message: "Rocks (Large)", message_ES: "Rocas (Grandes)" }],
-		"s-982-1000-111-0": [{ type: "text", sub_type: "message", message: "Stun (Dodge)", message_ES: "Stun (Iframe)", delay: 1500 }],
+		"s-982-1000-111-0": [
+			{ type: "text", sub_type: "message", message: "Stun (Dodge)", message_ES: "Stun (Iframe)", delay: 1500 },
+			{ type: "spawn", func: "circle", args: [true, 553, 180, 50, null, 350, 1500, 2000] }
+		],
 		"s-982-1000-113-0": [{ type: "text", sub_type: "message", message: "Thorns (Bleed)", message_ES: "Espinas (Sangrar)" }],
 		"s-982-1000-116-0": [
 			{ type: "text", sub_type: "message", message: "AoE", message_ES: "AoE" },
 			{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 2000 }
 		],
-		"s-982-1000-301-0": [{ type: "text", sub_type: "message", message: "Cannibal Flower (Dodge)", message_ES: "Flor Caníbal (Iframe)" }],
+		"s-982-1000-301-0": [
+			{ type: "text", sub_type: "message", message: "Flower Stuns", message_ES: "Flor Canibal" },
+			{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 2000 }
+		],
 		"s-982-1000-307-0": [{ type: "text", sub_type: "message", message: "Cage (Don't move)", message_ES: "Jaula (No te muevas)" }],
 		// Flowers mech
 		"ab-982-1003-98200161": [
@@ -97,9 +105,9 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "despawn_all" }
 		],
 		"s-982-2000-105-0": [{ type: "text", sub_type: "message", message: "Spin", message_ES: "Girar" }],
-		"s-982-2000-108-0": [{ type: "text", sub_type: "message", message: "Shot Forward", message_ES: "Disparo Delantero" }],
-		"s-982-2000-109-0": [{ type: "text", sub_type: "message", message: "Wave Forward", message_ES: "Ola Delantera" }],
-		"s-982-2000-112-0": [{ type: "text", sub_type: "message", message: "Kick Forward", message_ES: "Patada Delantera" }],
+		"s-982-2000-108-0": [{ type: "text", sub_type: "message", message: "Shot Forward", message_ES: "Disparo Frontal" }],
+		"s-982-2000-109-0": [{ type: "text", sub_type: "message", message: "Wave Forward", message_ES: "Ola Frontal" }],
+		"s-982-2000-112-0": [{ type: "text", sub_type: "message", message: "Kick Forward", message_ES: "Patada Frontal" }],
 		"s-982-2000-113-0": [
 			{ type: "text", sub_type: "message", message: "Stun (AoE)", message_ES: "Stun (AoE)" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, null, 310, 0, 3000] }
@@ -114,6 +122,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 270, 500, 0, 5000] },
 			{ type: "spawn", func: "vector", args: [553, 180, 0, 90, 500, 0, 5000] }
 		],
+		"s-982-2000-117-0": "s-982-2000-116-0",
 		"s-982-2000-301-0": [
 			{ type: "text", sub_type: "message", message: "Get Out | Dodge", message_ES: "Salir | Iframe" },
 			{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 3700 },
@@ -204,10 +213,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [true, 553, 180, 310, null, 290, 3000, 2500] }
 		],
 		"s-982-3000-213-0": [{ type: "text", sub_type: "message", message: "Tail", message_ES: "Cola" }],
-		"s-982-3000-215-0": [
-			{ type: "text", sub_type: "message", message: "Tail", message_ES: "Cola" },
-			{ type: "spawn", func: "circle", args: [true, 553, 180, 340, null, 280, 0, 2000] }
-		],
+		"s-982-3000-215-0": [{ type: "text", sub_type: "message", message: "Tail (Combo)", message_ES: "Cola (Combo)" }],
 		"s-982-3000-139-0": [
 			{ type: "text", sub_type: "message", message: "Wave + Wing (Left Safe)", message_ES: "Ola (Izquierda Segura)", check_func: () => print_wave },
 			{ type: "despawn_all", tag: "wave" },
@@ -252,7 +258,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"ab-982-3000-98200399": [{ type: "func", func: stacks_level_event }],
 		"s-982-3000-351-0": [
-			{ type: "text", sub_type: "message", message: "Stones (Dodge)", message_ES: "Piedras (Iframe)" },
+			{ type: "text", sub_type: "message", message: "Stones", message_ES: "Piedras" },
+			{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 2000 },
 			{ type: "text", sub_type: "message", message: "Line up to the plate", message_ES: "Alinear hasta la placa", delay: 4000 },
 			{ type: "text", sub_type: "message", message: "Kaia!", message_ES: "¡Kaia!", delay: 9500 }
 		],
@@ -260,6 +267,6 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", message: "Break Sphere", message_ES: "Romper la Esfera", check_func: () => !awakening_two },
 			{ type: "text", sub_type: "message", message: "Break Three Spheres", message_ES: "Romper Tres Esferas", check_func: () => awakening_two }
 		],
-		"s-982-3012-353-0": [{ type: "text", sub_type: "message", message: "Break Two Spheres", message_ES: "Romper Dos Esferas" }]
+		"s-982-3012-353-0": "s-982-3011-352-0"
 	};
 };

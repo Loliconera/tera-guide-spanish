@@ -150,7 +150,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 
 		"qb-3044-2000-3043201": [{ type: "text", sub_type: "message", message: "Blue Circles (Safe)", message_ES: "Círculos Azules (Zona-Segura)" }], // big
-		"qb-3044-2000-3044201": [{ type: "text", sub_type: "message", message: "Blue Circles (Safe)", message_ES: "Círculos Azules (Zona-Segura)" }], // small
+		"qb-3044-2000-3044201": [{ type: "text", sub_type: "message", message: "Small Blue Circles (Safe)", message_ES: "Pequeños Círculos Azules (Zona-Segura)" }], // small
 		"qb-3044-2000-3044202": [{ type: "text", sub_type: "message", message: "Red Circles (Dodge)", message_ES: "Círculos Rojos (Iframe)" }],
 		"qb-3044-2000-3044400": [{ type: "text", sub_type: "message", message: "Break Statues", message_ES: "Romper las Estatuas" }]
 	};

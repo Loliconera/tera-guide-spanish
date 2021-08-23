@@ -132,12 +132,12 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "despawn_all" }
 		],
 		"rb-3036-1000": [
-			{ type: "text", sub_type: "message", message: "Enrage On", message_ES: "Enfurecer" },
+			{ type: "text", sub_type: "message", message: "Enrage On", message_ES: "Enrage" },
 			{ type: "func", func: () => enrage = 1 },
 			{ type: "func", func: () => enrage_time = new Date() }
 		],
 		"re-3036-1000": [
-			{ type: "text", sub_type: "message", message: "Enrage Off", message_ES: "Fin de Enfurecer" },
+			{ type: "text", sub_type: "message", message: "Enrage Off", message_ES: "Fin de Enrage" },
 			{ type: "func", func: () => enrage = 0 }
 		],
 		"h-3036-1000-100": [{ type: "func", func: () => is_hp_79 = false }],
@@ -150,7 +150,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3036-1000-1102-0": [{ type: "func", func: () => back_time = new Date() }],
 		"s-3036-1000-1103-0": [{ type: "func", func: boss_backcombo_event }],
 		"s-3036-1000-1106-0": [{ type: "func", func: boss_backcombo_event }],
-		"s-3036-1000-1112-0": [{ type: "text", sub_type: "message", message: "Back Move", message_ES: "Mover hacia atrás" }],
+		"s-3036-1000-1112-0": [{ type: "text", sub_type: "message", message: "Back Move", message_ES: "Movimiento Atrás" }],
 		"s-3036-1000-1114-0": [
 			{ type: "text", sub_type: "message", message: "Invisible Fire", message_ES: "Fuego invisible" },
 			{ type: "spawn", func: "vector", args: [553, 90, 150, 0, 1300, 0, 5830] },
@@ -188,18 +188,18 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3036-1000-1402-0": [{ type: "func", func: boss_mech_event, args: [1402] }],
 		"s-3036-1000-1701-0": [{ type: "func", func: boss_mech_event, args: [1701] }], // right
 		"s-3036-1000-1702-0": [{ type: "func", func: boss_mech_event, args: [1702] }], // left
-		"s-3036-1000-1801-0": [{ type: "text", sub_type: "message", message: "Incoming Stun", message_ES: "Stun Entrante (Iframe)" }],
+		"s-3036-1000-1801-0": [{ type: "text", sub_type: "message", message: "Incoming Stun", message_ES: "Stun (Iframe)" }],
 		"s-3036-1000-1805-0": [
-			{ type: "text", sub_type: "message", message: "Beween", message_ES: "Dentro" },
+			{ type: "text", sub_type: "message", message: "Beween", message_ES: "EN MEDIO" },
 			{ type: "text", sub_type: "message", delay: 2150, message: "IN", message_ES: "ENTRAR" },
-			{ type: "text", sub_type: "message", delay: 3050, message: "All | OUT", message_ES: "TODOS | SALIR" },
+			{ type: "text", sub_type: "message", delay: 3050, message: "All | OUT", message_ES: "Iframe hacia Afuera" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 250, 0, 6000] },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 430, 0, 6000] }
 		],
 		"s-3036-1000-1806-0": [
 			{ type: "text", sub_type: "message", message: "IN", message_ES: "ENTRAR" },
-			{ type: "text", sub_type: "message", delay: 2150, message: "Beween", message_ES: "Dentro" },
-			{ type: "text", sub_type: "message", delay: 3050, message: "All | IN", message_ES: "TODOS | ENTRAR" },
+			{ type: "text", sub_type: "message", delay: 2150, message: "Beween", message_ES: "EN MEDIO" },
+			{ type: "text", sub_type: "message", delay: 3050, message: "All | IN", message_ES: "Iframe hacia Dentro" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 250, 0, 6000] },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 430, 0, 6000] }
 		],
