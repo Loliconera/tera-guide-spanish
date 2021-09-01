@@ -51,6 +51,7 @@ id | Nombre de la dungeon | Idioma
 3036 | Sky Cruiser (Hard) | Español
 3104 | Catalepticon | Español
 9780 | Velik's Hold (5-Person) | Español
+3046 | Rogash's Trial | Español
 
 ## Configuración de Mensajes
 

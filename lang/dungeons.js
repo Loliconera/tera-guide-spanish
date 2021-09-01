@@ -61,5 +61,8 @@ module.exports = {
 	3036: {
 		"en": "Sky Cruiser (Hard)",
 		"es": "Sky Cruiser (Difícil)"
+	},
+	3046: {
+		"en": "Rogash's Trial"
 	}
 };

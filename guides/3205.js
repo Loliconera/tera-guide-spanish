@@ -29,7 +29,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [553, 270, 170, 200, 190, 2000, 2000] }
 		],
 		"s-3205-1000-104-0": [
-			{ type: "text", sub_type: "message", message: "Stun (AOE)", message_ES: "Stun (АОЕ)" },
+			{ type: "text", sub_type: "message", message: "Stun (AOE)", message_ES: "Stun (AoE)" },
 			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 12, 280, 100, 3000] }
 		],
 		"s-3205-1000-108-0": [
@@ -44,7 +44,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-3205-1000-106-0": [{ type: "text", sub_type: "message", message: "Blades Front", message_ES: "Cuchillas Frontal" }],
 		"s-3205-1000-112-0": [
-			{ type: "text", sub_type: "message", message: "Blades Back", message_ES: "Cuchillas hacia atras" },
+			{ type: "text", sub_type: "message", message: "Blades Back", message_ES: "Cuchillas atras" },
 			{ type: "spawn", func: "vector", args: [553, 70, 10, 160, 350, 0, 3000] },
 			{ type: "spawn", func: "vector", args: [553, 290, 10, -160, 350, 0, 3000] }
 		],
@@ -122,8 +122,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", message: "Regression", message_ES: "Regression", class_position: "mystic", delay: 1000 },
 			{ type: "text", sub_type: "message", message: "Give Stun!", message_ES: "¡Usar Stun!", delay: 2000 }
 		],
-		"s-3205-1000-121-0": [{ type: "text", sub_type: "message", message: "AoE", message_ES: "АоЕ" }], // red
-		"s-3205-1000-122-0": [{ type: "text", sub_type: "message", message: "AoE", message_ES: "АоЕ" }], // blue
+		"s-3205-1000-121-0": [{ type: "text", sub_type: "message", message: "AoE", message_ES: "AoE" }], // red
+		"s-3205-1000-122-0": [{ type: "text", sub_type: "message", message: "AoE", message_ES: "AoE" }], // blue
 
 		// Lasers <80%
 		"qb-3205-1001-32051011": [
