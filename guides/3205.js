@@ -29,7 +29,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [553, 270, 170, 200, 190, 2000, 2000] }
 		],
 		"s-3205-1000-104-0": [
-			{ type: "text", sub_type: "message", message: "Stun (AOE)", message_ES: "Stun (AoE)" },
+			{ type: "text", sub_type: "message", message: "Stun (AOE)", message_ES: "Stun (AOE)" },
 			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 12, 280, 100, 3000] }
 		],
 		"s-3205-1000-108-0": [
