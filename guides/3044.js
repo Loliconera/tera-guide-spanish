@@ -47,7 +47,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [912, 90, 50, 25, 300, 0, 2000] },
 			{ type: "spawn", func: "vector", args: [912, 270, 50, 335, 300, 0, 2000] }
 		],
-		"qb-3044-1000-3044102": [{ type: "text", sub_type: "message", message: "Kill Ghosts", message_ES: "Matar a los fantasmas" }],
+		"qb-3044-1000-3043102": [{ type: "text", sub_type: "message", message: "Kill Ghosts", message_ES: "Matar a los fantasmas" }],
+		"qb-3044-1000-3044102": "qb-3044-1000-3043102",
 
 		// PHASE 2
 		"nd-3044-2000": [
@@ -150,7 +151,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 
 		"qb-3044-2000-3043201": [{ type: "text", sub_type: "message", message: "Blue Circles (Safe)", message_ES: "Círculos Azules (Zona-Segura)" }],
-		"qb-3044-2000-3044201": "qb-3044-2000-3044201",
+		"qb-3044-2000-3044201": "qb-3044-2000-3043201",
 		"qb-3044-2000-3044202": [{ type: "text", sub_type: "message", message: "Red Circles (Dodge)", message_ES: "Círculos Rojos (Iframe)" }],
 		"qb-3044-2000-3044400": [{ type: "text", sub_type: "message", message: "Break Statues", message_ES: "Romper las Estatuas" }]
 	};
