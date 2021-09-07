@@ -20,7 +20,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"h-3205-1000-40": [{ type: "text", sub_type: "message", message: "45%", message_ES: "45%" }],
 		"h-3205-1000-35": [{ type: "text", sub_type: "message", message: "40%", message_ES: "40%" }],
 
-		"s-3205-1000-101-0": [{ type: "text", sub_type: "message", message: "Front Swing", message_ES: "Golpe Frontal" }],
+		"s-3205-1000-101-0": [{ type: "text", sub_type: "message", message: "Front Swing", message_ES: "Ataque Frontal" }],
 		"s-3205-1000-102-0": [
 			{ type: "text", sub_type: "message", message: "Disc Throw", message_ES: "Lanzar disco" },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 180, 190, 2000, 2000] },
@@ -42,9 +42,9 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [553, 90, 60, 0, 500, 1000, 4000] },
 			{ type: "spawn", func: "vector", args: [553, 270, 60, 0, 500, 1000, 4000] }
 		],
-		"s-3205-1000-106-0": [{ type: "text", sub_type: "message", message: "Blades Front", message_ES: "Cuchillas Frontal" }],
+		"s-3205-1000-106-0": [{ type: "text", sub_type: "message", message: "Blades Front", message_ES: "Cuchillas Frontal + Lateral" }],
 		"s-3205-1000-112-0": [
-			{ type: "text", sub_type: "message", message: "Blades Back", message_ES: "Cuchillas atras" },
+			{ type: "text", sub_type: "message", message: "Blades Back", message_ES: "Cuchillas Atras" },
 			{ type: "spawn", func: "vector", args: [553, 70, 10, 160, 350, 0, 3000] },
 			{ type: "spawn", func: "vector", args: [553, 290, 10, -160, 350, 0, 3000] }
 		],
