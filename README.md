@@ -52,6 +52,8 @@ id | Nombre de la dungeon | Idioma
 3104 | Catalepticon | Español
 9780 | Velik's Hold (5-Person) | Español
 3046 | Rogash's Trial | Español
+3126 | Corrupted Skynest (Hard) | Español
+3107 | Desolarus Testing Grounds | Español
 
 ## Configuración de Mensajes
 
