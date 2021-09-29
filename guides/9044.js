@@ -5,6 +5,7 @@
 module.exports = (dispatch, handlers, guide, lang) => {
 	guide.type = SP;
 
+	let print_loading = true;
 	let print_lasers = true;
 
 	function waves_event() {
@@ -114,12 +115,13 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"ns-444-2000": [
 			{ type: "spawn", func: "marker", args: [false, 0, -700, 100, 60000000, false, ["Throne", "Throne Direction"]] },
 			{ type: "spawn", func: "point", args: [513, 0, 800, 100, 60000000] },
+			{ type: "func", func: () => print_loading = true },
 			{ type: "func", func: () => print_lasers = true }
 		],
 		// Not enraged
 		"s-444-2000-1101-0": [
 			{ type: "text", sub_type: "message", message: "4 Hit Combo", message_ES: "270° (Zona-segura)" },
-			{ type: "spawn", func: "vector", args: [553, 0, 0, 195, 500, 0, 4000] },
+			{ type: "spawn", func: "vector", args: [553, 0, 0, 195, 500, 0, 3000] },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 270, 500, 0, 3000] }
 		],
 		"s-444-2000-1103-0": [
@@ -199,7 +201,6 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [553, 290, 95, -5, 300, 0, 3500] },
 			{ type: "spawn", func: "vector", args: [553, 290, 95, 175, 800, 0, 3500] }
 		],
-		"s-444-2000-1126-0": [],
 		"s-444-2000-1131-0": [
 			{ type: "text", sub_type: "message", message: "Front | Left Scratch", message_ES: "Martillazo Frontal | Arrastre Izquierdo" },
 			{ type: "text", sub_type: "message", delay: 1350, message: "Dodge", message_ES: "Iframe" },
@@ -241,17 +242,16 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", message: "!", message_ES: "¡Golpe de Meteoritos!" },
 			{ type: "text", sub_type: "message", delay: 20000, message: "Last aerolite", message_ES: "Ultimo Meteorito" }
 		],
-		"ab-444-2000-30372303": [{ type: "text", sub_type: "message", message: "Plague/Regress", message_ES: "Plague/Regress" }],
 		"s-444-2000-1308-0": [{ type: "text", sub_type: "message", message: "Stun (1)", message_ES: "Stun (1)" }],
 		"s-444-2000-1309-0": [{ type: "text", sub_type: "message", message: "Stun (2)", message_ES: "Stun (2)" }],
 		"s-444-2000-1310-0": [{ type: "text", sub_type: "message", message: "Stun (3)", message_ES: "Stun (3)" }],
 		"s-444-2000-1311-0": [
-			{ type: "text", sub_type: "message", message: "Wrath (Kaia)", message_ES: "IRA (Kaia)" },
+			{ type: "text", sub_type: "message", message: "Wrath (Kaia)", message_ES: "Ira (Kaia)" },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 0, 500, 0, 6000] },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 180, 500, 0, 6000] }
 		],
 		"s-444-2000-1312-0": [
-			{ type: "text", sub_type: "message", message: "Wrath (Kaia)", message_ES: "IRA (Kaia)" },
+			{ type: "text", sub_type: "message", message: "Wrath (Kaia)", message_ES: "Ira (Kaia)" },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 0, 500, 0, 6000] },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 180, 500, 0, 6000] }
 		],
@@ -293,6 +293,12 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-444-2000-2141-0": "s-444-2000-1141-0",
 		"s-444-2000-2142-0": "s-444-2000-1142-0",
 		//
+		"s-444-2500-1201-0": [
+			{ type: "event", check_func: () => print_loading, args: [
+				{ type: "text", sub_type: "alert", message: "Loading lasers...", message_ES: "Cargando láseres..." },
+				{ type: "func", func: () => print_loading = false }
+			] }
+		],
 		"s-444-2500-1305-0": [
 			{ type: "event", check_func: () => print_lasers, args: [
 				{ type: "text", sub_type: "message", message: "Laser", message_ES: "Láser" },
@@ -301,6 +307,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			] },
 			{ type: "spawn", func: "vector", args: [912, 0, 0, 0, 3000, 0, 4000] }
 		],
+		"ab-444-2000-90442303": [{ type: "text", sub_type: "message", message: "Plague/Regress", message_ES: "Plague/Regress" }],
 		"ab-444-2000-90442304": [
 			{ type: "text", sub_type: "notification", message: "Stun", message_ES: "Stun!" },
 			{ type: "text", sub_type: "message", message: "Stun", message_ES: "Stun!" }
