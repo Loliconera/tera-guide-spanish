@@ -1,0 +1,148 @@
+{
+    "version": 1.17,
+    "data": {
+        "enabled": true,
+        "stream": false,
+        "lNotice": false,
+        "gNotice": false,
+        "spawnObject": true,
+        "speech": {
+            "enabled": false,
+            "rate": 2,
+            "volume": 100,
+            "gender": "female"
+        },
+        "cc": [
+            "</font><font color=\"#ffff00\">"
+        ],
+        "language": "es",
+        "dungeons": {
+            "3023": {
+                "name": "Akalath Quarantine",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "3030": {
+                "name": "Commander's Residence",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "3032": {
+                "name": "Akalath Quarantine (Training)",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "3036": {
+                "name": "Sky Cruiser (Difícil)",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "3037": {
+                "name": "Bahaar's Sanctum (Training)",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "3040": {
+                "name": "Lumikan's Trial",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "3041": {
+                "name": "Damned Citadel",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "3042": {
+                "name": "Gardan's Trial",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "3043": {
+                "verbose": true,
+                "spawnObject": true
+            },
+            "3044": {
+                "name": "Stormed Citadel",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "3046": {
+                "verbose": true,
+                "spawnObject": true
+            },
+            "3102": {
+                "name": "Draakon Arena",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "3104": {
+                "name": "Catalepticon",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "3105": {
+                "name": "Fusion Laboratory",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "3107": {
+                "name": "Desolarus Testing Grounds",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "3126": {
+                "name": "Corrupted Skynest (Difícil)",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "3205": {
+                "name": "Cursed Fusion Laboratory",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "7011": {
+                "name": "Shadow of the Gutrends (Guardian)",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "7015": {
+                "name": "Escape from Balder's Refuge (Guardian)",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "9044": {
+                "name": "Bahaar's Sanctum",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "9780": {
+                "name": "Velik's Hold (5-Person)",
+                "verbose": true,
+                "spawnObject": true
+            },
+            "9982": {
+                "name": "Grotto of Lost Souls (Difícil)",
+                "verbose": true,
+                "spawnObject": true
+            }
+        },
+        "debug": {
+            "chat": true,
+            "all": false,
+            "s": false,
+            "e": false,
+            "am": false,
+            "ae": false,
+            "ab": false,
+            "ar": false,
+            "ad": false,
+            "h": false,
+            "ns": false,
+            "nd": false,
+            "rb": false,
+            "re": false,
+            "dm": false,
+            "qb": false
+        }
+    }
+}
