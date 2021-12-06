@@ -1,11 +1,11 @@
 {
     "files": {
         "LICENSE": "3a6951431f77f106f39ebc87cc32cb6aee7371cc168ec1862d2ce8775875c8f1",
-        "README.md": "5b3fba693f4023c899b4e3ec51ab357dcb79fc252c22145856f677cb2cd78a85",
+        "README.md": "0e79ee6f20318e8c57fd670ceb63398b88a287c7b902d28aa1c9d7a05a2ee5aa",
         "guides/3023.js": "71f5990e0455375944f3bcf6cafb122d8a421494b26d9781763e5ba1a2dea055",
         "guides/3030.js": "bc9361c125179df7e92a46ac14ee2fb171c5ff308141307ec3528fe2b0c56571",
         "guides/3032.js": "90908847e3866765b44e668766ba67610f0b3459880b07cae26537ac222e91c3",
-        "guides/3036.js": "ff7e1c6efe19371e191878c1a06dfaff42a0ab7c5a8633465f84fb561d74e57f",
+        "guides/3036.js": "52c6fcbeb0f23f2bcf12271f62caa98c5b3d3460e1ba15cf41113db24ea3504d",
         "guides/3037.js": "dafff99bbd34b9f09342cf430ec8436240ecbcce674fed24b8ac7b9fbc304b7d",
         "guides/3040.js": "d9f68d3d43f8560fc526b1044a9e25d85a051d89de21d072402d65648e2fb96f",
         "guides/3041.js": "83fb5cc4e36b1c642c56753f374c4d4c56db9df755cdfb87c15a984448c2e566",
@@ -17,6 +17,7 @@
         "guides/3104.js": "e625e4c0399f904a4c003b0bc731aef0f8a2fa3390d29a3f44c4af18b95f0dc4",
         "guides/3105.js": "8f74226a92161c9fd206bb700ba11006593916064994bf0d23493039ea02cf92",
         "guides/3107.js": "82b165da420a27458d574e75eefdda8193a1a671dac1980309a77925b928a084",
+        "guides/3108.js": "e9fb77564d2feedd5130cc2ceac34bde6db438115cbef47fbc50bbb0d47d6091",
         "guides/3126.js": "736fe92b4fefbabb1e267c516d3f0f1aeb158713ef3ad89fb9893363fe234bb4",
         "guides/3205.js": "49e68e93e4d254a18f0203fbbae3b06ab2e7603ef3d21dbc5759c30b5000de76",
         "guides/7011.js": "e63698d66b278b44461f125ad93651782a5f7a43e52e5734726b8314cf3c009b",
@@ -26,12 +27,13 @@
         "guides/9982.js": "8a3c0a4fa1774c225edd8a56014f244b18b2d483c34e4da29521d5ae65c4d714",
         "guides/test.js": "860e26c44c999e9348a80f740ea2719b6e212259414a93043d79b60ff3d1a9ac",
         "index.js": "6e17b483be4c7f87966dfcad365d45b787eea95bf89b91acd7ad285fa0f26bef",
-        "lang/dungeons.js": "3a9ed69b3c7eb715aa7b4de47c96554da1f969f66a916527631444cd67e42436",
+        "lang/dungeons.js": "dd1afce6a2978127668f838cdaac46b4977d0b6ca275630513ae5a8e778702cb",
         "lang/strings.js": "b2f3af0afe5912bb7e9074faf90e3c24d110e500525d4a2bc5307928f3383271",
         "module.json": "b9f522bf96e8bc35eab03c3fad241de0eda3d3a832a7092a4e077896bc2d2f3d",
         "settings_migrator.js": "f29b1f6a78410796d2623607184975d853dcc00a792ad37a6c5efb124d55e7a5"
     },
     "defs": {
-        "S_ABNORMALITY_END": 1
+        "S_ABNORMALITY_END": 1,
+        "S_CREATURE_ROTATE": 2
     }
 }

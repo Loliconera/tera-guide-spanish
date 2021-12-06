@@ -1,6 +1,6 @@
 ﻿// Sky Cruiser (Hard)
 //
-// made by michengs / HSDN
+// made by michengs / HSDN / icebrog
 
 module.exports = (dispatch, handlers, guide, lang) => {
 	guide.type = SP;
@@ -29,7 +29,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		dispatch.clearTimeout(timer2);
 		counter++;
 
-		if (counter >= 2 && triple_attack) {
+		if (counter >= 2) {
 			handlers.text({
 				sub_type: "message",
 				message: "Back Combo",
@@ -63,7 +63,38 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		timer1 = dispatch.setTimeout(() => triple_attack = false, 3500);
 	}
 
-	function boss_mech_event(skillid) {
+	function boss_mech_eventP1(skillid) {
+		handlers.event([
+			{ type: "spawn", func: "vector", args: [553, 358, 0, 180, 1100, 100, 1500] },
+			{ type: "spawn", func: "vector", args: [553, 358, 0, 0, 1100, 100, 1500] }
+		]);
+
+		if ([1402].includes(skillid)) {
+			handlers.event([ // left
+				{ type: "text", sub_type: "alert", speech: false,
+					message: "Left",
+					message_ES: "Izquierda"
+				},
+				{ type: "spawn", func: "semicircle", args: [180, 360, 912, 0, 0, 20, 160, 0, 1500] },
+				{ type: "spawn", func: "semicircle", args: [180, 360, 912, 0, 0, 12, 220, 0, 1500] },
+				{ type: "spawn", func: "semicircle", args: [180, 360, 912, 0, 0, 10, 300, 0, 1500] },
+				{ type: "spawn", func: "semicircle", args: [180, 360, 912, 0, 0, 8, 360, 0, 1500] }
+			]);
+		} else {
+			handlers.event([ // right
+				{ type: "text", sub_type: "alert", speech: false,
+					message: "Right",
+					message_ES: "Derecha"
+				},
+				{ type: "spawn", func: "semicircle", args: [0, 180, 912, 0, 0, 20, 160, 0, 1500] },
+				{ type: "spawn", func: "semicircle", args: [0, 180, 912, 0, 0, 12, 220, 0, 1500] },
+				{ type: "spawn", func: "semicircle", args: [0, 180, 912, 0, 0, 10, 300, 0, 1500] },
+				{ type: "spawn", func: "semicircle", args: [0, 180, 912, 0, 0, 8, 360, 0, 1500] }
+			]);
+		}
+	}
+
+	function boss_mech_eventP2(skillid) {
 		enrage = new Date() - enrage_time >= 35100 ? 0 : 1;
 		mech_total = triple_attack ? (is_hp_79 ? 4 : 3) : 2;
 
@@ -119,7 +150,18 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "despawn_all" }
 		],
 		"s-3036-1001-1112-0": [{ type: "text", sub_type: "message", message: "Back Jump", message_ES: "Salto hacia atrás" }],
-
+		"s-3036-1001-1401-0": [{ type: "func", func: boss_mech_eventP1, args: [1401] }],
+		"s-3036-1001-1402-0": [{ type: "func", func: boss_mech_eventP1, args: [1402] }],
+		"s-3036-1001-1303-0": [{ type: "text", sub_type: "message", message: "Spin Attack", message_ES: "Ataque Giratorio" }],
+		"s-3036-1001-1101-0": [{ type: "func", func: boss_backattack_event }],
+		"s-3036-1001-1102-0": [{ type: "func", func: () => back_time = new Date() }],
+		"s-3036-1001-1103-0": [{ type: "func", func: boss_backcombo_event }],
+		"s-3036-1001-1106-0": [{ type: "func", func: boss_backcombo_event }],
+		"s-3036-1001-2101-0": "s-3036-1001-1101-0",
+		"s-3036-1001-2102-0": "s-3036-1001-1102-0",
+		"s-3036-1001-2103-0": "s-3036-1001-1103-0",
+		"s-3036-1001-2106-0": "s-3036-1001-1106-0",
+		"s-3036-1001-2112-0": "s-3036-1001-1112-0",
 		// Phase 2
 		"ns-3036-1000": [
 			{ type: "func", func: () => enrage = 0 },
@@ -132,12 +174,12 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "despawn_all" }
 		],
 		"rb-3036-1000": [
-			{ type: "text", sub_type: "message", message: "Enrage On", message_ES: "Enrage" },
+			{ type: "text", sub_type: "message", message: "Enrage On", message_ES: "Enfurecer" },
 			{ type: "func", func: () => enrage = 1 },
 			{ type: "func", func: () => enrage_time = new Date() }
 		],
 		"re-3036-1000": [
-			{ type: "text", sub_type: "message", message: "Enrage Off", message_ES: "Fin de Enrage" },
+			{ type: "text", sub_type: "message", message: "Enrage Off", message_ES: "Fin del Enfurecer" },
 			{ type: "func", func: () => enrage = 0 }
 		],
 		"h-3036-1000-100": [{ type: "func", func: () => is_hp_79 = false }],
@@ -150,7 +192,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3036-1000-1102-0": [{ type: "func", func: () => back_time = new Date() }],
 		"s-3036-1000-1103-0": [{ type: "func", func: boss_backcombo_event }],
 		"s-3036-1000-1106-0": [{ type: "func", func: boss_backcombo_event }],
-		"s-3036-1000-1112-0": [{ type: "text", sub_type: "message", message: "Back Move", message_ES: "Movimiento Atrás" }],
+		"s-3036-1000-1112-0": [{ type: "text", sub_type: "message", message: "Back Move", message_ES: "Mover hacia atrás" }],
 		"s-3036-1000-1114-0": [
 			{ type: "text", sub_type: "message", message: "Invisible Fire", message_ES: "Fuego invisible" },
 			{ type: "spawn", func: "vector", args: [553, 90, 150, 0, 1300, 0, 5830] },
@@ -184,22 +226,24 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3036-1000-2101-0": "s-3036-1000-1101-0",
 		"s-3036-1000-2102-0": "s-3036-1000-1102-0",
 		"s-3036-1000-1303-0": [{ type: "text", sub_type: "message", message: "Spin Attack", message_ES: "Ataque Giratorio" }],
-		"s-3036-1000-1401-0": [{ type: "func", func: boss_mech_event, args: [1401] }],
-		"s-3036-1000-1402-0": [{ type: "func", func: boss_mech_event, args: [1402] }],
-		"s-3036-1000-1701-0": [{ type: "func", func: boss_mech_event, args: [1701] }], // right
-		"s-3036-1000-1702-0": [{ type: "func", func: boss_mech_event, args: [1702] }], // left
+		"s-3036-1000-1401-0": [{ type: "func", func: boss_mech_eventP2, args: [1401] }],
+		"s-3036-1000-1402-0": [{ type: "func", func: boss_mech_eventP2, args: [1402] }],
+		"s-3036-1000-1701-0": [{ type: "func", func: boss_mech_eventP2, args: [1701] }], // right
+		"s-3036-1000-1702-0": [{ type: "func", func: boss_mech_eventP2, args: [1702] }], // left
 		"s-3036-1000-1801-0": [{ type: "text", sub_type: "message", message: "Incoming Stun", message_ES: "Stun (Iframe)" }],
 		"s-3036-1000-1805-0": [
-			{ type: "text", sub_type: "message", message: "Beween", message_ES: "EN MEDIO" },
-			{ type: "text", sub_type: "message", delay: 2150, message: "IN", message_ES: "ENTRAR" },
-			{ type: "text", sub_type: "message", delay: 3050, message: "All | OUT", message_ES: "Iframe hacia Afuera" },
+			{ type: "text", sub_type: "message", message: "Between", message_ES: "En Medio(2)" },
+			{ type: "text", sub_type: "message", delay: 2150, message: "IN", message_ES: "ENTRAR(1)" },
+			{ type: "text", sub_type: "message", delay: 3050, message: "All | OUT", message_ES: "TODOS | SALIR" },
+			{ type: "text", sub_type: "message", delay: 3500, message: "No Cleanse", message_ES: "NO CLEANSE" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 250, 0, 6000] },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 430, 0, 6000] }
 		],
 		"s-3036-1000-1806-0": [
-			{ type: "text", sub_type: "message", message: "IN", message_ES: "ENTRAR" },
-			{ type: "text", sub_type: "message", delay: 2150, message: "Beween", message_ES: "EN MEDIO" },
-			{ type: "text", sub_type: "message", delay: 3050, message: "All | IN", message_ES: "Iframe hacia Dentro" },
+			{ type: "text", sub_type: "message", message: "IN", message_ES: "ENTRAR(1)" },
+			{ type: "text", sub_type: "message", delay: 2150, message: "Between", message_ES: "En Medio(2)" },
+			{ type: "text", sub_type: "message", delay: 3050, message: "All | IN", message_ES: "TODOS | ENTRAR" },
+			{ type: "text", sub_type: "message", delay: 3500, message: "Cleanse", message_ES: "CLEANSE" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 250, 0, 6000] },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 430, 0, 6000] }
 		],
@@ -210,7 +254,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3036-1000-2115-0": "s-3036-1000-1115-0",
 		"s-3036-1000-2117-0": "s-3036-1000-1117-0",
 		"s-3036-1000-2118-0": "s-3036-1000-1118-0",
-		"qb-3036-1000-3036039": [{ type: "func", func: boss_tripleattack_event }],
+		"qb-3036-1000-3036039": [
+			{ type: "text", sub_type: "message", delay: 75000, message: "Triple Soon", message_ES: "Triple pronto" },
+			{ type: "text", sub_type: "notification", delay: 75000, message: "Triple Soon", message_ES: "Triple pronto" },
+			{ type: "func", func: boss_tripleattack_event }
+		],
 		"qb-3036-1000-3036040": [{ type: "func", func: boss_tripleattack_event }],
 		"qb-3036-1000-3036041": [{ type: "func", func: boss_tripleattack_event }]
 	};

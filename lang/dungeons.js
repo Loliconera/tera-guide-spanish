@@ -64,5 +64,9 @@ module.exports = {
 	},
 	3046: {
 		"en": "Rogash's Trial"
+	},
+	3108: {
+		"en": "Cursed Antaroth's Abyss",
+		"es": "Cursed Antaroth's Abyss"
 	}
 };

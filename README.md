@@ -39,7 +39,7 @@ id | Nombre de la dungeon | Idioma
 3040 | Lumikan's Trial | Español
 3042 | Gardan's Trial | Español
 3043 | Harnovog's Trial | Español
-3030 | Commander's Residence | Español
+3108 | Cursed Antaroth's Abyss | Español
 9044 | Bahaar's Sanctum | Español
 3205 | Cursed Fusion Laboratory | Español
 9982 | Grotto of Lost Souls (Hard) | Español
