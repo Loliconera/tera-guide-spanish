@@ -256,7 +256,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3036-1000-2118-0": "s-3036-1000-1118-0",
 		"qb-3036-1000-3036039": [
 			{ type: "text", sub_type: "message", delay: 75000, message: "Triple Soon", message_ES: "Triple pronto" },
-			{ type: "text", sub_type: "notification", delay: 75000, message: "Triple Soon", message_ES: "Triple pronto" },
+			{ type: "text", sub_type: "notification", delay: 75000, message: "Triple Soon", message_ES: "Triple pronto", speech: false },
 			{ type: "func", func: boss_tripleattack_event }
 		],
 		"qb-3036-1000-3036040": [{ type: "func", func: boss_tripleattack_event }],
