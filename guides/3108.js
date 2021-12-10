@@ -16,7 +16,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		const now_time = new Date();
 
 		if ((now_time - two_slash_time) > 1800 && (now_time - two_slash_time) < 2250) {
-			handlers.text({ sub_type: "message", message: "Back Stun", message_ES: "Ataque hacia atrás" });
+			handlers.text({ sub_type: "message", message: "Back Stun", message_ES: "Stun Atrás" });
 		}
 
 		two_slash_time = now_time;
@@ -56,7 +56,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 		"s-3108-1000-105-0": [{ type: "text", sub_type: "message", message: "Target Cage", message_ES: "Jaula (Objetivo)" }],
 		"s-3108-1000-107-0": [
-			{ type: "text", sub_type: "message", message: "Random Jump", message_ES: "Salto Aleatorio" },
+			{ type: "text", sub_type: "message", message: "Random Jump", message_ES: "Salto Aleatorio (Stun)" },
 			{ type: "text", sub_type: "message", message: "Spin soon", message_ES: "Girar pronto", check_func: () => buff_merciless, delay: 1000 }
 		],
 		"s-3108-1000-107-1": [{ type: "spawn", func: "circle", args: [false, 553, 0, 85, 12, 250, 0, 2000] }],
@@ -68,17 +68,17 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-3108-1000-115-0": [{ type: "text", sub_type: "message", message: "Spin Attack", message_ES: "Ataque Giratorio" }],
 		"s-3108-1000-131-0": [{ type: "text", sub_type: "message", message: "Front Knockup", message_ES: "Lanzar hacia adelante" }],
-		"s-3108-1000-120-0": [{ type: "text", sub_type: "message", message: "Energy Beam (Slow)", message_ES: "Olas (Lento)" }],
-		"s-3108-1000-122-0": [{ type: "text", sub_type: "message", message: "Energy Beam (Slow)", message_ES: "Olas (Lento)" }],
-		"s-3108-1000-204-0": [{ type: "text", sub_type: "message", message: "Energy Beam (Fast)", message_ES: "Olas (Rápido)" }],
+		"s-3108-1000-120-0": [{ type: "text", sub_type: "message", message: "Energy Beam (Slow)", message_ES: "Rayo de Energía (Lento)" }],
+		"s-3108-1000-122-0": [{ type: "text", sub_type: "message", message: "Energy Beam (Slow)", message_ES: "Rayo de Energía (Lento)" }],
+		"s-3108-1000-204-0": [{ type: "text", sub_type: "message", message: "Energy Beam (Fast)", message_ES: "Rayo de Energía (Rápido)" }],
 		"s-3108-1000-309-0": [{ type: "text", sub_type: "message", message: "AoE", message_ES: "AoE" }],
-		"s-3108-1000-310-0": [{ type: "text", sub_type: "message", message: "Puddles", message_ES: "Charcos" }],
+		"s-3108-1000-310-0": [{ type: "text", sub_type: "message", message: "Puddles", message_ES: "Charcos (Olas)" }],
 		"s-3108-1000-311-0": "s-3108-1000-310-0",
 		"s-3108-1000-312-0": "s-3108-1000-310-0",
 		"s-3108-1000-313-0": "s-3108-1000-310-0",
 		"s-3108-1000-314-0": "s-3108-1000-310-0",
-		"s-3108-1000-315-0": [{ type: "text", sub_type: "message", message: "Pushback (Kaia)", message_ES: "Empujar atrás (Kaia)" }],
-		"s-3108-1000-400-0": [{ type: "text", sub_type: "message", message: "Clones: Beam", message_ES: "Clones: Olas" }],
+		"s-3108-1000-315-0": [{ type: "text", sub_type: "message", message: "Pushback (Kaia)", message_ES: "Empujar Atrás (Kaia)" }],
+		"s-3108-1000-400-0": [{ type: "text", sub_type: "message", message: "Clones: Beam", message_ES: "Clones: Rayo" }],
 		"s-3108-1000-401-0": [{ type: "text", sub_type: "message", message: "Clones: Spin", message_ES: "Clones: Girar" }],
 
 		// Back stun mech
@@ -143,7 +143,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"ab-3108-1000-31083063-3": [{ type: "text", sub_type: "notification", message: "Stack 3", message_ES: "Apilar 3" }],
 		"ab-3108-1000-31083064": [
 			{ type: "text", sub_type: "notification", message: "Charged", message_ES: "Cargado", speech: false },
-			{ type: "text", sub_type: "alert", message: "Pushback soon", message_ES: "Empujar atrás pronto" }
+			{ type: "text", sub_type: "alert", message: "Pushback soon", message_ES: "Empujar Atrás pronto" }
 		],
 		"s-3108-1000-209-0": [{ type: "text", sub_type: "message", message: "Dodge!", message_ES: "¡Iframe!", delay: 500 }],
 		"s-3108-1000-211-0": "s-3108-1000-209-0",
