@@ -10,6 +10,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 	let stack_red = 0;
 	let stack_blue = 0;
 	let stack_yellow = 0;
+	let buff_merciless = false;
 
 	function two_slash_event() {
 		const now_time = new Date();
@@ -44,37 +45,48 @@ module.exports = (dispatch, handlers, guide, lang) => {
 	}
 
 	return {
-		"nd-3108-1000-0": [
+		"nd-3108-1000": [
 			{ type: "stop_timers" },
 			{ type: "despawn_all" }
 		],
 		"h-3108-1000-64": [{ type: "text", sub_type: "message", message: "64%", message_ES: "64%" }],
-		"h-3105-1000-40": [{ type: "text", sub_type: "message", message: "40%", message_ES: "40%" }],
+		"h-3108-1000-40": [{ type: "text", sub_type: "message", message: "40%", message_ES: "40%" }],
+
+		"ab-3108-1000-40004011": [{ type: "func", func: () => buff_merciless = true }], // resonance 31+ effect
 
 		"s-3108-1000-105-0": [{ type: "text", sub_type: "message", message: "Target Cage", message_ES: "Jaula (Objetivo)" }],
-		"s-3108-1000-107-0": [{ type: "text", sub_type: "message", message: "Random Jump", message_ES: "Salto Aleatorio (Stun)" }],
-		"s-3108-1000-113-0": [
-			{ type: "text", sub_type: "message", message: "Front | Back Stun", message_ES: "Ataque Frontal | Stun hacia atrás" },
-			{ type: "spawn", func: "circle", args: [true, 553, 0, 325, 12, 325, 0, 2000] },
-			{ type: "spawn", func: "circle", args: [true, 553, 0, -325, 12, 325, 500, 2000] }
+		"s-3108-1000-107-0": [
+			{ type: "text", sub_type: "message", message: "Random Jump", message_ES: "Salto Aleatorio" },
+			{ type: "text", sub_type: "message", message: "Spin soon", message_ES: "Girar pronto", check_func: () => buff_merciless, delay: 1000 }
 		],
-		"s-3108-1000-115-0": [{ type: "text", sub_type: "message", message: "Spinning Attack", message_ES: "Ataque Giratorio" }],
+		"s-3108-1000-107-1": [{ type: "spawn", func: "circle", args: [false, 553, 0, 85, 12, 250, 0, 2000] }],
+		"s-3108-1000-113-0": [
+			{ type: "text", sub_type: "message", message: "Front | Back Stun", message_ES: "Ataque Frontal | Stun atrás" },
+			{ type: "spawn", func: "circle", args: [true, 553, 0, 325, 12, 325, 0, 2000] },
+			{ type: "spawn", func: "circle", args: [true, 553, 0, -325, 12, 325, 500, 2000] },
+			{ type: "text", sub_type: "message", message: "Spin soon", message_ES: "Girar pronto", check_func: () => buff_merciless, delay: 500 }
+		],
+		"s-3108-1000-115-0": [{ type: "text", sub_type: "message", message: "Spin Attack", message_ES: "Ataque Giratorio" }],
 		"s-3108-1000-131-0": [{ type: "text", sub_type: "message", message: "Front Knockup", message_ES: "Lanzar hacia adelante" }],
-		"s-3108-1000-120-0": [{ type: "text", sub_type: "message", message: "Energy Beam", message_ES: "Olas" }],
-		"s-3108-1000-204-0": [{ type: "text", sub_type: "message", message: "Energy Beam", message_ES: "Olas" }],
+		"s-3108-1000-120-0": [{ type: "text", sub_type: "message", message: "Energy Beam (Slow)", message_ES: "Olas (Lento)" }],
+		"s-3108-1000-122-0": [{ type: "text", sub_type: "message", message: "Energy Beam (Slow)", message_ES: "Olas (Lento)" }],
+		"s-3108-1000-204-0": [{ type: "text", sub_type: "message", message: "Energy Beam (Fast)", message_ES: "Olas (Rápido)" }],
 		"s-3108-1000-309-0": [{ type: "text", sub_type: "message", message: "AoE", message_ES: "AoE" }],
 		"s-3108-1000-310-0": [{ type: "text", sub_type: "message", message: "Puddles", message_ES: "Charcos" }],
 		"s-3108-1000-311-0": "s-3108-1000-310-0",
 		"s-3108-1000-312-0": "s-3108-1000-310-0",
 		"s-3108-1000-313-0": "s-3108-1000-310-0",
 		"s-3108-1000-314-0": "s-3108-1000-310-0",
-		"s-3108-1000-315-0": [{ type: "text", sub_type: "message", message: "Pushback (Kaia)", message_ES: "Empujar hacia atrás (Kaia)" }],
+		"s-3108-1000-315-0": [{ type: "text", sub_type: "message", message: "Pushback (Kaia)", message_ES: "Empujar atrás (Kaia)" }],
 		"s-3108-1000-400-0": [{ type: "text", sub_type: "message", message: "Clones: Beam", message_ES: "Clones: Olas" }],
 		"s-3108-1000-401-0": [{ type: "text", sub_type: "message", message: "Clones: Spin", message_ES: "Clones: Girar" }],
 
 		// Back stun mech
 		"s-3108-1000-104-0": [{ type: "func", func: two_slash_event }],
-		"s-3108-1000-119-0": [{ type: "spawn", func: "circle", args: [true, 553, 0, -325, 12, 325, 0, 2000] }],
+		"s-3108-1000-119-0": [
+			{ type: "spawn", func: "circle", args: [true, 553, 0, -325, 12, 325, 0, 2000] },
+			{ type: "text", sub_type: "message", message: "Spin soon", message_ES: "Girar pronto", check_func: () => buff_merciless, delay: 500 }
+		],
 
 		// Waves mech
 		"s-3108-1000-201-0": [{ type: "func", func: () => blue_sword = false }],
@@ -131,7 +143,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"ab-3108-1000-31083063-3": [{ type: "text", sub_type: "notification", message: "Stack 3", message_ES: "Apilar 3" }],
 		"ab-3108-1000-31083064": [
 			{ type: "text", sub_type: "notification", message: "Charged", message_ES: "Cargado", speech: false },
-			{ type: "text", sub_type: "alert", message: "Pushback soon", message_ES: "Empujar hacia atrás pronto" }
+			{ type: "text", sub_type: "alert", message: "Pushback soon", message_ES: "Empujar atrás pronto" }
 		],
 		"s-3108-1000-209-0": [{ type: "text", sub_type: "message", message: "Dodge!", message_ES: "¡Iframe!", delay: 500 }],
 		"s-3108-1000-211-0": "s-3108-1000-209-0",
@@ -144,6 +156,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "func", func: cage_colour_event, delay: 7500 }
 		],
 		"s-3108-1000-318-0": "s-3108-1000-317-0",
+		"ab-3108-1000-31083070-8": [{ type: "func", func: () => stack_red = 8 }],
+		"ab-3108-1000-31083070-7": [{ type: "func", func: () => stack_red = 7 }],
 		"ab-3108-1000-31083070-6": [{ type: "func", func: () => stack_red = 6 }],
 		"ab-3108-1000-31083070-5": [{ type: "func", func: () => stack_red = 5 }],
 		"ab-3108-1000-31083070-4": [{ type: "func", func: () => stack_red = 4 }],
@@ -151,6 +165,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"ab-3108-1000-31083070-2": [{ type: "func", func: () => stack_red = 2 }],
 		"ab-3108-1000-31083070-1": [{ type: "func", func: () => stack_red = 1 }],
 		"ad-3108-1000-31083070": [{ type: "func", func: () => stack_red = 0 }],
+		"ab-3108-1000-31083071-8": [{ type: "func", func: () => stack_yellow = 8 }],
+		"ab-3108-1000-31083071-7": [{ type: "func", func: () => stack_yellow = 7 }],
 		"ab-3108-1000-31083071-6": [{ type: "func", func: () => stack_yellow = 6 }],
 		"ab-3108-1000-31083071-5": [{ type: "func", func: () => stack_yellow = 5 }],
 		"ab-3108-1000-31083071-4": [{ type: "func", func: () => stack_yellow = 4 }],
@@ -158,6 +174,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"ab-3108-1000-31083071-2": [{ type: "func", func: () => stack_yellow = 2 }],
 		"ab-3108-1000-31083071-1": [{ type: "func", func: () => stack_yellow = 1 }],
 		"ad-3108-1000-31083071": [{ type: "func", func: () => stack_yellow = 0 }],
+		"ab-3108-1000-31083072-8": [{ type: "func", func: () => stack_blue = 8 }],
+		"ab-3108-1000-31083072-7": [{ type: "func", func: () => stack_blue = 7 }],
 		"ab-3108-1000-31083072-6": [{ type: "func", func: () => stack_blue = 6 }],
 		"ab-3108-1000-31083072-5": [{ type: "func", func: () => stack_blue = 5 }],
 		"ab-3108-1000-31083072-4": [{ type: "func", func: () => stack_blue = 4 }],
