@@ -1,12 +1,11 @@
 {
-    "disableAutoUpdate": false,
-    "name": "TERA-Guia",
+    "name": "tera-guide",
     "options": {
         "niceName": "TERA-Guia",
         "guiName": "TERA-Guia",
         "settingsFile": "config.json",
         "settingsMigrator": "settings_migrator.js",
-        "settingsVersion": 1.17
+        "settingsVersion": 1.18
     },
     "author": "HSDN / Loliconera",
     "description": "Modulo Guia para dungeons. Traducido al Español por Loliconera.",
@@ -16,5 +15,6 @@
         "library": "https://raw.githubusercontent.com/tera-toolbox-mods/library/master/module.json",
         "tera-guide-core": "https://raw.githubusercontent.com/hsdn/tera-guide-core/master/module.json"
     },
-    "version": "GF v112.2"
+    "disableAutoUpdate": false,
+    "version": "GF v114.2"
 }
