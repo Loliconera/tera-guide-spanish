@@ -37,7 +37,6 @@ Toolbox(/8) | Descripción del comando
 id | Nombre de la dungeon | Idioma
 --- | --- | ---
 3027 | Forbidden Arena [Hagufna] | Español
-3032 | Akalath Quarantine (Training) | Español
 3036 | Sky Cruiser (Hard) | Español
 3040 | Lumikan's Trial | Español
 3042 | Gardan's Trial | Español
@@ -48,7 +47,6 @@ id | Nombre de la dungeon | Idioma
 3126 | Corrupted Skynest (Hard) | Español
 7011 | Shadow of the Gutrends (Guardian) | Español
 7015 | Escape from Balder's Refuge (Guardian) | Español
-9044 | Bahaar's Sanctum | Español
 9068 | Shadow Sanguinary (Hard) | Español
 9920 | Antaroth's Abyss (Hard) | Español
 
