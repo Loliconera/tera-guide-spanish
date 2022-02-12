@@ -4,7 +4,7 @@ Un módulo de guía para TERA traducido al español. Muestra mensajes en la pant
 
 #### Otras traducciones
 
-* [**Inglés (English-Ruso)** by HSDN](https://github.com/hsdn/tera-guide)
+* [**Inglés (English & русский)** by HSDN](https://github.com/hsdn/tera-guide)
 * [**Portugués (Português & Español)** by Emilia](https://github.com/emilia-s2/Guia-DG-Portugues)
 
 ## Dependencias
