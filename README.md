@@ -53,21 +53,27 @@ id | Nombre de la dungeon | Idioma
 ## Configuración de Mensajes
 
 * En la pantalla (en la parte inferior) y mensajes de chat, si el parámetro **lNotice** está *activado*, todos los mensajes se enviaran al canal **Notice**. (**Mensajes de Chat Notice**)
+
   ![](https://i.imgur.com/ZFkQ08X.png)
 
 * En la pantalla (en la parte superior), si el parámetro **lNotice** está *desactivado*, todos los mensajes se mostraran en la parte superior de la pantalla. (**Mensajes en Pantalla**)
+
   ![](https://i.imgur.com/lH9Xo9f.png)
 
 * Cuando el parámetro **gNotice** está *activado*, todos los mensajes se enviarán al canal **Party**. (**Mensaje de Chat Party**)
+
   ![](https://i.imgur.com/el8E3oN.png)
 
 * Cuando el Modo Streamer está *activado* (parámetro **stream**), todos los mensajes de texto se enviarán solamente al canal de chat **Toolbox(/8)**, pero se reproducirán los mensajes de texto a voz TTS.
+
   ![](https://i.imgur.com/M3woYlC.png)
 
 * Puede cambiar el color de los mensajes usando los comandos, para cambiarlo tendra que escribir el parámetro **guide help** para mostrar una lista completa de todos los colores soportados o tambien puede usar la interfaz GUI.
+
   ![](https://i.imgur.com/uXc3vdH.png)
 
 * Cuando ingresa a una mazmorra el modulo le notificará con un mensaje de bienvenida, tambien le notificará que modulos estan activados o desactivados.
+
   ![](https://i.imgur.com/iGBO15l.png)
 
 * Para desactivar o activar los mensajes de texto a voz TTS, use el comando **guide voice**.
@@ -77,6 +83,7 @@ id | Nombre de la dungeon | Idioma
 ## Módulo GUI
 
 * En el canal de chat **Toolbox(/8)** escriba el siguiente comando **guide gui** para mostrar una interfaz gráfica de usuario del modulo, puede tambien cambiar las configuraciones básicas.
+
   ![](https://i.imgur.com/dJWpFRO.png)
 
 ## Más información
