@@ -13,7 +13,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 	let timer1 = null;
 	let timer2 = null;
 	let enrage = 0;
-	let enrage_time = 0;
+	// let enrage_time = 0;
 	let counter = 0;
 	let is_hp_79 = false;
 	let mech_total = 0;
@@ -95,7 +95,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 	}
 
 	function boss_mech_eventP2(skillid) {
-		enrage = new Date() - enrage_time >= 35100 ? 0 : 1;
+		// enrage = new Date() - enrage_time >= 35100 ? 0 : 1;
 		mech_total = triple_attack ? (is_hp_79 ? 4 : 3) : 2;
 
 		if (mech_counter == 0) {
@@ -173,6 +173,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "stop_timers" },
 			{ type: "despawn_all" }
 		],
+		/*
 		"rb-3036-1000": [
 			{ type: "text", sub_type: "message", message: "Enrage On", message_ES: "Enfurecer" },
 			{ type: "func", func: () => enrage = 1 },
@@ -182,6 +183,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", message: "Enrage Off", message_ES: "Fin del Enfurecer" },
 			{ type: "func", func: () => enrage = 0 }
 		],
+		*/
 		"h-3036-1000-100": [{ type: "func", func: () => is_hp_79 = false }],
 		"h-3036-1000-94": [{ type: "text", sub_type: "message", message: "94%" }],
 		"h-3036-1000-79": [{ type: "text", sub_type: "message", message: "79%" }, { type: "func", func: () => is_hp_79 = true }],
