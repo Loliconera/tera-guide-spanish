@@ -36,6 +36,7 @@ Toolbox(/8) | Descripción del comando
 
 id | Nombre de la dungeon | Idioma
 --- | --- | ---
+3109 | Ice Throne | Español
 3027 | Forbidden Arena [Hagufna] | Español
 3036 | Sky Cruiser (Hard) | Español
 3040 | Lumikan's Trial | Español

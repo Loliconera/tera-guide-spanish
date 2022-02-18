@@ -13,9 +13,10 @@ module.exports = (dispatch, handlers, guide, lang) => {
 	let timer1 = null;
 	let timer2 = null;
 	let enrage = 0;
-	// let enrage_time = 0;
+	let enrage_time = 0;
 	let counter = 0;
-	let is_hp_79 = false;
+	// let is_hp_79 = false;
+	let is_hp_49 = false;
 	let mech_total = 0;
 	let mech_counter = 0;
 
@@ -95,8 +96,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 	}
 
 	function boss_mech_eventP2(skillid) {
-		// enrage = new Date() - enrage_time >= 35100 ? 0 : 1;
-		mech_total = triple_attack ? (is_hp_79 ? 4 : 3) : 2;
+		enrage = new Date() - enrage_time >= 35100 ? 0 : 1;
+		mech_total = triple_attack ? (is_hp_49 ? 4 : 3) : 2; // is_hp_79
 
 		if (mech_counter == 0) {
 			handlers.text({ sub_type: "message",
@@ -114,7 +115,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [553, 358, 0, 0, 1100, 100, 1500] }
 		]);
 
-		if (([1401, 1402].includes(skillid) ? (skillid % 2 + enrage) % 2 : skillid % 2) == 0) {
+		// if (([1401, 1402].includes(skillid) ? (skillid % 2 + enrage) % 2 : skillid % 2) == 0) {
+		if (([1401, 1402].includes(skillid) ? (skillid % 2) % 2 : skillid % 2) == 0) {
 			handlers.event([ // left
 				{ type: "text", sub_type: "alert", speech: false,
 					message: `(${mech_total - mech_counter}) Left`,
@@ -173,20 +175,20 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "stop_timers" },
 			{ type: "despawn_all" }
 		],
-		/*
 		"rb-3036-1000": [
-			{ type: "text", sub_type: "message", message: "Enrage On", message_ES: "Enfurecer" },
+			// { type: "text", sub_type: "message", message: "Enrage On", message_ES: "Enfurecer" },
 			{ type: "func", func: () => enrage = 1 },
 			{ type: "func", func: () => enrage_time = new Date() }
 		],
 		"re-3036-1000": [
-			{ type: "text", sub_type: "message", message: "Enrage Off", message_ES: "Fin del Enfurecer" },
+			// { type: "text", sub_type: "message", message: "Enrage Off", message_ES: "Fin del Enfurecer" },
 			{ type: "func", func: () => enrage = 0 }
 		],
-		*/
-		"h-3036-1000-100": [{ type: "func", func: () => is_hp_79 = false }],
+		// "h-3036-1000-100": [{ type: "func", func: () => is_hp_79 = false }],
+		"h-3036-1000-100": [{ type: "func", func: () => is_hp_49 = false }],
 		"h-3036-1000-94": [{ type: "text", sub_type: "message", message: "94%" }],
-		"h-3036-1000-79": [{ type: "text", sub_type: "message", message: "79%" }, { type: "func", func: () => is_hp_79 = true }],
+		// "h-3036-1000-79": [{ type: "text", sub_type: "message", message: "79%" }, { type: "func", func: () => is_hp_79 = true }],
+		"h-3036-1000-49": [{ type: "text", sub_type: "message", message: "49%" }, { type: "func", func: () => is_hp_49 = true }],
 		"h-3036-1000-35": [{ type: "text", sub_type: "message", message: "Watch the countdown", message_ES: "Mira la cuenta regresiva" }],
 		"h-3036-1000-34": [{ type: "text", sub_type: "message", message: "Third layer of shrinking ring preparation", message_ES: "Tercera Etapa de Preparación del anillo" }],
 		"h-3036-1000-65": [{ type: "text", sub_type: "message", message: "Second layer of shrinking ring preparation", message_ES: "Segunda Etapa de Preparación del anillo" }],
@@ -244,7 +246,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3036-1000-1806-0": [
 			{ type: "text", sub_type: "message", message: "IN", message_ES: "ENTRAR(1)" },
 			{ type: "text", sub_type: "message", delay: 2150, message: "Between", message_ES: "En Medio(2)" },
-			{ type: "text", sub_type: "message", delay: 3050, message: "All | IN", message_ES: "TODOS | ENTRAR" },
+			{ type: "text", sub_type: "message", delay: 3050, message: "All | IN", message_ES: "TODOS | ENTRAR(1)" },
 			{ type: "text", sub_type: "message", delay: 3500, message: "Cleanse", message_ES: "CLEANSE" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 250, 0, 6000] },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 430, 0, 6000] }
