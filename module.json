@@ -7,7 +7,7 @@
         "settingsMigrator": "settings_migrator.js",
         "settingsVersion": 1.19
     },
-    "author": " <font color='#00ffff'>HSDN / Loliconera</font>",
+    "author": " <font color='#00ffff'> HSDN / Loliconera</font>",
     "description": "Modulo Guia para dungeons. Traducido al Español por Loliconera.",
     "servers": ["https://raw.githubusercontent.com/Loliconera/tera-guide-spanish/master/"],
     "supportUrl": "https://github.com/Loliconera/tera-guide-spanish/issues",
