@@ -36,7 +36,6 @@ Toolbox(/8) | Descripción del comando
 
 id | Nombre de la dungeon | Idioma
 --- | --- | ---
-3109 | Ice Throne | Español
 3027 | Forbidden Arena [Hagufna] | Español
 3036 | Sky Cruiser (Hard) | Español
 3040 | Lumikan's Trial | Español
@@ -45,7 +44,9 @@ id | Nombre de la dungeon | Idioma
 3046 | Rogash's Trial | Español
 3105 | Fusion Laboratory | Español
 3108 | Cursed Antaroth's Abyss | Español
+3109 | Ice Throne | Español
 3126 | Corrupted Skynest (Hard) | Español
+3209 | Chaos Ice Throne | Español
 7011 | Shadow of the Gutrends (Guardian) | Español
 7015 | Escape from Balder's Refuge (Guardian) | Español
 9068 | Shadow Sanguinary (Hard) | Español

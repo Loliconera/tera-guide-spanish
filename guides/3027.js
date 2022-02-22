@@ -79,9 +79,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		//"s-3027-1003-257-0": [{ type: "spawn", func: "vector", args: [553, 0, 0, 0, 3000, 0, 5000] }],  //0
 		//"s-3027-1004-258-0": [{ type: "spawn", func: "vector", args: [553, 0, 0, 0, 3000, 0, 5000] }],  //60
 
-		"s-3027-1000-108-0": [{ type: "text", class_position: "tank", sub_type: "message", message: "Strike (Slow)", message_ES: "Espadazo (Lento)" }], // 101 121 122 -> 108
-		//"s-3027-1000-355-0": [{ type: "text", sub_type: "message", message: "Eviscerate", message_ES: "Destripar" }],                                 // 102 121 103 -> 355 -> 114
-		"s-3027-1000-135-0": [{ type: "text", sub_type: "message", message: "Strike (Slow)", message_ES: "Espadazo (Lento)" }],                         //         104 -> 135 -> 130
+		"s-3027-1000-108-0": [{ type: "text", class_position: "tank", sub_type: "message", message: "Strike (Slow)", message_ES: "Espadazo Frontal (Cuidado)" }], // 101 121 122 -> 108
+		"s-3027-1000-135-0": [{ type: "text", sub_type: "message", message: "Strike (Slow)", message_ES: "Espadazo Frontal (Lento)" }],                         //         104 -> 135 -> 130
 		"s-3027-1000-111-0": [{ type: "text", sub_type: "message", message: "Stun | Strike", message_ES: "Stun | Espadazo" }],                              //         104 -> 111 -> 130
 		"s-3027-1000-112-0": [{ type: "text", sub_type: "message", message: "Back Jump | Strike", message_ES: "Salto hacia atrás | Espadazo" }],                 //     121 102 -> 112 -> 130
 
@@ -92,8 +91,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 912, 0, 180, 8, 480, 0, 3000] }
 		],
 
-		// 3 Rotación -> Salto (145 -> 139 -> 140)
-		"s-3027-1000-145-0": [{ type: "text", sub_type: "message", message: "3x360 | Jump", message_ES: "3 Rotación | Salto" }],
+		// 3x360 -> Salto (145 -> 139 -> 140)
+		"s-3027-1000-145-0": [{ type: "text", sub_type: "message", message: "3x360 | Jump", message_ES: "3x360 | Salto" }],
 		"s-3027-1000-139-0": [{ type: "text", sub_type: "message", delay: 1000, message: "Jump", message_ES: "Salto" }],
 		"s-3027-1000-140-0": [
 			{ type: "text", sub_type: "message", message: "Dodge", message_ES: "¡Iframe!" },
@@ -105,19 +104,19 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3027-1000-402-0": [{ type: "text", sub_type: "message", message: "Jump", message_ES: "Salto" }],
 
 		// 136 -> 144 -> 130
-		"s-3027-1000-136-0": [{ type: "text", sub_type: "message", message: "2x360 | Strike", message_ES: "2 Rotación | Espadazo" }],
+		"s-3027-1000-136-0": [{ type: "text", sub_type: "message", message: "2x360 | Strike", message_ES: "2x360 | Espadazo" }],
 		"s-3027-1000-144-0": [{ type: "text", sub_type: "message", message: "Strike", message_ES: "Espadazo" }],
 
 		// 134 -> 147
-		"s-3027-1000-134-0": [{ type: "text", sub_type: "message", message: "Turn around | Back", message_ES: "Empuje frontal | Espadazo hacia atrás" }],
+		"s-3027-1000-134-0": [{ type: "text", sub_type: "message", message: "Turn around | Back", message_ES: "Cuidado | Espadazo hacia atrás" }],
 		"s-3027-1000-134-1": [{ type: "text", sub_type: "message", message: "Back", message_ES: "Espadazo hacia atrás" }],
 		"s-3027-1000-147-0": [{ type: "text", sub_type: "message", message: "Strike", message_ES: "Espadazo" }],
 
 		// 142 -> 143 114 130
-		"s-3027-1000-142-0": [{ type: "text", sub_type: "message", message: "2x360 | Strike", message_ES: "2 Rotación | Espadazo" }],
+		"s-3027-1000-142-0": [{ type: "text", sub_type: "message", message: "2x360 | Strike", message_ES: "2x360 | Espadazo" }],
 		"s-3027-1000-143-0": [{ type: "text", sub_type: "message", message: "Strike", message_ES: "Espadazo" }],
 
-		"s-3027-1000-141-0": [{ type: "text", sub_type: "message", message: "2x360 | Eviscerate", message_ES: "2 Rotación | Destripar" }], // 141 -> 146 114 130
+		"s-3027-1000-141-0": [{ type: "text", sub_type: "message", message: "2x360 | Eviscerate", message_ES: "2x360 | Destripar" }], // 141 -> 146 114 130
 		"s-3027-1000-146-0": [{ type: "text", sub_type: "message", message: "Eviscerate | Strike", message_ES: "Destripar | Espadazo" }],      // 146 ->         114 -> 130
 
 		// стяжка -> бублики (350 -> 302)
@@ -127,7 +126,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 8, 480, 0, 5000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 3, 950, 0, 5000] },
 			{ type: "spawn", func: "item", args: [HIGHLIGHT_ITEM, 0, 0, 3800, 1000] },
-			{ type: "text", sub_type: "message", delay: 3800, message: "In", message_ES: "Entrar" },
+			{ type: "text", sub_type: "message", delay: 3800, message: "In", message_ES: "¡ENTRA!" },
 			{ type: "spawn", func: "marker", args: [false, 180, 100, 3800, 1000, false, ["CENTER", "IN"]] },
 			{ type: "spawn", func: "marker", args: [false, 0, 100, 3800, 1000, false, ["CENTER", "IN"]] },
 			{ type: "spawn", func: "marker", args: [false, 90, 100, 3800, 1000, false, ["CENTER", "IN"]] },
@@ -136,15 +135,13 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		// стяжка -> волна (357 -> 110)
 		"s-3027-1000-357-0": [
-			{ type: "text", sub_type: "message", message: "Purple: Get Out", message_ES: "Morado: Olas (Salir)" },
+			{ type: "text", sub_type: "message", message: "Purple: Get Out", message_ES: "Morado: Explosión (SALIR)" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 20, 500, 2000, 5000] },
 			{ type: "text", sub_type: "alert", delay: 58000, message: "Mechanics soon...", message_ES: "Mecánica pronto..." }
 		],
 
-		//"s-3027-1000-114-0": [{ type: "text", sub_type: "message", message: "Eviscerate (slow)", message_ES: "Destripar (медленно)" }],
-		//"s-3027-1000-130-0": [{ type: "text", sub_type: "message", message: "Target", message_ES: "Objetivo" }],
-		"s-3027-1000-151-0": [{ type: "text", sub_type: "message", message: "Back teleport | Strike", message_ES: "Volver a Teletransportarse | Espadazo" }], // 151 149 148 -> 130
-		"s-3027-1000-149-1": [{ type: "text", sub_type: "message", message: "Back teleport (Target)", message_ES: "Volver a Teletransportarse (Objetivo)" }],
+		"s-3027-1000-151-0": [{ type: "text", sub_type: "message", message: "Back teleport | Strike", message_ES: "Volver Teleport | Espadazo" }], // 151 149 148 -> 130
+		"s-3027-1000-149-1": [{ type: "text", sub_type: "message", message: "Back teleport (Target)", message_ES: "Volver Teleport (Objetivo)" }],
 		"s-3027-1000-117-0": [{ type: "text", sub_type: "message", message: "Teleport (Target)", message_ES: "Flash (Objetivo)" }],         //         117 -> 130
 		"s-3027-1000-356-0": [{ type: "text", sub_type: "message", message: "Teleport (Target)", message_ES: "Flash (Objetivo)" }],         //         356 -> 147
 		"s-3027-1000-148-1": [{ type: "text", sub_type: "message", message: "Teleport (Target)", message_ES: "Flash (Objetivo)" }],

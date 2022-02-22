@@ -68,5 +68,17 @@ module.exports = {
 	3108: {
 		"en": "Cursed Antaroth's Abyss",
 		"es": "Cursed Antaroth's Abyss"
+	},
+	9068: {
+		"es": "Shadow Sanguinary (Difícil)",
+		"en": "Shadow Sanguinary (Hard)"
+	},
+	3109: {
+		"es": "Ice Throne",
+		"en": "Ice Throne"
+	},
+	3209: {
+		"es": "Choas Ice Throne",
+		"en": "Choas Ice Throne"
 	}
 };
