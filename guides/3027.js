@@ -85,10 +85,12 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3027-1000-112-0": [{ type: "text", sub_type: "message", message: "Back Jump | Strike", message_ES: "Salto hacia atrás | Espadazo" }],                 //     121 102 -> 112 -> 130
 
 		// Salto
-		"s-3027-1000-116-0": [{ type: "text", sub_type: "message", message: "Jump", message_ES: "Salto" }],
+		"s-3027-1000-116-0": [
+			{ type: "text", sub_type: "message", message: "Jump", message_ES: "Salto" }
+		],
 		"s-3027-1000-116-1": [
 			{ type: "text", sub_type: "message", message: "Dodge", message_ES: "¡Iframe!" },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 180, 8, 480, 0, 3000] }
+			{ type: "spawn", func: "circle", args: [true, 912, 0, 110, 8, 480, 0, 3000] }
 		],
 
 		// 3x360 -> Salto (145 -> 139 -> 140)
@@ -96,7 +98,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3027-1000-139-0": [{ type: "text", sub_type: "message", delay: 1000, message: "Jump", message_ES: "Salto" }],
 		"s-3027-1000-140-0": [
 			{ type: "text", sub_type: "message", message: "Dodge", message_ES: "¡Iframe!" },
-			{ type: "spawn", func: "circle", args: [false, 912, 0, 180, 8, 480, 0, 3000] }
+			{ type: "spawn", func: "circle", args: [false, 912, 0, 110, 8, 480, 0, 3000] }
 		],
 
 		// 109 -> 402 -> 130
