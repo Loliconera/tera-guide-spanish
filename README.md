@@ -79,7 +79,7 @@ id | Nombre de la dungeon | Idioma
 
 ## Más información
 
-* Desarrollador Wiki [HSDN](https://github.com/hsdn/tera-guide/wiki)
+* Wiki para desarrolladores [HSDN](https://github.com/hsdn/tera-guide-core/wiki)
 * Para preguntas y sugerencias, comuníquese a través de Discord: **JKQ#5649**
 
 ## Créditos
