@@ -1,4 +1,4 @@
-# Tera-Guía
+# Tera-Guía	[Descargar](https://github.com/Loliconera/tera-guide-spanish/releases)
 Un módulo de guía para TERA traducido al español. Muestra mensajes en la pantalla y dibuja zonas de ataques y mecánicas de jefes (también admite mensajes de texto a voz).
 
 #### Otras traducciones
