@@ -53,7 +53,7 @@ id | Nombre de la dungeon | Idioma
     <img src="https://i.imgur.com/ZFkQ08X.png" alt="drawing" width="435"/>
     
 * En la pantalla (en la parte superior), si el parámetro **lNotice** está *desactivado*, todos los mensajes se mostraran en la parte superior de la pantalla. (**Mensajes en Pantalla**).   
-    <img src="https://i.imgur.com/lH9Xo9f.png" alt="drawing" width="435"/>
+    <img src="https://user-images.githubusercontent.com/69399372/156949265-21535d2f-03e5-46f2-8636-41b25a7c8815.png" alt="drawing" width="435"/>
 
 * Cuando el parámetro **gNotice** está *activado*, todos los mensajes se enviarán al canal **Party**. (**Mensaje en Chat Party**).   
     <img src="https://i.imgur.com/el8E3oN.png" alt="drawing" width="435"/>
