@@ -78,7 +78,7 @@ module.exports = {
 		"en": "Ice Throne"
 	},
 	3209: {
-		"es": "Choas Ice Throne",
-		"en": "Choas Ice Throne"
+		"es": "Chaos Ice Throne",
+		"en": "Chaos Ice Throne"
 	}
 };
