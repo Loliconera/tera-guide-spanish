@@ -59,7 +59,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 420, 0, 3000] }
 		],
 		"s-3109-2000-416-0": [
-			{ type: "text", sub_type: "message", message: "Out-In | Pizza", message_ES: "Salir - Entrar | Pizza" },
+			{ type: "text", sub_type: "message", message: "Out", message_ES: "Salir" },
+			{ type: "text", sub_type: "message", message: "In | Pizza", message_ES: "Entrar | Pizza", delay: 3000 },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 420, 0, 6500] },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 7.5, 420, 0, 6500] },
 			{ type: "spawn", func: "marker", args: [false, 30, 200, 0, 1500, false], delay: 5000 },
@@ -79,7 +80,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "marker", args: [false, 345, 200, 0, 5000, false] }
 		],
 		"s-3109-2000-417-0": [
-			{ type: "text", sub_type: "message", message: "In-Out | Pizza", message_ES: "Entrar - Salir | Pizza" },
+			{ type: "text", sub_type: "message", message: "In", message_ES: "Entrar" },
+			{ type: "text", sub_type: "message", message: "Out | Pizza", message_ES: "Salir | Pizza", delay: 3000 },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 420, 0, 7500] },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 7.5, 420, 0, 7500] },
 			{ type: "spawn", func: "marker", args: [false, 30, 200, 0, 6000, false] },
@@ -109,12 +111,12 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-3109-2000-604-0": [
 			{ type: "despawn_all", tag: "pre-cage" },
-			{ type: "text", sub_type: "message", message: "Cage", message_ES: "Jaula" },
+			{ type: "text", sub_type: "message", message: "Cage (In)", message_ES: "Jaula (Entrar)" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 405, 0, 15000], tag: "cage" }
 		],
 		"s-3109-2000-605-0": [
-			{ type: "text", sub_type: "message", message: "Pizza | Out-in", message_ES: "Pizza | Salir - Entrar", delay: 2000 },
-			{ type: "text", sub_type: "message", message: "Pizza | Out-in", message_ES: "Pizza | Salir - Entrar", delay: 5000 },
+			{ type: "text", sub_type: "message", message: "Pizza", message_ES: "Pizza", delay: 2000 },
+			{ type: "text", sub_type: "message", message: "Out-In", message_ES: "Salir - Entrar", delay: 5000 },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 407, 0, 10000] },
 			{ type: "despawn_all", tag: "cage" },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 22.5, 407, 0, 10000] },
@@ -139,11 +141,13 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"ae-0-0-32092005": [{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe" }],
 		"s-3109-2000-617-0": [
 			{ type: "text", sub_type: "message", message: "Front | Back Waves", message_ES: "Ataque frontal | Olas" },
-			{ type: "text", sub_type: "message", message: "Front | Back Waves", message_ES: "Ataque frontal | Olas", delay: 3000 },
+			{ type: "text", sub_type: "message", message: "Back Waves", message_ES: "Olas", delay: 3000 },
 			{ type: "spawn", func: "vector", args: [553, 270, -950, 165, 1000, 0, 12000] },
 			{ type: "spawn", func: "vector", args: [553, 270, 950, -10, 1000, 0, 12000] },
 			{ type: "spawn", func: "vector", args: [553, 270, -950, 10, 1000, 0, 12000] },
 			{ type: "spawn", func: "vector", args: [553, 270, 950, -165, 1000, 0, 12000] }
-		]
+		],
+		//
+		"qb-3109-2000-32092011": [{ type: "text", sub_type: "message", message: "Debuff", message_ES: "Debuff" }]
 	};
 };

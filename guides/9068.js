@@ -6,6 +6,9 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 	let thirdboss_stacks_count = 0;
 	let thirdboss_stacks_timer = null;
+	let thirdboss_print_combo = true;
+	let thirdboss_print_bait = true;
+	let thirdboss_combo_count = 0;
 
 	function secondboss_floor_event(one, two) {
 		if (one && two) {
@@ -85,7 +88,20 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"h-468-3000-60": [{ type: "text", sub_type: "message", message: "60%" }],
 		"h-468-3000-40": [{ type: "text", sub_type: "message", message: "40%" }],
-		"s-468-3000-130-0": [{ type: "text", sub_type: "message", message: "Left", message_ES: "Empujar a la Izquierda" }],
+		//
+		"s-468-3000-101-0": [
+			{ type: "event", check_func: () => thirdboss_print_combo, args: [
+				{ type: "text", sub_type: "message", message: "Combo soon", message_ES: "Combo pronto" },
+				{ type: "func", func: () => thirdboss_print_combo = false },
+				{ type: "func", func: () => thirdboss_print_combo = true, delay: 12000 }
+			] }
+		],
+		"s-468-3000-102-0": "s-468-3000-101-0",
+		//
+		"s-468-3000-130-0": [
+			{ type: "text", sub_type: "message", message: "Left", message_ES: "Izquierda" },
+			{ type: "func", func: () => thirdboss_combo_count++ }
+		],
 		"s-468-3000-105-0": [ // 130 -> 105
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 180, 500, 0, 1500] },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 0, 500, 0, 1500] },
@@ -96,9 +112,13 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-468-3000-106-0": [ // 128 -> 106
 			{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque hacia atrás" },
-			{ type: "spawn", func: "circle", args: [false, 553, 180, 340, 12, 270, 0, 2600] }
+			{ type: "spawn", func: "circle", args: [false, 553, 180, 340, 12, 270, 0, 2600] },
+			{ type: "func", func: () => thirdboss_combo_count++ }
 		],
-		"s-468-3000-131-0": [{ type: "text", sub_type: "message", message: "Right", message_ES: "Empujar a la Derecha" }],
+		"s-468-3000-131-0": [
+			{ type: "text", sub_type: "message", message: "Right", message_ES: "Derecha" },
+			{ type: "func", func: () => thirdboss_combo_count++ }
+		],
 		"s-468-3000-107-0": [ // 131 -> 107
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 180, 500, 0, 1500] },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 0, 500, 0, 1500] },
@@ -107,16 +127,21 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "semicircle", args: [0, 180, 912, 0, 0, 10, 300, 0, 1500] },
 			{ type: "spawn", func: "semicircle", args: [0, 180, 912, 0, 0, 8, 360, 0, 1500] }
 		],
-		"s-468-3000-108-0": [{ type: "text", sub_type: "message", message: "Front", message_ES: "Ataque Frontal" }],
+		"s-468-3000-108-0": [ // 129 > 108
+			{ type: "text", sub_type: "message", message: "Front", message_ES: "Ataque Frontal" },
+			{ type: "func", func: () => thirdboss_combo_count++ }
+		],
 		"s-468-3000-109-0": "s-468-3000-106-0",
+		//
 		"s-468-3000-110-0": [{ type: "text", sub_type: "message", message: "Back Move", message_ES: "Mover hacia atrás" }],
 		"s-468-3000-111-0": [{ type: "text", sub_type: "message", message: "360 attack", message_ES: "Ataque Giratorio" }],
 		"s-468-3000-114-0": [{ type: "text", sub_type: "message", message: "Pull", message_ES: "Pull" }], // 114 -> 111
 		"s-468-3000-115-0": [{ type: "text", sub_type: "message", message: "Circles", message_ES: "Círculos" }], // 202/205 -> 115
-		"s-468-3000-115-1": [{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 200 }],
+		"s-468-3000-115-1": [{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 150 }],
 		"s-468-3000-117-0": [{ type: "text", sub_type: "message", message: "Jump", message_ES: "Saltar" }], // 503 -> 117
 		"s-468-3000-134-0": [ // qb 468052 -> 134
 			{ type: "text", sub_type: "message", message: "Inner + AoE", message_ES: "Interno + AoE" },
+			{ type: "text", sub_type: "message", message: "Get Debuff", message_ES: "Tomar Debuff", class_position: "heal", delay: 2000 },			
 			{ type: "spawn", func: "circle", args: [true, 553, 0, 75, 14, 175, 0, 1500] }
 		],
 		"s-468-3000-134-1": [
@@ -126,7 +151,10 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-468-3000-202-0": [{ type: "text", sub_type: "message", message: "Target Throw", message_ES: "Lanzar Objetivo" }], // 503 -> 201 -> 202
 		"s-468-3000-205-0": [{ type: "text", sub_type: "message", message: "Target Throw", message_ES: "Lanzar Objetivo" }], // 503 -> 117 -> 203 -> 204 -> 205
 		"s-468-3000-206-0": [{ type: "text", sub_type: "message", message: "Pike (Target)", message_ES: "Pike (Objetivo)" }], // 206 -> 207
-		"s-468-3000-302-0": [{ type: "text", sub_type: "message", message: "Bait (Target)", message_ES: "Bait (Objetivo)" }],
+		"s-468-3000-302-0": [
+			{ type: "text", sub_type: "message", message: "Bait (Target)", message_ES: "Bait (Target)" },
+			{ type: "func", func: () => thirdboss_combo_count = 0 }
+		],
 		"s-468-3000-302-1": [{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 1600 }],
 		"s-468-3000-501-0": [
 			{ type: "text", sub_type: "message", message: "Cage", message_ES: "Jaula" },
@@ -150,6 +178,39 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"ae-0-0-468039-3": [{ type: "func", func: thirdboss_stacks_event, args: [3] }],
 		"ae-0-0-468039-2": [{ type: "func", func: thirdboss_stacks_event, args: [2] }],
 		"ae-0-0-468039-1": [{ type: "func", func: thirdboss_stacks_event, args: [1] }],
-		"ar-0-0-468039": [{ type: "func", func: thirdboss_stacks_event, args: [0] }]
+		"ar-0-0-468039": [{ type: "func", func: thirdboss_stacks_event, args: [0] }],
+		//
+		"give_bait": [
+			{ type: "event", check_func: () => thirdboss_print_bait, args: [
+				{ type: "text", sub_type: "message", message: "Give Bait", message_ES: "Give Bait", class_position: "heal" },
+				{ type: "func", func: () => thirdboss_print_bait = false },
+				{ type: "func", func: () => thirdboss_print_bait = true, delay: 6000 }
+			] }
+		],
+		"give_bait_combo": [
+			{ type: "event", check_func: () => thirdboss_combo_count >= 3, args: [
+				{ type: "text", sub_type: "message", message: "Give Bait", message_ES: "Give Bait", class_position: "heal" },
+				{ type: "func", func: () => thirdboss_combo_count = 0 }
+			] }
+		],
+		"e-468-3000-101": "give_bait",
+		"e-468-3000-102": "give_bait",
+		"e-468-3000-105": "give_bait_combo", // left
+		"e-468-3000-106": "give_bait_combo", // back
+		"e-468-3000-107": "give_bait_combo", // right
+		"e-468-3000-108": "give_bait_combo", // front
+		"e-468-3000-111": "give_bait", // 360 attack
+		"e-468-3000-114": "give_bait", // pull
+		"e-468-3000-115": "give_bait", // circles
+		"e-468-3000-117": "give_bait", // jump
+		"e-468-3000-202": "give_bait", // target throw
+		"e-468-3000-205": "give_bait", // target throw
+		"e-468-3000-207": "give_bait", // pike
+		"s-468-3000-122-2": "give_bait", // core pattern 1
+		"s-468-3000-123-2": "give_bait", // core pattern 2
+		"s-468-3000-124-2": "give_bait", // core pattern 3
+		"s-468-3000-127-2": "give_bait", // core pattern 4
+		"e-468-3000-136": "give_bait", // donut
+		"s-468-3000-506-1": "give_bait" // dissipation
 	};
 };
