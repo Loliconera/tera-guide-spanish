@@ -5,9 +5,20 @@
 module.exports = (dispatch, handlers, guide, lang) => {
 	guide.type = SP;
 
+	let secondboss_mech_counter = 0;
 	let thirdboss_colour_to_use = null;
 	let thirdboss_counter = 0;
 	let thirdboss_timer = null;
+
+	function secondboss_stacks_event() {
+		secondboss_mech_counter++;
+
+		handlers.text({ sub_type: "notification", message: `${secondboss_mech_counter} stack`, message_ES: `stack ${secondboss_mech_counter}`, speech: false });
+
+		if (secondboss_mech_counter >= 5) {
+			secondboss_mech_counter = 0;
+		}
+	}
 
 	function thirdboss_backattack_event() {
 		dispatch.clearTimeout(thirdboss_timer);
@@ -75,6 +86,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "stop_timers" },
 			{ type: "despawn_all" }
 		],
+		"h-920-2000-99": [{ type: "func", func: () => secondboss_mech_counter = 0 }],		
 		"h-920-2000-50": [{ type: "text", sub_type: "message", message: "50%", message_ES: "50%" }],
 		"h-920-2000-20": [{ type: "text", sub_type: "message", message: "20%", message_ES: "20%" }],
 		"s-920-2000-1104-0": [{ type: "text", sub_type: "message", message: "Random Jump", message_ES: "Salto aleatorio" }],
@@ -120,6 +132,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-920-2000-3116-0": [{ type: "text", sub_type: "message", message: "Circles", message_ES: "Círculos" }],
 		"s-920-2000-3119-0": [{ type: "text", sub_type: "message", message: "Red: Out safe", message_ES: "Rojo: Salir seguro" }],
 		"s-920-2000-3220-0": [{ type: "text", sub_type: "message", message: "Blue: In safe", message_ES: "Azul: Entrar seguro" }],
+		//
+		"dm-0-0-9202000": [{ type: "func", func: secondboss_stacks_event }],		
 
 		// 3 BOSS
 		"nd-920-3000-0": [
