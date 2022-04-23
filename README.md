@@ -1,6 +1,6 @@
 # Tera-Guía
 
-### :information_source: About patch 92 support   
+### :information_source: Sobre el soporte del parche 92   
 Técnicamente, el módulo Tera-Guía y [tera-guide-core](https://github.com/hsdn/tera-guide-core) ya son compatibles con el parche 92, pero no se han agregado todas las guías antiguas. Puede obtener los archivos de guía necesarios manualmente desde el repositorio de guias [tera-guide-archive](https://github.com/hsdn/tera-guide-archive).   
 También necesitará una versión compatible de **library** ([descargar aqui](https://git.dev.hsdn.org/tera-v92/library/archive/master.zip)).
 
