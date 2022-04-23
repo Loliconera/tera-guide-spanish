@@ -1,4 +1,14 @@
-# Tera-Guía	[Descargar](https://github.com/Loliconera/tera-guide-spanish/releases)
+# Tera-Guía
+
+### :information_source: About patch 92 support   
+Técnicamente, el módulo Tera-Guía y [tera-guide-core](https://github.com/hsdn/tera-guide-core) ya son compatibles con el parche 92, pero no se han agregado todas las guías antiguas. Puede obtener los archivos de guía necesarios manualmente desde el repositorio de guias [tera-guide-archive](https://github.com/hsdn/tera-guide-archive).   
+También necesitará una versión compatible de **library** ([descargar aqui](https://git.dev.hsdn.org/tera-v92/library/archive/master.zip)).
+
+En el futuro, después de que se cierre el servidor oficial de Tera, lanzaremos una versión completa de la guía para el parche 92.
+
+---
+
+# Tera-Guía	[Descargar Aqui](https://github.com/Loliconera/tera-guide-spanish/releases)
 Un módulo de guía para TERA traducido al español. Muestra mensajes en la pantalla y dibuja zonas de ataques y mecánicas de jefes (también admite mensajes de texto a voz).
 
 #### Otras traducciones
