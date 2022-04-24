@@ -41,7 +41,7 @@ Toolbox(/8) | Descripción del comando
 
 ## Dungeons Compatibles
 
-### Patch v115.02
+### Parche v115.02
 id | Nombre de la dungeon | Idioma
 --- | --- | ---
 7011 | Shadow of the Gutrends (Guardian) | Español
@@ -62,7 +62,7 @@ id | Nombre de la dungeon | Idioma
 3105 | Fusion Laboratory | Español
 9794 | Thaumetal Refinery | Español
 
-### Patch v92.04 / Menma's TERA
+### Parche v92.04 / Menma's TERA
 id | Nombre de la dungeon | Idioma
 --- | --- | ---
 7011 | Shadow of the Gutrends (Guardian) | Español
