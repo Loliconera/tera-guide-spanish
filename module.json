@@ -1,20 +1,19 @@
 {
     "name": "TERA-Guia",
     "options": {
-        "niceName": "<font color='#ffff00'>TERA-Guia</font>",
-        "guiName": "<font color='#ffff00'>TERA-Guia</font>",
+        "niceName": "TERA-Guia",
+        "guiName": "TERA-Guia",
         "settingsFile": "config.json",
         "settingsMigrator": "settings_migrator.js",
         "settingsVersion": 1.19
     },
-    "author": " <font color='#00ffff'> HSDN / Loliconera</font>",
+    "author": "HSDN / Loliconera",
     "description": "Modulo Guia para dungeons. Traducido al Español por Loliconera.",
     "servers": ["https://raw.githubusercontent.com/Loliconera/tera-guide-spanish/master/"],
     "supportUrl": "https://github.com/Loliconera/tera-guide-spanish/issues",
     "dependencies": {
-        "library": "https://raw.githubusercontent.com/tera-toolbox-mods/library/master/module.json",
         "tera-guide-core": "https://raw.githubusercontent.com/hsdn/tera-guide-core/master/module.json"
     },
     "disableAutoUpdate": false,
-    "version": "<font color='#00ffff'>GF v115.2</font>"
+    "version": "v115.2 / v92.04"
 }
