@@ -80,5 +80,21 @@ module.exports = {
 	3209: {
 		"es": "Chaos Ice Throne",
 		"en": "Chaos Ice Throne"
+	},
+	3105: {
+		"es": "Fusion Laboratory",
+		"en": "Fusion Laboratory"
+	},
+	3047: {
+		"es": "Hall of the Argon Queen (Difícil)",
+		"en": "Hall of the Argon Queen (Hard)"
+	},
+	3043: {
+		"es": "Harnovog's Trial",
+		"en": "Harnovog's Trial"
+	},
+	9794: {
+		"es": "Thaumetal Refinery",
+		"en": "Thaumetal Refinery"
 	}
 };
