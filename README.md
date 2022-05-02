@@ -1,10 +1,17 @@
 # Tera-Guía
 
-### :information_source: Acerca de la compatibilidad con el parche v92.04   
-El módulo Tera-Guía y [tera-guide-core](https://github.com/hsdn/tera-guide-core) ya son compatibles con este parche.   
+## Parche v92.04
+
+### :star: Disponible en TERA Toolbox para el parche 92
+* Totalmente compatible con [versión no oficial] (https://github.com/tera-private-toolbox/tera-toolbox) de Tera Toolbox para el parche 92.
+   Instalación automática desde la pestaña **Obtener más Mods**.
+
+### :information_source: Instalación manual
+La Tera-Guía y [tera-guide-core](https://github.com/hsdn/tera-guide-core) ya son compatibles con este parche.
 Para que las guías funcionen, necesita obtener versiones compatibles de **library** y **tera-guide-core**:
-1. Descargue **library** desde **[aquí](https://git.dev.hsdn.org/tera-v92/library/archive/master.zip)** y colócala en la carpeta **mods**.
-2. Descargue **tera-guide-core** desde **[aquí](https://github.com/hsdn/tera-guide-core/archive/refs/heads/master.zip)** y colóquelo en la carpeta **mods** y debe llamarse **"tera-guide-core"**, no "tera-guide-core-master".
+1. Descargue **library** desde **[aquí](https://git.dev.hsdn.org/tera-v92/library/archive/master.zip)** y colócala en **mods* * carpeta.
+2. Descargue **tera-guide-core** desde **[aquí](https://github.com/hsdn/tera-guide-core/archive/refs/heads/master.zip)** y colóquelo a su carpeta **mods** llamada **"tera-guide-core"**,
+    no "tera-guide-core-master".
 
 ---
 
@@ -62,7 +69,7 @@ id | Nombre de la dungeon | Idioma
 3105 | Fusion Laboratory | Español
 9794 | Thaumetal Refinery | Español
 
-### Parche v92.04 / Menma's TERA
+### Parche v92.04 (Menma's TERA)
 id | Nombre de la dungeon | Idioma
 --- | --- | ---
 7011 | Shadow of the Gutrends (Guardian) | Español
