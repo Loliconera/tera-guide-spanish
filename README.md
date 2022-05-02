@@ -16,7 +16,7 @@ Un módulo de guía para TERA traducido al español. Muestra mensajes en la pant
 * [**Portugués (Português & Español)** by Emilia](https://github.com/emilia-s2/Guia-DG-Portugues)
 
 ## Dependencias
-* **library** - https://git.dev.hsdn.org/tera-v92/library (v115.02 / v92.04)
+* **library** - https://github.com/tera-private-toolbox/library (v115.02 / v92.04)
 * **tera-guide-core** - https://github.com/hsdn/tera-guide-core (v115.02 / v92.04)
 
 Al usar TeraToolbox, todas las dependencias se instalarán automáticamente.   
