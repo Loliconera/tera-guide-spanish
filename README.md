@@ -3,19 +3,19 @@
 ## Parche v92.04
 
 ### :star: Disponible en TERA Toolbox para el parche 92
-* Totalmente compatible con [versión no oficial] (https://github.com/tera-private-toolbox/tera-toolbox) de Tera Toolbox para el parche 92.
+* Totalmente compatible con la [versión no oficial](https://github.com/tera-private-toolbox/tera-toolbox) de Tera Toolbox para el parche 92.
    Instalación automática desde la pestaña **Obtener más Mods**.
 
 ### :information_source: Instalación manual
-La Tera-Guía y [tera-guide-core](https://github.com/hsdn/tera-guide-core) ya son compatibles con este parche.
+El módulo Tera-Guía y [tera-guide-core](https://github.com/hsdn/tera-guide-core) ya son compatibles con este parche.
 Para que las guías funcionen, necesita obtener versiones compatibles de **library** y **tera-guide-core**:
-1. Descargue **library** desde **[aquí](https://git.dev.hsdn.org/tera-v92/library/archive/master.zip)** y colócala en **mods* * carpeta.
-2. Descargue **tera-guide-core** desde **[aquí](https://github.com/hsdn/tera-guide-core/archive/refs/heads/master.zip)** y colóquelo a su carpeta **mods** llamada **"tera-guide-core"**,
+1. Descargue **library** desde **[aquí](https://git.dev.hsdn.org/tera-v92/library/archive/master.zip)** y colóquelo en la carpeta **mods**.
+2. Descargue **tera-guide-core** desde **[aquí](https://github.com/hsdn/tera-guide-core/archive/refs/heads/master.zip)** y colóquelo en la carpeta **mods** llamada **"tera-guide-core"**,
     no "tera-guide-core-master".
-
+3. Descargue **tera-guide-spanish** desde **[aquí](https://github.com/Loliconera/tera-guide-spanish/archive/refs/heads/master.zip)** y colóquelo en la carpeta **mods**.
 ---
 
-# Tera-Guía	[Descargar Aqui](https://github.com/Loliconera/tera-guide-spanish/releases)
+## Descripción
 Un módulo de guía para TERA traducido al español. Muestra mensajes en la pantalla y dibuja zonas de ataques y mecánicas de jefes (también admite mensajes de texto a voz).
 
 #### Otras traducciones
