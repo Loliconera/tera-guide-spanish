@@ -48,7 +48,7 @@ module.exports.general = {
 		voice: "Genero de voz",
 		rate: "Velocidad de voz",
 		color: "Cambiar el color",
-		dungeons: "Configuración de la Dungeons",
+		dungeons: "Ajustes de Dungeons",
 		verbose: "Mensajes",
 		objects: "Marcadores",
 		test: "Prueba de voz",
