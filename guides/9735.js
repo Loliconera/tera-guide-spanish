@@ -11,7 +11,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-735-1000-104-0": [{ type: "text", sub_type: "message", message: "Front Clip", message_ES: "Ataque frontal (Stun)" }],	
 		"s-735-1000-111-0": [{ type: "text", sub_type: "message", message: "Back + Front", message_ES: "Ataque atras + Adelante" }],
-		"s-735-1000-112-0": [{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque hacia atras" }],
+		"s-735-1000-112-0": [{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque atras" }],
 		"s-735-1000-304-0": [{ type: "text", sub_type: "message", message: "Out", message_ES: "Salir" }],
 		"s-735-1000-305-0": [{ type: "text", sub_type: "message", message: "In", message_ES: "Entrar" }],
 		"s-735-1000-306-0": [{ type: "text", sub_type: "message", message: "Bombs", message_ES: "Bombas" }],
@@ -32,7 +32,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 278, 0, 4000] }
 		],
 		"s-735-2000-108-0": [
-			{ type: "text", sub_type: "message", message: "Back Swipe", message_ES: "Ataque hacia atras" },
+			{ type: "text", sub_type: "message", message: "Back Swipe", message_ES: "Ataque atras" },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 240, 380, 0, 2000] },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 120, 380, 0, 2000] }
 		],

@@ -25,7 +25,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		thirdboss_counter++;
 
 		if (thirdboss_counter >= 2) {
-			handlers.text({ sub_type: "message", message: "Back Stun", message_ES: "Stun hacia atrás" });
+			handlers.text({ sub_type: "message", message: "Back Stun", message_ES: "Stun atrás" });
 		}
 
 		thirdboss_timer = dispatch.setTimeout(() => thirdboss_counter = 0, 3000);
@@ -67,7 +67,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-920-1000-1117-0": [{ type: "text", sub_type: "message", message: "In > Out", message_ES: "Entrar > Salir" }],
 		"s-920-1000-1116-0": [{ type: "text", sub_type: "message", message: "Out > In", message_ES: "Salir > Entrar" }],
-		"s-920-1000-1109-0": [{ type: "text", sub_type: "message", message: "Back Attack", message_ES: "Ataque hacia atrás" }],
+		"s-920-1000-1109-0": [{ type: "text", sub_type: "message", message: "Back Attack", message_ES: "Ataque atrás" }],
 		"s-920-1000-1130-0": [{ type: "text", sub_type: "message", message: "Full > Outer > Inner", message_ES: "Completo > Externo > Interno" }],
 		"s-920-1000-1220-0": [
 			{ type: "text", sub_type: "message", message: "AOE", message_ES: "AOE" },
@@ -90,7 +90,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"h-920-2000-50": [{ type: "text", sub_type: "message", message: "50%", message_ES: "50%" }],
 		"h-920-2000-20": [{ type: "text", sub_type: "message", message: "20%", message_ES: "20%" }],
 		"s-920-2000-1104-0": [{ type: "text", sub_type: "message", message: "Random Jump", message_ES: "Salto aleatorio" }],
-		"s-920-2000-1105-0": [{ type: "text", sub_type: "message", message: "Back Attack", message_ES: "Ataque hacia atrás" }],
+		"s-920-2000-1105-0": [{ type: "text", sub_type: "message", message: "Back Attack", message_ES: "Ataque atrás" }],
 		"s-920-2000-1106-0": [
 			{ type: "text", sub_type: "message", message: "Spin Attack", message_ES: "Ataque Giratorio" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 320, 0, 3500] }
@@ -171,11 +171,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 18, 157, 1500, 4000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 12, 307, 1500, 4000] }
 		],
-		"s-920-3000-1113-0": [{ type: "text", sub_type: "message", message: "Front | Back Stun", message_ES: "Ataque Frontal | Stun hacia atrás" }],
+		"s-920-3000-1113-0": [{ type: "text", sub_type: "message", message: "Front | Back Stun", message_ES: "Ataque Frontal | Stun atrás" }],
 		"s-920-3000-1115-0": [{ type: "text", sub_type: "message", message: "Spin Attack", message_ES: "Ataque Giratorio" }],
 		"s-920-3000-1120-0": [{ type: "text", sub_type: "message", message: "Energy Beam (Slow)", message_ES: "Ola (Lento)" }],
 		"s-920-3000-1204-0": [{ type: "text", sub_type: "message", message: "Energy Beam (Fast)", message_ES: "Ola (Rápido)" }],
-		// "s-920-3000-1202-0": [{ type: "text", sub_type: "message", message: "Spin or Front | Back Stun", message_ES: "Круговая или Ataque Frontal | Stun hacia atrás" }],
+		// "s-920-3000-1202-0": [{ type: "text", sub_type: "message", message: "Spin or Front | Back Stun", message_ES: "Круговая или Ataque Frontal | Stun atrás" }],
 		"s-920-3000-1206-0": [{ type: "text", sub_type: "message", message: "Orbs", message_ES: "Orbes" }],
 		"s-920-3000-1309-0": [{ type: "text", sub_type: "message", message: "AoE", message_ES: "AoE" }],
 		"s-920-3000-1310-0": [{ type: "text", sub_type: "message", message: "Puddles", message_ES: "Charcos" }],
@@ -183,7 +183,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-920-3000-1312-0": "s-920-3000-1310-0",
 		"s-920-3000-1313-0": "s-920-3000-1310-0",
 		"s-920-3000-1314-0": "s-920-3000-1310-0",
-		"s-920-3000-1315-0": [{ type: "text", sub_type: "message", message: "Pushback", message_ES: "Empujar hacia atrás (Kaia)" }],
+		"s-920-3000-1315-0": [{ type: "text", sub_type: "message", message: "Pushback", message_ES: "Empujar atrás (Kaia)" }],
 		"s-920-3000-1317-0": [{ type: "func", func: thirdboss_cage_event, args: [false], delay: 1000 }],
 		"s-920-3000-1318-0": [{ type: "func", func: thirdboss_cage_event, args: [true], delay: 1000 }],
 		"s-920-3000-1400-0": [{ type: "text", sub_type: "message", message: "Clones: Beam", message_ES: "Clones: Olas" }],

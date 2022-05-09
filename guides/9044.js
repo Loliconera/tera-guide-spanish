@@ -35,7 +35,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 553, 180, 250, 12, 300, 100, 3000] }
 		],
 		"s-444-1000-1111-0": [
-			{ type: "text", sub_type: "message", message: "Back", message_ES: "Martillazo hacia atrás" },
+			{ type: "text", sub_type: "message", message: "Back", message_ES: "Martillazo atrás" },
 			{ type: "spawn", func: "circle", args: [false, 553, 185, 500, 8, 490, 1500, 2000] }
 		],
 		"s-444-1000-1113-0": [{ type: "text", sub_type: "message", message: "Throw (Bait)", message_ES: "Lanzar Martillo > (al jugador)" }],
@@ -71,7 +71,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [553, 270, 250, 186, 800, 0, 3500] }
 		],
 		"s-444-1000-1137-0": [
-			{ type: "text", sub_type: "message", message: "Hammer Back", message_ES: "Martillazo hacia atrás" },
+			{ type: "text", sub_type: "message", message: "Hammer Back", message_ES: "Martillazo atrás" },
 			{ type: "spawn", func: "circle", args: [false, 553, 185, 500, 8, 490, 100, 2000] }
 		],
 		"s-444-1000-1138-0": [{ type: "text", sub_type: "message", delay: 1100, message: "Dodge", message_ES: "Iframe" }], // Knockup (Bait)
@@ -134,7 +134,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 553, 180, 250, 12, 300, 100, 3000] }
 		],
 		"s-444-2000-1111-0": [
-			{ type: "text", sub_type: "message", message: "Back", message_ES: "Martillazo hacia atrás" },
+			{ type: "text", sub_type: "message", message: "Back", message_ES: "Martillazo atrás" },
 			{ type: "spawn", func: "circle", args: [false, 553, 185, 500, 8, 490, 1500, 2000] }
 		],
 		"s-444-2000-1112-0": [
@@ -215,7 +215,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 553, 356, 220, 12, 210, 100, 3000] }
 		],
 		"s-444-2000-1137-0": [
-			{ type: "text", sub_type: "message", message: "Hammer back", message_ES: "Martillazo hacia atrás" },
+			{ type: "text", sub_type: "message", message: "Hammer back", message_ES: "Martillazo atrás" },
 			{ type: "spawn", func: "circle", args: [false, 553, 185, 500, 8, 490, 100, 2000] }
 		],
 		"s-444-2000-1138-0": [{ type: "text", sub_type: "message", delay: 1100, message: "Dodge", message_ES: "Iframe" }], // Knockup (Bait)

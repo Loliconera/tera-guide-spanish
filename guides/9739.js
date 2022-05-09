@@ -15,7 +15,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 300, 0, 7500] }
 		],
 		"s-739-1000-308-1": [{ type: "text", sub_type: "message", message: "Out", message_ES: "Salir" }],
-		"s-739-1000-112-0": [{ type: "text", sub_type: "message", message: "Back Spray", message_ES: "Ataque hacia atras" }],
+		"s-739-1000-112-0": [{ type: "text", sub_type: "message", message: "Back Spray", message_ES: "Ataque atrás" }],
 		"s-739-1000-107-0": [{ type: "text", sub_type: "message", message: "Jump", message_ES: "Saltar" }],
 		"s-739-1000-306-0": [
 			{ type: "text", sub_type: "message", message: "Out > In", message_ES: "Salir > Entrar" },
@@ -40,7 +40,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 360, 0, 6500] }
 		],
 		"s-739-2000-119-0": [{ type: "text", sub_type: "message", message: "Front", message_ES: "Ataque Frontal" }],
-		"s-739-2000-120-0": [{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque hacia atras" }],
+		"s-739-2000-120-0": [{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque atrás" }],
 		"s-739-2000-303-0": [{ type: "text", sub_type: "message", message: "Whip", message_ES: "Latigo" }],
 
 		// 3 BOSS
@@ -50,14 +50,14 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],		
 		"h-739-3001-30": [{ type: "text", sub_type: "message", message: "Reveal soon...", message_ES: "Revelacion pronto..." }],
 		"s-739-3001-201-0": [{ type: "text", sub_type: "message", delay: 3600, message: "Dodge!", message_ES: "¡Iframe!" }],
-		"s-739-3001-107-0": [{ type: "text", sub_type: "message", message: "Many Hits", message_ES: "Muchos Golpes" }],
+		"s-739-3001-107-0": [{ type: "text", sub_type: "message", message: "Many Hits", message_ES: "Muchos Hits" }],
 		"s-739-3001-115-0": [
 			{ type: "text", sub_type: "message", delay: 1750, message: "Dodge!", message_ES: "¡Iframe!" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 630, 0, 4000] }
 		],
 		"s-739-3001-118-0": [{ type: "text", sub_type: "message", message: "Scratching", message_ES: "Garras" }],
 		// Revealed Argog
-		"s-739-3001-167-0": [{ type: "text", sub_type: "message", message: "Many Hits", message_ES: "Muchos Golpes" }],
+		"s-739-3001-167-0": [{ type: "text", sub_type: "message", message: "Many Hits", message_ES: "Muchos Hits" }],
 		"s-739-3001-175-0": [
 			{ type: "text", sub_type: "message", delay: 1750, message: "Dodge!", message_ES: "¡Iframe!" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 630, 0, 4000] }

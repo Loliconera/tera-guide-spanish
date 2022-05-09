@@ -82,7 +82,7 @@ id | Nombre de la dungeon | Idioma
 9920 | Antaroth's Abyss (Hard) | Español
 9982 | Grotto of Lost Souls (Hard) | Español
 9735 | RK-9 Kennel | Español
-3739 | Red Refuge | Español
+9739 | Red Refuge | Español
 9780 | Velik's Hold (5-Person) | Español
 9781 | Velik's Sanctuary | Español
 

@@ -6,10 +6,10 @@ module.exports.NetworkMod = function (mod) {
 			languages: ["en", "es"], // Idiomas soportados
 			colors: { gui: {}, general: {} }, // ajustes de color
 			command: ["guide"], // comando del módulo
-			chat_name: "Guia", // establecer el nombre del autor del chat para los avisos
+			chat_name: "Guía", // establecer el nombre del autor del chat para los avisos
 		});
 	} catch (e) {
-		mod.error("¡Advertencia!\n¡El modulo dependiente \"tera-guide-core\" necesario para el correcto funcionamiento del modulo TERA-Guia no está instalado!\nPor favor descargue e instale: https://github.com/hsdn/tera-guide-core\n");
+		mod.error("¡Advertencia!\n¡El modulo dependiente \"tera-guide-core\" necesario para el correcto funcionamiento del modulo TERA-Guía-ES no está instalado!\nPor favor descargue e instale: https://github.com/hsdn/tera-guide-core\n");
 		throw e;
 	}
 };

@@ -1,19 +1,19 @@
 {
-    "name": "TERA-Guia",
+    "name": "Tera-Guía-ES",
     "options": {
-        "niceName": "TERA-Guia",
-        "guiName": "TERA-Guia",
+        "niceName": "Tera-Guía",
+        "guiName": "Tera-Guía-ES",
         "settingsFile": "config.json",
         "settingsMigrator": "settings_migrator.js",
         "settingsVersion": 1.19
     },
-    "author": "HSDN / ZC / Kasea / Emilia / Loliconera",
+    "author": "HSDN/ZC/Kasea/Emilia/Loliconera",
     "description": "Guía de Dungeons para TERA en Español.",
     "servers": ["https://raw.githubusercontent.com/Loliconera/tera-guide-spanish/master/"],
-    "supportUrl": "https://github.com/Loliconera/tera-guide-spanish/issues",
+    "supportUrl": "https://github.com/Loliconera/tera-guide-spanish",
     "dependencies": {
         "tera-guide-core": "https://raw.githubusercontent.com/hsdn/tera-guide-core/master/module.json"
     },
     "disableAutoUpdate": false,
-    "version": "GF v115.2 / MT v92.04"
+    "version": "GF v115.2/MT v92.04"
 }

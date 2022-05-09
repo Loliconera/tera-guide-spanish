@@ -107,7 +107,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", delay: 3000, message: "1" }
 		],
 		"s-781-2000-1106-0": [
-			{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque hacia atrás" },
+			{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque atrás" },
 			{ type: "spawn", func: "circle", args: [false, 553, 180, 340, 14, 270, 0, 2600] }
 		],
 		"s-781-2000-1108-0": [{ type: "text", sub_type: "message", message: "Front", message_ES: "Ataque frontal" }],
