@@ -25,7 +25,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		thirdboss_counter++;
 
 		if (thirdboss_counter >= 2) {
-			handlers.text({ sub_type: "message", message: "Back Stun", message_ES: "Stun atrás" });
+			handlers.text({ sub_type: "message", message: "Back Stun", message_ES: "Stun Atrás" });
 		}
 
 		thirdboss_timer = dispatch.setTimeout(() => thirdboss_counter = 0, 3000);
@@ -67,8 +67,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-920-1000-1117-0": [{ type: "text", sub_type: "message", message: "In > Out", message_ES: "Entrar > Salir" }],
 		"s-920-1000-1116-0": [{ type: "text", sub_type: "message", message: "Out > In", message_ES: "Salir > Entrar" }],
-		"s-920-1000-1109-0": [{ type: "text", sub_type: "message", message: "Back Attack", message_ES: "Ataque atrás" }],
-		"s-920-1000-1130-0": [{ type: "text", sub_type: "message", message: "Full > Outer > Inner", message_ES: "Completo > Externo > Interno" }],
+		"s-920-1000-1109-0": [{ type: "text", sub_type: "message", message: "Back Attack", message_ES: "Ataque Atrás" }],
+		"s-920-1000-1130-0": [{ type: "text", sub_type: "message", message: "Full > Outer > Inner", message_ES: "Full > Entrar > Salir" }],
 		"s-920-1000-1220-0": [
 			{ type: "text", sub_type: "message", message: "AOE", message_ES: "AOE" },
 			{ type: "text", sub_type: "message", delay: 2900, message: "Dodge!", message_ES: "¡Iframe!" }
@@ -77,7 +77,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-920-1000-2117-0": "s-920-1000-1117-0",
 		"s-920-1000-2116-0": "s-920-1000-1116-0",
 		"s-920-1000-2109-0": "s-920-1000-1109-0",
-		"s-920-1000-2130-0": [{ type: "text", sub_type: "message", message: "Full > Inner > Outer", message_ES: "Completo > Interno > Externo" }],
+		"s-920-1000-2130-0": [{ type: "text", sub_type: "message", message: "Full > Inner > Outer", message_ES: "Full > Salir > Entrar" }],
 		"s-920-1000-2220-0": "s-920-1000-1220-0",
 		"qb-920-1000-9201000": [{ type: "text", sub_type: "message", message: "Flying", message_ES: "Volar" }],
 
@@ -90,7 +90,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"h-920-2000-50": [{ type: "text", sub_type: "message", message: "50%", message_ES: "50%" }],
 		"h-920-2000-20": [{ type: "text", sub_type: "message", message: "20%", message_ES: "20%" }],
 		"s-920-2000-1104-0": [{ type: "text", sub_type: "message", message: "Random Jump", message_ES: "Salto aleatorio" }],
-		"s-920-2000-1105-0": [{ type: "text", sub_type: "message", message: "Back Attack", message_ES: "Ataque atrás" }],
+		"s-920-2000-1105-0": [{ type: "text", sub_type: "message", message: "Back Attack", message_ES: "Ataque Atrás" }],
 		"s-920-2000-1106-0": [
 			{ type: "text", sub_type: "message", message: "Spin Attack", message_ES: "Ataque Giratorio" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 320, 0, 3500] }
@@ -130,8 +130,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-920-2000-2113-0": "s-920-2000-1111-0",
 		"s-920-2000-2114-0": "s-920-2000-1112-0",
 		"s-920-2000-3116-0": [{ type: "text", sub_type: "message", message: "Circles", message_ES: "Círculos" }],
-		"s-920-2000-3119-0": [{ type: "text", sub_type: "message", message: "Red: Out safe", message_ES: "Rojo: Salir seguro" }],
-		"s-920-2000-3220-0": [{ type: "text", sub_type: "message", message: "Blue: In safe", message_ES: "Azul: Entrar seguro" }],
+		"s-920-2000-3119-0": [{ type: "text", sub_type: "message", message: "Red: Out safe", message_ES: "Rojo: SALIR" }],
+		"s-920-2000-3220-0": [{ type: "text", sub_type: "message", message: "Blue: In safe", message_ES: "Azul: ENTRAR" }],
 		//
 		"dm-0-0-9202000": [{ type: "func", func: secondboss_stacks_event }],		
 
@@ -143,7 +143,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-920-3000-1104-0": [{ type: "func", func: thirdboss_backattack_event }],
 		"s-920-3000-1105-0": [{ type: "text", sub_type: "message", message: "Target Cage", message_ES: "Jaula (Objetivo)" }],
 		"s-920-3000-1119-0": [{ type: "spawn", func: "circle", args: [true, 553, 0, -325, 12, 325, 0, 2000] }],
-		"s-920-3000-1107-0": [{ type: "text", sub_type: "message", message: "Random Jump", message_ES: "Salto aleatorio" }],
+		"s-920-3000-1107-0": [{ type: "text", sub_type: "message", message: "Random Jump", message_ES: "Salto Aleatorio" }],
 		"s-920-3000-1107-1": [{ type: "spawn", func: "circle", args: [false, 553, 0, 85, 12, 250, 0, 2000] }],
 		"s-920-3000-1109-0": [
 			{ type: "text", sub_type: "message", message: "Left", message_ES: "Izquierda" },
@@ -173,17 +173,17 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-920-3000-1113-0": [{ type: "text", sub_type: "message", message: "Front | Back Stun", message_ES: "Ataque Frontal | Stun atrás" }],
 		"s-920-3000-1115-0": [{ type: "text", sub_type: "message", message: "Spin Attack", message_ES: "Ataque Giratorio" }],
-		"s-920-3000-1120-0": [{ type: "text", sub_type: "message", message: "Energy Beam (Slow)", message_ES: "Ola (Lento)" }],
-		"s-920-3000-1204-0": [{ type: "text", sub_type: "message", message: "Energy Beam (Fast)", message_ES: "Ola (Rápido)" }],
+		"s-920-3000-1120-0": [{ type: "text", sub_type: "message", message: "Energy Beam (Slow)", message_ES: "Rayo de Energia (Lento)" }],
+		"s-920-3000-1204-0": [{ type: "text", sub_type: "message", message: "Energy Beam (Fast)", message_ES: "Rayo de Energia (Rápido)" }],
 		// "s-920-3000-1202-0": [{ type: "text", sub_type: "message", message: "Spin or Front | Back Stun", message_ES: "Круговая или Ataque Frontal | Stun atrás" }],
 		"s-920-3000-1206-0": [{ type: "text", sub_type: "message", message: "Orbs", message_ES: "Orbes" }],
 		"s-920-3000-1309-0": [{ type: "text", sub_type: "message", message: "AoE", message_ES: "AoE" }],
-		"s-920-3000-1310-0": [{ type: "text", sub_type: "message", message: "Puddles", message_ES: "Charcos" }],
+		"s-920-3000-1310-0": [{ type: "text", sub_type: "message", message: "Puddles", message_ES: "Charcos (Olas)" }],
 		"s-920-3000-1311-0": "s-920-3000-1310-0",
 		"s-920-3000-1312-0": "s-920-3000-1310-0",
 		"s-920-3000-1313-0": "s-920-3000-1310-0",
 		"s-920-3000-1314-0": "s-920-3000-1310-0",
-		"s-920-3000-1315-0": [{ type: "text", sub_type: "message", message: "Pushback", message_ES: "Empujar atrás (Kaia)" }],
+		"s-920-3000-1315-0": [{ type: "text", sub_type: "message", message: "Pushback", message_ES: "Empujar Atrás (Kaia)" }],
 		"s-920-3000-1317-0": [{ type: "func", func: thirdboss_cage_event, args: [false], delay: 1000 }],
 		"s-920-3000-1318-0": [{ type: "func", func: thirdboss_cage_event, args: [true], delay: 1000 }],
 		"s-920-3000-1400-0": [{ type: "text", sub_type: "message", message: "Clones: Beam", message_ES: "Clones: Olas" }],

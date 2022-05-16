@@ -52,7 +52,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		//"s-3201-1000-103-0": [{ type: "text", class_position:"tank", sub_type: "message", message: "Dodge", message_ES: "Iframe" }],
 		"s-3201-1000-104-0": [{ type: "text", class_position:"tank", sub_type: "message", message: "Stun attack", message_ES: "¡Stun!" }],
 		"s-3201-1000-107-0": [
-			{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque atrás" },
+			{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque Atrás" },
 			{ type: "text", sub_type: "message", delay: 2250, message: "Pull", message_ES: "Pull" },
 			{ type: "spawn", func: "vector", args: [553, 90, 139, 173, 800, 0, 3000] },
 			{ type: "spawn", func: "vector", args: [553, 270, 139, -173, 800, 0, 3000] }
@@ -72,7 +72,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", delay: 1500, message: "Pull", message_ES: "Pull" },
 		],
 		"s-3201-1000-119-0": [
-			{ type: "text", sub_type: "message", delay: 1000, message: "Back + Front", message_ES: "Ataque atras + Adelante" },
+			{ type: "text", sub_type: "message", delay: 1000, message: "Back + Front", message_ES: "Ataque Atras + Adelante" },
 			{ type: "spawn", func: "vector", args: [553, 2, 0, 70, 800, 0, 2500] },
 			{ type: "spawn", func: "vector", args: [553, 2, 0, 110, 800, 0, 2500] },
 			{ type: "spawn", func: "vector", args: [553, 2, 0, 250, 800, 0, 2500] },
@@ -82,8 +82,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		//"s-3201-1000-122-0": [{ type: "text", class_position:"tank", sub_type: "message", message: "Left", message_ES: "Лево" }],
 		"s-3201-1000-124-0": [{ type: "text", class_position:"tank", sub_type: "message", message: "Stun attack", message_ES: "Stun" }],
 		"s-3201-1000-127-0": [
-			{ type: "text", class_position:"dps", sub_type: "message", message: "Back", message_ES: "Ataque atrás" },
-			{ type: "text", class_position:"heal", sub_type: "message", message: "Back", message_ES: "Ataque atrás" },
+			{ type: "text", class_position:"dps", sub_type: "message", message: "Back", message_ES: "Ataque Atrás" },
+			{ type: "text", class_position:"heal", sub_type: "message", message: "Back", message_ES: "Ataque Atrás" },
 			{ type: "spawn", func: "vector", args: [553, 90, 139, 173, 800, 0, 3000] },
 			{ type: "spawn", func: "vector", args: [553, 270, 139, -173, 800, 0, 3000] }
 		],
@@ -98,7 +98,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3201-1000-133-0": [{ type: "text", sub_type: "message", delay: 500, message: "Jump (Fast)", message_ES: "Saltar (Rapido)" }],
 		"s-3201-1000-138-0": [{ type: "text", sub_type: "message", delay: 500, message: "Jump P (Fast)", message_ES: "Saltar P (Rapido)" }],
 		"s-3201-1000-139-0": [
-			{ type: "text", sub_type: "message", message: "Back + Front (Fast)", message_ES: "Ataque atrás + Adelante (Rapido)" },
+			{ type: "text", sub_type: "message", message: "Back + Front (Fast)", message_ES: "Ataque Atrás + Adelante (Rapido)" },
 			{ type: "spawn", func: "vector", args: [553, 2, 0, 70, 800, 0, 2500] },
 			{ type: "spawn", func: "vector", args: [553, 2, 0, 110, 800, 0, 2500] },
 			{ type: "spawn", func: "vector", args: [553, 2, 0, 250, 800, 0, 2500] },
@@ -157,7 +157,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"h-3201-2000-99": [{ type: "func", func: secondboss_start_event }],
 		"h-3201-2000-81": [{ type: "text", sub_type: "message", message: "80%", message_ES: "80%" }],
 		"h-3201-2000-76": [{ type: "text", sub_type: "message", message: "75%", message_ES: "75%" }],
-		"s-3201-2000-108-0": [{ type: "text", sub_type: "message", message: "Back Attack!", message_ES: "¡Ataque atrás!" }],
+		"s-3201-2000-108-0": [{ type: "text", sub_type: "message", message: "Back Attack!", message_ES: "¡Ataque Atrás!" }],
 		"s-3201-2000-150-0": [{ type: "text", sub_type: "message", message: "Phantom", message_ES: "Fantasma" }],
 		"am-3201-320126-32010224": [
 			{ type: "text", sub_type: "alert", delay: 52000, message: "True Debuff in 5 seconds", message_ES: "Debuff Verdadero en 5 segundos" },
@@ -171,8 +171,9 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", message: "Team Up", message_ES: "¡¡¡Reunirse!!!" },
 			{ type: "text", sub_type: "message", delay: 3500, message: "Dodge", message_ES: "Iframe" }
 		],
-		"s-3201-2000-230-0": [{ type: "text", sub_type: "message", message: "AOE", message_ES: "AOE!!" }],
-
+		"s-3201-2000-230-0": [{ type: "text", sub_type: "message", message: "AOE", message_ES: "AOE!!" },
+		{ type: "text", sub_type: "alert", delay: 1190, message: "Iframe", message_ES: "Iframe" }
+		],
 		"s-3201-2000-231-0": [
 			{ type: "text", sub_type: "message", message: "Out Safe", message_ES: "Salir" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 300, 0, 3000] }
