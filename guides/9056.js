@@ -36,10 +36,10 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		// Boss 2
 		"s-456-1002-102-0": [{ type: "text", sub_type: "message", message: "Jump", message_ES: "Saltar" }],
 		"s-456-1002-103-0": [{ type: "text", sub_type: "message", message: "Combo", message_ES: "Combo" }],
-		"s-456-1002-104-0": [{ type: "text", sub_type: "message", message: "Shot (target)", message_ES: "Disparar -> (al objetivo)" }],
-		"s-456-1002-107-0": [{ type: "text", sub_type: "message", message: "Many Pokes", message_ES: "Muchos Ataques" }],
-		"s-456-1002-110-0": [{ type: "text", sub_type: "message", message: "Clap", message_ES: "Ataque adelante" }],
-		"s-456-1002-212-0": [{ type: "text", sub_type: "message", message: "Jump Back", message_ES: "Saltar atrás" }],
+		"s-456-1002-104-0": [{ type: "text", sub_type: "message", message: "Shot (target)", message_ES: "Disparar (objetivo)" }],
+		"s-456-1002-107-0": [{ type: "text", sub_type: "message", message: "Many Pokes", message_ES: "Muchos Golpes" }],
+		"s-456-1002-110-0": [{ type: "text", sub_type: "message", message: "Clap", message_ES: "Aplaudir" }],
+		"s-456-1002-212-0": [{ type: "text", sub_type: "message", message: "Jump Back", message_ES: "Salto atrás" }],
 		"s-456-1002-3110-0": [{ type: "text", sub_type: "message", message: "Breath", message_ES: "Ataque de aliento" }],
 		"s-456-1002-3113-0": [{ type: "text", sub_type: "message", message: "AOE", message_ES: "АОЕ", delay: 4000 }],
 
@@ -49,17 +49,17 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", message: "Cleanse + Regression", message_ES: "Cleanse + Regression", class_position: "mystic" }
 		],
 		"s-456-1003-103-0": [{ type: "text", sub_type: "message", message: "Spin", message_ES: "Girar" }],
-		"s-456-1003-104-0": [{ type: "text", sub_type: "message", message: "Clap", message_ES: "Ataque adelante" }],
-		"s-456-1003-105-0": [{ type: "text", sub_type: "message", message: "Front", message_ES: "Ataque frontal" }],
-		"s-456-1003-105-1": [{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque atrás" }],
+		"s-456-1003-104-0": [{ type: "text", sub_type: "message", message: "Clap", message_ES: "Aplaudir" }],
+		"s-456-1003-105-0": [{ type: "text", sub_type: "message", message: "Front", message_ES: "Ataque Frontal" }],
+		"s-456-1003-105-1": [{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque Atrás" }],
 		"s-456-1003-107-0": [{ type: "text", sub_type: "message", message: "Swipe", message_ES: "Golpe fuerte" }],
 		"s-456-1003-108-0": [{ type: "text", sub_type: "message", message: "Swipe", message_ES: "Golpe fuerte" }],
-		"s-456-1003-109-0": [{ type: "text", sub_type: "message", message: "Breath (target)", message_ES: "Ataque de aliento -> (al objetivo)" }],
-		"s-456-1003-111-0": [{ type: "text", sub_type: "message", message: "Leash (target)", message_ES: "Correa -> (al objetivo)" }],
+		"s-456-1003-109-0": [{ type: "text", sub_type: "message", message: "Breath (target)", message_ES: "Ataque de aliento (objetivo)" }],
+		"s-456-1003-111-0": [{ type: "text", sub_type: "message", message: "Leash (target)", message_ES: "Correa -> (objetivo)" }],
 		"s-456-1003-3104-0": [{ type: "text", sub_type: "message", message: "Cage", message_ES: "Jaula" }], // 456016
 		"s-456-1003-3108-0": [{ type: "text", sub_type: "message", message: "Waves", message_ES: "Olas" }],
 		"qb-456-1003-456015": [{ type: "text", sub_type: "message", message: "AOE", message_ES: "АОЕ" }], // 3103
-		"qb-456-1003-456017": [{ type: "text", sub_type: "message", message: "Give Stun", message_ES: "Stun" }], // 3102
+		"qb-456-1003-456017": [{ type: "text", sub_type: "message", message: "Give Stun", message_ES: "Dar Stun" }], // 3102
 		"dm-0-0-905624": [{ type: "text", sub_type: "alert", message: "Wall Change", message_ES: "Cambio de Pared", delay: 1000 }],
 		"dm-0-0-905625": [{ type: "text", sub_type: "alert", message: "Wall Change", message_ES: "Cambio de Pared", delay: 1000 }],
 		"dm-0-0-905626": [{ type: "text", sub_type: "alert", message: "Wall Change", message_ES: "Cambio de Pared", delay: 1000 }]

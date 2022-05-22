@@ -64,7 +64,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 		"s-759-1003-3105-0": [{ type: "text", sub_type: "message", message: "Circles (Dodge)", message_ES: "Círculos (Iframe)" }],
 		"s-759-1003-3106-0": [{ type: "text", sub_type: "message", message: "Circles (Dodge)", message_ES: "Círculos (Iframe)" }],
-		"s-759-3000-1102-0": [{ type: "text", sub_type: "message", message: "Pull", message_ES: "Jalar" }],
+		"s-759-3000-1102-0": [{ type: "text", sub_type: "message", message: "Pull", message_ES: "Pull" }],
 
 		// Mini-bosses
 		// 1 BOSS

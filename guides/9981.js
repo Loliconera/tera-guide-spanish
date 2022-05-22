@@ -85,7 +85,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-981-1000-1308-0": [{ type: "text", sub_type: "message", message: "OUT", message_ES: "SALIR" }],
 		"s-981-1000-1309-0": [{ type: "text", sub_type: "message", message: "IN", message_ES: "ENTRAR" }],
-		"s-981-1000-1113-0": [{ type: "text", sub_type: "message", message: "Front + AoEs", message_ES: "Ataque frontal | AOE" }],
+		"s-981-1000-1113-0": [{ type: "text", sub_type: "message", message: "Front + AoEs", message_ES: "Ataque Frontal + AOEs" }],
 		"s-981-1000-2401-0": "s-981-1000-1401-0",
 		"s-981-1000-2402-0": "s-981-1000-1402-0",
 		"s-981-1000-2303-0": "s-981-1000-1303-0",
@@ -107,10 +107,10 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", delay: 3000, message: "1" }
 		],
 		"s-981-2000-1106-0": [
-			{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque atrás" },
+			{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque Atrás" },
 			{ type: "spawn", func: "circle", args: [false, 553, 180, 340, 14, 270, 0, 2600] }
 		],
-		"s-981-2000-1108-0": [{ type: "text", sub_type: "message", message: "Front", message_ES: "Ataque frontal" }],
+		"s-981-2000-1108-0": [{ type: "text", sub_type: "message", message: "Front", message_ES: "Ataque Frontal" }],
 		"s-981-2000-1111-0": [{ type: "text", sub_type: "message", message: "360 attack", message_ES: "Ataque Circular" }],
 		"s-981-2000-1134-0": [
 			{ type: "text", sub_type: "message", message: "Combo Attack (Dodge)", message_ES: "Ataque Combo (Iframe)" },
@@ -131,7 +131,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "marker", args: [false, 300, 100, 0, 2000, true, null] },
 			{ type: "spawn", func: "marker", args: [false, 230, 100, 0, 2000, true, null] }
 		],
-		"s-981-2000-1302-0": [{ type: "text", sub_type: "message", message: "Bait", message_ES: "Ataque -> (al jugador)" }],
+		"s-981-2000-1302-0": [{ type: "text", sub_type: "message", message: "Bait", message_ES: "Ataque -> (jugador)" }],
 		"s-981-2000-2501-0": "s-981-2000-1501-0",
 		"s-981-2000-2106-0": "s-981-2000-1106-0",
 		"s-981-2000-2108-0": "s-981-2000-1108-0",
@@ -170,11 +170,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-981-3000-1401-0": [{ type: "text", sub_type: "message", message: "Plague/Regress", message_ES: "Plague/Regress" }],
 		"s-981-3000-1402-0": [{ type: "text", sub_type: "message", message: "Sleep", message_ES: "¡¡Dormir!!" }],
-		"s-981-3000-1701-0": [{ type: "text", sub_type: "message", message: "Back + front", message_ES: "Ataque atrás + Ataque frontal" }],
+		"s-981-3000-1701-0": [{ type: "text", sub_type: "message", message: "Back + front", message_ES: "Ataque Atrás + Frontal" }],
 		//
-		"s-981-3000-1113-0": [{ type: "text", sub_type: "message", message: "Bait", message_ES: "Ataque -> (al jugador)" }],
+		"s-981-3000-1113-0": [{ type: "text", sub_type: "message", message: "Bait", message_ES: "Ataque -> (jugador)" }],
 		"s-981-3000-1151-0": [{ type: "text", sub_type: "message", message: "Attention stun", message_ES: "Stun" }],
-		"s-981-3000-1152-0": [{ type: "text", sub_type: "message", message: "Stun + Back", message_ES: "Stun + Ataque atrás" }],
+		"s-981-3000-1152-0": [{ type: "text", sub_type: "message", message: "Stun + Back", message_ES: "Stun + Ataque Atrás" }],
 		"s-981-3000-1138-0": [{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 250, 0, 6000] }],
 		"s-981-3000-2113-0": "s-981-3000-1113-0",
 		"s-981-3000-2151-0": "s-981-3000-1151-0",
