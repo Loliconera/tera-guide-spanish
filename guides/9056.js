@@ -12,7 +12,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "warning", message: "(1)", speech: false, delay: 300 },
 			{ type: "text", sub_type: "warning", message: "(2)", speech: false, delay: 800 },
 			{ type: "text", sub_type: "warning", message: "(3)", speech: false, delay: 1300 },
-			{ type: "text", sub_type: "message", message: "(4) Dodge!", message_ES: "(4) ¡Iframe!", delay: 1800 }
+			{ type: "text", sub_type: "message", message: "(4) Dodge!", message_ES: "(4) ¡Iframe!", delay: 2300 }
 		],
 		"s-456-1001-107-0": [{ type: "text", sub_type: "alert", message: "Shot", message_ES: "Disparar", speech: false }],
 
@@ -22,7 +22,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "warning", message: "(1)", speech: false, delay: 550 },
 			{ type: "text", sub_type: "warning", message: "(2)", speech: false, delay: 1300 },
 			{ type: "text", sub_type: "warning", message: "(3)", speech: false, delay: 2050 },
-			{ type: "text", sub_type: "message", message: "(4) Dodge!", message_ES: "(4) ¡Iframe!", delay: 2800 }
+			{ type: "text", sub_type: "message", message: "(4) Dodge!", message_ES: "(4) ¡Iframe!", delay: 3200 }
 		],
 		"s-456-414-104-0": "s-456-413-104-0",
 		"s-456-415-104-0": "s-456-413-104-0",
@@ -34,13 +34,13 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 
 		// Boss 2
-		"s-456-1002-102-0": [{ type: "text", sub_type: "message", message: "Jump", message_ES: "Saltar" }],
+		"s-456-1002-102-0": [{ type: "text", sub_type: "message", message: "Jump", message_ES: "Salto" }],
 		"s-456-1002-103-0": [{ type: "text", sub_type: "message", message: "Combo", message_ES: "Combo" }],
-		"s-456-1002-104-0": [{ type: "text", sub_type: "message", message: "Shot (target)", message_ES: "Disparar (objetivo)" }],
+		"s-456-1002-104-0": [{ type: "text", sub_type: "message", message: "Shot (target)", message_ES: "Disparar -> (objetivo)" }],
 		"s-456-1002-107-0": [{ type: "text", sub_type: "message", message: "Many Pokes", message_ES: "Muchos Golpes" }],
 		"s-456-1002-110-0": [{ type: "text", sub_type: "message", message: "Clap", message_ES: "Aplaudir" }],
 		"s-456-1002-212-0": [{ type: "text", sub_type: "message", message: "Jump Back", message_ES: "Salto atrás" }],
-		"s-456-1002-3110-0": [{ type: "text", sub_type: "message", message: "Breath", message_ES: "Ataque de aliento" }],
+		"s-456-1002-3110-0": [{ type: "text", sub_type: "message", message: "Breath", message_ES: "Aliento" }],
 		"s-456-1002-3113-0": [{ type: "text", sub_type: "message", message: "AOE", message_ES: "АОЕ", delay: 4000 }],
 
 		// Boss 3
@@ -52,16 +52,16 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-456-1003-104-0": [{ type: "text", sub_type: "message", message: "Clap", message_ES: "Aplaudir" }],
 		"s-456-1003-105-0": [{ type: "text", sub_type: "message", message: "Front", message_ES: "Ataque Frontal" }],
 		"s-456-1003-105-1": [{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque Atrás" }],
-		"s-456-1003-107-0": [{ type: "text", sub_type: "message", message: "Swipe", message_ES: "Golpe fuerte" }],
-		"s-456-1003-108-0": [{ type: "text", sub_type: "message", message: "Swipe", message_ES: "Golpe fuerte" }],
-		"s-456-1003-109-0": [{ type: "text", sub_type: "message", message: "Breath (target)", message_ES: "Ataque de aliento (objetivo)" }],
+		"s-456-1003-107-0": [{ type: "text", sub_type: "message", message: "Swipe", message_ES: "Golpe Fuerte" }],
+		"s-456-1003-108-0": [{ type: "text", sub_type: "message", message: "Swipe", message_ES: "Golpe Fuerte" }],
+		"s-456-1003-109-0": [{ type: "text", sub_type: "message", message: "Breath (target)", message_ES: "Aliento -> (objetivo)" }],
 		"s-456-1003-111-0": [{ type: "text", sub_type: "message", message: "Leash (target)", message_ES: "Correa -> (objetivo)" }],
 		"s-456-1003-3104-0": [{ type: "text", sub_type: "message", message: "Cage", message_ES: "Jaula" }], // 456016
 		"s-456-1003-3108-0": [{ type: "text", sub_type: "message", message: "Waves", message_ES: "Olas" }],
 		"qb-456-1003-456015": [{ type: "text", sub_type: "message", message: "AOE", message_ES: "АОЕ" }], // 3103
 		"qb-456-1003-456017": [{ type: "text", sub_type: "message", message: "Give Stun", message_ES: "Dar Stun" }], // 3102
-		"dm-0-0-905624": [{ type: "text", sub_type: "alert", message: "Wall Change", message_ES: "Cambio de Pared", delay: 1000 }],
-		"dm-0-0-905625": [{ type: "text", sub_type: "alert", message: "Wall Change", message_ES: "Cambio de Pared", delay: 1000 }],
-		"dm-0-0-905626": [{ type: "text", sub_type: "alert", message: "Wall Change", message_ES: "Cambio de Pared", delay: 1000 }]
+		"dm-0-0-905624": [{ type: "text", sub_type: "alert", message: "Wall Change", message_ES: "Cambiar Pared", delay: 1000 }],
+		"dm-0-0-905625": [{ type: "text", sub_type: "alert", message: "Wall Change", message_ES: "Cambiar Pared", delay: 1000 }],
+		"dm-0-0-905626": [{ type: "text", sub_type: "alert", message: "Wall Change", message_ES: "Cambiar Pared", delay: 1000 }]
 	};
 };
