@@ -24,7 +24,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "despawn_all" }
 		],
 		"s-735-2000-102-0": [
-			{ type: "text", sub_type: "message", message: "Pizza Cutter", message_ES: "Ataque frontal" },
+			{ type: "text", sub_type: "message", message: "Pizza Cutter", message_ES: "Ataque Frontal" },
 			{ type: "spawn", func: "circle", args: [true, 553, 0, 300, 12, 228, 0, 3000] }
 		],
 		"s-735-2000-105-0": [
@@ -32,13 +32,13 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 278, 0, 4000] }
 		],
 		"s-735-2000-108-0": [
-			{ type: "text", sub_type: "message", message: "Back Swipe", message_ES: "Ataque atras" },
+			{ type: "text", sub_type: "message", message: "Back Swipe", message_ES: "Ataque Atras (Repeler)" },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 240, 380, 0, 2000] },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 120, 380, 0, 2000] }
 		],
-		"s-735-2000-301-0": [{ type: "text", sub_type: "message", message: "Throwing Orb", message_ES: "Lanzamiento de Orb" }],
+		"s-735-2000-301-0": [{ type: "text", sub_type: "message", message: "Throwing Orb", message_ES: "Lanzar Bombas" }],
 		"s-735-2000-304-0": [
-			{ type: "text", sub_type: "message", message: "Get Out", message_ES: "Salir" },
+			{ type: "text", sub_type: "message", message: "Get Out", message_ES: "SALIR" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 400, 0, 4000] }
 		],
 		"s-735-2007-201-0": [
