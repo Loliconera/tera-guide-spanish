@@ -1,10 +1,12 @@
-# Tera-Guía
+# Tera-Guía-Español
 
 ## Parche v92.04
 
-### :star: Disponible en TERA Toolbox para el parche 92
+### Proxy Menma's TERA
+**Atención**: Si aún usas el **proxy oficial Menma's TERA**, Por ahora **no soporta actualizaciones automáticas de mods**. Siempre que sea posible, acceda aquí para buscar actualizaciones importantes y descargarlas manualmente. Puede descargar aquí la versión de proxy con soporte de actualizaciones automáticas de mods => (https://github.com/tera-private-toolbox/tera-toolbox)
+
+### :star: Compatible con TERA Toolbox para el parche 92
 * Totalmente compatible con la [versión no oficial](https://github.com/tera-private-toolbox/tera-toolbox) de Tera Toolbox para el parche 92.
-   Instalación automática desde la pestaña **Obtener más Mods**.
 
 ### :information_source: Instalación manual
 El módulo Tera-Guía y [tera-guide-core](https://github.com/hsdn/tera-guide-core) ya son compatibles con este parche.
