@@ -59,14 +59,14 @@ id | Nombre de la dungeon | Idioma
 3042 | Gardan's Trial | Español
 3043 | Harnovog's Trial | Español
 3046 | Rogash's Trial | Español
-3047 | Hall of the Argon Queen (Hard) | Español
+3047 | Hall of the Argon Queen (Difícil) | Español
 3209 | Chaos Ice Throne | Español
 3108 | Cursed Antaroth's Abyss | Español
-3126 | Corrupted Skynest (Hard) | Español
-9920 | Antaroth's Abyss (Hard) | Español
+3126 | Corrupted Skynest (Difícil) | Español
+9920 | Antaroth's Abyss (Difícil) | Español
 3109 | Ice Throne | Español
-3036 | Sky Cruiser (Hard) | Español
-9068 | Shadow Sanguinary (Hard) | Español
+3036 | Sky Cruiser (Difícil) | Español
+9068 | Shadow Sanguinary (Difícil) | Español
 3027 | Forbidden Arena [Hagufna] | Español
 3105 | Fusion Laboratory | Español
 9794 | Thaumetal Refinery | Español
@@ -76,13 +76,14 @@ id | Nombre de la dungeon | Idioma
 --- | --- | ---
 7011 | Shadow of the Gutrends (Guardian) | Español
 7015 | Escape from Balder's Refuge (Guardian) | Español
-9981 | Velik's Sanctuary (Hard) | Español
+9027 | Manaya's Core Beta (Difícil) | Español
+9981 | Velik's Sanctuary (Difícil) | Español
 9044 | Bahaar's Sanctum | Español
-9056 | Timescape (Hard) | Español
-9759 | Forsaken Island (Hard) | Español
-3201 | Gossamer Vault (Hard) | Español
-9920 | Antaroth's Abyss (Hard) | Español
-9982 | Grotto of Lost Souls (Hard) | Español
+9056 | Timescape (Difícil) | Español
+9759 | Forsaken Island (Difícil) | Español
+3201 | Gossamer Vault (Difícil) | Español
+9920 | Antaroth's Abyss (Difícil) | Español
+9982 | Grotto of Lost Souls (Difícil) | Español
 9735 | RK-9 Kennel | Español
 9739 | Red Refuge | Español
 9780 | Velik's Hold (5-Person) | Español
