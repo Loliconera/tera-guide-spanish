@@ -1,8 +1,8 @@
 {
-    "name": "Tera-Guía-ES",
+    "name": "Tera Guía ES",
     "options": {
-        "niceName": "<font color='#ffff00'>Tera-Guía-ES</font>",
-        "guiName": "<font color='#ffff00'>Tera-Guía-ES</font>",
+        "niceName": "<font color='#ffff00'>Tera Guía ES</font>",
+        "guiName": "<font color='#ffff00'><b>Tera Guía ES</b></font>",
         "settingsFile": "config.json",
         "settingsMigrator": "settings_migrator.js",
         "settingsVersion": 1.19
