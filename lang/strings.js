@@ -1,13 +1,13 @@
 "use strict";
 
-// Available strings for additional languages
-// If no language is found, the default language (English) will be displayed
+// Cadenas disponibles para idiomas adicionales
+// Si no se encuentra ningún idioma, se mostrará el idioma predeterminado (inglés).
 module.exports.general = {
 
 	// Español
 	es: {
-		unknowncommand: "Comando desconocido, escriba \"guide help\"",
-		helpheader: "Escriba \"guide help\" para obtener mas informacion",
+		unknowncommand: "Comando desconocido, Para ver todos los comandos escriba <font color='#ffff00'>!guia help</font>",
+		helpheader: "Use el comando <font color='#ffff00'>!guia gui </font> para configurar tu Guía <font color='#00a6ff'>\nGuía en Idioma </font><font color='#00bb2d'>Es</font><font color='#FFFFFF'>pa</font><font color='#FF0000'>ñol</font><font color='#00a6ff'>También disponible en Ingles \nUse el Comando: </font><font color='#ffff00'>!guia en </font><font color='#00ffff'>Para Ingles</font>",
 		helpbody: [
 			["guide, modulo on/off", "PRMSG"],
 			["guide gui, mostrar interfaz GUI", "PRMSG"],

@@ -98,7 +98,7 @@ module.exports = {
 		"en": "Thaumetal Refinery"
 	},		
 	9027: {
-		"es": "Manaya's Core (Difícil) <font color='#ffc800'>BETA</font>",
-		"en": "Manaya's Core (Hard) <font color='#ffc800'>BETA</font>"
+		"es": "Manaya's Core (Difícil)",
+		"en": "Manaya's Core (Hard)"
 	},
 };
