@@ -32,9 +32,9 @@
         "guides/9981.js": "9cbc66e02e3793889e4435dda2b92d81db9e97ac4b9907cd49d9aa321add2090",
         "guides/9982.js": "8a3c0a4fa1774c225edd8a56014f244b18b2d483c34e4da29521d5ae65c4d714",
         "guides/test.js": "860e26c44c999e9348a80f740ea2719b6e212259414a93043d79b60ff3d1a9ac",
-        "index.js": "c1ea66e9aff986e0a1668fda21e48500ddc992d39c3343bf78572f0da922ebb8",
+        "index.js": "813aad409c957d66ea83ba636565ac168db05834bd3c8d5e34c0530e0a978921",
         "lang/dungeons.js": "77f0d93c3ac4fea8208fab137e036a3aae17607112979e5ca603c2129ef3cc47",
-        "lang/strings.js": "828bce7b44f31d9601ea5f840d715ac847500df803c1cb51d5d139886d900180",
+        "lang/strings.js": "381a1d95d4aa6d92d5250fa2d2385017fc2315aa07b5db003da06f103007849c",
         "module.json": "863bdaa840e2d8b9cb8e5743930a464a6cdcaf3b97cb38c5b6d4bfc17ea04cd5",
         "settings_migrator.js": "d8b258a150aac8ee6a169408c617ae2f584df50e825a1a68f1e201659c41d1f2"
     },
