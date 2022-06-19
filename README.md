@@ -33,20 +33,20 @@ Al usar TeraToolbox, todas las dependencias se instalarán automáticamente.
 ## Comandos
 Toolbox(/8) | Descripción del comando
 --- | ---
-**guide** | Módulo on/off
-**guide&nbsp;gui** | Mostrar módulo GUI.
-**guide&nbsp;voice**<br>(defecto: desactivado) | Mensajes de texto a voz (TTS).
-**guide&nbsp;lNotice**<br>(defecto: desactivado) | Enviar mensajes en el canal **Notice** en lugar de mensajes en pantalla.
-**guide&nbsp;gNotice**<br>(defecto: desactivado) | Enviar mensajes en el canal **Party**.
-**guide male~female**<br>(defecto: femenino) | Configure el género de voz de voz TTS (si está disponible).
-**guide&nbsp;`auto`/`en`/`es`**<br>(default: es) | Establecer idioma de la guía.
-**guide&nbsp;`1`~`10`**<br>(defecto: 2) | Configure la velocidad de voz TTS.
-**guide&nbsp;spawnObject**<br>(defecto: activado) | Generación de objetos marcadores.
-**guide&nbsp;stream**<br>(defecto: desactivado) | Modo Streamer (ocultar todos los mensajes y objetos, se reproducirá la voz TTS).
-**guide&nbsp;dungeons** | Lista de todas las dungeons compatibles y sus identificadores.
-**guide&nbsp;verbose&nbsp;`id`**<br>(defecto: activado para todos) | Enviar mensajes para la dungeon especificada por `id`.
-**guide&nbsp;spawnObject&nbsp;`id`**<br>(defecto: activado para todos) | Generación de objetos marcadores para la dungeon especificada por `id`.
-**guide&nbsp;help** | Lista de comandos compatibles.
+**guia** | Módulo on/off
+**guia&nbsp;gui** | Mostrar módulo GUI.
+**guia&nbsp;voice**<br>(defecto: desactivado) | Mensajes de texto a voz (TTS).
+**guia&nbsp;lNotice**<br>(defecto: desactivado) | Enviar mensajes en el canal **Notice** en lugar de mensajes en pantalla.
+**guia&nbsp;gNotice**<br>(defecto: desactivado) | Enviar mensajes en el canal **Party**.
+**guia male~female**<br>(defecto: femenino) | Configure el género de voz de voz TTS (si está disponible).
+**guia&nbsp;`auto`/`en`/`es`**<br>(default: es) | Establecer idioma de la guía.
+**guia&nbsp;`1`~`10`**<br>(defecto: 2) | Configure la velocidad de voz TTS.
+**guia&nbsp;spawnObject**<br>(defecto: activado) | Generación de objetos marcadores.
+**guia&nbsp;stream**<br>(defecto: desactivado) | Modo Streamer (ocultar todos los mensajes y objetos, se reproducirá la voz TTS).
+**guia&nbsp;dungeons** | Lista de todas las dungeons compatibles y sus identificadores.
+**guia&nbsp;verbose&nbsp;`id`**<br>(defecto: activado para todos) | Enviar mensajes para la dungeon especificada por `id`.
+**guia&nbsp;spawnObject&nbsp;`id`**<br>(defecto: activado para todos) | Generación de objetos marcadores para la dungeon especificada por `id`.
+**guia&nbsp;help** | Lista de comandos compatibles.
 
 ## Dungeons Compatibles
 
@@ -104,19 +104,19 @@ id | Nombre de la dungeon | Idioma
     <img src="https://i.imgur.com/M3woYlC.png" alt="drawing" width="435"/>
   
 
-* Puede cambiar el color de los mensajes usando los comandos, para cambiarlo tendra que escribir el parámetro **guide help** para mostrar una lista completa de todos los colores soportados o tambien puede usar la interfaz GUI.   
+* Puede cambiar el color de los mensajes usando los comandos, para cambiarlo tendra que escribir el parámetro **guia help** para mostrar una lista completa de todos los colores soportados o tambien puede usar la interfaz GUI.   
     <img src="https://i.imgur.com/uXc3vdH.png" alt="drawing" width="498"/>
 
 * Cuando ingresa a una mazmorra el modulo le notificará con un mensaje de bienvenida, tambien le notificará que modulos estan activados o desactivados.   
     <img src="https://i.imgur.com/iGBO15l.png" alt="drawing" width="498"/>
 
-* Para desactivar o activar los mensajes de texto a voz TTS, use el comando **guide voice**.   
+* Para desactivar o activar los mensajes de texto a voz TTS, use el comando **guia voice**.   
 
-* Para cambiar el género de la a voz TTS, use el comando **guide male~female**.   
+* Para cambiar el género de la a voz TTS, use el comando **guia male~female**.   
 
 ## Módulo GUI
 
-* En el canal de chat **Toolbox(/8)** escriba el siguiente comando **guide gui** para mostrar una interfaz gráfica de usuario del modulo, puede tambien cambiar las configuraciones básicas.   
+* Escriba el siguiente comando **!guia gui** para mostrar una interfaz gráfica de usuario del modulo, puede tambien cambiar las configuraciones básicas.   
     <img src="https://i.imgur.com/dJWpFRO.png" alt="drawing" width="498"/>
 
 ## Más información
