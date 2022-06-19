@@ -107,8 +107,8 @@ id | Nombre de la dungeon | Idioma
 * Puede cambiar el color de los mensajes usando los comandos, para cambiarlo tendra que escribir el parámetro **guia help** para mostrar una lista completa de todos los colores soportados o tambien puede usar la interfaz GUI.   
     <img src="https://i.imgur.com/uXc3vdH.png" alt="drawing" width="498"/>
 
-* Cuando ingresa a una mazmorra el modulo le notificará con un mensaje de bienvenida, tambien le notificará que modulos estan activados o desactivados.   
-    <img src="https://i.imgur.com/iGBO15l.png" alt="drawing" width="498"/>
+* Cuando ingresa a una dungeon el modulo le notificará con un mensaje de bienvenida, donde tambien le mostrara informacion adicional para el uso de comandos.   
+    <img src="https://i.imgur.com/qxqGi8p.png" alt="drawing" width="498"/>
 
 * Para desactivar o activar los mensajes de texto a voz TTS, use el comando **guia voice**.   
 
