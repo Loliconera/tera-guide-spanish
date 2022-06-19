@@ -117,7 +117,7 @@ id | Nombre de la dungeon | Idioma
 ## Módulo GUI
 
 * Escriba el siguiente comando **!guia gui** para mostrar una interfaz gráfica de usuario del modulo, puede tambien cambiar las configuraciones básicas.   
-    <img src="https://i.imgur.com/dJWpFRO.png" alt="drawing" width="498"/>
+    <img src="https://i.imgur.com/qBsDz00.png" alt="drawing" width="498"/>
 
 ## Más información
 
