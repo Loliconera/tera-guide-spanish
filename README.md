@@ -74,9 +74,9 @@ id | Nombre de la dungeon | Idioma
 ### Parche v92.04 (Menma's TERA)
 id | Nombre de la dungeon | Idioma
 --- | --- | ---
-7011 | Shadow of the Gutrends (Guardian) | Español
-7015 | Escape from Balder's Refuge (Guardian) | Español
-9027 | Manaya's Core Beta (Difícil) | Español
+7011 | Guardian Blightwood | Español
+7015 | Guardian Balder's Refuge | Español
+9027 | Manaya's Core (Difícil) | Español
 9981 | Velik's Sanctuary (Difícil) | Español
 9044 | Bahaar's Sanctum | Español
 9056 | Timescape (Difícil) | Español
