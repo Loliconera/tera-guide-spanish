@@ -10,7 +10,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-427-42701-1106-0": [{ type: "text", sub_type: "message", message_ES: "Viento Frontal", message: "Frontal Wind" }],
 		"s-427-42701-1102-0": [{ type: "text", sub_type: "message", message_ES: "Corte Frontal", message: "Frontal Cut" }],
 		"s-427-42701-1104-0": [{ type: "text", sub_type: "message", message_ES: "Golpe Frontal", message: "Frontal Hit" }],
-		"s-427-42701-1105-0": [{ type: "text", sub_type: "message", message_ES: "Onda AoE", message: "AoE Wave" }],
+		"s-427-42701-1105-0": [{ type: "text", sub_type: "message", message_ES: "Ola AoE", message: "AoE Wave" }],
 		"s-427-42701-1110-0": [{ type: "text", sub_type: "message", message_ES: "Salto + AoE", message: "Jump + AoE" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 400, 0, 3000] }
 		],
@@ -37,7 +37,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-427-42702-1109-0": [{ type: "text", sub_type: "message", message_ES: "Escudo Atrás", message: "Back Shield Hit" }],
 		"s-427-42702-1106-0": [{ type: "text", sub_type: "message", message_ES: "Bomba (Objetivo)", message: "Bomb (Target)" }],
 		"s-427-42702-1117-0": [{ type: "text", sub_type: "message", message_ES: "Stun + AoE", message: "Stun + AoE" }],
-		"s-427-42702-1118-0": [{ type: "text", sub_type: "message", message_ES: "Stun + Onda", message: "Stun + Wave" }],
+		"s-427-42702-1118-0": [{ type: "text", sub_type: "message", message_ES: "Stun + Ola", message: "Stun + Wave" }],
 		"s-427-42702-1112-0": [{ type: "text", sub_type: "message", message_ES: "Salto Atrás", message: "Jump Backwards" }],
 		
 		"dm-0-0-9027004": [{ type: "text", sub_type: "notification", message_ES: "Matar Minions [c=#05a0fa]Azules[/c]", message: "Kill [c=#05a0fa]Blue[/c] Minions" }],
@@ -62,14 +62,14 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [553, 210, -101, 86, 400, 0, 5000] }  
 		],
 		"s-427-2001-1102-0": [{ type: "text", sub_type: "message", message_ES: "Flechas AoE (X)", message: "Arrows AoE (X)" },
-			{ type: "spawn", func: "vector", args: [553, 160, 110, 222, 450, 0, 5000] },
-			{ type: "spawn", func: "vector", args: [553, 290, 110, -132, 450, 0, 5000] },
-			{ type: "spawn", func: "vector", args: [553, 110, 110, 48, 450, 0, 5000] },
-			{ type: "spawn", func: "vector", args: [553, 340, 110, 42, 450, 0, 5000] },	
-			{ type: "spawn", func: "vector", args: [553, 10, 115, -41, 450, 0, 5000] },
-			{ type: "spawn", func: "vector", args: [553, 260, 115, -49, 450, 0, 5000] },
-			{ type: "spawn", func: "vector", args: [553, 80, 115, 131, 450, 0, 5000] },
-			{ type: "spawn", func: "vector", args: [553, 190, 115, -221, 450, 0, 5000] }
+			{ type: "spawn", func: "vector", args: [553, 160, 110, 222, 400, 0, 5000] },
+			{ type: "spawn", func: "vector", args: [553, 290, 110, -132, 400, 0, 5000] },
+			{ type: "spawn", func: "vector", args: [553, 110, 110, 48, 400, 0, 5000] },
+			{ type: "spawn", func: "vector", args: [553, 340, 110, 42, 400, 0, 5000] },	
+			{ type: "spawn", func: "vector", args: [553, 10, 115, -41, 400, 0, 5000] },
+			{ type: "spawn", func: "vector", args: [553, 260, 115, -49, 400, 0, 5000] },
+			{ type: "spawn", func: "vector", args: [553, 80, 115, 131, 400, 0, 5000] },
+			{ type: "spawn", func: "vector", args: [553, 190, 115, -221, 400, 0, 5000] }
 		],
 		"s-427-2001-1105-0": [{ type: "text", sub_type: "message", message_ES: "Flechas AoE (Pequeñas)", message: "Arrows AoE (Small)" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 15, 210, 2000, 4000] }
