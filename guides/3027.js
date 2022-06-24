@@ -82,7 +82,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3027-1000-108-0": [{ type: "text", class_position: "tank", sub_type: "message", message: "Strike (Slow)", message_ES: "Espadazo Frontal (Cuidado)" }], // 101 121 122 -> 108
 		"s-3027-1000-135-0": [{ type: "text", sub_type: "message", message: "Strike (Slow)", message_ES: "Espadazo Frontal (Lento)" }],                         //         104 -> 135 -> 130
 		"s-3027-1000-111-0": [{ type: "text", sub_type: "message", message: "Stun | Strike", message_ES: "Stun | Espadazo" }],                              //         104 -> 111 -> 130
-		"s-3027-1000-112-0": [{ type: "text", sub_type: "message", message: "Back Jump | Strike", message_ES: "Salto hacia atrás | Espadazo" }],                 //     121 102 -> 112 -> 130
+		"s-3027-1000-112-0": [{ type: "text", sub_type: "message", message: "Back Jump | Strike", message_ES: "Salto Atrás | Espadazo" }],                 //     121 102 -> 112 -> 130
 
 		// Salto
 		"s-3027-1000-116-0": [
@@ -102,7 +102,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 
 		// 109 -> 402 -> 130
-		"s-3027-1000-109-0": [{ type: "text", sub_type: "message", message: "Forward Jump", message_ES: "Salto hacia adelante" }],
+		"s-3027-1000-109-0": [{ type: "text", sub_type: "message", message: "Forward Jump", message_ES: "Salto Adelante" }],
 		"s-3027-1000-402-0": [{ type: "text", sub_type: "message", message: "Jump", message_ES: "Salto" }],
 
 		// 136 -> 144 -> 130
@@ -110,8 +110,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3027-1000-144-0": [{ type: "text", sub_type: "message", message: "Strike", message_ES: "Espadazo" }],
 
 		// 134 -> 147
-		"s-3027-1000-134-0": [{ type: "text", sub_type: "message", message: "Turn around | Back", message_ES: "Cuidado | Espadazo hacia atrás" }],
-		"s-3027-1000-134-1": [{ type: "text", sub_type: "message", message: "Back", message_ES: "Espadazo hacia atrás" }],
+		"s-3027-1000-134-0": [{ type: "text", sub_type: "message", message: "Turn around | Back", message_ES: "Cuidado | Espadazo Atrás" }],
+		"s-3027-1000-134-1": [{ type: "text", sub_type: "message", message: "Back", message_ES: "Espadazo Atrás" }],
 		"s-3027-1000-147-0": [{ type: "text", sub_type: "message", message: "Strike", message_ES: "Espadazo" }],
 
 		// 142 -> 143 114 130

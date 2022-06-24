@@ -65,7 +65,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-468-2000-104-0": [{ type: "text", sub_type: "message", message: "Dark Frame", message_ES: "Marco Oscuro" }],
 		"s-468-2000-110-0": [{ type: "text", sub_type: "message", message: "Front Attack", message_ES: "Ataque Frontal" }],
 		"s-468-2000-111-0": [{ type: "text", sub_type: "message", message: "360", message_ES: "360" }], // 114 -> 111
-		"s-468-2000-112-0": [{ type: "text", sub_type: "message", message: "Back Attack", message_ES: "Ataque hacia atrás" }],
+		"s-468-2000-112-0": [{ type: "text", sub_type: "message", message: "Back Attack", message_ES: "Ataque atrás" }],
 		"s-468-2000-117-0": [{ type: "text", sub_type: "message", message: "Laser (Target)", message_ES: "Láser (Objetivo)" }],
 		"s-468-2000-117-2": [{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 600 }],
 		"s-468-2000-118-0": [{ type: "text", sub_type: "message", message: "Laser", message_ES: "Láser" }],
@@ -111,7 +111,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "semicircle", args: [180, 360, 912, 0, 0, 8, 360, 0, 1500] }
 		],
 		"s-468-3000-106-0": [ // 128 -> 106
-			{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque hacia atrás" },
+			{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque atrás" },
 			{ type: "spawn", func: "circle", args: [false, 553, 180, 340, 12, 270, 0, 2600] },
 			{ type: "func", func: () => thirdboss_combo_count++ }
 		],
@@ -133,7 +133,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-468-3000-109-0": "s-468-3000-106-0",
 		//
-		"s-468-3000-110-0": [{ type: "text", sub_type: "message", message: "Back Move", message_ES: "Mover hacia atrás" }],
+		"s-468-3000-110-0": [{ type: "text", sub_type: "message", message: "Back Move", message_ES: "Mover atrás" }],
 		"s-468-3000-111-0": [{ type: "text", sub_type: "message", message: "360 attack", message_ES: "Ataque Giratorio" }],
 		"s-468-3000-114-0": [{ type: "text", sub_type: "message", message: "Pull", message_ES: "Pull" }], // 114 -> 111
 		"s-468-3000-115-0": [{ type: "text", sub_type: "message", message: "Circles", message_ES: "Círculos" }], // 202/205 -> 115

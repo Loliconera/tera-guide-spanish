@@ -1,4 +1,4 @@
-// Corrupted Skynest (Difícil)
+// Corrupted Skynest
 //
 // hecho por michengs / HSDN / ZC
 
@@ -12,6 +12,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 	let timer1 = null;
 	let timer2 = null;
 	let timer3 = null;
+	let timer4 = null;
+	let timer5 = null;
 	let boss_ent = null;
 	let boss_offset = 0;
 	let qbacting = null;
@@ -21,9 +23,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 	const mech_messages = {
 		0: { message: "IN", message_ES: "ENTRAR" },
-		1: { message: "OUT", message_ES: "SALIR" },
-		2: { message: "Left", message_ES: "Izquierda" },
-		3: { message: "Right", message_ES: "Derecha" }
+		1: { message: "OUT", message_ES: "SALIR" }
 	};
 
 	const qbacting_messages = {
@@ -66,6 +66,16 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 		timer1 = dispatch.setTimeout(() => {
 			if (debuff != null) {
+				handlers.text({
+					sub_type: "message",
+					message: "Debuff 20 seconds",
+					message_ES: "Debuff 20 segundos"
+				});
+			}
+		}, 70000);
+
+		timer2 = dispatch.setTimeout(() => {
+			if (debuff != null) {
 				dispatch.setTimeout(() => {
 					handlers.text({
 						sub_type: "alert",
@@ -73,15 +83,26 @@ module.exports = (dispatch, handlers, guide, lang) => {
 						message_ES: (`${debuff_messages[debuff % 2].message_ES}`)
 					});
 				}, 2000);
+
+				handlers.text({
+					sub_type: "message",
+					message: "Debuff 50 seconds",
+					message_ES: "Debuff 50 segundos"
+				});
+			}
+		}, 40000);
+
+		timer3 = dispatch.setTimeout(() => {
+			if (debuff != null) {
 				handlers.text({
 					sub_type: "message",
 					message: "Warning! Debuff 15 seconds",
 					message_ES: "¡Advertencia! Debuff 15 segundos"
 				});
 			}
-		}, dispatch._mod.majorPatchVersion >= 99 ? 40000 : 55000);
+		}, 75000);
 
-		timer2 = dispatch.setTimeout(() => {
+		timer4 = dispatch.setTimeout(() => {
 			if (debuff != null) {
 				handlers.text({
 					sub_type: "message",
@@ -89,9 +110,9 @@ module.exports = (dispatch, handlers, guide, lang) => {
 					message_ES: "¡Advertencia! Debuff 10 segundos"
 				});
 			}
-		}, dispatch._mod.majorPatchVersion >= 99 ? 45000 : 60000);
+		}, 80000);
 
-		timer3 = dispatch.setTimeout(() => {
+		timer5 = dispatch.setTimeout(() => {
 			if (debuff != null) {
 				handlers.text({
 					sub_type: "message",
@@ -99,7 +120,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 					message_ES: "¡Advertencia! Debuff 5 segundos"
 				});
 			}
-		}, dispatch._mod.majorPatchVersion >= 99 ? 50000 : 65000);
+		}, 85000);
 
 		if (blue) {
 			handlers.text({
@@ -125,6 +146,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		dispatch.clearTimeout(timer1);
 		dispatch.clearTimeout(timer2);
 		dispatch.clearTimeout(timer3);
+		dispatch.clearTimeout(timer4);
+		dispatch.clearTimeout(timer5);
 	}
 
 	function skilld_event(skillid, ent) {
@@ -168,28 +191,25 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		// In-Out identification
 		if ([212, 213, 214, 215].includes(skillid)) {
 			boss_ent = ent;
-
 			handlers.event([
-				{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 8, 440, 200, 11000] },
-				{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 4, 840, 200, 11000] }
+				{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 8, 440, 200, 8000] },
+				{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 4, 840, 200, 8000] }
 			]);
 		}
 
-		if ([212, 214].includes(skillid)) { // Fire claw (141,  142)
+		if ([212, 214].includes(skillid)) { // Fire claw (141, 142)
 			boss_offset = 10;
-
 			handlers.event([
-				{ type: "spawn", func: "vector", args: [553, 0, 0, 190, 840, 200, 11000] },
-				{ type: "spawn", func: "vector", args: [553, 0, 0,  10, 840, 200, 11000] }
+				{ type: "spawn", func: "vector", args: [553, 0, 0, 190, 840, 200, 8000] },
+				{ type: "spawn", func: "vector", args: [553, 0, 0, 10, 840, 200, 8000] }
 			]);
 		}
 
-		if ([213, 215].includes(skillid)) { // Ice claw (143,  144)
+		if ([213, 215].includes(skillid)) { // Ice claw (143, 144)
 			boss_offset = -10;
-
 			handlers.event([
-				{ type: "spawn", func: "vector", args: [553, 0, 0, 170, 840, 200, 11000] },
-				{ type: "spawn", func: "vector", args: [553, 0, 0, 350, 840, 200, 11000] }
+				{ type: "spawn", func: "vector", args: [553, 0, 0, 170, 840, 200, 8000] },
+				{ type: "spawn", func: "vector", args: [553, 0, 0, 350, 840, 200, 8000] }
 			]);
 		}
 
@@ -198,8 +218,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 				if (debuff != null) {
 					handlers.text({
 						sub_type: "message",
-						message: (`Ice inside (${qbacting_messages[qbacting].message}) | ${mech_messages[debuff % 2 + 2].message} | ${mech_messages[(qbacting + debuff + 1) % 2].message}`),
-						message_ES: (`Hielo Interno (${qbacting_messages[qbacting].message_ES}) | ${mech_messages[debuff % 2 + 2].message_ES} | ${mech_messages[(qbacting + debuff + 1) % 2].message_ES}`)
+						message: (`Ice inside (${qbacting_messages[qbacting].message}) | ${mech_messages[(qbacting + debuff + 1) % 2].message}`),
+						message_ES: (`Hielo Interno (${qbacting_messages[qbacting].message_ES}) | ${mech_messages[(qbacting + debuff + 1) % 2].message_ES}`)
 					});
 
 					spawn_marker((qbacting + debuff + 1) % 2);
@@ -215,12 +235,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			blue = true;
 			red = false;
 
-			dispatch.setTimeout(() => {
-				blue = false;
-				red = true;
-			}, 6600);
-
-			dispatch.setTimeout(() => red = false, 9400);
+			dispatch.setTimeout(() => blue = false, 6500); //6700
 		}
 
 		if ([212, 215].includes(skillid)) { // Fire inside
@@ -228,8 +243,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 				if (debuff != null) {
 					handlers.text({
 						sub_type: "message",
-						message: (`Fire inside (${qbacting_messages[qbacting].message}) | ${mech_messages[debuff % 2 + 2].message} | ${mech_messages[(qbacting + debuff) % 2].message}`),
-						message_ES: (`Fuego Interno (${qbacting_messages[qbacting].message_ES}) | ${mech_messages[debuff % 2 + 2].message_ES} | ${mech_messages[(qbacting + debuff) % 2].message_ES}`)
+						message: (`Fire inside (${qbacting_messages[qbacting].message}) | ${mech_messages[(qbacting + debuff) % 2].message}`),
+						message_ES: (`Fuego Interno (${qbacting_messages[qbacting].message_ES}) | ${mech_messages[(qbacting + debuff) % 2].message_ES}`)
 					});
 
 					spawn_marker((qbacting + debuff) % 2);
@@ -245,12 +260,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			blue = false;
 			red = true;
 
-			dispatch.setTimeout(() => {
-				blue = true;
-				red = false;
-			}, 6600);
-
-			dispatch.setTimeout(() => blue = false, 9400);
+			dispatch.setTimeout(() => red = false, 6500);
 		}
 
 		if (!debuff_tracker_started) {
@@ -297,7 +307,6 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [912, 0, 0, 135, 500, 0, 2000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 0, 260, 500, 0, 2000] }
 		],
-		"114-0": [{ type: "text", sub_type: "message", message: "Front Fire", message_ES: "Fuego Frontal" }],
 
 		// AOE лед (большой)
 		"104-0": [
@@ -305,7 +314,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 500, 0, 5000] }
 		],
 		// AOE огонь (большой)
-		"105-0": [{ type: "text", sub_type: "message", message: "Fire Bombs", message_ES: "Meteoros de Fuego" },
+		"105-0": [
+			{ type: "text", sub_type: "message", message: "Fire Bombs", message_ES: "Meteoros de Fuego" },
 			{ type: "spawn", func: "circle", args: [false, 553, 135, 500, 10, 270, 0, 3000] },
 			{ type: "spawn", func: "circle", args: [false, 553, 315, 500, 10, 270, 0, 3250] },
 			{ type: "spawn", func: "circle", args: [false, 553, 45, 500, 10, 270, 0, 3500] },
@@ -316,7 +326,10 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 553, 180, 500, 10, 270, 0, 4750] }
 		],
 		// AOE лед (малый)
-		"154-0": [{ type: "text", sub_type: "message", message: "Ice Storm", message_ES: "Tormenta de Hielo" }, { type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 500, 0, 6000] }],
+		"154-0": [
+			{ type: "text", sub_type: "message", message: "Ice Storm", message_ES: "Tormenta de Hielo" },
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 500, 0, 6000] }
+		],
 		// AOE огонь (малый)
 		"155-0": [{ type: "text", sub_type: "message", message: "Fire (Knockdown)", message_ES: "Fuego (Derribo)" },
 			{ type: "text", sub_type: "message", delay: 1200, message: "Dodge", message_ES: "Iframe" }
@@ -326,54 +339,38 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"206-2": [{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 15, 350, 0, 3000] }],
 		"137-0": [{ type: "text", sub_type: "message", message: "Knockdown", message_ES: "¡¡[Rugido]!!" }],
 		"138-0": [{ type: "text", sub_type: "message", message: "AOE", message_ES: "AOE" }],
-		"139-0": [
-			{ type: "text", sub_type: "message", message: "60 degrees (Fire to all)", message_ES: "Temp 60 | Cambiar al Hielo" },
-			{ type: "text", sub_type: "message", delay: 4000, message: "Lower the temp", message_ES: "Bajar la temperatura" }
-		],
-		"140-0": [
-			{ type: "text", sub_type: "message", message: "40 degrees (Ice to all)", message_ES: "Temp 40 | Cambiar al Fuego" },
-			{ type: "text", sub_type: "message", delay: 4000, message: "Raise the temp", message_ES: "Subir la temperatura" }
-		],
+		"139-0": [{ type: "text", sub_type: "message", message: "Fire to all", message_ES: "Cambiar al Fuego" }],
+		"140-0": [{ type: "text", sub_type: "message", message: "Ice to all", message_ES: "Cambiar al Hielo" }],
 
 		"die": [{ type: "func", func: debuff_removed }],
-		"nd-3126-1000": [
+		"nd-3026-1000": [
 			{ type: "stop_timers" },
 			{ type: "despawn_all" }
 		],
-		"s-3126-1000-1118-0": [{ type: "text", sub_type: "message", message: "Jump", message_ES: "Saltar" }],
-		"s-3126-1000-2118-0": [{ type: "text", sub_type: "message", message: "Jump", message_ES: "Saltar" }],
-		"s-3126-1000-1118-1": [{ type: "text", sub_type: "message", message: "Dodge!", message_ES: "Iframe!", delay: 615 }],
-		"s-3126-1000-2118-1": [{ type: "text", sub_type: "message", message: "Dodge!", message_ES: "Iframe!", delay: 625 }],		
-		"s-3126-1000-1212-0": [{ type: "func", func: skilld_event, args: [212] }],
-		"s-3126-1000-1215-0": [{ type: "func", func: skilld_event, args: [215] }],
-		"s-3126-1000-1213-0": [{ type: "func", func: skilld_event, args: [213] }],
-		"s-3126-1000-1214-0": [{ type: "func", func: skilld_event, args: [214] }],
-		"qb-3126-1000-3026005": [{ type: "func", func: skilld_event, args: [3026005] }], // ужас, одинаковые цвета
-		"qb-3126-1000-3026004": [{ type: "func", func: skilld_event, args: [3026004] }], // ярость, разные цвета
-		"qb-3126-1000-3126005": [{ type: "func", func: skilld_event, args: [3126005] }], // ужас, одинаковые цвета
-		"qb-3126-1000-3126004": [{ type: "func", func: skilld_event, args: [3126004] }], // ярость, разные цвета
-		"am-3126-1000-30260001": [{ type: "func", func: skilld_event, args: [30260001] }], // красный
-		"am-3126-1000-30260002": [{ type: "func", func: skilld_event, args: [30260002] }], // синий
-		"am-3126-1000-31260001": [{ type: "func", func: skilld_event, args: [31260001] }], // красный
-		"am-3126-1000-31260002": [{ type: "func", func: skilld_event, args: [31260002] }], // синий
-
-		"s-3126-1000-1107-0": [{ type: "text", sub_type: "message", message: "[Debuff] Farthest", message_ES: "[Debuff] Mas lejano" }],
-		"s-3126-1000-2107-0": [{ type: "text", sub_type: "message", message: "[Debuff] Closest", message_ES: "[Debuff] Mas cercano" }],
-		"am-3126-1000-31260251": [{ type: "text", sub_type: "message", message: "[Debuff] Layer 1", message_ES: "[Debuff] 1 Apilar" }],
-		"am-3126-1000-31260067": [{ type: "text", sub_type: "message", message: "[Debuff] Layer 2", message_ES: "[Debuff] 2 Apilar" }],
-		"am-3126-1000-31260068": [
-			{ type: "text", sub_type: "message", message: "[Debuff] Layer 3", message_ES: "[Debuff] 3 Apilar" },
-			{ type: "text", sub_type: "message", delay: 120000, message: "[Debuff] 2 minutes passed", message_ES: "[Debuff] Han pasado 2 minutos", check_func: () => dispatch._mod.majorPatchVersion >= 99 },
-			{ type: "text", sub_type: "message", delay: 145000, message: "[Debuff] 2.5 minutes passed", message_ES: "[Debuff] Han pasado 2.5 minutos", check_func: () => dispatch._mod.majorPatchVersion < 99 }
-		]
+		"s-3026-1000-1118-0": [{ type: "text", sub_type: "message", message: "Jump", message_ES: "Saltar" }],
+		"s-3026-1000-2118-0": [{ type: "text", sub_type: "message", message: "Jump", message_ES: "Saltar" }],
+		"s-3026-1000-1118-1": [{ type: "text", sub_type: "message", message: "Dodge!", message_ES: "Iframe!", delay: 615 }],
+		"s-3026-1000-2118-1": [{ type: "text", sub_type: "message", message: "Dodge!", message_ES: "Iframe!", delay: 625 }],		
+		"s-3026-1000-1212-0": [{ type: "func", func: skilld_event, args: [212] }],
+		"s-3026-1000-1215-0": [{ type: "func", func: skilld_event, args: [215] }],
+		"s-3026-1000-1213-0": [{ type: "func", func: skilld_event, args: [213] }],
+		"s-3026-1000-1214-0": [{ type: "func", func: skilld_event, args: [214] }],
+		"qb-3026-1000-3026005": [{ type: "func", func: skilld_event, args: [3026005] }], // ужас, одинаковые цвета
+		"qb-3026-1000-3026004": [{ type: "func", func: skilld_event, args: [3026004] }], // ярость, разные цвета
+		"qb-3026-1000-3126005": [{ type: "func", func: skilld_event, args: [3126005] }], // ужас, одинаковые цвета
+		"qb-3026-1000-3126004": [{ type: "func", func: skilld_event, args: [3126004] }], // ярость, разные цвета
+		"am-3026-1000-30260001": [{ type: "func", func: skilld_event, args: [30260001] }], // красный
+		"am-3026-1000-30260002": [{ type: "func", func: skilld_event, args: [30260002] }], // синий
+		"am-3026-1000-31260001": [{ type: "func", func: skilld_event, args: [31260001] }], // красный
+		"am-3026-1000-31260002": [{ type: "func", func: skilld_event, args: [31260002] }] // синий
 	};
 
 	const object = {};
 
 	for (const [key, value] of Object.entries(skills)) {
 		if (key.length === 5) {
-			object[`s-3126-1000-1${key}`] = value;
-			object[`s-3126-1000-2${key}`] = value;
+			object[`s-3026-1000-1${key}`] = value;
+			object[`s-3026-1000-2${key}`] = value;
 		} else {
 			object[key] = value;
 		}

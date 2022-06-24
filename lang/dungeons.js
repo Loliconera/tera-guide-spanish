@@ -1,6 +1,6 @@
 "use strict";
 
-// Available names for additional languages
+// Nombres disponibles para idiomas adicionales
 module.exports = {
 	7011: {
 		"en": "Shadow of the Gutrends (Guardian)",
@@ -100,5 +100,9 @@ module.exports = {
 	9027: {
 		"es": "Manaya's Core (Difícil)",
 		"en": "Manaya's Core (Hard)"
+	},
+	3026: {
+		"en": "Corrupted Skynest",
+		"es": "Corrupted Skynest"
 	},
 };
