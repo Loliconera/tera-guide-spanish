@@ -1,12 +1,12 @@
-# Tera-Guía-Español
+# Tera Guía Español
 
-## Parche v92.04
+## Parche v92.04 y 100.02 (x64)
 
 ### Proxy Menma's TERA
 **Atención**: Si aún usas el **proxy oficial Menma's TERA**, Por ahora **no soporta actualizaciones automáticas de mods**. Siempre que sea posible, acceda aquí para buscar actualizaciones importantes y descargarlas manualmente. Puede descargar aquí la versión de proxy con soporte de actualizaciones automáticas de mods => (https://github.com/tera-private-toolbox/tera-toolbox)
 
-### :star: Compatible con TERA Toolbox para el parche 92
-* Totalmente compatible con la [versión no oficial](https://github.com/tera-private-toolbox/tera-toolbox) de Tera Toolbox para el parche 92.
+### :star: Compatible con TERA Toolbox para el parche 92.04 y 100.02 (x64)
+* Totalmente compatible con la [versión no oficial](https://github.com/tera-private-toolbox/tera-toolbox) de Tera Toolbox para el parche 92 y 100.
 
 ### :information_source: Instalación manual
 El módulo Tera-Guía y [tera-guide-core](https://github.com/hsdn/tera-guide-core) ya son compatibles con este parche.
@@ -25,8 +25,8 @@ Un módulo de guía para TERA traducido al español. Muestra mensajes en la pant
 * [**Portugués (Português & Español)** by Emilia](https://github.com/emilia-s2/Guia-DG-Portugues)
 
 ## Dependencias
-* **library** - https://github.com/tera-private-toolbox/library (v115.02 / v92.04)
-* **tera-guide-core** - https://github.com/hsdn/tera-guide-core (v115.02 / v92.04)
+* **library** - https://github.com/tera-private-toolbox/library (v100.02 / v92.04)
+* **tera-guide-core** - https://github.com/hsdn/tera-guide-core (v100.02 / v92.04)
 
 Al usar TeraToolbox, todas las dependencias se instalarán automáticamente.   
 
@@ -34,7 +34,7 @@ Al usar TeraToolbox, todas las dependencias se instalarán automáticamente.
 Toolbox(/8) | Descripción del comando
 --- | ---
 **guia** | Módulo on/off
-**guia&nbsp;gui** | Mostrar módulo GUI.
+**guia&nbsp;gui** | Mostrar interfaz GUI.
 **guia&nbsp;voice**<br>(defecto: desactivado) | Mensajes de texto a voz (TTS).
 **guia&nbsp;lNotice**<br>(defecto: desactivado) | Enviar mensajes en el canal **Notice** en lugar de mensajes en pantalla.
 **guia&nbsp;gNotice**<br>(defecto: desactivado) | Enviar mensajes en el canal **Party**.
@@ -48,31 +48,32 @@ Toolbox(/8) | Descripción del comando
 **guia&nbsp;spawnObject&nbsp;`id`**<br>(defecto: activado para todos) | Generación de objetos marcadores para la dungeon especificada por `id`.
 **guia&nbsp;help** | Lista de comandos compatibles.
 
-## Dungeons Compatibles
+## Dungeons Soportados
 
-### Parche v115.02
-id | Nombre de la dungeon | Idioma
+### Parche v100.02 (Menma's TERA x64)
+ID | Nombre de la dungeon | Idioma
 --- | --- | ---
-7011 | Shadow of the Gutrends (Guardian) | Español
-7015 | Escape from Balder's Refuge (Guardian) | Español
-3040 | Lumikan's Trial | Español
-3042 | Gardan's Trial | Español
-3043 | Harnovog's Trial | Español
-3046 | Rogash's Trial | Español
-3047 | Hall of the Argon Queen (Difícil) | Español
-3209 | Chaos Ice Throne | Español
-3108 | Cursed Antaroth's Abyss | Español
-3126 | Corrupted Skynest (Difícil) | Español
+7011 | Guardian Blightwood | Español
+7015 | Guardian Balder's Refuge | Español
+9027 | Manaya's Core (Difícil) | Español
+9981 | Velik's Sanctuary (Difícil) | Español
+9044 | Bahaar's Sanctum | Español
+9056 | Timescape (Difícil) | Español
+9759 | Forsaken Island (Difícil) | Español
+3201 | Gossamer Vault (Difícil) | Español
 9920 | Antaroth's Abyss (Difícil) | Español
-3109 | Ice Throne | Español
+9982 | Grotto of Lost Souls (Difícil) | Español
+9735 | RK-9 Kennel | Español
+9739 | Red Refuge | Español
+9780 | Velik's Hold (5-Person) | Español
+9781 | Velik's Sanctuary | Español
+3026 | Corrupted Skynest | Español
+3126 | Corrupted Skynest (Difícil) | Español
 3036 | Sky Cruiser (Difícil) | Español
-9068 | Shadow Sanguinary (Difícil) | Español
 3027 | Forbidden Arena [Hagufna] | Español
-3105 | Fusion Laboratory | Español
-9794 | Thaumetal Refinery | Español
 
 ### Parche v92.04 (Menma's TERA)
-id | Nombre de la dungeon | Idioma
+ID | Nombre de la dungeon | Idioma
 --- | --- | ---
 7011 | Guardian Blightwood | Español
 7015 | Guardian Balder's Refuge | Español
@@ -100,23 +101,23 @@ id | Nombre de la dungeon | Idioma
 * Cuando el parámetro **gNotice** está *activado*, todos los mensajes se enviarán al canal **Party**. (**Mensaje en Chat Party**).   
     <img src="https://i.imgur.com/el8E3oN.png" alt="drawing" width="435"/>
 
-* Cuando el Modo Streamer está *activado* (parámetro **stream**), todos los mensajes de texto se enviarán solamente al canal de chat **Toolbox(/8)**, pero se reproducirán los mensajes de texto a voz TTS. (**Mensaje en Chat Toolbox**).   
+* Cuando el Modo Streamer está *activado* (parámetro **stream**), todos los mensajes de texto se enviarán solamente al canal de chat **Toolbox(/8)**, pero se reproducirán los mensajes de texto a voz TTS. (**Mensajes en Chat Toolbox**).   
     <img src="https://i.imgur.com/M3woYlC.png" alt="drawing" width="435"/>
   
 
-* Puede cambiar el color de los mensajes usando los comandos, para cambiarlo tendra que escribir el parámetro **guia help** para mostrar una lista completa de todos los colores soportados o tambien puede usar la interfaz GUI.   
-    <img src="https://i.imgur.com/uXc3vdH.png" alt="drawing" width="498"/>
+* Puede cambiar el color de los mensajes usando los comandos, para cambiarlo tendra que escribir el parámetro **!guia help** para mostrar una lista completa de todos los colores soportados o tambien puede usar la interfaz GUI.   
+    
 
 * Cuando ingresa a una dungeon el modulo le notificará con un mensaje de bienvenida, donde tambien le mostrara informacion adicional para el uso de comandos.   
     <img src="https://i.imgur.com/qxqGi8p.png" alt="drawing" width="498"/>
 
-* Para desactivar o activar los mensajes de texto a voz TTS, use el comando **guia voice**.   
+* Para desactivar o activar los mensajes de texto a voz TTS, use el comando **!guia voice**.   
 
-* Para cambiar el género de la a voz TTS, use el comando **guia male~female**.   
+* Para cambiar el género de la a voz TTS, use el comando **!guia male~female**.   
 
-## Módulo GUI
+## Interfaz GUI
 
-* Escriba el siguiente comando **!guia gui** para mostrar una interfaz gráfica de usuario del modulo, puede tambien cambiar las configuraciones básicas.   
+* Escriba el siguiente comando **!guia gui** para mostrar una interfaz gráfica del modulo, puede tambien cambiar las configuraciones básicas.   
     <img src="https://i.imgur.com/qBsDz00.png" alt="drawing" width="498"/>
 
 ## Más información
