@@ -35,8 +35,8 @@
         "guides/test.js": "860e26c44c999e9348a80f740ea2719b6e212259414a93043d79b60ff3d1a9ac",
         "index.js": "813aad409c957d66ea83ba636565ac168db05834bd3c8d5e34c0530e0a978921",
         "lang/dungeons.js": "e6642f38edb46618ecbcb5979849ed3708e752d6774a41b8a4da802c32a5ba9e",
-        "lang/strings.js": "68d851eda14012284cdca67dda66e9c437a2d99ec86c4d845f4d851abb405633",
-        "module.json": "e90a049b961f9954d767fc722e03dc2d77f68ab5a3c0d4e76de515a63a33ffb4",
+        "lang/strings.js": "f40f73fff2487a2bf09268a38d473e146d73dc0b44a5fb9408cc575692f5d820",
+        "module.json": "50635e4879597efcb6cf230c966d2f1bdb141e8b3de01b264831381271e8ce7c",
         "settings_migrator.js": "d8b258a150aac8ee6a169408c617ae2f584df50e825a1a68f1e201659c41d1f2"
     },
     "defs": {

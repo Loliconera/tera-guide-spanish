@@ -7,7 +7,7 @@ module.exports.general = {
 	// Español
 	es: {
 		unknowncommand: "Comando desconocido, Para ver todos los comandos escriba <font color='#ffff00'>!guia help</font>",
-		helpheader: "Use el comando <font color='#ffff00'>!guia gui </font> para configurar tu Guía <font color='#00a6ff'>\nGuía en idioma </font><font color='#00bb2d'>ES</font><font color='#FFFFFF'>PA</font><font color='#FF0000'>ÑOL</font><font color='#00a6ff'>, También disponible en idioma Inglés \nUse el comando </font><font color='#ffff00'>!guia en </font><font color='#00a6ff'>para cambiar al idioma</font> ‍‍‍‍<font color='#00ffff'>Inglés</font>",
+		helpheader: "Use el comando <font color='#ffff00'>!guia gui </font> para configurar tu Guía <font color='#00a6ff'>\nGuía en idioma </font><font color='#00bb2d'>ES</font><font color='#FFFFFF'>PA</font><font color='#FF0000'>ÑOL</font><font color='#00a6ff'>, También disponible en idioma Inglés \nUse el comando </font><font color='#ffff00'>!guia en </font><font color='#00a6ff'>para cambiar al idioma</font> <font color='#00ffff'>Inglés</font>",
 		helpbody: [
 			["guia, modulo on/off", "PRMSG"],
 			["guia gui, mostrar interfaz GUI", "PRMSG"],

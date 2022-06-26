@@ -1,7 +1,7 @@
 {
     "name": "Tera Guía ES",
     "options": {
-        "niceName": "<font color='#ffff00'>Tera Guía ES</font>",
+        "niceName": "Tera Guía ES",
         "guiName": "<font color='#ffff00'><b>Tera Guía ES</b></font> ‍‍‍‍ ",
         "settingsFile": "config.json",
         "settingsMigrator": "settings_migrator.js",
