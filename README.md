@@ -96,7 +96,7 @@ ID | Nombre de la dungeon | Idioma
     <img src="https://i.imgur.com/FFZSr5f.png" alt="drawing" width="435"/>
     
 * En la pantalla (en la parte superior), si el parámetro **lNotice** está *desactivado*, todos los mensajes se mostraran en la parte superior de la pantalla. (**Mensajes en Pantalla**).   
-    <img src="hhttps://i.imgur.com/e4s2iVE.png" alt="drawing" width="435"/>
+    <img src="https://i.imgur.com/e4s2iVE.png" alt="drawing" width="435"/>
 
 * Cuando el parámetro **gNotice** está *activado*, todos los mensajes se enviarán al canal **Party**. (**Mensaje en Chat Party**).   
     <img src="https://i.imgur.com/5S4J5S0.png" alt="drawing" width="435"/>
@@ -113,7 +113,7 @@ ID | Nombre de la dungeon | Idioma
 
 * Para desactivar o activar los mensajes de texto a voz TTS, use el comando **!guia voice**.   
 
-* Para cambiar el género de la a voz TTS, use el comando **!guia male~female**.   
+* Para cambiar el género de la a voz TTS, use el comando **!guia `male`/`female`**.   
 
 * Para cambiar a otro idioma, use el comando **!guia `auto`/`en`/`es`**.   
 
