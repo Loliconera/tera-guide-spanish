@@ -105,8 +105,8 @@ ID | Nombre de la dungeon | Idioma
     <img src="https://i.imgur.com/M3woYlC.png" alt="drawing" width="435"/>
   
 
-* Puede cambiar el color de los mensajes usando los comandos, para cambiarlo tendra que escribir el parámetro **!guia help** para mostrar una lista completa de todos los colores soportados o tambien puede usar la interfaz GUI.   
-    
+* Escriba el comando **!guia help** para mostrar una lista completa de todos los comandos soportados y una lista de colores de textos en pantalla.   
+    <img src="https://i.imgur.com/E35hNsV.png" alt="drawing" width="435"/>    
 
 * Cuando ingresa a una dungeon el modulo le notificará con un mensaje de bienvenida, donde tambien le mostrara informacion adicional para el uso de comandos.   
     <img src="https://i.imgur.com/qxqGi8p.png" alt="drawing" width="498"/>
@@ -117,7 +117,7 @@ ID | Nombre de la dungeon | Idioma
 
 ## Interfaz GUI
 
-* Escriba el siguiente comando **!guia gui** para mostrar una interfaz gráfica del modulo, puede tambien cambiar las configuraciones básicas.   
+* Escriba el comando **!guia gui** para mostrar una interfaz gráfica del modulo, puede tambien cambiar las configuraciones básicas.   
     <img src="https://i.imgur.com/qBsDz00.png" alt="drawing" width="498"/>
 
 ## Más información
