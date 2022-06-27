@@ -10,7 +10,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-427-42701-1106-0": [{ type: "text", sub_type: "message", message_ES: "Viento Frontal", message: "Frontal Wind" }],
 		"s-427-42701-1102-0": [{ type: "text", sub_type: "message", message_ES: "Corte Frontal", message: "Frontal Cut" }],
 		"s-427-42701-1104-0": [{ type: "text", sub_type: "message", message_ES: "Golpe Frontal", message: "Frontal Hit" }],
-		"s-427-42701-1105-0": [{ type: "text", sub_type: "message", message_ES: "Ola AoE", message: "AoE Wave" }],
+		"s-427-42701-1105-0": [{ type: "text", sub_type: "message", message_ES: "AoE", message: "Wave" }],
 		"s-427-42701-1110-0": [{ type: "text", sub_type: "message", message_ES: "Salto + AoE", message: "Jump + AoE" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 400, 0, 3000] }
 		],
@@ -20,6 +20,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-427-42701-1112-0": [{ type: "text", sub_type: "message", message_ES: "AoE Frontal (Grande)", message: "Frontal AoE (Big)" }],
 		"s-427-42701-1215-0": [{ type: "text", sub_type: "message", message_ES: "AoE", message: "AoE" }],
 		"s-427-42701-1214-0": [{ type: "text", sub_type: "message", message_ES: "Corte Frontal + AoE", message: "Frontal Cut + AoE" }],
+		"s-427-42701-1204-0": [{ type: "text", sub_type: "message", message_ES: "Objetivo", message: "Target" }],
 		"s-427-42701-1121-0": [{ type: "text", sub_type: "message", message_ES: "Salto + Corte Frontal", message: "Jump + Frontal Cut" }],
 		"s-427-42701-2106-0": "s-427-42701-1106-0",
 		"s-427-42701-2102-0": "s-427-42701-1102-0",
@@ -31,13 +32,18 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-427-42701-2215-0": "s-427-42701-1215-0",
 		"s-427-42701-2214-0": "s-427-42701-1214-0",
 		"s-427-42701-2121-0": "s-427-42701-1121-0",
+		"s-427-42701-2204-0": "s-427-42701-1204-0",
 
 		// 2 BOSS
 		"s-427-42702-1104-0": [{ type: "text", sub_type: "message", message_ES: "Láser", message: "Laser" }],
 		"s-427-42702-1109-0": [{ type: "text", sub_type: "message", message_ES: "Escudo Atrás", message: "Back Shield Hit" }],
 		"s-427-42702-1106-0": [{ type: "text", sub_type: "message", message_ES: "Bomba (Objetivo)", message: "Bomb (Target)" }],
 		"s-427-42702-1117-0": [{ type: "text", sub_type: "message", message_ES: "Stun + AoE", message: "Stun + AoE" }],
-		"s-427-42702-1118-0": [{ type: "text", sub_type: "message", message_ES: "Stun + Ola", message: "Stun + Wave" }],
+		"s-427-42702-1118-0": [{ type: "text", sub_type: "message", message_ES: "Stun + Onda", message: "Stun + Wave" },
+			{ type: "text", sub_type: "message", delay: 4600, message_ES: "Iframe", message: "Iframe!"},
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 400, 3000, 3000] },
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 16, 240, 3000, 3000] }
+		],
 		"s-427-42702-1112-0": [{ type: "text", sub_type: "message", message_ES: "Salto Atrás", message: "Jump Backwards" }],
 		
 		"dm-0-0-9027004": [{ type: "text", sub_type: "notification", message_ES: "Matar Minions [c=#05a0fa]Azules[/c]", message: "Kill [c=#05a0fa]Blue[/c] Minions" }],
@@ -92,7 +98,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-427-2007-1102-0": [{ type: "text", sub_type: "message", message_ES: "Helicóptero", message: "Helicopter" }],
 		"s-427-2007-1113-0": [{ type: "text", sub_type: "message", message_ES: "Mano Izquierda Ataque ", message: "Left Hand Attack" }],	
 		"s-427-2007-1105-0": [{ type: "text", sub_type: "message", message_ES: "Mano Derecha Ataque ", message: "Right Hand Attack" }],
-		"s-427-2007-1112-0": [{ type: "text", sub_type: "message", essage_ES: "Debuff Dona", message: "Donut Debuff" },
+		"s-427-2007-1112-0": [{ type: "text", sub_type: "message", message_ES: "Debuff Dona", message: "Donut Debuff" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 330, 0, 12000] },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 16, 185, 0, 9000] }
 		],
@@ -101,7 +107,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-427-2007-1115-0": [{ type: "text", sub_type: "message", message_ES: "Ataque de Cola", message: "Tail Attack" }],	
 		"s-427-2007-1111-0": [{ type: "text", sub_type: "message", message_ES: "Ataque de Cola Frontal", message: "Frontal Tail Attack" }],	
 		"s-427-2007-1109-0": [{ type: "text", sub_type: "message", message_ES: "AoE Objetivo", message: "AoE Target" }],
-		"s-427-2007-1107-0": [{ type: "text", sub_type: "message", message_ES: "Ataque Láser", message: "Laser Attack" }],
+		"s-427-2007-1107-0": [{ type: "text", sub_type: "message", message_ES: "Ataque Láser", message: "Laser Attack" },
+			{ type: "spawn", func: "vector", args: [912, 360, 975, 180, 950, 0, 2500] },
+			{ type: "spawn", func: "vector", args: [912, 370, 995, 180, 950, 0, 2500] },
+			{ type: "spawn", func: "vector", args: [912, 350, 995, 180, 950, 0, 2500] }
+		],
 		"s-427-2007-1106-0": [{ type: "text", sub_type: "message", message_ES: "Bomba Objetivo", message: "Target Bomb" }],
 		"s-427-2007-1204-0": [{ type: "text", sub_type: "message", message_ES: "AoE Grande (Salir)", message: "Big AoE (Run)" }],
 		"qb-427-2007-427050": [
