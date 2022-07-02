@@ -53,6 +53,7 @@ Toolbox(/8) | Descripción del comando
 ### Parche v92.04 / v100.02 (Menma's TERA x64)
 ID | Nombre de la dungeon | Idioma
 --- | --- | ---
+3020 | Sea of Honor | Español
 7011 | Guardian Blightwood | Español
 7015 | Guardian Balder's Refuge | Español
 9027 | Manaya's Core (Difícil) | Español
@@ -69,6 +70,8 @@ ID | Nombre de la dungeon | Idioma
 9781 | Velik's Sanctuary | Español
 3026 | Corrupted Skynest | Español
 3126 | Corrupted Skynest (Difícil) | Español
+9770 | Ruinous Manor (Normal)| Español
+9970 | Ruinous Manor (Difícil) | Español
 3036 | Sky Cruiser (Difícil) | Español
 3027 | Forbidden Arena [Hagufna] | Español
 

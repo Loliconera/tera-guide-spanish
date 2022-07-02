@@ -1,7 +1,7 @@
 {
     "files": {
         "LICENSE": "7fbe35da1c4792b039cd14af60048ea6813b743bd6e05ecef7a68023b50f5a43",
-        "README.md": "a0b759d47e92266af09cf31598902df1adf44e93bbe93182d4d7fa3eb42a1513",
+        "README.md": "9f866f13b70d4ecdea498e910d3a071b97a383c8c8b63b0da663ad57ddf23e08",
         "guides/3020.js": "ffc8d55b1deec2d3251a735f94059145519e948332a2ab5a31da7f9cb4c6391a",
         "guides/3026.js": "74cf4cbca6d0e8627ad051cc812597d28b8fc5a5ad1bffad479d0425e98f1da9",
         "guides/3027.js": "1e1a9c2209981708f6ad26124a9fe254a441302c59257506b08d6072cca5fc73",
@@ -27,15 +27,17 @@
         "guides/9735.js": "032075b96eb41fc27b3a98c9a2e9ebc9518a8a2521cd855ffa8534a63906b7ba",
         "guides/9739.js": "61339a625db633d678e2d050e36aa5d55577140c294bcbc6e0e2dcf70f9e928f",
         "guides/9759.js": "782f0604179097f0877252e349cb58c509966c9d3bc0fc06fc18f34b8101d12f",
+        "guides/9770.js": "8591d5fe6b12c0da3dff4162849ca44a576ee63437d140435ee9f5394fba369d",
         "guides/9780.js": "f44e3f98d9ef9d895f9f1f24b294dce0f3f0cd07657e365a4426b8b8480019fa",
         "guides/9781.js": "e497583a86e9c70ab7bc914d77891a9cafc8b67c074916a814cf2a381720470f",
         "guides/9794.js": "1cc7b4345c100acfb829d092e68efb0b5ad75ce7f88c0f506d98dd74fd3ddedd",
         "guides/9920.js": "02f1bc533c61a1949bed124a24806c0c6c7d2a32ec042ac801deccb659e4ff31",
+        "guides/9970.js": "404c5c1bddb0336b5349cb8e431b5f8a809197159d5105f7a70b7647aa39a4e3",
         "guides/9981.js": "9cbc66e02e3793889e4435dda2b92d81db9e97ac4b9907cd49d9aa321add2090",
         "guides/9982.js": "8a3c0a4fa1774c225edd8a56014f244b18b2d483c34e4da29521d5ae65c4d714",
         "guides/test.js": "860e26c44c999e9348a80f740ea2719b6e212259414a93043d79b60ff3d1a9ac",
         "index.js": "813aad409c957d66ea83ba636565ac168db05834bd3c8d5e34c0530e0a978921",
-        "lang/dungeons.js": "4d1cdf27900575279082dd7050b5b91dd36e7bbebc2c9ddf74190025559a4ae9",
+        "lang/dungeons.js": "4b8faa4974f666275f8cc2c21ac87da941b385a9a4cafd9f43c99a37e85d68d0",
         "lang/strings.js": "f40f73fff2487a2bf09268a38d473e146d73dc0b44a5fb9408cc575692f5d820",
         "module.json": "e23cf4d4a4327f1d18fa175086d7a2214b91dc5fdb679226428a5711d7bd94aa",
         "settings_migrator.js": "d8b258a150aac8ee6a169408c617ae2f584df50e825a1a68f1e201659c41d1f2"
