@@ -105,4 +105,8 @@ module.exports = {
 		"en": "Corrupted Skynest",
 		"es": "Corrupted Skynest"
 	},
+	3020: {
+		"es": "Sea of Honor",
+		"en": "Sea of Honor"
+	},
 };
