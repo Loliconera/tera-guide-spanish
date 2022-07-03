@@ -140,6 +140,22 @@ module.exports = function MigrateSettings(from_ver, to_ver, settings) {
 					"guides/9982.js"
 				]);
 				break;
+				
+    		case 1.20: // p115
+                remove([
+                    "guides/3042.js",
+                    "guides/3047.js",
+                    "guides/3043.js",
+                    "guides/3040.js",
+                    "guides/3046.js",
+                    "guides/3105.js",
+                    "guides/3108.js",
+                    "guides/3109.js",
+                    "guides/3209.js",                
+                    "guides/9068.js"
+                    
+                ]);
+                break;				
 		}
 
 		for (const option in oldsettings) {
