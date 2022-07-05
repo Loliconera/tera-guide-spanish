@@ -1,4 +1,4 @@
-# Tera Guía Español
+# Tera Guía Español [Descargar](https://github.com/Loliconera/translate-chat-spanish/archive/refs/heads/master.zip)
 
 ## Parche v92.04 y 100.02 (x64)
 
