@@ -1,4 +1,4 @@
-<a href="https://github.com/Loliconera/translate-chat-spanish/archive/refs/heads/master.zip" target="_blank"><button><SPAN title="Descargar Guía"><img src="https://i.imgur.com/FbLGYKv.png" width="140" /></button></a>
+<a href="https://github.com/Loliconera/translate-chat-spanish/archive/refs/heads/master.zip" target="_blank"><button><span title="Descargar Guía"><img src="https://i.imgur.com/zcjbq8o.png" width="140" /></button></a>
 
 # Tera Guía Español
 
