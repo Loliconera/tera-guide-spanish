@@ -10,7 +10,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-427-42701-1106-0": [{ type: "text", sub_type: "message", message_ES: "Viento Frontal", message: "Frontal Wind" }],
 		"s-427-42701-1102-0": [{ type: "text", sub_type: "message", message_ES: "Corte Frontal", message: "Frontal Cut" }],
 		"s-427-42701-1104-0": [{ type: "text", sub_type: "message", message_ES: "Golpe Frontal", message: "Frontal Hit" }],
-		"s-427-42701-1105-0": [{ type: "text", sub_type: "message", message_ES: "AoE", message: "Wave" }],
+		"s-427-42701-1105-0": [{ type: "text", sub_type: "message", message_ES: "AoE", message: "AoE" }],
 		"s-427-42701-1110-0": [{ type: "text", sub_type: "message", message_ES: "Salto + AoE", message: "Jump + AoE" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 400, 0, 3000] }
 		],
@@ -39,7 +39,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-427-42702-1109-0": [{ type: "text", sub_type: "message", message_ES: "Escudo Atrás", message: "Back Shield Hit" }],
 		"s-427-42702-1106-0": [{ type: "text", sub_type: "message", message_ES: "Bomba (Objetivo)", message: "Bomb (Target)" }],
 		"s-427-42702-1117-0": [{ type: "text", sub_type: "message", message_ES: "Stun + AoE", message: "Stun + AoE" }],
-		"s-427-42702-1118-0": [{ type: "text", sub_type: "message", message_ES: "Stun + Onda", message: "Stun + Wave" },
+		"s-427-42702-1118-0": [{ type: "text", sub_type: "message", message_ES: "Stun + Ola", message: "Stun + Wave" },
 			{ type: "text", sub_type: "message", delay: 4600, message_ES: "Iframe", message: "Iframe!"},
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 400, 3000, 3000] },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 16, 240, 3000, 3000] }

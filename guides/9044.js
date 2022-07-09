@@ -14,7 +14,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [553, 270, 50, 0, 500, 0, 6000] },
 			{ type: "spawn", func: "vector", args: [553, 90, 50, 180, 500, 0, 6000] },
 			{ type: "spawn", func: "vector", args: [553, 270, 50, 180, 500, 0, 6000] },
-			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 6, 400, 0, 6000] },
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 6, 400, 0, 6000] },
 			{ type: "text", sub_type: "alert", delay: 60000, message: "Waves soon...", message_ES: "Olas pronto..." }
 		]);
 	}
@@ -63,7 +63,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-444-1000-1131-0": [
 			{ type: "text", sub_type: "message", message: "Front | Left Scratch", message_ES: "Martillazo Frontal | Arrastre Izquierdo" },
-			{ type: "text", sub_type: "message", delay: 1350, message: "Dodge", message_ES: "Iframe" },
+			{ type: "text", sub_type: "message", delay: 1200, message: "Dodge", message_ES: "Iframe" },
 			{ type: "spawn", func: "circle", args: [false, 553, 358, 340, 6, 630, 100, 2000] },
 			{ type: "spawn", func: "vector", args: [553, 90, 115, 186, 800, 0, 3500] },
 			{ type: "spawn", func: "vector", args: [553, 90, 115, 6, 300, 0, 3500] },
@@ -74,9 +74,9 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", message: "Hammer Back", message_ES: "Martillazo atrás" },
 			{ type: "spawn", func: "circle", args: [false, 553, 185, 500, 8, 490, 100, 2000] }
 		],
-		"s-444-1000-1138-0": [{ type: "text", sub_type: "message", delay: 1100, message: "Dodge", message_ES: "Iframe" }], // Knockup (Bait)
+		"s-444-1000-1138-0": [{ type: "text", sub_type: "message", delay: 900, message: "Dodge", message_ES: "Iframe" }], // Knockup (Bait)
 		"s-444-1000-1139-0": [
-			{ type: "text", sub_type: "message", delay: 600, message: "Dodge!", message_ES: "Iframe!" },
+			{ type: "text", sub_type: "message", delay: 550, message: "Dodge!", message_ES: "Iframe!" },
 			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 20, 160, 0, 2000] },
 			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 12, 220, 0, 2000] },
 			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 10, 300, 0, 2000] },
@@ -138,7 +138,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 553, 185, 500, 8, 490, 1500, 2000] }
 		],
 		"s-444-2000-1112-0": [
-			{ type: "text", sub_type: "message", delay: 1240, message: "Perfect Defense", message_ES: "Defensa Perfecta" },
+			{ type: "text", sub_type: "message", delay: 0, message: "Perfect Defense (fast)", message_ES: "Defensa Perfecta (Rápida)" },
+			{ type: "text", sub_type: "message", delay: 1200, message: "Block", message_ES: "Bloquear" },
 			{ type: "spawn", func: "circle", args: [false, 553, 356, 220, 12, 210, 100, 3000] }
 		],
 		"s-444-2000-1113-0": [{ type: "text", sub_type: "message", message: "Throw (Bait)", message_ES: "Lanzar Martillo > (al jugador)" }],
@@ -194,7 +195,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-444-2000-1125-0": [
 			{ type: "text", sub_type: "message", message: "Front | Right Scratch", message_ES: "Martillazo Frontal | Arrastre Derecho" },
-			{ type: "text", sub_type: "message", delay: 1650, message: "Dodge", message_ES: "Iframe" },
+			{ type: "text", sub_type: "message", delay: 1750, message: "Dodge", message_ES: "Iframe" },
 			{ type: "spawn", func: "circle", args: [false, 553, 356, 400, 8, 350, 100, 2000] },
 			{ type: "spawn", func: "vector", args: [553, 60, 290, 175, 800, 0, 3500] },
 			{ type: "spawn", func: "vector", args: [553, 60, 290, -5, 300, 0, 3500] },
@@ -203,7 +204,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-444-2000-1131-0": [
 			{ type: "text", sub_type: "message", message: "Front | Left Scratch", message_ES: "Martillazo Frontal | Arrastre Izquierdo" },
-			{ type: "text", sub_type: "message", delay: 1350, message: "Dodge", message_ES: "Iframe" },
+			{ type: "text", sub_type: "message", delay: 1250, message: "Dodge", message_ES: "Iframe" },
 			{ type: "spawn", func: "circle", args: [false, 553, 358, 340, 6, 630, 100, 2000] },
 			{ type: "spawn", func: "vector", args: [553, 90, 115, 186, 800, 0, 3500] },
 			{ type: "spawn", func: "vector", args: [553, 90, 115, 6, 300, 0, 3500] },
@@ -211,15 +212,16 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [553, 270, 250, 186, 800, 0, 3500] }
 		],
 		"s-444-2000-1135-0": [
-			{ type: "text", sub_type: "message", delay: 200, message: "Perfect Defense", message_ES: "Defensa Perfecta" },
+			{ type: "text", sub_type: "message", delay: 0, message: "Perfect Defense", message_ES: "Defensa Perfecta" },
+			{ type: "text", sub_type: "message", delay: 800, message: "Block", message_ES: "Bloquear" },
 			{ type: "spawn", func: "circle", args: [false, 553, 356, 220, 12, 210, 100, 3000] }
 		],
 		"s-444-2000-1137-0": [
 			{ type: "text", sub_type: "message", message: "Hammer back", message_ES: "Martillazo atrás" },
 			{ type: "spawn", func: "circle", args: [false, 553, 185, 500, 8, 490, 100, 2000] }
 		],
-		"s-444-2000-1138-0": [{ type: "text", sub_type: "message", delay: 1100, message: "Dodge", message_ES: "Iframe" }], // Knockup (Bait)
-		"s-444-2000-1139-0": [{ type: "text", sub_type: "message", message: "Dodge!", message_ES: "Iframe!" }],
+		"s-444-2000-1138-0": [{ type: "text", sub_type: "message", delay: 900, message: "Dodge", message_ES: "Iframe" }], // Knockup (Bait)
+		"s-444-2000-1139-0": [{ type: "text", sub_type: "message", message: "Dodge!", message_ES: "Iframe", delay: 200 }],
 		"s-444-2000-1140-0": [
 			{ type: "text", sub_type: "message", message: "Waves (Right)", message_ES: "Olas (Derecha)" },
 			{ type: "func", func: waves_event },
@@ -262,13 +264,13 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-444-2000-2108-0": "s-444-2000-1108-0",
 		"s-444-2000-2111-0": "s-444-2000-1111-0",
 		"s-444-2000-2112-0": [
-			{ type: "text", sub_type: "message", delay: 2000, message: "Perfect Defense", message_ES: "Defensa Perfecta" },
-			{ type: "text", sub_type: "message", delay: 2700, message: "x2" },
+			{ type: "text", sub_type: "message", delay: 1000, message: "Perfect Defense x2 (slow)", message_ES: "Defensa Perfecta x2 (Lenta)" },
+			{ type: "text", sub_type: "message", delay: 2400, message: "Block", message_ES: "Bloquear" },
 			{ type: "spawn", func: "circle", args: [false, 553, 356, 220, 12, 210, 100, 4000] }
 		],
 		"s-444-2000-2113-0": "s-444-2000-1113-0",
 		"s-444-2000-2114-0": "s-444-2000-1114-0",
-		"s-444-2000-2115-0": [{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe" }], // Knockup
+		"s-444-2000-2115-0": [{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 100 }], // Knockup
 		"s-444-2000-2116-0": "s-444-2000-1116-0",
 		"s-444-2000-2116-1": "s-444-2000-1116-1",
 		"s-444-2000-2117-0": "s-444-2000-1117-0",
@@ -282,12 +284,12 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-444-2000-2125-0": "s-444-2000-1125-0",
 		"s-444-2000-2131-0": "s-444-2000-1131-0",
 		"s-444-2000-2135-0": [
-			{ type: "text", sub_type: "message", delay: 200, message: "Perfect Defense", message_ES: "Defensa Perfecta" },
-			{ type: "text", sub_type: "message", delay: 1535, message: "x2" },
+			{ type: "text", sub_type: "message", delay: 0, message: "Perfect Defense x2", message_ES: "Defensa Perfecta x2" },
+			{ type: "text", sub_type: "message", delay: 800, message: "Block", message_ES: "Bloquear" },
 			{ type: "spawn", func: "circle", args: [false, 553, 356, 220, 12, 210, 100, 4000] }
 		],
 		"s-444-2000-2137-0": "s-444-2000-1137-0",
-		"s-444-2000-2138-0": [{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe" }], // Knockup (Bait)
+		"s-444-2000-2138-0": [{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 0 }], // Knockup (Bait)
 		"s-444-2000-2139-0": "s-444-2000-1139-0",
 		"s-444-2000-2140-0": "s-444-2000-1140-0",
 		"s-444-2000-2141-0": "s-444-2000-1141-0",

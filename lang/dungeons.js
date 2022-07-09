@@ -93,5 +93,13 @@ module.exports = {
 	9982: {
 		"es": "Grotto of Lost Souls (Difícil)",
 		"en": "Grotto of Lost Souls (Hard)"
-	}
+	},
+	9754: {
+		"es": "Bathysmal Rise Normal",
+		"en": "Bathysmal Rise Normal"
+	},
+	9054: {
+		"es": "Bathysmal Rise (Difícil)",
+		"en": "Bathysmal Rise (Hard)"
+	},	
 };

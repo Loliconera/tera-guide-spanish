@@ -2,13 +2,13 @@
 
 # Tera Guía Español
 
-## Parche v92.04 y 100.02 (x64)
+## Parche 100.02 (x64)
 
 ### Proxy Menma's TERA
 **Atención**: Si aún usas el **proxy oficial Menma's TERA**, Por ahora **no soporta actualizaciones automáticas de mods**. Siempre que sea posible, acceda aquí para buscar actualizaciones importantes y descargarlas manualmente. Puede descargar aquí la versión de proxy con soporte de actualizaciones automáticas de mods => (https://github.com/tera-private-toolbox/tera-toolbox)
 
-### :star: Compatible con TERA Toolbox para el parche 92.04 y 100.02 (x64)
-* Totalmente compatible con la [versión no oficial](https://github.com/tera-private-toolbox/tera-toolbox) de Tera Toolbox para el parche 92 y 100.
+### :star: Compatible con TERA Toolbox para el parche 100.02 (x64)
+* Totalmente compatible con la [versión no oficial](https://github.com/tera-private-toolbox/tera-toolbox) de Tera Toolbox para el parche 100.
 
 ### :information_source: Instalación manual
 El módulo Tera-Guía y [tera-guide-core](https://github.com/hsdn/tera-guide-core) ya son compatibles con este parche.
@@ -27,8 +27,8 @@ Un módulo de guía para TERA traducido al español. Muestra mensajes en la pant
 * [**Portugués (Português & Español)** by Emilia](https://github.com/emilia-s2/Guia-DG-Portugues)
 
 ## Dependencias
-* **library** - https://github.com/tera-private-toolbox/library (v100.02 / v92.04)
-* **tera-guide-core** - https://github.com/hsdn/tera-guide-core (v100.02 / v92.04)
+* **library** - https://github.com/tera-private-toolbox/library (v100.02)
+* **tera-guide-core** - https://github.com/hsdn/tera-guide-core (v100.02)
 
 Al usar TeraToolbox, todas las dependencias se instalarán automáticamente.   
 
@@ -52,7 +52,7 @@ Toolbox(/8) | Descripción del comando
 
 ## Dungeons Soportados
 
-### Parche v92.04 / v100.02 (Menma's TERA x64)
+### Parche v100.02 (Menma's TERA x64)
 ID | Nombre de la dungeon | Idioma
 --- | --- | ---
 3020 | Sea of Honor | Español
@@ -76,6 +76,8 @@ ID | Nombre de la dungeon | Idioma
 9970 | Ruinous Manor (Difícil) | Español
 3036 | Sky Cruiser (Difícil) | Español
 3027 | Forbidden Arena [Hagufna] | Español
+9754 | Bathysmal Rise (Normal) | Español
+9054 | Bathysmal Rise (Difícil)| Español
 
 ## Configuración de Mensajes
 
