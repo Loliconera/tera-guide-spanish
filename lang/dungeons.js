@@ -1,7 +1,8 @@
 "use strict";
 
-// Nombres disponibles para idiomas adicionales
+// Nombres de Dungeons
 module.exports = {
+
 	7011: {
 		"en": "Guardian Blightwood",
 		"es": "Guardian Blightwood"
@@ -9,10 +10,6 @@ module.exports = {
 	7015: {
 		"en": "Guardian Balder's Refuge",
 		"es": "Guardian Balder's Refuge"
-	},
-	3037: {
-		"en": "Bahaar's Sanctum (Guide)",
-		"es": "Bahaar's Sanctum (Training)"
 	},
 	3036: {
 		"en": "Sky Cruiser (Hard)",
@@ -46,21 +43,9 @@ module.exports = {
 		"es": "Forbidden Arena [Hagufna]",
 		"en": "Forbidden Arena [Hagufna]"
 	},
-	9056: {
-		"es": "Timescape (Difícil)",
-		"en": "Timescape (Hard)"
-	},
-	9735: {
-		"es": "RK-9 Kennel Normal",
-		"en": "RK-9 Kennel Normal"
-	},
 	9739: {
 		"es": "Red Refuge Normal",
 		"en": "Red Refuge Normal"
-	},
-	9759: {
-		"es": "Forsaken Island (Difícil)",
-		"en": "Forsaken Island (Hard)"
 	},
 	9780: {
 		"es": "Velik's Hold (5-Personas)",
@@ -101,5 +86,5 @@ module.exports = {
 	9054: {
 		"es": "Bathysmal Rise (Difícil)",
 		"en": "Bathysmal Rise (Hard)"
-	},	
+	}
 };
