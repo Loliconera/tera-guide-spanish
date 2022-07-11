@@ -6,6 +6,28 @@ module.exports = (dispatch, handlers, guide, lang) => {
 	guide.type = SP;
 
 	return {
+		// 1 BOSS
+		"nd-970-1000": [
+			{ type: "stop_timers" },
+			{ type: "despawn_all" }
+		],
+		"s-970-1000-1206-0": [{ type: "text", sub_type: "message", message: "Jump Back", message_ES: "Saltar Atrás" }],
+		"s-970-1000-2206-0": [{ type: "text", sub_type: "message", message: "Jump Back", message_ES: "Saltar Atrás" }],
+		"s-970-1000-1106-0": [{ type: "text", sub_type: "message", message: "Stun Frontal (Dodge)", message_ES: "Stun Frontal (Iframe)" }],
+		"s-970-1000-2106-0": [{ type: "text", sub_type: "message", message: "Stun Frontal (Dodge)", message_ES: "Stun Frontal (Iframe)" }],
+		"s-970-1000-1107-0": [{ type: "text", sub_type: "message", message: "Front Push", message_ES: "Empuje Frontal" },
+			{ type: "spawn", func: "semicircle", args: [320, 404, 553, 0, 0, 7, 405, 0, 3500] },
+			{ type: "spawn", func: "vector", args: [553, 0, 10, 406, 400, 0, 3500] },
+			{ type: "spawn", func: "vector", args: [553, 0, 10, -406, 400, 0, 3500] }
+		],
+		"s-970-1000-2107-0": [{ type: "text", sub_type: "message", message: "Front Push", message_ES: "Empuje Frontal" },
+			{ type: "spawn", func: "semicircle", args: [320, 404, 553, 0, 0, 7, 405, 0, 3500] },
+			{ type: "spawn", func: "vector", args: [553, 0, 10, 406, 400, 0, 3500] },
+			{ type: "spawn", func: "vector", args: [553, 0, 10, -406, 400, 0, 3500] }
+		],
+		"s-970-1000-1117-0": [{ type: "text", sub_type: "message", message: "Crush Front", message_ES: "Aplaste Frontal" }],
+		"s-970-1000-2117-0": [{ type: "text", sub_type: "message", message: "Crush Front", message_ES: "Aplaste Frontal" }],
+
 		// 3 BOSS
 		"nd-970-3000": [
 			{ type: "stop_timers" },
