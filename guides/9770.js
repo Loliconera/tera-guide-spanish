@@ -1,9 +1,11 @@
 // Ruinous Manor
 //
-// hecha por Emilia-s2 / HSDN
+// made by Emilia-s2 / HSDN
 
 module.exports = (dispatch, handlers, guide, lang) => {
 	guide.type = SP;
+
+	let debuff = null; // default debuff
 
 	return {
 		// 1 BOSS
@@ -11,10 +13,25 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "stop_timers" },
 			{ type: "despawn_all" }
 		],
-		"s-770-1000-1206-0": [{ type: "text", sub_type: "message", message: "Jump Back", message_ES: "Salto Atrás" }],
-		"s-770-1000-2206-0": [{ type: "text", sub_type: "message", message: "Jump Back", message_ES: "Salto Atrás" }],
-		"s-770-1000-1106-0": [{ type: "text", sub_type: "message", message: "Stun Frontal (Iframe)", message_ES: "Stun Frontal (Iframe)" }],
-		"s-770-1000-2106-0": [{ type: "text", sub_type: "message", message: "Stun Frontal (Iframe)", message_ES: "Stun Frontal (Iframe)" }],
+		"die": [{ type: "func", func: () => { debuff = null; } }],
+		"ae-0-0-97000057": [{ type: "func", func: () => debuff = 1 }], // AoE (red)
+		"ae-0-0-97000058": [{ type: "func", func: () => debuff = 2 }], // AoE (blue)
+		"am-770-1000-97000057": [{ type: "func", func: () => debuff = 1 }], // Red
+		"am-770-1000-97000058": [{ type: "func", func: () => debuff = 2 }], // Blue
+		"s-770-1000-1306-0": [ // red inside
+			{ type: "text", sub_type: "message", message: "OUT", message_ES: "SALIR", check_func: () => debuff === 1, delay: 500 },
+			{ type: "text", sub_type: "message", message: "IN", message_ES: "ENTRAR", check_func: () => debuff === 2, delay: 500 },
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 400, 0, 4000] }
+		],
+		"s-770-1000-1307-0": [ // blue inside
+			{ type: "text", sub_type: "message", message: "IN", message_ES: "ENTRAR", check_func: () => debuff === 1, delay: 500 },
+			{ type: "text", sub_type: "message", message: "OUT", message_ES: "SALIR", check_func: () => debuff === 2, delay: 500 },
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 400, 0, 4000] }
+		],		
+		"s-770-1000-1206-0": [{ type: "text", sub_type: "message", message: "Jump Back", message_ES: "Saltar Atrás" }],
+		"s-770-1000-2206-0": [{ type: "text", sub_type: "message", message: "Jump Back", message_ES: "Saltar Atrás" }],
+		"s-770-1000-1106-0": [{ type: "text", sub_type: "message", message: "Stun Frontal (Dodge)", message_ES: "Stun Frontal (Iframe)" }],
+		"s-770-1000-2106-0": [{ type: "text", sub_type: "message", message: "Stun Frontal (Dodge)", message_ES: "Stun Frontal (Iframe)" }],
 		"s-770-1000-1107-0": [{ type: "text", sub_type: "message", message: "Front Push", message_ES: "Empuje Frontal (Iframe)" },
 			{ type: "spawn", func: "semicircle", args: [320, 404, 553, 0, 0, 7, 405, 0, 3500] },
 			{ type: "spawn", func: "vector", args: [553, 0, 10, 406, 400, 0, 3500] },
@@ -27,6 +44,24 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-770-1000-1117-0": [{ type: "text", sub_type: "message", message: "Crush Front", message_ES: "Aplastar" }],
 		"s-770-1000-2117-0": [{ type: "text", sub_type: "message", message: "Crush Front", message_ES: "Aplastar" }],
+
+		// 2 BOSS
+		"nd-770-2000": [
+			{ type: "stop_timers" },
+			{ type: "despawn_all" }
+		],
+		"s-770-2000-1103-0": [{ type: "text", sub_type: "message", message: "Frontal Attack", message_ES: "Ataque Frontal" }],
+		"s-770-2000-2103-0": [{ type: "text", sub_type: "message", message: "Frontal Attack", message_ES: "Ataque Frontal" }],
+		"s-770-2000-1105-0": [{ type: "text", sub_type: "message", message: "Random Target", message_ES: "Objetivo Aleatorio" }],
+		"s-770-2000-2105-0": [{ type: "text", sub_type: "message", message: "Random Target", message_ES: "Objetivo Aleatorio" }],
+		"s-770-2000-1106-0": [{ type: "text", sub_type: "message", message: "Stun (Dodge)", message_ES: "Stun (Iframe)" },
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 40, 13, 180, 0, 2000] }
+		],
+		"s-770-2000-2106-0": [{ type: "text", sub_type: "message", message: "Stun (Dodge)", message_ES: "Stun (Iframe)" },
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 40, 13, 180, 0, 2000] }
+		],
+		"s-770-2000-1111-0": [{ type: "text", sub_type: "message", message: "Many Hits (Target)", message_ES: "Muchos Golpes (Objetivo)" }],
+		"s-770-2000-2111-0": [{ type: "text", sub_type: "message", message: "Many Hits (Target)", message_ES: "Muchos Golpes (Objetivo)" }],
 
 		// 3 BOSS
 		"nd-770-3000": [
@@ -53,47 +88,37 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-770-3000-2301-0": [{ type: "text", sub_type: "message", message: "Circles", message_ES: "Círculos" }],
 		"s-770-3000-1106-0": [{ type: "text", sub_type: "message", message: "Front Swipe", message_ES: "Empuje Frontal (Iframe)" }],
 		"s-770-3000-2106-0": [{ type: "text", sub_type: "message", message: "Front Swipe", message_ES: "Empuje Frontal (Iframe)" }],
-		"s-770-3000-1108-0": [
-			{ type: "text", sub_type: "message", message: "Tail", message_ES: "Coletazo frontal" },
-			{ type: "spawn", func: "circle", args: [false, 553, -7, 280, 20, 155, 0, 2000] }
-		],
-		"s-770-3000-2108-0": [
-			{ type: "text", sub_type: "message", message: "Tail", message_ES: "Coletazo frontal" },
-			{ type: "spawn", func: "circle", args: [false, 553, -7, 280, 20, 155, 0, 2000] }
-		],
 		"s-770-3000-1110-0": [
-			{ type: "text", sub_type: "message", message: "Tail AOE (jump in front)", message_ES: "Cola AoE (saltar en frente)" },
+			{ type: "text", sub_type: "message", message: "Tail AOE (jump in front)", message_ES: "Cola AoE (saltar al frente)" },
 			{ type: "spawn", func: "semicircle", args: [26, 340, 553, 0, 0, 7, 630, 0, 3000] },
 			{ type: "spawn", func: "vector", args: [553, 4, 40, 338, 600, 0, 3000] },
 			{ type: "spawn", func: "vector", args: [553, -4, 40, -338, 600, 0, 3000] }
 		],
 		"s-770-3000-2110-0": [
-			{ type: "text", sub_type: "message", message: "Tail AOE (jump in front)", message_ES: "Cola AoE (saltar en frente)" },
+			{ type: "text", sub_type: "message", message: "Tail AOE (jump in front)", message_ES: "Cola AoE (saltar al frente)" },
 			{ type: "spawn", func: "semicircle", args: [26, 340, 553, 0, 0, 7, 630, 0, 3000] },
 			{ type: "spawn", func: "vector", args: [553, 4, 40, 338, 600, 0, 3000] },
 			{ type: "spawn", func: "vector", args: [553, -4, 40, -338, 600, 0, 3000] }
 		],
-		"s-770-3000-1304-0": [{ type: "text", sub_type: "message", message: "Get Ready!", message_ES: "¡Preparate!" }],
-		"s-770-3000-1303-0": [{ type: "text", sub_type: "message", message: "Get Ready!", message_ES: "¡Preparate!" }],
+		"s-770-3000-1304-0": [{ type: "text", sub_type: "message", message: "Get Ready!", message_ES: "¡PREPÁRATE!" }],
+		"s-770-3000-1303-0": [{ type: "text", sub_type: "message", message: "Get Ready!", message_ES: "¡PREPÁRATE!" }],
 		"s-770-3000-1113-0": [
-			{ type: "text", sub_type: "alert", message: "OUT", message_ES: "SALIR" },
-			{ type: "text", sub_type: "message", message: "IN", message_ES: "ENTRAR", delay: 2500 },
-			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 14, 300, 0, 5000] }
-		],		
-		"s-770-3000-2113-0": [
-			{ type: "text", sub_type: "alert", message: "OUT", message_ES: "SALIR" }, 
-			{ type: "text", sub_type: "message", message: "IN", message_ES: "ENTRAR", delay: 2500 },
+			{ type: "text", sub_type: "alert", message: "Out", message_ES: "SALIR" },
+			{ type: "text", sub_type: "message", message: "In", message_ES: "ENTRAR", delay: 1300 },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 14, 300, 0, 5000] }
 		],
 		"s-770-3000-1116-0": [
-			{ type: "text", sub_type: "alert", message: "IN", message_ES: "ENTRAR" },
-			{ type: "text", sub_type: "message", message: "OUT", message_ES: "SALIR", delay: 2500 },
+			{ type: "text", sub_type: "alert", message: "In", message_ES: "ENTRAR" },
+			{ type: "text", sub_type: "message", message: " Out", message_ES: "SALIR", delay: 1300 },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 14, 300, 0, 5000] }
-		],		
-		"s-770-3000-2116-0": [
-			{ type: "text", sub_type: "alert", message: "IN", message_ES: "ENTRAR" }, 
-			{ type: "text", sub_type: "message", message: "OUT", message_ES: "SALIR", delay: 2500 },
-			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 14, 300, 0, 5000] }
+		],
+		"s-770-3000-1108-0": [
+			{ type: "text", sub_type: "message", message: "Tail", message_ES: "Coletazo Frontal" },
+			{ type: "spawn", func: "circle", args: [false, 553, -7, 280, 20, 155, 0, 2000] }
+		],
+		"s-770-3000-2108-0": [
+			{ type: "text", sub_type: "message", message: "Tail", message_ES: "Coletazo Frontal" },
+			{ type: "spawn", func: "circle", args: [false, 553, -7, 280, 20, 155, 0, 2000] }
 		],
 		"s-770-3000-1322-0": [
 			{ type: "text", sub_type: "message", message: "Dodge!", message_ES: "¡Iframe!" },
@@ -101,10 +126,10 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 12, 430, 0, 5000] },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 630, 0, 5000] }
 		],
-		"s-770-3000-1311-0": [{ type: "text", sub_type: "message", message: "Gather for Cleanse!", message_ES: "¡Reunirse para Cleanse!" }],
-		"s-770-3000-1120-0": [{ type: "text", sub_type: "message", message: "Shooting Skulls", message_ES: "Laser (Triple)" }],
-		"s-770-3000-2120-0": [{ type: "text", sub_type: "message", message: "Shooting Skulls", message_ES: "Laser (Triple)" }],
-		"s-770-3000-1121-0": [{ type: "text", sub_type: "message", message: "Double Shooting Skulls", message_ES: "Laser (Doble)" }],
-		"s-770-3000-2121-0": [{ type: "text", sub_type: "message", message: "Double Shooting Skulls", message_ES: "Laser (Doble)" }]
+		"s-770-3000-1311-0": [{ type: "text", sub_type: "message", message: "Gather for Cleanse!", message_ES: "¡Cleanse!" }],
+		"s-770-3000-1120-0": [{ type: "text", sub_type: "message", message: "Shooting Skulls (Triple)", message_ES: "Laser (Triple)" }],
+		"s-770-3000-2120-0": [{ type: "text", sub_type: "message", message: "Shooting Skulls (Triple)", message_ES: "Laser (Triple)" }],
+		"s-770-3000-1121-0": [{ type: "text", sub_type: "message", message: "Shooting Skulls (Doble)", message_ES: "Laser (Doble)" }],
+		"s-770-3000-2121-0": [{ type: "text", sub_type: "message", message: "Shooting Skulls (Doble)", message_ES: "Laser (Doble)" }]
 	};
-};
+}; 
