@@ -39,8 +39,6 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-754-1001-1110-0": [{ type: "text", sub_type: "message", message_ES: "Giro! (Lento)", message: "Spin! (Slow)" }],
 		"s-754-1001-1113-0": [{ type: "text", sub_type: "message", message_ES: "Charco de Slime", message: "Slime Puddle" }],
 		"s-754-1001-1111-0": [{ type: "text", sub_type: "message", message_ES: "Ataque de Carga Giratorio", message: "Spin Lunge Attack" }],
-		"s-754-1001-2101-0": "s-754-1000-1101-0",
-		"s-754-1001-2102-0": "s-754-1001-1102-0",
 		"s-754-1001-2104-0": "s-754-1001-1104-0",
 		"s-754-1001-2105-0": "s-754-1001-1105-0",
 		"s-754-1001-2108-0": "s-754-1001-1108-0",

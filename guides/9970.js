@@ -110,26 +110,23 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-970-3000-1304-0": [{ type: "text", sub_type: "message", message: "Get Ready! ", message_ES: "¡PREPÁRATE!" }],
 		"s-970-3000-1303-0": [{ type: "text", sub_type: "message", message: "Get Ready!", message_ES: "¡PREPÁRATE!" }],
-		"s-970-3000-1113-0": [
-			{ type: "text", sub_type: "alert", message: "OUT", message_ES: "SALIR" },
-			{ type: "text", sub_type: "message", message: "IN", message_ES: "ENTRAR", delay: 1800 },
-			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 14, 300, 0, 5000] }
-		],		
-		"s-970-3000-2113-0": [
-			{ type: "text", sub_type: "alert", message: "OUT", message_ES: "SALIR" }, 
-			{ type: "text", sub_type: "message", message: "IN", message_ES: "ENTRAR", delay: 1800 },
-			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 14, 300, 0, 5000] }
+		"s-970-3000-1113-0": [{ type: "text", sub_type: "message", message_ES: "SALIR", message: "Out" },
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 15, 300, 0, 5000] }
 		],
-		"s-970-3000-1116-0": [
-			{ type: "text", sub_type: "alert", message: "IN", message_ES: "ENTRAR" },
-			{ type: "text", sub_type: "message", message: "OUT", message_ES: "SALIR", delay: 1800 },
-			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 14, 300, 0, 5000] }
+		"s-970-3000-1114-0": [{ type: "text", sub_type: "message", message_ES: "ENTRAR", message: "In" },
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 15, 300, 0, 5000] }
 		],		
-		"s-970-3000-2116-0": [
-			{ type: "text", sub_type: "alert", message: "IN", message_ES: "ENTRAR" }, 
-			{ type: "text", sub_type: "message", message: "OUT", message_ES: "SALIR", delay: 1800 },
-			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 14, 300, 0, 5000] }
+		"s-970-3000-1116-0": [{ type: "text", sub_type: "message", message_ES: "ENTRAR", message: "In" },
+			{ type: "spawn", func: "circle", args: [false, 553,0, 0, 15, 300, 0, 5000] }
 		],
+		"s-970-3000-1117-0": [{ type: "text", sub_type: "message", message_ES: "SALIR", message: "Out" },
+			{ type: "spawn", func: "circle", args: [false, 553,0, 0, 15, 300, 0, 5000] }
+		],
+		"s-970-3000-2113-0": "s-970-3000-1113-0",
+		"s-970-3000-2114-0": "s-970-3000-1114-0",
+		"s-970-3000-2116-0": "s-970-3000-1116-0",
+		"s-970-3000-2117-0": "s-970-3000-1117-0",
+		
 		"s-970-3000-1318-0": [{ type: "text", sub_type: "message", message: "Get Red Skull!", message_ES: "¡Cráneo Rojo!" }],
 		"s-970-3000-1317-0": [{ type: "text", sub_type: "message", message: "Get Red Skull!", message_ES: "¡Cráneo Rojo!" }],
 		"s-970-3000-1319-0": [{ type: "text", sub_type: "message", message: "Get Red Skull!", message_ES: "¡Cráneo Rojo!" }],

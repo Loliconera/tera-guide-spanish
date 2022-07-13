@@ -102,16 +102,23 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-770-3000-1304-0": [{ type: "text", sub_type: "message", message: "Get Ready!", message_ES: "¡PREPÁRATE!" }],
 		"s-770-3000-1303-0": [{ type: "text", sub_type: "message", message: "Get Ready!", message_ES: "¡PREPÁRATE!" }],
-		"s-770-3000-1113-0": [
-			{ type: "text", sub_type: "alert", message: "Out", message_ES: "SALIR" },
-			{ type: "text", sub_type: "message", message: "In", message_ES: "ENTRAR", delay: 1300 },
-			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 14, 300, 0, 5000] }
+		"s-770-3000-1113-0": [{ type: "text", sub_type: "message", message_ES: "SALIR", message: "Out" },
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 15, 300, 0, 5000] }
 		],
-		"s-770-3000-1116-0": [
-			{ type: "text", sub_type: "alert", message: "In", message_ES: "ENTRAR" },
-			{ type: "text", sub_type: "message", message: " Out", message_ES: "SALIR", delay: 1300 },
-			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 14, 300, 0, 5000] }
+		"s-770-3000-1114-0": [{ type: "text", sub_type: "message", message_ES: "ENTRAR", message: "In" },
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 15, 300, 0, 5000] }
+		],		
+		"s-770-3000-1116-0": [{ type: "text", sub_type: "message", message_ES: "ENTRAR", message: "In" },
+			{ type: "spawn", func: "circle", args: [false, 553,0, 0, 15, 300, 0, 5000] }
 		],
+		"s-770-3000-1117-0": [{ type: "text", sub_type: "message", message_ES: "SALIR", message: "Out" },
+			{ type: "spawn", func: "circle", args: [false, 553,0, 0, 15, 300, 0, 5000] }
+		],
+		"s-770-3000-2113-0": "s-770-3000-1113-0",
+		"s-770-3000-2114-0": "s-770-3000-1114-0",
+		"s-770-3000-2116-0": "s-770-3000-1116-0",
+		"s-770-3000-2117-0": "s-770-3000-1117-0",
+		
 		"s-770-3000-1108-0": [
 			{ type: "text", sub_type: "message", message: "Tail", message_ES: "Coletazo Frontal" },
 			{ type: "spawn", func: "circle", args: [false, 553, -7, 280, 20, 155, 0, 2000] }
