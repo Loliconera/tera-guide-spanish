@@ -59,17 +59,8 @@ ID | Nombre de la dungeon | Idioma
 7011 | Guardian Blightwood | Español
 7015 | Guardian Balder's Refuge | Español
 9027 | Manaya's Core (Difícil) | Español
-9981 | Velik's Sanctuary (Difícil) | Español
 9044 | Bahaar's Sanctum | Español
-9056 | Timescape (Difícil) | Español
-9759 | Forsaken Island (Difícil) | Español
 3201 | Gossamer Vault (Difícil) | Español
-9920 | Antaroth's Abyss (Difícil) | Español
-9982 | Grotto of Lost Souls (Difícil) | Español
-9735 | RK-9 Kennel | Español
-9739 | Red Refuge | Español
-9780 | Velik's Hold (5-Person) | Español
-9781 | Velik's Sanctuary | Español
 3026 | Corrupted Skynest | Español
 3126 | Corrupted Skynest (Difícil) | Español
 9770 | Ruinous Manor (Normal)| Español
