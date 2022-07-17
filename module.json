@@ -1,7 +1,7 @@
 {
-    "name": "Tera Guía ES",
+    "name": "Tera Guía Español",
     "options": {
-        "niceName": "Tera Guía ES",
+        "niceName": "Tera Guía",
         "guiName": "<font color='#FFE900'><b>Tera Guía ES</b></font> ‍‍‍‍ ",
         "settingsFile": "config.json",
         "settingsMigrator": "settings_migrator.js",
@@ -15,5 +15,5 @@
         "tera-guide-core": "https://raw.githubusercontent.com/hsdn/tera-guide-core/master/module.json"
     },
     "disableAutoUpdate": false,
-    "version": "<font color='#FC0FC0'>MT 100.02</font>"
+    "version": "<font color='#FC0FC0'>100.02</font>"
 }
