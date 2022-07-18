@@ -35,7 +35,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-757-1002-1105-0": [{ type: "text", sub_type: "message", message_ES: "Aliento de Fuego", message: "Fire Breath" }],
 		"s-757-1002-1108-0": [{ type: "text", sub_type: "message", message_ES: "Bombas de Fuego", message: "Fire Bombs" }],
-		"s-757-1002-1109-0": [{ type: "text", sub_type: "message", message_ES: "Nadar + AoE Atrás", message: "Swim + Back AoE" }],
+		"s-757-1002-1109-0": [{ type: "text", sub_type: "message", message_ES: "Nadar + Ataque Atrás", message: "Swim + Back AoE" }],
 		"s-757-1002-1206-0": [{ type: "text", sub_type: "message", message_ES: "Salto + Ataque Aleatorio", message: "Jump + Random Target" }],
 		"s-757-1002-1204-0": [{ type: "text", sub_type: "message", message_ES: "AoE Amplio", message: "Large AoE", delay: 3000 },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 6, 650, 3000, 4000] }
@@ -60,7 +60,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "despawn_all" }
 		],
 		"s-757-1003-1105-0": [{ type: "text", sub_type: "message", message_ES: "AoE", message: "AoE" }],
-		"s-757-1003-1203-0": [{ type: "text", sub_type: "message", message_ES: "Ataque Giratorio", message: "Spin Cut Attack" },
+		"s-757-1003-1203-0": [{ type: "text", sub_type: "message", message_ES: "Giro", message: "Spin Cut Attack" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 400, 100, 4000] }
 		],
 		"s-757-1003-1110-0": [{ type: "text", sub_type: "message", message_ES: "Veneno (Círculo)", message: "Poison (Circle)" }],
@@ -89,7 +89,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-757-1004-3106-0": [{ type: "text", sub_type: "message", message_ES: "Dona AoE", message: "Donut AoE" }],
 		"s-757-1004-3103-0": [{ type: "text", sub_type: "message", message_ES: "Pisada AoE", message: "AoE Stomp" }],
 		"s-757-1004-4201-0": [{ type: "text", sub_type: "message", message_ES: "Lava", message: "Lava" }],
-		"qb-757-405-457016": [{ type: "text", sub_type: "message", message_ES: "ESCUDO", message: "SHIELD" }],
+		"qb-757-405-457016": [{ type: "text", sub_type: "message", message_ES: "Escudo", message: "SHIELD" }],
 		"s-757-1004-2105-0": "s-757-1004-1105-0",
 		"s-757-1004-2106-0": "s-757-1004-1106-0",
 		"s-757-1004-2107-0": "s-757-1004-1107-0",
