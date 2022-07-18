@@ -58,5 +58,13 @@ module.exports = {
 	9044: {
 		"en": "Bahaar's Sanctum",
 		"es": "Bahaar's Sanctum"
-	}	
+	},
+	9757: {
+		"es": "Akeron's Inferno",
+		"en": "Akeron's Inferno"
+	},
+	9057: {
+		"es": "Akeron's Inferno (Difícil)",
+		"en": "Akeron's Inferno (Hard)"
+	}
 };

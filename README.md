@@ -63,12 +63,14 @@ ID | Nombre de la dungeon | Idioma
 3201 | Gossamer Vault (Difícil) | Español
 3026 | Corrupted Skynest | Español
 3126 | Corrupted Skynest (Difícil) | Español
-9770 | Ruinous Manor (Normal)| Español
+9770 | Ruinous Manor | Español
 9970 | Ruinous Manor (Difícil) | Español
 3036 | Sky Cruiser (Difícil) | Español
 3027 | Forbidden Arena [Hagufna] | Español
-9754 | Bathysmal Rise (Normal) | Español
+9754 | Bathysmal Rise | Español
 9054 | Bathysmal Rise (Difícil)| Español
+9757 | Akeron's Inferno | Español
+9057 | Akeron's Inferno (Difícil) | Español
 
 ## Configuración de Mensajes
 
