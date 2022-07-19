@@ -1,4 +1,4 @@
-// Akeron's Inferno (Normal)
+// Akeron's Inferno
 //
 // made by Emilia-s2
 
@@ -76,12 +76,6 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-757-1004-1105-0": [{ type: "text", sub_type: "message", message_ES: "Golpe Frontal", message: "Frontal Hit" }],
 		"s-757-1004-1106-0": [{ type: "text", sub_type: "message", message_ES: "Disparo", message: "Random Shot" }],
 		"s-757-1004-1107-0": [{ type: "text", sub_type: "message", message_ES: "Látigo", message: "Random Whip" }],
-		"s-757-1004-1109-0": [{ type: "text", sub_type: "message", message_ES: "Círculos Seguro", message: "Safe Circles" },
-			{ type: "spawn", func: "marker", args: [false, 157, -700, 0, 5000, true, ["SEGURO", "SEGURO"]] },
-			{ type: "spawn", func: "marker", args: [false, 247, -700, 0, 5000, true, ["SEGURO", "SEGURO"]] },
-			{ type: "spawn", func: "marker", args: [false, -23, -700, 0, 5000, true, ["SEGURO", "SEGURO"]] },
-			{ type: "spawn", func: "marker", args: [false, 67, -700, 0, 5000, true, ["SEGURO", "SEGURO"]] },
-		],
 		"s-757-1004-1108-0": [{ type: "text", sub_type: "message", message_ES: "Línea de Tierra", message: "Earth Line" }],
 		"s-757-1004-1111-0": [{ type: "text", sub_type: "message", message_ES: "Combo de Pisadas", message: "Stomp Combo" }],
 		"s-757-1004-3108-0": [{ type: "text", sub_type: "message", message_ES: "Iframe", message: "Iframe" }],
