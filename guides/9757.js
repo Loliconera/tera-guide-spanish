@@ -11,7 +11,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "stop_timers" },
 			{ type: "despawn_all" }
 		],
-		"s-757-1001-1104-0": [{ type: "text", sub_type: "message", message_ES: "Mano Derecha (Empujar)", message: "Right Hand (Push)" }],
+		"s-757-1001-1104-0": [{ type: "text", sub_type: "message", message_ES: "Empuje Frontal", message: "Right Hand (Push)" }],
 		"s-757-1001-1117-0": [{ type: "text", sub_type: "message", message_ES: "Aplastar", message: "Kick (Smash)" }],
 		"s-757-1001-1118-0": [{ type: "text", sub_type: "message", message_ES: "Salto Aleatorio", message: "Random Jump" }],
 		"s-757-1001-1116-0": [{ type: "text", sub_type: "message", message_ES: "Saltos (Tank)", message: "Jumps (Tank)" }],
@@ -38,11 +38,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-757-1002-1109-0": [{ type: "text", sub_type: "message", message_ES: "Nadar + Ataque Atrás", message: "Swim + Back AoE" }],
 		"s-757-1002-1206-0": [{ type: "text", sub_type: "message", message_ES: "Salto + Ataque Aleatorio", message: "Jump + Random Target" }],
 		"s-757-1002-1204-0": [{ type: "text", sub_type: "message", message_ES: "AoE Amplio", message: "Large AoE", delay: 3000 },
-			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 6, 650, 3000, 4000] }
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 6, 630, 3000, 4000] }
 		],
 		"s-757-1002-1107-0": [{ type: "text", sub_type: "message", message_ES: "Giro", message: "Spin" }],
 		"s-757-1002-1106-1": [{ type: "text", sub_type: "message", message_ES: "AoE + Llamas", message: "AoE + Side Flames", delay: 4000 },
-			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 450, 4000, 4000] }
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 550, 4000, 4000] }
 		],
 		"s-757-1002-1112-0": [{ type: "text", sub_type: "message", message_ES: "Bolas de Fuego (Objetivo)", message: "Target Fireball" }],
 		"s-757-1002-2105-0": "s-757-1002-1105-0",
@@ -77,7 +77,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-757-1004-1106-0": [{ type: "text", sub_type: "message", message_ES: "Disparo", message: "Random Shot" }],
 		"s-757-1004-1107-0": [{ type: "text", sub_type: "message", message_ES: "Látigo", message: "Random Whip" }],
 		"s-757-1004-1108-0": [{ type: "text", sub_type: "message", message_ES: "Línea de Tierra", message: "Earth Line" }],
-		"s-757-1004-1111-0": [{ type: "text", sub_type: "message", message_ES: "Combo de Pisadas", message: "Stomp Combo" }],
+		"s-757-1004-1111-0": [{ type: "text", sub_type: "message", message_ES: "Ataque de Pisadas", message: "Stomp Combo" }],
 		"s-757-1004-3108-0": [{ type: "text", sub_type: "message", message_ES: "Iframe", message: "Iframe" }],
 		"s-757-1004-3105-0": [{ type: "text", sub_type: "message", message_ES: "Ataque AoE", message: "AoE Attack" }],
 		"s-757-1004-3106-0": [{ type: "text", sub_type: "message", message_ES: "Dona AoE", message: "Donut AoE" }],
