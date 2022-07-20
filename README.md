@@ -5,10 +5,11 @@
 ## Parche 100.02 (x64)
 
 ### Proxy Menma's TERA
-**Atención**: Si aún usas el **proxy oficial Menma's TERA**, Por ahora **no soporta actualizaciones automáticas de mods**. Siempre que sea posible, acceda aquí para buscar actualizaciones importantes y descargarlas manualmente. Puede descargar aquí la versión de proxy con soporte de actualizaciones automáticas de mods => (https://github.com/tera-private-toolbox/tera-toolbox)
+**Atención**: Si aún usas el **proxy oficial Menma's TERA**, Por ahora **no soporta actualizaciones automáticas de mods**. Siempre que sea posible, acceda aquí para buscar actualizaciones importantes y descargarlas manualmente. Puede descargar aquí la versión de proxy con soporte de actualizaciones automáticas de mods => [TERA Toolbox para el parche 100](https://github.com/tera-private-toolbox/tera-toolbox)
 
 ### :star: Compatible con TERA Toolbox para el parche 100.02 (x64)
-* Totalmente compatible con [TERA Toolbox para el parche 100](https://github.com/tera-private-toolbox/tera-toolbox).
+* Totalmente compatible con [TERA Toolbox para el parche 100](https://github.com/tera-private-toolbox/tera-toolbox).   
+  Instalación automática desde la pestaña **Obtener más Mod**.
 
 ### :information_source: Instalación manual
 El módulo Tera-Guía y [tera-guide-core](https://github.com/hsdn/tera-guide-core) ya son compatibles con este parche.
