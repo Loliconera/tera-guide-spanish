@@ -23,8 +23,8 @@
         "index.js": "813aad409c957d66ea83ba636565ac168db05834bd3c8d5e34c0530e0a978921",
         "lang/dungeons.js": "8f3b181ae90f5d3c41a654741127a61db44b521f7271fe00f4bf2762c6641df6",
         "lang/strings.js": "f40f73fff2487a2bf09268a38d473e146d73dc0b44a5fb9408cc575692f5d820",
-        "module.json": "8181f3f674fd7467f12ee72bd4ec7f1d949da6183655fc494783e596a83fe0bc",
-        "settings_migrator.js": "2da7451701ff2030c585662f2e67593423c034cfa6960606e0af3a199208db9a"
+        "module.json": "ea9ff12defb3a68d824e6bea128851e6a0376a820eff49c41066048546b53778",
+        "settings_migrator.js": "024e5cbfab76ec616700f50773a4a254d4dc920b51fa9bfebb09252080d9717a"
     },
     "defs": {
         "S_ABNORMALITY_END": 1
