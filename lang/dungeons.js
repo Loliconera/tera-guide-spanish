@@ -11,10 +11,6 @@ module.exports = {
 		"en": "Guardian Balder's Refuge",
 		"es": "Guardian Balder's Refuge"
 	},
-	3036: {
-		"en": "Sky Cruiser (Hard)",
-		"es": "Sky Cruiser (Difícil)"
-	},
 	3126: {
 		"en": "Corrupted Skynest (Hard)",
 		"es": "Corrupted Skynest (Difícil)"
@@ -66,5 +62,13 @@ module.exports = {
 	9057: {
 		"es": "Akeron's Inferno (Difícil)",
 		"en": "Akeron's Inferno (Hard)"
-	}
+	},
+	9716: {
+		"es": "Sky Cruiser Endeavor <font color='#ffc800'>BETA</font>",
+		"en": "Sky Cruiser Endeavor <font color='#ffc800'>BETA</font>"
+	},
+	9916: {
+		"es": "Sky Cruiser Endeavor (Difícil) <font color='#ffc800'>BETA</font>",
+		"en": "Sky Cruiser Endeavor (Hard <font color='#ffc800'>BETA</font>"
+	},
 };

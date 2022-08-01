@@ -66,13 +66,13 @@ ID | Nombre de la dungeon | Idioma
 3126 | Corrupted Skynest (Difícil) | Español
 9770 | Ruinous Manor | Español
 9970 | Ruinous Manor (Difícil) | Español
-3036 | Sky Cruiser (Difícil) | Español
 3027 | Forbidden Arena [Hagufna] | Español
 9754 | Bathysmal Rise | Español
 9054 | Bathysmal Rise (Difícil)| Español
 9757 | Akeron's Inferno | Español
 9057 | Akeron's Inferno (Difícil) | Español
-
+9716 | Sky Cruiser Endeavor | Español
+9916 | Sky Cruiser Endeavor (Difícil) | Español
 ## Configuración de Mensajes
 
 * En la pantalla (en la parte inferior) y mensajes de chat, si el parámetro **lNotice** está *activado*, todos los mensajes se enviaran al canal **Notice**. (**Mensajes en Chat Notice**).   
