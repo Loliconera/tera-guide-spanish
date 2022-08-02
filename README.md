@@ -4,9 +4,6 @@
 
 ## Parche 100.02 (x64)
 
-### Proxy Menma's TERA
-**Atención**: Si aún usas el **proxy oficial Menma's TERA**, Por ahora **no soporta actualizaciones automáticas de mods**. Siempre que sea posible, acceda aquí para buscar actualizaciones importantes y descargarlas manualmente. Puede descargar aquí la versión de proxy con soporte de actualizaciones automáticas de mods => [TERA Toolbox para el parche 100](https://github.com/tera-private-toolbox/tera-toolbox)
-
 ### :star: Compatible con TERA Toolbox para el parche 100.02 (x64)
 * Totalmente compatible con [TERA Toolbox para el parche 100](https://github.com/tera-private-toolbox/tera-toolbox).   
   Instalación automática desde la pestaña **Obtener más Mod**.
@@ -53,7 +50,7 @@ Toolbox(/8) | Descripción del comando
 
 ## Dungeons Soportados
 
-### Parche v100.02 (Menma's TERA x64)
+### Parche v100.02 (TERA x64)
 ID | Nombre de la dungeon | Idioma
 --- | --- | ---
 3020 | Sea of Honor | Español
