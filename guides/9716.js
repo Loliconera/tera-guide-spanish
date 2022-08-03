@@ -63,7 +63,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-716-91650-2106-0": "s-716-91650-1106-0",
 
 		// Mini BOSS 2
-		"ns-716-91606":[
+		"ns-716-91606": [
 			{ type: "spawn", sub_type: "build_object", id: 1, sub_delay: 99999999, pos: { x: 57099, y: 129439, z: 2370, w: -1.004}, ownerName: "LASER ALEATORIO", message: "LASER ALEATORIO" },//1
 			{ type: "spawn", sub_type: "item", id: 110684, sub_delay: 99999999, pos: { x: 57099, y: 129439, z: 2370, w: -1.004} },//1
 			{ type: "spawn", sub_type: "build_object", id: 1, sub_delay: 99999999, pos: { x: 58313, y: 129448, z: 2370, w: -2.06}, ownerName: "LASER ALEATORIO", message: "LASER ALEATORIO" },//2
