@@ -70,6 +70,8 @@ ID | Nombre de la dungeon | Idioma
 9057 | Akeron's Inferno (Difícil) | Español
 9716 | Sky Cruiser Endeavor | Español
 9916 | Sky Cruiser Endeavor (Difícil) | Español
+3036 | Sky Cruiser (Extreme) | Español
+
 ## Configuración de Mensajes
 
 * En la pantalla (en la parte inferior) y mensajes de chat, si el parámetro **lNotice** está *activado*, todos los mensajes se enviaran al canal **Notice**. (**Mensajes en Chat Notice**).   

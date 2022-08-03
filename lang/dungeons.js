@@ -71,4 +71,8 @@ module.exports = {
 		"es": "Sky Cruiser Endeavor (Difícil) <font color='#ffc800'>BETA</font>",
 		"en": "Sky Cruiser Endeavor (Hard <font color='#ffc800'>BETA</font>"
 	},
+	3036: {
+		"es": "Sky Cruiser (Extremo)",
+		"en": "Sky Cruiser (Extreme)"
+	},
 };
