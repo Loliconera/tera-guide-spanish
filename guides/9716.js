@@ -106,7 +106,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		{ type: "spawn", func: "circle", args: [false, 553, 135, 360, 14, 220, 1000, 3000] },//2 back right big
 		{ type: "spawn", func: "circle", args: [false, 553, 45, 360, 14, 220, 1000, 4000] },//3 front right big
 		{ type: "spawn", func: "circle", args: [false, 553, 225, 360, 14, 220, 1000, 3000] }//4 back left big
-	],
+		],
 		"s-716-91606-2102-0": "s-716-91606-1102-0",
 		"s-716-91606-2106-0": "s-716-91606-1106-0",
 		"s-716-91606-2107-0": "s-716-91606-1107-0",

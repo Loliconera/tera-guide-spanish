@@ -103,6 +103,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 553, -10, 230, 15, 210, 2000, 2000] },
 			{ type: "spawn", func: "circle", args: [false, 413, 50, 50, 15, 160, 2000, 2000] }
 		],
+		"s-916-91606-1105-0": [{ type: "text", sub_type: "message", message_ES: "Salto (Iframe)", message: "Jump (Dodge)" }],
 		"s-916-91606-1107-0": [{ type: "text", sub_type: "message", message_ES: "Muchos Golpes (Objetivo)", message: "Many Hits (Target)" }],
 		"s-916-91606-1302-0": [{ type: "text", sub_type: "message", message_ES: "Láser (PROTEGER)", message: "Laser (PROTECT)" },
 			{ type: "spawn", func: "vector", args: [912, 360, 50, 0, 900, 0, 4000] }
