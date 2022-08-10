@@ -101,33 +101,33 @@ ID | Nombre de la dungeon | Idioma
 
 ## Configuración de Mensajes
 
-* En la pantalla (en la parte inferior) y mensajes de chat, si el parámetro **lNotice** está *activado*, todos los mensajes se enviaran al canal **Notice**. (**Mensajes en Chat Notice**).
+* En la pantalla (en la parte inferior) y mensajes de chat, si el parámetro **lNotice** está *activado*, todos los mensajes se enviaran al canal **Notice**. (**Mensajes en Chat Notice**).   
     <img src="https://i.imgur.com/FFZSr5f.png" alt="drawing" width="435"/>
 
-* En la pantalla (en la parte superior), si el parámetro **lNotice** está *desactivado*, todos los mensajes se mostraran en la parte superior de la pantalla. (**Mensajes en Pantalla**).
+* En la pantalla (en la parte superior), si el parámetro **lNotice** está *desactivado*, todos los mensajes se mostraran en la parte superior de la pantalla. (**Mensajes en Pantalla**).   
     <img src="https://i.imgur.com/e4s2iVE.png" alt="drawing" width="435"/>
 
-* Cuando el parámetro **gNotice** está *activado*, todos los mensajes se enviarán al canal **Party**. (**Mensaje en Chat Party**).
+* Cuando el parámetro **gNotice** está *activado*, todos los mensajes se enviarán al canal **Party**. (**Mensaje en Chat Party**).   
     <img src="https://i.imgur.com/5S4J5S0.png" alt="drawing" width="435"/>
 
-* Cuando el parámetro **stream** está *activado*, todos los mensajes de texto se enviarán solamente al canal de chat **Toolbox(/8)**, pero se reproducirán los mensajes de texto a voz TTS. (**Mensajes en Chat Toolbox**).
+* Cuando el parámetro **stream** está *activado*, todos los mensajes de texto se enviarán solamente al canal de chat **Toolbox(/8)**, pero se reproducirán los mensajes de texto a voz TTS. (**Mensajes en Chat Toolbox**).   
     <img src="https://i.imgur.com/SOUET0X.png" alt="drawing" width="435"/>
-
-* Escriba el comando **!guia help** para mostrar una lista completa de todos los comandos soportados y una lista de colores de textos en pantalla.
+  
+* Escriba el comando **!guia help** para mostrar una lista completa de todos los comandos soportados y una lista de colores de textos en pantalla.   
     <img src="https://i.imgur.com/E35hNsV.png" alt="drawing" width="435"/>
 
-* Cuando ingresa a una dungeon el modulo le notificará con un mensaje de bienvenida, donde tambien le mostrara informacion adicional para el uso de comandos.
+* Cuando ingresa a una dungeon el modulo le notificará con un mensaje de bienvenida, donde tambien le mostrara informacion adicional para el uso de comandos.   
     <img src="https://i.imgur.com/CpBgCRe.png" alt="drawing" width="498"/>
 
-* Para desactivar o activar los mensajes de texto a voz TTS, use el comando **!guia voice**.
+* Para desactivar o activar los mensajes de texto a voz TTS, use el comando **!guia voice**.   
 
-* Para cambiar el género de la a voz TTS, use el comando **!guia `male`/`female`**.
+* Para cambiar el género de la a voz TTS, use el comando **!guia `male`/`female`**.   
 
-* Para cambiar a otro idioma, use el comando **!guia `auto`/`en`/`es`**.
+* Para cambiar a otro idioma, use el comando **!guia `auto`/`en`/`es`**.   
 
 ## Interfaz GUI
 
-* Escriba el comando **!guia gui** para mostrar una interfaz gráfica del modulo, puede tambien cambiar las configuraciones básicas.
+* Escriba el comando **!guia gui** para mostrar una interfaz gráfica del modulo, puede tambien cambiar las configuraciones básicas.   
     <img src="https://i.imgur.com/qBsDz00.png" alt="drawing" width="498"/>
 
 ## Más información
