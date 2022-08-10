@@ -90,5 +90,9 @@ module.exports = {
 	3202: {
 		"es": "Draakon Arena (Difícil)",
 		"en": "Draakon Arena (Hard)"
-	},	
+	},
+	9070: {
+		"es": "Manglemire",
+		"en": "Manglemire"
+	},
 };

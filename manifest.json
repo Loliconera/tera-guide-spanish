@@ -1,7 +1,7 @@
 {
     "files": {
         "LICENSE": "7fbe35da1c4792b039cd14af60048ea6813b743bd6e05ecef7a68023b50f5a43",
-        "README.md": "d85bcd699c5648f84a12db954da039d5f2d36cb6d66b7472799ee0c92f957caa",
+        "README.md": "ee99993b578f048d8dbbfda70542ed94a4cb0a0c283ceed58b2f04ecc4dd69b5",
         "guides/3020.js": "ffc8d55b1deec2d3251a735f94059145519e948332a2ab5a31da7f9cb4c6391a",
         "guides/3023.js": "71f5990e0455375944f3bcf6cafb122d8a421494b26d9781763e5ba1a2dea055",
         "guides/3026.js": "74cf4cbca6d0e8627ad051cc812597d28b8fc5a5ad1bffad479d0425e98f1da9",
@@ -22,6 +22,7 @@
         "guides/9053.js": "419371fbe659bf6510d1b3a94169ad3410903fb98428ff7dea7329183ba1ab5c",
         "guides/9054.js": "90922f8851b7b3d963357fabd8e1368a9c0e7a8bdc2497e00e2f174ef642dee7",
         "guides/9057.js": "69ccc47867c0693613f13b69dc6f18abe290424299c146e605fce4e4da7c1319",
+        "guides/9070.js": "2eadaa4e8fff869dc74d720b997a87affd9caab51ab2151df37b16da70680f3e",
         "guides/9716.js": "410827b536cedc440613869b8eef437f85fdb4ea749680fb1ec13ea62e86c44a",
         "guides/9735.js": "cfb7b787378cae677b0ab8318baae7f39883e68ad2d48f050b1a798952bdf40a",
         "guides/9739.js": "4e1c71517969438f5344bebbd4e6c71d213b8f4f51aa646b4c813a63eab813e8",
@@ -37,12 +38,14 @@
         "guides/9982.js": "8a3c0a4fa1774c225edd8a56014f244b18b2d483c34e4da29521d5ae65c4d714",
         "guides/test.js": "860e26c44c999e9348a80f740ea2719b6e212259414a93043d79b60ff3d1a9ac",
         "index.js": "813aad409c957d66ea83ba636565ac168db05834bd3c8d5e34c0530e0a978921",
-        "lang/dungeons.js": "cc9e3876c4bc342acd3adce82c2131537afb425db56582ffefc680039ffdad5a",
+        "lang/dungeons.js": "163f294ba5244db1da78e0828810fd0334df6ddbdacc184459f4dff065fe3b97",
         "lang/strings.js": "f40f73fff2487a2bf09268a38d473e146d73dc0b44a5fb9408cc575692f5d820",
         "module.json": "ea9ff12defb3a68d824e6bea128851e6a0376a820eff49c41066048546b53778",
         "settings_migrator.js": "024e5cbfab76ec616700f50773a4a254d4dc920b51fa9bfebb09252080d9717a"
     },
     "defs": {
-        "S_ABNORMALITY_END": 1
+        "S_ABNORMALITY_BEGIN": 4,
+        "S_ABNORMALITY_END": 1,
+        "S_DUNGEON_EVENT_GAGE": 1
     }
 }
