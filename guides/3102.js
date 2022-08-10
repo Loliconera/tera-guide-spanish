@@ -13,18 +13,18 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 		// Ress bait / range check
 		"s-3102-1000-1107-0": [{ type: "text", sub_type: "message", message: "Spectral Throw (Bait)", message_ES: "Lanzamiento Espectral" },
-			{ type: "text", sub_type: "message", delay: 1400, message: "Dodge!", message_ES: "¡Iframe!" }
+			{ type: "text", sub_type: "message", delay: 1400, message: "Dodge!", message_ES: "Iframe" }
 		],
 		"s-3102-1000-2107-0": [{ type: "text", sub_type: "message", message: "Spectral Throw (Bait)", message_ES: "Lanzamiento Espectral" },
-			{ type: "text", sub_type: "message", delay: 1400, message: "Dodge!", message_ES: "¡Iframe!" }
+			{ type: "text", sub_type: "message", delay: 1400, message: "Dodge!", message_ES: "Iframe" }
 		],
 		// Basic attacks
-		"s-3102-1000-1103-0": [{ type: "text", sub_type: "message", message: "2 Hits | Bleed", message_ES: "2 Ataques | Sangrar" }],
-		"s-3102-1000-2103-0": [{ type: "text", sub_type: "message", message: "2 Hits | Bleed", message_ES: "2 Ataques | Sangrar" }],
-		"s-3102-1000-1113-0": [{ type: "text", sub_type: "message", message: "4 Hits Combo", message_ES: "Combo de 4 Ataques" }],
-		"s-3102-1000-2113-0": [{ type: "text", sub_type: "message", message: "4 Hits Combo", message_ES: "Combo de 4 Ataques" }],
-		"s-3102-1000-1105-0": [{ type: "text", sub_type: "message", message: "Uppercut | Stun", message_ES: "Ataque de Corte | Stun" }],
-		"s-3102-1000-2105-0": [{ type: "text", sub_type: "message", message: "Uppercut | Stun", message_ES: "Ataque de Corte | Stun" }],
+		"s-3102-1000-1103-0": [{ type: "text", sub_type: "message", message: "2 Hits | Bleed", message_ES: "2 Hits | Sangrar" }],
+		"s-3102-1000-2103-0": [{ type: "text", sub_type: "message", message: "2 Hits | Bleed", message_ES: "2 Hits | Sangrar" }],
+		"s-3102-1000-1113-0": [{ type: "text", sub_type: "message", message: "4 Hits Combo", message_ES: "4 Hits Combo" }],
+		"s-3102-1000-2113-0": [{ type: "text", sub_type: "message", message: "4 Hits Combo", message_ES: "4 Hits Combo" }],
+		"s-3102-1000-1105-0": [{ type: "text", sub_type: "message", message: "Uppercut | Stun", message_ES: "Corte | Stun" }],
+		"s-3102-1000-2105-0": [{ type: "text", sub_type: "message", message: "Uppercut | Stun", message_ES: "Corte | Stun" }],
 		"s-3102-1000-1106-0": [{ type: "text", sub_type: "message", message: "Stun", message_ES: "Stun" }],
 		"s-3102-1000-2106-0": [{ type: "text", sub_type: "message", message: "Stun", message_ES: "Stun" }],
 		// 120 > 114
@@ -37,16 +37,16 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 8, 425, 100, 3000] }
 		],
 		"s-3102-1000-1114-0": [
-			{ type: "text", sub_type: "message", delay: 140, message: "Dodge!", message_ES: "¡Iframe!" }
+			{ type: "text", sub_type: "message", delay: 140, message: "Dodge!", message_ES: "Iframe" }
 		],
 		"s-3102-1000-2114-0": [
-			{ type: "text", sub_type: "message", delay: 220, message: "Dodge!", message_ES: "¡Iframe!" }
+			{ type: "text", sub_type: "message", delay: 220, message: "Dodge!", message_ES: "Iframe" }
 		],
 		"s-3102-1000-1111-0": [{ type: "text", sub_type: "message", message: "Leap (Stun)", message_ES: "Salto (Stun)" },
-			{ type: "text", sub_type: "message", delay: 1800, message: "Dodge!", message_ES: "¡Iframe!" }
+			{ type: "text", sub_type: "message", delay: 1800, message: "Dodge!", message_ES: "Iframe" }
 		],
 		"s-3102-1000-2111-0": [{ type: "text", sub_type: "message", message: "Leap (Stun)", message_ES: "Salto (Stun)" },
-			{ type: "text", sub_type: "message", delay: 1750, message: "Dodge!", message_ES: "¡Iframe!" }
+			{ type: "text", sub_type: "message", delay: 1750, message: "Dodge!", message_ES: "Iframe" }
 		],
 		"s-3102-1000-1115-0": [
 			{ type: "text", sub_type: "message", message: "AOE Bombs (Gather)", message_ES: "AOE Bombas (Reunir)" }
@@ -55,7 +55,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", message: "AOE Bombs (Gather)", message_ES: "AOE Bombas (Reunir)" }
 		],
 		"s-3102-1000-1112-0": [
-			{ type: "text", sub_type: "message", message: "Front | Back Kick", message_ES: "Girar | Patada hacia atras" },
+			{ type: "text", sub_type: "message", message: "Front | Back Kick", message_ES: "Girar | Patada Atrás" },
 			{ type: "spawn", func: "vector", args: [553, 70, 110, 160, 350, 0, 3000] },
 			{ type: "spawn", func: "vector", args: [553, 290, 110, -160, 350, 0, 3000] },
 			{ type: "spawn", func: "point", args: [553, 210, 360, 0, 3000] },
@@ -67,7 +67,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "point", args: [553, 180, 340, 0, 3000] }
 		],
 		"s-3102-1000-2112-0": [
-			{ type: "text", sub_type: "message", message: "Front | Back Kick", message_ES: "Girar | Patada hacia atras" },
+			{ type: "text", sub_type: "message", message: "Front | Back Kick", message_ES: "Girar | Patada Atrás" },
 			{ type: "spawn", func: "vector", args: [553, 70, 110, 160, 350, 0, 3000] },
 			{ type: "spawn", func: "vector", args: [553, 290, 110, -160, 350, 0, 3000] },
 			{ type: "spawn", func: "point", args: [553, 210, 360, 0, 3000] },
@@ -104,7 +104,6 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", message: "Plague of Exhaustion", message_ES: "Plague", class_position: "priest" },
 			{ type: "text", sub_type: "message", message: "Regression", message_ES: "Regression", class_position: "mystic" }
 		],
-
 		// Right Foot
 		"s-3102-1000-1121-0": [
 			{ type: "text", sub_type: "message", message: "Pizza", message_ES: "Pizza" },
@@ -113,7 +112,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [912, 0, 50, 120, 450, 0, 4000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 50, 240, 450, 0, 4000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 50, 300, 450, 0, 4000] },
-			{ type: "text", sub_type: "message", delay: 1700, message: "Dodge!", message_ES: "¡Iframe!" }
+			{ type: "text", sub_type: "message", delay: 1700, message: "Dodge!", message_ES: "Iframe" }
 		],
 		"s-3102-1000-2121-0": [
 			{ type: "text", sub_type: "message", message: "Pizza", message_ES: "Pizza" },
@@ -122,7 +121,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [912, 0, 50, 120, 450, 0, 4000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 50, 240, 450, 0, 4000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 50, 300, 450, 0, 4000] },
-			{ type: "text", sub_type: "message", delay: 1720, message: "Dodge!", message_ES: "¡Iframe!" }
+			{ type: "text", sub_type: "message", delay: 1720, message: "Dodge!", message_ES: "Iframe" }
 		],
 		"s-3102-1000-1122-0": [{ type: "spawn", func: "marker", args: [false, 0, 200, 500, 2000, true, null] }],
 		"s-3102-1000-1123-0": [
@@ -144,7 +143,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [912, 0, 50, 120, 450, 0, 4000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 50, 240, 450, 0, 4000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 50, 300, 450, 0, 4000] },
-			{ type: "text", sub_type: "message", delay: 1550, message: "Dodge!", message_ES: "¡Iframe!" }
+			{ type: "text", sub_type: "message", delay: 1550, message: "Dodge!", message_ES: "Iframe" }
 		],
 		"s-3102-1000-2124-0": [
 			{ type: "text", sub_type: "message", message: "Pizza", message_ES: "Pizza" },
@@ -153,7 +152,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [912, 0, 50, 120, 450, 0, 4000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 50, 240, 450, 0, 4000] },
 			{ type: "spawn", func: "vector", args: [912, 0, 50, 300, 450, 0, 4000] },
-			{ type: "text", sub_type: "message", delay: 1550, message: "Dodge!", message_ES: "¡Iframe!" }
+			{ type: "text", sub_type: "message", delay: 1550, message: "Dodge!", message_ES: "Iframe" }
 		],
 		"s-3102-1000-1125-0": [{ type: "spawn", func: "marker", args: [false, 0, 200, 500, 3000, true, null] }],
 		"s-3102-1000-1126-0": [

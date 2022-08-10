@@ -18,6 +18,10 @@ module.exports = {
 	3201: {
 		"en": "Gossamer Vault (Hard)",
 		"es": "Gossamer Vault (Difícil)"
+	},
+	3101: {
+		"en": "Gossamer Vault",
+		"es": "Gossamer Vault"
 	},		
 	9027: {
 		"es": "Manaya's Core (Difícil)",
@@ -64,15 +68,27 @@ module.exports = {
 		"en": "Akeron's Inferno (Hard)"
 	},
 	9716: {
-		"es": "Sky Cruiser Endeavor <font color='#ffc800'>BETA</font>",
-		"en": "Sky Cruiser Endeavor <font color='#ffc800'>BETA</font>"
+		"es": "Sky Cruiser Endeavor",
+		"en": "Sky Cruiser Endeavor"
 	},
 	9916: {
-		"es": "Sky Cruiser Endeavor (Difícil) <font color='#ffc800'>BETA</font>",
-		"en": "Sky Cruiser Endeavor (Hard <font color='#ffc800'>BETA</font>"
+		"es": "Sky Cruiser Endeavor (Difícil)",
+		"en": "Sky Cruiser Endeavor (Hard)"
 	},
 	3036: {
 		"es": "Sky Cruiser (Extremo)",
 		"en": "Sky Cruiser (Extreme)"
 	},
+	3023: {
+		"es": " Akalath Quarantine",
+		"en": " Akalath Quarantine"
+	},
+	3102: {
+		"es": "Draakon Arena",
+		"en": "Draakon Arena"
+	},
+	3202: {
+		"es": "Draakon Arena (Difícil)",
+		"en": "Draakon Arena (Hard)"
+	},	
 };
