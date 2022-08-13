@@ -87,6 +87,7 @@ ID | Nombre de la dungeon | Idioma
 9070 | Manglemire | Español
 9716 | Sky Cruiser Endeavor | Español
 9720 | Antaroth's Abyss | Español
+9735 | RK-9 Kennel | Español
 9754 | Bathysmal Rise | Español
 9757 | Akeron's Inferno | Español
 9759 | Forsaken Island (Difícil) | Español
