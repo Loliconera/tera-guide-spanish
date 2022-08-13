@@ -33,7 +33,6 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		if (print_target) {
 			dispatch.clearTimeout(timer1);
 			print_target = false;
-
 			dispatch.setTimeout(() => print_target = true, 5000);
 
 			timer1 = dispatch.setTimeout(() => {

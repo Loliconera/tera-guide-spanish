@@ -92,7 +92,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-920-2000-1104-0": [{ type: "text", sub_type: "message", message: "Random Jump", message_ES: "Salto aleatorio" }],
 		"s-920-2000-1105-0": [{ type: "text", sub_type: "message", message: "Back Attack", message_ES: "Ataque Atrás" }],
 		"s-920-2000-1106-0": [
-			{ type: "text", sub_type: "message", message: "Spin Attack", message_ES: "Ataque Giratorio" },
+			{ type: "text", sub_type: "message", message: "Spin Attack", message_ES: "Girar" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 320, 0, 3500] }
 		],
 		"s-920-2000-1108-0": [{ type: "text", sub_type: "message", message: "Target Swing", message_ES: "Objetivo" }],
@@ -172,7 +172,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 12, 307, 1500, 4000] }
 		],
 		"s-920-3000-1113-0": [{ type: "text", sub_type: "message", message: "Front | Back Stun", message_ES: "Ataque Frontal | Stun atrás" }],
-		"s-920-3000-1115-0": [{ type: "text", sub_type: "message", message: "Spin Attack", message_ES: "Ataque Giratorio" }],
+		"s-920-3000-1115-0": [{ type: "text", sub_type: "message", message: "Spin Attack", message_ES: "Girar" }],
 		"s-920-3000-1120-0": [{ type: "text", sub_type: "message", message: "Energy Beam (Slow)", message_ES: "Rayo de Energia (Lento)" }],
 		"s-920-3000-1204-0": [{ type: "text", sub_type: "message", message: "Energy Beam (Fast)", message_ES: "Rayo de Energia (Rápido)" }],
 		// "s-920-3000-1202-0": [{ type: "text", sub_type: "message", message: "Spin or Front | Back Stun", message_ES: "Круговая или Ataque Frontal | Stun atrás" }],

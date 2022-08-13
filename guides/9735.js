@@ -1,4 +1,5 @@
 ﻿// RK-9 Kennel
+//
 // hecho por michengs
 
 module.exports = (dispatch, handlers, guide, lang) => {
@@ -9,13 +10,13 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "despawn_all" }
 		],
 		"s-735-1000-104-0": [{ type: "text", sub_type: "message", message: "Front Clip", message_ES: "Ataque frontal (Stun)" }],	
-		"s-735-1000-111-0": [{ type: "text", sub_type: "message", message: "Back + Front", message_ES: "Ataque atras + Adelante" }],
-		"s-735-1000-112-0": [{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque atras" }],
+		"s-735-1000-111-0": [{ type: "text", sub_type: "message", message: "Back + Front", message_ES: "Ataque Atrás + Adelante" }],
+		"s-735-1000-112-0": [{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque Atrás" }],
 		"s-735-1000-304-0": [{ type: "text", sub_type: "message", message: "Out", message_ES: "Salir" }],
 		"s-735-1000-305-0": [{ type: "text", sub_type: "message", message: "In", message_ES: "Entrar" }],
 		"s-735-1000-306-0": [{ type: "text", sub_type: "message", message: "Bombs", message_ES: "Bombas" }],
-		"s-735-1000-307-0": [{ type: "text", sub_type: "message", message: "Pull", message_ES: "Pull" }],
-		"s-735-1000-309-0": [{ type: "text", sub_type: "message", message: "Four Missile", message_ES: "Lanzamiento de 4 misiles" }],
+		"s-735-1000-307-0": [{ type: "text", sub_type: "message", message: "Pull", message_ES: "Jalar" }],
+		"s-735-1000-309-0": [{ type: "text", sub_type: "message", message: "Four Missile", message_ES: "Lanzar 4 misiles" }],
 
 		// 2 BOSS
 		"nd-735-2000": [
@@ -27,17 +28,17 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [true, 553, 0, 300, 12, 228, 0, 3000] }
 		],
 		"s-735-2000-105-0": [
-			{ type: "text", sub_type: "message", message: "360", message_ES: "Girar" },
+			{ type: "text", sub_type: "message", message: "360", message_ES: "Giro (Repeler)" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 278, 0, 4000] }
 		],
 		"s-735-2000-108-0": [
-			{ type: "text", sub_type: "message", message: "Back Swipe", message_ES: "Ataque Atras (Repeler)" },
+			{ type: "text", sub_type: "message", message: "Back Swipe", message_ES: "Ataque Atrás (Repeler)" },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 240, 380, 0, 2000] },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 120, 380, 0, 2000] }
 		],
 		"s-735-2000-301-0": [{ type: "text", sub_type: "message", message: "Throwing Orb", message_ES: "Lanzar Bombas" }],
 		"s-735-2000-304-0": [
-			{ type: "text", sub_type: "message", message: "Get Out", message_ES: "SALIR" },
+			{ type: "text", sub_type: "message", message: "Get Out", message_ES: "Salir" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 400, 0, 4000] }
 		],
 		"s-735-2007-201-0": [

@@ -63,7 +63,10 @@ ID | Nombre de la dungeon | Idioma
 3023 | Akalath Quarantine | Español
 3026 | Corrupted Skynest | Español
 3027 | Forbidden Arena [Hagufna] | Español
+3032 | Akalath Quarantine (Guide) | Español
+3034 | Rampaging RK-9 Kennel | Español
 3036 | Sky Cruiser (Difícil) | Español
+3037 | Bahaar's Sanctum (Guide) | Español
 3101 | Gossamer Vault | Español
 3102 | Draakon Arena | Español
 3103 | Forbidden Arena [Undying Warlord] | Español
@@ -83,13 +86,14 @@ ID | Nombre de la dungeon | Idioma
 9068 | Shadow Sanguinary (Difícil) | Español
 9070 | Manglemire | Español
 9716 | Sky Cruiser Endeavor | Español
-9735 | RK-9 Kennel | Español
+9720 | Antaroth's Abyss | Español
 9754 | Bathysmal Rise | Español
 9757 | Akeron's Inferno | Español
 9759 | Forsaken Island (Difícil) | Español
 9770 | Ruinous Manor | Español
 9780 | Velik's Hold (5-Person) | Español
 9781 | Velik's Sanctuary | Español
+9782 | Grotto of Lost Souls | Español
 9794 | Thaumetal Refinery | Español
 9916 | Sky Cruiser Endeavor (Difícil) | Español
 9920 | Antaroth's Abyss (Difícil) | Español
