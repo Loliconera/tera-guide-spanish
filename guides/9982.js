@@ -1,4 +1,4 @@
-// Grotto of Lost Souls (Hard)
+// Grotto of Lost Souls (Difícil)
 //
 // made by michengs / HSDN
 
@@ -118,7 +118,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, null, 600, 0, 5000] }
 		],
 		"s-982-2000-116-0": [
-			{ type: "text", sub_type: "message", message: "Front | Back", message_ES: "Ataque Frontal | Atras" },
+			{ type: "text", sub_type: "message", message: "Front | Back", message_ES: "Ataque Frontal | Atrás" },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 270, 500, 0, 5000] },
 			{ type: "spawn", func: "vector", args: [553, 180, 0, 90, 500, 0, 5000] }
 		],
@@ -205,17 +205,17 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 445, 155, 388, 6, 800, 2000, 6000] }
 		],
 		"s-982-3000-161-0": [
-			{ type: "text", sub_type: "message", message: "Front | Back", message_ES: "Ataque Frontal | Atras" },
+			{ type: "text", sub_type: "message", message: "Front | Back", message_ES: "Ataque Frontal | Atrás" },
 			{ type: "spawn", func: "circle", args: [true, 553, 180, 310, null, 290, 3000, 2500] }
 		],
 		"s-982-3000-162-0": [
-			{ type: "text", sub_type: "message", message: "Front | Back", message_ES: "Ataque Frontal | Atras" },
+			{ type: "text", sub_type: "message", message: "Front | Back", message_ES: "Ataque Frontal | Atrás" },
 			{ type: "spawn", func: "circle", args: [true, 553, 180, 310, null, 290, 3000, 2500] }
 		],
 		"s-982-3000-213-0": [{ type: "text", sub_type: "message", message: "Tail", message_ES: "Cola" }],
 		"s-982-3000-215-0": [{ type: "text", sub_type: "message", message: "Tail (Combo)", message_ES: "Cola (Combo)" }],
 		"s-982-3000-139-0": [
-			{ type: "text", sub_type: "message", message: "Wave + Wing (Left Safe)", message_ES: "Ola (Izquierda Segura)", check_func: () => print_wave },
+			{ type: "text", sub_type: "message", message: "Wave + Wing (Left Safe)", message_ES: "Ola + Ala (Izquierda Segura)", check_func: () => print_wave },
 			{ type: "despawn_all", tag: "wave" },
 			{ type: "spawn", func: "vector", args: [912, 90, 0, 0, 600, 100, 3000], tag: "wave" },
 			{ type: "spawn", func: "vector", args: [912, 270, 0, 180, 600, 100, 3000], tag: "wave" },
@@ -229,7 +229,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-982-3000-150-1": "s-982-3000-139-0",
 		"s-982-3000-150-2": "s-982-3000-139-0",
 		"s-982-3000-141-0": [
-			{ type: "text", sub_type: "message", message: "Wave + Wing (Right Safe)", message_ES: "Ola + Aleteo (Derecha Segura)", check_func: () => print_wave },
+			{ type: "text", sub_type: "message", message: "Wave + Wing (Right Safe)", message_ES: "Ola + Ala (Derecha Segura)", check_func: () => print_wave },
 			{ type: "despawn_all", tag: "wave" },
 			{ type: "spawn", func: "vector", args: [912, 90, 0, 0, 600, 100, 3000], tag: "wave" },
 			{ type: "spawn", func: "vector", args: [912, 270, 0, 180, 600, 100, 3000], tag: "wave" },

@@ -92,7 +92,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, null, 600, 0, 5000] }
 		],
 		"s-782-2000-116-0": [
-			{ type: "text", sub_type: "message", message: "Front | Back", message_ES: "Ataque Frontal | Atras" },
+			{ type: "text", sub_type: "message", message: "Front | Back", message_ES: "Ataque Frontal | Atrás" },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 270, 500, 0, 5000] },
 			{ type: "spawn", func: "vector", args: [553, 180, 0, 90, 500, 0, 5000] }
 		],
@@ -174,11 +174,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 445, 155, 388, 6, 800, 2000, 6000] }
 		],
 		"s-782-3000-161-0": [
-			{ type: "text", sub_type: "message", message: "Front | Back", message_ES: "Ataque Frontal | Atras" },
+			{ type: "text", sub_type: "message", message: "Front | Back", message_ES: "Ataque Frontal | Atrás" },
 			{ type: "spawn", func: "circle", args: [true, 553, 180, 310, null, 290, 3000, 2500] }
 		],
 		"s-782-3000-162-0": [
-			{ type: "text", sub_type: "message", message: "Front | Back", message_ES: "Ataque Frontal | Atras" },
+			{ type: "text", sub_type: "message", message: "Front | Back", message_ES: "Ataque Frontal | Atrás" },
 			{ type: "spawn", func: "circle", args: [true, 553, 180, 310, null, 290, 3000, 2500] }
 		],
 		"s-782-3000-213-0": [{ type: "text", sub_type: "message", message: "Tail", message_ES: "Cola" }],
