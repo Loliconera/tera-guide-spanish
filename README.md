@@ -2,11 +2,11 @@
 
 # Tera Guía Español
 
-## Parche 100.02 (x64)
+## Parche v92.04 y v100.02 (x64)
 
-### :star: Compatible con TERA Toolbox para el parche 100.02 (x64)
+### :star: Compatible con TERA Toolbox para el parche 92.04 y 100.02 (x64)
 
-* Totalmente compatible con [TERA Toolbox para el parche 100](https://github.com/tera-private-toolbox/tera-toolbox).
+* Totalmente compatible con [TERA Toolbox para el parche 92 y 100](https://github.com/tera-private-toolbox/tera-toolbox).
   Instalación automática desde la pestaña **Obtener más Mod**.
 
 ### :information_source: Instalación manual
@@ -17,13 +17,12 @@ Para que las guías funcionen, necesita obtener versiones compatibles de **libra
 1. Descargue **library** desde **[aquí](https://git.dev.hsdn.org/tera-v92/library/archive/master.zip)** y colóquelo en la carpeta **mods**.
 2. Descargue **tera-guide-core** desde **[aquí](https://github.com/hsdn/tera-guide-core/archive/refs/heads/master.zip)** y colóquelo en la carpeta **mods** llamada **"tera-guide-core"**,
     no "tera-guide-core-master".
-3. Descargue **tera-guide-spanish** desde **[aquí](https://github.com/Loliconera/tera-guide-spanish/archive/refs/heads/master.zip)** y colóquelo en la carpeta **mods**.
 
 ---
 
 ## Descripción
 
-Un módulo de guía para TERA traducido al español. Muestra mensajes en la pantalla y dibuja zonas de ataques y mecánicas de jefes (también admite mensajes de texto a voz).
+Un módulo de guía para TERA traducido al español. Muestra mensajes en la pantalla y dibuja zonas de ataques y mecánicas de jefes (también admite mensajes de texto a voz). Idiomas disponibles en Español y Ingles (detecta automáticamente).
 
 ### Otras traducciones
 
@@ -32,8 +31,8 @@ Un módulo de guía para TERA traducido al español. Muestra mensajes en la pant
 
 ## Dependencias
 
-* **library** - <https://github.com/tera-private-toolbox/library> (v100.02)
-* **tera-guide-core** - <https://github.com/hsdn/tera-guide-core> (v100.02)
+* **library** - <https://github.com/tera-private-toolbox/library>
+* **tera-guide-core** - <https://github.com/hsdn/tera-guide-core>
 
 Al usar TeraToolbox, todas las dependencias se instalarán automáticamente.
 
@@ -60,79 +59,79 @@ Toolbox(/8) | Descripción del comando
 
 ID | Nombre de la dungeon | Idioma
 --- | --- | ---
-3023 | Akalath Quarantine | Español
-3026 | Corrupted Skynest | Español
-3027 | Forbidden Arena [Hagufna] | Español
-3032 | Akalath Quarantine (Guide) | Español
-3034 | Rampaging RK-9 Kennel | Español
-3036 | Sky Cruiser (Difícil) | Español
-3037 | Bahaar's Sanctum (Guide) | Español
-3101 | Gossamer Vault | Español
-3102 | Draakon Arena | Español
-3103 | Forbidden Arena [Undying Warlord] | Español
-3126 | Corrupted Skynest (Difícil) | Español
-3201 | Gossamer Vault (Difícil) | Español
-3202 | Draakon Arena (Difícil) | Español
-3203 | Forbidden Arena [Nightmare Undying Warlord] | Español
-3739 | Red Refuge | Español
-7011 | Shadow of the Gutrends (Guardian) | Español
-7015 | Escape from Balder's Refuge (Guardian) | Español
-9027 | Manaya's Core (Difícil) | Español
-9044 | Bahaar's Sanctum | Español
-9054 | Bathysmal Rise (Difícil) | Español
-9056 | Timescape (Difícil) | Español
-9057 | Akeron's Inferno (Difícil) | Español
-9067 | Demokron Factory (Difícil) | Español
-9068 | Shadow Sanguinary (Difícil) | Español
-9070 | Manglemire | Español
-9716 | Sky Cruiser Endeavor | Español
-9720 | Antaroth's Abyss | Español
-9735 | RK-9 Kennel | Español
-9754 | Bathysmal Rise | Español
-9757 | Akeron's Inferno | Español
-9759 | Forsaken Island (Difícil) | Español
-9770 | Ruinous Manor | Español
-9780 | Velik's Hold (5-Person) | Español
-9781 | Velik's Sanctuary | Español
-9782 | Grotto of Lost Souls | Español
-9794 | Thaumetal Refinery | Español
-9916 | Sky Cruiser Endeavor (Difícil) | Español
-9920 | Antaroth's Abyss (Difícil) | Español
-9935 | RK-9 Kennel (Difícil) | Español
-9970 | Ruinous Manor (Difícil) | Español
-9981 | Velik's Sanctuary (Difícil) | Español
-9982 | Grotto of Lost Souls (Difícil) | Español
-9983 | Dark Reach Citadel (Difícil) | Español
+[3023](/guides/3023.js) | Akalath Quarantine | Español
+[3026](/guides/3026.js) | Corrupted Skynest | Español
+[3027](/guides/3027.js) | Forbidden Arena [Hagufna] | Español
+[3032](/guides/3032.js) | Akalath Quarantine (Guide) | Español
+[3034](/guides/3034.js) | Rampaging RK-9 Kennel | Español
+[3036](/guides/3036.js) | Sky Cruiser (Difícil) | Español
+[3037](/guides/3037.js) | Bahaar's Sanctum (Guide) | Español
+[3101](/guides/3101.js) | Gossamer Vault | Español
+[3102](/guides/3102.js) | Draakon Arena | Español
+[3103](/guides/3103.js) | Forbidden Arena [Undying Warlord] | Español
+[3126](/guides/3126.js) | Corrupted Skynest (Difícil) | Español
+[3201](/guides/3201.js) | Gossamer Vault (Difícil) | Español
+[3202](/guides/3202.js) | Draakon Arena (Difícil) | Español
+[3203](/guides/3203.js) | Forbidden Arena [Nightmare Undying Warlord] | Español
+[3739](/guides/3739.js) | Red Refuge | Español
+[7011](/guides/7011.js) | Shadow of the Gutrends (Guardian) | Español
+[7015](/guides/7015.js) | Escape from Balder's Refuge (Guardian) | Español
+[9027](/guides/9027.js) | Manaya's Core (Difícil) | Español
+[9044](/guides/9044.js) | Bahaar's Sanctum | Español
+[9054](/guides/9054.js) | Bathysmal Rise (Difícil) | Español
+[9056](/guides/9056.js) | Timescape (Difícil) | Español
+[9057](/guides/9057.js) | Akeron's Inferno (Difícil) | Español
+[9067](/guides/9067.js) | Demokron Factory (Difícil) | Español
+[9068](/guides/9068.js) | Shadow Sanguinary (Difícil) | Español
+[9070](/guides/9070.js) | Manglemire | Español
+[9716](/guides/9716.js) | Sky Cruiser Endeavor | Español
+[9720](/guides/9720.js) | Antaroth's Abyss | Español
+[9735](/guides/9735.js) | RK-9 Kennel | Español
+[9754](/guides/9754.js) | Bathysmal Rise | Español
+[9757](/guides/9757.js) | Akeron's Inferno | Español
+[9759](/guides/9759.js) | Forsaken Island (Difícil) | Español
+[9770](/guides/9770.js) | Ruinous Manor | Español
+[9780](/guides/9780.js) | Velik's Hold (5-Person) | Español
+[9781](/guides/9781.js) | Velik's Sanctuary | Español
+[9782](/guides/9782.js) | Grotto of Lost Souls | Español
+[9794](/guides/9794.js) | Thaumetal Refinery | Español
+[9916](/guides/9916.js) | Sky Cruiser Endeavor (Difícil) | Español
+[9920](/guides/9920.js) | Antaroth's Abyss (Difícil) | Español
+[9935](/guides/9935.js) | RK-9 Kennel (Difícil) | Español
+[9970](/guides/9970.js) | Ruinous Manor (Difícil) | Español
+[9981](/guides/9981.js) | Velik's Sanctuary (Difícil) | Español
+[9982](/guides/9982.js) | Grotto of Lost Souls (Difícil) | Español
+[9983](/guides/9983.js) | Dark Reach Citadel (Difícil) | Español
 
 ## Configuración de Mensajes
 
-* En la pantalla (en la parte inferior) y mensajes de chat, si el parámetro **lNotice** está *activado*, todos los mensajes se enviaran al canal **Notice**. (**Mensajes en Chat Notice**).   
+* En la pantalla (en la parte inferior) y mensajes de chat, si el parámetro **lNotice** está *activado*, todos los mensajes se enviaran al canal **Notice**. (**Mensajes en Chat Notice**).<br>
     <img src="https://i.imgur.com/FFZSr5f.png" alt="drawing" width="435"/>
 
-* En la pantalla (en la parte superior), si el parámetro **lNotice** está *desactivado*, todos los mensajes se mostraran en la parte superior de la pantalla. (**Mensajes en Pantalla**).   
+* En la pantalla (en la parte superior), si el parámetro **lNotice** está *desactivado*, todos los mensajes se mostraran en la parte superior de la pantalla. (**Mensajes en Pantalla**).<br>
     <img src="https://i.imgur.com/e4s2iVE.png" alt="drawing" width="435"/>
 
-* Cuando el parámetro **gNotice** está *activado*, todos los mensajes se enviarán al canal **Party**. (**Mensaje en Chat Party**).   
+* Cuando el parámetro **gNotice** está *activado*, todos los mensajes se enviarán al canal **Party**. (**Mensaje en Chat Party**).<br>
     <img src="https://i.imgur.com/5S4J5S0.png" alt="drawing" width="435"/>
 
-* Cuando el parámetro **stream** está *activado*, todos los mensajes de texto se enviarán solamente al canal de chat **Toolbox(/8)**, pero se reproducirán los mensajes de texto a voz TTS. (**Mensajes en Chat Toolbox**).   
+* Cuando el parámetro **stream** está *activado*, todos los mensajes de texto se enviarán solamente al canal de chat **Toolbox(/8)**, pero se reproducirán los mensajes de texto a voz TTS. (**Mensajes en Chat Toolbox**).<br>
     <img src="https://i.imgur.com/SOUET0X.png" alt="drawing" width="435"/>
   
-* Escriba el comando **!guia help** para mostrar una lista completa de todos los comandos soportados y una lista de colores de textos en pantalla.   
+* Escriba el comando **!guia help** para mostrar una lista completa de todos los comandos soportados y una lista de colores de textos en pantalla.<br>
     <img src="https://i.imgur.com/E35hNsV.png" alt="drawing" width="435"/>
 
-* Cuando ingresa a una dungeon el modulo le notificará con un mensaje de bienvenida, donde tambien le mostrara informacion adicional para el uso de comandos.   
+* Cuando ingresa a una dungeon el modulo le notificará con un mensaje de bienvenida, donde tambien le mostrara informacion adicional para el uso de comandos.<br>
     <img src="https://i.imgur.com/CpBgCRe.png" alt="drawing" width="498"/>
 
-* Para desactivar o activar los mensajes de texto a voz TTS, use el comando **!guia voice**.   
+* Para desactivar o activar los mensajes de texto a voz TTS, use el comando **!guia voice**.<br>
 
-* Para cambiar el género de la a voz TTS, use el comando **!guia `male`/`female`**.   
+* Para cambiar el género de la a voz TTS, use el comando **!guia `male`/`female`**.<br>
 
-* Para cambiar a otro idioma, use el comando **!guia `auto`/`en`/`es`**.   
+* Para cambiar a otro idioma, use el comando **!guia `auto`/`en`/`es`**.<br>
 
 ## Interfaz GUI
 
-* Escriba el comando **!guia gui** para mostrar una interfaz gráfica del modulo, puede tambien cambiar las configuraciones básicas.   
+* Escriba el comando **!guia gui** para mostrar una interfaz gráfica del modulo, puede tambien cambiar las configuraciones básicas.<br>
     <img src="https://i.imgur.com/qBsDz00.png" alt="drawing" width="498"/>
 
 ## Más información
