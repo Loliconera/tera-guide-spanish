@@ -143,7 +143,6 @@ module.exports = function MigrateSettings(from_ver, to_ver, settings) {
 				
 			case 1.22: // p100 Menma's Tera
 				remove([
-					"guides/3036.js",
 					"guides/3042.js",
 					"guides/3047.js",
 					"guides/3043.js",
@@ -153,7 +152,6 @@ module.exports = function MigrateSettings(from_ver, to_ver, settings) {
 					"guides/3108.js",
 					"guides/3109.js",
 					"guides/3209.js",
-					"guides/9068.js"
 				]);
 				break;				
 		}
