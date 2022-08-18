@@ -59,13 +59,15 @@ Toolbox(/8) | Descripción del comando
 
 ID | Nombre de la dungeon | Idioma
 --- | --- | ---
+[3020](/guides/3020.js) | Sea of Honor | Español
 [3023](/guides/3023.js) | Akalath Quarantine | Español
 [3026](/guides/3026.js) | Corrupted Skynest | Español
 [3027](/guides/3027.js) | Forbidden Arena [Hagufna] | Español
-[3032](/guides/3032.js) | Akalath Quarantine (Guide) | Español
+[3030](/guides/3030.js) | Commander's Residence | Español
+[3032](/guides/3032.js) | Akalath Quarantine (Training) | Español
 [3034](/guides/3034.js) | Rampaging RK-9 Kennel | Español
-[3036](/guides/3036.js) | Sky Cruiser (Difícil) | Español
-[3037](/guides/3037.js) | Bahaar's Sanctum (Guide) | Español
+[3036](/guides/3036.js) | Sky Cruiser (Extremo) | Español
+[3037](/guides/3037.js) | Bahaar's Sanctum (Training) | Español
 [3101](/guides/3101.js) | Gossamer Vault | Español
 [3102](/guides/3102.js) | Draakon Arena | Español
 [3103](/guides/3103.js) | Forbidden Arena [Undying Warlord] | Español
@@ -73,11 +75,11 @@ ID | Nombre de la dungeon | Idioma
 [3201](/guides/3201.js) | Gossamer Vault (Difícil) | Español
 [3202](/guides/3202.js) | Draakon Arena (Difícil) | Español
 [3203](/guides/3203.js) | Forbidden Arena [Nightmare Undying Warlord] | Español
-[3739](/guides/3739.js) | Red Refuge | Español
 [7011](/guides/7011.js) | Shadow of the Gutrends (Guardian) | Español
 [7015](/guides/7015.js) | Escape from Balder's Refuge (Guardian) | Español
 [9027](/guides/9027.js) | Manaya's Core (Difícil) | Español
 [9044](/guides/9044.js) | Bahaar's Sanctum | Español
+[9053](/guides/9053.js) | Kezzel's Gorge | Español
 [9054](/guides/9054.js) | Bathysmal Rise (Difícil) | Español
 [9056](/guides/9056.js) | Timescape (Difícil) | Español
 [9057](/guides/9057.js) | Akeron's Inferno (Difícil) | Español
@@ -87,6 +89,7 @@ ID | Nombre de la dungeon | Idioma
 [9716](/guides/9716.js) | Sky Cruiser Endeavor | Español
 [9720](/guides/9720.js) | Antaroth's Abyss | Español
 [9735](/guides/9735.js) | RK-9 Kennel | Español
+[9739](/guides/9739.js) | Red Refuge | Español
 [9754](/guides/9754.js) | Bathysmal Rise | Español
 [9757](/guides/9757.js) | Akeron's Inferno | Español
 [9759](/guides/9759.js) | Forsaken Island (Difícil) | Español
