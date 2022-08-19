@@ -1,7 +1,7 @@
 {
     "files": {
         "LICENSE": "7fbe35da1c4792b039cd14af60048ea6813b743bd6e05ecef7a68023b50f5a43",
-        "README.md": "72640e23e26ca6b79ea71a95dc3c66a48dbd6c66bb6cee5cb521c43269cc2221",
+        "README.md": "06e0d48d9a856ea1c6d8f373a6faa74339b87ed291b2158ab075c3fac7e7ee5b",
         "guides/3020.js": "ffc8d55b1deec2d3251a735f94059145519e948332a2ab5a31da7f9cb4c6391a",
         "guides/3023.js": "71f5990e0455375944f3bcf6cafb122d8a421494b26d9781763e5ba1a2dea055",
         "guides/3026.js": "74cf4cbca6d0e8627ad051cc812597d28b8fc5a5ad1bffad479d0425e98f1da9",
@@ -26,6 +26,7 @@
         "guides/9054.js": "90922f8851b7b3d963357fabd8e1368a9c0e7a8bdc2497e00e2f174ef642dee7",
         "guides/9056.js": "5e4674573088888073aff1fa1e41e399207e762bb3a0d515fea4c7c84a5471e9",
         "guides/9057.js": "69ccc47867c0693613f13b69dc6f18abe290424299c146e605fce4e4da7c1319",
+        "guides/9066.js": "59e1eead83223798422c9680158bb68b5a4f1be3019ae237a890784512127776",
         "guides/9067.js": "017188b174dea5addbf3c81977f144c9d6ab2fd9ea59db419298af4d768d1c9a",
         "guides/9068.js": "8bde8c3c2a0af403549138f23ad011ca24719b004897d273a5da10858b754d3b",
         "guides/9070.js": "2eadaa4e8fff869dc74d720b997a87affd9caab51ab2151df37b16da70680f3e",
@@ -49,7 +50,7 @@
         "guides/9983.js": "7867962b6d631042de784612757c64652edae9649aba5df4cb0b18508a1e88f3",
         "guides/test.js": "860e26c44c999e9348a80f740ea2719b6e212259414a93043d79b60ff3d1a9ac",
         "index.js": "813aad409c957d66ea83ba636565ac168db05834bd3c8d5e34c0530e0a978921",
-        "lang/dungeons.js": "480dceaadde30b95925c9992ce396c6ffd65b4269c5b7f0a804d52299e12834d",
+        "lang/dungeons.js": "f59aef5b8fc77e7be94d80f5174884514df68212afe9db9a93b32c5d3b343777",
         "lang/strings.js": "f40f73fff2487a2bf09268a38d473e146d73dc0b44a5fb9408cc575692f5d820",
         "module.json": "ea9ff12defb3a68d824e6bea128851e6a0376a820eff49c41066048546b53778",
         "settings_migrator.js": "9322e6a179c931e3d84900c8bc51492885a223333cd2ddb25b8bb9f44390a394"

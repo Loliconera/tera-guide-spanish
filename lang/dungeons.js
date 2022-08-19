@@ -95,6 +95,10 @@ module.exports = {
 		"es": "Akeron's Inferno (Difícil)",
 		"en": "Akeron's Inferno (Hard)"
 	},
+	9066: {
+		"es": "Demon's Wheel",
+		"en": "Demon's Wheel"
+	},	
 	9067: {
 		"es": "Demokron Factory (Difícil)",
 		"en": "Demokron Factory (Hard)"

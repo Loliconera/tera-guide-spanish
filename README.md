@@ -83,6 +83,7 @@ ID | Nombre de la dungeon | Idioma
 [9054](/guides/9054.js) | Bathysmal Rise (Difícil) | Español
 [9056](/guides/9056.js) | Timescape (Difícil) | Español
 [9057](/guides/9057.js) | Akeron's Inferno (Difícil) | Español
+[9066](/guides/9066.js) | Demon's Wheel | Español
 [9067](/guides/9067.js) | Demokron Factory (Difícil) | Español
 [9068](/guides/9068.js) | Shadow Sanguinary (Difícil) | Español
 [9070](/guides/9070.js) | Manglemire | Español
