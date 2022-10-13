@@ -171,6 +171,10 @@ module.exports = {
 		"es": "RK-9 Kennel (Difícil)",
 		"en": "RK-9 Kennel (Hard)"
 	},
+	3034: {
+		"es": "Rampaging RK-9 Kennel",
+		"en": "Rampaging RK-9 Kennel"
+	},
 	9970: {
 		"es": "Ruinous Manor (Difícil)",
 		"en": "Ruinous Manor (Hard)"
