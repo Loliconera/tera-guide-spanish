@@ -46,7 +46,7 @@ module.exports.general = {
 		stream: "Modo Streamer",
 		language: "Selección de idioma",
 		voice: "Género de voz",
-		rate: "Velocidad de Voz",
+		rate: "Velocidad de voz",
 		color: "Cambiar el color",
 		dungeons: "Ajustes de Dungeons",
 		verbose: "Mensajes",
