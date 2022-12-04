@@ -11,14 +11,14 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "despawn_all" }
 		],
 
-		// Ress bait / range check
+		// Ress cebo / Verificación de rango
 		"s-3202-1000-1107-0": [{ type: "text", sub_type: "message", message: "Spectral Throw (Bait)", message_ES: "Lanzamiento Espectral" },
 			{ type: "text", sub_type: "message", delay: 1400, message: "Dodge!", message_ES: "Iframe" }
 		],
 		"s-3202-1000-2107-0": [{ type: "text", sub_type: "message", message: "Spectral Throw (Bait)", message_ES: "Lanzamiento Espectral" },
 			{ type: "text", sub_type: "message", delay: 1400, message: "Dodge!", message_ES: "Iframe" }
 		],
-		// Basic attacks
+		// Ataques básicos
 		"s-3202-1000-1103-0": [{ type: "text", sub_type: "message", message: "2 Hits | Bleed", message_ES: "2 Hits | Sangrar" }],
 		"s-3202-1000-2103-0": [{ type: "text", sub_type: "message", message: "2 Hits | Bleed", message_ES: "2 Hits | Sangrar" }],
 		"s-3202-1000-1113-0": [{ type: "text", sub_type: "message", message: "4 Hits Combo", message_ES: "4 Hits Combo" }],
@@ -104,23 +104,27 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", message: "Plague of Exhaustion", message_ES: "Plague", class_position: "priest" },
 			{ type: "text", sub_type: "message", message: "Regression", message_ES: "Regression", class_position: "mystic" }
 		],
-		// Right Foot (outward waves)
+		// Pie derecho (ondas hacia afuera)
 		"s-3202-1000-1121-0": [
 			{ type: "text", sub_type: "message", message: "Pizza | Inward Waves", message_ES: "Pizza + Ola Adentro" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 550, 0, 3000] },
-			{ type: "spawn", func: "vector", args: [912, 0, 50, 60, 450, 0, 4000] },
-			{ type: "spawn", func: "vector", args: [912, 0, 50, 120, 450, 0, 4000] },
-			{ type: "spawn", func: "vector", args: [912, 0, 50, 240, 450, 0, 4000] },
-			{ type: "spawn", func: "vector", args: [912, 0, 50, 300, 450, 0, 4000] },
+			{ type: "spawn", func: "marker", args: [false, 80, 300, 0, 3500, true, null] },
+			{ type: "spawn", func: "marker", args: [false, 280, 300, 0, 3500, true, null] },
+			{ type: "spawn", func: "vector", args: [912, 0, 50, 60, 450, 0, 3500] },
+			{ type: "spawn", func: "vector", args: [912, 0, 50, 120, 450, 0, 3500] },
+			{ type: "spawn", func: "vector", args: [912, 0, 50, 240, 450, 0, 3500] },
+			{ type: "spawn", func: "vector", args: [912, 0, 50, 300, 450, 0, 3500] },
 			{ type: "text", sub_type: "message", delay: 1700, message: "Dodge!", message_ES: "Iframe" }
 		],
 		"s-3202-1000-2121-0": [
 			{ type: "text", sub_type: "message", message: "Pizza | Inward Waves", message_ES: "Pizza + Ola Adentro" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 550, 0, 3000] },
-			{ type: "spawn", func: "vector", args: [912, 0, 50, 60, 450, 0, 4000] },
-			{ type: "spawn", func: "vector", args: [912, 0, 50, 120, 450, 0, 4000] },
-			{ type: "spawn", func: "vector", args: [912, 0, 50, 240, 450, 0, 4000] },
-			{ type: "spawn", func: "vector", args: [912, 0, 50, 300, 450, 0, 4000] },
+			{ type: "spawn", func: "marker", args: [false, 80, 300, 0, 3500, true, null] },
+			{ type: "spawn", func: "marker", args: [false, 280, 300, 0, 3500, true, null] },
+			{ type: "spawn", func: "vector", args: [912, 0, 50, 60, 450, 0, 3500] },
+			{ type: "spawn", func: "vector", args: [912, 0, 50, 120, 450, 0, 3500] },
+			{ type: "spawn", func: "vector", args: [912, 0, 50, 240, 450, 0, 3500] },
+			{ type: "spawn", func: "vector", args: [912, 0, 50, 300, 450, 0, 3500] },
 			{ type: "text", sub_type: "message", delay: 1720, message: "Dodge!", message_ES: "Iframe" }
 		],
 		"s-3202-1000-1122-0": [{ type: "spawn", func: "marker", args: [false, 0, 200, 500, 2000, true, null] }],
@@ -145,23 +149,27 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 8, 390, 0, 3000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 6, 620, 0, 3000] }
 		],
-		// Left Foot (inward waves)
+		// Pie izquierdo (ondas hacia adentro)
 		"s-3202-1000-1124-0": [
 			{ type: "text", sub_type: "message", message: "Pizza | Outward Waves", message_ES: "Pizza + Ola Afuera" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 550, 0, 3000] },
-			{ type: "spawn", func: "vector", args: [912, 0, 50, 60, 450, 0, 4000] },
-			{ type: "spawn", func: "vector", args: [912, 0, 50, 120, 450, 0, 4000] },
-			{ type: "spawn", func: "vector", args: [912, 0, 50, 240, 450, 0, 4000] },
-			{ type: "spawn", func: "vector", args: [912, 0, 50, 300, 450, 0, 4000] },
+			{ type: "spawn", func: "marker", args: [false, 80, 300, 0, 3500, true, null] },
+			{ type: "spawn", func: "marker", args: [false, 280, 300, 0, 3500, true, null] },
+			{ type: "spawn", func: "vector", args: [912, 0, 50, 60, 450, 0, 3500] },
+			{ type: "spawn", func: "vector", args: [912, 0, 50, 120, 450, 0, 3500] },
+			{ type: "spawn", func: "vector", args: [912, 0, 50, 240, 450, 0, 3500] },
+			{ type: "spawn", func: "vector", args: [912, 0, 50, 300, 450, 0, 3500] },
 			{ type: "text", sub_type: "message", delay: 1550, message: "Dodge!", message_ES: "Iframe" }
 		],
 		"s-3202-1000-2124-0": [
 			{ type: "text", sub_type: "message", message: "Pizza | Outward Waves", message_ES: "Pizza + Ola Afuera" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 550, 0, 3000] },
-			{ type: "spawn", func: "vector", args: [912, 0, 50, 60, 450, 0, 4000] },
-			{ type: "spawn", func: "vector", args: [912, 0, 50, 120, 450, 0, 4000] },
-			{ type: "spawn", func: "vector", args: [912, 0, 50, 240, 450, 0, 4000] },
-			{ type: "spawn", func: "vector", args: [912, 0, 50, 300, 450, 0, 4000] },
+			{ type: "spawn", func: "marker", args: [false, 80, 300, 0, 3500, true, null] },
+			{ type: "spawn", func: "marker", args: [false, 280, 300, 0, 3500, true, null] },
+			{ type: "spawn", func: "vector", args: [912, 0, 50, 60, 450, 0, 3500] },
+			{ type: "spawn", func: "vector", args: [912, 0, 50, 120, 450, 0, 3500] },
+			{ type: "spawn", func: "vector", args: [912, 0, 50, 240, 450, 0, 3500] },
+			{ type: "spawn", func: "vector", args: [912, 0, 50, 300, 450, 0, 3500] },
 			{ type: "text", sub_type: "message", delay: 1550, message: "Dodge!", message_ES: "Iframe" }
 		],
 		"s-3202-1000-1125-0": [{ type: "spawn", func: "marker", args: [false, 0, 200, 500, 3000, true, null] }],

@@ -14,7 +14,7 @@
 El módulo Tera-Guía y [tera-guide-core](https://github.com/hsdn/tera-guide-core) ya son compatibles con este parche.
 Para que las guías funcionen, necesita obtener versiones compatibles de **library** y **tera-guide-core**:
 
-1. Descargue **library** desde **[aquí](https://git.dev.hsdn.org/tera-v92/library/archive/master.zip)** y colóquelo en la carpeta **mods**.
+1. Descargue **library** desde **[aquí](https://github.com/tera-private-toolbox/library/archive/refs/heads/master.zip)** y colóquelo en la carpeta **mods**.
 2. Descargue **tera-guide-core** desde **[aquí](https://github.com/hsdn/tera-guide-core/archive/refs/heads/master.zip)** y colóquelo en la carpeta **mods** llamada **"tera-guide-core"**,
     no "tera-guide-core-master".
 
