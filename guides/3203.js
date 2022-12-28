@@ -113,7 +113,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 12, 250, 0, 5000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 8, 490, 0, 5000] }
 		],
-		"s-3203-1000-155-0": [{ type: "text", sub_type: "message", delay: 400, message: "Dodge", message_ES: "Iframe" }],
+		"s-3203-1000-155-0": [{ type: "text", sub_type: "message", delay: 50, message: "Dodge", message_ES: "Iframe" }],
 
 		// Stun 142 148 129
 		"s-3203-1000-142-0": [{ type: "text", sub_type: "message", message: "Stun | Back Wave", message_ES: "Stun | Olas hacia tras" }],

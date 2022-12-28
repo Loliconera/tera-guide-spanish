@@ -5,7 +5,7 @@
 module.exports = (dispatch, handlers, guide, lang) => {
 	return {
 		"s-467-46703-213-0": [{ type: "text", sub_type: "message", message: "Back attack", message_ES: "Ataque Atrás" }],
-		"s-467-46704-205-0": [{ type: "text", sub_type: "message", delay:2500, message:  "Pushback", message_ES: "Empujar" }],
+		"s-467-46704-205-0": [{ type: "text", sub_type: "message", delay: 2500, message: "Pushback", message_ES: "Empujar" }],
 		"s-467-46704-208-0": [
 			{ type: "text", sub_type: "message", message: "Laser", message_ES: "Láser" },
 			{ type: "text", sub_type: "message", delay: 13000, message: "Pushback", message_ES: "Empujar" }
@@ -16,11 +16,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", delay: 21000, message: "Pushback", message_ES: "Empujar" }
 		],
 		"s-467-46704-211-0": [
-			{ type: "text", sub_type: "message", message: "Wave", message_ES: "Una Ola" },
+			{ type: "text", sub_type: "message", message: "Outward Wave", message_ES: "Ola afuera" },
 			{ type: "text", sub_type: "message", delay: 3000, message: "Dodge", message_ES: "Iframe!" }
 		],
 		"s-467-46704-212-0": [
-			{ type: "text", sub_type: "message", message: "Waves", message_ES: "Olas" },
+			{ type: "text", sub_type: "message", message: "Inward Wave", message_ES: "Ola adentro" },
 			{ type: "text", sub_type: "message", delay: 3000, message: "Dodge", message_ES: "Iframe!" }
 		],
 		"s-467-46704-213-0": [
