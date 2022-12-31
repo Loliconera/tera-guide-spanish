@@ -111,6 +111,10 @@ module.exports = {
 		"es": "Manglemire",
 		"en": "Manglemire"
 	},
+	9710: {
+		"es": "Broken Prison",
+		"en": "Broken Prison"
+	},
 	9716: {
 		"es": "Sky Cruiser Endeavor (Difícil)",
 		"en": "Sky Cruiser Endeavor (Hard)"

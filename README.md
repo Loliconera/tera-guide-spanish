@@ -87,6 +87,7 @@ ID | Nombre de la dungeon | Idioma
 [9067](/guides/9067.js) | Demokron Factory (Difícil) | Español
 [9068](/guides/9068.js) | Shadow Sanguinary (Difícil) | Español
 [9070](/guides/9070.js) | Manglemire | Español
+[9710](/guides/9710.js) | Broken Prison | Español
 [9716](/guides/9716.js) | Sky Cruiser Endeavor | Español
 [9720](/guides/9720.js) | Antaroth's Abyss | Español
 [9735](/guides/9735.js) | RK-9 Kennel | Español
