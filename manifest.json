@@ -29,7 +29,7 @@
         "guides/9066.js": "59e1eead83223798422c9680158bb68b5a4f1be3019ae237a890784512127776",
         "guides/9067.js": "3ffa81e9a9ab623f92dd16151af84587881448a6130fb2213c1f05c2f4b39926",
         "guides/9068.js": "8bde8c3c2a0af403549138f23ad011ca24719b004897d273a5da10858b754d3b",
-        "guides/9070.js": "2d2d2bb03ce0140654dfc5c32bb458e2ba61af84c087d24b4a57424b00d2100c",
+        "guides/9070.js": "aa89654373ea433877b4d10a2487d35f3152f7acc8bd86f5a2c367949bf9b895",
         "guides/9710.js": "9f425144f6f74f6e9b0163dbd9be5bacfecc796808e38262d1ca5523d65734ff",
         "guides/9716.js": "410827b536cedc440613869b8eef437f85fdb4ea749680fb1ec13ea62e86c44a",
         "guides/9720.js": "aad941580d1dc26d9bdc7d47d6d30efdbd30bae3d85cb5b99f67d4fd9d50c98f",
@@ -59,6 +59,6 @@
     "defs": {
         "S_ABNORMALITY_BEGIN": 4,
         "S_ABNORMALITY_END": 1,
-        "S_DUNGEON_EVENT_GAGE": 1
+        "S_DUNGEON_EVENT_GAGE": 2
     }
 }
