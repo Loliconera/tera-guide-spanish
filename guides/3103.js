@@ -1,5 +1,6 @@
 // Forbidden Arena [Undying Warlord]
-// hecho por HSDN
+//
+// made by HSDN
 
 module.exports = (dispatch, handlers, guide, lang) => {
 	let timer1 = null;
@@ -24,7 +25,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 				handlers.text({
 					sub_type: "message",
 					message: "Haymaker | Back Kick",
-					message_ES: "Puñetazo | Patada hacia atrás"
+					message_ES: "Puñetazo | Patada Atrás"
 				});
 			}
 		}
@@ -40,20 +41,17 @@ module.exports = (dispatch, handlers, guide, lang) => {
 				handlers.text({
 					sub_type: "alert",
 					message: "Target attacks soon...",
-					message_ES: "Ataques al objetivo pronto..."
+					message_ES: "Pronto ataque al objetivo..."
 				});
 			}, 65000);
 		}
 	}
-
-
 
 	return {
 		"nd-3103-1000": [
 			{ type: "stop_timers" },
 			{ type: "despawn_all" }
 		],
-
 		"h-3103-1000-99": [{ type: "func", func: () => gettingserious = false }],
 		"h-3103-1000-70": [{ type: "func", func: () => gettingserious = true }],
 
@@ -70,44 +68,45 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		//"s-3103-1000-127-0": [{ type: "text", class_position: "tank", sub_type: "message", message: "Many Kicks", message_ES: "Несколько Patadaов" }],
 
 		"s-3103-1000-121-0": [{ type: "text", sub_type: "message", message: "Flip Kick (Stun)", message_ES: "Patada Aerea (Stun)" }],
-		"s-3103-1000-107-0": [
-			{ type: "text", sub_type: "message", message: "Bait", message_ES: "Bait" },
-			{ type: "func", func: back_kick_event, args: [107] }
-		],
+
+		"qb-3103-1000-31031000": [{ type: "text", sub_type: "message", message: "Bait (Dodge)", message_ES: "Bait (Iframe)" }],
+		// "s-3103-1000-124-0": [{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe" }], // 305 124
+		"s-3103-1000-107-0": [{ type: "func", func: back_kick_event, args: [107] }],
+
 		"s-3103-1000-110-0": [
 			{ type: "text", sub_type: "message", message: "Spin", message_ES: "Girar" },
 			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 12, 420, 0, 3000] }
 		],
 		"s-3103-1000-114-0": [
-			{ type: "text", sub_type: "message", message: "Leap (Knockdown)", message_ES: "Saltar (Derribo)" },
+			{ type: "text", sub_type: "message", message: "Leap (Knockdown)", message_ES: "Salto (Derribo)" },
 			{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 12, 240, 0, 2000] }
 		],
 		//"s-3103-1000-154-0": [{ type: "text", sub_type: "message", message: "Jumping Kick", message_ES: "Patada в прыжке" }], // 154 310 116
 		// 310 116
 		"s-3103-1000-310-0": [
-			{ type: "text", sub_type: "message", message: "Back Flip | Haymaker", message_ES: "Salto hacia atrás | Puñetazo" },
+			{ type: "text", sub_type: "message", message: "Back Flip | Haymaker", message_ES: "Salto Atrás | Puñetazo" },
 			{ type: "func", func: back_kick_event, args: [310] }
 		],
 		"s-3103-1000-116-0": [{ type: "func", func: back_kick_event, args: [116] }], // Haymaker
 		"s-3103-1000-115-0": [{ type: "text", sub_type: "message", message: "Haymaker (Tank)", message_ES: "Puñetazo (Tank)" }],
-		"s-3103-1000-131-0": [{ type: "text", sub_type: "message", message: "Rhythmic Blows", message_ES: "Golpes Ritmicos" }], // 131 132 133
+		"s-3103-1000-131-0": [{ type: "text", sub_type: "message", message: "Rhythmic Blows", message_ES: "Golpes Rítmicos" }], // 131 132 133
 		// 116 146
 		"s-3103-1000-146-0": [
-			{ type: "text", sub_type: "message", message: "Back Kick", message_ES: "Patada hacia atrás" },
+			{ type: "text", sub_type: "message", message: "Back Kick", message_ES: "Patada Atrás" }, // 116 146
 			{ type: "spawn", func: "vector", args: [553, 90, 120, 170, 600, 0, 3000] },
 			{ type: "spawn", func: "vector", args: [553, 270, 120, -170, 600, 0, 3000] }
 		],
 
 		// Shield
-		"qb-3103-1000-31031006": [{ type: "text", sub_type: "message", message: "Shield!", message_ES: "¡ESCUDO!" }],
+		"qb-3103-1000-31031006": [{ type: "text", sub_type: "message", message: "Shield!", message_ES: "¡Escudo!" }],
 
 		// Target "Ha" attacks 308 31031007 125
 		"qb-3103-1000-31031007": [
-			{ type: "text", sub_type: "message", message: "Target", message_ES: "Objetivo" },
+			{ type: "text", sub_type: "message", message: "Kick (Target)", message_ES: "Patada (Objetivo)", class_position: "tank" },
+			{ type: "text", sub_type: "message", message: "Dodge (Target)", message_ES: "Iframe (Objetivo) ", class_position: ["heal", "dps"] },
 			{ type: "func", func: target_attack_event }
 		],
-		"s-3103-1000-124-0": [{ type: "text", sub_type: "message", message: "Kick", message_ES: "Patada" }], // 305 124
-		"s-3103-1000-125-0": [{ type: "text", sub_type: "message", message: "Kick", message_ES: "Patada" }],
+		// "s-3103-1000-125-0": [{ type: "text", sub_type: "message", message: "Kick", message_ES: "Patada" }], // 308 125
 
 		// Donuts
 		"qb-3103-1000-31031008": [{ type: "text", sub_type: "message", message: "Donuts: Out > In > Dodge", message_ES: "Donas: Salir > Entrar > Iframe" }], // 31031008 303/304 117 155
@@ -125,10 +124,13 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3103-1000-155-0": [{ type: "text", sub_type: "message", delay: 50, message: "Dodge", message_ES: "Iframe" }],
 
 		// Stun 142 148 129
-		"s-3103-1000-142-0": [{ type: "text", sub_type: "message", message: "Stun | Back Wave", message_ES: "Stun | Ola hacia atrás" }],
-		"s-3103-1000-148-0": [{ type: "spawn", func: "circle", args: [true, 912, 0, -10, 12, 300, 0, 3000] }],
+		"s-3103-1000-142-0": [{ type: "text", sub_type: "message", message: "Stun | Back Wave", message_ES: "Stun | Ola Atrás" }],
+		"s-3103-1000-148-0": [
+			{ type: "text", sub_type: "message", delay: 1300, message: "Dodge", message_ES: "Iframe" },
+			{ type: "spawn", func: "circle", args: [true, 912, 0, -10, 12, 300, 0, 3000] }
+		],
 		"s-3103-1000-129-0": [
-			{ type: "text", sub_type: "message", message: "Back Wave", message_ES: "Ola hacia atrás" },
+			{ type: "text", sub_type: "message", message: "Back Wave", message_ES: "Ola Atrás" },
 			{ type: "spawn", func: "vector", args: [912, 90, 210, 390, 300, 0, 2000] },
 			{ type: "spawn", func: "vector", args: [912, 90, 140, 380, 350, 0, 2000] },
 			{ type: "spawn", func: "vector", args: [912, 90, 70, 370, 400, 0, 2000] },
@@ -139,7 +141,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 
 		// Jump 143-0 143-1
-		"s-3103-1000-143-0": [{ type: "text", sub_type: "message", message: "Jump (Stun)", message_ES: "Saltar (Stun)" }],
+		"qb-3103-1000-31031001": [{ type: "text", sub_type: "message", message: "Bait on res", message_ES: "Bait en res" }],
+		"s-3103-1000-143-0": [{ type: "text", sub_type: "message", message: "Jump (Stun)", message_ES: "Salto (Stun)" }],
 		"s-3103-1000-143-1": [{ type: "spawn", func: "circle", args: [true, 553, 0, 0, 14, 240, 0, 2000] }],
 
 		// AoE 313 314
@@ -147,8 +150,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3103-1000-314-0": [{ type: "text", sub_type: "message", message: "Get Out", message_ES: "Salir" }],
 
 		// Debuff
-		"ae-0-0-31031011": [{ type: "text", sub_type: "alert", message: "Debuff Stack", message_ES: "Debuff Stack" }],
-		"am-3103-1000-31031011": [{ type: "text", sub_type: "alert", message: "Debuff Stack", message_ES: "Debuff Stack" }],
-		"am-3103-1000-31031012": [{ type: "text", sub_type: "alert", message: "Debuff Stack", message_ES: "Debuff Stack" }]
+		"ae-0-0-31031011": [{ type: "text", sub_type: "alert", message: "Debuff Stack", message_ES: "Debuff (Stack)" }],
+		"am-3103-1000-31031011": [{ type: "text", sub_type: "alert", message: "Debuff Stack", message_ES: "Debuff (Stack)" }],
+		"am-3103-1000-31031012": [{ type: "text", sub_type: "alert", message: "Debuff Stack", message_ES: "Debuff (Stack)" }]
 	};
 };
