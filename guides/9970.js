@@ -22,13 +22,13 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"am-970-1000-97000042": [{ type: "func", func: () => firstboss_debuff = 1 }], // Red
 		"am-970-1000-97000043": [{ type: "func", func: () => firstboss_debuff = 2 }], // Blue
 		"s-970-1000-1306-0": [ // red inside
-			{ type: "text", sub_type: "message", message: "OUT", message_ES: "SALIR", check_func: () => firstboss_debuff === 1, delay: 500 },
-			{ type: "text", sub_type: "message", message: "IN", message_ES: "ENTRAR", check_func: () => firstboss_debuff === 2, delay: 500 },
+			{ type: "text", sub_type: "message", message: "OUT", message_ES: "SALIR", check_func: () => firstboss_debuff === 1 },
+			{ type: "text", sub_type: "message", message: "IN", message_ES: "ENTRAR", check_func: () => firstboss_debuff === 2 },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 400, 0, 4000] }
 		],
 		"s-970-1000-1307-0": [ // blue inside
-			{ type: "text", sub_type: "message", message: "IN", message_ES: "ENTRAR", check_func: () => firstboss_debuff === 1, delay: 500 },
-			{ type: "text", sub_type: "message", message: "OUT", message_ES: "SALIR", check_func: () => firstboss_debuff === 2, delay: 500 },
+			{ type: "text", sub_type: "message", message: "IN", message_ES: "ENTRAR", check_func: () => firstboss_debuff === 1 },
+			{ type: "text", sub_type: "message", message: "OUT", message_ES: "SALIR", check_func: () => firstboss_debuff === 2 },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 400, 0, 4000] }
 		],
 		"s-970-1000-1206-0": [{ type: "text", sub_type: "message", message: "Jump Back", message_ES: "Salto Atrás" }],

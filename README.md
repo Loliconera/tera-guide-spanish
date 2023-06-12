@@ -71,6 +71,7 @@ ID | Nombre de la dungeon | Idioma
 [3101](/guides/3101.js) | Gossamer Vault | Español
 [3102](/guides/3102.js) | Draakon Arena | Español
 [3103](/guides/3103.js) | Forbidden Arena [Undying Warlord] | Español
+[3123](/guides/3123.js) | Akalath Quarantine (Hard) | Español
 [3126](/guides/3126.js) | Corrupted Skynest (Difícil) | Español
 [3201](/guides/3201.js) | Gossamer Vault (Difícil) | Español
 [3202](/guides/3202.js) | Draakon Arena (Difícil) | Español
@@ -78,6 +79,7 @@ ID | Nombre de la dungeon | Idioma
 [7011](/guides/7011.js) | Shadow of the Gutrends (Guardian) | Español
 [7015](/guides/7015.js) | Escape from Balder's Refuge (Guardian) | Español
 [9027](/guides/9027.js) | Manaya's Core (Difícil) | Español
+[9034](/guides/9034.js) | Dreadspire | Español
 [9044](/guides/9044.js) | Bahaar's Sanctum | Español
 [9053](/guides/9053.js) | Kezzel's Gorge | Español
 [9054](/guides/9054.js) | Bathysmal Rise (Difícil) | Español
