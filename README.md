@@ -137,8 +137,8 @@ ID | Nombre de la dungeon | Idioma
 
 * Para cambiar el género de la a voz TTS, use el comando **!guia `male`/`female`**.<br>
 
-* Para cambiar a otro idioma, use el comando **!guia `auto`/`en`/`es`** o puede utilizar la interfaz GUI y seleciona el idioma que desea.<br>
-    <img src="https://github.com/Loliconera/tera-guide-spanish/assets/69399372/c7f8dbce-1933-427c-94e0-57a394c49e5e" alt="drawing" width="498"/>
+* Para **cambiar a otro idioma**, use el comando **!guia `auto`/`en`/`es`**, o tambien puede utilizar la interfaz GUI y selecionar el idioma que desea.<br>
+    <img src="https://github.com/Loliconera/tera-guide-spanish/assets/69399372/f0806ac4-e2bb-48c4-b55d-61ec6997ef3f" alt="drawing" width="498"/>  
 
 ## Interfaz GUI
 
