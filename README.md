@@ -1,4 +1,4 @@
-<a href="https://github.com/Loliconera/tera-guide-spanish/archive/refs/heads/master.zip" target="_blank"><button><span title="Descargar Guía"><img src="https://i.imgur.com/v1aL2sG.png"  alt="drawing" width="150" /></button></a>
+<a href="https://github.com/Loliconera/tera-guide-spanish/archive/refs/heads/master.zip" target="_blank"><button><span title="Descargar Guía"><img src="https://github.com/Loliconera/tera-guide-spanish/assets/69399372/78776a88-b545-47af-b8ba-294a46138c33"  alt="drawing" width="150" /></button></a>
 
 # Tera Guía Español
 
@@ -116,22 +116,22 @@ ID | Nombre de la dungeon | Idioma
 ## Configuración de Mensajes
 
 * En la pantalla (en la parte inferior) y mensajes de chat, si el parámetro **lNotice** está *activado*, todos los mensajes se enviaran al canal **Notice**. (**Mensajes en Chat Notice**).<br>
-    <img src="https://i.imgur.com/FFZSr5f.png" alt="drawing" width="435"/>
+    <img src="https://github.com/Loliconera/tera-guide-spanish/assets/69399372/9590b9f4-c7c3-4db7-982c-ae70cd2c5dab" alt="drawing" width="435"/>
 
 * En la pantalla (en la parte superior), si el parámetro **lNotice** está *desactivado*, todos los mensajes se mostraran en la parte superior de la pantalla. (**Mensajes en Pantalla**).<br>
-    <img src="https://i.imgur.com/e4s2iVE.png" alt="drawing" width="435"/>
+    <img src="https://github.com/Loliconera/tera-guide-spanish/assets/69399372/cbad0e85-27cd-4ff7-a079-302c63580d5c" alt="drawing" width="435"/>
 
 * Cuando el parámetro **gNotice** está *activado*, todos los mensajes se enviarán al canal **Party**. (**Mensaje en Chat Party**).<br>
-    <img src="https://i.imgur.com/5S4J5S0.png" alt="drawing" width="435"/>
+    <img src="https://github.com/Loliconera/tera-guide-spanish/assets/69399372/9dd3c39c-a802-40c7-86d1-706acaa19e0e" alt="drawing" width="435"/>
 
 * Cuando el parámetro **stream** está *activado*, todos los mensajes de texto se enviarán solamente al canal de chat **Toolbox(/8)**, pero se reproducirán los mensajes de texto a voz TTS. (**Mensajes en Chat Toolbox**).<br>
-    <img src="https://i.imgur.com/SOUET0X.png" alt="drawing" width="435"/>
+    <img src="https://github.com/Loliconera/tera-guide-spanish/assets/69399372/39b251f0-4818-475d-8357-9925f7b14184" alt="drawing" width="435"/>
   
 * Escriba el comando **!guia help** para mostrar una lista completa de todos los comandos soportados y una lista de colores de textos en pantalla.<br>
-    <img src="https://i.imgur.com/E35hNsV.png" alt="drawing" width="435"/>
+    <img src="https://github.com/Loliconera/tera-guide-spanish/assets/69399372/f9922fd7-d62d-4297-bc39-4e561cd3e384" alt="drawing" width="435"/>
 
 * Cuando ingresa a una dungeon el modulo le notificará con un mensaje de bienvenida, donde tambien le mostrara informacion adicional para el uso de comandos.<br>
-    <img src="https://i.imgur.com/CpBgCRe.png" alt="drawing" width="498"/>
+    <img src="https://github.com/Loliconera/tera-guide-spanish/assets/69399372/d33cf5ab-5c64-4ca1-8bae-1b6afcd111f0" alt="drawing" width="498"/>
 
 * Para desactivar o activar los mensajes de texto a voz TTS, use el comando **!guia voice**.<br>
 
@@ -142,7 +142,7 @@ ID | Nombre de la dungeon | Idioma
 ## Interfaz GUI
 
 * Escriba el comando **!guia gui** para mostrar una interfaz gráfica del modulo, puede tambien cambiar las configuraciones básicas.<br>
-    <img src="https://i.imgur.com/qBsDz00.png" alt="drawing" width="498"/>
+    <img src="https://github.com/Loliconera/tera-guide-spanish/assets/69399372/3d5b294b-03e7-4128-8eae-22f9a585ebbe" alt="drawing" width="498"/>
 
 ## Más información
 
