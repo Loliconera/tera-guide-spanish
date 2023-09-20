@@ -91,6 +91,10 @@ module.exports = {
 		"es": "Timescape (Difícil)",
 		"en": "Timescape (Hard)"
 	},
+	9756: {
+		"es": "Timescape",
+		"en": "Timescape"
+	},
 	9057: {
 		"es": "Akeron's Inferno (Difícil)",
 		"en": "Akeron's Inferno (Hard)"

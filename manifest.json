@@ -1,7 +1,7 @@
 {
     "files": {
         "LICENSE": "7fbe35da1c4792b039cd14af60048ea6813b743bd6e05ecef7a68023b50f5a43",
-        "README.md": "0946ee148369f30944b2722315753bc8bdd0cef3952ecbedc5a678a0c1b7d326",
+        "README.md": "053d67b4ee7a7176d18e6260899ec98238d4d6c34273655f1b0e045659f56fcb",
         "guides/3020.js": "ffc8d55b1deec2d3251a735f94059145519e948332a2ab5a31da7f9cb4c6391a",
         "guides/3023.js": "e2e797ff6a2fd7f0b78fd072f435ad4399b5dc5ab0ee0cc1b7573935936a3021",
         "guides/3026.js": "74cf4cbca6d0e8627ad051cc812597d28b8fc5a5ad1bffad479d0425e98f1da9",
@@ -28,7 +28,7 @@
         "guides/9044.js": "4bd8213ae07cca64dcd712753d91e64296b31533789c36c5e1c97aecd3c507f4",
         "guides/9053.js": "419371fbe659bf6510d1b3a94169ad3410903fb98428ff7dea7329183ba1ab5c",
         "guides/9054.js": "90922f8851b7b3d963357fabd8e1368a9c0e7a8bdc2497e00e2f174ef642dee7",
-        "guides/9056.js": "7c679ca6150a22e4944f035d68b106d10a9216a650118dc6628d5e79641e50f9",
+        "guides/9056.js": "cb4f817f0905bcc08c22233cfc07c9645b00811056cf4d373892d6fd75d8be73",
         "guides/9057.js": "69ccc47867c0693613f13b69dc6f18abe290424299c146e605fce4e4da7c1319",
         "guides/9066.js": "59e1eead83223798422c9680158bb68b5a4f1be3019ae237a890784512127776",
         "guides/9067.js": "3ffa81e9a9ab623f92dd16151af84587881448a6130fb2213c1f05c2f4b39926",
@@ -40,6 +40,7 @@
         "guides/9735.js": "8efbc7332297be79826b69955fec008bbc9a1fc732e28d5510f4fc103ce2d597",
         "guides/9739.js": "4e1c71517969438f5344bebbd4e6c71d213b8f4f51aa646b4c813a63eab813e8",
         "guides/9754.js": "61ed54dfb0f3ca7904ad9d5abc688ebd912a67d272f2e9ad6a7793cc53d09b2f",
+        "guides/9756.js": "a974fc4fe4bfdd6dc379999151de0794c312e8041f4f2d5fc57a3ec31b84ffe3",
         "guides/9757.js": "972188a379c75592a2140d42255a4a4be52f175771c491a062a55959bd02c240",
         "guides/9759.js": "782f0604179097f0877252e349cb58c509966c9d3bc0fc06fc18f34b8101d12f",
         "guides/9770.js": "022686f556d8e106b7b55562e9f29c536b9ccb279e27e7057368c054fe138d20",
@@ -55,7 +56,7 @@
         "guides/9983.js": "7867962b6d631042de784612757c64652edae9649aba5df4cb0b18508a1e88f3",
         "guides/test.js": "860e26c44c999e9348a80f740ea2719b6e212259414a93043d79b60ff3d1a9ac",
         "index.js": "813aad409c957d66ea83ba636565ac168db05834bd3c8d5e34c0530e0a978921",
-        "lang/dungeons.js": "c01a97fb85af1046bc0bfa2c9af9a3bb16f8801402122f872e1f9276da86c45f",
+        "lang/dungeons.js": "dad3f2c980700ed57b72098f3298d1bf8ebdaf0ca41fb3edceb7b6436c5decd2",
         "lang/strings.js": "34829168cc721c4ac994b60a0dc9f420d9c0d7ef9bbcdbf7a1fa768dbd32c81e",
         "module.json": "ea9ff12defb3a68d824e6bea128851e6a0376a820eff49c41066048546b53778",
         "settings_migrator.js": "9322e6a179c931e3d84900c8bc51492885a223333cd2ddb25b8bb9f44390a394"
@@ -63,6 +64,8 @@
     "defs": {
         "S_ABNORMALITY_BEGIN": 4,
         "S_ABNORMALITY_END": 1,
-        "S_DUNGEON_EVENT_GAGE": 2
+        "S_CREATURE_ROTATE": "*",
+        "S_DUNGEON_EVENT_GAGE": 2,
+        "S_SPAWN_NPC": "*"
     }
 }

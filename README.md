@@ -97,6 +97,7 @@ ID | Nombre de la dungeon | Idioma
 [9735](/guides/9735.js) | RK-9 Kennel | Español
 [9739](/guides/9739.js) | Red Refuge | Español
 [9754](/guides/9754.js) | Bathysmal Rise | Español
+[9756](/guides/9756.js) | Timescape | Español
 [9757](/guides/9757.js) | Akeron's Inferno | Español
 [9759](/guides/9759.js) | Forsaken Island (Difícil) | Español
 [9770](/guides/9770.js) | Ruinous Manor | Español
