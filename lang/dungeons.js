@@ -194,5 +194,13 @@ module.exports = {
 	9983: {
 		"es": "Dark Reach Citadel (Difícil)",
 		"en": "Dark Reach Citadel (Hard)"
+	},
+	3104: {
+		"es": "Catalepticon",
+		"en": "Catalepticon"
+	},
+	3204: {
+		"es": "Catalepticon (Hard)",
+		"en": "Catalepticon (Hard)"
 	}
 };
