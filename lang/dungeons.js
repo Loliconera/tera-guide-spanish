@@ -147,6 +147,10 @@ module.exports = {
 		"es": "Forsaken Island (Difícil)",
 		"en": "Forsaken Island (Hard)"
 	},
+	9768: {
+		"es": "Shadow Sanguinary",
+		"en": "Shadow Sanguinary"
+	},
 	9770: {
 		"es": "Ruinous Manor",
 		"en": "Ruinous Manor"
@@ -163,6 +167,10 @@ module.exports = {
 		"es": "Grotto of Lost Souls",
 		"en": "Grotto of Lost Souls"
 	},
+	9783: {
+		"es": "Dark Reach Citadel",
+		"en": "Dark Reach Citadel"
+	},
 	9794: {
 		"es": "Thaumetal Refinery",
 		"en": "Thaumetal Refinery"
@@ -178,6 +186,10 @@ module.exports = {
 	9935: {
 		"es": "RK-9 Kennel (Difícil)",
 		"en": "RK-9 Kennel (Hard)"
+	},	
+	9939: {
+		"es": "Red Refuge (Dificil)",
+		"en": "Red Refuge (Hard)"		
 	},
 	3034: {
 		"es": "Rampaging RK-9 Kennel",

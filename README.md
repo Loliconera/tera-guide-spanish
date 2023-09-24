@@ -100,14 +100,17 @@ ID | Nombre de la dungeon | Idioma
 [9756](/guides/9756.js) | Timescape | Español
 [9757](/guides/9757.js) | Akeron's Inferno | Español
 [9759](/guides/9759.js) | Forsaken Island (Difícil) | Español
+[9768](/guides/9768.js) | Shadow Sanguinary | Español
 [9770](/guides/9770.js) | Ruinous Manor | Español
 [9780](/guides/9780.js) | Velik's Hold (5-Person) | Español
 [9781](/guides/9781.js) | Velik's Sanctuary | Español
 [9782](/guides/9782.js) | Grotto of Lost Souls | Español
+[9783](/guides/9783.js) | Dark Reach Citadel| Español
 [9794](/guides/9794.js) | Thaumetal Refinery | Español
 [9916](/guides/9916.js) | Sky Cruiser Endeavor (Difícil) | Español
 [9920](/guides/9920.js) | Antaroth's Abyss (Difícil) | Español
 [9935](/guides/9935.js) | RK-9 Kennel (Difícil) | Español
+[9939](/guides/9939.js) | Red Refuge (Difícil) | Español
 [9970](/guides/9970.js) | Ruinous Manor (Difícil) | Español
 [9981](/guides/9981.js) | Velik's Sanctuary (Difícil) | Español
 [9982](/guides/9982.js) | Grotto of Lost Souls (Difícil) | Español
