@@ -6,6 +6,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 	let combo_count = 0;
 
+	const is_mt = dispatch._mod.connection.metadata.serverList[dispatch._mod.serverId].name.includes("MT");
+
 	dispatch.hook("S_ABNORMALITY_BEGIN", dispatch._mod.majorPatchVersion >= 107 ? 5 : 4, event => {
 		if (event.id === 31040001)
 			handlers.marker({ id: event.target, color: "yellow", sub_delay: 1000000 });
@@ -21,14 +23,16 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 		"qb-3104-1000-32042000": [
 			{ type: "text", sub_type: "message", message: "Arrows", message_ES: "Flechas" },
-			{ type: "text", sub_type: "alert", message: "Dodge", message_ES: "Iframe", delay: 1450 },
 			{ type: "func", func: () => combo_count = 0 }
 		],
-		"h-3104-1000-35": [{ type: "text", sub_type: "message", message: "35%", message_ES: "35%" }],
+		"qb-3104-1000-32041000": [
+			{ type: "text", sub_type: "message", message: "Bait (Target)", message_ES: "Bait (Objetivo)" }
+		],
+		"h-3104-1000-50": [{ type: "text", sub_type: "message", message: "50%", message_ES: "50%", check_func: () => is_mt }],
+		"h-3104-1000-35": [{ type: "text", sub_type: "message", message: "35%", message_ES: "35%", check_func: () => !is_mt }],
 
 		"s-3104-1000-104-0": [
 			{ type: "text", sub_type: "message", message: "Stun (AOE)", message_ES: "Stun (AOE)" },
-			{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 800 },
 			{ type: "spawn", func: "circle", args: [true, 553, 180, -50, 10, 380, 0, 2000] }
 		],
 		"s-3104-1000-107-0": [
@@ -52,7 +56,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 70, 500, 0, 2000] },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 290, 500, 0, 2000] }
 		],
-		"s-3104-1000-114-0": [{ type: "text", sub_type: "message", message: "Inner + Outer AOEs", message_ES: "AOE Interno + Externo" }],
+		"s-3104-1000-114-0": [{ type: "text", sub_type: "message", message: "Inner + Outer AOEs", message_ES: "AOE interno + externo" }],
 		"s-3104-1000-116-0": [
 			{ type: "text", sub_type: "message", message: "Line Forward", message_ES: "Línea Medio" },
 			{ type: "spawn", func: "vector", args: [553, 90, 50, 0, 1000, 0, 2000] },

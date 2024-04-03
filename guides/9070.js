@@ -1,11 +1,12 @@
 ﻿// Manglemire
 //
-// hecho por michengs / HSDN / ambushing
+// made by michengs / HSDN / ambushing
 
 const OPCODES = {
 	"S_DUNGEON_EVENT_GAGE": {
 		366226: 39917,
-		367078: 47028,
+    367078: 47028,
+		367080: 57835,
 		367081: 39359,
 		376012: 47078
 	}
@@ -58,7 +59,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		const tens = Math.floor((event_gage % 100) / 10);
 
 		return !boss_numbers.has(ones) && !boss_numbers.has(tens);
-	}
+  }
+  
 	return {
 				"nd-470-1000": [
 			{ type: "stop_timers" },

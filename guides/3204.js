@@ -25,7 +25,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"qb-3204-1000-32042000": [{ type: "text", sub_type: "message", message: "Arrows + Line", message_ES: "Flechas + Línea" }],
 		"qb-3204-1000-32042006": [
-			{ type: "text", sub_type: "message", message: "Cage", message_ES: "JAULA" },
+			{ type: "text", sub_type: "message", message: "Cage", message_ES: "Jaula" },
 			{ type: "text", sub_type: "alert", message: "Cage soon...", message_ES: "Jaula pronto...", delay: 100000 }
 		],
 		"qb-3204-1000-32042009": [
@@ -73,7 +73,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3204-1000-119-0": [{ type: "text", sub_type: "message", message: "Two Strikes", message_ES: "Dos Ataques" }],
 		"s-3204-1000-120-0": [
 			{ type: "text", sub_type: "message", message: "Two Strikes + Stun (AOE)", message_ES: "Dos Ataques + Stun (AOE)" },
-			{ type: "text", sub_type: "message", message: "Stun (AOE)", message_ES: "Iframe", delay: 1500 },
+			{ type: "text", sub_type: "message", message: "Stun (AOE)", message_ES: "Stun (AOE)", delay: 1500 },
 			{ type: "spawn", func: "circle", args: [true, 553, 180, -100, 10, 700, 0, 2500], delay: 1500 }
 		],
 		"s-3204-1000-123-0": [{ type: "text", sub_type: "message", message: "Spin", message_ES: "Girar" }],
@@ -93,10 +93,10 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-3204-1000-156-0": [{ type: "text", sub_type: "message", message: "Get Skulls", message_ES: "Cráneos" }],
 		"s-3204-1000-157-0": [
-			{ type: "text", sub_type: "message", message: "3 seconds", message_ES: "3 segundos" },
+			{ type: "text", sub_type: "message", message: "3 seconds", message_ES: "3 Segundos" },
 			{ type: "text", sub_type: "message", message: "Gather!", message_ES: "¡Reunirse!", delay: 2000 }],
 		"s-3204-1000-158-0": [
-			{ type: "text", sub_type: "message", message: "6 seconds", message_ES: "6 segundos" },
+			{ type: "text", sub_type: "message", message: "6 seconds", message_ES: "6 Segundos" },
 			{ type: "text", sub_type: "message", message: "Gather!", message_ES: "¡Reunirse!", delay: 5000 }
 		],
 		"s-3204-1000-159-0": [

@@ -1,11 +1,12 @@
 ﻿// Bahaar's Sanctum
 //
-// made by michengs / Emilia-s2 / HSDN
+// made by michengs / Emilia-s2 / HSDN / Vampic
 
 module.exports = (dispatch, handlers, guide, lang) => {
 	guide.type = SP;
 
-	let print_loading = true;
+	const { player } = dispatch.require.library;
+  let print_loading = true;
 	let print_lasers = true;
 
 	function waves_event() {
@@ -14,10 +15,27 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [553, 270, 50, 0, 500, 0, 6000] },
 			{ type: "spawn", func: "vector", args: [553, 90, 50, 180, 500, 0, 6000] },
 			{ type: "spawn", func: "vector", args: [553, 270, 50, 180, 500, 0, 6000] },
-			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 6, 400, 0, 6000] },
+			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 6, 400, 0, 6000] },
 			{ type: "text", sub_type: "alert", delay: 60000, message: "Waves soon...", message_ES: "Olas pronto..." }
 		]);
 	}
+
+	dispatch.hook("S_ABNORMALITY_BEGIN", dispatch._mod.majorPatchVersion >= 107 ? 5 : 4, event => {
+		if (event.id === 90442502) {
+			if (dispatch._mod.game.me.is(event.target)) {
+				handlers.text({ sub_type: "notification", message: "Laser on you", message_ES: "Láser sobre ti" });
+			} else {
+				const member = player.playersInParty.get(event.target);
+				if (member) {
+					handlers.text({
+						sub_type: "message",
+						message: `Laser on ${member.name}`,
+						message_ES: `Láser Activado ${member.name}`
+					});
+				}
+			}
+		}
+	});
 
 	return {
 		// PHASE 1
@@ -270,7 +288,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-444-2000-2113-0": "s-444-2000-1113-0",
 		"s-444-2000-2114-0": "s-444-2000-1114-0",
-		"s-444-2000-2115-0": [{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 100 }], // Knockup
+		"s-444-2000-2115-0": [{ type: "text", sub_type: "message", delay: 100, message: "Dodge", message_ES: "Iframe" }], // Knockup
 		"s-444-2000-2116-0": "s-444-2000-1116-0",
 		"s-444-2000-2116-1": "s-444-2000-1116-1",
 		"s-444-2000-2117-0": "s-444-2000-1117-0",

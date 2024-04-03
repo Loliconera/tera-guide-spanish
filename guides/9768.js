@@ -6,7 +6,9 @@ module.exports = (dispatch, handlers, guide, lang) => {
 
 	let thirdboss_print_combo = true;
 	let thirdboss_print_bait = true;
-	let thirdboss_combo_count = 0;
+  let thirdboss_combo_count = 0;
+	let thirdboss_combo_last_128 = null;
+	let thirdboss_combo_last_129 = null;
 
 	function secondboss_floor_event(one, two) {
 		if (one && two) {
@@ -80,9 +82,22 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-768-3000-102-0": "s-768-3000-101-0",
 		//
-		"s-768-3000-130-0": [
-			{ type: "text", sub_type: "message", message: "Left", message_ES: "Izquierda" },
-			{ type: "func", func: () => thirdboss_combo_count++ }
+		"s-768-3000-128-0": [ // 128 -> 106/130
+			{ type: "text", sub_type: "message", message: "Back/Left", message_ES: "Atrás/izquierda", check_func: () => thirdboss_combo_last_128 === null },
+			{ type: "text", sub_type: "message", message: "Back", message_ES: "Atrás", check_func: () => thirdboss_combo_last_128 === 130 },
+			{ type: "text", sub_type: "message", message: "Left", message_ES: "Izquierda", check_func: () => thirdboss_combo_last_128 === 106 }
+		],
+		"s-768-3000-129-0": [ // 129 -> 108/131
+			{ type: "text", sub_type: "message", message: "Front/Right", message_ES: "Ataque Frontal/Derecha", check_func: () => thirdboss_combo_last_129 === null },
+			{ type: "text", sub_type: "message", message: "Front", message_ES: "Ataque Frontal", check_func: () => thirdboss_combo_last_129 === 131 },
+			{ type: "text", sub_type: "message", message: "Right", message_ES: "Derecha", check_func: () => thirdboss_combo_last_129 === 108 }
+		],
+		"s-768-3000-130-0": [ // 128 -> 130
+			{ type: "text", sub_type: "message", message: "Left", message_ES: "Izquierda", check_func: () => thirdboss_combo_last_128 === null },
+			{ type: "func", func: () => {
+				thirdboss_combo_count++;
+				thirdboss_combo_last_128 = 130;
+			} }
 		],
 		"s-768-3000-105-0": [ // 130 -> 105
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 180, 500, 0, 1500] },
@@ -93,13 +108,19 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "semicircle", args: [180, 360, 912, 0, 0, 8, 360, 0, 1500] }
 		],
 		"s-768-3000-106-0": [ // 128 -> 106
-			{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque Atrás" },
+			{ type: "text", sub_type: "message", message: "Back", message_ES: "Ataque Atrás", check_func: () => thirdboss_combo_last_128 === null },
 			{ type: "spawn", func: "circle", args: [false, 553, 180, 340, 12, 270, 0, 2600] },
-			{ type: "func", func: () => thirdboss_combo_count++ }
+			{ type: "func", func: () => {
+				thirdboss_combo_count++;
+				thirdboss_combo_last_128 = 106;
+			} }
 		],
-		"s-768-3000-131-0": [
-			{ type: "text", sub_type: "message", message: "Right", message_ES: "Derecha" },
-			{ type: "func", func: () => thirdboss_combo_count++ }
+		"s-768-3000-131-0": [ // 129 -> 131
+			{ type: "text", sub_type: "message", message: "Right", message_ES: "Derecha", check_func: () => thirdboss_combo_last_129 === null },
+			{ type: "func", func: () => {
+				thirdboss_combo_count++;
+				thirdboss_combo_last_129 = 131;
+			} }
 		],
 		"s-768-3000-107-0": [ // 131 -> 107
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 180, 500, 0, 1500] },
@@ -109,9 +130,12 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "semicircle", args: [0, 180, 912, 0, 0, 10, 300, 0, 1500] },
 			{ type: "spawn", func: "semicircle", args: [0, 180, 912, 0, 0, 8, 360, 0, 1500] }
 		],
-		"s-768-3000-108-0": [ // 129 > 108
-			{ type: "text", sub_type: "message", message: "Front", message_ES: "Ataque Frontal" },
-			{ type: "func", func: () => thirdboss_combo_count++ }
+		"s-768-3000-108-0": [ // 129 -> 108
+			{ type: "text", sub_type: "message", message: "Front", message_ES: "Ataque Frontal", check_func: () => thirdboss_combo_last_129 === null },
+			{ type: "func", func: () => {
+				thirdboss_combo_count++;
+				thirdboss_combo_last_129 = 108;
+			} }
 		],
 		"s-768-3000-109-0": "s-768-3000-106-0",
 		//
@@ -135,7 +159,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-768-3000-206-0": [{ type: "text", sub_type: "message", message: "Pike (Target)", message_ES: "Pike (Objetivo)" }], // 206 -> 207
 		"s-768-3000-302-0": [
 			{ type: "text", sub_type: "message", message: "Bait (Target)", message_ES: "Bait (Objetivo)" },
-			{ type: "func", func: () => thirdboss_combo_count = 0 }
+			{ type: "func", func: () => {
+				thirdboss_combo_count = 0;
+				thirdboss_combo_last_128 = null;
+				thirdboss_combo_last_129 = null;
+			} }
 		],
 		"s-768-3000-302-1": [{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 1600 }],
 		"s-768-3000-501-0": [
@@ -163,7 +191,11 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"give_bait_combo": [
 			{ type: "event", check_func: () => thirdboss_combo_count >= 3, args: [
 				{ type: "text", sub_type: "message", message: "Give Bait", message_ES: "Dar Bait", class_position: "heal" },
-				{ type: "func", func: () => thirdboss_combo_count = 0 }
+				{ type: "func", func: () => {
+					thirdboss_combo_count = 0;
+					thirdboss_combo_last_128 = null;
+					thirdboss_combo_last_129 = null;
+				} }
 			] }
 		],
 		"e-768-3000-101": "give_bait",

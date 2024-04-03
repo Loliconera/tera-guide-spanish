@@ -4,7 +4,6 @@
 
 module.exports = (dispatch, handlers, guide, lang) => {
 	let firstboss_prepare_stun = false;
-
 	let secondboss_show_book_notify = true;
 	let secondboss_game_id_for_book = null;
 	let secondboss_red_book_loc = null;
@@ -105,7 +104,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-783-2000-105-0": [{ type: "text", sub_type: "message", message: "Whip (Dodge)", message_ES: "Látigo (Iframe)" }],
 		"s-783-2000-110-0": [{ type: "text", sub_type: "message", message: "Front Attack (Dodge)", message_ES: "Ataque Frontal (Iframe)" }],
 		"s-783-2000-112-0": [{ type: "text", sub_type: "message", message: "Push Back (Right)", message_ES: "Empujar Atrás (Derecha)" }],
-		"s-783-2000-114-0": [{ type: "text", sub_type: "message", message: "Ground Hit", message_ES: "Golpe al suelo" }],
+		"s-783-2000-114-0": [{ type: "text", sub_type: "message", message: "Ground Hit (Dodge)", message_ES: "Golpe al suelo (Iframe)" }],
 		"s-783-2000-115-0": [{ type: "text", sub_type: "message", message: "Push Back (Left)", message_ES: "Empujar Atrás (Izquierda)" }],
 		"s-783-2000-119-0": [{ type: "text", sub_type: "message", message: "Jump (Dodge)", message_ES: "Saltar (Iframe)" }],
 		"s-783-2000-120-0": [{ type: "text", sub_type: "message", message: "Front Attack | Push Back", message_ES: "Ataque Frontal | Empujar Atrás" }],
@@ -127,7 +126,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "stop_timers" },
 			{ type: "despawn_all" }
 		],
-		"s-783-3000-106-0": [{ type: "text", sub_type: "message", message: "Push", message_ES: "Empujar" }],
+		"s-783-3000-106-0": [{ type: "text", sub_type: "message", message: "Push (Tank)", message_ES: "Empujar (Tank)" }],
 		"s-783-3000-110-0": [{ type: "text", sub_type: "message", message: "Throw Front (Stun)", message_ES: "Ataque Frontal (Stun)" }],
 		"s-783-3000-113-0": [{ type: "text", sub_type: "message", message: "Push Back", message_ES: "Empujar Atrás" }],
 		"s-783-3000-114-0": [{ type: "text", sub_type: "message", message: "Bait (Target)", message_ES: "Bait (Objetivo)" }],
@@ -147,7 +146,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [553, 90, 80, 0, 500, 0, 2000] },
 			{ type: "spawn", func: "vector", args: [553, 270, 80, 0, 500, 0, 2000] }
 		],
-		"s-783-3000-124-0": [{ type: "text", sub_type: "message", message: "AOE", message_ES: "AOE" }],
+		"s-783-3000-124-0": [{ type: "text", sub_type: "message", message: "AOE (Dodge)", message_ES: "AOE (Iframe)" }],
 		"s-783-3000-125-0": [{ type: "text", sub_type: "message", message: "Hit | Frontal Stun", message_ES: "Lanzar | Stun Frontal" }],
 		"s-783-3000-126-0": [
 			{ type: "text", sub_type: "message", message: "Frontal Stun", message_ES: "Stun Frontal" },
