@@ -108,7 +108,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		// Pie derecho (ondas hacia afuera)
 		"s-3202-1000-1121-0": [
-			{ type: "text", sub_type: "message", message: "Pizza | Inward Waves", message_ES: "Pizza + Ola Adentro" },
+			{ type: "text", sub_type: "message", message: "Pizza | Waves (Out > In)", message_ES: "Pizza + Ola (Salir > Entrar)" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 550, 0, 3000] },
 			{ type: "spawn", func: "marker", args: [false, 80, 300, 0, 3500, true, null] },
 			{ type: "spawn", func: "marker", args: [false, 280, 300, 0, 3500, true, null] },
@@ -119,7 +119,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", delay: 1700, message: "Dodge!", message_ES: "Iframe" }
 		],
 		"s-3202-1000-2121-0": [
-			{ type: "text", sub_type: "message", message: "Pizza | Inward Waves", message_ES: "Pizza + Ola Adentro" },
+			{ type: "text", sub_type: "message", message: "Pizza | Waves (Out > In)", message_ES: "Pizza + Ola (Salir > Entrar)" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 550, 0, 3000] },
 			{ type: "spawn", func: "marker", args: [false, 80, 300, 0, 3500, true, null] },
 			{ type: "spawn", func: "marker", args: [false, 280, 300, 0, 3500, true, null] },
@@ -141,19 +141,21 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [912, 0, 0, 85, 550, 0, 2000] },
 			{ type: "spawn", func: "semicircle", args: [85, 295, 912, 0, 0, 6, 550, 0, 2000] }
 		],
-		"s-3202-1000-1127-0": [
+    "s-3202-1000-1127-0": [
+      { type: "text", sub_type: "message", message: "Waves (Out > In)", message_ES: "oLA (Salir > Entrar)" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 14, 160, 0, 3000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 8, 390, 0, 3000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 6, 620, 0, 3000] }
 		],
-		"s-3202-1000-2127-0": [
+    "s-3202-1000-2127-0": [
+      { type: "text", sub_type: "message", message: "Waves (Out > In)", message_ES: "oLA (Salir > Entrar)" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 14, 160, 0, 3000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 8, 390, 0, 3000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 6, 620, 0, 3000] }
 		],
 		// Pie izquierdo (ondas hacia adentro)
 		"s-3202-1000-1124-0": [
-			{ type: "text", sub_type: "message", message: "Pizza | Outward Waves", message_ES: "Pizza + Ola Afuera" },
+			{ type: "text", sub_type: "message", message: "Pizza | Waves (In > Out)", message_ES: "Pizza + Ola Waves (Entrar > Salir)" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 550, 0, 3000] },
 			{ type: "spawn", func: "marker", args: [false, 80, 300, 0, 3500, true, null] },
 			{ type: "spawn", func: "marker", args: [false, 280, 300, 0, 3500, true, null] },
@@ -164,7 +166,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", delay: 1550, message: "Dodge!", message_ES: "Iframe" }
 		],
 		"s-3202-1000-2124-0": [
-			{ type: "text", sub_type: "message", message: "Pizza | Outward Waves", message_ES: "Pizza + Ola Afuera" },
+			{ type: "text", sub_type: "message", message: "Pizza | Waves (In > Out)", message_ES: "Pizza + Ola Waves (Entrar > Salir)" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 8, 550, 0, 3000] },
 			{ type: "spawn", func: "marker", args: [false, 80, 300, 0, 3500, true, null] },
 			{ type: "spawn", func: "marker", args: [false, 280, 300, 0, 3500, true, null] },
@@ -186,14 +188,16 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [912, 0, 0, 85, 550, 0, 2000] },
 			{ type: "spawn", func: "semicircle", args: [85, 295, 912, 0, 0, 6, 550, 0, 2000] }
 		],
-		"s-3202-1000-1128-0": [
-		//	{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 14, 160, 0, 3000] },
-		//	{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 8, 390, 0, 3000] },
+    "s-3202-1000-1128-0": [
+      { type: "text", sub_type: "message", message: "Waves (In > Out)", message_ES: "Olas (Entrar > Salir)" },
+			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 14, 160, 0, 3000] },
+			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 8, 390, 0, 3000] },
 			{ type: "spawn", func: "circle", args: [false, 5535, 0, 0, 6, 620, 0, 3000] },
 		],
-		"s-3202-1000-2128-0": [
-		//	{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 14, 160, 0, 3000] },
-		//	{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 8, 390, 0, 3000] },
+    "s-3202-1000-2128-0": [
+      { type: "text", sub_type: "message", message: "Waves (In > Out)", message_ES: "Olas (Entrar > Salir)" },
+			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 14, 160, 0, 3000] },
+			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 8, 390, 0, 3000] },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 6, 620, 0, 3000] },
 		]
 	};

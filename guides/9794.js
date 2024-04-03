@@ -39,7 +39,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
     "s-794-1000-103-0": [
       { type: "text", sub_type: "message", message: "AOE Stun (Dodge)", message_ES: "AOE Stun (Iframe)" },
-			{ type: "spawn", func: "circle", args: [true, 553, 0, 125, null, 230, 0, 2000] }
+			{ type: "spawn", func: "circle", args: [true, 553, 0, 125, null, 250, 0, 2000] }
 		],
     "s-794-1000-107-0": [
       { type: "text", sub_type: "message", message: "Jump (Dodge)", message_ES: "Saltar (Iframe)" },
@@ -56,7 +56,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-794-2000-112-0": [{ type: "text", sub_type: "message", message: "Bait (3 stones)", message_ES: "Bait (3 Piedras)" }],
 		"s-794-2000-106-0": [{ type: "text", sub_type: "message", message: "Bait (Rock)", message_ES: "Bait (Roca)" }],
 		"s-794-2000-307-0": [{ type: "text", sub_type: "message", message: "Stones", message_ES: "Piedras" }],
-		"ae-0-0-9942006": [{ type: "text", sub_type: "message", message: "Stone on you", message_ES: "Piedra sobre ti", delay: 1000 }],
+		"ae-0-0-7942006": [{ type: "text", sub_type: "message", message: "Stone on you", message_ES: "Piedra sobre ti", delay: 1000 }],
 		"s-794-2000-117-0": [{ type: "text", sub_type: "message", message: "Inward Wave", message_ES: "Ola interior", delay: 1000 }],
 		"s-794-2000-118-0": [{ type: "text", sub_type: "message", message: "Outward Wave", message_ES: "Ola exterior" }],
 		"s-794-2000-114-0": [{ type: "text", sub_type: "message", message: "Together", message_ES: "Juntarse" }],
