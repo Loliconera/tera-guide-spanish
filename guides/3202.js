@@ -142,13 +142,13 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "semicircle", args: [85, 295, 912, 0, 0, 6, 550, 0, 2000] }
 		],
     "s-3202-1000-1127-0": [
-      { type: "text", sub_type: "message", message: "Waves (Out > In)", message_ES: "oLA (Salir > Entrar)" },
+      { type: "text", sub_type: "message", message: "Waves (Out > In)", message_ES: "Ola (Salir > Entrar)" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 14, 160, 0, 3000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 8, 390, 0, 3000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 6, 620, 0, 3000] }
 		],
     "s-3202-1000-2127-0": [
-      { type: "text", sub_type: "message", message: "Waves (Out > In)", message_ES: "oLA (Salir > Entrar)" },
+      { type: "text", sub_type: "message", message: "Waves (Out > In)", message_ES: "Ola (Salir > Entrar)" },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 14, 160, 0, 3000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 8, 390, 0, 3000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 6, 620, 0, 3000] }
