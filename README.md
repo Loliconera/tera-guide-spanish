@@ -59,6 +59,9 @@ Al usar TeraToolbox, todas las dependencias se instalarán automáticamente.
 
 | ID                      | Nombre de la dungeon                        | Idioma  |
 | ----------------------- | ------------------------------------------- | ------- |
+| [2809](/guides/2809.js) | Dreadspire VALKYTEQ                         | Español |
+| [2809](/guides/2809.js) | The Observatory (Arborea Reborn)            | Español |
+| [2811](/guides/2811.js) | Sea of Honor (Arborea Reborn)               | Español |
 | [3020](/guides/3020.js) | Sea of Honor                                | Español |
 | [3023](/guides/3023.js) | Akalath Quarantine                          | Español |
 | [3026](/guides/3026.js) | Corrupted Skynest                           | Español |

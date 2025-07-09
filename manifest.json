@@ -1,7 +1,11 @@
 {
     "files": {
         "LICENSE": "7fbe35da1c4792b039cd14af60048ea6813b743bd6e05ecef7a68023b50f5a43",
-        "README.md": "082e65184e6be13b9fb4faf9e1f86f9f24b4dd61b19e3ae29e61ed12df1a7f47",
+        "README.md": "41aee3d39119185865fe0e6b4672876787661c6535a9099a68ccedea74dab9ab",
+        "config.json": "8765129740eb9807903dbe4f3dba810ee08ef49350c8779c703e54b9fc0cb74d",
+        "guides/2800.js": "ebf84600c3ec11fc9e0f6528ddbd657cba39b96cecbf85c9a3ea07e2c0b5d9aa",
+        "guides/2809.js": "c6c65d31daf70b385df9ba43b79295c34a833075c982dfc8431e8cfa51e70723",
+        "guides/2811.js": "da29d22ff161021bd3d4266a78ee9c974c303461b0254d4ec6c63787efedc48e",
         "guides/3020.js": "ffc8d55b1deec2d3251a735f94059145519e948332a2ab5a31da7f9cb4c6391a",
         "guides/3023.js": "e2e797ff6a2fd7f0b78fd072f435ad4399b5dc5ab0ee0cc1b7573935936a3021",
         "guides/3026.js": "74cf4cbca6d0e8627ad051cc812597d28b8fc5a5ad1bffad479d0425e98f1da9",
