@@ -49,10 +49,12 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", delay: 1750, message: "Dodge!", message_ES: "Iframe" }
 		],
 		"s-3202-1000-1115-0": [
-			{ type: "text", sub_type: "message", message: "AOE Bombs (Gather)", message_ES: "AOE Bombas (Reunir)" }
+      { type: "text", sub_type: "message", message: "AOE Bombs (Gather)", message_ES: "AOE Bombas (Reunir)" },
+      { type: "text", sub_type: "message", delay: 3000, message: "Gather!", message_ES: "¡Recolectar!" }    
 		],
 		"s-3202-1000-2115-0": [
-			{ type: "text", sub_type: "message", message: "AOE Bombs (Gather)", message_ES: "AOE Bombas (Reunir)" }
+      { type: "text", sub_type: "message", message: "AOE Bombs (Gather)", message_ES: "AOE Bombas (Reunir)" },
+      { type: "text", sub_type: "message", delay: 3000, message: "Gather!", message_ES: "¡Recolectar!" }    
 		],
 		"s-3202-1000-1112-0": [
 			{ type: "text", sub_type: "message", message: "Front | Back Kick", message_ES: "Girar | Patada Atrás" },
@@ -192,13 +194,13 @@ module.exports = (dispatch, handlers, guide, lang) => {
       { type: "text", sub_type: "message", message: "Waves (In > Out)", message_ES: "Olas (Entrar > Salir)" },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 14, 160, 0, 3000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 8, 390, 0, 3000] },
-			{ type: "spawn", func: "circle", args: [false, 5535, 0, 0, 6, 620, 0, 3000] },
+			{ type: "spawn", func: "circle", args: [false, 5535, 0, 0, 6, 620, 0, 3000] }
 		],
     "s-3202-1000-2128-0": [
       { type: "text", sub_type: "message", message: "Waves (In > Out)", message_ES: "Olas (Entrar > Salir)" },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 14, 160, 0, 3000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 8, 390, 0, 3000] },
-			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 6, 620, 0, 3000] },
+			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 6, 620, 0, 3000] }
 		]
 	};
 };

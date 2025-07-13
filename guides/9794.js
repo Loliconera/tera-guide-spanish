@@ -72,8 +72,16 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"ns-794-3004": [{ type: "func", func: ent => blue_vaccine_loc = ent.pos }], // Синий
 		"ns-794-3005": [{ type: "func", func: ent => red_vaccine_loc = ent.pos }], // Красный
 		"s-794-3000-103-0": [{ type: "text", sub_type: "message", message: "Pushback", message_ES: "Empujar" }],
-		"s-794-3000-107-0": [{ type: "text", sub_type: "message", message: "Front (Dodge)", message_ES: "Ataque Frontal (Iframe)" }],
-		"s-794-3000-108-0": [{ type: "text", sub_type: "message", message: "Back (Dodge)", message_ES: "Ataque Atrás (Iframe)" }],
+    "s-794-3000-107-0": [
+      { type: "spawn", func: "vector", args: [553, 0, 0, 90, 500, 0, 3000] },
+			{ type: "spawn", func: "vector", args: [553, 0, 0, -90, 500, 0, 3000] },
+      { type: "text", sub_type: "message", message: "Front (Dodge)", message_ES: "Ataque Frontal (Iframe)" }
+    ],
+    "s-794-3000-108-0": [
+			{ type: "spawn", func: "vector", args: [553, 0, 0, 90, 500, 0, 3000] },
+			{ type: "spawn", func: "vector", args: [553, 0, 0, -90, 500, 0, 3000] },
+      { type: "text", sub_type: "message", message: "Back (Dodge)", message_ES: "Ataque Atrás (Iframe)" }
+    ],
 		"s-794-3000-104-0": [{ type: "text", sub_type: "message", message: "Bait", message_ES: "Bait" }],
 		"s-794-3000-111-0": [{ type: "text", sub_type: "message", message: "Out Safe", message_ES: "Salir Seguro" }],
 		"s-794-3000-112-0": [{ type: "text", sub_type: "message", message: "In Safe", message_ES: "Entrar Seguro" }],

@@ -81,7 +81,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "despawn_all" }
 		],
 		"s-782-2000-105-0": [{ type: "text", sub_type: "message", message: "Spin", message_ES: "Girar" }],
-		"s-782-2000-108-0": [{ type: "text", sub_type: "message", message: "Dodge. Shot Forward", message_ES: "Iframe. Disparo Frontal" }],
+		"s-782-2000-108-0": [{ type: "text", sub_type: "message", message: "Dodge. Shot Forward", message_ES: "Iframe. Disparo Frontal", delay:  500 }],
 		"s-782-2000-109-0": [{ type: "text", sub_type: "message", message: "Wave Forward", message_ES: "Ola Frontal" }],
 		"s-782-2000-112-0": [{ type: "text", sub_type: "message", message: "Kick Forward", message_ES: "Patada Frontal" }],
 		"s-782-2000-113-0": [

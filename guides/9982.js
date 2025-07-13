@@ -1,6 +1,6 @@
 // Grotto of Lost Souls (Difícil)
 //
-// made by michengs / HSDN
+// made by michengs / HSDN / Calvary
 
 module.exports = (dispatch, handlers, guide, lang) => {
 
@@ -9,7 +9,10 @@ module.exports = (dispatch, handlers, guide, lang) => {
 	let print_wave = true;
 	let awakening_one = false;
 	let awakening_two = false;
-	let stack_level = 0;
+  let stack_level = 0;
+	let enrage = false;
+
+	const is_mt = dispatch._mod.connection.metadata.serverList[dispatch._mod.serverId].name.includes("MT");
 
 	function stacks_level_event() {
 		if (!awakening_one) return;
@@ -62,15 +65,19 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-982-1000-113-0": [{ type: "text", sub_type: "message", message: "Thorns (Bleed)", message_ES: "Espinas (Sangrar)" }],
 		"s-982-1000-116-0": [
-			{ type: "text", sub_type: "message", message: "AoE", message_ES: "AoE" },
-			{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 2000 }
+      { type: "text", sub_type: "message", message: "AoE", message_ES: "AoE" },
+      { type: "text", sub_type: "message", message: "3" },
+			{ type: "text", sub_type: "message", delay: 500, message: "2" },
+			{ type: "text", sub_type: "message", delay: 1000, message: "1" },
+			{ type: "text", sub_type: "message", delay: 1500, message: "Dodge", message_ES: "Iframe" }
 		],
 		"s-982-1000-301-0": [
 			{ type: "text", sub_type: "message", message: "Flower Stuns", message_ES: "Flor Canibal" },
 			{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 2000 }
 		],
-		"s-982-1000-307-0": [{ type: "text", sub_type: "message", message: "Cage (Don't move)", message_ES: "Jaula (No te muevas)" }],
-		// Flowers mech
+    "s-982-1000-307-0": [{ type: "text", sub_type: "message", message: "Cage (Don't move)", message_ES: "Jaula (No te muevas)" }],
+    "s-982-1032-349-0": [{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe"}],
+    // Flowers mech
 		"ab-982-1003-98200161": [
 			{ type: "text", sub_type: "message", message: "Green", message_ES: "Verde" },
 			{ type: "func", func: () => color = 1 }
@@ -105,7 +112,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "despawn_all" }
 		],
 		"s-982-2000-105-0": [{ type: "text", sub_type: "message", message: "Spin", message_ES: "Girar" }],
-		"s-982-2000-108-0": [{ type: "text", sub_type: "message", message: "Shot Forward", message_ES: "Disparo Frontal" }],
+		"s-982-2000-108-0": [{ type: "text", sub_type: "message", message: "Dodge. Shot Forward", message_ES: "Iframe. Disparo Frontal", delay:  500 }],
 		"s-982-2000-109-0": [{ type: "text", sub_type: "message", message: "Wave Forward", message_ES: "Ola Frontal" }],
 		"s-982-2000-112-0": [{ type: "text", sub_type: "message", message: "Kick Forward", message_ES: "Patada Frontal" }],
 		"s-982-2000-113-0": [
@@ -134,23 +141,30 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 3700 },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, null, 260, 0, 3000] },
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, null, 650, 0, 3000] }
-		],
+    ],
+    "s-982-2000-303-0": [{ type: "text", sub_type: "message", message: "Waves", message_ES: "Olas" }],
 		"s-982-2000-307-0": [{ type: "text", sub_type: "message", message: "Target", message_ES: "Objetivo" }],
 		"s-982-2000-307-2": [{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe" }],
 
 		// 3 BOSS
 		"nd-982-3000": [
 			{ type: "stop_timers" },
-			{ type: "despawn_all" }
+			{ type: "despawn_all" },
+			{ type: "func", func: () => enrage = false }
 		],
-		"h-982-3000-99": [
+		"ns-982-3000": [{ type: "func", func: () => enrage = false }],
+		"rb-982-3000": [{ type: "func", func: () => enrage = true }],
+    "re-982-3000": [{ type: "func", func: () => enrage = false }],
+    "h-982-3000-99": [
 			{ type: "func", func: () => print_wave = true },
 			{ type: "func", func: () => awakening_one = false },
 			{ type: "func", func: () => awakening_two = false },
 			{ type: "func", func: () => stack_level = 0 }
-		],
-		"h-982-3000-80": [{ type: "text", sub_type: "message", message: "80%", message_ES: "80%" }],
-		"h-982-3000-30": [{ type: "text", sub_type: "message", message: "30%", message_ES: "30%" }],
+    ],
+    "h-982-3000-90": [{ type: "text", sub_type: "message", message: "90%", message_ES: "90%", check_func: () => is_mt }],
+    "h-982-3000-80": [{ type: "text", sub_type: "message", message: "80%", message_ES: "80%", check_func: () => !is_mt }],
+    "h-982-3000-45": [{ type: "text", sub_type: "message", message: "45%", message_ES: "45%", check_func: () => is_mt }],
+    "h-982-3000-30": [{ type: "text", sub_type: "message", message: "30%", message_ES: "30%", check_func: () => !is_mt }],
 		"s-982-3000-109-0": [{ type: "text", sub_type: "message", message: "Front Throw (Target)", message_ES: "Ataque Frontal (Objetivo)" }],
 		"s-982-3000-134-0": [{ type: "text", sub_type: "message", message: "Front Throw (Target)", message_ES: "Ataque Frontal (Objetivo)" }],
 		"s-982-3000-118-0": [{ type: "text", sub_type: "message", message: "Front Triple", message_ES: "Frontal triple" }],
@@ -167,7 +181,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-982-3000-146-0": [
 			{ type: "text", sub_type: "message", message: "Pulses Left", message_ES: "Pulsos Izquierda" },
 			{ type: "spawn", func: "circle", args: [true, 553, 200, 350, null, 280, 500, 2000] },
-			{ type: "spawn", func: "marker", args: [false, 215, 370, 5300, 3000, true, null] }, // 1
+			{ type: "spawn", func: "marker", args: [false, 215, 370, is_mt ? 4200 : 5300, 3000, true, null] }, // 1
 			{ type: "spawn", func: "circle", args: [false, 445, 215, 370, 15, 160, 2000, 6000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 215, 370, 12, 320, 2000, 6000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 215, 370, 10, 480, 2000, 6000] },
@@ -187,7 +201,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-982-3000-148-0": [
 			{ type: "text", sub_type: "message", message: "Pulses Right", message_ES: "Pulsos Derecha" },
 			{ type: "spawn", func: "circle", args: [true, 553, 160, 350, null, 280, 500, 2000] },
-			{ type: "spawn", func: "marker", args: [false, 155, 388, 5300, 3000, true, null] }, // 1
+			{ type: "spawn", func: "marker", args: [false, 155, 388, is_mt ? 4200 : 5300, 3000, true, null] }, // 1
 			{ type: "spawn", func: "circle", args: [false, 445, 155, 388, 15, 160, 2000, 6000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 155, 388, 12, 320, 2000, 6000] },
 			{ type: "spawn", func: "circle", args: [false, 445, 155, 388, 10, 480, 2000, 6000] },
@@ -215,7 +229,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-982-3000-213-0": [{ type: "text", sub_type: "message", message: "Tail", message_ES: "Cola" }],
 		"s-982-3000-215-0": [{ type: "text", sub_type: "message", message: "Tail (Combo)", message_ES: "Cola (Combo)" }],
 		"s-982-3000-139-0": [
-			{ type: "text", sub_type: "message", message: "Wave + Wing (Left Safe)", message_ES: "Ola + Ala (Izquierda Segura)", check_func: () => print_wave },
+			{ type: "text", sub_type: "message", message: "Wave + Wing (Left Safe)", message_ES: "Ola + Ala (Izquierda Segura)", check_func: () => print_wave && !enrage },
+			{ type: "text", sub_type: "message", message: "Wave Fast + Wing (Left Safe)", message_ES: "Ola rápida (Izquierda Segura)", check_func: () => print_wave && enrage },
 			{ type: "despawn_all", tag: "wave" },
 			{ type: "spawn", func: "vector", args: [912, 90, 0, 0, 600, 100, 3000], tag: "wave" },
 			{ type: "spawn", func: "vector", args: [912, 270, 0, 180, 600, 100, 3000], tag: "wave" },
@@ -229,7 +244,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-982-3000-150-1": "s-982-3000-139-0",
 		"s-982-3000-150-2": "s-982-3000-139-0",
 		"s-982-3000-141-0": [
-			{ type: "text", sub_type: "message", message: "Wave + Wing (Right Safe)", message_ES: "Ola + Ala (Derecha Segura)", check_func: () => print_wave },
+			{ type: "text", sub_type: "message", message: "Wave + Wing (Right Safe)", message_ES: "Ola + Ala (Derecha Segura)", check_func: () => print_wave && !enrage },
+			{ type: "text", sub_type: "message", message: "Wave Fast + Wing (Right Safe)", message_ES: "Ola rápida (Derecha Segura)", check_func: () => print_wave && enrage },
 			{ type: "despawn_all", tag: "wave" },
 			{ type: "spawn", func: "vector", args: [912, 90, 0, 0, 600, 100, 3000], tag: "wave" },
 			{ type: "spawn", func: "vector", args: [912, 270, 0, 180, 600, 100, 3000], tag: "wave" },
@@ -243,12 +259,18 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-982-3000-152-1": "s-982-3000-141-0",
 		"s-982-3000-152-2": "s-982-3000-141-0",
 		"s-982-3000-300-0": [
-			{ type: "text", sub_type: "message", message: "Dodge! (Awakening 1)", message_ES: "¡Iframe! (Awakening 1)", delay: 800 }, // <80%
+			{ type: "text", sub_type: "message", message: "3" },
+			{ type: "text", sub_type: "message", delay: 300, message: "2" },
+			{ type: "text", sub_type: "message", delay: 600, message: "1" },
+			{ type: "text", sub_type: "message", delay: 800, message: "Dodge! (Awakening 1)", message_ES: "¡Iframe! (Awakening 1)" }, // <80%
 			{ type: "func", func: () => awakening_one = true },
 			{ type: "func", func: () => stack_level = 0 }
 		],
 		"s-982-3000-399-0": [
-			{ type: "text", sub_type: "message", message: "Dodge! (Awakening 2)", message_ES: "¡Iframe! (Awakening 2)", delay: 1400 }, // <30%
+			{ type: "text", sub_type: "message", message: "3" },
+			{ type: "text", sub_type: "message", delay: 400, message: "2" },
+			{ type: "text", sub_type: "message", delay: 800, message: "1" },
+			{ type: "text", sub_type: "message", delay: 1200, message: "Dodge! (Awakening 2)", message_ES: "¡Iframe! (Awakening 2)"}, // <30%
 			{ type: "func", func: () => awakening_two = true },
 			{ type: "func", func: () => stack_level = 0 }
 		],

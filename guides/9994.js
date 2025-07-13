@@ -9,7 +9,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 	let red_vaccine_loc = null;
   let road_from_gameId = null;
   let temperature_boss = null;
-  let have_buff = false;
+	let have_buff = null;
 
 	function spawn_road(loc) {
 		const road_from_ent = entity.mobs[road_from_gameId];
@@ -88,7 +88,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-994-2000-110-0": [{ type: "text", sub_type: "message", message: "Hit in dd", message_ES: "Golpear en dd" }],
 
     // 3 BOSS
-    "die": [{ type: "func", func: () => have_buff = false }],
+    "die": [{ type: "func", func: () => have_buff = null }],
     "ns-994-3000": [{ type: "func", func: () => temperature_boss = null }],
 		"nd-994-3000": [
 			{ type: "stop_timers" },
@@ -116,20 +116,20 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-994-3000-104-0": [{ type: "text", sub_type: "message", message: "Bait", message_ES: "Bait" }],
 "s-994-3000-111-0": [
-			{ type: "text", sub_type: "message", message: "Out Safe", message_ES: "Salir Seguro", check_func: () => !have_buff },
-			{ type: "text", sub_type: "message", message: "In Safe", message_ES: "Entrar Seguro", check_func: () => have_buff }
+			{ type: "text", sub_type: "message", message: "Out Safe", message_ES: "Salir Seguro", check_func: () => have_buff === "ice" || !have_buff }, // ice default
+			{ type: "text", sub_type: "message", message: "In Safe", message_ES: "Entrar Seguro", check_func: () => have_buff === "fire" }
 		],
 		"s-994-3000-112-0": [
-			{ type: "text", sub_type: "message", message: "In Safe", message_ES: "Entrar Seguro", check_func: () => !have_buff },
-			{ type: "text", sub_type: "message", message: "Out Safe", message_ES: "Salir Seguro", check_func: () => have_buff }
+			{ type: "text", sub_type: "message", message: "In Safe", message_ES: "Entrar Seguro", check_func: () => have_buff === "fire" || !have_buff }, // fire default
+			{ type: "text", sub_type: "message", message: "Out Safe", message_ES: "Salir Seguro", check_func: () => have_buff === "ice" }
 		],
 		"s-994-3000-113-0": [
-			{ type: "text", sub_type: "message", message: "Donut (In)", message_ES: "Donas (Entrar)", check_func: () => !have_buff },
-			{ type: "text", sub_type: "message", message: "Donut (Middle)", message_ES: "Donas (Medio)", check_func: () => have_buff }
+			{ type: "text", sub_type: "message", message: "Donut (In)", message_ES: "Donas (Entrar)", check_func: () => have_buff === "ice" || !have_buff }, // ice default
+			{ type: "text", sub_type: "message", message: "Donut (Middle)", message_ES: "Donas (Medio)", check_func: () => have_buff === "fire" }
 		],
 		"s-994-3000-114-0": [
-			{ type: "text", sub_type: "message", message: "Donut (Middle)", message_ES: "Donas (Medio)", check_func: () => !have_buff },
-			{ type: "text", sub_type: "message", message: "Donut (In)", message_ES: "Donas (Entrar)", check_func: () => have_buff }
+			{ type: "text", sub_type: "message", message: "Donut (Middle)", message_ES: "Donas (Medio)", check_func: () => have_buff === "fire" || !have_buff }, // fire default
+			{ type: "text", sub_type: "message", message: "Donut (In)", message_ES: "Donas (Entrar)", check_func: () => have_buff === "ice" }
 		],
 		"s-994-3000-116-0": [
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 90, 500, 0, 3000] },
@@ -158,9 +158,14 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-994-3000-315-0": [{ type: "text", sub_type: "message", message: "Pull", message_ES: "Pull" }],
     "s-994-3000-316-0": "s-994-3000-315-0",
-    "am-994-3000-9943045": [{ type: "func", func: () => have_buff = true }],
-		"am-994-3000-9943046": "am-994-3000-9943045",
-		"ar-0-0-9943046": [{ type: "func", func: () => have_buff = false }],
+    "am-994-3000-9943045": [{ type: "func", func: () => have_buff = "ice", delay: 1000 }],
+		"am-994-3000-9943046": [{ type: "func", func: () => have_buff = "fire", delay: 1000 }],
+		"ae-0-0-9943045": "am-994-3000-9943045",
+		"ae-0-0-9943046": "am-994-3000-9943046",
+		"ar-0-0-9943045": [{ type: "func", func: () => have_buff = null }],
+		"ar-0-0-9943046": "ar-0-0-9943045",
+		"ar-994-3000-9943045": "ar-0-0-9943045",
+		"ar-994-3000-9943046": "ar-0-0-9943045",
     "qb-994-3000-994022": [{ type: "func", func: () => temperature_boss = "ice" }],
 		"qb-994-3000-994024": [{ type: "func", func: () => temperature_boss = "fire" }],
 		"qb-994-3000-994064": [{ type: "text", sub_type: "message", message: "Give stun!", message_ES: "¡Dar Stun al Boss!" }],

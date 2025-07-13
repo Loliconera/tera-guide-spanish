@@ -92,7 +92,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "text", sub_type: "message", message: "Hammer Back", message_ES: "Martillazo Atrás" },
 			{ type: "spawn", func: "circle", args: [false, 553, 185, 500, 8, 490, 100, 2000] }
 		],
-		"s-444-1000-1138-0": [{ type: "text", sub_type: "message", delay: 900, message: "Dodge", message_ES: "Iframe" }], // Knockup (Bait)
+		"s-444-1000-1138-0": [{ type: "text", sub_type: "message", delay: 1100, message: "Dodge", message_ES: "Iframe" }], // Knockup (Bait)
 		"s-444-1000-1139-0": [
 			{ type: "text", sub_type: "message", delay: 550, message: "Dodge!", message_ES: "Iframe!" },
 			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 20, 160, 0, 2000] },
@@ -156,7 +156,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 553, 185, 500, 8, 490, 1500, 2000] }
 		],
 		"s-444-2000-1112-0": [
-			{ type: "text", sub_type: "message", delay: 0, message: "Perfect Defense (fast)", message_ES: "Defensa Perfecta (Rápida)" },
+			{ type: "text", sub_type: "message", delay: 0, message: "Perfect Defense (Fast)", message_ES: "Defensa Perfecta (Rápida)" },
 			{ type: "text", sub_type: "message", delay: 1200, message: "Block", message_ES: "Bloquear" },
 			{ type: "spawn", func: "circle", args: [false, 553, 356, 220, 12, 210, 100, 3000] }
 		],
@@ -178,7 +178,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-444-2000-1118-0": [{ type: "text", sub_type: "message", message: "Jump (Tank)", message_ES: "Saltar > (al Tank)" }],
 		"s-444-2000-1118-1": [{ type: "spawn", func: "circle", args: [false, 553, 0, 400, 12, 300, 100, 2000] }],
 		"s-444-2000-1119-0": [
-			{ type: "text", sub_type: "message", message: "Left Swipe", message_ES: "Deslizar Izquierda" },
+			{ type: "text", sub_type: "message", message: "Left Swipe", message_ES: "Izquierda" },
 			{ type: "spawn", func: "semicircle", args: [0, 180, 912, 0, 0, 20, 160, 0, 2000] },
 			{ type: "spawn", func: "semicircle", args: [0, 180, 912, 0, 0, 12, 220, 0, 2000] },
 			{ type: "spawn", func: "semicircle", args: [0, 180, 912, 0, 0, 10, 300, 0, 2000] },
@@ -186,7 +186,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "marker", args: [false, 270, 300, 100, 2000, true, null] }
 		],
 		"s-444-2000-1120-0": [
-			{ type: "text", sub_type: "message", message: "Right Swipe", message_ES: "Deslizar Derecha" },
+			{ type: "text", sub_type: "message", message: "Right Swipe", message_ES: "Derecha" },
 			{ type: "spawn", func: "semicircle", args: [180, 360, 912, 0, 0, 20, 160, 0, 2000] },
 			{ type: "spawn", func: "semicircle", args: [180, 360, 912, 0, 0, 12, 220, 0, 2000] },
 			{ type: "spawn", func: "semicircle", args: [180, 360, 912, 0, 0, 10, 300, 0, 2000] },
@@ -230,7 +230,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [553, 270, 250, 186, 800, 0, 3500] }
 		],
 		"s-444-2000-1135-0": [
-			{ type: "text", sub_type: "message", delay: 0, message: "Perfect Defense", message_ES: "Defensa Perfecta" },
+			{ type: "text", sub_type: "message", message: "Perfect Defense", message_ES: "Defensa Perfecta" },
 			{ type: "text", sub_type: "message", delay: 800, message: "Block", message_ES: "Bloquear" },
 			{ type: "spawn", func: "circle", args: [false, 553, 356, 220, 12, 210, 100, 3000] }
 		],
@@ -239,7 +239,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 553, 185, 500, 8, 490, 100, 2000] }
 		],
 		"s-444-2000-1138-0": [{ type: "text", sub_type: "message", delay: 900, message: "Dodge", message_ES: "Iframe" }], // Knockup (Bait)
-		"s-444-2000-1139-0": [{ type: "text", sub_type: "message", message: "Dodge!", message_ES: "Iframe", delay: 200 }],
+		"s-444-2000-1139-0": [{ type: "text", sub_type: "message", delay: 200, message: "Dodge!", message_ES: "Iframe" }],
 		"s-444-2000-1140-0": [
 			{ type: "text", sub_type: "message", message: "Waves (Right)", message_ES: "Olas (Derecha)" },
 			{ type: "func", func: waves_event },

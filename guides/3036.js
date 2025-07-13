@@ -1,6 +1,6 @@
 ﻿// Sky Cruiser (Hard)
 //
-// made by michengs / HSDN / icebrog
+// made by michengs / HSDN / icebrog / Enndy
 
 module.exports = (dispatch, handlers, guide, lang) => {
 	guide.type = SP;
@@ -115,8 +115,12 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "vector", args: [553, 358, 0, 0, 1100, 100, 1500] }
 		]);
 
-		// if (([1401, 1402].includes(skillid) ? (skillid % 2 + enrage) % 2 : skillid % 2) == 0) {
-		if (([1401, 1402].includes(skillid) ? (skillid % 2) % 2 : skillid % 2) == 0) {
+		let effective_skillid = skillid;
+		if (enrage == 1 && [1401, 1402].includes(skillid)) {
+			effective_skillid = skillid == 1401 ? 1402 : 1401;
+		}
+
+		if (([1401, 1402].includes(effective_skillid) ? (effective_skillid % 2) % 2 : skillid % 2) == 0) {
 			handlers.event([ // left
 				{ type: "text", sub_type: "alert", speech: false,
 					message: `(${mech_total - mech_counter}) Left`,
@@ -176,18 +180,14 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "despawn_all" }
 		],
 		"rb-3036-1000": [
-			// { type: "text", sub_type: "message", message: "Enrage On", message_ES: "Enfurecer" },
 			{ type: "func", func: () => enrage = 1 },
 			{ type: "func", func: () => enrage_time = new Date() }
 		],
 		"re-3036-1000": [
-			// { type: "text", sub_type: "message", message: "Enrage Off", message_ES: "Fin del Enfurecer" },
 			{ type: "func", func: () => enrage = 0 }
 		],
-		// "h-3036-1000-100": [{ type: "func", func: () => is_hp_79 = false }],
 		"h-3036-1000-100": [{ type: "func", func: () => is_hp_49 = false }],
 		"h-3036-1000-94": [{ type: "text", sub_type: "message", message: "94%" }],
-		// "h-3036-1000-79": [{ type: "text", sub_type: "message", message: "79%" }, { type: "func", func: () => is_hp_79 = true }],
 		"h-3036-1000-49": [{ type: "text", sub_type: "message", message: "49%" }, { type: "func", func: () => is_hp_49 = true }],
 		"h-3036-1000-35": [{ type: "text", sub_type: "message", message: "Watch the countdown", message_ES: "Mira la cuenta regresiva" }],
 		"h-3036-1000-34": [{ type: "text", sub_type: "message", message: "Third layer of shrinking ring preparation", message_ES: "Tercera Etapa de Preparación del anillo" }],
@@ -232,8 +232,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-3036-1000-1303-0": [{ type: "text", sub_type: "message", message: "Spin Attack", message_ES: "Ataque Giratorio" }],
 		"s-3036-1000-1401-0": [{ type: "func", func: boss_mech_eventP2, args: [1401] }],
 		"s-3036-1000-1402-0": [{ type: "func", func: boss_mech_eventP2, args: [1402] }],
-		"s-3036-1000-1701-0": [{ type: "func", func: boss_mech_eventP2, args: [1701] }], // right
-		"s-3036-1000-1702-0": [{ type: "func", func: boss_mech_eventP2, args: [1702] }], // left
+		"s-3036-1000-1701-0": [{ type: "func", func: boss_mech_eventP2, args: [1701] }], 
+		"s-3036-1000-1702-0": [{ type: "func", func: boss_mech_eventP2, args: [1702] }], 
 		"s-3036-1000-1801-0": [{ type: "text", sub_type: "message", message: "Incoming Stun", message_ES: "Stun (Iframe)" }],
 		"s-3036-1000-1805-0": [
 			{ type: "text", sub_type: "message", message: "Between", message_ES: "En Medio(2)" },
@@ -261,7 +261,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"qb-3036-1000-3036039": [
 			{ type: "text", sub_type: "message", delay: 75000, message: "Triple Soon", message_ES: "Triple pronto" },
 			{ type: "text", sub_type: "notification", delay: 75000, message: "Triple Soon", message_ES: "Triple pronto", speech: false },
-			{ type: "func", func: boss_tripleattack_event }
+      { type: "func", func: boss_tripleattack_event }
 		],
 		"qb-3036-1000-3036040": [{ type: "func", func: boss_tripleattack_event }],
 		"qb-3036-1000-3036041": [{ type: "func", func: boss_tripleattack_event }]

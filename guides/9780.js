@@ -35,7 +35,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
     "s-780-2000-106-0": [{ type: "text", sub_type: "message", message: "Flame Ray (Target)", message_ES: "Rayo de Fuego (Objetivo)" }],
     "s-780-2000-106-1": [{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 500 }],
 		"s-780-2000-107-0": [{ type: "text", sub_type: "message", message: "Whip", message_ES: "Látigo" }],
-		"s-780-2000-107-1": [{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 200 }],
+		"s-780-2000-107-1": [{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 1000 }],
     "s-780-2000-108-0": [{ type: "text", sub_type: "message", message: "Front Attack (Stun)", message_ES: "Ataque Frontal (Stun)" }],
 		"s-780-2000-301-0": [{ type: "text", sub_type: "message", message: "Jump (Target)", message_ES: "Saltar (Objetivo)" }],
     "s-780-2000-301-1": [{ type: "text", sub_type: "message", message: "Dodge", message_ES: "Iframe", delay: 1000 }],
