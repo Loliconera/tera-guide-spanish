@@ -1,21 +1,19 @@
 {
-  "name": "Tera Guía Español",
-  "options": {
-    "niceName": "Tera Guía",
-    "guiName": "<font color='#FFE900'><b>Tera Guía ES</b></font> ‍‍‍‍ ",
-    "settingsFile": "config.json",
-    "settingsMigrator": "settings_migrator.js",
-    "settingsVersion": 1.22
-  },
-  "author": " ‍‍‍‍<font color='#02fa02'>HSDN</font> ‍‍‍‍ / ‍‍‍‍<font color='#FC0FC0'>Loliconera</font>",
-  "description": "Guía de Dungeons para TERA en <font color='#00bb2d'>ES</font><font color='#FFFFFF'>PA</font><font color='#FF0000'>ÑOL</font>.",
-  "servers": [
-    "https://raw.githubusercontent.com/Loliconera/tera-guide-spanish/master/"
-  ],
-  "supportUrl": "https://github.com/Loliconera/tera-guide-spanish",
-  "dependencies": {
-    "tera-guide-core": "https://raw.githubusercontent.com/hsdn/tera-guide-core/master/module.json"
-  },
-  "disableAutoUpdate": false,
-  "version": "<font color='#00FF0F'>v92.04</font> y <font color='#FC0FC0'>v100.02</font>"
+    "name": "Tera Guía Español",
+    "options": {
+        "niceName": "Tera Guía",
+        "guiName": "<font color='#FFE900'><b>Tera Guía ES</b></font> ‍‍‍‍ ",
+        "settingsFile": "config.json",
+        "settingsMigrator": "settings_migrator.js",
+        "settingsVersion": 1.22
+    },
+    "author": " ‍‍‍‍<font color='#02fa02'>HSDN</font> ‍‍‍‍ / ‍‍‍‍<font color='#FC0FC0'>Loliconera</font>",
+    "description": "Guía de Dungeons para TERA en <font color='#00bb2d'>ES</font><font color='#FFFFFF'>PA</font><font color='#FF0000'>ÑOL</font>.",
+    "servers": ["https://raw.githubusercontent.com/Loliconera/tera-guide-spanish/master/"],
+    "supportUrl": "https://github.com/Loliconera/tera-guide-spanish",
+    "dependencies": {
+        "tera-guide-core": "https://raw.githubusercontent.com/hsdn/tera-guide-core/master/module.json"
+    },
+    "disableAutoUpdate": false,
+    "version": "<font color='#00FF0F'>v92.04</font> y <font color='#FC0FC0'>v100.02</font>"
 }
