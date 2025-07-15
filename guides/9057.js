@@ -77,14 +77,16 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"h-457-1004-99": [{ type: "func", func: () => mech_enable = true }],
 		"h-457-1004-20": [{ type: "func", func: () => mech_enable = false }],		
 		"s-457-1004-1105-0": [{ type: "text", sub_type: "message", message_ES: "Ataque Frontal", message: "Frontal Hit" }],
-		"s-457-1004-1106-0": [{ type: "text", sub_type: "message", message_ES: "¡DISPARO!", message: "Random Shot" },
+    "s-457-1004-1106-0": [
+      { type: "text", sub_type: "message", message_ES: "¡DISPARO!", message: "Random Shot" },
 			{ type: "spawn", func: "vector", args: [912, 459, 120, 12, 1150, 0, 3000] },
 			{ type: "spawn", func: "vector", args: [912, 251, 100, -13, 1150, 0, 3000] },
 			{ type: "spawn", func: "vector", args: [912, 360, 0, 0, 1150, 0, 3000] },
 			{ type: "spawn", func: "vector", args: [912, 250, 70, -6, 1150, 0, 3000] },
 			{ type: "spawn", func: "vector", args: [912, 460, 70, 6, 1150, 0, 3000] }
 		],
-		"s-457-1004-1107-0": [{ type: "text", sub_type: "message", message_ES: "¡LÁTIGO!", message: "Random Whip" },
+    "s-457-1004-1107-0": [
+      { type: "text", sub_type: "message", message_ES: "¡LÁTIGO!", message: "Random Whip" },
 			{ type: "spawn", func: "vector", args: [912, 360, 50, 0, 900, 0, 2000] }
 		],
 		"s-457-1004-1108-0": [{ type: "text", sub_type: "message", message_ES: "Línea de Tierra", message: "Earth Line" }],

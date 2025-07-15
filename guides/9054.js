@@ -10,10 +10,10 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-454-1000-1101-0": [{ type: "text", sub_type: "message", message_ES: "Izquierda", message: "Left" }],
 		"s-454-1000-1102-0": [{ type: "text", sub_type: "message", message_ES: "Derecha", message: "Right" }],
 		"s-454-1000-1103-0": [{ type: "text", sub_type: "message", message_ES: "Cabezazo!", message: "Head Slam!" },//
-			{ type: "spawn", func: "circle", args: [false, 553, 0, 200, 12, 275, 0, 4000]}
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 200, 12, 275, 0, 4000] }
 		],
 		"s-454-1000-1104-0": [{ type: "text", sub_type: "message", message_ES: "Giro Alejarse (Lento)", message: "Spin get out (Slow)" },
-			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 15, 200, 0, 5000]}
+			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 15, 200, 0, 5000] }
 		],
 		"s-454-1000-1105-0": [{ type: "text", sub_type: "message", message_ES: "Entrar", message: "Get in" }],
 		"s-454-1000-1106-0": [{ type: "text", sub_type: "message", message_ES: "Círculo Aleatorio", message: "Random Circle" }],//
@@ -73,7 +73,7 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-454-1001-3105-0": [{ type: "text", sub_type: "message", message_ES: "Veneno", message: "Poison" }],
 		"s-454-1001-3102-0": [{ type: "text", sub_type: "message", message_ES: "Gran Salto + Ola", message: "Big Jump + Wave" }],
 		"s-454-403-1101-0": [{ type: "text", sub_type: "message", message_ES: "Pared de Agua (Romper)", message: "Water Wall (Breake)" },
-			{ type: "spawn", func: "marker", args: [false, 500, 180, 100, 9000]}
+			{ type: "spawn", func: "marker", args: [false, 500, 180, 100, 9000] }
 		],
 		
 		// 3BOSS
@@ -131,28 +131,28 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		// Ataques especiais
 		"qb-454-402-454008": [{ type: "text", sub_type: "message", message_ES: "Ataque de Ola", message: "Water Wave Attack" },
 			{ type: "text", sub_type: "notification","delay": 70000, message_ES: "Ataque de Ola Pronto", message: "Water Wave Attack Soon" },
-			{ type: "spawn", func: "vector", args: [912, 0, 0, 0, 1300, 0, 4000]},
-			{ type: "spawn", func: "vector", args: [912, 0, 0, 90, 1300, 0, 4000]},
-			{ type: "spawn", func: "vector", args: [912, 0, 0, 180, 1300, 0, 4000]},
-			{ type: "spawn", func: "vector", args: [553, 0, 0, 270, 1300, 0, 4000]}
+			{ type: "spawn", func: "vector", args: [912, 0, 0, 0, 1300, 0, 4000] },
+			{ type: "spawn", func: "vector", args: [912, 0, 0, 90, 1300, 0, 4000] },
+			{ type: "spawn", func: "vector", args: [912, 0, 0, 180, 1300, 0, 4000] },
+			{ type: "spawn", func: "vector", args: [553, 0, 0, 270, 1300, 0, 4000] }
 		],
 		"qb-454-1000-454012": [{ type: "text", sub_type: "message", message_ES: "Repara la PLACA", message: "Fix the SLATE" }],
 		"dm-0-0-905420": [{ type: "text", sub_type: "message", message_ES: "Verificación de Pared de Agua", message: "Water Wall Check" }],
 		"s-454-100-1101-0": [
 			// { type: "text", sub_type: "notification", message_ES: ""Ball (Stay Away)", message: "Ball (Stay Away)" },
-			{ type: "spawn", func: "marker", args: [false, 0, 0, 100, 3000]}
+			{ type: "spawn", func: "marker", args: [false, 0, 0, 100, 3000] }
 		],
 		"s-454-106-3101-0": [{ type: "text", sub_type: "message", message_ES: "1", message: "1" },
-			{ type: "spawn", func: "vector", args: [553, 0, 0, 0, 2200, 0, 15000]},
+			{ type: "spawn", func: "vector", args: [553, 0, 0, 0, 2200, 0, 15000] },
 		],
 		"s-454-107-3102-0": [{ type: "text", sub_type: "message", message_ES: "2", message: "2" },
-			{ type: "spawn", func: "vector", args: [553, 0, 0, 0, 2200, 0, 15000]}
+			{ type: "spawn", func: "vector", args: [553, 0, 0, 0, 2200, 0, 15000] }
 		],
 		"s-454-108-3103-0": [{ type: "text", sub_type: "message", message_ES: "3", message: "3" },
-			{ type: "spawn", func: "vector", args: [553, 0, 0, 0, 2200, 0, 15000]}
+			{ type: "spawn", func: "vector", args: [553, 0, 0, 0, 2200, 0, 15000] }
 		],
 		"s-454-109-3104-0": [{ type: "text", sub_type: "message", message_ES: "4", message: "4" },
-			{ type: "spawn", func: "vector", args: [553, 0, 0, 0, 2200, 0, 15000]}
+			{ type: "spawn", func: "vector", args: [553, 0, 0, 0, 2200, 0, 15000] }
 		]
 	}
 };
