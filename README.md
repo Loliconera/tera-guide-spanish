@@ -125,6 +125,7 @@ Al usar TeraToolbox, todas las dependencias se instalarán automáticamente.
 | [9981](/guides/9981.js) | Velik's Sanctuary (Difícil)                 | Español |
 | [9982](/guides/9982.js) | Grotto of Lost Souls (Difícil)              | Español |
 | [9983](/guides/9983.js) | Dark Reach Citadel (Difícil)                | Español |
+| [9985](/guides/9985.js) | Sanctuary's Ruins (Difícil)                 | Español |
 | [9994](/guides/9994.js) | Thaumetal Refinery (Difícil)                | Español |
 
 ## Configuración de Mensajes
